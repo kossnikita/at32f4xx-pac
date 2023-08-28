@@ -21,7 +21,6 @@ portable-atomic = { version = "1", default-features = false, optional = true }
 
 [features]
 default = ["critical-section", "rt"]
-critical-section = ["cortex-m/critical-section-single-core"]
 rt = ["cortex-m-rt/device"]
 atomics = ["dep:portable-atomic"]
 at32a403a = []
