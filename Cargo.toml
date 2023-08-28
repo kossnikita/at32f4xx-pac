@@ -11,7 +11,9 @@ categories = ["embedded", "no-std"]
 license = "MIT/Apache-2.0"
 
 [package.metadata.docs.rs]
+all-features = true
 default-target = "thumbv7em-none-eabi"
+targets = []
 
 [dependencies]
 cortex-m = "0.7"
