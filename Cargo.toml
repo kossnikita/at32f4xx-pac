@@ -8,6 +8,7 @@ repository = "https://github.com/kossnikita/at32f4xx-pac"
 readme = "README.md"
 keywords = ["at32", "svd2rust", "no_std", "embedded", "artery"]
 categories = ["embedded", "no-std"]
+license = "MIT/Apache-2.0"
 
 [package.metadata.docs.rs]
 default-target = "thumbv7em-none-eabi"
