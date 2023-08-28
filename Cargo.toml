@@ -1,0 +1,40 @@
+[package]
+edition = "2021"
+name = "at32f4xx-pac"
+version = "0.1.0"
+authors = ["Nikita Koss <kossnikita@gmail.com>"]
+description = "Device support crates for AT32F4 devices"
+repository = "https://github.com/kossnikita/at32f4xx-pac"
+readme = "README.md"
+keywords = ["at32", "svd2rust", "no_std", "embedded", "artery"]
+categories = ["embedded", "no-std"]
+
+[package.metadata.docs.rs]
+default-target = "thumbv7em-none-eabi"
+
+[dependencies]
+cortex-m = "0.7"
+cortex-m-rt = { version = "0.7", optional = true }
+critical-section = { version = "1", optional = true }
+vcell = "0.1"
+portable-atomic = { version = "1", default-features = false, optional = true }
+
+[features]
+default = ["critical-section", "rt"]
+critical-section = ["cortex-m/critical-section-single-core"]
+rt = ["cortex-m-rt/device"]
+atomics = ["dep:portable-atomic"]
+at32a403a = []
+at32f402 = []
+at32f403 = []
+at32f403a = []
+at32f405 = []
+at32f407 = []
+at32f413 = []
+at32f415 = []
+at32f421 = []
+at32f423 = []
+at32f425 = []
+at32f435 = []
+at32f437 = []
+at32wb415 = []
