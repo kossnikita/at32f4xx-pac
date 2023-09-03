@@ -6,7 +6,7 @@ fn main() {
         let out = &PathBuf::from(env::var_os("OUT_DIR").unwrap());
         println!("cargo:rustc-link-search={}", out.display());
         let device_file = if env::var_os("CARGO_FEATURE_AT32A403A").is_some() {
-            "src/at32f403a/device.x"
+            "src/at32a403a/device.x"
         } else if env::var_os("CARGO_FEATURE_AT32F402").is_some() {
             "src/at32f402/device.x"
         } else if env::var_os("CARGO_FEATURE_AT32F403").is_some() {
