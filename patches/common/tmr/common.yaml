@@ -1,3 +1,15 @@
+"TMR[1-5],TMR15":
+  CTRL2:
+    PTOS:
+      Reset: [0, "Reset"]
+      Enable: [1, "Enable"]
+      Update: [2, "Update"]
+      ComparePulse: [3, "Compare pulse"]
+      C1ORAW: [4, "C1ORAW signal"]
+      C2ORAW: [5, "C2ORAW signal"]
+      C3ORAW: [6, "C3ORAW signal"]
+      C4ORAW: [7, "C4ORAW signal"]
+
 "TMR[1-5]":
   CM1*:
     C1C:
