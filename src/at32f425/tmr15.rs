@@ -25,11 +25,9 @@ pub struct RegisterBlock {
     pub pr: PR,
     #[doc = "0x30 - Repetition of period value"]
     pub rpr: RPR,
-    #[doc = "0x34 - Channel 1 data register"]
-    pub c1dt: C1DT,
-    #[doc = "0x38 - Channel 2 data register"]
-    pub c2dt: C2DT,
-    _reserved14: [u8; 0x08],
+    #[doc = "0x34..0x3c - Channel data register"]
+    pub cdt: [CDT; 2],
+    _reserved13: [u8; 0x08],
     #[doc = "0x44 - Brake register"]
     pub brk: BRK,
     #[doc = "0x48 - DMA control register"]
@@ -47,6 +45,16 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn cm1_output(&self) -> &CM1_OUTPUT {
         unsafe { &*(self as *const Self).cast::<u8>().add(24usize).cast() }
+    }
+    #[doc = "0x34 - Channel data register"]
+    #[inline(always)]
+    pub fn c1dt(&self) -> &CDT {
+        &self.cdt[0]
+    }
+    #[doc = "0x38 - Channel data register"]
+    #[inline(always)]
+    pub fn c2dt(&self) -> &CDT {
+        &self.cdt[1]
     }
 }
 #[doc = "CTRL1 (rw) register accessor: Control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl1`]
@@ -114,16 +122,11 @@ module"]
 pub type RPR = crate::Reg<rpr::RPR_SPEC>;
 #[doc = "Repetition of period value"]
 pub mod rpr;
-#[doc = "C1DT (rw) register accessor: Channel 1 data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c1dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c1dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`c1dt`]
+#[doc = "CDT (rw) register accessor: Channel data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cdt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cdt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cdt`]
 module"]
-pub type C1DT = crate::Reg<c1dt::C1DT_SPEC>;
-#[doc = "Channel 1 data register"]
-pub mod c1dt;
-#[doc = "C2DT (rw) register accessor: Channel 2 data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c2dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c2dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`c2dt`]
-module"]
-pub type C2DT = crate::Reg<c2dt::C2DT_SPEC>;
-#[doc = "Channel 2 data register"]
-pub mod c2dt;
+pub type CDT = crate::Reg<cdt::CDT_SPEC>;
+#[doc = "Channel data register"]
+pub mod cdt;
 #[doc = "BRK (rw) register accessor: Brake register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`brk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`brk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`brk`]
 module"]
 pub type BRK = crate::Reg<brk::BRK_SPEC>;

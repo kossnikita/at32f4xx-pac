@@ -24,15 +24,9 @@ pub struct RegisterBlock {
     #[doc = "0x2c - Period value"]
     pub pr: PR,
     _reserved12: [u8; 0x04],
-    #[doc = "0x34 - Channel 1 data register"]
-    pub c1dt: C1DT,
-    #[doc = "0x38 - Channel 2 data register"]
-    pub c2dt: C2DT,
-    #[doc = "0x3c - Channel 3 data register"]
-    pub c3dt: C3DT,
-    #[doc = "0x40 - Channel 4 data register"]
-    pub c4dt: C4DT,
-    _reserved16: [u8; 0x04],
+    #[doc = "0x34..0x44 - Channel data register"]
+    pub cdt: [CDT; 4],
+    _reserved13: [u8; 0x04],
     #[doc = "0x48 - DMA control register"]
     pub dmactrl: DMACTRL,
     #[doc = "0x4c - DMA data register"]
@@ -60,6 +54,26 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn cm2_output(&self) -> &CM2_OUTPUT {
         unsafe { &*(self as *const Self).cast::<u8>().add(28usize).cast() }
+    }
+    #[doc = "0x34 - Channel data register"]
+    #[inline(always)]
+    pub fn c1dt(&self) -> &CDT {
+        &self.cdt[0]
+    }
+    #[doc = "0x38 - Channel data register"]
+    #[inline(always)]
+    pub fn c2dt(&self) -> &CDT {
+        &self.cdt[1]
+    }
+    #[doc = "0x3c - Channel data register"]
+    #[inline(always)]
+    pub fn c3dt(&self) -> &CDT {
+        &self.cdt[2]
+    }
+    #[doc = "0x40 - Channel data register"]
+    #[inline(always)]
+    pub fn c4dt(&self) -> &CDT {
+        &self.cdt[3]
     }
 }
 #[doc = "CTRL1 (rw) register accessor: Control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl1`]
@@ -132,26 +146,11 @@ module"]
 pub type PR = crate::Reg<pr::PR_SPEC>;
 #[doc = "Period value"]
 pub mod pr;
-#[doc = "C1DT (rw) register accessor: Channel 1 data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c1dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c1dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`c1dt`]
+#[doc = "CDT (rw) register accessor: Channel data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cdt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cdt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`cdt`]
 module"]
-pub type C1DT = crate::Reg<c1dt::C1DT_SPEC>;
-#[doc = "Channel 1 data register"]
-pub mod c1dt;
-#[doc = "C2DT (rw) register accessor: Channel 2 data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c2dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c2dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`c2dt`]
-module"]
-pub type C2DT = crate::Reg<c2dt::C2DT_SPEC>;
-#[doc = "Channel 2 data register"]
-pub mod c2dt;
-#[doc = "C3DT (rw) register accessor: Channel 3 data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c3dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c3dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`c3dt`]
-module"]
-pub type C3DT = crate::Reg<c3dt::C3DT_SPEC>;
-#[doc = "Channel 3 data register"]
-pub mod c3dt;
-#[doc = "C4DT (rw) register accessor: Channel 4 data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c4dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`c4dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`c4dt`]
-module"]
-pub type C4DT = crate::Reg<c4dt::C4DT_SPEC>;
-#[doc = "Channel 4 data register"]
-pub mod c4dt;
+pub type CDT = crate::Reg<cdt::CDT_SPEC>;
+#[doc = "Channel data register"]
+pub mod cdt;
 #[doc = "DMACTRL (rw) register accessor: DMA control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmactrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmactrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dmactrl`]
 module"]
 pub type DMACTRL = crate::Reg<dmactrl::DMACTRL_SPEC>;

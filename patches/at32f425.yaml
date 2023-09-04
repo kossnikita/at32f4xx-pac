@@ -1,0 +1,12 @@
+_svd: "../svd/AT32F425xx_v2.svd"
+
+SPI1:
+    CTRL2:
+      _modify:
+        "MDIV3EN ":
+          name: MDIV3EN
+        "TIEN ":
+          name: TIEN
+
+_include:
+  - common/tmr/tmr_cdt.yaml
