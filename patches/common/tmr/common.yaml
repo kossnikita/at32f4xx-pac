@@ -1,0 +1,26 @@
+"TMR[1-5]":
+  CM1*:
+    C1C:
+      Output: [0, "C1IN channel is configured as output"]
+      C1IFP1: [1, "Input, C1IN is mapped on C1IFP1"]
+      C2IFP1: [2, "Input, C1IN is mapped on C2IFP1"]
+      STIS: [3, "Input, C1IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+    C2C:
+      Output: [0, "C2IN channel is configured as output"]
+      C2IFP2: [1, "Input, C2IN is mapped on C2IFP2"]
+      C1IFP2: [2, "Input, C2IN is mapped on C1IFP2"]
+      STIS: [3, "Input, C2IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+  CM2*:
+    C3C:
+      Output: [0, "C3IN channel is configured as output"]
+      C3IFP3: [1, "Input, C3IN is mapped on C3IFP3"]
+      C4IFP3: [2, "Input, C3IN is mapped on C4IFP3"]
+      STIS: [3, "Input, C3IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+    C4C:
+      Output: [0, "C4IN channel is configured as output"]
+      C4IFP4: [1, "Input, C4IN is mapped on C4IFP4"]
+      C3IFP4: [2, "Input, C4IN is mapped on C3IFP4"]
+      STIS: [3, "Input, C4IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+
+_include:
+  - tmr_cdt.yaml

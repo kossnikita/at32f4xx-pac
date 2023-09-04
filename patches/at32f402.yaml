@@ -1,4 +1,4 @@
 _svd: "../svd/AT32F402xx_v2.svd"
 
 _include:
-  - common/tmr/tmr_cdt.yaml
+  - common/tmr/common.yaml

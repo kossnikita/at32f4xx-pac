@@ -3,9 +3,90 @@ pub type R = crate::R<CM1_OUTPUT_SPEC>;
 #[doc = "Register `CM1_OUTPUT` writer"]
 pub type W = crate::W<CM1_OUTPUT_SPEC>;
 #[doc = "Field `C1C` reader - Channel 1 configure"]
-pub type C1C_R = crate::FieldReader;
+pub type C1C_R = crate::FieldReader<C1C_A>;
+#[doc = "Channel 1 configure\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum C1C_A {
+    #[doc = "0: C1IN channel is configured as output"]
+    Output = 0,
+    #[doc = "1: Input, C1IN is mapped on C1IFP1"]
+    C1ifp1 = 1,
+    #[doc = "2: Input, C1IN is mapped on C2IFP1"]
+    C2ifp1 = 2,
+    #[doc = "3: Input, C1IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+    Stis = 3,
+}
+impl From<C1C_A> for u8 {
+    #[inline(always)]
+    fn from(variant: C1C_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for C1C_A {
+    type Ux = u8;
+}
+impl C1C_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C1C_A {
+        match self.bits {
+            0 => C1C_A::Output,
+            1 => C1C_A::C1ifp1,
+            2 => C1C_A::C2ifp1,
+            3 => C1C_A::Stis,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "C1IN channel is configured as output"]
+    #[inline(always)]
+    pub fn is_output(&self) -> bool {
+        *self == C1C_A::Output
+    }
+    #[doc = "Input, C1IN is mapped on C1IFP1"]
+    #[inline(always)]
+    pub fn is_c1ifp1(&self) -> bool {
+        *self == C1C_A::C1ifp1
+    }
+    #[doc = "Input, C1IN is mapped on C2IFP1"]
+    #[inline(always)]
+    pub fn is_c2ifp1(&self) -> bool {
+        *self == C1C_A::C2ifp1
+    }
+    #[doc = "Input, C1IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+    #[inline(always)]
+    pub fn is_stis(&self) -> bool {
+        *self == C1C_A::Stis
+    }
+}
 #[doc = "Field `C1C` writer - Channel 1 configure"]
-pub type C1C_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type C1C_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, C1C_A>;
+impl<'a, REG, const O: u8> C1C_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "C1IN channel is configured as output"]
+    #[inline(always)]
+    pub fn output(self) -> &'a mut crate::W<REG> {
+        self.variant(C1C_A::Output)
+    }
+    #[doc = "Input, C1IN is mapped on C1IFP1"]
+    #[inline(always)]
+    pub fn c1ifp1(self) -> &'a mut crate::W<REG> {
+        self.variant(C1C_A::C1ifp1)
+    }
+    #[doc = "Input, C1IN is mapped on C2IFP1"]
+    #[inline(always)]
+    pub fn c2ifp1(self) -> &'a mut crate::W<REG> {
+        self.variant(C1C_A::C2ifp1)
+    }
+    #[doc = "Input, C1IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+    #[inline(always)]
+    pub fn stis(self) -> &'a mut crate::W<REG> {
+        self.variant(C1C_A::Stis)
+    }
+}
 #[doc = "Field `C1OIEN` reader - Channel 1 output immediately enable"]
 pub type C1OIEN_R = crate::BitReader;
 #[doc = "Field `C1OIEN` writer - Channel 1 output immediately enable"]
@@ -23,9 +104,90 @@ pub type C1OSEN_R = crate::BitReader;
 #[doc = "Field `C1OSEN` writer - Channel 1 output switch enable"]
 pub type C1OSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `C2C` reader - Channel 2 configure"]
-pub type C2C_R = crate::FieldReader;
+pub type C2C_R = crate::FieldReader<C2C_A>;
+#[doc = "Channel 2 configure\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum C2C_A {
+    #[doc = "0: C2IN channel is configured as output"]
+    Output = 0,
+    #[doc = "1: Input, C2IN is mapped on C2IFP2"]
+    C2ifp2 = 1,
+    #[doc = "2: Input, C2IN is mapped on C1IFP2"]
+    C1ifp2 = 2,
+    #[doc = "3: Input, C2IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+    Stis = 3,
+}
+impl From<C2C_A> for u8 {
+    #[inline(always)]
+    fn from(variant: C2C_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for C2C_A {
+    type Ux = u8;
+}
+impl C2C_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C2C_A {
+        match self.bits {
+            0 => C2C_A::Output,
+            1 => C2C_A::C2ifp2,
+            2 => C2C_A::C1ifp2,
+            3 => C2C_A::Stis,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "C2IN channel is configured as output"]
+    #[inline(always)]
+    pub fn is_output(&self) -> bool {
+        *self == C2C_A::Output
+    }
+    #[doc = "Input, C2IN is mapped on C2IFP2"]
+    #[inline(always)]
+    pub fn is_c2ifp2(&self) -> bool {
+        *self == C2C_A::C2ifp2
+    }
+    #[doc = "Input, C2IN is mapped on C1IFP2"]
+    #[inline(always)]
+    pub fn is_c1ifp2(&self) -> bool {
+        *self == C2C_A::C1ifp2
+    }
+    #[doc = "Input, C2IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+    #[inline(always)]
+    pub fn is_stis(&self) -> bool {
+        *self == C2C_A::Stis
+    }
+}
 #[doc = "Field `C2C` writer - Channel 2 configure"]
-pub type C2C_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type C2C_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, C2C_A>;
+impl<'a, REG, const O: u8> C2C_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "C2IN channel is configured as output"]
+    #[inline(always)]
+    pub fn output(self) -> &'a mut crate::W<REG> {
+        self.variant(C2C_A::Output)
+    }
+    #[doc = "Input, C2IN is mapped on C2IFP2"]
+    #[inline(always)]
+    pub fn c2ifp2(self) -> &'a mut crate::W<REG> {
+        self.variant(C2C_A::C2ifp2)
+    }
+    #[doc = "Input, C2IN is mapped on C1IFP2"]
+    #[inline(always)]
+    pub fn c1ifp2(self) -> &'a mut crate::W<REG> {
+        self.variant(C2C_A::C1ifp2)
+    }
+    #[doc = "Input, C2IN is mapped on STCI. This mode works only when the internal trigger input is selected by STIS."]
+    #[inline(always)]
+    pub fn stis(self) -> &'a mut crate::W<REG> {
+        self.variant(C2C_A::Stis)
+    }
+}
 #[doc = "Field `C2OIEN` reader - Channel 2 output immediately enable"]
 pub type C2OIEN_R = crate::BitReader;
 #[doc = "Field `C2OIEN` writer - Channel 2 output immediately enable"]

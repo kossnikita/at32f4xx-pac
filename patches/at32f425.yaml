@@ -9,4 +9,4 @@ SPI1:
           name: TIEN
 
 _include:
-  - common/tmr/tmr_cdt.yaml
+  - common/tmr/common.yaml
