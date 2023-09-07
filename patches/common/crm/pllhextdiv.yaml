@@ -1,0 +1,5 @@
+CRM:
+  CFG:
+    PLLHEXTDIV:
+      HEXT: [0, "HEXT"]
+      Div2: [1, "HEXT/2"]

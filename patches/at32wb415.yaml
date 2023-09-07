@@ -1,4 +1,5 @@
 _svd: "../svd/AT32WB415xx_v2.svd"
 
 _include:
+  - common/crm/common.yaml
   - common/tmr/common.yaml

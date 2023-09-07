@@ -1,4 +1,6 @@
 _svd: "../svd/AT32F403Axx_v2.svd"
 
 _include:
+  - common/crm/common.yaml
+  - common/crm/pllhextdiv.yaml
   - common/tmr/common.yaml

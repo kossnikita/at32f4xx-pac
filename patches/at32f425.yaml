@@ -9,4 +9,6 @@ SPI1:
           name: TIEN
 
 _include:
+  - common/crm/common.yaml
+  - common/crm/pllhextdiv.yaml
   - common/tmr/common.yaml

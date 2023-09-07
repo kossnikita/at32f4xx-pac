@@ -1,0 +1,25 @@
+CFG:
+  SCLKSEL:
+    HICK: [0, "System clock from HICK"]
+    HEXT: [1, "System clock from HEXT"]
+    PLL: [2, "System clock from PLL"]
+  SCLKSTS:
+    HICK: [0, "System clock from HICK"]
+    HEXT: [1, "System clock from HEXT"]
+    PLL: [2, "System clock from PLL"]
+  AHBDIV:
+    SCLK: [0, "The SCLK is used as AHB clock"] # Same for [0, 7]
+    Div2: [8, "SCLK divided by 2"]
+    Div4: [9, "SCLK divided by 4"]
+    Div8: [10, "SCLK divided by 8"]
+    Div16: [11, "SCLK divided by 16"]
+    Div64: [12, "SCLK divided by 64"]
+    Div128: [13, "SCLK divided by 128"]
+    Div256: [14, "SCLK divided by 256"]
+    Div512: [15, "SCLK divided by 512"]
+  APB?DIV:
+    HCLK: [0, "The divided HCLK is used as APB clock"] # Same for [0, 3]
+    Div2: [4, "HCLK divided by 2"]
+    Div4: [5, "HCLK divided by 4"]
+    Div8: [6, "HCLK divided by 8"]
+    Div16: [7, "HCLK divided by 16"]

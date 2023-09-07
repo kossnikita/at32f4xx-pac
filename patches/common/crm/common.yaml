@@ -1,0 +1,3 @@
+CRM:
+  _include:
+    - crm_cfg.yaml
