@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "at32f4xx-pac"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Nikita Koss <kossnikita@gmail.com>"]
 description = "Device support crates for AT32F4 devices"
 repository = "https://github.com/kossnikita/at32f4xx-pac"
@@ -11,7 +11,9 @@ categories = ["embedded", "no-std"]
 license = "MIT/Apache-2.0"
 exclude = [
     "patches/**",
-    "generate.*"
+    "generate.*",
+    "html/**",
+    "svd/**",
 ]
 
 [package.metadata.docs.rs]
