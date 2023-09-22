@@ -1,0 +1,4 @@
+IOMUX:
+  EVTOUT:
+    SELPORT:
+      GPIOE: [5, "GPIOE"]

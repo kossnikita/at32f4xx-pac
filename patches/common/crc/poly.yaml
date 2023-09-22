@@ -1,0 +1,9 @@
+CRC:
+  CTRL:
+    POLY_SIZE:
+      bits32: [0, "32 bits"]
+      bits16: [1, "16 bits"]
+      bits8: [2, "8 bits"]
+      bits7: [3, "7 bits"]
+  POLY:
+    POLY: [0, 0xFFFFFFFF]

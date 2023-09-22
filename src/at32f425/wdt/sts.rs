@@ -1,11 +1,113 @@
 #[doc = "Register `STS` reader"]
 pub type R = crate::R<STS_SPEC>;
 #[doc = "Field `DIVF` reader - Division value update complete flag"]
-pub type DIVF_R = crate::BitReader;
+pub type DIVF_R = crate::BitReader<DIVF_A>;
+#[doc = "Division value update complete flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum DIVF_A {
+    #[doc = "0: Division value update complete"]
+    Complete = 0,
+    #[doc = "1: Division value update is in process"]
+    InProgress = 1,
+}
+impl From<DIVF_A> for bool {
+    #[inline(always)]
+    fn from(variant: DIVF_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl DIVF_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> DIVF_A {
+        match self.bits {
+            false => DIVF_A::Complete,
+            true => DIVF_A::InProgress,
+        }
+    }
+    #[doc = "Division value update complete"]
+    #[inline(always)]
+    pub fn is_complete(&self) -> bool {
+        *self == DIVF_A::Complete
+    }
+    #[doc = "Division value update is in process"]
+    #[inline(always)]
+    pub fn is_in_progress(&self) -> bool {
+        *self == DIVF_A::InProgress
+    }
+}
 #[doc = "Field `RLDF` reader - Reload value update complete flag"]
-pub type RLDF_R = crate::BitReader;
+pub type RLDF_R = crate::BitReader<RLDF_A>;
+#[doc = "Reload value update complete flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RLDF_A {
+    #[doc = "0: Reload value update complete"]
+    Complete = 0,
+    #[doc = "1: Reload value update is in process"]
+    InProgress = 1,
+}
+impl From<RLDF_A> for bool {
+    #[inline(always)]
+    fn from(variant: RLDF_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl RLDF_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> RLDF_A {
+        match self.bits {
+            false => RLDF_A::Complete,
+            true => RLDF_A::InProgress,
+        }
+    }
+    #[doc = "Reload value update complete"]
+    #[inline(always)]
+    pub fn is_complete(&self) -> bool {
+        *self == RLDF_A::Complete
+    }
+    #[doc = "Reload value update is in process"]
+    #[inline(always)]
+    pub fn is_in_progress(&self) -> bool {
+        *self == RLDF_A::InProgress
+    }
+}
 #[doc = "Field `WINF` reader - Window value update complete flag"]
-pub type WINF_R = crate::BitReader;
+pub type WINF_R = crate::BitReader<WINF_A>;
+#[doc = "Window value update complete flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum WINF_A {
+    #[doc = "0: Reload value update complete"]
+    Complete = 0,
+    #[doc = "1: Reload value update is in process"]
+    InProgress = 1,
+}
+impl From<WINF_A> for bool {
+    #[inline(always)]
+    fn from(variant: WINF_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl WINF_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> WINF_A {
+        match self.bits {
+            false => WINF_A::Complete,
+            true => WINF_A::InProgress,
+        }
+    }
+    #[doc = "Reload value update complete"]
+    #[inline(always)]
+    pub fn is_complete(&self) -> bool {
+        *self == WINF_A::Complete
+    }
+    #[doc = "Reload value update is in process"]
+    #[inline(always)]
+    pub fn is_in_progress(&self) -> bool {
+        *self == WINF_A::InProgress
+    }
+}
 impl R {
     #[doc = "Bit 0 - Division value update complete flag"]
     #[inline(always)]

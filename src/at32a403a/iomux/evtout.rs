@@ -5,15 +5,158 @@ pub type W = crate::W<EVTOUT_SPEC>;
 #[doc = "Field `SELPIN` reader - Select pin"]
 pub type SELPIN_R = crate::FieldReader;
 #[doc = "Field `SELPIN` writer - Select pin"]
-pub type SELPIN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SELPIN_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 #[doc = "Field `SELPORT` reader - Select port"]
-pub type SELPORT_R = crate::FieldReader;
+pub type SELPORT_R = crate::FieldReader<SELPORT_A>;
+#[doc = "Select port\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum SELPORT_A {
+    #[doc = "0: GPIOA"]
+    Gpioa = 0,
+    #[doc = "1: GPIOB"]
+    Gpiob = 1,
+    #[doc = "2: GPIOC"]
+    Gpioc = 2,
+    #[doc = "3: GPIOD"]
+    Gpiod = 3,
+    #[doc = "5: GPIOE"]
+    Gpioe = 5,
+}
+impl From<SELPORT_A> for u8 {
+    #[inline(always)]
+    fn from(variant: SELPORT_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for SELPORT_A {
+    type Ux = u8;
+}
+impl SELPORT_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<SELPORT_A> {
+        match self.bits {
+            0 => Some(SELPORT_A::Gpioa),
+            1 => Some(SELPORT_A::Gpiob),
+            2 => Some(SELPORT_A::Gpioc),
+            3 => Some(SELPORT_A::Gpiod),
+            5 => Some(SELPORT_A::Gpioe),
+            _ => None,
+        }
+    }
+    #[doc = "GPIOA"]
+    #[inline(always)]
+    pub fn is_gpioa(&self) -> bool {
+        *self == SELPORT_A::Gpioa
+    }
+    #[doc = "GPIOB"]
+    #[inline(always)]
+    pub fn is_gpiob(&self) -> bool {
+        *self == SELPORT_A::Gpiob
+    }
+    #[doc = "GPIOC"]
+    #[inline(always)]
+    pub fn is_gpioc(&self) -> bool {
+        *self == SELPORT_A::Gpioc
+    }
+    #[doc = "GPIOD"]
+    #[inline(always)]
+    pub fn is_gpiod(&self) -> bool {
+        *self == SELPORT_A::Gpiod
+    }
+    #[doc = "GPIOE"]
+    #[inline(always)]
+    pub fn is_gpioe(&self) -> bool {
+        *self == SELPORT_A::Gpioe
+    }
+}
 #[doc = "Field `SELPORT` writer - Select port"]
-pub type SELPORT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SELPORT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, SELPORT_A>;
+impl<'a, REG, const O: u8> SELPORT_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "GPIOA"]
+    #[inline(always)]
+    pub fn gpioa(self) -> &'a mut crate::W<REG> {
+        self.variant(SELPORT_A::Gpioa)
+    }
+    #[doc = "GPIOB"]
+    #[inline(always)]
+    pub fn gpiob(self) -> &'a mut crate::W<REG> {
+        self.variant(SELPORT_A::Gpiob)
+    }
+    #[doc = "GPIOC"]
+    #[inline(always)]
+    pub fn gpioc(self) -> &'a mut crate::W<REG> {
+        self.variant(SELPORT_A::Gpioc)
+    }
+    #[doc = "GPIOD"]
+    #[inline(always)]
+    pub fn gpiod(self) -> &'a mut crate::W<REG> {
+        self.variant(SELPORT_A::Gpiod)
+    }
+    #[doc = "GPIOE"]
+    #[inline(always)]
+    pub fn gpioe(self) -> &'a mut crate::W<REG> {
+        self.variant(SELPORT_A::Gpioe)
+    }
+}
 #[doc = "Field `EVOEN` reader - Event output enable"]
-pub type EVOEN_R = crate::BitReader;
+pub type EVOEN_R = crate::BitReader<EVOEN_A>;
+#[doc = "Event output enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum EVOEN_A {
+    #[doc = "0: Disable"]
+    Disable = 0,
+    #[doc = "1: Enable"]
+    Enable = 1,
+}
+impl From<EVOEN_A> for bool {
+    #[inline(always)]
+    fn from(variant: EVOEN_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl EVOEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> EVOEN_A {
+        match self.bits {
+            false => EVOEN_A::Disable,
+            true => EVOEN_A::Enable,
+        }
+    }
+    #[doc = "Disable"]
+    #[inline(always)]
+    pub fn is_disable(&self) -> bool {
+        *self == EVOEN_A::Disable
+    }
+    #[doc = "Enable"]
+    #[inline(always)]
+    pub fn is_enable(&self) -> bool {
+        *self == EVOEN_A::Enable
+    }
+}
 #[doc = "Field `EVOEN` writer - Event output enable"]
-pub type EVOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EVOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, EVOEN_A>;
+impl<'a, REG, const O: u8> EVOEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(EVOEN_A::Disable)
+    }
+    #[doc = "Enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(EVOEN_A::Enable)
+    }
+}
 impl R {
     #[doc = "Bits 0:3 - Select pin"]
     #[inline(always)]

@@ -1,0 +1,17 @@
+_include:
+  - crm/common.yaml
+  - crm/pllhextdiv.yaml
+  - flash/common.yaml
+  - gpio/gpio-v1.yaml
+  - gpio/hdrv.yaml
+  - crc/common.yaml
+  - crc/poly.yaml
+  - tmr/common.yaml
+  - iomux/iomux_gpioe.yaml
+  - iomux/common.yaml
+  - wwdt/common.yaml
+  - wdt/common.yaml
+  - acc/twk.yaml
+  - acc/common.yaml
+  - debug/common.yaml
+  - debug/timers.yaml

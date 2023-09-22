@@ -25,7 +25,7 @@ module"]
 pub type RLD = crate::Reg<rld::RLD_SPEC>;
 #[doc = "Reload register"]
 pub mod rld;
-#[doc = "STS (rw) register accessor: Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sts`]
+#[doc = "STS (r) register accessor: Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sts`]
 module"]
 pub type STS = crate::Reg<sts::STS_SPEC>;
 #[doc = "Status register"]

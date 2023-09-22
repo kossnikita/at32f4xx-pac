@@ -3,9 +3,65 @@ pub type R = crate::R<STS_SPEC>;
 #[doc = "Register `STS` writer"]
 pub type W = crate::W<STS_SPEC>;
 #[doc = "Field `RLDF` reader - Reload counter interrupt flag"]
-pub type RLDF_R = crate::BitReader;
+pub type RLDF_R = crate::BitReader<RLDFR_A>;
+#[doc = "Reload counter interrupt flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RLDFR_A {
+    #[doc = "0: Downcounter doesn't reached 0x40"]
+    NotReached = 0,
+    #[doc = "1: Downcounter reached 0x40"]
+    Reached = 1,
+}
+impl From<RLDFR_A> for bool {
+    #[inline(always)]
+    fn from(variant: RLDFR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl RLDF_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> RLDFR_A {
+        match self.bits {
+            false => RLDFR_A::NotReached,
+            true => RLDFR_A::Reached,
+        }
+    }
+    #[doc = "Downcounter doesn't reached 0x40"]
+    #[inline(always)]
+    pub fn is_not_reached(&self) -> bool {
+        *self == RLDFR_A::NotReached
+    }
+    #[doc = "Downcounter reached 0x40"]
+    #[inline(always)]
+    pub fn is_reached(&self) -> bool {
+        *self == RLDFR_A::Reached
+    }
+}
+#[doc = "Reload counter interrupt flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RLDFW_AW {
+    #[doc = "0: Clear flag"]
+    Clear = 0,
+}
+impl From<RLDFW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: RLDFW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `RLDF` writer - Reload counter interrupt flag"]
-pub type RLDF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RLDF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, RLDFW_AW>;
+impl<'a, REG, const O: u8> RLDF_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Clear flag"]
+    #[inline(always)]
+    pub fn clear(self) -> &'a mut crate::W<REG> {
+        self.variant(RLDFW_AW::Clear)
+    }
+}
 impl R {
     #[doc = "Bit 0 - Reload counter interrupt flag"]
     #[inline(always)]
@@ -36,7 +92,7 @@ impl crate::RegisterSpec for STS_SPEC {
 impl crate::Readable for STS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts::W`](W) writer structure"]
 impl crate::Writable for STS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x01;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STS to value 0"]

@@ -1,19 +1,19 @@
 #[doc = "Register `CTRL2` reader"]
 pub type R = crate::R<CTRL2_SPEC>;
-#[doc = "Field `ACC_HSICAL` reader - Internal high-speed auto clock calibration"]
-pub type ACC_HSICAL_R = crate::FieldReader;
-#[doc = "Field `ACC_HSITRIM` reader - Internal high-speed auto clock trimming"]
-pub type ACC_HSITRIM_R = crate::FieldReader;
+#[doc = "Field `HICKCAL` reader - Internal high-speed auto clock calibration"]
+pub type HICKCAL_R = crate::FieldReader;
+#[doc = "Field `HICKTRIM` reader - Internal high-speed auto clock trimming"]
+pub type HICKTRIM_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - Internal high-speed auto clock calibration"]
     #[inline(always)]
-    pub fn acc_hsical(&self) -> ACC_HSICAL_R {
-        ACC_HSICAL_R::new((self.bits & 0xff) as u8)
+    pub fn hickcal(&self) -> HICKCAL_R {
+        HICKCAL_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:13 - Internal high-speed auto clock trimming"]
     #[inline(always)]
-    pub fn acc_hsitrim(&self) -> ACC_HSITRIM_R {
-        ACC_HSITRIM_R::new(((self.bits >> 8) & 0x3f) as u8)
+    pub fn hicktrim(&self) -> HICKTRIM_R {
+        HICKTRIM_R::new(((self.bits >> 8) & 0x3f) as u8)
     }
 }
 #[doc = "Control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

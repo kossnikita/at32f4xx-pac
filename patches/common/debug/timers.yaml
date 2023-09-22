@@ -1,0 +1,14 @@
+DEBUG:
+  CTRL:
+    _modify:
+      TMR*_PAUSE:
+        description: "Timer pause control bit"
+    WDT_PAUSE:
+      Continue: [0, "The counter clock of TMRx is fed even if the core is halted"]
+      Pause: [1, "The counter clock of TMRx is stopped when the core is halted"]     
+    WWDT_PAUSE:      
+      Continue: [0, "The counter clock of TMRx is fed even if the core is halted"]
+      Pause: [1, "The counter clock of TMRx is stopped when the core is halted"]   
+    TMR*_PAUSE:
+      Continue: [0, "The counter clock of TMRx is fed even if the core is halted"]
+      Pause: [1, "The counter clock of TMRx is stopped when the core is halted"]

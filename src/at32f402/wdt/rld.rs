@@ -5,7 +5,7 @@ pub type W = crate::W<RLD_SPEC>;
 #[doc = "Field `RLD` reader - Reload value"]
 pub type RLD_R = crate::FieldReader<u16>;
 #[doc = "Field `RLD` writer - Reload value"]
-pub type RLD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type RLD_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - Reload value"]
     #[inline(always)]

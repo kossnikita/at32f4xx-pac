@@ -1,4 +1,12 @@
 _include:
   - crm/common.yaml
   - crm/crm_pllcfg.yaml
+  - flash/common.yaml
+  - crc/common.yaml
+  - crc/poly.yaml
   - tmr/common.yaml
+  - wwdt/common.yaml
+  - wdt/with_win.yaml
+  - acc/twk.yaml
+  - acc/common.yaml
+  - debug/common.yaml

@@ -1,0 +1,47 @@
+ACC:
+  _modify:
+    STS:
+      access: read-only
+  STS:
+    CALRDY:
+      NotReady: [0, "Interal 8MHz oscillator calibration is not ready"]
+      Ready: [1, "Interal 8MHz oscillator calibration is ready"]
+    RSLOST:
+      NotLost: [0, "Reference Signal is not lost"]
+      Lost: [1, "Reference Signal is lost"]
+  CTRL1:
+    _modify:
+      STEP:
+        description: "Calibrated step"
+    CALON:
+      _read:
+        Disabled: [0, "Calibration disabled"]
+        Enabled: [1, "Calibration enabled, and starts searching for a pulse on the USB_SOF"]
+      _write:
+        Disable: [0, "Calibration disabled"]
+        Enable: [1, "Calibration enabled, and starts searching for a pulse on the USB_SOF"]
+    ENTRIM:
+      HICKCAL: [0, "HICKCAL is calibrated"]
+      HICKTRIM: [1, "HICKTRIM is calibrated"]
+    EIEN:
+      _read:
+        Disabled: [0, "Interrupt generation disabled"]
+        Enabled: [1, "ACC interrupt is generated when RSLOST=1 in the ACC_STS register"]
+      _write:
+        Disable: [0, "Interrupt generation disabled"]
+        Enable: [1, "ACC interrupt is generated when RSLOST=1 in the ACC_STS register"]
+    CALRDYIEN:
+      _read:
+        Disabled: [0, "Interrupt generation disabled"]
+        Enabled: [1, "ACC interrupt is generated when CALRDY=1 in the ACC_STS register"]
+      _write:
+        Disable: [0, "Interrupt generation disabled"]
+        Enable: [1, "ACC interrupt is generated when CALRDY=1 in the ACC_STS register"]
+    STEP: [0, 0xf]
+  CTRL2:
+    HICKCAL: [0, 0xff]
+    HICKTRIM: [0, 0x3f]
+  C?:
+    C?: [0, 0xffff]
+
+

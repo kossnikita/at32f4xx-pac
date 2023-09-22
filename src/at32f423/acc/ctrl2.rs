@@ -4,8 +4,8 @@ pub type R = crate::R<CTRL2_SPEC>;
 pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `HICKCAL` reader - Internal high-speed auto clock calibration"]
 pub type HICKCAL_R = crate::FieldReader;
-#[doc = "Field `HICKTWK` reader - Internal high-speed auto clock trimming"]
-pub type HICKTWK_R = crate::FieldReader;
+#[doc = "Field `HICKTRIM` reader - Internal high-speed auto clock trimming"]
+pub type HICKTRIM_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - Internal high-speed auto clock calibration"]
     #[inline(always)]
@@ -14,8 +14,8 @@ impl R {
     }
     #[doc = "Bits 8:13 - Internal high-speed auto clock trimming"]
     #[inline(always)]
-    pub fn hicktwk(&self) -> HICKTWK_R {
-        HICKTWK_R::new(((self.bits >> 8) & 0x3f) as u8)
+    pub fn hicktrim(&self) -> HICKTRIM_R {
+        HICKTRIM_R::new(((self.bits >> 8) & 0x3f) as u8)
     }
 }
 impl W {

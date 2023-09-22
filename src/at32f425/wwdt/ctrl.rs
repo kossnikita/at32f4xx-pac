@@ -5,11 +5,67 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `CNT` reader - Decrement counter"]
 pub type CNT_R = crate::FieldReader;
 #[doc = "Field `CNT` writer - Decrement counter"]
-pub type CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type CNT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 7, O>;
 #[doc = "Field `WWDTEN` reader - Window watchdog enable"]
-pub type WWDTEN_R = crate::BitReader;
+pub type WWDTEN_R = crate::BitReader<WWDTENR_A>;
+#[doc = "Window watchdog enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum WWDTENR_A {
+    #[doc = "0: Disabled"]
+    Disabled = 0,
+    #[doc = "1: Enabled"]
+    Enabled = 1,
+}
+impl From<WWDTENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: WWDTENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl WWDTEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> WWDTENR_A {
+        match self.bits {
+            false => WWDTENR_A::Disabled,
+            true => WWDTENR_A::Enabled,
+        }
+    }
+    #[doc = "Disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == WWDTENR_A::Disabled
+    }
+    #[doc = "Enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == WWDTENR_A::Enabled
+    }
+}
+#[doc = "Window watchdog enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum WWDTENW_AW {
+    #[doc = "1: Enable"]
+    Enable = 1,
+}
+impl From<WWDTENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: WWDTENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `WWDTEN` writer - Window watchdog enable"]
-pub type WWDTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WWDTEN_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, WWDTENW_AW>;
+impl<'a, REG, const O: u8> WWDTEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(WWDTENW_AW::Enable)
+    }
+}
 impl R {
     #[doc = "Bits 0:6 - Decrement counter"]
     #[inline(always)]
@@ -52,7 +108,7 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x80;
 }
 #[doc = "`reset()` method sets CTRL to value 0x7f"]
 impl crate::Resettable for CTRL_SPEC {

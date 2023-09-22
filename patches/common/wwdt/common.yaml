@@ -1,0 +1,30 @@
+WWDT:
+  CTRL:
+    CNT: [0, 127]
+    WWDTEN:
+      _read:
+        Disabled: [0, "Disabled"]
+        Enabled: [1, "Enabled"]
+      _W1S:
+        Enable: [1, "Enable"]
+  CFG:
+    WIN: [0, 127]
+    DIV:
+      div4096: [0, "PCLK1 divided by 4096"]
+      div8192: [1, "PCLK1 divided by 8192"]
+      div16384: [2, "PCLK1 divided by 16384"]
+      div32768: [3, "PCLK1 divided by 32768"]
+    RLDIEN:
+      _read:
+        Disabled: [0, "Disabled"]
+        Enabled: [1, "Enabled"]
+      _write:
+        Disable: [0, "Disable"]
+        Enable: [1, "Enable"]
+  STS:
+    RLDF:
+      _read:
+        NotReached: [0, "Downcounter doesn't reached 0x40"]
+        Reached: [1, "Downcounter reached 0x40"]
+      _W0C:
+        Clear: [0, "Clear flag"]

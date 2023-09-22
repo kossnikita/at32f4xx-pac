@@ -1,0 +1,7 @@
+GPIO?:
+  HDRV:
+    _array:
+      HDRV*: {}
+    HDRV*:
+      NoEffect: [0, "GPIO is configured as large or normal sourcing/sinking strength, depending on IOMC"]
+      MaximumSpeed: [1, "GPIO is configured as maximum sourcing/sinking strength, ignoring IOMC"]

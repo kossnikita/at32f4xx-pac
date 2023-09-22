@@ -5,7 +5,7 @@ pub type W = crate::W<POLY_SPEC>;
 #[doc = "Field `POLY` reader - polynomial coefficient"]
 pub type POLY_R = crate::FieldReader<u32>;
 #[doc = "Field `POLY` writer - polynomial coefficient"]
-pub type POLY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type POLY_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - polynomial coefficient"]
     #[inline(always)]
@@ -22,7 +22,7 @@ impl W {
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+    pub fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
         self
     }

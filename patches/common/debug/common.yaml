@@ -1,0 +1,36 @@
+DEBUG:
+  IDCODE:
+    _modify:
+      PID:
+        description: "PID information"
+    PID: [0, 0xFFFFFFFF]
+  CTRL:
+    _modify:
+      SLEEP_DEBUG:
+        description: "Debug Sleep mode control bit"
+      DEEPSLEEP_DEBUG:
+        description: "Debug Deepsleep mode control bit"
+      STANDBY_DEBUG:
+        description: "Debug Standby mode control bit"
+
+    SLEEP_DEBUG:
+      _read:
+        Disabled: [0, "When entering Sleep mode, CPU HCLK clock is disabled, but other clocks remain active"]
+        Enabled: [1, "When entering Sleep mode, all clocks keep running"]
+      _write:
+        Disable: [0, "When entering Sleep mode, CPU HCLK clock is disabled, but other clocks remain active"]
+        Enable: [1, "When entering Sleep mode, all clocks keep running"]
+    DEEPSLEEP_DEBUG:
+      _read:
+        Disabled: [0, "In Deepsleep mode, all clocks in the 1.2V domain are disabled"]
+        Enabled: [1, "In Deepsleep mode, system clock is provided by the internal RC oscillator (HICK)"]
+      _write:
+        Disable: [0, "In Deepsleep mode, all clocks in the 1.2V domain are disabled"]
+        Enable: [1, "In Deepsleep mode, system clock is provided by the internal RC oscillator (HICK)"]
+    STANDBY_DEBUG:
+      _read:
+        Disabled: [0, "The whole 1.2V digital circuit is unpowered in Standby mode"]
+        Enabled: [1, "The whole 1.2V digital circuit is not unpowered in Standby mode, and the system clock is provided by the internal RC oscillator (HICK)"]
+      _write:
+        Disable: [0, "The whole 1.2V digital circuit is unpowered in Standby mode"]
+        Enable: [1, "The whole 1.2V digital circuit is not unpowered in Standby mode, and the system clock is provided by the internal RC oscillator (HICK)"]

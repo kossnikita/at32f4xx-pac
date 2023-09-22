@@ -1,9 +1,9 @@
 #[doc = "Register `IDCODE` reader"]
 pub type R = crate::R<IDCODE_SPEC>;
-#[doc = "Field `PID` reader - Product ID"]
+#[doc = "Field `PID` reader - PID information"]
 pub type PID_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Product ID"]
+    #[doc = "Bits 0:31 - PID information"]
     #[inline(always)]
     pub fn pid(&self) -> PID_R {
         PID_R::new(self.bits)

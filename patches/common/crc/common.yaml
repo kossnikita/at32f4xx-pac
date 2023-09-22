@@ -1,0 +1,22 @@
+CRC:
+  DT:
+    DT: [0, 0xFFFFFFFF]
+  CDT:
+    CDT: [0, 0xFF]
+  CTRL:
+    RST:
+      _W1S:
+        Reset: [1, "Reset CRC calculation unit, the data register is set as 0xFFFF FFFF"]
+    REVID:
+      NoEffect: [0, "No effect"]
+      ByteReverse: [1, "Byte reverse"]
+      HalfWordReverse: [2, "Half-word reverse"]
+      WordReverse: [3, "Word reverse"]
+    _modify:
+      REVOD:
+        access: read-only
+    REVOD:
+      NoEffect: [0, "No effect"]
+      WordReverse: [1, "Word reverse"]
+  IDT:
+    IDT: [0, 0xFFFFFFFF]

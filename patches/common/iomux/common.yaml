@@ -1,0 +1,11 @@
+IOMUX:
+  EVTOUT:
+    SELPIN: [0, 15]
+    SELPORT:
+      GPIOA: [0, "GPIOA"]
+      GPIOB: [1, "GPIOB"]
+      GPIOC: [2, "GPIOC"]
+      GPIOD: [3, "GPIOD"]
+    EVOEN:
+      Disable: [0, "Disable"]
+      Enable: [1, "Enable"]

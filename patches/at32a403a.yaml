@@ -3,4 +3,16 @@ _svd: "../svd/AT32A403Axx_v2.svd"
 _include:
   - common/crm/common.yaml
   - common/crm/pllhextdiv.yaml
+  - common/flash/common.yaml
+  - common/gpio/gpio-v1.yaml
+  - common/gpio/hdrv.yaml
+  - common/crc/common.yaml
   - common/tmr/common.yaml
+  - common/iomux/common.yaml
+  - common/iomux/iomux_gpioe.yaml
+  - common/wwdt/common.yaml
+  - common/wdt/common.yaml
+  - common/acc/twk.yaml
+  - common/acc/common.yaml
+  - common/debug/common.yaml
+  - common/debug/timers.yaml

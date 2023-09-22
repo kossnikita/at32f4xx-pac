@@ -1,7 +1,48 @@
 #[doc = "Register `CMD` writer"]
 pub type W = crate::W<CMD_SPEC>;
+#[doc = "Command register\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u16)]
+pub enum CMD_AW {
+    #[doc = "21845: Unlock write-protected WDT_DIV and WDT_RLD"]
+    Unlock = 21845,
+    #[doc = "43690: Reload counter"]
+    Reload = 43690,
+    #[doc = "52428: Enable WDT. If the hardware watchdog has been enabled, ignore this operation."]
+    Enable = 52428,
+}
+impl From<CMD_AW> for u16 {
+    #[inline(always)]
+    fn from(variant: CMD_AW) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for CMD_AW {
+    type Ux = u16;
+}
 #[doc = "Field `CMD` writer - Command register"]
-pub type CMD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CMD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, CMD_AW>;
+impl<'a, REG, const O: u8> CMD_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u16>,
+{
+    #[doc = "Unlock write-protected WDT_DIV and WDT_RLD"]
+    #[inline(always)]
+    pub fn unlock(self) -> &'a mut crate::W<REG> {
+        self.variant(CMD_AW::Unlock)
+    }
+    #[doc = "Reload counter"]
+    #[inline(always)]
+    pub fn reload(self) -> &'a mut crate::W<REG> {
+        self.variant(CMD_AW::Reload)
+    }
+    #[doc = "Enable WDT. If the hardware watchdog has been enabled, ignore this operation."]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(CMD_AW::Enable)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - Command register"]
     #[inline(always)]

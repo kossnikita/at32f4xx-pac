@@ -1,0 +1,4 @@
+IOMUX:
+  EVTOUT:
+    SELPORT:
+      GPIOG: [7, "GPIOG"]

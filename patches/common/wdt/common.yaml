@@ -1,0 +1,28 @@
+WDT:
+  CMD:
+    CMD:
+      Unlock: [0x5555, "Unlock write-protected WDT_DIV and WDT_RLD"]
+      Reload: [0xAAAA, "Reload counter"]
+      Enable: [0xCCCC, "Enable WDT. If the hardware watchdog has been enabled, ignore this operation."]
+  DIV:
+    DIV:
+      div4: [0, "LICK divided by 4"]
+      div8: [1, "LICK divided by 8"]
+      div16: [2, "LICK divided by 16"]
+      div32: [3, "LICK divided by 32"]
+      div64: [4, "LICK divided by 64"]
+      div128: [5, "LICK divided by 128"]
+      div256: [6, "LICK divided by 256"]
+      div256_2: [7, "LICK divided by 256"]
+  RLD:
+    RLD: [0, 0xFFF]
+  _modify:
+    STS:
+      access: read-only
+  STS:
+    RLDF:
+      Complete: [0, "Reload value update complete"]
+      InProgress: [1, "Reload value update is in process"]
+    DIVF:
+      Complete: [0, "Division value update complete"]
+      InProgress: [1, "Division value update is in process"]      

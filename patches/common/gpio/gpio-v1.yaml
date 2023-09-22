@@ -1,0 +1,66 @@
+GPIO?:
+  CFG?R:
+    _array:
+      IOMC*: {}
+      IOFC*: {}
+    IOMC*:
+      Input: [0, "Input mode"]
+      OutputLarge: [1, "Output mode, large sourcing/sinking strength"]
+      Output: [2, "Output mode, normal sourcing/sinking strength"]
+      OutputMaximum: [3, "Output mode, maximum sourcing/sinking strength"]
+    IOFC*:
+      Analog: [0, "Analog input"]
+      Floating: [1, "Floating input"]
+      PullDownPullUp: [2, "Pull-down or pull-up input"]
+      MuxOpenDrain: [3, "Multiplexed open drain"]
+  IDT:
+    _array:
+      IDT*: {}
+    IDT*:
+      Low: [0, "Input is logic low"]
+      High: [1, "Input is logic high"]
+  ODT:
+    _array:
+      ODT*: {}
+    ODT*:
+      _read:
+        PullDown: [0, "Pull-down"]
+        PullUp: [1, "Pull-up"]
+      _write:
+        Low: [0, "Set output to logic low"]
+        High: [1, "Set output to logic high"]   
+  _modify:
+    SCR:
+      access: write-only
+    CLR:
+      access: write-only
+  SCR:
+    _array:
+      IOSB*: {}
+      IOCB*: {}
+    IOSB*:
+      _W1S:
+        Set: [1, "Set the corresponding ODT bit"]
+    IOCB*:
+      _W1C:
+        Clear: [1, "Clear the corresponding ODT bit"]
+  CLR:
+    _array:
+      IOCB*: {}
+    IOCB*:
+      _W1C:
+        Clear: [1, "Clear the corresponding ODT bit"]
+  WPR:
+    _array:
+      WPEN*: {}
+    WPEN*:
+      _read:
+        NotProtected: [0, "Port is not write protected"]
+        Protected: [1, "Port is write protected"]
+      _write:
+        NoProtect: [0, "No effect"]
+        Protect: [1, "Write protect"]
+    WPSEQ:
+      Clear: [0, "Clear"]
+      Set: [1, "Set"]
+      

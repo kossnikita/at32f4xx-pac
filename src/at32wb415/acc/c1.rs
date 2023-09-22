@@ -5,7 +5,7 @@ pub type W = crate::W<C1_SPEC>;
 #[doc = "Field `C1` reader - Compare 1"]
 pub type C1_R = crate::FieldReader<u16>;
 #[doc = "Field `C1` writer - Compare 1"]
-pub type C1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type C1_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Compare 1"]
     #[inline(always)]

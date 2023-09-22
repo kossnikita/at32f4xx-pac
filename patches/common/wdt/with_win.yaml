@@ -1,0 +1,13 @@
+_include:
+  - common.yaml
+
+WDT:
+  _modify:
+    WIN:
+      access: read-only
+  WIN:
+    WIN: [0, 0xFFF]
+  STS:
+    WINF:
+      Complete: [0, "Reload value update complete"]
+      InProgress: [1, "Reload value update is in process"]

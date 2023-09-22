@@ -1,0 +1,4 @@
+IOMUX:
+  EVTOUT:
+    SELPORT:
+      GPIOF: [6, "GPIOF"]
