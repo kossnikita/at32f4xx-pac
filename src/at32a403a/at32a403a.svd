@@ -10325,7 +10325,7 @@
               <description>Channel %s complementary polarity</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="C1P.C1P"/>
+              <enumeratedValues derivedFrom="C1P"/>
             </field>
             <field>
               <dim>3</dim>
@@ -10335,10 +10335,10 @@
               <description>Channel %s complementary enable</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="C1EN.C1ENR">
+              <enumeratedValues derivedFrom="C1ENR">
                 <usage>read</usage>
               </enumeratedValues>
-              <enumeratedValues derivedFrom="C1EN.C1ENW">
+              <enumeratedValues derivedFrom="C1ENW">
                 <usage>write</usage>
               </enumeratedValues>
             </field>
@@ -22358,22 +22358,11 @@
             </field>
           </fields>
         </register>
-        <register>
+        <register derivedFrom="UNLOCK">
           <name>UNLOCK2</name>
           <displayName>UNLOCK2</displayName>
           <description>Unlock 2 register</description>
           <addressOffset>0x44</addressOffset>
-          <size>0x20</size>
-          <access>write-only</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>UKVAL</name>
-              <description>Unlock key value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
         <register>
           <name>STS2</name>
@@ -22483,22 +22472,11 @@
             </field>
           </fields>
         </register>
-        <register>
+        <register derivedFrom="UNLOCK">
           <name>UNLOCK3</name>
           <displayName>UNLOCK3</displayName>
           <description>Unlock 3 register</description>
           <addressOffset>0x84</addressOffset>
-          <size>0x20</size>
-          <access>write-only</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>UKVAL</name>
-              <description>Unlock key value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
         <register>
           <name>SELECT</name>

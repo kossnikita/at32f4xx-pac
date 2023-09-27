@@ -274,16 +274,24 @@ TMR1:
         description: "Channel %s complementary enable"
       C?CP:
         description: "Channel %s complementary polarity"
-    C?EN,C?CEN:
+    C?EN:
       _read:
         Disabled: [0, "Channel is disabled"]
         Enabled: [1, "Channel is enabled"]
       _write:
         Disable: [0, "Channel disable"]
         Enable: [1, "Channel enable"]
-    C?P,C?CP:
+    C?P:
       High: [0, "Output active high or Input active rising edge"]
       Low: [1, "Output active low or Input active falling edge"]
+    C?CEN:
+      _read:
+        _derivedFrom: C1ENR
+      _write:
+        _derivedFrom: C1ENW
+    C?CP:
+      _derivedFrom: C1P
+
   BRK:
     DTC: [0, 0xff]
     WPC:

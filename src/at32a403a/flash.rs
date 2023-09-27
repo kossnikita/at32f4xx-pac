@@ -102,11 +102,8 @@ module"]
 pub type EPPS = crate::Reg<epps::EPPS_SPEC>;
 #[doc = "Erase/program protection status register"]
 pub mod epps;
-#[doc = "UNLOCK2 (w) register accessor: Unlock 2 register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`unlock2::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`unlock2`]
-module"]
-pub type UNLOCK2 = crate::Reg<unlock2::UNLOCK2_SPEC>;
-#[doc = "Unlock 2 register"]
-pub mod unlock2;
+pub use unlock as unlock2;
+pub use UNLOCK as UNLOCK2;
 #[doc = "STS2 (rw) register accessor: Status 2 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sts2`]
 module"]
 pub type STS2 = crate::Reg<sts2::STS2_SPEC>;
@@ -122,11 +119,8 @@ module"]
 pub type ADDR2 = crate::Reg<addr2::ADDR2_SPEC>;
 #[doc = "Address 2 register"]
 pub mod addr2;
-#[doc = "UNLOCK3 (w) register accessor: Unlock 3 register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`unlock3::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`unlock3`]
-module"]
-pub type UNLOCK3 = crate::Reg<unlock3::UNLOCK3_SPEC>;
-#[doc = "Unlock 3 register"]
-pub mod unlock3;
+pub use unlock as unlock3;
+pub use UNLOCK as UNLOCK3;
 #[doc = "SELECT (w) register accessor: Select register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`select::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`select`]
 module"]
 pub type SELECT = crate::Reg<select::SELECT_SPEC>;

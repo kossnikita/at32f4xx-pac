@@ -10301,7 +10301,7 @@
               <description>Channel %s complementary polarity</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="C1P.C1P"/>
+              <enumeratedValues derivedFrom="C1P"/>
             </field>
             <field>
               <dim>3</dim>
@@ -10311,10 +10311,10 @@
               <description>Channel %s complementary enable</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="C1EN.C1ENR">
+              <enumeratedValues derivedFrom="C1ENR">
                 <usage>read</usage>
               </enumeratedValues>
-              <enumeratedValues derivedFrom="C1EN.C1ENW">
+              <enumeratedValues derivedFrom="C1ENW">
                 <usage>write</usage>
               </enumeratedValues>
             </field>

@@ -123,13 +123,13 @@ where
     }
 }
 #[doc = "Field `CCEN[1-3]` reader - Channel %s complementary enable"]
-pub use C1EN_R as CCEN_R;
+pub use CEN_R as CCEN_R;
 #[doc = "Field `CCEN[1-3]` writer - Channel %s complementary enable"]
-pub use C1EN_W as CCEN_W;
+pub use CEN_W as CCEN_W;
 #[doc = "Field `CCP[1-3]` reader - Channel %s complementary polarity"]
-pub use C1P_R as CCP_R;
+pub use CP_R as CCP_R;
 #[doc = "Field `CCP[1-3]` writer - Channel %s complementary polarity"]
-pub use C1P_W as CCP_W;
+pub use CP_W as CCP_W;
 impl R {
     #[doc = "Channel [1-4]
 enable"]
