@@ -1,0 +1,430 @@
+CAN?:
+  _array:
+    RF?: {}
+
+  _cluster:
+    Mailbox%s:
+      description: "Mailbox %s"
+      TMI?:
+        name: TMI
+        description: "Transmit mailbox identifier register"
+      TMC?:
+        name: TMC
+        description: "Transmit mailbox data length and time stamp register"
+      TMDTL?:
+        name: TMDTL
+        description: "Transmit mailbox data low register"
+      TMDTH?:
+        name: TMDTH
+        description: "Transmit mailbox data high register"
+    FIFO%s:
+      description: "FIFO %s"
+      RFI?:
+        name: RFI
+        description: "Receive FIFO mailbox identifier register"
+      RFC?:
+        name: RFC
+        description: "Receive FIFO mailbox data length and time stamp register"
+      RFDTL?:
+        name: RFDTL
+        description: "Receive FIFO mailbox data low register"
+      RFDTH?:
+        name: RFDTH
+        description: "Receive FIFO mailbox data high register"
+    FilterBank%s:
+      description: "Filter Bank %s"
+      F?FB1,F??FB1:
+        name: FFB1
+        description: "CAN filter bank filter bit register"
+      F?FB2,F??FB2:
+        name: FFB2
+
+  _clusters:
+    Mailbox%s:
+      TMI:
+        _strip: "TM"
+        SR:
+          _read:
+            InProgress: [0, "Transmission in progress"]
+            Completed: [1, "Transmission completed"]
+          _W1S:
+            Transmit: [1, "Transmit request"]
+        FRSEL:
+          Data: [0, "Data frame"]
+          Remote: [1, "Remote frame"]
+        IDSEL:
+          Standard: [0, "Standard identifier"]
+          Extended: [1, "Extended identifier"]
+        EID: [0, 0x3FFFF]
+        SID: [0, 0x7FF]
+      TMC:
+        _strip: "TM"
+        DTBL: [0, 0xF]
+        TSTEN:
+          _read:
+            Disabled: [0, "Mailbox time stamp transmit is disabled"]
+            Enabled: [1, "Mailbox time stamp transmit is enabled"]
+          _write:
+            Disable: [0, "Mailbox time stamp transmit disable"]
+            Enable: [1, "Mailbox time stamp transmit enable"]
+        TS: [0, 0xFFFF]
+      TMDT?:
+        _array:
+          TMDT?: {}
+        TMDT?: [0,0xFF]
+    FIFO%s:
+      RFI:
+        _strip: "RF"
+        FRI:
+          Data: [0, "Data frame"]
+          Remote: [1, "Remote frame"]
+        IDI:
+          Standard: [0, "Standard identifier"]
+          Extended: [1, "Extended identifier"]
+        EID: [0, 0x3FFFF]
+        SID: [0, 0x7FF]
+      RFC:
+        _strip: "RF"
+        DTL: [0, 0xF]
+        FMN: [0, 0xFF]
+        TS: [0, 0xFFFF]
+      RFDT?:
+        _array:
+          RFDT?: {}
+        RFDT?: [0,0xFF]
+    FilterBank%s:
+      _array:
+        FFB?: {}
+      FFB?:
+        _array:
+          FFDB*: {}
+        FFDB*: [0,0xFFFFFFFF]
+  MCTRL:
+    FZEN:
+      _read:
+        Disabled: [0, "Freeze mode is disabled"]
+        Enabled: [1, "Freeze mode is enabled"]
+      _write:
+        Disable: [0, "Freeze mode disable"]
+        Enable: [1, "Freeze mode enable"]
+    DZEN:
+      _read:
+        Disabled: [0, "Doze mode is disabled"]
+        Enabled: [1, "Doze mode is enabled"]
+      _write:
+        Disable: [0, "Doze mode disable"]
+        Enable: [1, "Doze mode enable"]
+    MMSSR:
+      SmallestIdentifer: [0, "The message with the smallest identifier is first transmitted"]
+      FirstRequestOrder: [1, "The message with the first request order is first transmitted"]
+    MDRSEL:
+      Previous: [0, "The previous message is discarded"]
+      Incoming: [1, "The new incoming message is discarded"]
+    PRSFEN:
+      _read:
+        Disabled: [0, "Prohibit retransmission is disabled when sending fails enable"]
+        Enabled: [1, "Prohibit retransmission is enabled when sending fails enable"]
+      _write:
+        Disable: [0, "Prohibit retransmission disable"]
+        Enable: [1, "Prohibit retransmission enable"]
+    AEDEN:
+      _read:
+        Disabled: [0, "Automatic exit doze mode is disabled"]
+        Enabled: [1, "Automatic exit doze mode is enabled"]
+      _write:
+        Disable: [0, "Automatic exit doze mode disable"]
+        Enable: [1, "Automatic exit doze mode enable"]
+    AEBOEN:
+      _read:
+        Disabled: [0, "Automatic exit bus-off is disabled"]
+        Enabled: [1, "Automatic exit bus-off is enabled"]
+      _write:
+        Disable: [0, "Automatic exit bus-off disable"]
+        Enable: [1, "Automatic exit bus-off enable"]
+    TTCEN:
+      _read:
+        Disabled: [0, "Time triggered communication mode is disabled"]
+        Enabled: [1, "Time triggered communication mode is enabled"]
+      _write:
+        Disable: [0, "Time triggered communication mode disable"]
+        Enable: [1, "Time triggered communication mode enable"]
+    SPRST:
+      _read:
+        Normal: [0, "Normal"]
+        Reset: [1, "Software partial reset"]
+      _W1S:
+        Reset: [1, "Software partial reset"]
+    PTD:
+      Work: [0, "Transmission works during debug"]
+      Prohibited: [1, "Transmission is prohibited during debug. Receive FIFO can be still accessible normally"]
+  MSTS:
+    FZC:
+      NotFreeze: [0, "The CAN is not in Freeze mode"]
+      Freeze: [1, "The CAN is in Freeze mode"]
+    DZC:
+      NotSleep: [0, "The CAN is not in Sleep mode"]
+      Sleep: [1, "The CAN is in Sleep mode"]
+    EOIF:
+      _read:
+        NoError: [0, "No error interrupt or no condition for error interrupt flag"]
+        Error: [1, "Error interrupt is generated"]
+      _W1C:
+        Clear: [1, "Clear error flag"]
+    QDZIF:
+      _read:
+        InSleep: [0, "Sleep mode is not left or no condition for exit"]
+        SleepExit: [1, "Sleep mode has been left or exit condition has generated"]
+      _W1C:
+        Clear: [1, "Clear exit doze flag"]
+    EDZIF:
+      _read:
+        NotEnter: [0, "Sleep mode is not entered or no condition for flag set"]
+        EnterSleep: [1, "Sleep mode is entered"]
+      _W1C:
+        Clear: [1, "Clear enter doze flag"]
+    CUSS:
+      Idle: [0, "No transmit occurs"]
+      InProgress: [1, "Transmit is in progress"]
+    CURS:
+      Idle: [0, "No reception occurs"]
+      InProgress: [1, "Reception is in progress"]
+    LSAMPRX:
+      Low: [0, "Low"]
+      High: [1, "High"]
+    REALRX:
+      Low: [0, "Low"]
+      High: [1, "High"]
+  TSTS:
+    _array:
+      TM?TCF: {}
+      TM?TSF: {}
+      TM?ALF: {}
+      TM?TEF: {}
+      TM?CT: {}
+      TM?EF: {}
+      TM?LPF: {}
+    TM?TCF:
+      _read:
+        InProgress: [0, "Transmission in progress"]
+        Completed: [1, "Transmission completed"]
+      _W1C:
+        Clear: [1, "Clear transmission completed flag"]
+    TM?TSF:
+      _read:
+        Failed: [0, "Transmission in progress"]
+        Successful: [1, "Transmission was successful"]
+      _W1C:
+        Clear: [1, "Clear transmission success flag"]
+    TM?ALF:
+      _read:
+        NoLost: [0, "No arbitration lost"]
+        Lost: [1, "Transmit mailbox arbitration lost"]
+      _W1C:
+        Clear: [1, "Clear arbitration lost flag"]
+    TM?TEF:
+      _read:
+        NoError: [0, "No error"]
+        Error: [1, "Mailbox transmission error"]
+      _W1C:
+        Clear: [1, "Clear transmission error flag"]
+    TM?CT:
+      _read:
+        NoCancelling: [0, "No effect"]
+        Cancelling: [1, "Mailbox cancel transmit"]
+      _W1S:
+        Abort: [1, "Mailbox cancel transmit"]
+    TMNR: [0,3]
+    TM?EF:
+      NotEmpty: [0, "Transmission is pending in the mailbox"]
+      Empty: [1, "No transmission is pending in the mailbox"]
+    TM?LPF:
+      NotLowest: [0, "Mailbox is not given the lowest priority"]
+      Lowest: [1, "Mailbox is given the lowest priority"]
+  RF?:
+    _strip: "RF?"
+    _modify:
+      MN:
+        description: "Receive FIFO message num"
+      FF:
+        description: "Receive FIFO full flag"
+      OF:
+        description: "Receive FIFO overflow flag"
+      R:
+        description: "Receive FIFO release"
+    MN: [0,3]
+    FF:
+      _read:
+        NotFull: [0, "Receive FIFO is not full"]
+        Full: [1, "Receive FIFO is full"]
+      _W1C:
+        Clear: [1, "Clear full flag"]
+    OF:
+      _read:
+        NoOverflow: [0, "No overflow"]
+        Overflow: [1, "Receive FIFO overflow"]
+      _W1C:
+        Clear: [1, "Clear overflow flag"]
+    R:
+      _read:
+        Released: [0, "FIFO is released"]
+        Releasing: [1, "FIFO release in progress"]
+      _W1S:
+        Release: [1, "Release FIFO"]
+  INTEN:
+    _array:
+      RF?MIEN: {}
+      RF?FIEN: {}
+      RF?OIEN: {}
+    TCIEN:
+      _read:
+        Disabled: [0, "Transmit mailbox empty interrupt is disabled"]
+        Enabled: [1, "Transmit mailbox empty interrupt is enabled"]
+      _write:
+        Disable: [0, "Transmit mailbox empty interrupt disable"]
+        Enable: [1, "Transmit mailbox empty interrupt enable"]
+    RF?MIEN:
+      _read:
+        Disabled: [0, "FIFO receive message interrupt is disabled"]
+        Enabled: [1, "FIFO receive message interrupt is enabled"]
+      _write:
+        Disable: [0, "FIFO receive message interrupt disable"]
+        Enable: [1, "FIFO receive message interrupt enable"]
+    RF?FIEN:
+      _read:
+        Disabled: [0, "Receive FIFO full interrupt is disabled"]
+        Enabled: [1, "Receive FIFO full interrupt is enabled"]
+      _write:
+        Disable: [0, "Receive FIFO full interrupt disable"]
+        Enable: [1, "Receive FIFO full interrupt enable"]
+    RF?OIEN:
+      _read:
+        Disabled: [0, "Receive FIFO overflow interrupt is disabled"]
+        Enabled: [1, "Receive FIFO overflow interrupt is enabled"]
+      _write:
+        Disable: [0, "Receive FIFO overflow interrupt disable"]
+        Enable: [1, "Receive FIFO overflow interrupt enable"]
+    EAIEN:
+      _read:
+        Disabled: [0, "Error active interrupt is disabled"]
+        Enabled: [1, "Error active interrupt is enabled"]
+      _write:
+        Disable: [0, "Error active interrupt disable"]
+        Enable: [1, "Error active interrupt enable"]
+    EPIEN:
+      _read:
+        Disabled: [0, "Error passive interrupt is disabled"]
+        Enabled: [1, "Error passive interrupt is enabled"]
+      _write:
+        Disable: [0, "Error passive interrupt disable"]
+        Enable: [1, "Error passive interrupt enable"]
+    BOIEN:
+      _read:
+        Disabled: [0, "Bus-off interrupt is disabled"]
+        Enabled: [1, "Bus-off interrupt is enabled"]
+      _write:
+        Disable: [0, "Bus-off interrupt disable"]
+        Enable: [1, "Bus-off interrupt enable"]
+    ETRIEN:
+      _read:
+        Disabled: [0, "Error type record interrupt is disabled"]
+        Enabled: [1, "Error type record interrupt is enabled"]
+      _write:
+        Disable: [0, "Error type record interrupt disable"]
+        Enable: [1, "Error type record interrupt enable"]
+    EOIEN:
+      _read:
+        Disabled: [0, "Error occur interrupt is disabled"]
+        Enabled: [1, "Error occur interrupt is enabled"]
+      _write:
+        Disable: [0, "Error occur interrupt disable"]
+        Enable: [1, "Error occur interrupt enable"]
+    QDZIEN:
+      _read:
+        Disabled: [0, "Quit doze mode interrupt is disabled"]
+        Enabled: [1, "Quit doze mode interrupt is enabled"]
+      _write:
+        Disable: [0, "Quit doze mode interrupt disable"]
+        Enable: [1, "Quit doze mode interrupt enable"]
+    EDZIEN:
+      _read:
+        Disabled: [0, "Enter doze mode interrupt is disabled"]
+        Enabled: [1, "Enter doze mode interrupt is enabled"]
+      _write:
+        Disable: [0, "Enter doze mode interrupt disable"]
+        Enable: [1, "Enter doze mode interrupt enable"]
+  ESTS:
+    EAF:
+      NotEntered: [0, "Error active state is not entered"]
+      Entered: [1, "Error active state is entered"]
+    EPF:
+      NotEntered: [0, "Error passive state is not entered"]
+      Entered: [1, "Error passive state is entered"]
+    BOF:
+      NotEntered: [0, "Bus-off state is not entered"]
+      Entered: [1, "Bus-off state is entered"]
+    ETR:
+      NoError: [0, "No error"]
+      BitStuffing: [1, "Bit stuffing error"]
+      Format: [2, "Format error"]
+      Acknowledgement: [3, "Acknowledgement error"]
+      RecessiveBit: [4,"Recessive bit error"]
+      DominantBit: [5, "Dominant bit error"]
+      CRC: [6, "CRC error"]
+      Software: [7, "Set by software"]
+    TEC: [0, 0xFF]
+    REC: [0, 0xFF]
+  BTMG:
+    BRDIV: [0, 0xFFF]
+    BTS1: [0, 15]
+    BTS2: [0, 7]
+    RSAW: [0, 3]
+    LBEN:
+      _read:
+        Disabled: [0, "Loop back mode is disabled"]
+        Enabled: [1, "Loop back mode is enabled"]
+      _write:
+        Disable: [0, "Loop back mode disable"]
+        Enable: [1, "Loop back mode enable"]
+    LOEN:
+      _read:
+        Disabled: [0, "Listen-Only mode is disabled"]
+        Enabled: [1, "Listen-Only mode is enabled"]
+      _write:
+        Disable: [0, "Listen-Only mode disable"]
+        Enable: [1, "Listen-Only mode enable"]
+  FCTRL:
+    FCS:
+      Active: [0, "Filter bank is active"]
+      Configuration: [1, "Filter bank is in configuration mode"]
+  FMCFG:
+    _strip: "FM"
+    _array:
+      SEL*: {}
+    SEL*:
+      Mask: [0, "Identifier mask mode"]
+      List: [1, "Identifier list mode"]
+  FBWCFG:
+    _strip: "FBW"
+    _array:
+      SEL*: {}
+    SEL*:
+      Dual: [0, "Dual 16-bit"]
+      Single: [1, "Single 32-bit"]
+  FRF:
+    _strip: "FRF"
+    _array:
+      SEL*: {}
+    SEL*:
+      Dual: [0, "Associated with FIFO0"]
+      Single: [1, "Associated with FIFO1"]
+  FACFG:
+    _strip: "FA"
+    _array:
+      EN*: {}
+    EN*:
+      _read:
+        Disabled: [0, "Filter is disabled"]
+        Enabled: [1, "Filter is enabled"]
+      _write:
+        Disable: [0, "Filter disable"]
+        Enable: [1, "Filter enable"]

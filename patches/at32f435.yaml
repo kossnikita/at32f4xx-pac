@@ -1,9 +1,15 @@
 _svd: "../svd/AT32F435xx_v2.svd"
 
+TMR2:
+  _strip:
+    "TMR2_"
+
 _include:
   - common/crm/common.yaml
   - common/crm/crm_pllcfg.yaml
+  - common/ertc/common.yaml
   - common/flash/common.yaml
+  - common/can/common.yaml
   - common/crc/common.yaml
   - common/crc/poly.yaml
   - common/tmr/common.yaml

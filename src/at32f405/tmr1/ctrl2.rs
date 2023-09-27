@@ -3,17 +3,178 @@ pub type R = crate::R<CTRL2_SPEC>;
 #[doc = "Register `CTRL2` writer"]
 pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `CBCTRL` reader - Channel buffer control"]
-pub type CBCTRL_R = crate::BitReader;
+pub type CBCTRL_R = crate::BitReader<CBCTRLR_A>;
+#[doc = "Channel buffer control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CBCTRLR_A {
+    #[doc = "0: CxEN, CxCEN and CxOCTRL bits are not buffered"]
+    Disabled = 0,
+    #[doc = "1: CxEN, CxCEN and CxOCTRL bits are buffered"]
+    Enabled = 1,
+}
+impl From<CBCTRLR_A> for bool {
+    #[inline(always)]
+    fn from(variant: CBCTRLR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl CBCTRL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CBCTRLR_A {
+        match self.bits {
+            false => CBCTRLR_A::Disabled,
+            true => CBCTRLR_A::Enabled,
+        }
+    }
+    #[doc = "CxEN, CxCEN and CxOCTRL bits are not buffered"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == CBCTRLR_A::Disabled
+    }
+    #[doc = "CxEN, CxCEN and CxOCTRL bits are buffered"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == CBCTRLR_A::Enabled
+    }
+}
+#[doc = "Channel buffer control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CBCTRLW_AW {
+    #[doc = "0: CxEN, CxCEN and CxOCTRL bits buffer disable"]
+    Disable = 0,
+    #[doc = "1: CxEN, CxCEN and CxOCTRL bits buffer enable"]
+    Enable = 1,
+}
+impl From<CBCTRLW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: CBCTRLW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `CBCTRL` writer - Channel buffer control"]
-pub type CBCTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CBCTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CBCTRLW_AW>;
+impl<'a, REG, const O: u8> CBCTRL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "CxEN, CxCEN and CxOCTRL bits buffer disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(CBCTRLW_AW::Disable)
+    }
+    #[doc = "CxEN, CxCEN and CxOCTRL bits buffer enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(CBCTRLW_AW::Enable)
+    }
+}
 #[doc = "Field `CCFS` reader - Channel control bit flash select"]
-pub type CCFS_R = crate::BitReader;
+pub type CCFS_R = crate::BitReader<CCFS_A>;
+#[doc = "Channel control bit flash select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CCFS_A {
+    #[doc = "0: Control bits are updated by setting the HALL bit"]
+    Hall = 0,
+    #[doc = "1: Control bits are updated by setting the HALL bit or a rising edge on TRGIN"]
+    Trgin = 1,
+}
+impl From<CCFS_A> for bool {
+    #[inline(always)]
+    fn from(variant: CCFS_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl CCFS_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CCFS_A {
+        match self.bits {
+            false => CCFS_A::Hall,
+            true => CCFS_A::Trgin,
+        }
+    }
+    #[doc = "Control bits are updated by setting the HALL bit"]
+    #[inline(always)]
+    pub fn is_hall(&self) -> bool {
+        *self == CCFS_A::Hall
+    }
+    #[doc = "Control bits are updated by setting the HALL bit or a rising edge on TRGIN"]
+    #[inline(always)]
+    pub fn is_trgin(&self) -> bool {
+        *self == CCFS_A::Trgin
+    }
+}
 #[doc = "Field `CCFS` writer - Channel control bit flash select"]
-pub type CCFS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CCFS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CCFS_A>;
+impl<'a, REG, const O: u8> CCFS_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Control bits are updated by setting the HALL bit"]
+    #[inline(always)]
+    pub fn hall(self) -> &'a mut crate::W<REG> {
+        self.variant(CCFS_A::Hall)
+    }
+    #[doc = "Control bits are updated by setting the HALL bit or a rising edge on TRGIN"]
+    #[inline(always)]
+    pub fn trgin(self) -> &'a mut crate::W<REG> {
+        self.variant(CCFS_A::Trgin)
+    }
+}
 #[doc = "Field `DRS` reader - DMA request source"]
-pub type DRS_R = crate::BitReader;
+pub type DRS_R = crate::BitReader<DRS_A>;
+#[doc = "DMA request source\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum DRS_A {
+    #[doc = "0: Capture/compare event"]
+    CaptureCompare = 0,
+    #[doc = "1: Overflow event"]
+    Overflow = 1,
+}
+impl From<DRS_A> for bool {
+    #[inline(always)]
+    fn from(variant: DRS_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl DRS_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> DRS_A {
+        match self.bits {
+            false => DRS_A::CaptureCompare,
+            true => DRS_A::Overflow,
+        }
+    }
+    #[doc = "Capture/compare event"]
+    #[inline(always)]
+    pub fn is_capture_compare(&self) -> bool {
+        *self == DRS_A::CaptureCompare
+    }
+    #[doc = "Overflow event"]
+    #[inline(always)]
+    pub fn is_overflow(&self) -> bool {
+        *self == DRS_A::Overflow
+    }
+}
 #[doc = "Field `DRS` writer - DMA request source"]
-pub type DRS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DRS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DRS_A>;
+impl<'a, REG, const O: u8> DRS_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Capture/compare event"]
+    #[inline(always)]
+    pub fn capture_compare(self) -> &'a mut crate::W<REG> {
+        self.variant(DRS_A::CaptureCompare)
+    }
+    #[doc = "Overflow event"]
+    #[inline(always)]
+    pub fn overflow(self) -> &'a mut crate::W<REG> {
+        self.variant(DRS_A::Overflow)
+    }
+}
 #[doc = "Field `PTOS` reader - Primary TMR output selection"]
 pub type PTOS_R = crate::FieldReader<PTOS_A>;
 #[doc = "Primary TMR output selection\n\nValue on reset: 0"]
@@ -152,37 +313,164 @@ where
     }
 }
 #[doc = "Field `C1INSEL` reader - C1IN selection"]
-pub type C1INSEL_R = crate::BitReader;
+pub type C1INSEL_R = crate::BitReader<C1INSEL_A>;
+#[doc = "C1IN selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C1INSEL_A {
+    #[doc = "0: CH1 pin is connected to C1IRAW input"]
+    Ch1 = 0,
+    #[doc = "1: The XOR result of CH1, CH2 and CH3 pins is connected to C1IRAW input"]
+    Xor = 1,
+}
+impl From<C1INSEL_A> for bool {
+    #[inline(always)]
+    fn from(variant: C1INSEL_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl C1INSEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C1INSEL_A {
+        match self.bits {
+            false => C1INSEL_A::Ch1,
+            true => C1INSEL_A::Xor,
+        }
+    }
+    #[doc = "CH1 pin is connected to C1IRAW input"]
+    #[inline(always)]
+    pub fn is_ch1(&self) -> bool {
+        *self == C1INSEL_A::Ch1
+    }
+    #[doc = "The XOR result of CH1, CH2 and CH3 pins is connected to C1IRAW input"]
+    #[inline(always)]
+    pub fn is_xor(&self) -> bool {
+        *self == C1INSEL_A::Xor
+    }
+}
 #[doc = "Field `C1INSEL` writer - C1IN selection"]
-pub type C1INSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C1IOS` reader - Channel 1 idle output state"]
-pub type C1IOS_R = crate::BitReader;
-#[doc = "Field `C1IOS` writer - Channel 1 idle output state"]
-pub type C1IOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C1CIOS` reader - Channel 1 complementary idle output state"]
-pub type C1CIOS_R = crate::BitReader;
-#[doc = "Field `C1CIOS` writer - Channel 1 complementary idle output state"]
-pub type C1CIOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C2IOS` reader - Channel 2 idle output state"]
-pub type C2IOS_R = crate::BitReader;
-#[doc = "Field `C2IOS` writer - Channel 2 idle output state"]
-pub type C2IOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C2CIOS` reader - Channel 2 complementary idle output state"]
-pub type C2CIOS_R = crate::BitReader;
-#[doc = "Field `C2CIOS` writer - Channel 2 complementary idle output state"]
-pub type C2CIOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C3IOS` reader - Channel 3 idle output state"]
-pub type C3IOS_R = crate::BitReader;
-#[doc = "Field `C3IOS` writer - Channel 3 idle output state"]
-pub type C3IOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C3CIOS` reader - Channel 3 complementary idle output state"]
-pub type C3CIOS_R = crate::BitReader;
-#[doc = "Field `C3CIOS` writer - Channel 3 complementary idle output state"]
-pub type C3CIOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C4IOS` reader - Channel 4 idle output state"]
-pub type C4IOS_R = crate::BitReader;
-#[doc = "Field `C4IOS` writer - Channel 4 idle output state"]
-pub type C4IOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type C1INSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1INSEL_A>;
+impl<'a, REG, const O: u8> C1INSEL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "CH1 pin is connected to C1IRAW input"]
+    #[inline(always)]
+    pub fn ch1(self) -> &'a mut crate::W<REG> {
+        self.variant(C1INSEL_A::Ch1)
+    }
+    #[doc = "The XOR result of CH1, CH2 and CH3 pins is connected to C1IRAW input"]
+    #[inline(always)]
+    pub fn xor(self) -> &'a mut crate::W<REG> {
+        self.variant(C1INSEL_A::Xor)
+    }
+}
+#[doc = "Field `CIOS[1-4]` reader - Channel %s idle output state"]
+pub type CIOS_R = crate::BitReader<C1IOS_A>;
+#[doc = "Channel %s idle output state\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C1IOS_A {
+    #[doc = "0: After dead-time state is low"]
+    Low = 0,
+    #[doc = "1: After dead-time state is high"]
+    High = 1,
+}
+impl From<C1IOS_A> for bool {
+    #[inline(always)]
+    fn from(variant: C1IOS_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl CIOS_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C1IOS_A {
+        match self.bits {
+            false => C1IOS_A::Low,
+            true => C1IOS_A::High,
+        }
+    }
+    #[doc = "After dead-time state is low"]
+    #[inline(always)]
+    pub fn is_low(&self) -> bool {
+        *self == C1IOS_A::Low
+    }
+    #[doc = "After dead-time state is high"]
+    #[inline(always)]
+    pub fn is_high(&self) -> bool {
+        *self == C1IOS_A::High
+    }
+}
+#[doc = "Field `CIOS[1-4]` writer - Channel %s idle output state"]
+pub type CIOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1IOS_A>;
+impl<'a, REG, const O: u8> CIOS_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "After dead-time state is low"]
+    #[inline(always)]
+    pub fn low(self) -> &'a mut crate::W<REG> {
+        self.variant(C1IOS_A::Low)
+    }
+    #[doc = "After dead-time state is high"]
+    #[inline(always)]
+    pub fn high(self) -> &'a mut crate::W<REG> {
+        self.variant(C1IOS_A::High)
+    }
+}
+#[doc = "Field `CCIOS[1-3]` reader - Channel %s complementary idle output state"]
+pub type CCIOS_R = crate::BitReader<C1CIOS_A>;
+#[doc = "Channel %s complementary idle output state\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C1CIOS_A {
+    #[doc = "0: After dead-time state is low"]
+    Low = 0,
+    #[doc = "1: After dead-time state is high"]
+    High = 1,
+}
+impl From<C1CIOS_A> for bool {
+    #[inline(always)]
+    fn from(variant: C1CIOS_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl CCIOS_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C1CIOS_A {
+        match self.bits {
+            false => C1CIOS_A::Low,
+            true => C1CIOS_A::High,
+        }
+    }
+    #[doc = "After dead-time state is low"]
+    #[inline(always)]
+    pub fn is_low(&self) -> bool {
+        *self == C1CIOS_A::Low
+    }
+    #[doc = "After dead-time state is high"]
+    #[inline(always)]
+    pub fn is_high(&self) -> bool {
+        *self == C1CIOS_A::High
+    }
+}
+#[doc = "Field `CCIOS[1-3]` writer - Channel %s complementary idle output state"]
+pub type CCIOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1CIOS_A>;
+impl<'a, REG, const O: u8> CCIOS_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "After dead-time state is low"]
+    #[inline(always)]
+    pub fn low(self) -> &'a mut crate::W<REG> {
+        self.variant(C1CIOS_A::Low)
+    }
+    #[doc = "After dead-time state is high"]
+    #[inline(always)]
+    pub fn high(self) -> &'a mut crate::W<REG> {
+        self.variant(C1CIOS_A::High)
+    }
+}
 #[doc = "Field `TRGOUT2EN` reader - TRGOUT2 enable"]
 pub type TRGOUT2EN_R = crate::BitReader;
 #[doc = "Field `TRGOUT2EN` writer - TRGOUT2 enable"]
@@ -213,40 +501,52 @@ impl R {
     pub fn c1insel(&self) -> C1INSEL_R {
         C1INSEL_R::new(((self.bits >> 7) & 1) != 0)
     }
+    #[doc = "Channel [1-4]
+idle output state"]
+    #[inline(always)]
+    pub unsafe fn cios(&self, n: u8) -> CIOS_R {
+        CIOS_R::new(((self.bits >> ((n - 1) * 2 + 8)) & 1) != 0)
+    }
     #[doc = "Bit 8 - Channel 1 idle output state"]
     #[inline(always)]
-    pub fn c1ios(&self) -> C1IOS_R {
-        C1IOS_R::new(((self.bits >> 8) & 1) != 0)
-    }
-    #[doc = "Bit 9 - Channel 1 complementary idle output state"]
-    #[inline(always)]
-    pub fn c1cios(&self) -> C1CIOS_R {
-        C1CIOS_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn c1ios(&self) -> CIOS_R {
+        CIOS_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 10 - Channel 2 idle output state"]
     #[inline(always)]
-    pub fn c2ios(&self) -> C2IOS_R {
-        C2IOS_R::new(((self.bits >> 10) & 1) != 0)
-    }
-    #[doc = "Bit 11 - Channel 2 complementary idle output state"]
-    #[inline(always)]
-    pub fn c2cios(&self) -> C2CIOS_R {
-        C2CIOS_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn c2ios(&self) -> CIOS_R {
+        CIOS_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 12 - Channel 3 idle output state"]
     #[inline(always)]
-    pub fn c3ios(&self) -> C3IOS_R {
-        C3IOS_R::new(((self.bits >> 12) & 1) != 0)
-    }
-    #[doc = "Bit 13 - Channel 3 complementary idle output state"]
-    #[inline(always)]
-    pub fn c3cios(&self) -> C3CIOS_R {
-        C3CIOS_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn c3ios(&self) -> CIOS_R {
+        CIOS_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 14 - Channel 4 idle output state"]
     #[inline(always)]
-    pub fn c4ios(&self) -> C4IOS_R {
-        C4IOS_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn c4ios(&self) -> CIOS_R {
+        CIOS_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Channel [1-3]
+complementary idle output state"]
+    #[inline(always)]
+    pub unsafe fn ccios(&self, n: u8) -> CCIOS_R {
+        CCIOS_R::new(((self.bits >> ((n - 1) * 2 + 9)) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Channel 1 complementary idle output state"]
+    #[inline(always)]
+    pub fn c1cios(&self) -> CCIOS_R {
+        CCIOS_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Channel 2 complementary idle output state"]
+    #[inline(always)]
+    pub fn c2cios(&self) -> CCIOS_R {
+        CCIOS_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 13 - Channel 3 complementary idle output state"]
+    #[inline(always)]
+    pub fn c3cios(&self) -> CCIOS_R {
+        CCIOS_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 31 - TRGOUT2 enable"]
     #[inline(always)]
@@ -285,47 +585,61 @@ impl W {
     pub fn c1insel(&mut self) -> C1INSEL_W<CTRL2_SPEC, 7> {
         C1INSEL_W::new(self)
     }
+    #[doc = "Channel [1-4]
+idle output state"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn cios<const O: u8>(&mut self) -> CIOS_W<CTRL2_SPEC, O> {
+        CIOS_W::new(self)
+    }
     #[doc = "Bit 8 - Channel 1 idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c1ios(&mut self) -> C1IOS_W<CTRL2_SPEC, 8> {
-        C1IOS_W::new(self)
-    }
-    #[doc = "Bit 9 - Channel 1 complementary idle output state"]
-    #[inline(always)]
-    #[must_use]
-    pub fn c1cios(&mut self) -> C1CIOS_W<CTRL2_SPEC, 9> {
-        C1CIOS_W::new(self)
+    pub fn c1ios(&mut self) -> CIOS_W<CTRL2_SPEC, 8> {
+        CIOS_W::new(self)
     }
     #[doc = "Bit 10 - Channel 2 idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c2ios(&mut self) -> C2IOS_W<CTRL2_SPEC, 10> {
-        C2IOS_W::new(self)
-    }
-    #[doc = "Bit 11 - Channel 2 complementary idle output state"]
-    #[inline(always)]
-    #[must_use]
-    pub fn c2cios(&mut self) -> C2CIOS_W<CTRL2_SPEC, 11> {
-        C2CIOS_W::new(self)
+    pub fn c2ios(&mut self) -> CIOS_W<CTRL2_SPEC, 10> {
+        CIOS_W::new(self)
     }
     #[doc = "Bit 12 - Channel 3 idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c3ios(&mut self) -> C3IOS_W<CTRL2_SPEC, 12> {
-        C3IOS_W::new(self)
-    }
-    #[doc = "Bit 13 - Channel 3 complementary idle output state"]
-    #[inline(always)]
-    #[must_use]
-    pub fn c3cios(&mut self) -> C3CIOS_W<CTRL2_SPEC, 13> {
-        C3CIOS_W::new(self)
+    pub fn c3ios(&mut self) -> CIOS_W<CTRL2_SPEC, 12> {
+        CIOS_W::new(self)
     }
     #[doc = "Bit 14 - Channel 4 idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c4ios(&mut self) -> C4IOS_W<CTRL2_SPEC, 14> {
-        C4IOS_W::new(self)
+    pub fn c4ios(&mut self) -> CIOS_W<CTRL2_SPEC, 14> {
+        CIOS_W::new(self)
+    }
+    #[doc = "Channel [1-3]
+complementary idle output state"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn ccios<const O: u8>(&mut self) -> CCIOS_W<CTRL2_SPEC, O> {
+        CCIOS_W::new(self)
+    }
+    #[doc = "Bit 9 - Channel 1 complementary idle output state"]
+    #[inline(always)]
+    #[must_use]
+    pub fn c1cios(&mut self) -> CCIOS_W<CTRL2_SPEC, 9> {
+        CCIOS_W::new(self)
+    }
+    #[doc = "Bit 11 - Channel 2 complementary idle output state"]
+    #[inline(always)]
+    #[must_use]
+    pub fn c2cios(&mut self) -> CCIOS_W<CTRL2_SPEC, 11> {
+        CCIOS_W::new(self)
+    }
+    #[doc = "Bit 13 - Channel 3 complementary idle output state"]
+    #[inline(always)]
+    #[must_use]
+    pub fn c3cios(&mut self) -> CCIOS_W<CTRL2_SPEC, 13> {
+        CCIOS_W::new(self)
     }
     #[doc = "Bit 31 - TRGOUT2 enable"]
     #[inline(always)]

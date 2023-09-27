@@ -17,6 +17,8 @@ _include:
   - common/crm/common.yaml
   - common/crc/common.yaml
   - common/crc/poly.yaml
+  - common/can/common.yaml
+  - common/ertc/common.yaml
   - common/flash/common.yaml
   - common/gpio/gpio-v1.yaml
   - common/tmr/common.yaml

@@ -1,0 +1,5 @@
+ERTC:
+  _array:
+    BPR*DT: {}
+  BPR*DT:
+    DT: [0, 0xffffffff]

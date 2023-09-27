@@ -4,8 +4,10 @@ _include:
   - common/crm/common.yaml
   - common/crm/pllhextdiv.yaml
   - common/flash/common.yaml
+  - common/flash/unlock.yaml
   - common/gpio/gpio-v1.yaml
   - common/gpio/hdrv.yaml
+  - common/can/common.yaml
   - common/crc/common.yaml
   - common/tmr/common.yaml
   - common/iomux/common.yaml

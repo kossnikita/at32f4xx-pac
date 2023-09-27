@@ -3,21 +3,349 @@ pub type R = crate::R<REMAP8_SPEC>;
 #[doc = "Register `REMAP8` writer"]
 pub type W = crate::W<REMAP8_SPEC>;
 #[doc = "Field `TMR1_BK1_CMP_GMUX` reader - TMR1 BK1 CMP muxing"]
-pub type TMR1_BK1_CMP_GMUX_R = crate::FieldReader;
+pub type TMR1_BK1_CMP_GMUX_R = crate::FieldReader<TMR1_BK1_CMP_GMUX_A>;
+#[doc = "TMR1 BK1 CMP muxing\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum TMR1_BK1_CMP_GMUX_A {
+    #[doc = "0: TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    Mux0 = 0,
+    #[doc = "1: TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    Mux1 = 1,
+    #[doc = "2: CMP output signal is connected to TMR1 break channel 1"]
+    Mux2 = 2,
+    #[doc = "3: Either CMP output signal or TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    Mux3 = 3,
+}
+impl From<TMR1_BK1_CMP_GMUX_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TMR1_BK1_CMP_GMUX_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for TMR1_BK1_CMP_GMUX_A {
+    type Ux = u8;
+}
+impl TMR1_BK1_CMP_GMUX_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TMR1_BK1_CMP_GMUX_A {
+        match self.bits {
+            0 => TMR1_BK1_CMP_GMUX_A::Mux0,
+            1 => TMR1_BK1_CMP_GMUX_A::Mux1,
+            2 => TMR1_BK1_CMP_GMUX_A::Mux2,
+            3 => TMR1_BK1_CMP_GMUX_A::Mux3,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    #[inline(always)]
+    pub fn is_mux0(&self) -> bool {
+        *self == TMR1_BK1_CMP_GMUX_A::Mux0
+    }
+    #[doc = "TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    #[inline(always)]
+    pub fn is_mux1(&self) -> bool {
+        *self == TMR1_BK1_CMP_GMUX_A::Mux1
+    }
+    #[doc = "CMP output signal is connected to TMR1 break channel 1"]
+    #[inline(always)]
+    pub fn is_mux2(&self) -> bool {
+        *self == TMR1_BK1_CMP_GMUX_A::Mux2
+    }
+    #[doc = "Either CMP output signal or TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    #[inline(always)]
+    pub fn is_mux3(&self) -> bool {
+        *self == TMR1_BK1_CMP_GMUX_A::Mux3
+    }
+}
 #[doc = "Field `TMR1_BK1_CMP_GMUX` writer - TMR1 BK1 CMP muxing"]
-pub type TMR1_BK1_CMP_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TMR1_BK1_CMP_GMUX_W<'a, REG, const O: u8> =
+    crate::FieldWriterSafe<'a, REG, 2, O, TMR1_BK1_CMP_GMUX_A>;
+impl<'a, REG, const O: u8> TMR1_BK1_CMP_GMUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    #[inline(always)]
+    pub fn mux0(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_BK1_CMP_GMUX_A::Mux0)
+    }
+    #[doc = "TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    #[inline(always)]
+    pub fn mux1(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_BK1_CMP_GMUX_A::Mux1)
+    }
+    #[doc = "CMP output signal is connected to TMR1 break channel 1"]
+    #[inline(always)]
+    pub fn mux2(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_BK1_CMP_GMUX_A::Mux2)
+    }
+    #[doc = "Either CMP output signal or TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    #[inline(always)]
+    pub fn mux3(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_BK1_CMP_GMUX_A::Mux3)
+    }
+}
 #[doc = "Field `TMR1_CH1_CMP_GMUX` reader - TMR1 CH1 CMP muxing"]
-pub type TMR1_CH1_CMP_GMUX_R = crate::FieldReader;
+pub type TMR1_CH1_CMP_GMUX_R = crate::FieldReader<TMR1_CH1_CMP_GMUX_A>;
+#[doc = "TMR1 CH1 CMP muxing\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum TMR1_CH1_CMP_GMUX_A {
+    #[doc = "0: TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    Mux0 = 0,
+    #[doc = "1: TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    Mux1 = 1,
+    #[doc = "2: CMP output signal is connected to TMR1 channel 1"]
+    Mux2 = 2,
+    #[doc = "3: Either CMP output signal or TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    Mux3 = 3,
+}
+impl From<TMR1_CH1_CMP_GMUX_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TMR1_CH1_CMP_GMUX_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for TMR1_CH1_CMP_GMUX_A {
+    type Ux = u8;
+}
+impl TMR1_CH1_CMP_GMUX_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TMR1_CH1_CMP_GMUX_A {
+        match self.bits {
+            0 => TMR1_CH1_CMP_GMUX_A::Mux0,
+            1 => TMR1_CH1_CMP_GMUX_A::Mux1,
+            2 => TMR1_CH1_CMP_GMUX_A::Mux2,
+            3 => TMR1_CH1_CMP_GMUX_A::Mux3,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    #[inline(always)]
+    pub fn is_mux0(&self) -> bool {
+        *self == TMR1_CH1_CMP_GMUX_A::Mux0
+    }
+    #[doc = "TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    #[inline(always)]
+    pub fn is_mux1(&self) -> bool {
+        *self == TMR1_CH1_CMP_GMUX_A::Mux1
+    }
+    #[doc = "CMP output signal is connected to TMR1 channel 1"]
+    #[inline(always)]
+    pub fn is_mux2(&self) -> bool {
+        *self == TMR1_CH1_CMP_GMUX_A::Mux2
+    }
+    #[doc = "Either CMP output signal or TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    #[inline(always)]
+    pub fn is_mux3(&self) -> bool {
+        *self == TMR1_CH1_CMP_GMUX_A::Mux3
+    }
+}
 #[doc = "Field `TMR1_CH1_CMP_GMUX` writer - TMR1 CH1 CMP muxing"]
-pub type TMR1_CH1_CMP_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TMR1_CH1_CMP_GMUX_W<'a, REG, const O: u8> =
+    crate::FieldWriterSafe<'a, REG, 2, O, TMR1_CH1_CMP_GMUX_A>;
+impl<'a, REG, const O: u8> TMR1_CH1_CMP_GMUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    #[inline(always)]
+    pub fn mux0(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_CH1_CMP_GMUX_A::Mux0)
+    }
+    #[doc = "TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    #[inline(always)]
+    pub fn mux1(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_CH1_CMP_GMUX_A::Mux1)
+    }
+    #[doc = "CMP output signal is connected to TMR1 channel 1"]
+    #[inline(always)]
+    pub fn mux2(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_CH1_CMP_GMUX_A::Mux2)
+    }
+    #[doc = "Either CMP output signal or TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    #[inline(always)]
+    pub fn mux3(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_CH1_CMP_GMUX_A::Mux3)
+    }
+}
 #[doc = "Field `TMR2_CH4_CMP_GMUX` reader - TMR2 CH4 CMP muxing"]
-pub type TMR2_CH4_CMP_GMUX_R = crate::FieldReader;
+pub type TMR2_CH4_CMP_GMUX_R = crate::FieldReader<TMR2_CH4_CMP_GMUX_A>;
+#[doc = "TMR2 CH4 CMP muxing\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum TMR2_CH4_CMP_GMUX_A {
+    #[doc = "0: TMR2_GMUX IO signal is connected to TMR2 channel 4"]
+    Mux0 = 0,
+    #[doc = "1: TMR2_GMUX IO signal is connected to TMR2 channel 4"]
+    Mux1 = 1,
+    #[doc = "2: CMP output signal is connected to TMR2 channel 4"]
+    Mux2 = 2,
+    #[doc = "3: Either CMP output signal or TMR1_GMUX IO signal is connected to TMR2 channel 4"]
+    Mux3 = 3,
+}
+impl From<TMR2_CH4_CMP_GMUX_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TMR2_CH4_CMP_GMUX_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for TMR2_CH4_CMP_GMUX_A {
+    type Ux = u8;
+}
+impl TMR2_CH4_CMP_GMUX_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TMR2_CH4_CMP_GMUX_A {
+        match self.bits {
+            0 => TMR2_CH4_CMP_GMUX_A::Mux0,
+            1 => TMR2_CH4_CMP_GMUX_A::Mux1,
+            2 => TMR2_CH4_CMP_GMUX_A::Mux2,
+            3 => TMR2_CH4_CMP_GMUX_A::Mux3,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "TMR2_GMUX IO signal is connected to TMR2 channel 4"]
+    #[inline(always)]
+    pub fn is_mux0(&self) -> bool {
+        *self == TMR2_CH4_CMP_GMUX_A::Mux0
+    }
+    #[doc = "TMR2_GMUX IO signal is connected to TMR2 channel 4"]
+    #[inline(always)]
+    pub fn is_mux1(&self) -> bool {
+        *self == TMR2_CH4_CMP_GMUX_A::Mux1
+    }
+    #[doc = "CMP output signal is connected to TMR2 channel 4"]
+    #[inline(always)]
+    pub fn is_mux2(&self) -> bool {
+        *self == TMR2_CH4_CMP_GMUX_A::Mux2
+    }
+    #[doc = "Either CMP output signal or TMR1_GMUX IO signal is connected to TMR2 channel 4"]
+    #[inline(always)]
+    pub fn is_mux3(&self) -> bool {
+        *self == TMR2_CH4_CMP_GMUX_A::Mux3
+    }
+}
 #[doc = "Field `TMR2_CH4_CMP_GMUX` writer - TMR2 CH4 CMP muxing"]
-pub type TMR2_CH4_CMP_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TMR2_CH4_CMP_GMUX_W<'a, REG, const O: u8> =
+    crate::FieldWriterSafe<'a, REG, 2, O, TMR2_CH4_CMP_GMUX_A>;
+impl<'a, REG, const O: u8> TMR2_CH4_CMP_GMUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "TMR2_GMUX IO signal is connected to TMR2 channel 4"]
+    #[inline(always)]
+    pub fn mux0(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR2_CH4_CMP_GMUX_A::Mux0)
+    }
+    #[doc = "TMR2_GMUX IO signal is connected to TMR2 channel 4"]
+    #[inline(always)]
+    pub fn mux1(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR2_CH4_CMP_GMUX_A::Mux1)
+    }
+    #[doc = "CMP output signal is connected to TMR2 channel 4"]
+    #[inline(always)]
+    pub fn mux2(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR2_CH4_CMP_GMUX_A::Mux2)
+    }
+    #[doc = "Either CMP output signal or TMR1_GMUX IO signal is connected to TMR2 channel 4"]
+    #[inline(always)]
+    pub fn mux3(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR2_CH4_CMP_GMUX_A::Mux3)
+    }
+}
 #[doc = "Field `TMR3_CH1_CMP_GMUX` reader - TMR3 CH1 CMP muxing"]
-pub type TMR3_CH1_CMP_GMUX_R = crate::FieldReader;
+pub type TMR3_CH1_CMP_GMUX_R = crate::FieldReader<TMR3_CH1_CMP_GMUX_A>;
+#[doc = "TMR3 CH1 CMP muxing\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum TMR3_CH1_CMP_GMUX_A {
+    #[doc = "0: TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+    Mux0 = 0,
+    #[doc = "1: TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+    Mux1 = 1,
+    #[doc = "2: CMP output signal is connected to TMR3 channel 1"]
+    Mux2 = 2,
+    #[doc = "3: Either CMP output signal or TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+    Mux3 = 3,
+}
+impl From<TMR3_CH1_CMP_GMUX_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TMR3_CH1_CMP_GMUX_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for TMR3_CH1_CMP_GMUX_A {
+    type Ux = u8;
+}
+impl TMR3_CH1_CMP_GMUX_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TMR3_CH1_CMP_GMUX_A {
+        match self.bits {
+            0 => TMR3_CH1_CMP_GMUX_A::Mux0,
+            1 => TMR3_CH1_CMP_GMUX_A::Mux1,
+            2 => TMR3_CH1_CMP_GMUX_A::Mux2,
+            3 => TMR3_CH1_CMP_GMUX_A::Mux3,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+    #[inline(always)]
+    pub fn is_mux0(&self) -> bool {
+        *self == TMR3_CH1_CMP_GMUX_A::Mux0
+    }
+    #[doc = "TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+    #[inline(always)]
+    pub fn is_mux1(&self) -> bool {
+        *self == TMR3_CH1_CMP_GMUX_A::Mux1
+    }
+    #[doc = "CMP output signal is connected to TMR3 channel 1"]
+    #[inline(always)]
+    pub fn is_mux2(&self) -> bool {
+        *self == TMR3_CH1_CMP_GMUX_A::Mux2
+    }
+    #[doc = "Either CMP output signal or TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+    #[inline(always)]
+    pub fn is_mux3(&self) -> bool {
+        *self == TMR3_CH1_CMP_GMUX_A::Mux3
+    }
+}
 #[doc = "Field `TMR3_CH1_CMP_GMUX` writer - TMR3 CH1 CMP muxing"]
-pub type TMR3_CH1_CMP_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TMR3_CH1_CMP_GMUX_W<'a, REG, const O: u8> =
+    crate::FieldWriterSafe<'a, REG, 2, O, TMR3_CH1_CMP_GMUX_A>;
+impl<'a, REG, const O: u8> TMR3_CH1_CMP_GMUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+    #[inline(always)]
+    pub fn mux0(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR3_CH1_CMP_GMUX_A::Mux0)
+    }
+    #[doc = "TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+    #[inline(always)]
+    pub fn mux1(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR3_CH1_CMP_GMUX_A::Mux1)
+    }
+    #[doc = "CMP output signal is connected to TMR3 channel 1"]
+    #[inline(always)]
+    pub fn mux2(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR3_CH1_CMP_GMUX_A::Mux2)
+    }
+    #[doc = "Either CMP output signal or TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+    #[inline(always)]
+    pub fn mux3(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR3_CH1_CMP_GMUX_A::Mux3)
+    }
+}
 impl R {
     #[doc = "Bits 0:1 - TMR1 BK1 CMP muxing"]
     #[inline(always)]

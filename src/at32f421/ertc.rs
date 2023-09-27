@@ -34,16 +34,35 @@ pub struct RegisterBlock {
     #[doc = "0x44 - alarm A sub second register"]
     pub alasbs: ALASBS,
     _reserved15: [u8; 0x08],
+    #[doc = "0x50..0x64 - Battery powered domain register"]
+    pub bprdt: [BPRDT; 5],
+}
+impl RegisterBlock {
     #[doc = "0x50 - Battery powered domain register"]
-    pub bpr1dt: BPR1DT,
+    #[inline(always)]
+    pub fn bpr1dt(&self) -> &BPRDT {
+        &self.bprdt[0]
+    }
     #[doc = "0x54 - Battery powered domain register"]
-    pub bpr2dt: BPR2DT,
+    #[inline(always)]
+    pub fn bpr2dt(&self) -> &BPRDT {
+        &self.bprdt[1]
+    }
     #[doc = "0x58 - Battery powered domain register"]
-    pub bpr3dt: BPR3DT,
+    #[inline(always)]
+    pub fn bpr3dt(&self) -> &BPRDT {
+        &self.bprdt[2]
+    }
     #[doc = "0x5c - Battery powered domain register"]
-    pub bpr4dt: BPR4DT,
+    #[inline(always)]
+    pub fn bpr4dt(&self) -> &BPRDT {
+        &self.bprdt[3]
+    }
     #[doc = "0x60 - Battery powered domain register"]
-    pub bpr5dt: BPR5DT,
+    #[inline(always)]
+    pub fn bpr5dt(&self) -> &BPRDT {
+        &self.bprdt[4]
+    }
 }
 #[doc = "TIME (rw) register accessor: time register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`time::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`time`]
 module"]
@@ -120,28 +139,8 @@ module"]
 pub type ALASBS = crate::Reg<alasbs::ALASBS_SPEC>;
 #[doc = "alarm A sub second register"]
 pub mod alasbs;
-#[doc = "BPR1DT (rw) register accessor: Battery powered domain register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bpr1dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bpr1dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`bpr1dt`]
+#[doc = "BPRDT (rw) register accessor: Battery powered domain register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bprdt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bprdt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`bprdt`]
 module"]
-pub type BPR1DT = crate::Reg<bpr1dt::BPR1DT_SPEC>;
+pub type BPRDT = crate::Reg<bprdt::BPRDT_SPEC>;
 #[doc = "Battery powered domain register"]
-pub mod bpr1dt;
-#[doc = "BPR2DT (rw) register accessor: Battery powered domain register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bpr2dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bpr2dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`bpr2dt`]
-module"]
-pub type BPR2DT = crate::Reg<bpr2dt::BPR2DT_SPEC>;
-#[doc = "Battery powered domain register"]
-pub mod bpr2dt;
-#[doc = "BPR3DT (rw) register accessor: Battery powered domain register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bpr3dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bpr3dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`bpr3dt`]
-module"]
-pub type BPR3DT = crate::Reg<bpr3dt::BPR3DT_SPEC>;
-#[doc = "Battery powered domain register"]
-pub mod bpr3dt;
-#[doc = "BPR4DT (rw) register accessor: Battery powered domain register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bpr4dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bpr4dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`bpr4dt`]
-module"]
-pub type BPR4DT = crate::Reg<bpr4dt::BPR4DT_SPEC>;
-#[doc = "Battery powered domain register"]
-pub mod bpr4dt;
-#[doc = "BPR5DT (rw) register accessor: Battery powered domain register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bpr5dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bpr5dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`bpr5dt`]
-module"]
-pub type BPR5DT = crate::Reg<bpr5dt::BPR5DT_SPEC>;
-#[doc = "Battery powered domain register"]
-pub mod bpr5dt;
+pub mod bprdt;

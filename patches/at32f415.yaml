@@ -1,6 +1,16 @@
 _svd: "../svd/AT32F415xx_v2.svd"
 
 IOMUX:
+  EXINTC?:
+    _array:
+      EXINT*:
+        description: "Select the input source for EXINT%s external interrupt"
+    EXINT*:
+      GPIOA: [0, "GPIOA pin"]
+      GPIOB: [1, "GPIOB pin"]
+      GPIOC: [2, "GPIOB pin"]
+      GPIOD: [3, "GPIOB pin"]
+      GPIOF: [4, "GPIOB pin"]
   REMAP:
     SPI1_MUX0: [0, 0]
     SPI1_MUX1:
@@ -27,7 +37,7 @@ IOMUX:
     TMR3_MUX:
       MUX0: [0, "CH1/PA6, CH2/PA7, CH3/PB0 and CH4/PB1"]
       MUX2: [2, "CH1/EXT/PA0, CH2/PA1, CH3/PB10, CH4/PB11"]
-      MUX3: [3, "CH1/EXT/PA15, CH2/PB3, CH3/PB10, CH4/PB11"]    
+      MUX3: [3, "CH1/EXT/PA15, CH2/PB3, CH3/PB10, CH4/PB11"]
     CAN_MUX:
       MUX0: [0, "RX/PA11, TX/PA12"]
       MUX2: [2, "RX/PB8, TX/PB9"]
@@ -48,7 +58,123 @@ IOMUX:
       SWDandJTAGwithoutNJTRST: [1, "Supports SWD and JTAG. NJTRST is disabled. PB4 can be used as GPIO"]
       SWD: [2, "Supports SWD but JTAG is disabled. PA15/PB3/PB4 can be used as GPIOs"]
       Disable: [4, "SWD and JTAG are disabled. All SWJTAG pins can be used as GPIOs"]
-
+  REMAP2:
+    CMP_MUX:
+      MUX0: [0, "CMP1_OUT is connected to PA0, CMP2_OUT is connected to PA2"]
+      MUX1: [1, "CMP1_OUT is connected to PA6, CMP2_OUT is connected to PA7"]
+      MUX2: [2, "CMP1_OUT is connected to PA11, CMP2_OUT is connected to PA12;"]
+  REMAP3:
+    TMR9_GMUX:
+      MUX0: [0, "CH1/PA2, CH2/PA3"]
+      MUX1: [2, "CH1/PB14, CH2/PB15"]
+    TMR10_GMUX:
+      MUX0: [0, "CH1/PB8"]
+      MUX1: [2, "CH1/PA6"]
+    TMR11_GMUX:
+      MUX0: [0, "CH1/PB9"]
+      MUX1: [2, "CH1/PA7"]
+  REMAP4:
+    TMR1_GMUX:
+      MUX0: [0, "EXT/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BRK/PB12, CH1C/PB13, CH2C/PB14, CH3C/PB15"]
+      MUX1: [1, "EXT/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BRK/PA6, CH1C/PA7, CH2C/PB0, CH3C/PB1"]
+      MUX2: [2, "EXT/PA0, CH1/PC6, CH2/PC7, CH3/PC8, CH4/PC9, BRK/PA6, CH1C/PA7, CH2C/PB0, CH3C/PB1"]
+    TMR2_GMUX:
+      MUX0: [0, "CH1_EXT/PA0 CH2/PA1 CH3/PA2 CH4/PA3"]
+      MUX1: [1, "CH1_EXT/PA15 CH2/PB3 CH3/PA2 CH4/PA3"]
+      MUX2: [2, "CH1_EXT/PA0 CH2/PA1 CH3/PB10 CH4/PB11"]
+      MUX3: [3, "CH1_EXT/PA15 CH2/PB3 CH3/PB10 CH4/PB11"]
+    TMR3_GMUX:
+      MUX0: [0, "CH1/PA6 CH2/PA7 CH3/PB0 CH4/PB1"]
+      MUX1: [1, "CH1/PB4 CH2/PB5 CH3/PB0 CH4/PB1"]
+    TMR5_GMUX:
+      MUX0: [0, "CH1/PA0 CH2/PA1 CH3/PA2 CH4/PA3"]
+      MUX1: [1, "CH1/PF4 CH2/PF5 CH3/PA2 CH4/PA3"]
+    TMR5CH4_GMUX:
+      PA3: [0, "TMR5_CH4 is connected to PA3"]
+      LICK: [1, "LICK is connected to TMR5_CH4 to get calibration"]
+  REMAP5:
+    I2C1_GMUX:
+      MUX0: [0, "SCL/PB6, SDA/PB7, SMBA/PB5"]
+      MUX1: [1, "SCL/PB8, SDA/PB9, SMBA/PB5"]
+      MUX2: [2, "SCL/PF6, SDA/PF7, SMBA/PB5"]
+    I2C2_GMUX:
+      MUX0: [0, "SCL/PB10, SDA/PB11, SMBA/PB12"]
+      MUX1: [1, "SCL/PA8, SDA/PC9, SMBA/PA9"]
+      MUX2: [2, "SCL/PA8, SDA/PB4, SMBA/PA9"]
+      MUX3: [3, "SCL/PF6, SDA/PF7, SMBA/PA9"]
+    SPI1_GMUX:
+      MUX0: [0, "CS/PA4, SCK/PA5, MISO/PA6, MOSI/PA7, MCK/PB0"]
+      MUX1: [1, "CS/PA15, SCK/PB3, MISO/PB4, MOSI/PB5, MCK/PB6"]
+    SPI2_GMUX:
+      MUX0: [0, "CS/PB12, SCK/PB13, MISO/PB14, MOSI/PB15, MCK/PC6"]
+      MUX1: [1, "CS/PA15, SCK/PB3, MISO/PB4, MOSI/PB5, MCK/PC7"]
+  REMAP6:
+    CAN1_GMUX:
+      MUX0: [0, "RX/PA11, TX/PA12"]
+      MUX1: [2, "RX/PB8, TX/PB9"]
+    SDIO1_GMUX:
+      MUX0: [0, "D0/PC8, D1/PC9, D2/PC10, D3/PC11, D4/PB8, D5/PB9, D6/PC6, D7/PC7, CK/PC12, CMD/PD2"]
+      MUX1: [4, "D0/PC0, D1/PC1, D2/PC2, D3/PC3, D4/PA4, D5/PA5, D6/PA6, D7/PA7, CK/PC4, CMD/PC5"]
+      MUX2: [5, "D0/PA4, D1/PA5, D2/PA6, D3/PA7, CK/PC4, CMD/PC5"]
+      MUX3: [6, "D0/PC0, D1/PC1, D2/PC2, D3/PC3, D4/PA4, D5/PA5, D6/PA6, D7/PA7, CK/PA2, CMD/PA3"]
+      MUX4: [7, "D0/PA4, D1/PA5, D2/PA6, D3/PA7, CK/PA2, CMD/PA3"]
+    USART1_GMUX:
+      MUX0: [0, "TX/PA9, RX/PA10"]
+      MUX1: [1, "TX/PB6, RX/PB7"]
+    USART3_GMUX:
+      MUX0: [0, "TX/PB10, RX/PB11, CK/PB12, CTS/PB13, RTS/PB14"]
+      MUX1: [1, "TX/PC10, RX/PC11, CK/PC12, CTS/PB13, RTS/PB14"]
+      MUX2: [2, "TX/PA7, RX/PA6, CK/PA5, CTS/PB1 RTS/PB0"]
+    UART4_GMUX:
+      MUX0: [0, "TX/PC10 RX/PC11"]
+      MUX1: [1, "TX/PF4 RX/PF5"]
+  REMAP7:
+    ADC1_ETP_GMUX:
+      EXINT15: [0, "ADC1 external trigger preempted conversion is connected to EXINT15"]
+      TMR1CH4: [1, "ADC1 external trigger preempted conversion is connected to TMR1 channel 4"]
+    ADC1_ETO_GMUX:
+      EXINT11: [0, "ADC1 external trigger ordinary conversion is connected to EXINT11"]
+      TMR1_TRGO: [1, "ADC1 external trigger ordinary conversion TMR1_TRGO"]
+    SWJTAG_GMUX:
+      SWDandJTAG: [0, "Supports SWD and JTAG. All SWJTAG pins cannot be used as GPIOs"]
+      SWDandJTAGwithoutNJTRST: [1, "Supports SWD and JTAG. NJTRST is disabled. PB4 can be used as GPIO"]
+      SWD: [2, "Supports SWD but JTAG is disabled. PA15/PB3/PB4 can be used as GPIOs"]
+      Disable: [4, "SWD and JTAG are disabled. All SWJTAG pins can be used as GPIOs"]
+    PD01_GMUX:
+      MUX0: [0, "Not PD0 and PD1 mapping"]
+      HEXT: [1, "PD0 is mapped to HEXT_IN, while PD1 to HEXT_OUT"]
+  REMAP8:
+    TMR1_BK1_CMP_GMUX:
+      MUX0: [0, "TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+      MUX1: [1, "TMR1_GMUX IO signal is connected to TMR1 break channel 1"] # duplicate
+      MUX2: [2, "CMP output signal is connected to TMR1 break channel 1"]
+      MUX3: [3, "Either CMP output signal or TMR1_GMUX IO signal is connected to TMR1 break channel 1"]
+    TMR1_CH1_CMP_GMUX:
+      MUX0: [0, "TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+      MUX1: [1, "TMR1_GMUX IO signal is connected to TMR1 channel 1"] # duplicate
+      MUX2: [2, "CMP output signal is connected to TMR1 channel 1"]
+      MUX3: [3, "Either CMP output signal or TMR1_GMUX IO signal is connected to TMR1 channel 1"]
+    TMR2_CH4_CMP_GMUX:
+      MUX0: [0, "TMR2_GMUX IO signal is connected to TMR2 channel 4"]
+      MUX1: [1, "TMR2_GMUX IO signal is connected to TMR2 channel 4"] # duplicate
+      MUX2: [2, "CMP output signal is connected to TMR2 channel 4"]
+      MUX3: [3, "Either CMP output signal or TMR1_GMUX IO signal is connected to TMR2 channel 4"]
+    TMR3_CH1_CMP_GMUX:
+      MUX0: [0, "TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+      MUX1: [1, "TMR3_GMUX IO signal is connected to TMR3 channel 1"] # duplicate
+      MUX2: [2, "CMP output signal is connected to TMR3 channel 1"]
+      MUX3: [3, "Either CMP output signal or TMR3_GMUX IO signal is connected to TMR3 channel 1"]
+TMR1:
+  STCTRL:
+    _add:
+      COSSEL:
+        description: Channel output switch selection
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+    COSSEL:
+      EXT: [0, "Select EXT as CxORAW switch"]
+      CxORAW_OFF: [1, "Select CxORAW_OFF as CxORAW switch"]
 ACC:
   CTRL2:
     _strip:
@@ -65,8 +191,10 @@ DEBUG:
 _include:
   - common/crm/common.yaml
   - common/crm/pllhextdiv.yaml
+  - common/ertc/common.yaml
   - common/flash/common.yaml
   - common/gpio/gpio-v1.yaml
+  - common/can/common.yaml
   - common/crc/common.yaml
   - common/crc/poly.yaml
   - common/tmr/common.yaml

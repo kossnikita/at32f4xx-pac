@@ -13,7 +13,9 @@ ACC:
 _include:
   - common/crm/common.yaml
   - common/crm/pllhextdiv.yaml
+  - common/ertc/common.yaml
   - common/flash/common.yaml
+  - common/can/common.yaml
   - common/crc/common.yaml
   - common/crc/poly.yaml
   - common/tmr/common.yaml

@@ -1,7 +1,9 @@
 _include:
   - crm/common.yaml
   - crm/crm_pllcfg.yaml
+  - ertc/common.yaml
   - flash/common.yaml
+  - can/common.yaml
   - crc/common.yaml
   - crc/poly.yaml
   - tmr/common.yaml

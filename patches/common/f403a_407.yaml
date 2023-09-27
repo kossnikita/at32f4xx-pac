@@ -4,6 +4,7 @@ _include:
   - flash/common.yaml
   - gpio/gpio-v1.yaml
   - gpio/hdrv.yaml
+  - can/common.yaml
   - crc/common.yaml
   - crc/poly.yaml
   - tmr/common.yaml

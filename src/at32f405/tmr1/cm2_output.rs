@@ -87,22 +87,330 @@ where
         self.variant(C3C_A::Stis)
     }
 }
-#[doc = "Field `C3OIEN` reader - Channel 3 output immediately enable"]
-pub type C3OIEN_R = crate::BitReader;
-#[doc = "Field `C3OIEN` writer - Channel 3 output immediately enable"]
-pub type C3OIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C3OBEN` reader - Channel 3 output buffer enable"]
-pub type C3OBEN_R = crate::BitReader;
-#[doc = "Field `C3OBEN` writer - Channel 3 output buffer enable"]
-pub type C3OBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C3OCTRL` reader - Channel 3 output control"]
-pub type C3OCTRL_R = crate::FieldReader;
-#[doc = "Field `C3OCTRL` writer - Channel 3 output control"]
-pub type C3OCTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
-#[doc = "Field `C3OSEN` reader - Channel 3 output switch enable"]
-pub type C3OSEN_R = crate::BitReader;
-#[doc = "Field `C3OSEN` writer - Channel 3 output switch enable"]
-pub type C3OSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `COIEN[3-4]` reader - Channel %s output immediately enable"]
+pub type COIEN_R = crate::BitReader<C3OIEN_A>;
+#[doc = "Channel %s output immediately enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C3OIEN_A {
+    #[doc = "0: Need to compare the CVAL with CxDT before generating an output"]
+    Compare = 0,
+    #[doc = "1: No need to compare the CVAL and CxDT. An output is generated immediately when a trigger event occurs."]
+    Immediately = 1,
+}
+impl From<C3OIEN_A> for bool {
+    #[inline(always)]
+    fn from(variant: C3OIEN_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl COIEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C3OIEN_A {
+        match self.bits {
+            false => C3OIEN_A::Compare,
+            true => C3OIEN_A::Immediately,
+        }
+    }
+    #[doc = "Need to compare the CVAL with CxDT before generating an output"]
+    #[inline(always)]
+    pub fn is_compare(&self) -> bool {
+        *self == C3OIEN_A::Compare
+    }
+    #[doc = "No need to compare the CVAL and CxDT. An output is generated immediately when a trigger event occurs."]
+    #[inline(always)]
+    pub fn is_immediately(&self) -> bool {
+        *self == C3OIEN_A::Immediately
+    }
+}
+#[doc = "Field `COIEN[3-4]` writer - Channel %s output immediately enable"]
+pub type COIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C3OIEN_A>;
+impl<'a, REG, const O: u8> COIEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Need to compare the CVAL with CxDT before generating an output"]
+    #[inline(always)]
+    pub fn compare(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OIEN_A::Compare)
+    }
+    #[doc = "No need to compare the CVAL and CxDT. An output is generated immediately when a trigger event occurs."]
+    #[inline(always)]
+    pub fn immediately(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OIEN_A::Immediately)
+    }
+}
+#[doc = "Field `COBEN[3-4]` reader - Channel %s output buffer enable"]
+pub type COBEN_R = crate::BitReader<C3OBENR_A>;
+#[doc = "Channel %s output buffer enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C3OBENR_A {
+    #[doc = "0: Channel output buffer is disabled"]
+    Disabled = 0,
+    #[doc = "1: Channel output buffer is enabled"]
+    Enabled = 1,
+}
+impl From<C3OBENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: C3OBENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl COBEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C3OBENR_A {
+        match self.bits {
+            false => C3OBENR_A::Disabled,
+            true => C3OBENR_A::Enabled,
+        }
+    }
+    #[doc = "Channel output buffer is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == C3OBENR_A::Disabled
+    }
+    #[doc = "Channel output buffer is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == C3OBENR_A::Enabled
+    }
+}
+#[doc = "Channel %s output buffer enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C3OBENW_AW {
+    #[doc = "0: Channel output buffer disable"]
+    Disable = 0,
+    #[doc = "1: Channel output buffer enable"]
+    Enable = 1,
+}
+impl From<C3OBENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: C3OBENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COBEN[3-4]` writer - Channel %s output buffer enable"]
+pub type COBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C3OBENW_AW>;
+impl<'a, REG, const O: u8> COBEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Channel output buffer disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OBENW_AW::Disable)
+    }
+    #[doc = "Channel output buffer enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OBENW_AW::Enable)
+    }
+}
+#[doc = "Field `COCTRL[3-4]` reader - Channel %s output control"]
+pub type COCTRL_R = crate::FieldReader<C3OCTRL_A>;
+#[doc = "Channel %s output control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum C3OCTRL_A {
+    #[doc = "0: Disconnected. CxORAW is disconnected from CxOUT"]
+    Disconnected = 0,
+    #[doc = "1: CxORAW is high when TMRx_CVAL=TMRx_CxDT"]
+    High = 1,
+    #[doc = "2: CxORAW is low when TMRx_CVAL=TMRx_CxDT"]
+    Low = 2,
+    #[doc = "3: Switch CxORAW level when TMRx_CVAL=TMRx_CxDT"]
+    Toggle = 3,
+    #[doc = "4: CxORAW is forced low"]
+    ForceLow = 4,
+    #[doc = "5: CxORAW is forced high"]
+    ForceHigh = 5,
+    #[doc = "6: PWM mode A"]
+    PwmA = 6,
+    #[doc = "7: PWM mode B"]
+    PwmB = 7,
+}
+impl From<C3OCTRL_A> for u8 {
+    #[inline(always)]
+    fn from(variant: C3OCTRL_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for C3OCTRL_A {
+    type Ux = u8;
+}
+impl COCTRL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C3OCTRL_A {
+        match self.bits {
+            0 => C3OCTRL_A::Disconnected,
+            1 => C3OCTRL_A::High,
+            2 => C3OCTRL_A::Low,
+            3 => C3OCTRL_A::Toggle,
+            4 => C3OCTRL_A::ForceLow,
+            5 => C3OCTRL_A::ForceHigh,
+            6 => C3OCTRL_A::PwmA,
+            7 => C3OCTRL_A::PwmB,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Disconnected. CxORAW is disconnected from CxOUT"]
+    #[inline(always)]
+    pub fn is_disconnected(&self) -> bool {
+        *self == C3OCTRL_A::Disconnected
+    }
+    #[doc = "CxORAW is high when TMRx_CVAL=TMRx_CxDT"]
+    #[inline(always)]
+    pub fn is_high(&self) -> bool {
+        *self == C3OCTRL_A::High
+    }
+    #[doc = "CxORAW is low when TMRx_CVAL=TMRx_CxDT"]
+    #[inline(always)]
+    pub fn is_low(&self) -> bool {
+        *self == C3OCTRL_A::Low
+    }
+    #[doc = "Switch CxORAW level when TMRx_CVAL=TMRx_CxDT"]
+    #[inline(always)]
+    pub fn is_toggle(&self) -> bool {
+        *self == C3OCTRL_A::Toggle
+    }
+    #[doc = "CxORAW is forced low"]
+    #[inline(always)]
+    pub fn is_force_low(&self) -> bool {
+        *self == C3OCTRL_A::ForceLow
+    }
+    #[doc = "CxORAW is forced high"]
+    #[inline(always)]
+    pub fn is_force_high(&self) -> bool {
+        *self == C3OCTRL_A::ForceHigh
+    }
+    #[doc = "PWM mode A"]
+    #[inline(always)]
+    pub fn is_pwm_a(&self) -> bool {
+        *self == C3OCTRL_A::PwmA
+    }
+    #[doc = "PWM mode B"]
+    #[inline(always)]
+    pub fn is_pwm_b(&self) -> bool {
+        *self == C3OCTRL_A::PwmB
+    }
+}
+#[doc = "Field `COCTRL[3-4]` writer - Channel %s output control"]
+pub type COCTRL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, C3OCTRL_A>;
+impl<'a, REG, const O: u8> COCTRL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "Disconnected. CxORAW is disconnected from CxOUT"]
+    #[inline(always)]
+    pub fn disconnected(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OCTRL_A::Disconnected)
+    }
+    #[doc = "CxORAW is high when TMRx_CVAL=TMRx_CxDT"]
+    #[inline(always)]
+    pub fn high(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OCTRL_A::High)
+    }
+    #[doc = "CxORAW is low when TMRx_CVAL=TMRx_CxDT"]
+    #[inline(always)]
+    pub fn low(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OCTRL_A::Low)
+    }
+    #[doc = "Switch CxORAW level when TMRx_CVAL=TMRx_CxDT"]
+    #[inline(always)]
+    pub fn toggle(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OCTRL_A::Toggle)
+    }
+    #[doc = "CxORAW is forced low"]
+    #[inline(always)]
+    pub fn force_low(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OCTRL_A::ForceLow)
+    }
+    #[doc = "CxORAW is forced high"]
+    #[inline(always)]
+    pub fn force_high(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OCTRL_A::ForceHigh)
+    }
+    #[doc = "PWM mode A"]
+    #[inline(always)]
+    pub fn pwm_a(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OCTRL_A::PwmA)
+    }
+    #[doc = "PWM mode B"]
+    #[inline(always)]
+    pub fn pwm_b(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OCTRL_A::PwmB)
+    }
+}
+#[doc = "Field `COSEN[3-4]` reader - Channel %s output switch enable"]
+pub type COSEN_R = crate::BitReader<C3OSENR_A>;
+#[doc = "Channel %s output switch enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C3OSENR_A {
+    #[doc = "0: CxORAW is not affected by EXT input"]
+    Disabled = 0,
+    #[doc = "1: Once a high level is detect on EXT input, clear CxORAW"]
+    Enabled = 1,
+}
+impl From<C3OSENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: C3OSENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl COSEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C3OSENR_A {
+        match self.bits {
+            false => C3OSENR_A::Disabled,
+            true => C3OSENR_A::Enabled,
+        }
+    }
+    #[doc = "CxORAW is not affected by EXT input"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == C3OSENR_A::Disabled
+    }
+    #[doc = "Once a high level is detect on EXT input, clear CxORAW"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == C3OSENR_A::Enabled
+    }
+}
+#[doc = "Channel %s output switch enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C3OSENW_AW {
+    #[doc = "0: CxORAW is not affected by EXT input"]
+    Disable = 0,
+    #[doc = "1: Once a high level is detect on EXT input, clear CxORAW"]
+    Enable = 1,
+}
+impl From<C3OSENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: C3OSENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `COSEN[3-4]` writer - Channel %s output switch enable"]
+pub type COSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C3OSENW_AW>;
+impl<'a, REG, const O: u8> COSEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "CxORAW is not affected by EXT input"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OSENW_AW::Disable)
+    }
+    #[doc = "Once a high level is detect on EXT input, clear CxORAW"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(C3OSENW_AW::Enable)
+    }
+}
 #[doc = "Field `C4C` reader - Channel 4 configure"]
 pub type C4C_R = crate::FieldReader<C4C_A>;
 #[doc = "Channel 4 configure\n\nValue on reset: 0"]
@@ -188,72 +496,80 @@ where
         self.variant(C4C_A::Stis)
     }
 }
-#[doc = "Field `C4OIEN` reader - Channel 4 output immediately enable"]
-pub type C4OIEN_R = crate::BitReader;
-#[doc = "Field `C4OIEN` writer - Channel 4 output immediately enable"]
-pub type C4OIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C4OBEN` reader - Channel 4 output buffer enable"]
-pub type C4OBEN_R = crate::BitReader;
-#[doc = "Field `C4OBEN` writer - Channel 4 output buffer enable"]
-pub type C4OBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C4OCTRL` reader - Channel 4 output control"]
-pub type C4OCTRL_R = crate::FieldReader;
-#[doc = "Field `C4OCTRL` writer - Channel 4 output control"]
-pub type C4OCTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
-#[doc = "Field `C4OSEN` reader - Channel 4 output switch enable"]
-pub type C4OSEN_R = crate::BitReader;
-#[doc = "Field `C4OSEN` writer - Channel 4 output switch enable"]
-pub type C4OSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:1 - Channel 3 configure"]
     #[inline(always)]
     pub fn c3c(&self) -> C3C_R {
         C3C_R::new((self.bits & 3) as u8)
     }
+    #[doc = "Channel [3-4]
+output immediately enable"]
+    #[inline(always)]
+    pub unsafe fn coien(&self, n: u8) -> COIEN_R {
+        COIEN_R::new(((self.bits >> ((n - 3) * 8 + 2)) & 1) != 0)
+    }
     #[doc = "Bit 2 - Channel 3 output immediately enable"]
     #[inline(always)]
-    pub fn c3oien(&self) -> C3OIEN_R {
-        C3OIEN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn c3oien(&self) -> COIEN_R {
+        COIEN_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Channel 4 output immediately enable"]
+    #[inline(always)]
+    pub fn c4oien(&self) -> COIEN_R {
+        COIEN_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Channel [3-4]
+output buffer enable"]
+    #[inline(always)]
+    pub unsafe fn coben(&self, n: u8) -> COBEN_R {
+        COBEN_R::new(((self.bits >> ((n - 3) * 8 + 3)) & 1) != 0)
     }
     #[doc = "Bit 3 - Channel 3 output buffer enable"]
     #[inline(always)]
-    pub fn c3oben(&self) -> C3OBEN_R {
-        C3OBEN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn c3oben(&self) -> COBEN_R {
+        COBEN_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Channel 4 output buffer enable"]
+    #[inline(always)]
+    pub fn c4oben(&self) -> COBEN_R {
+        COBEN_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Channel [3-4]
+output control"]
+    #[inline(always)]
+    pub unsafe fn coctrl(&self, n: u8) -> COCTRL_R {
+        COCTRL_R::new(((self.bits >> ((n - 3) * 8 + 4)) & 7) as u8)
     }
     #[doc = "Bits 4:6 - Channel 3 output control"]
     #[inline(always)]
-    pub fn c3octrl(&self) -> C3OCTRL_R {
-        C3OCTRL_R::new(((self.bits >> 4) & 7) as u8)
+    pub fn c3octrl(&self) -> COCTRL_R {
+        COCTRL_R::new(((self.bits >> 4) & 7) as u8)
+    }
+    #[doc = "Bits 12:14 - Channel 4 output control"]
+    #[inline(always)]
+    pub fn c4octrl(&self) -> COCTRL_R {
+        COCTRL_R::new(((self.bits >> 12) & 7) as u8)
+    }
+    #[doc = "Channel [3-4]
+output switch enable"]
+    #[inline(always)]
+    pub unsafe fn cosen(&self, n: u8) -> COSEN_R {
+        COSEN_R::new(((self.bits >> ((n - 3) * 8 + 7)) & 1) != 0)
     }
     #[doc = "Bit 7 - Channel 3 output switch enable"]
     #[inline(always)]
-    pub fn c3osen(&self) -> C3OSEN_R {
-        C3OSEN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn c3osen(&self) -> COSEN_R {
+        COSEN_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 15 - Channel 4 output switch enable"]
+    #[inline(always)]
+    pub fn c4osen(&self) -> COSEN_R {
+        COSEN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bits 8:9 - Channel 4 configure"]
     #[inline(always)]
     pub fn c4c(&self) -> C4C_R {
         C4C_R::new(((self.bits >> 8) & 3) as u8)
-    }
-    #[doc = "Bit 10 - Channel 4 output immediately enable"]
-    #[inline(always)]
-    pub fn c4oien(&self) -> C4OIEN_R {
-        C4OIEN_R::new(((self.bits >> 10) & 1) != 0)
-    }
-    #[doc = "Bit 11 - Channel 4 output buffer enable"]
-    #[inline(always)]
-    pub fn c4oben(&self) -> C4OBEN_R {
-        C4OBEN_R::new(((self.bits >> 11) & 1) != 0)
-    }
-    #[doc = "Bits 12:14 - Channel 4 output control"]
-    #[inline(always)]
-    pub fn c4octrl(&self) -> C4OCTRL_R {
-        C4OCTRL_R::new(((self.bits >> 12) & 7) as u8)
-    }
-    #[doc = "Bit 15 - Channel 4 output switch enable"]
-    #[inline(always)]
-    pub fn c4osen(&self) -> C4OSEN_R {
-        C4OSEN_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
@@ -263,59 +579,87 @@ impl W {
     pub fn c3c(&mut self) -> C3C_W<CM2_OUTPUT_SPEC, 0> {
         C3C_W::new(self)
     }
+    #[doc = "Channel [3-4]
+output immediately enable"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn coien<const O: u8>(&mut self) -> COIEN_W<CM2_OUTPUT_SPEC, O> {
+        COIEN_W::new(self)
+    }
     #[doc = "Bit 2 - Channel 3 output immediately enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c3oien(&mut self) -> C3OIEN_W<CM2_OUTPUT_SPEC, 2> {
-        C3OIEN_W::new(self)
+    pub fn c3oien(&mut self) -> COIEN_W<CM2_OUTPUT_SPEC, 2> {
+        COIEN_W::new(self)
+    }
+    #[doc = "Bit 10 - Channel 4 output immediately enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn c4oien(&mut self) -> COIEN_W<CM2_OUTPUT_SPEC, 10> {
+        COIEN_W::new(self)
+    }
+    #[doc = "Channel [3-4]
+output buffer enable"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn coben<const O: u8>(&mut self) -> COBEN_W<CM2_OUTPUT_SPEC, O> {
+        COBEN_W::new(self)
     }
     #[doc = "Bit 3 - Channel 3 output buffer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c3oben(&mut self) -> C3OBEN_W<CM2_OUTPUT_SPEC, 3> {
-        C3OBEN_W::new(self)
+    pub fn c3oben(&mut self) -> COBEN_W<CM2_OUTPUT_SPEC, 3> {
+        COBEN_W::new(self)
+    }
+    #[doc = "Bit 11 - Channel 4 output buffer enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn c4oben(&mut self) -> COBEN_W<CM2_OUTPUT_SPEC, 11> {
+        COBEN_W::new(self)
+    }
+    #[doc = "Channel [3-4]
+output control"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn coctrl<const O: u8>(&mut self) -> COCTRL_W<CM2_OUTPUT_SPEC, O> {
+        COCTRL_W::new(self)
     }
     #[doc = "Bits 4:6 - Channel 3 output control"]
     #[inline(always)]
     #[must_use]
-    pub fn c3octrl(&mut self) -> C3OCTRL_W<CM2_OUTPUT_SPEC, 4> {
-        C3OCTRL_W::new(self)
+    pub fn c3octrl(&mut self) -> COCTRL_W<CM2_OUTPUT_SPEC, 4> {
+        COCTRL_W::new(self)
+    }
+    #[doc = "Bits 12:14 - Channel 4 output control"]
+    #[inline(always)]
+    #[must_use]
+    pub fn c4octrl(&mut self) -> COCTRL_W<CM2_OUTPUT_SPEC, 12> {
+        COCTRL_W::new(self)
+    }
+    #[doc = "Channel [3-4]
+output switch enable"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn cosen<const O: u8>(&mut self) -> COSEN_W<CM2_OUTPUT_SPEC, O> {
+        COSEN_W::new(self)
     }
     #[doc = "Bit 7 - Channel 3 output switch enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c3osen(&mut self) -> C3OSEN_W<CM2_OUTPUT_SPEC, 7> {
-        C3OSEN_W::new(self)
+    pub fn c3osen(&mut self) -> COSEN_W<CM2_OUTPUT_SPEC, 7> {
+        COSEN_W::new(self)
+    }
+    #[doc = "Bit 15 - Channel 4 output switch enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn c4osen(&mut self) -> COSEN_W<CM2_OUTPUT_SPEC, 15> {
+        COSEN_W::new(self)
     }
     #[doc = "Bits 8:9 - Channel 4 configure"]
     #[inline(always)]
     #[must_use]
     pub fn c4c(&mut self) -> C4C_W<CM2_OUTPUT_SPEC, 8> {
         C4C_W::new(self)
-    }
-    #[doc = "Bit 10 - Channel 4 output immediately enable"]
-    #[inline(always)]
-    #[must_use]
-    pub fn c4oien(&mut self) -> C4OIEN_W<CM2_OUTPUT_SPEC, 10> {
-        C4OIEN_W::new(self)
-    }
-    #[doc = "Bit 11 - Channel 4 output buffer enable"]
-    #[inline(always)]
-    #[must_use]
-    pub fn c4oben(&mut self) -> C4OBEN_W<CM2_OUTPUT_SPEC, 11> {
-        C4OBEN_W::new(self)
-    }
-    #[doc = "Bits 12:14 - Channel 4 output control"]
-    #[inline(always)]
-    #[must_use]
-    pub fn c4octrl(&mut self) -> C4OCTRL_W<CM2_OUTPUT_SPEC, 12> {
-        C4OCTRL_W::new(self)
-    }
-    #[doc = "Bit 15 - Channel 4 output switch enable"]
-    #[inline(always)]
-    #[must_use]
-    pub fn c4osen(&mut self) -> C4OSEN_W<CM2_OUTPUT_SPEC, 15> {
-        C4OSEN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

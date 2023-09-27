@@ -3,9 +3,46 @@ pub type R = crate::R<SWEVT_SPEC>;
 #[doc = "Register `SWEVT` writer"]
 pub type W = crate::W<SWEVT_SPEC>;
 #[doc = "Field `OVFSWTR` reader - Overflow event triggered by software"]
-pub type OVFSWTR_R = crate::BitReader;
+pub type OVFSWTR_R = crate::BitReader<OVFSWTRW_A>;
+#[doc = "Overflow event triggered by software\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OVFSWTRW_A {
+    #[doc = "1: Generate an overflow event"]
+    Overflow = 1,
+}
+impl From<OVFSWTRW_A> for bool {
+    #[inline(always)]
+    fn from(variant: OVFSWTRW_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl OVFSWTR_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<OVFSWTRW_A> {
+        match self.bits {
+            true => Some(OVFSWTRW_A::Overflow),
+            _ => None,
+        }
+    }
+    #[doc = "Generate an overflow event"]
+    #[inline(always)]
+    pub fn is_overflow(&self) -> bool {
+        *self == OVFSWTRW_A::Overflow
+    }
+}
 #[doc = "Field `OVFSWTR` writer - Overflow event triggered by software"]
-pub type OVFSWTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVFSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, OVFSWTRW_A>;
+impl<'a, REG, const O: u8> OVFSWTR_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Generate an overflow event"]
+    #[inline(always)]
+    pub fn overflow(self) -> &'a mut crate::W<REG> {
+        self.variant(OVFSWTRW_A::Overflow)
+    }
+}
 #[doc = "Field `C1SWTR` reader - Channel 1 event triggered by software"]
 pub type C1SWTR_R = crate::BitReader;
 #[doc = "Field `C1SWTR` writer - Channel 1 event triggered by software"]
@@ -112,7 +149,7 @@ impl crate::Readable for SWEVT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swevt::W`](W) writer structure"]
 impl crate::Writable for SWEVT_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x01;
 }
 #[doc = "`reset()` method sets SWEVT to value 0"]
 impl crate::Resettable for SWEVT_SPEC {

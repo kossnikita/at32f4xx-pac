@@ -3,9 +3,72 @@ pub type R = crate::R<IDEN_SPEC>;
 #[doc = "Register `IDEN` writer"]
 pub type W = crate::W<IDEN_SPEC>;
 #[doc = "Field `OVFIEN` reader - Overflow interrupt enable"]
-pub type OVFIEN_R = crate::BitReader;
+pub type OVFIEN_R = crate::BitReader<OVFIENR_A>;
+#[doc = "Overflow interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OVFIENR_A {
+    #[doc = "0: Overflow interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: Overflow interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<OVFIENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: OVFIENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl OVFIEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> OVFIENR_A {
+        match self.bits {
+            false => OVFIENR_A::Disabled,
+            true => OVFIENR_A::Enabled,
+        }
+    }
+    #[doc = "Overflow interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == OVFIENR_A::Disabled
+    }
+    #[doc = "Overflow interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == OVFIENR_A::Enabled
+    }
+}
+#[doc = "Overflow interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OVFIENW_AW {
+    #[doc = "0: Overflow interrupt disable"]
+    Disable = 0,
+    #[doc = "1: Overflow interrupt enable"]
+    Enable = 1,
+}
+impl From<OVFIENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: OVFIENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `OVFIEN` writer - Overflow interrupt enable"]
-pub type OVFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OVFIENW_AW>;
+impl<'a, REG, const O: u8> OVFIEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Overflow interrupt disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(OVFIENW_AW::Disable)
+    }
+    #[doc = "Overflow interrupt enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(OVFIENW_AW::Enable)
+    }
+}
 #[doc = "Field `OVFDEN` reader - Overflow DMA request enable"]
 pub type OVFDEN_R = crate::BitReader;
 #[doc = "Field `OVFDEN` writer - Overflow DMA request enable"]

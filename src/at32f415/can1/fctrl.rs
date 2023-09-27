@@ -3,9 +3,58 @@ pub type R = crate::R<FCTRL_SPEC>;
 #[doc = "Register `FCTRL` writer"]
 pub type W = crate::W<FCTRL_SPEC>;
 #[doc = "Field `FCS` reader - Filters configure switch"]
-pub type FCS_R = crate::BitReader;
+pub type FCS_R = crate::BitReader<FCS_A>;
+#[doc = "Filters configure switch\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum FCS_A {
+    #[doc = "0: Filter bank is active"]
+    Active = 0,
+    #[doc = "1: Filter bank is in configuration mode"]
+    Configuration = 1,
+}
+impl From<FCS_A> for bool {
+    #[inline(always)]
+    fn from(variant: FCS_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl FCS_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> FCS_A {
+        match self.bits {
+            false => FCS_A::Active,
+            true => FCS_A::Configuration,
+        }
+    }
+    #[doc = "Filter bank is active"]
+    #[inline(always)]
+    pub fn is_active(&self) -> bool {
+        *self == FCS_A::Active
+    }
+    #[doc = "Filter bank is in configuration mode"]
+    #[inline(always)]
+    pub fn is_configuration(&self) -> bool {
+        *self == FCS_A::Configuration
+    }
+}
 #[doc = "Field `FCS` writer - Filters configure switch"]
-pub type FCS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, FCS_A>;
+impl<'a, REG, const O: u8> FCS_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Filter bank is active"]
+    #[inline(always)]
+    pub fn active(self) -> &'a mut crate::W<REG> {
+        self.variant(FCS_A::Active)
+    }
+    #[doc = "Filter bank is in configuration mode"]
+    #[inline(always)]
+    pub fn configuration(self) -> &'a mut crate::W<REG> {
+        self.variant(FCS_A::Configuration)
+    }
+}
 impl R {
     #[doc = "Bit 0 - Filters configure switch"]
     #[inline(always)]

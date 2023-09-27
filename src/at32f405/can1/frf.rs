@@ -2,218 +2,226 @@
 pub type R = crate::R<FRF_SPEC>;
 #[doc = "Register `FRF` writer"]
 pub type W = crate::W<FRF_SPEC>;
-#[doc = "Field `FRFSEL0` reader - Filter relation FIFO select"]
-pub type FRFSEL0_R = crate::BitReader;
-#[doc = "Field `FRFSEL0` writer - Filter relation FIFO select"]
-pub type FRFSEL0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL1` reader - Filter relation FIFO select"]
-pub type FRFSEL1_R = crate::BitReader;
-#[doc = "Field `FRFSEL1` writer - Filter relation FIFO select"]
-pub type FRFSEL1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL2` reader - Filter relation FIFO select"]
-pub type FRFSEL2_R = crate::BitReader;
-#[doc = "Field `FRFSEL2` writer - Filter relation FIFO select"]
-pub type FRFSEL2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL3` reader - Filter relation FIFO select"]
-pub type FRFSEL3_R = crate::BitReader;
-#[doc = "Field `FRFSEL3` writer - Filter relation FIFO select"]
-pub type FRFSEL3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL4` reader - Filter relation FIFO select"]
-pub type FRFSEL4_R = crate::BitReader;
-#[doc = "Field `FRFSEL4` writer - Filter relation FIFO select"]
-pub type FRFSEL4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL5` reader - Filter relation FIFO select"]
-pub type FRFSEL5_R = crate::BitReader;
-#[doc = "Field `FRFSEL5` writer - Filter relation FIFO select"]
-pub type FRFSEL5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL6` reader - Filter relation FIFO select"]
-pub type FRFSEL6_R = crate::BitReader;
-#[doc = "Field `FRFSEL6` writer - Filter relation FIFO select"]
-pub type FRFSEL6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL7` reader - Filter relation FIFO select"]
-pub type FRFSEL7_R = crate::BitReader;
-#[doc = "Field `FRFSEL7` writer - Filter relation FIFO select"]
-pub type FRFSEL7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL8` reader - Filter relation FIFO select"]
-pub type FRFSEL8_R = crate::BitReader;
-#[doc = "Field `FRFSEL8` writer - Filter relation FIFO select"]
-pub type FRFSEL8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL9` reader - Filter relation FIFO select"]
-pub type FRFSEL9_R = crate::BitReader;
-#[doc = "Field `FRFSEL9` writer - Filter relation FIFO select"]
-pub type FRFSEL9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL10` reader - Filter relation FIFO select"]
-pub type FRFSEL10_R = crate::BitReader;
-#[doc = "Field `FRFSEL10` writer - Filter relation FIFO select"]
-pub type FRFSEL10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL11` reader - Filter relation FIFO select"]
-pub type FRFSEL11_R = crate::BitReader;
-#[doc = "Field `FRFSEL11` writer - Filter relation FIFO select"]
-pub type FRFSEL11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL12` reader - Filter relation FIFO select"]
-pub type FRFSEL12_R = crate::BitReader;
-#[doc = "Field `FRFSEL12` writer - Filter relation FIFO select"]
-pub type FRFSEL12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `FRFSEL13` reader - Filter relation FIFO select"]
-pub type FRFSEL13_R = crate::BitReader;
-#[doc = "Field `FRFSEL13` writer - Filter relation FIFO select"]
-pub type FRFSEL13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `SEL[0-13]` reader - Filter relation FIFO select"]
+pub type SEL_R = crate::BitReader<SEL0_A>;
+#[doc = "Filter relation FIFO select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum SEL0_A {
+    #[doc = "0: Associated with FIFO0"]
+    Dual = 0,
+    #[doc = "1: Associated with FIFO1"]
+    Single = 1,
+}
+impl From<SEL0_A> for bool {
+    #[inline(always)]
+    fn from(variant: SEL0_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl SEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SEL0_A {
+        match self.bits {
+            false => SEL0_A::Dual,
+            true => SEL0_A::Single,
+        }
+    }
+    #[doc = "Associated with FIFO0"]
+    #[inline(always)]
+    pub fn is_dual(&self) -> bool {
+        *self == SEL0_A::Dual
+    }
+    #[doc = "Associated with FIFO1"]
+    #[inline(always)]
+    pub fn is_single(&self) -> bool {
+        *self == SEL0_A::Single
+    }
+}
+#[doc = "Field `SEL[0-13]` writer - Filter relation FIFO select"]
+pub type SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SEL0_A>;
+impl<'a, REG, const O: u8> SEL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Associated with FIFO0"]
+    #[inline(always)]
+    pub fn dual(self) -> &'a mut crate::W<REG> {
+        self.variant(SEL0_A::Dual)
+    }
+    #[doc = "Associated with FIFO1"]
+    #[inline(always)]
+    pub fn single(self) -> &'a mut crate::W<REG> {
+        self.variant(SEL0_A::Single)
+    }
+}
 impl R {
+    #[doc = "Filter relation FIFO select"]
+    #[inline(always)]
+    pub unsafe fn sel(&self, n: u8) -> SEL_R {
+        SEL_R::new(((self.bits >> n) & 1) != 0)
+    }
     #[doc = "Bit 0 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel0(&self) -> FRFSEL0_R {
-        FRFSEL0_R::new((self.bits & 1) != 0)
+    pub fn sel0(&self) -> SEL_R {
+        SEL_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel1(&self) -> FRFSEL1_R {
-        FRFSEL1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn sel1(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel2(&self) -> FRFSEL2_R {
-        FRFSEL2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn sel2(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel3(&self) -> FRFSEL3_R {
-        FRFSEL3_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn sel3(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel4(&self) -> FRFSEL4_R {
-        FRFSEL4_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn sel4(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel5(&self) -> FRFSEL5_R {
-        FRFSEL5_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn sel5(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel6(&self) -> FRFSEL6_R {
-        FRFSEL6_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn sel6(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel7(&self) -> FRFSEL7_R {
-        FRFSEL7_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn sel7(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel8(&self) -> FRFSEL8_R {
-        FRFSEL8_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn sel8(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel9(&self) -> FRFSEL9_R {
-        FRFSEL9_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn sel9(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel10(&self) -> FRFSEL10_R {
-        FRFSEL10_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn sel10(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel11(&self) -> FRFSEL11_R {
-        FRFSEL11_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn sel11(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel12(&self) -> FRFSEL12_R {
-        FRFSEL12_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn sel12(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Filter relation FIFO select"]
     #[inline(always)]
-    pub fn frfsel13(&self) -> FRFSEL13_R {
-        FRFSEL13_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn sel13(&self) -> SEL_R {
+        SEL_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
 impl W {
+    #[doc = "Filter relation FIFO select"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn sel<const O: u8>(&mut self) -> SEL_W<FRF_SPEC, O> {
+        SEL_W::new(self)
+    }
     #[doc = "Bit 0 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel0(&mut self) -> FRFSEL0_W<FRF_SPEC, 0> {
-        FRFSEL0_W::new(self)
+    pub fn sel0(&mut self) -> SEL_W<FRF_SPEC, 0> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 1 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel1(&mut self) -> FRFSEL1_W<FRF_SPEC, 1> {
-        FRFSEL1_W::new(self)
+    pub fn sel1(&mut self) -> SEL_W<FRF_SPEC, 1> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 2 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel2(&mut self) -> FRFSEL2_W<FRF_SPEC, 2> {
-        FRFSEL2_W::new(self)
+    pub fn sel2(&mut self) -> SEL_W<FRF_SPEC, 2> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 3 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel3(&mut self) -> FRFSEL3_W<FRF_SPEC, 3> {
-        FRFSEL3_W::new(self)
+    pub fn sel3(&mut self) -> SEL_W<FRF_SPEC, 3> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 4 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel4(&mut self) -> FRFSEL4_W<FRF_SPEC, 4> {
-        FRFSEL4_W::new(self)
+    pub fn sel4(&mut self) -> SEL_W<FRF_SPEC, 4> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 5 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel5(&mut self) -> FRFSEL5_W<FRF_SPEC, 5> {
-        FRFSEL5_W::new(self)
+    pub fn sel5(&mut self) -> SEL_W<FRF_SPEC, 5> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 6 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel6(&mut self) -> FRFSEL6_W<FRF_SPEC, 6> {
-        FRFSEL6_W::new(self)
+    pub fn sel6(&mut self) -> SEL_W<FRF_SPEC, 6> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 7 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel7(&mut self) -> FRFSEL7_W<FRF_SPEC, 7> {
-        FRFSEL7_W::new(self)
+    pub fn sel7(&mut self) -> SEL_W<FRF_SPEC, 7> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 8 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel8(&mut self) -> FRFSEL8_W<FRF_SPEC, 8> {
-        FRFSEL8_W::new(self)
+    pub fn sel8(&mut self) -> SEL_W<FRF_SPEC, 8> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 9 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel9(&mut self) -> FRFSEL9_W<FRF_SPEC, 9> {
-        FRFSEL9_W::new(self)
+    pub fn sel9(&mut self) -> SEL_W<FRF_SPEC, 9> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 10 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel10(&mut self) -> FRFSEL10_W<FRF_SPEC, 10> {
-        FRFSEL10_W::new(self)
+    pub fn sel10(&mut self) -> SEL_W<FRF_SPEC, 10> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 11 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel11(&mut self) -> FRFSEL11_W<FRF_SPEC, 11> {
-        FRFSEL11_W::new(self)
+    pub fn sel11(&mut self) -> SEL_W<FRF_SPEC, 11> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 12 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel12(&mut self) -> FRFSEL12_W<FRF_SPEC, 12> {
-        FRFSEL12_W::new(self)
+    pub fn sel12(&mut self) -> SEL_W<FRF_SPEC, 12> {
+        SEL_W::new(self)
     }
     #[doc = "Bit 13 - Filter relation FIFO select"]
     #[inline(always)]
     #[must_use]
-    pub fn frfsel13(&mut self) -> FRFSEL13_W<FRF_SPEC, 13> {
-        FRFSEL13_W::new(self)
+    pub fn sel13(&mut self) -> SEL_W<FRF_SPEC, 13> {
+        SEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

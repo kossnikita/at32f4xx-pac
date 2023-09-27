@@ -2,68 +2,163 @@
 pub type R = crate::R<EXINTC1_SPEC>;
 #[doc = "Register `EXINTC1` writer"]
 pub type W = crate::W<EXINTC1_SPEC>;
-#[doc = "Field `EXINT0` reader - Configure EXINT0 source"]
-pub type EXINT0_R = crate::FieldReader;
-#[doc = "Field `EXINT0` writer - Configure EXINT0 source"]
-pub type EXINT0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
-#[doc = "Field `EXINT1` reader - Configure EXINT1 source"]
-pub type EXINT1_R = crate::FieldReader;
-#[doc = "Field `EXINT1` writer - Configure EXINT1 source"]
-pub type EXINT1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
-#[doc = "Field `EXINT2` reader - Configure EXINT2 source"]
-pub type EXINT2_R = crate::FieldReader;
-#[doc = "Field `EXINT2` writer - Configure EXINT2 source"]
-pub type EXINT2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
-#[doc = "Field `EXINT3` reader - Configure EXINT3 source"]
-pub type EXINT3_R = crate::FieldReader;
-#[doc = "Field `EXINT3` writer - Configure EXINT3 source"]
-pub type EXINT3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+#[doc = "Field `EXINT[0-3]` reader - Select the input source for EXINT%s external interrupt"]
+pub type EXINT_R = crate::FieldReader<EXINT0_A>;
+#[doc = "Select the input source for EXINT%s external interrupt\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum EXINT0_A {
+    #[doc = "0: GPIOA pin"]
+    Gpioa = 0,
+    #[doc = "1: GPIOB pin"]
+    Gpiob = 1,
+    #[doc = "2: GPIOB pin"]
+    Gpioc = 2,
+    #[doc = "3: GPIOB pin"]
+    Gpiod = 3,
+    #[doc = "4: GPIOB pin"]
+    Gpiof = 4,
+}
+impl From<EXINT0_A> for u8 {
+    #[inline(always)]
+    fn from(variant: EXINT0_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for EXINT0_A {
+    type Ux = u8;
+}
+impl EXINT_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<EXINT0_A> {
+        match self.bits {
+            0 => Some(EXINT0_A::Gpioa),
+            1 => Some(EXINT0_A::Gpiob),
+            2 => Some(EXINT0_A::Gpioc),
+            3 => Some(EXINT0_A::Gpiod),
+            4 => Some(EXINT0_A::Gpiof),
+            _ => None,
+        }
+    }
+    #[doc = "GPIOA pin"]
+    #[inline(always)]
+    pub fn is_gpioa(&self) -> bool {
+        *self == EXINT0_A::Gpioa
+    }
+    #[doc = "GPIOB pin"]
+    #[inline(always)]
+    pub fn is_gpiob(&self) -> bool {
+        *self == EXINT0_A::Gpiob
+    }
+    #[doc = "GPIOB pin"]
+    #[inline(always)]
+    pub fn is_gpioc(&self) -> bool {
+        *self == EXINT0_A::Gpioc
+    }
+    #[doc = "GPIOB pin"]
+    #[inline(always)]
+    pub fn is_gpiod(&self) -> bool {
+        *self == EXINT0_A::Gpiod
+    }
+    #[doc = "GPIOB pin"]
+    #[inline(always)]
+    pub fn is_gpiof(&self) -> bool {
+        *self == EXINT0_A::Gpiof
+    }
+}
+#[doc = "Field `EXINT[0-3]` writer - Select the input source for EXINT%s external interrupt"]
+pub type EXINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, EXINT0_A>;
+impl<'a, REG, const O: u8> EXINT_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "GPIOA pin"]
+    #[inline(always)]
+    pub fn gpioa(self) -> &'a mut crate::W<REG> {
+        self.variant(EXINT0_A::Gpioa)
+    }
+    #[doc = "GPIOB pin"]
+    #[inline(always)]
+    pub fn gpiob(self) -> &'a mut crate::W<REG> {
+        self.variant(EXINT0_A::Gpiob)
+    }
+    #[doc = "GPIOB pin"]
+    #[inline(always)]
+    pub fn gpioc(self) -> &'a mut crate::W<REG> {
+        self.variant(EXINT0_A::Gpioc)
+    }
+    #[doc = "GPIOB pin"]
+    #[inline(always)]
+    pub fn gpiod(self) -> &'a mut crate::W<REG> {
+        self.variant(EXINT0_A::Gpiod)
+    }
+    #[doc = "GPIOB pin"]
+    #[inline(always)]
+    pub fn gpiof(self) -> &'a mut crate::W<REG> {
+        self.variant(EXINT0_A::Gpiof)
+    }
+}
 impl R {
-    #[doc = "Bits 0:3 - Configure EXINT0 source"]
+    #[doc = "Select the input source for EXINT[0-3]
+external interrupt"]
     #[inline(always)]
-    pub fn exint0(&self) -> EXINT0_R {
-        EXINT0_R::new((self.bits & 0x0f) as u8)
+    pub unsafe fn exint(&self, n: u8) -> EXINT_R {
+        EXINT_R::new(((self.bits >> (n * 4)) & 0x0f) as u8)
     }
-    #[doc = "Bits 4:7 - Configure EXINT1 source"]
+    #[doc = "Bits 0:3 - Select the input source for EXINT0 external interrupt"]
     #[inline(always)]
-    pub fn exint1(&self) -> EXINT1_R {
-        EXINT1_R::new(((self.bits >> 4) & 0x0f) as u8)
+    pub fn exint0(&self) -> EXINT_R {
+        EXINT_R::new((self.bits & 0x0f) as u8)
     }
-    #[doc = "Bits 8:11 - Configure EXINT2 source"]
+    #[doc = "Bits 4:7 - Select the input source for EXINT1 external interrupt"]
     #[inline(always)]
-    pub fn exint2(&self) -> EXINT2_R {
-        EXINT2_R::new(((self.bits >> 8) & 0x0f) as u8)
+    pub fn exint1(&self) -> EXINT_R {
+        EXINT_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bits 12:15 - Configure EXINT3 source"]
+    #[doc = "Bits 8:11 - Select the input source for EXINT2 external interrupt"]
     #[inline(always)]
-    pub fn exint3(&self) -> EXINT3_R {
-        EXINT3_R::new(((self.bits >> 12) & 0x0f) as u8)
+    pub fn exint2(&self) -> EXINT_R {
+        EXINT_R::new(((self.bits >> 8) & 0x0f) as u8)
+    }
+    #[doc = "Bits 12:15 - Select the input source for EXINT3 external interrupt"]
+    #[inline(always)]
+    pub fn exint3(&self) -> EXINT_R {
+        EXINT_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:3 - Configure EXINT0 source"]
+    #[doc = "Select the input source for EXINT[0-3]
+external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn exint0(&mut self) -> EXINT0_W<EXINTC1_SPEC, 0> {
-        EXINT0_W::new(self)
+    pub unsafe fn exint<const O: u8>(&mut self) -> EXINT_W<EXINTC1_SPEC, O> {
+        EXINT_W::new(self)
     }
-    #[doc = "Bits 4:7 - Configure EXINT1 source"]
+    #[doc = "Bits 0:3 - Select the input source for EXINT0 external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn exint1(&mut self) -> EXINT1_W<EXINTC1_SPEC, 4> {
-        EXINT1_W::new(self)
+    pub fn exint0(&mut self) -> EXINT_W<EXINTC1_SPEC, 0> {
+        EXINT_W::new(self)
     }
-    #[doc = "Bits 8:11 - Configure EXINT2 source"]
+    #[doc = "Bits 4:7 - Select the input source for EXINT1 external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn exint2(&mut self) -> EXINT2_W<EXINTC1_SPEC, 8> {
-        EXINT2_W::new(self)
+    pub fn exint1(&mut self) -> EXINT_W<EXINTC1_SPEC, 4> {
+        EXINT_W::new(self)
     }
-    #[doc = "Bits 12:15 - Configure EXINT3 source"]
+    #[doc = "Bits 8:11 - Select the input source for EXINT2 external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn exint3(&mut self) -> EXINT3_W<EXINTC1_SPEC, 12> {
-        EXINT3_W::new(self)
+    pub fn exint2(&mut self) -> EXINT_W<EXINTC1_SPEC, 8> {
+        EXINT_W::new(self)
+    }
+    #[doc = "Bits 12:15 - Select the input source for EXINT3 external interrupt"]
+    #[inline(always)]
+    #[must_use]
+    pub fn exint3(&mut self) -> EXINT_W<EXINTC1_SPEC, 12> {
+        EXINT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

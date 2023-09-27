@@ -3,25 +3,333 @@ pub type R = crate::R<REMAP4_SPEC>;
 #[doc = "Register `REMAP4` writer"]
 pub type W = crate::W<REMAP4_SPEC>;
 #[doc = "Field `TMR1_GMUX` reader - TMR1 muxing"]
-pub type TMR1_GMUX_R = crate::FieldReader;
+pub type TMR1_GMUX_R = crate::FieldReader<TMR1_GMUX_A>;
+#[doc = "TMR1 muxing\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum TMR1_GMUX_A {
+    #[doc = "0: EXT/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BRK/PB12, CH1C/PB13, CH2C/PB14, CH3C/PB15"]
+    Mux0 = 0,
+    #[doc = "1: EXT/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BRK/PA6, CH1C/PA7, CH2C/PB0, CH3C/PB1"]
+    Mux1 = 1,
+    #[doc = "2: EXT/PA0, CH1/PC6, CH2/PC7, CH3/PC8, CH4/PC9, BRK/PA6, CH1C/PA7, CH2C/PB0, CH3C/PB1"]
+    Mux2 = 2,
+}
+impl From<TMR1_GMUX_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TMR1_GMUX_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for TMR1_GMUX_A {
+    type Ux = u8;
+}
+impl TMR1_GMUX_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<TMR1_GMUX_A> {
+        match self.bits {
+            0 => Some(TMR1_GMUX_A::Mux0),
+            1 => Some(TMR1_GMUX_A::Mux1),
+            2 => Some(TMR1_GMUX_A::Mux2),
+            _ => None,
+        }
+    }
+    #[doc = "EXT/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BRK/PB12, CH1C/PB13, CH2C/PB14, CH3C/PB15"]
+    #[inline(always)]
+    pub fn is_mux0(&self) -> bool {
+        *self == TMR1_GMUX_A::Mux0
+    }
+    #[doc = "EXT/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BRK/PA6, CH1C/PA7, CH2C/PB0, CH3C/PB1"]
+    #[inline(always)]
+    pub fn is_mux1(&self) -> bool {
+        *self == TMR1_GMUX_A::Mux1
+    }
+    #[doc = "EXT/PA0, CH1/PC6, CH2/PC7, CH3/PC8, CH4/PC9, BRK/PA6, CH1C/PA7, CH2C/PB0, CH3C/PB1"]
+    #[inline(always)]
+    pub fn is_mux2(&self) -> bool {
+        *self == TMR1_GMUX_A::Mux2
+    }
+}
 #[doc = "Field `TMR1_GMUX` writer - TMR1 muxing"]
-pub type TMR1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TMR1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, TMR1_GMUX_A>;
+impl<'a, REG, const O: u8> TMR1_GMUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "EXT/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BRK/PB12, CH1C/PB13, CH2C/PB14, CH3C/PB15"]
+    #[inline(always)]
+    pub fn mux0(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_GMUX_A::Mux0)
+    }
+    #[doc = "EXT/PA12, CH1/PA8, CH2/PA9, CH3/PA10, CH4/PA11, BRK/PA6, CH1C/PA7, CH2C/PB0, CH3C/PB1"]
+    #[inline(always)]
+    pub fn mux1(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_GMUX_A::Mux1)
+    }
+    #[doc = "EXT/PA0, CH1/PC6, CH2/PC7, CH3/PC8, CH4/PC9, BRK/PA6, CH1C/PA7, CH2C/PB0, CH3C/PB1"]
+    #[inline(always)]
+    pub fn mux2(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR1_GMUX_A::Mux2)
+    }
+}
 #[doc = "Field `TMR2_GMUX` reader - TMR2 muxing"]
-pub type TMR2_GMUX_R = crate::FieldReader;
+pub type TMR2_GMUX_R = crate::FieldReader<TMR2_GMUX_A>;
+#[doc = "TMR2 muxing\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum TMR2_GMUX_A {
+    #[doc = "0: CH1_EXT/PA0 CH2/PA1 CH3/PA2 CH4/PA3"]
+    Mux0 = 0,
+    #[doc = "1: CH1_EXT/PA15 CH2/PB3 CH3/PA2 CH4/PA3"]
+    Mux1 = 1,
+    #[doc = "2: CH1_EXT/PA0 CH2/PA1 CH3/PB10 CH4/PB11"]
+    Mux2 = 2,
+    #[doc = "3: CH1_EXT/PA15 CH2/PB3 CH3/PB10 CH4/PB11"]
+    Mux3 = 3,
+}
+impl From<TMR2_GMUX_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TMR2_GMUX_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for TMR2_GMUX_A {
+    type Ux = u8;
+}
+impl TMR2_GMUX_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<TMR2_GMUX_A> {
+        match self.bits {
+            0 => Some(TMR2_GMUX_A::Mux0),
+            1 => Some(TMR2_GMUX_A::Mux1),
+            2 => Some(TMR2_GMUX_A::Mux2),
+            3 => Some(TMR2_GMUX_A::Mux3),
+            _ => None,
+        }
+    }
+    #[doc = "CH1_EXT/PA0 CH2/PA1 CH3/PA2 CH4/PA3"]
+    #[inline(always)]
+    pub fn is_mux0(&self) -> bool {
+        *self == TMR2_GMUX_A::Mux0
+    }
+    #[doc = "CH1_EXT/PA15 CH2/PB3 CH3/PA2 CH4/PA3"]
+    #[inline(always)]
+    pub fn is_mux1(&self) -> bool {
+        *self == TMR2_GMUX_A::Mux1
+    }
+    #[doc = "CH1_EXT/PA0 CH2/PA1 CH3/PB10 CH4/PB11"]
+    #[inline(always)]
+    pub fn is_mux2(&self) -> bool {
+        *self == TMR2_GMUX_A::Mux2
+    }
+    #[doc = "CH1_EXT/PA15 CH2/PB3 CH3/PB10 CH4/PB11"]
+    #[inline(always)]
+    pub fn is_mux3(&self) -> bool {
+        *self == TMR2_GMUX_A::Mux3
+    }
+}
 #[doc = "Field `TMR2_GMUX` writer - TMR2 muxing"]
-pub type TMR2_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TMR2_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, TMR2_GMUX_A>;
+impl<'a, REG, const O: u8> TMR2_GMUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "CH1_EXT/PA0 CH2/PA1 CH3/PA2 CH4/PA3"]
+    #[inline(always)]
+    pub fn mux0(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR2_GMUX_A::Mux0)
+    }
+    #[doc = "CH1_EXT/PA15 CH2/PB3 CH3/PA2 CH4/PA3"]
+    #[inline(always)]
+    pub fn mux1(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR2_GMUX_A::Mux1)
+    }
+    #[doc = "CH1_EXT/PA0 CH2/PA1 CH3/PB10 CH4/PB11"]
+    #[inline(always)]
+    pub fn mux2(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR2_GMUX_A::Mux2)
+    }
+    #[doc = "CH1_EXT/PA15 CH2/PB3 CH3/PB10 CH4/PB11"]
+    #[inline(always)]
+    pub fn mux3(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR2_GMUX_A::Mux3)
+    }
+}
 #[doc = "Field `TMR3_GMUX` reader - TMR3 muxing"]
-pub type TMR3_GMUX_R = crate::FieldReader;
+pub type TMR3_GMUX_R = crate::FieldReader<TMR3_GMUX_A>;
+#[doc = "TMR3 muxing\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum TMR3_GMUX_A {
+    #[doc = "0: CH1/PA6 CH2/PA7 CH3/PB0 CH4/PB1"]
+    Mux0 = 0,
+    #[doc = "1: CH1/PB4 CH2/PB5 CH3/PB0 CH4/PB1"]
+    Mux1 = 1,
+}
+impl From<TMR3_GMUX_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TMR3_GMUX_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for TMR3_GMUX_A {
+    type Ux = u8;
+}
+impl TMR3_GMUX_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<TMR3_GMUX_A> {
+        match self.bits {
+            0 => Some(TMR3_GMUX_A::Mux0),
+            1 => Some(TMR3_GMUX_A::Mux1),
+            _ => None,
+        }
+    }
+    #[doc = "CH1/PA6 CH2/PA7 CH3/PB0 CH4/PB1"]
+    #[inline(always)]
+    pub fn is_mux0(&self) -> bool {
+        *self == TMR3_GMUX_A::Mux0
+    }
+    #[doc = "CH1/PB4 CH2/PB5 CH3/PB0 CH4/PB1"]
+    #[inline(always)]
+    pub fn is_mux1(&self) -> bool {
+        *self == TMR3_GMUX_A::Mux1
+    }
+}
 #[doc = "Field `TMR3_GMUX` writer - TMR3 muxing"]
-pub type TMR3_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TMR3_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, TMR3_GMUX_A>;
+impl<'a, REG, const O: u8> TMR3_GMUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "CH1/PA6 CH2/PA7 CH3/PB0 CH4/PB1"]
+    #[inline(always)]
+    pub fn mux0(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR3_GMUX_A::Mux0)
+    }
+    #[doc = "CH1/PB4 CH2/PB5 CH3/PB0 CH4/PB1"]
+    #[inline(always)]
+    pub fn mux1(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR3_GMUX_A::Mux1)
+    }
+}
 #[doc = "Field `TMR5_GMUX` reader - TMR5 muxing"]
-pub type TMR5_GMUX_R = crate::FieldReader;
+pub type TMR5_GMUX_R = crate::FieldReader<TMR5_GMUX_A>;
+#[doc = "TMR5 muxing\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum TMR5_GMUX_A {
+    #[doc = "0: CH1/PA0 CH2/PA1 CH3/PA2 CH4/PA3"]
+    Mux0 = 0,
+    #[doc = "1: CH1/PF4 CH2/PF5 CH3/PA2 CH4/PA3"]
+    Mux1 = 1,
+}
+impl From<TMR5_GMUX_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TMR5_GMUX_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for TMR5_GMUX_A {
+    type Ux = u8;
+}
+impl TMR5_GMUX_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<TMR5_GMUX_A> {
+        match self.bits {
+            0 => Some(TMR5_GMUX_A::Mux0),
+            1 => Some(TMR5_GMUX_A::Mux1),
+            _ => None,
+        }
+    }
+    #[doc = "CH1/PA0 CH2/PA1 CH3/PA2 CH4/PA3"]
+    #[inline(always)]
+    pub fn is_mux0(&self) -> bool {
+        *self == TMR5_GMUX_A::Mux0
+    }
+    #[doc = "CH1/PF4 CH2/PF5 CH3/PA2 CH4/PA3"]
+    #[inline(always)]
+    pub fn is_mux1(&self) -> bool {
+        *self == TMR5_GMUX_A::Mux1
+    }
+}
 #[doc = "Field `TMR5_GMUX` writer - TMR5 muxing"]
-pub type TMR5_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TMR5_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, TMR5_GMUX_A>;
+impl<'a, REG, const O: u8> TMR5_GMUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "CH1/PA0 CH2/PA1 CH3/PA2 CH4/PA3"]
+    #[inline(always)]
+    pub fn mux0(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR5_GMUX_A::Mux0)
+    }
+    #[doc = "CH1/PF4 CH2/PF5 CH3/PA2 CH4/PA3"]
+    #[inline(always)]
+    pub fn mux1(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR5_GMUX_A::Mux1)
+    }
+}
 #[doc = "Field `TMR5CH4_GMUX` reader - TMR5CH4 muxing"]
-pub type TMR5CH4_GMUX_R = crate::BitReader;
+pub type TMR5CH4_GMUX_R = crate::BitReader<TMR5CH4_GMUX_A>;
+#[doc = "TMR5CH4 muxing\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TMR5CH4_GMUX_A {
+    #[doc = "0: TMR5_CH4 is connected to PA3"]
+    Pa3 = 0,
+    #[doc = "1: LICK is connected to TMR5_CH4 to get calibration"]
+    Lick = 1,
+}
+impl From<TMR5CH4_GMUX_A> for bool {
+    #[inline(always)]
+    fn from(variant: TMR5CH4_GMUX_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl TMR5CH4_GMUX_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TMR5CH4_GMUX_A {
+        match self.bits {
+            false => TMR5CH4_GMUX_A::Pa3,
+            true => TMR5CH4_GMUX_A::Lick,
+        }
+    }
+    #[doc = "TMR5_CH4 is connected to PA3"]
+    #[inline(always)]
+    pub fn is_pa3(&self) -> bool {
+        *self == TMR5CH4_GMUX_A::Pa3
+    }
+    #[doc = "LICK is connected to TMR5_CH4 to get calibration"]
+    #[inline(always)]
+    pub fn is_lick(&self) -> bool {
+        *self == TMR5CH4_GMUX_A::Lick
+    }
+}
 #[doc = "Field `TMR5CH4_GMUX` writer - TMR5CH4 muxing"]
-pub type TMR5CH4_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR5CH4_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TMR5CH4_GMUX_A>;
+impl<'a, REG, const O: u8> TMR5CH4_GMUX_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "TMR5_CH4 is connected to PA3"]
+    #[inline(always)]
+    pub fn pa3(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR5CH4_GMUX_A::Pa3)
+    }
+    #[doc = "LICK is connected to TMR5_CH4 to get calibration"]
+    #[inline(always)]
+    pub fn lick(self) -> &'a mut crate::W<REG> {
+        self.variant(TMR5CH4_GMUX_A::Lick)
+    }
+}
 impl R {
     #[doc = "Bits 0:3 - TMR1 muxing"]
     #[inline(always)]

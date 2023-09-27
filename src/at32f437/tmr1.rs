@@ -106,7 +106,7 @@ module"]
 pub type ISTS = crate::Reg<ists::ISTS_SPEC>;
 #[doc = "Interrupt status register"]
 pub mod ists;
-#[doc = "SWEVT (rw) register accessor: Software event register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`swevt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swevt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`swevt`]
+#[doc = "SWEVT (w) register accessor: Software event register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swevt::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`swevt`]
 module"]
 pub type SWEVT = crate::Reg<swevt::SWEVT_SPEC>;
 #[doc = "Software event register"]

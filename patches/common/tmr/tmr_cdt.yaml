@@ -1,11 +1,11 @@
-"TMR[1-589],TMR??":
+TMR[1-589],TMR??:
+  _array:
+    C[1-4]DT: {}
   _modify:
-    "C?DT":
+    C?DT:
       description: "Channel data register"
-  "C?DT":
+  C?DT:
     _modify:
-      "C?DT":
+      C?DT:
         name: CDT
         description: "Channel data value"
-  _array:
-    "C[1234]DT": {}
