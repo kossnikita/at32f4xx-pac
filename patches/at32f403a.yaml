@@ -1,4 +1,7 @@
-_svd: "../svd/AT32F403Axx_v2.svd"
+_svd: "../svd/AT32F403A.svd"
+
+_modify:
+  name: AT32F403A
 
 _include:
   - common/f403a_407.yaml

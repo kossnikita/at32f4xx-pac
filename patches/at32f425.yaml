@@ -1,4 +1,7 @@
-_svd: "../svd/AT32F425xx_v2.svd"
+_svd: "../svd/AT32F425.svd"
+
+_modify:
+  name: AT32F425
 
 ACC:
   CTRL2:

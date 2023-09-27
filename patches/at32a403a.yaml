@@ -1,4 +1,7 @@
-_svd: "../svd/AT32A403Axx_v2.svd"
+_svd: "../svd/AT32A403A.svd"
+
+_modify:
+  name: AT32A403A
 
 _include:
   - common/crm/common.yaml

@@ -7,7 +7,8 @@ Foreach-Object -Parallel {
     Get-ChildItem ./SVD/ -Filter *.svd | 
     Foreach-Object {
         $svd = $_
-        Copy-Item $svd -Destination ../svd
+        $svd_path = "../svd/" + $svd.Name.replace('xx_v2','').ToLower()
+        Copy-Item $svd -Destination $svd_path
     }
     Pop-Location
     Remove-Item $pack.BaseName -Recurse
@@ -19,9 +20,9 @@ Foreach-Object -Parallel {
 Get-ChildItem ./svd/ -Filter *.svd.patched | 
 Foreach-Object -Parallel {
     $svd = $_
-    $dirName = $svd.BaseName.replace('xx_v2.svd','').ToLower()
+    $dirName = $svd.BaseName.replace('.svd','').ToLower()
     New-item -ItemType Directory . -Name $dirName -ErrorAction Ignore | Out-Null
-    $svd_name = ($svd.BaseName.replace('xx_v2.svd','').ToLower() + ".svd")
+    $svd_name = $svd.BaseName.ToLower()
     Copy-Item $svd -Destination ./$dirName/$svd_name
     Push-Location ./$dirName
     cargo init -q
