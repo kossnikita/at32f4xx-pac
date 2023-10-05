@@ -44,7 +44,11 @@ Foreach-Object -Parallel {
     Remove-Item ./$dirName -Recurse -Force
 }
 svdtools html ./html (Get-ChildItem ./svd/ -Filter *.patched) | Out-Null
-$index = "./html/index.html"
+svdtools html ./html/original (Get-ChildItem ./svd/ -Filter *.svd) | Out-Null
 svdtools htmlcompare ./html/comparison (Get-ChildItem ./svd/ -Filter *.patched) | Out-Null
+svdtools htmlcompare ./html/original/comparison (Get-ChildItem ./svd/ -Filter *.svd) | Out-Null
+$index = "./html/original/index.html"
+(Get-Content $index).replace('comparisons.html', 'comparison/index.html') | Set-Content $index
+$index = "./html/index.html"
 (Get-Content $index).replace('comparisons.html', 'comparison/index.html') | Set-Content $index
 # Remove-Item svd -Recurse
