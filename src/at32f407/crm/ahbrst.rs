@@ -2,23 +2,23 @@
 pub type R = crate::R<AHBRST_SPEC>;
 #[doc = "Register `AHBRST` writer"]
 pub type W = crate::W<AHBRST_SPEC>;
-#[doc = "Field `EMACRST` reader - EMAC reset"]
-pub type EMACRST_R = crate::BitReader;
-#[doc = "Field `EMACRST` writer - EMAC reset"]
-pub type EMACRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `EMAC` reader - EMAC reset"]
+pub type EMAC_R = crate::BitReader;
+#[doc = "Field `EMAC` writer - EMAC reset"]
+pub type EMAC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 14 - EMAC reset"]
     #[inline(always)]
-    pub fn emacrst(&self) -> EMACRST_R {
-        EMACRST_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn emac(&self) -> EMAC_R {
+        EMAC_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 14 - EMAC reset"]
     #[inline(always)]
     #[must_use]
-    pub fn emacrst(&mut self) -> EMACRST_W<AHBRST_SPEC, 14> {
-        EMACRST_W::new(self)
+    pub fn emac(&mut self) -> EMAC_W<AHBRST_SPEC, 14> {
+        EMAC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

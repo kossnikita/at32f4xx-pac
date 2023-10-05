@@ -3,10 +3,19 @@ _include:
   - crm/crm_pllcfg.yaml
   - ertc/common.yaml
   - flash/common.yaml
+  - gpio/gpio-v2.yaml
+  - adc/common.yaml
   - can/common.yaml
+  - exint/common.yaml
+  - exint/common.yaml
+  - dma/common.yaml
   - crc/common.yaml
   - crc/poly.yaml
+  - usart/common.yaml
+  - spi/common.yaml
   - tmr/common.yaml
+  - tmr/tmr2_32.yaml
+  - tmr/tmr10.yaml
   - wwdt/common.yaml
   - wdt/with_win.yaml
   - acc/twk.yaml

@@ -2,6 +2,9 @@ CRC:
   DT:
     DT: [0, 0xFFFFFFFF]
   CDT:
+    _modify:
+      CDT:
+        bitWidth: 8
     CDT: [0, 0xFF]
   CTRL:
     RST:

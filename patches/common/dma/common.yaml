@@ -1,0 +1,97 @@
+DMA?:
+  _cluster:
+    Channel%s:
+      description: "DMA Channel %s"
+      C?CTRL:
+        name: CTRL
+        description: "DMA channel %s configuration register"
+      C?DTCNT:
+        name: DTCNT
+        description: "DMA channel %s number of data to transfer register"
+      C?PADDR:
+        name: PADDR
+        description: "DMA channel %s peripheral base address register"
+      C?MADDR:
+        name: MADDR
+        description: "DMA channel %s memory base address register"
+  _clusters:
+    Channel%s:
+      CTRL:
+        CHEN:
+          _read:
+            Disabled: [0, "Channel is disabled"]
+            Enabled: [1, "Channel is enabled"]
+          _write:
+            Disable: [0, "Channel disable"]
+            Enable: [1, "Channel enable"]
+        FDTIEN:
+          _read:
+            Disabled: [0, "Transfer complete interrupt is disabled"]
+            Enabled: [1, "Transfer complete interrupt is enabled"]
+          _write:
+            Disable: [0, "Transfer complete interrupt disable"]
+            Enable: [1, "Transfer complete interrupt enable"]
+        HDTIEN:
+          _read:
+            Disabled: [0, "Half-transfer interrupt is disabled"]
+            Enabled: [1, "Half-transfer interrupt is enabled"]
+          _write:
+            Disable: [0, "Half-transfer interrupt disable"]
+            Enable: [1, "Half-transfer interrupt enable"]
+        DTERRIEN:
+          _read:
+            Disabled: [0, "Data transfer error interrupt is disabled"]
+            Enabled: [1, "Data transfer error interrupt is enabled"]
+          _write:
+            Disable: [0, "Data transfer error interrupt disable"]
+            Enable: [1, "Data transfer error interrupt enable"]
+        DTD:
+          Peripherals: [0, "Read from peripherals"]
+          Memory: [1, "Read from memory"]
+        LM:
+          _read:
+            Disabled: [0, "Circular mode is disabled"]
+            Enabled: [1, "Circular mode is enabled"]
+          _write:
+            Disable: [0, "Circular mode disable"]
+            Enable: [1, "Circular mode enable"]
+        PINCM:
+          _read:
+            Disabled: [0, "Peripheral address increment is disabled"]
+            Enabled: [1, "Peripheral address increment is enabled"]
+          _write:
+            Disable: [0, "Peripheral address increment disable"]
+            Enable: [1, "Peripheral address increment enable"] 
+        MINCM:
+          _read:
+            Disabled: [0, "Memory address increment is disabled"]
+            Enabled: [1, "Memory address increment is enabled"]
+          _write:
+            Disable: [0, "Memory address increment disable"]
+            Enable: [1, "Memory address increment enable"] 
+        PWIDTH:
+          bit8: [0, "8 bits"]
+          bit16: [1, "16 bits"]
+          bit32: [2, "32 bits"]
+        MWIDTH:
+          bit8: [0, "8 bits"]
+          bit16: [1, "16 bits"]
+          bit32: [2, "32 bits"]
+        CHPL:
+          Low: [0, "Low"]
+          Medium: [1, "Medium"]
+          High: [2, "High"]
+          VeryHigh: [3, "VeryHigh"]
+        M2M:
+          _read:
+            Disabled: [0, "Memory to memory mode is disabled"]
+            Enabled: [1, "Memory to memory mode is enabled"]
+          _write:
+            Disable: [0, "Memory to memory mode disable"]
+            Enable: [1, "Memory to memory mode enable"] 
+      DTCNT:
+        CNT: [0, 0xFFFF]
+      PADDR:
+        PADDR: [0, 0xFFFFFFFF]
+      MADDR:
+        MADDR: [0, 0xFFFFFFFF]

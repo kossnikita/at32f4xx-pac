@@ -3,29 +3,316 @@ pub type R = crate::R<CTRL2_SPEC>;
 #[doc = "Register `CTRL2` writer"]
 pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `ADCEN` reader - A/D converter enable"]
-pub type ADCEN_R = crate::BitReader;
+pub type ADCEN_R = crate::BitReader<ADCENR_A>;
+#[doc = "A/D converter enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ADCENR_A {
+    #[doc = "0: ADC is disabled"]
+    Disabled = 0,
+    #[doc = "1: ADC is enabled"]
+    Enabled = 1,
+}
+impl From<ADCENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: ADCENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl ADCEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ADCENR_A {
+        match self.bits {
+            false => ADCENR_A::Disabled,
+            true => ADCENR_A::Enabled,
+        }
+    }
+    #[doc = "ADC is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == ADCENR_A::Disabled
+    }
+    #[doc = "ADC is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == ADCENR_A::Enabled
+    }
+}
+#[doc = "A/D converter enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ADCENW_AW {
+    #[doc = "0: ADC disable"]
+    Disable = 0,
+    #[doc = "1: ADC enable"]
+    Enable = 1,
+}
+impl From<ADCENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: ADCENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `ADCEN` writer - A/D converter enable"]
-pub type ADCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ADCENW_AW>;
+impl<'a, REG, const O: u8> ADCEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "ADC disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(ADCENW_AW::Disable)
+    }
+    #[doc = "ADC enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(ADCENW_AW::Enable)
+    }
+}
 #[doc = "Field `RPEN` reader - Repeat mode enable"]
-pub type RPEN_R = crate::BitReader;
+pub type RPEN_R = crate::BitReader<RPENR_A>;
+#[doc = "Repeat mode enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RPENR_A {
+    #[doc = "0: Repetition mode is disabled"]
+    Disabled = 0,
+    #[doc = "1: Repetition mode is enabled"]
+    Enabled = 1,
+}
+impl From<RPENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: RPENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl RPEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> RPENR_A {
+        match self.bits {
+            false => RPENR_A::Disabled,
+            true => RPENR_A::Enabled,
+        }
+    }
+    #[doc = "Repetition mode is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == RPENR_A::Disabled
+    }
+    #[doc = "Repetition mode is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == RPENR_A::Enabled
+    }
+}
+#[doc = "Repeat mode enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RPENW_AW {
+    #[doc = "0: Repetition mode disable"]
+    Disable = 0,
+    #[doc = "1: Repetition mode enable"]
+    Enable = 1,
+}
+impl From<RPENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: RPENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `RPEN` writer - Repeat mode enable"]
-pub type RPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RPENW_AW>;
+impl<'a, REG, const O: u8> RPEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Repetition mode disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(RPENW_AW::Disable)
+    }
+    #[doc = "Repetition mode enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(RPENW_AW::Enable)
+    }
+}
 #[doc = "Field `ADCAL` reader - A/D Calibration"]
-pub type ADCAL_R = crate::BitReader;
+pub type ADCAL_R = crate::BitReader<ADCALR_A>;
+#[doc = "A/D Calibration\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ADCALR_A {
+    #[doc = "0: Calibration completed"]
+    Completed = 0,
+    #[doc = "1: Calibration is in process"]
+    InProgress = 1,
+}
+impl From<ADCALR_A> for bool {
+    #[inline(always)]
+    fn from(variant: ADCALR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl ADCAL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ADCALR_A {
+        match self.bits {
+            false => ADCALR_A::Completed,
+            true => ADCALR_A::InProgress,
+        }
+    }
+    #[doc = "Calibration completed"]
+    #[inline(always)]
+    pub fn is_completed(&self) -> bool {
+        *self == ADCALR_A::Completed
+    }
+    #[doc = "Calibration is in process"]
+    #[inline(always)]
+    pub fn is_in_progress(&self) -> bool {
+        *self == ADCALR_A::InProgress
+    }
+}
+#[doc = "A/D Calibration\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ADCALW_AW {
+    #[doc = "1: Enable calibration"]
+    Calibrate = 1,
+}
+impl From<ADCALW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: ADCALW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `ADCAL` writer - A/D Calibration"]
-pub type ADCAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADCAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ADCALW_AW>;
+impl<'a, REG, const O: u8> ADCAL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Enable calibration"]
+    #[inline(always)]
+    pub fn calibrate(self) -> &'a mut crate::W<REG> {
+        self.variant(ADCALW_AW::Calibrate)
+    }
+}
 #[doc = "Field `ADCALINIT` reader - initialize A/D calibration"]
-pub type ADCALINIT_R = crate::BitReader;
+pub type ADCALINIT_R = crate::BitReader<ADCALINITR_A>;
+#[doc = "initialize A/D calibration\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ADCALINITR_A {
+    #[doc = "0: Initialization completed"]
+    Completed = 0,
+    #[doc = "1: Initialization is in process"]
+    InProgress = 1,
+}
+impl From<ADCALINITR_A> for bool {
+    #[inline(always)]
+    fn from(variant: ADCALINITR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl ADCALINIT_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ADCALINITR_A {
+        match self.bits {
+            false => ADCALINITR_A::Completed,
+            true => ADCALINITR_A::InProgress,
+        }
+    }
+    #[doc = "Initialization completed"]
+    #[inline(always)]
+    pub fn is_completed(&self) -> bool {
+        *self == ADCALINITR_A::Completed
+    }
+    #[doc = "Initialization is in process"]
+    #[inline(always)]
+    pub fn is_in_progress(&self) -> bool {
+        *self == ADCALINITR_A::InProgress
+    }
+}
+#[doc = "initialize A/D calibration\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ADCALINITW_AW {
+    #[doc = "1: Enable initialization"]
+    Init = 1,
+}
+impl From<ADCALINITW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: ADCALINITW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `ADCALINIT` writer - initialize A/D calibration"]
-pub type ADCALINIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADCALINIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ADCALINITW_AW>;
+impl<'a, REG, const O: u8> ADCALINIT_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Enable initialization"]
+    #[inline(always)]
+    pub fn init(self) -> &'a mut crate::W<REG> {
+        self.variant(ADCALINITW_AW::Init)
+    }
+}
 #[doc = "Field `OCDMAEN` reader - DMA transfer enable of ordinary channels"]
 pub type OCDMAEN_R = crate::BitReader;
 #[doc = "Field `OCDMAEN` writer - DMA transfer enable of ordinary channels"]
 pub type OCDMAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DTALIGN` reader - Data alignment"]
-pub type DTALIGN_R = crate::BitReader;
+pub type DTALIGN_R = crate::BitReader<DTALIGN_A>;
+#[doc = "Data alignment\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum DTALIGN_A {
+    #[doc = "0: Right alignment"]
+    Right = 0,
+    #[doc = "1: Left alignment"]
+    Left = 1,
+}
+impl From<DTALIGN_A> for bool {
+    #[inline(always)]
+    fn from(variant: DTALIGN_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl DTALIGN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> DTALIGN_A {
+        match self.bits {
+            false => DTALIGN_A::Right,
+            true => DTALIGN_A::Left,
+        }
+    }
+    #[doc = "Right alignment"]
+    #[inline(always)]
+    pub fn is_right(&self) -> bool {
+        *self == DTALIGN_A::Right
+    }
+    #[doc = "Left alignment"]
+    #[inline(always)]
+    pub fn is_left(&self) -> bool {
+        *self == DTALIGN_A::Left
+    }
+}
 #[doc = "Field `DTALIGN` writer - Data alignment"]
-pub type DTALIGN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTALIGN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DTALIGN_A>;
+impl<'a, REG, const O: u8> DTALIGN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Right alignment"]
+    #[inline(always)]
+    pub fn right(self) -> &'a mut crate::W<REG> {
+        self.variant(DTALIGN_A::Right)
+    }
+    #[doc = "Left alignment"]
+    #[inline(always)]
+    pub fn left(self) -> &'a mut crate::W<REG> {
+        self.variant(DTALIGN_A::Left)
+    }
+}
 #[doc = "Field `PCTESEL` reader - Low bit of trigger event select for preempted channels conversion"]
 pub type PCTESEL_R = crate::FieldReader;
 #[doc = "Field `PCTESEL` writer - Low bit of trigger event select for preempted channels conversion"]
@@ -43,13 +330,62 @@ pub type OCTEN_R = crate::BitReader;
 #[doc = "Field `OCTEN` writer - Trigger mode enable for ordinary channels conversion"]
 pub type OCTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PCSWTRG` reader - Conversion trigger by software of preempted channels"]
-pub type PCSWTRG_R = crate::BitReader;
+pub type PCSWTRG_R = crate::BitReader<PCSWTRG_A>;
+#[doc = "Conversion trigger by software of preempted channels\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PCSWTRG_A {
+    #[doc = "0: Conversion of ordinary channels not triggered"]
+    NotTriggered = 0,
+    #[doc = "1: Conversion of ordinary channels triggered"]
+    Triggered = 1,
+}
+impl From<PCSWTRG_A> for bool {
+    #[inline(always)]
+    fn from(variant: PCSWTRG_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl PCSWTRG_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PCSWTRG_A {
+        match self.bits {
+            false => PCSWTRG_A::NotTriggered,
+            true => PCSWTRG_A::Triggered,
+        }
+    }
+    #[doc = "Conversion of ordinary channels not triggered"]
+    #[inline(always)]
+    pub fn is_not_triggered(&self) -> bool {
+        *self == PCSWTRG_A::NotTriggered
+    }
+    #[doc = "Conversion of ordinary channels triggered"]
+    #[inline(always)]
+    pub fn is_triggered(&self) -> bool {
+        *self == PCSWTRG_A::Triggered
+    }
+}
 #[doc = "Field `PCSWTRG` writer - Conversion trigger by software of preempted channels"]
-pub type PCSWTRG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCSWTRG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PCSWTRG_A>;
+impl<'a, REG, const O: u8> PCSWTRG_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Conversion of ordinary channels not triggered"]
+    #[inline(always)]
+    pub fn not_triggered(self) -> &'a mut crate::W<REG> {
+        self.variant(PCSWTRG_A::NotTriggered)
+    }
+    #[doc = "Conversion of ordinary channels triggered"]
+    #[inline(always)]
+    pub fn triggered(self) -> &'a mut crate::W<REG> {
+        self.variant(PCSWTRG_A::Triggered)
+    }
+}
 #[doc = "Field `OCSWTRG` reader - Conversion trigger by software of ordinary channels"]
-pub type OCSWTRG_R = crate::BitReader;
+pub use PCSWTRG_R as OCSWTRG_R;
 #[doc = "Field `OCSWTRG` writer - Conversion trigger by software of ordinary channels"]
-pub type OCSWTRG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub use PCSWTRG_W as OCSWTRG_W;
 #[doc = "Field `ITSRVEN` reader - Internal temperature sensor and VINTRV enable"]
 pub type ITSRVEN_R = crate::BitReader;
 #[doc = "Field `ITSRVEN` writer - Internal temperature sensor and VINTRV enable"]

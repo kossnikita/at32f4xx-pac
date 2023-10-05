@@ -2,68 +2,68 @@
 pub type R = crate::R<AHBLPEN3_SPEC>;
 #[doc = "Register `AHBLPEN3` writer"]
 pub type W = crate::W<AHBLPEN3_SPEC>;
-#[doc = "Field `XMCLPEN` reader - XMC clock enable during sleep mode"]
-pub type XMCLPEN_R = crate::BitReader;
-#[doc = "Field `XMCLPEN` writer - XMC clock enable during sleep mode"]
-pub type XMCLPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `QSPI1LPEN` reader - QSPI1 clock enable during sleep mode"]
-pub type QSPI1LPEN_R = crate::BitReader;
-#[doc = "Field `QSPI1LPEN` writer - QSPI1 clock enable during sleep mode"]
-pub type QSPI1LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `QSPI2LPEN` reader - QSPI2 clock enable during sleep mode"]
-pub type QSPI2LPEN_R = crate::BitReader;
-#[doc = "Field `QSPI2LPEN` writer - QSPI2 clock enable during sleep mode"]
-pub type QSPI2LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `SDIO2LPEN` reader - SDIO2 clock enable during sleep mode"]
-pub type SDIO2LPEN_R = crate::BitReader;
-#[doc = "Field `SDIO2LPEN` writer - SDIO2 clock enable during sleep mode"]
-pub type SDIO2LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `XMCLP` reader - XMC clock enable during sleep mode"]
+pub type XMCLP_R = crate::BitReader;
+#[doc = "Field `XMCLP` writer - XMC clock enable during sleep mode"]
+pub type XMCLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `QSPI1LP` reader - QSPI1 clock enable during sleep mode"]
+pub type QSPI1LP_R = crate::BitReader;
+#[doc = "Field `QSPI1LP` writer - QSPI1 clock enable during sleep mode"]
+pub type QSPI1LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `QSPI2LP` reader - QSPI2 clock enable during sleep mode"]
+pub type QSPI2LP_R = crate::BitReader;
+#[doc = "Field `QSPI2LP` writer - QSPI2 clock enable during sleep mode"]
+pub type QSPI2LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `SDIO2LP` reader - SDIO2 clock enable during sleep mode"]
+pub type SDIO2LP_R = crate::BitReader;
+#[doc = "Field `SDIO2LP` writer - SDIO2 clock enable during sleep mode"]
+pub type SDIO2LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - XMC clock enable during sleep mode"]
     #[inline(always)]
-    pub fn xmclpen(&self) -> XMCLPEN_R {
-        XMCLPEN_R::new((self.bits & 1) != 0)
+    pub fn xmclp(&self) -> XMCLP_R {
+        XMCLP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - QSPI1 clock enable during sleep mode"]
     #[inline(always)]
-    pub fn qspi1lpen(&self) -> QSPI1LPEN_R {
-        QSPI1LPEN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn qspi1lp(&self) -> QSPI1LP_R {
+        QSPI1LP_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 14 - QSPI2 clock enable during sleep mode"]
     #[inline(always)]
-    pub fn qspi2lpen(&self) -> QSPI2LPEN_R {
-        QSPI2LPEN_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn qspi2lp(&self) -> QSPI2LP_R {
+        QSPI2LP_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - SDIO2 clock enable during sleep mode"]
     #[inline(always)]
-    pub fn sdio2lpen(&self) -> SDIO2LPEN_R {
-        SDIO2LPEN_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn sdio2lp(&self) -> SDIO2LP_R {
+        SDIO2LP_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - XMC clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn xmclpen(&mut self) -> XMCLPEN_W<AHBLPEN3_SPEC, 0> {
-        XMCLPEN_W::new(self)
+    pub fn xmclp(&mut self) -> XMCLP_W<AHBLPEN3_SPEC, 0> {
+        XMCLP_W::new(self)
     }
     #[doc = "Bit 1 - QSPI1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi1lpen(&mut self) -> QSPI1LPEN_W<AHBLPEN3_SPEC, 1> {
-        QSPI1LPEN_W::new(self)
+    pub fn qspi1lp(&mut self) -> QSPI1LP_W<AHBLPEN3_SPEC, 1> {
+        QSPI1LP_W::new(self)
     }
     #[doc = "Bit 14 - QSPI2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi2lpen(&mut self) -> QSPI2LPEN_W<AHBLPEN3_SPEC, 14> {
-        QSPI2LPEN_W::new(self)
+    pub fn qspi2lp(&mut self) -> QSPI2LP_W<AHBLPEN3_SPEC, 14> {
+        QSPI2LP_W::new(self)
     }
     #[doc = "Bit 15 - SDIO2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio2lpen(&mut self) -> SDIO2LPEN_W<AHBLPEN3_SPEC, 15> {
-        SDIO2LPEN_W::new(self)
+    pub fn sdio2lp(&mut self) -> SDIO2LP_W<AHBLPEN3_SPEC, 15> {
+        SDIO2LP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

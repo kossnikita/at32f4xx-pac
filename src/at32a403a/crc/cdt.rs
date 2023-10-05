@@ -3,18 +3,18 @@ pub type R = crate::R<CDT_SPEC>;
 #[doc = "Register `CDT` writer"]
 pub type W = crate::W<CDT_SPEC>;
 #[doc = "Field `CDT` reader - Common Data"]
-pub type CDT_R = crate::BitReader;
+pub type CDT_R = crate::FieldReader;
 #[doc = "Field `CDT` writer - Common Data"]
-pub type CDT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CDT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 8, O>;
 impl R {
-    #[doc = "Bit 0 - Common Data"]
+    #[doc = "Bits 0:7 - Common Data"]
     #[inline(always)]
     pub fn cdt(&self) -> CDT_R {
-        CDT_R::new((self.bits & 1) != 0)
+        CDT_R::new((self.bits & 0xff) as u8)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Common Data"]
+    #[doc = "Bits 0:7 - Common Data"]
     #[inline(always)]
     #[must_use]
     pub fn cdt(&mut self) -> CDT_W<CDT_SPEC, 0> {

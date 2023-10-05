@@ -5,7 +5,7 @@ pub type W = crate::W<BAUDR_SPEC>;
 #[doc = "Field `DIV` reader - Division"]
 pub type DIV_R = crate::FieldReader<u16>;
 #[doc = "Field `DIV` writer - Division"]
-pub type DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type DIV_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Division"]
     #[inline(always)]

@@ -1,0 +1,9 @@
+CTRL1:
+  OWCDIR:
+    Up: [0, "Up"]
+    Down: [1, "Down"]
+  TWCMSEL:
+    OneWay: [0, "One-way counting mode, depending on the OWCDIR bit"]
+    Mode1: [1, "Two-way counting mode1, count up and down alternately, the CxIF bit is set only when the counter counts down"]
+    Mode2: [2, "Two-way counting mode2, count up and down alternately, the CxIF bit is set only when the counter counts up"]
+    Mode3: [3, "Two-way counting mode3, count up and down alternately, the CxIF bit is set when the counter counts up/down"]

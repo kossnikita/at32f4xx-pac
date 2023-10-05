@@ -3,9 +3,58 @@ pub type R = crate::R<CTRL2_SPEC>;
 #[doc = "Register `CTRL2` writer"]
 pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `DRS` reader - DMA request source"]
-pub type DRS_R = crate::BitReader;
+pub type DRS_R = crate::BitReader<DRS_A>;
+#[doc = "DMA request source\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum DRS_A {
+    #[doc = "0: Capture/compare event"]
+    CaptureCompare = 0,
+    #[doc = "1: Overflow event"]
+    Overflow = 1,
+}
+impl From<DRS_A> for bool {
+    #[inline(always)]
+    fn from(variant: DRS_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl DRS_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> DRS_A {
+        match self.bits {
+            false => DRS_A::CaptureCompare,
+            true => DRS_A::Overflow,
+        }
+    }
+    #[doc = "Capture/compare event"]
+    #[inline(always)]
+    pub fn is_capture_compare(&self) -> bool {
+        *self == DRS_A::CaptureCompare
+    }
+    #[doc = "Overflow event"]
+    #[inline(always)]
+    pub fn is_overflow(&self) -> bool {
+        *self == DRS_A::Overflow
+    }
+}
 #[doc = "Field `DRS` writer - DMA request source"]
-pub type DRS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DRS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DRS_A>;
+impl<'a, REG, const O: u8> DRS_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Capture/compare event"]
+    #[inline(always)]
+    pub fn capture_compare(self) -> &'a mut crate::W<REG> {
+        self.variant(DRS_A::CaptureCompare)
+    }
+    #[doc = "Overflow event"]
+    #[inline(always)]
+    pub fn overflow(self) -> &'a mut crate::W<REG> {
+        self.variant(DRS_A::Overflow)
+    }
+}
 #[doc = "Field `PTOS` reader - Primary TMR output selection"]
 pub type PTOS_R = crate::FieldReader<PTOS_A>;
 #[doc = "Primary TMR output selection\n\nValue on reset: 0"]
@@ -144,9 +193,58 @@ where
     }
 }
 #[doc = "Field `C1INSEL` reader - C1IN selection"]
-pub type C1INSEL_R = crate::BitReader;
+pub type C1INSEL_R = crate::BitReader<C1INSEL_A>;
+#[doc = "C1IN selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C1INSEL_A {
+    #[doc = "0: CH1 pin is connected to C1IRAW input"]
+    Ch1 = 0,
+    #[doc = "1: The XOR result of CH1, CH2 and CH3 pins is connected to C1IRAW input"]
+    Xor = 1,
+}
+impl From<C1INSEL_A> for bool {
+    #[inline(always)]
+    fn from(variant: C1INSEL_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl C1INSEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> C1INSEL_A {
+        match self.bits {
+            false => C1INSEL_A::Ch1,
+            true => C1INSEL_A::Xor,
+        }
+    }
+    #[doc = "CH1 pin is connected to C1IRAW input"]
+    #[inline(always)]
+    pub fn is_ch1(&self) -> bool {
+        *self == C1INSEL_A::Ch1
+    }
+    #[doc = "The XOR result of CH1, CH2 and CH3 pins is connected to C1IRAW input"]
+    #[inline(always)]
+    pub fn is_xor(&self) -> bool {
+        *self == C1INSEL_A::Xor
+    }
+}
 #[doc = "Field `C1INSEL` writer - C1IN selection"]
-pub type C1INSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type C1INSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1INSEL_A>;
+impl<'a, REG, const O: u8> C1INSEL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "CH1 pin is connected to C1IRAW input"]
+    #[inline(always)]
+    pub fn ch1(self) -> &'a mut crate::W<REG> {
+        self.variant(C1INSEL_A::Ch1)
+    }
+    #[doc = "The XOR result of CH1, CH2 and CH3 pins is connected to C1IRAW input"]
+    #[inline(always)]
+    pub fn xor(self) -> &'a mut crate::W<REG> {
+        self.variant(C1INSEL_A::Xor)
+    }
+}
 impl R {
     #[doc = "Bit 3 - DMA request source"]
     #[inline(always)]

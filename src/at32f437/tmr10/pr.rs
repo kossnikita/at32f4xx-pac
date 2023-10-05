@@ -5,7 +5,7 @@ pub type W = crate::W<PR_SPEC>;
 #[doc = "Field `PR` reader - Period value"]
 pub type PR_R = crate::FieldReader<u16>;
 #[doc = "Field `PR` writer - Period value"]
-pub type PR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PR_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Period value"]
     #[inline(always)]

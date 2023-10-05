@@ -189,6 +189,59 @@ where
         self.variant(OVFS_A::Counter)
     }
 }
+#[doc = "Field `OCMEN` reader - One cycle mode enable"]
+pub type OCMEN_R = crate::BitReader<OCMEN_A>;
+#[doc = "One cycle mode enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OCMEN_A {
+    #[doc = "0: The counter does not stop at an update event"]
+    Continuous = 0,
+    #[doc = "1: The counter stops at an update event"]
+    OneCycle = 1,
+}
+impl From<OCMEN_A> for bool {
+    #[inline(always)]
+    fn from(variant: OCMEN_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl OCMEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> OCMEN_A {
+        match self.bits {
+            false => OCMEN_A::Continuous,
+            true => OCMEN_A::OneCycle,
+        }
+    }
+    #[doc = "The counter does not stop at an update event"]
+    #[inline(always)]
+    pub fn is_continuous(&self) -> bool {
+        *self == OCMEN_A::Continuous
+    }
+    #[doc = "The counter stops at an update event"]
+    #[inline(always)]
+    pub fn is_one_cycle(&self) -> bool {
+        *self == OCMEN_A::OneCycle
+    }
+}
+#[doc = "Field `OCMEN` writer - One cycle mode enable"]
+pub type OCMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OCMEN_A>;
+impl<'a, REG, const O: u8> OCMEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The counter does not stop at an update event"]
+    #[inline(always)]
+    pub fn continuous(self) -> &'a mut crate::W<REG> {
+        self.variant(OCMEN_A::Continuous)
+    }
+    #[doc = "The counter stops at an update event"]
+    #[inline(always)]
+    pub fn one_cycle(self) -> &'a mut crate::W<REG> {
+        self.variant(OCMEN_A::OneCycle)
+    }
+}
 #[doc = "Field `PRBEN` reader - Period buffer enable"]
 pub type PRBEN_R = crate::BitReader<PRBENR_A>;
 #[doc = "Period buffer enable\n\nValue on reset: 0"]
@@ -344,6 +397,11 @@ impl R {
     pub fn ovfs(&self) -> OVFS_R {
         OVFS_R::new(((self.bits >> 2) & 1) != 0)
     }
+    #[doc = "Bit 3 - One cycle mode enable"]
+    #[inline(always)]
+    pub fn ocmen(&self) -> OCMEN_R {
+        OCMEN_R::new(((self.bits >> 3) & 1) != 0)
+    }
     #[doc = "Bit 7 - Period buffer enable"]
     #[inline(always)]
     pub fn prben(&self) -> PRBEN_R {
@@ -373,6 +431,12 @@ impl W {
     #[must_use]
     pub fn ovfs(&mut self) -> OVFS_W<CTRL1_SPEC, 2> {
         OVFS_W::new(self)
+    }
+    #[doc = "Bit 3 - One cycle mode enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ocmen(&mut self) -> OCMEN_W<CTRL1_SPEC, 3> {
+        OCMEN_W::new(self)
     }
     #[doc = "Bit 7 - Period buffer enable"]
     #[inline(always)]

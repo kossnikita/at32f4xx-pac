@@ -1,0 +1,126 @@
+SPI?:
+  CTRL1:
+    CLKPHA:
+      First:  [0, "Data capture starts from the first clock edge"]
+      Second:  [1, "Data capture starts from the second clock edge"]
+    CLKPOL:
+      Low: [0, "Low level"]
+      High: [1, "High level"]
+    MSTEN:
+      Slave: [0, Master is disabled (Slave)"]
+      Master: [1, Master is enabled"]
+    MDIV2_0: [0, 7]
+    SPIEN:
+      _read:
+        Disabled: [0, "SPI is disabled"]
+        Enabled: [1, "SPI is enabled"]
+      _write:
+        Disable: [0, "SPI disable"]
+        Enable: [1, "SPI enable"]
+    LTF:
+      MSB: [0, "Most significant bit first"]
+      LSB: [1, "Least significant bit first"]
+    SWCSIL:
+      Low: [0, "Low level"]
+      High: [1, "High level"]
+    SWCSEN:
+      _read:
+        Disabled: [0, "Software CS is disabled"]
+        Enabled: [1, "Software CS is enabled"]
+      _write:
+        Disable: [0, "Software CS disable"]
+        Enable: [1, "Software CS enable"]
+    ORA:
+      RxTx: [0, "Transmission and reception"]
+      ReceiveOnly: [1, "Receive-only mode"]
+    FBN:
+      bit8: [0, "8-bit data frame"]
+      bit16: [1, "16-bit data frame"]
+    NTC:
+      Normal: [0, "Next transmitted data is the normal value"]
+      CRC: [1, "Next transmitted data is CRC value"]
+    CCEN:
+      _read:
+        Disabled: [0, "RC calculation is disabled"]
+        Enabled: [1, "RC calculation is enabled"]
+      _write:
+        Disable: [0, "RC calculation disable"]
+        Enable: [1, "RC calculation enable"]
+    SLBTD:
+      Receive: [0, "Receive-only mode"]
+      Transmit: [1, "Transmit-only mode"]
+    SLBEN:
+      _read:
+        Disabled: [0, "Single line bidirectional half-duplex is disabled"]
+        Enabled: [1, "Single line bidirectional half-duplex is enabled"]
+      _write:
+        Disable: [0, "Single line bidirectional half-duplex disable"]
+        Enable: [1, "Single line bidirectional half-duplex enable"]
+  CTRL2:
+    DMAREN:
+      _read:
+        Disabled: [0, "DMA receive is disabled"]
+        Enabled: [1, "DMA receive is enabled"]
+      _write:
+        Disable: [0, "DMA receive disable"]
+        Enable: [1, "DMA receive enable"]
+    DMATEN:
+      _read:
+        Disabled: [0, "DMA transmit is disabled"]
+        Enabled: [1, "DMA transmit is enabled"]
+      _write:
+        Disable: [0, "DMA transmit disable"]
+        Enable: [1, "DMA transmit enable"]
+
+    ERRIE:
+      _read:
+        Disabled: [0, "Error interrupt is disabled"]
+        Enabled: [1, "Error interrupt is enabled"]
+      _write:
+        Disable: [0, "Error interrupt disable"]
+        Enable: [1, "Error interrupt enable"]
+    RDBFIE:
+      _read:
+        Disabled: [0, "Receive data buffer full interrupt is disabled"]
+        Enabled: [1, "Receive data buffer full interrupt is enabled"]
+      _write:
+        Disable: [0, "Receive data buffer full interrupt disable"]
+        Enable: [1, "Receive data buffer full interrupt enable"]
+    TDBEIE:
+      _read:
+        Disabled: [0, "Transmit data buffer empty interrupt is disabled"]
+        Enabled: [1, "Transmit data buffer empty interrupt is enabled"]
+      _write:
+        Disable: [0, "Transmit data buffer empty interrupt disable"]
+        Enable: [1, "Transmit data buffer empty interrupt enable"] 
+    MDIV3: [0, 1]
+  STS:
+    RDBF:
+      NotFull: [0, "Transmit data buffer is not full"]
+      Full: [1, "Transmit data buffer is full"]
+    TDBE:
+      NotEmpty: [0, "Transmit data buffer is not empty"]
+      Empty: [1, "Transmit data buffer is empty"]
+    CCERR:
+      _read:
+        NoError: [0, "No CRC error"]
+        Error: [1, "CRC error occurs"]
+      _W0C:
+        Clear: [0, "Clear CRC error"]
+    MMERR:
+      NoError: [0, "No mode error"]
+      Error: [1, "Mode error occurs"]
+    ROERR:
+      NoError: [0, "No overflow error"]
+      Overflow: [1, "Overflow error occurs"]
+    BF:
+      Idle: [0, "SPI is not busy"]
+      Busy: [1, "SPI is busy"]
+  DT:
+    DT: [0, 0xFFFF]
+  CPOLY:
+    CPOLY: [0, 0xFFFF]
+  RCRC:
+    RCRC: [0, 0xFFFF]
+  TCRC:
+    TCRC: [0, 0xFFFF]

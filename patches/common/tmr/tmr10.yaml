@@ -1,0 +1,5 @@
+TMR10:
+  CM1*:
+    C1C:
+      Output: [0, "Output"]
+      Input: [1, "Input, C1IN is mapped on C1IFP1"]

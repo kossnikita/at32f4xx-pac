@@ -70,9 +70,72 @@ where
     }
 }
 #[doc = "Field `OVFDEN` reader - Overflow DMA request enable"]
-pub type OVFDEN_R = crate::BitReader;
+pub type OVFDEN_R = crate::BitReader<OVFDENR_A>;
+#[doc = "Overflow DMA request enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OVFDENR_A {
+    #[doc = "0: Overflow event DMA request is disabled"]
+    Disabled = 0,
+    #[doc = "1: Overflow event DMA request is enabled"]
+    Enabled = 1,
+}
+impl From<OVFDENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: OVFDENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl OVFDEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> OVFDENR_A {
+        match self.bits {
+            false => OVFDENR_A::Disabled,
+            true => OVFDENR_A::Enabled,
+        }
+    }
+    #[doc = "Overflow event DMA request is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == OVFDENR_A::Disabled
+    }
+    #[doc = "Overflow event DMA request is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == OVFDENR_A::Enabled
+    }
+}
+#[doc = "Overflow DMA request enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OVFDENW_AW {
+    #[doc = "0: Overflow event DMA request disable"]
+    Disable = 0,
+    #[doc = "1: Overflow event DMA request enable"]
+    Enable = 1,
+}
+impl From<OVFDENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: OVFDENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `OVFDEN` writer - Overflow DMA request enable"]
-pub type OVFDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVFDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OVFDENW_AW>;
+impl<'a, REG, const O: u8> OVFDEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Overflow event DMA request disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(OVFDENW_AW::Disable)
+    }
+    #[doc = "Overflow event DMA request enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(OVFDENW_AW::Enable)
+    }
+}
 impl R {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]

@@ -1,0 +1,65 @@
+BPR:
+  _array:
+    DT?,DT10:
+      description: Battery powered domain data register %s
+    DT??:
+      description: Battery powered domain data register %s
+  DT*:
+    _modify:
+      DT*:
+        name: DT
+        description: BPR data
+    DT: [0, 0xFFFF]
+  RTCCAL:
+    CALVAL: [0, 0x7F]
+    CALOUT:
+      _read:
+        NoOutput: [0, "No effect"]
+        Output: [1, "Output the RTC clock with a frequency divided by 64 on the TAMPER pin"]
+      _W1S:
+        Output: [1, "Output the RTC clock with a frequency divided by 64 on the TAMPER pin"]
+    OUTEN:
+      _read:
+        Disabled: [0, "Output is disabled"]
+        Enabled: [1, "Output is enabled"]
+      _W1S:
+        Enable: [1, "Output enable"]
+    OUTSEL:
+      _read:
+        RTC: [0, "RTC alarm event output"]
+        Second: [1, "Second event output"]
+      _W1S:
+        Second: [1, "Second event output"]
+  CTRL:
+    TPEN:
+      _read:
+        Disabled: [0, "TAMPER pin is disabled"]
+        Enabled: [1, "TAMPER pin is enabled"]
+      _write:
+        Disable: [0, "TAMPER pin disable"]
+        Enable: [1, "TAMPER pin enable"]
+    TPP:
+      High: [0, "Active high"]
+      Low: [1, "Active low"]
+  CTRLSTS:
+    TPEFCLR:
+      _W1C:
+        Clear: [1, "Clear the tamper event flag"]
+    TPIFCLR:
+      _W1C:
+        Clear: [1, "Tamper interrupt flag clear"]
+    TPIEN:
+      _read:
+        Disabled: [0, "Tamper pin interrupt is disabled"]
+        Enabled: [1, "Tamper pin interrupt is enabled"]
+      _write:
+        Disable: [0, "Tamper pin interrupt disable"]
+        Enable: [1, "Tamper pin interrupt enable"]
+    TPEF:
+      _read:
+        NoEvent: [0, "No tamper event"]
+        Event: [1, "A tamper event is detected"]
+    TPIF:
+      _read:
+        NoEvent: [0, "No tamper event"]
+        Event: [1, "A tamper event is detected"]

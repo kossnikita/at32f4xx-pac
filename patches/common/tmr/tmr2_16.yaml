@@ -1,3 +1,5 @@
 TMR2:
-  C?DT:
+  _include:
+    - 16bit.yaml
+  C%sDT:
     CDT: [0, 0xffff]

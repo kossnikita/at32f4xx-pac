@@ -1,0 +1,11 @@
+IDEN:
+  _array:
+    C?DEN:
+      description: "Channel %s DMA request enable"     
+  C?DEN:
+    _read:
+      Disabled: [0, "Channel DMA request is disabled"]
+      Enabled: [1, "Channel DMA request is enabled"]
+    _write:
+      Disable: [0, "Channel DMA request disable"]
+      Enable: [1, "Channel DMA request enable"]

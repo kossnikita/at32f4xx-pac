@@ -5,7 +5,7 @@ pub type W = crate::W<DMADT_SPEC>;
 #[doc = "Field `DMADT` reader - DMA data register"]
 pub type DMADT_R = crate::FieldReader<u16>;
 #[doc = "Field `DMADT` writer - DMA data register"]
-pub type DMADT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type DMADT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - DMA data register"]
     #[inline(always)]

@@ -1,151 +1,21 @@
+# TMR1/TMR8/TMR20
 TMR1:
   _include:
-    - 16bit.yaml
-  C*DT:
-    C*DT: [0, 0xffff]
-  CTRL1:
-    OWCDIR:
-      Up: [0, "Up"]
-      Down: [1, "Down"]
-    TWCMSEL:
-      OneWay: [0, "One-way counting mode, depending on the OWCDIR bit"]
-      Mode1: [1, "Two-way counting mode1, count up and down alternately, the CxIF bit is set only when the counter counts down"]
-      Mode2: [2, "Two-way counting mode2, count up and down alternately, the CxIF bit is set only when the counter counts up"]
-      Mode3: [3, "Two-way counting mode3, count up and down alternately, the CxIF bit is set when the counter counts up/down"]
+    - break.yaml
+    - hall.yaml
   CTRL2:
     _array:
       C?IOS:
         description: "Channel %s idle output state"
       C?CIOS:
         description: "Channel %s complementary idle output state"
-    CBCTRL:
-      _read:
-        Disabled: [0, "CxEN, CxCEN and CxOCTRL bits are not buffered"]
-        Enabled: [1, "CxEN, CxCEN and CxOCTRL bits are buffered"]
-      _write:
-        Disable: [0, "CxEN, CxCEN and CxOCTRL bits buffer disable"]
-        Enable: [1, "CxEN, CxCEN and CxOCTRL bits buffer enable"]
-    CCFS:
-      Hall: [0, "Control bits are updated by setting the HALL bit"]
-      TRGIN: [1, "Control bits are updated by setting the HALL bit or a rising edge on TRGIN"]
-    DRS:
-      CaptureCompare: [0, "Capture/compare event"]
-      Overflow: [1, "Overflow event"]
-    C1INSEL:
-      CH1: [0, "CH1 pin is connected to C1IRAW input"]
-      XOR: [1, "The XOR result of CH1, CH2 and CH3 pins is connected to C1IRAW input"]
     C?IOS:
       Low: [0, "After dead-time state is low"]
       High: [1, "After dead-time state is high"]
     C?CIOS:
       Low: [0, "After dead-time state is low"]
       High: [1, "After dead-time state is high"]
-  STCTRL:
-    SMSEL:
-      Disabled: [0, "Slave mode is disabled"]
-      EncoderA: [1, "Encoder mode A"]
-      EncoderB: [2, "Encoder mode B"]
-      EncoderC: [3, "Encoder mode C"]
-      Reset: [4, "Reset mode - Rising edge of the TRGIN input reinitializes the counter"]
-      Suspend: [5, "Suspend mode - The counter starts counting when the TRGIN is high"]
-      Trigger: [6, "Trigger mode - A trigger event is generated at the rising edge of the TRGIN input"]
-      External: [7, "External clock mode A - Rising edge of the TRGIN input clocks the counter"]
-    STIS:
-      IS0: [0, "Internal selection 0"]
-      IS1: [1, "Internal selection 1"]
-      IS2: [2, "Internal selection 2"]
-      IS3: [3, "Internal selection 3"]
-      C1INC: [4, "C1IRAW input detector"]
-      C1IF1: [5,  "Filtered input 1"]
-      C1IF2: [6,  "Filtered input 2"]
-      EXT: [7, "External input"]
-    STS:
-      _read:
-        Disabled: [0, "Subordinate TMR synchronization is disabled"]
-        Enabled: [1, "Subordinate TMR synchronization is disabled"]
-      _write:
-        Disable: [0, "Subordinate TMR synchronization disable"]
-        Enable: [1, "Subordinate TMR synchronization enable"]
-    ESF:
-      NoFilter: [0, "No filter, sampling is done at f_DTS"]
-      N2: [1, "f_sampling = f_DTS, N=2"]
-      N4: [2, "f_sampling = f_DTS, N=4"]
-      N8: [3, "f_sampling = f_DTS, N=8"]
-      div2N6: [4, "f_sampling = f_DTS/2, N=6"]
-      div2N8: [5, "f_sampling = f_DTS/2, N=8"]
-      div4N6: [6, "f_sampling = f_DTS/4, N=6"]
-      div4N8: [7, "f_sampling = f_DTS/4, N=8"]
-      div8N6: [8, "f_sampling = f_DTS/8, N=6"]
-      div8N8: [9, "f_sampling = f_DTS/8, N=8"]
-      div16N5: [10, "f_sampling = f_DTS/16, N=5"]
-      div16N6: [11, "f_sampling = f_DTS/16, N=6"]
-      div16N8: [12, "f_sampling = f_DTS/16, N=8"]
-      div32N5: [13, "f_sampling = f_DTS/32, N=5"]
-      div32N6: [14, "f_sampling = f_DTS/32, N=6"]
-      div32N8: [15, "f_sampling = f_DTS/32, N=8"]
-    ESDIV:
-      Normal: [0, "Normal"]
-      Div2: [1, "Divided by 2"]
-      Div4: [2, "Divided by 4"]
-      Div8: [3, "Divided by 8"]
-    ECMBEN:
-      _read:
-        Disabled: [0, "External clock mode B is disabled"]
-        Enabled: [1, "External clock mode B is disabled"]
-      _write:
-        Disable: [0, "External clock mode B disable"]
-        Enable: [1, "External clock mode B enable"]
-    ESP:
-      High: [0, "High or rising edge"]
-      Low: [1, "Low or falling edge"]
   IDEN:
-    _array:
-      C?IEN:
-        description: "Channel %s interrupt enable"
-      C?DEN:
-        description: "Channel %s DMA request enable"
-    C?IEN:
-      _read:
-        Disabled: [0, "Channel interrupt is disabled"]
-        Enabled: [1, "Channel interrupt is enabled"]
-      _write:
-        Disable: [0, "Channel interrupt disable"]
-        Enable: [1, "Channel interrupt enable"]
-    HALLIEN:
-      _read:
-        Disabled: [0, "HALL interrupt is disabled"]
-        Enabled: [1, "HALL interrupt is enabled"]
-      _write:
-        Disable: [0, "HALL interrupt disable"]
-        Enable: [1, "HALL interrupt enable"]
-    TIEN:
-      _read:
-        Disabled: [0, "Trigger interrupt is disabled"]
-        Enabled: [1, "Trigger interrupt is enabled"]
-      _write:
-        Disable: [0, "Trigger interrupt disable"]
-        Enable: [1, "Trigger interrupt enable"]
-    BRKIE:
-      _read:
-        Disabled: [0, "Break interrupt is disabled"]
-        Enabled: [1, "Break interrupt is enabled"]
-      _write:
-        Disable: [0, "Break interrupt disable"]
-        Enable: [1, "Break interrupt enable"]
-    OVFDEN:
-      _read:
-        Disabled: [0, "Overflow event DMA request is disabled"]
-        Enabled: [1, "Overflow event DMA request is enabled"]
-      _write:
-        Disable: [0, "Overflow event DMA request disable"]
-        Enable: [1, "Overflow event DMA request enable"]
-    C?DEN:
-      _read:
-        Disabled: [0, "Channel DMA request is disabled"]
-        Enabled: [1, "Channel DMA request is enabled"]
-      _write:
-        Disable: [0, "Channel DMA request disable"]
-        Enable: [1, "Channel DMA request enable"]
     HALLDE:
       _read:
         Disabled: [0, "HALL DMA request is disabled"]
@@ -160,72 +30,11 @@ TMR1:
       _write:
         Disable: [0, "Trigger DMA request disable"]
         Enable: [1, "Trigger DMA request enable"]
-  ISTS:
-    _array:
-      C?IF:
-        description: "Channel %s interrupt flag"
-      C?RF:
-        description: "Channel %s recapture flag"
-
-    HALLIF:
-      _read:
-        NoEvent: [0, "No hall event occurs"]
-        HallEvent: [1, "Hall event is detected"]
-      _W0C:
-        Clear: [0, "Hall event flag clear"]
-    TRGIF:
-      _read:
-        NoEvent: [0, "No trigger event occurs"]
-        TriggerEvent: [1, "Trigger event is generated"]
-      _W0C:
-        Clear: [0, "Trigger interrupt flag clear"]
-    BRKIF:
-      _read:
-        Inactive: [0, "Inactive level"]
-        Active: [1, "Active level"]
-      _W0C:
-        Clear: [0, "Break interrupt flag clear"]
-
   _modify:
     SWEVT:
       access: write-only
-  SWEVT:
-    _array:
-      C?SWTR:
-        description: "Channel %s event triggered by software"
-    C?SWTR:
-      _W1S:
-        Event: [1, "Generate a channel event"]
-    HALLSWTR:
-      _W1S:
-        Event: [1, "Generate a HALL event"]
-    TRGSWTR:
-      _W1S:
-        Event: [1, "Generate a trigger event"]
-    BRKSWTR:
-      _W1S:
-        Event: [1, "Generate a break event"]
   CM?_OUTPUT:
-    _array:
-      C?OIEN:
-        description: Channel %s output immediately enable
-      C?OBEN:
-        description: Channel %s output buffer enable
-      C?OCTRL:
-        description: Channel %s output control
-      C?OSEN:
-        description: Channel %s output switch enable
-    C?OIEN:
-      Compare: [0, "Need to compare the CVAL with CxDT before generating an output"]
-      Immediately: [1, "No need to compare the CVAL and CxDT. An output is generated immediately when a trigger event occurs."]
-    C?OBEN:
-      _read:
-        Disabled: [0, "Channel output buffer is disabled"]
-        Enabled: [1, "Channel output buffer is enabled"]
-      _write:
-        Disable: [0, "Channel output buffer disable"]
-        Enable: [1, "Channel output buffer enable"]
-    C?OCTRL:
+    C%sOCTRL:
       Disconnected: [0, "Disconnected. CxORAW is disconnected from CxOUT"]
       High: [1, "CxORAW is high when TMRx_CVAL=TMRx_CxDT"]
       Low: [2, "CxORAW is low when TMRx_CVAL=TMRx_CxDT"]
@@ -234,20 +43,8 @@ TMR1:
       ForceHigh: [5, "CxORAW is forced high"]
       PWM_A: [6, "PWM mode A"]
       PWM_B: [7, "PWM mode B"]
-    C?OSEN:
-      _read:
-        Disabled: [0, "CxORAW is not affected by EXT input"]
-        Enabled: [1, "Once a high level is detect on EXT input, clear CxORAW"]
-      _write:
-        Disable: [0, "CxORAW is not affected by EXT input"]
-        Enable: [1, "Once a high level is detect on EXT input, clear CxORAW"]
   CM?_INPUT:
-    C?IDIV:
-      Every: [0, "No divider. An input capture is generated at each active edge."]
-      Div2: [1, "An input compare is generated every 2 active edges"]
-      Div4: [2, "An input compare is generated every 4 active edges"]
-      Div8: [3, "An input compare is generated every 8 active edges"]
-    C?DF:
+    C%sDF:
       NoFilter: [0, "No filter, sampling is done at f_DTS"]
       N2: [1, "f_sampling = f_DTS, N=2"]
       N4: [2, "f_sampling = f_DTS, N=4"]
@@ -266,83 +63,12 @@ TMR1:
       div32N8: [15, "f_sampling = f_DTS/32, N=8"]
   CCTRL:
     _array:
-      C?EN:
-        description: "Channel %s enable"
-      C?P:
-        description: "Channel %s polarity"
       C?CEN:
         description: "Channel %s complementary enable"
-      C?CP:
-        description: "Channel %s complementary polarity"
-    C?EN:
-      _read:
-        Disabled: [0, "Channel is disabled"]
-        Enabled: [1, "Channel is enabled"]
-      _write:
-        Disable: [0, "Channel disable"]
-        Enable: [1, "Channel enable"]
-    C?P:
-      High: [0, "Output active high or Input active rising edge"]
-      Low: [1, "Output active low or Input active falling edge"]
     C?CEN:
       _read:
         _derivedFrom: C1ENR
       _write:
         _derivedFrom: C1ENW
-    C?CP:
-      _derivedFrom: C1P
-
-  BRK:
-    DTC: [0, 0xff]
-    WPC:
-      NoProtect: [0, "Write protection is OFF"]
-      Level3: [1, "Write protection level 3, and the following bits are write protected"]
-      Level2: [2, "Write protection level 2. The following bits and all bits in level 3 are write protected"]
-      Level1: [3, "Write protection level 1. The following bits and all bits in level 2 are write protected"]
-    FCSODIS:
-      _read:
-        Disabled: [0, "CxOUT/CxCOUT outputs are disabled"]
-        Enabled: [1, "CxOUT/CxCOUT outputs are enabled"]
-      _write:
-        Disable: [0, "CxOUT/CxCOUT outputs disable"]
-        Enable: [1, "CxOUT/CxCOUT outputs enable"]    
-    FCSOEN:
-      _read:
-        Disabled: [0, "CxOUT/CxCOUT outputs are disabled"]
-        Enabled: [1, "CxOUT/CxCOUT outputs are enabled"]
-      _write:
-        Disable: [0, "CxOUT/CxCOUT outputs disable"]
-        Enable: [1, "CxOUT/CxCOUT outputs enable"]
-    BRKEN:
-      _read:
-        Disabled: [0, "Break input is disabled"]
-        Enabled: [1, "Break input is enabled"]
-      _write:
-        Disable: [0, "Break input disable"]
-        Enable: [1, "Break input enable"]
-    BRKV:
-      Low: [0, "Break input is active low"]
-      High: [1, "Break input is active high"]
-    AOEN:
-      _read:
-        Disabled: [0, "Automatic output is disabled"]
-        Enabled: [1, "Automatic output is enabled"]
-      _write:
-        Disable: [0, "Automatic output disable"]
-        Enable: [1, "Automatic output enable"]
-    OEN:
-      _read:
-        Disabled: [0, "Output is disabled"]
-        Enabled: [1, "Output is enabled"]
-      _write:
-        Disable: [0, "Output disable"]
-        Enable: [1, "Output enable"]      
-  DMACTRL:
-    ADDR: [0, 0x1F]
-    DTB: [0, 0x1F]
-  DMADT:
-    DMADT: [0, 0xFFFF]
-  DIV:
-    DIV: [0, 0xffff]
   RPR:
     RPR: [0, 0xff]

@@ -13,15 +13,27 @@ ACC:
       HSITRIM:
         name: HICKTRIM
 
+_copy:
+  TMR13:
+    from: ../svd/at32f435.svd:TMR10
+
 _include:
   - common/crm/common.yaml
   - common/crm/pllhextdiv.yaml
   - common/ertc/common.yaml
   - common/flash/common.yaml
+  - common/gpio/gpio-v2.yaml
+  - common/adc/common.yaml
+  - common/exint/common.yaml
+  - common/dma/common.yaml
   - common/can/common.yaml
   - common/crc/common.yaml
   - common/crc/poly.yaml
+  - common/usart/common.yaml
+  - common/spi/common.yaml
   - common/tmr/common.yaml
+  - common/tmr/tmr2_16.yaml
+  - common/tmr/tmr16.yaml
   - common/wwdt/common.yaml
   - common/wdt/with_win.yaml
   - common/acc/common.yaml

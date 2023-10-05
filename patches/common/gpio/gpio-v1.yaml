@@ -1,4 +1,6 @@
 GPIO?:
+  _include:
+    - common.yaml
   CFG?R:
     _array:
       IOMC*: {}
@@ -28,39 +30,4 @@ GPIO?:
         PullUp: [1, "Pull-up"]
       _write:
         Low: [0, "Set output to logic low"]
-        High: [1, "Set output to logic high"]   
-  _modify:
-    SCR:
-      access: write-only
-    CLR:
-      access: write-only
-  SCR:
-    _array:
-      IOSB*: {}
-      IOCB*: {}
-    IOSB*:
-      _W1S:
-        Set: [1, "Set the corresponding ODT bit"]
-    IOCB*:
-      _W1C:
-        Clear: [1, "Clear the corresponding ODT bit"]
-  CLR:
-    _array:
-      IOCB*: {}
-    IOCB*:
-      _W1C:
-        Clear: [1, "Clear the corresponding ODT bit"]
-  WPR:
-    _array:
-      WPEN*: {}
-    WPEN*:
-      _read:
-        NotProtected: [0, "Port is not write protected"]
-        Protected: [1, "Port is write protected"]
-      _write:
-        NoProtect: [0, "No effect"]
-        Protect: [1, "Write protect"]
-    WPSEQ:
-      Clear: [0, "Clear"]
-      Set: [1, "Set"]
-      
+        High: [1, "Set output to logic high"]

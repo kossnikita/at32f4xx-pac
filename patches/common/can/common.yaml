@@ -98,7 +98,7 @@ CAN?:
       FFB?:
         _array:
           FFDB*: {}
-        FFDB*: [0,0xFFFFFFFF]
+        FFDB*: [0,1]
   MCTRL:
     FZEN:
       _read:

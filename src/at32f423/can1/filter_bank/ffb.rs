@@ -374,7 +374,7 @@ impl W {
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
-    pub fn bits(&mut self, bits: u32) -> &mut Self {
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
         self
     }

@@ -1,0 +1,66 @@
+EXINT:
+  INTEN:
+    _array:
+      INTEN?,INTEN1[0-7]:
+        description: "Interrupt enable or disable on line %s"
+    INTEN*:
+      _read:
+        Disabled: [0, "Interrupt request is disabled"]
+        Enabled: [1, "Interrupt request is enabled"]
+      _write:
+        Disable: [0, "Interrupt request disable"]
+        Enable: [1, "Interrupt request enable"]
+  EVTEN:
+    _array:
+      EVTEN?,EVTEN1[0-7]:
+        description: "Event enable or disable on line %s"
+    EVTEN*:
+      _read:
+        Disabled: [0, "Event request is disabled"]
+        Enabled: [1, "Event request is enabled"]
+      _write:
+        Disable: [0, "Event request disable"]
+        Enable: [1, "Event request enable"]
+  POLCFG1:
+    _array:
+      RP?,RP1[0-7]:
+        description: "Rising polarity configuration bit on line %s"
+    RP*:
+      _read:
+        Disabled: [0, "Rising trigger is disabled"]
+        Enabled: [1, "Rising trigger is enabled"]
+      _write:
+        Disable: [0, "Rising trigger disable"]
+        Enable: [1, "Rising trigger enable"]
+  POLCFG2:
+    _array:
+      FP?,FP1[0-7]:
+        description: "Falling polarity configuration bit on line %s"
+    FP*:
+      _read:
+        Disabled: [0, "Falling polarity is disabled"]
+        Enabled: [1, "Falling polarity is enabled"]
+      _write:
+        Disable: [0, "Falling polarity disable"]
+        Enable: [1, "Falling polarity enable"]
+  SWTRG:
+    _array:
+      SWT?,SWT1[0-7]:
+        description: "Software trigger on line %s"
+    SWT*:
+      _read:
+        NoTrigger: [0, "Default value"]
+        Triggered: [1, "Software trigger generated"]
+      _W1S:
+        Trigger: [1, "Generate trigger"]
+  INTSTS:
+    _array:
+      LINE?,LINE1[0-7]:
+        description: "Line %s status bit"
+    LINE*:
+      _read:
+        NoInterrupt: [0, "No interrupt occurred"]
+        Interrupt: [1, "Interrupt occurred"]
+      _W1C:
+        Clear: [1, "Clear status flag"]    
+

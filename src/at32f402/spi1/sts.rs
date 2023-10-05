@@ -3,23 +3,317 @@ pub type R = crate::R<STS_SPEC>;
 #[doc = "Register `STS` writer"]
 pub type W = crate::W<STS_SPEC>;
 #[doc = "Field `RDBF` reader - Receive data buffer full"]
-pub type RDBF_R = crate::BitReader;
+pub type RDBF_R = crate::BitReader<RDBF_A>;
+#[doc = "Receive data buffer full\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RDBF_A {
+    #[doc = "0: Transmit data buffer is not full"]
+    NotFull = 0,
+    #[doc = "1: Transmit data buffer is full"]
+    Full = 1,
+}
+impl From<RDBF_A> for bool {
+    #[inline(always)]
+    fn from(variant: RDBF_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl RDBF_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> RDBF_A {
+        match self.bits {
+            false => RDBF_A::NotFull,
+            true => RDBF_A::Full,
+        }
+    }
+    #[doc = "Transmit data buffer is not full"]
+    #[inline(always)]
+    pub fn is_not_full(&self) -> bool {
+        *self == RDBF_A::NotFull
+    }
+    #[doc = "Transmit data buffer is full"]
+    #[inline(always)]
+    pub fn is_full(&self) -> bool {
+        *self == RDBF_A::Full
+    }
+}
 #[doc = "Field `TDBE` reader - Transmit data buffer empty"]
-pub type TDBE_R = crate::BitReader;
+pub type TDBE_R = crate::BitReader<TDBE_A>;
+#[doc = "Transmit data buffer empty\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TDBE_A {
+    #[doc = "0: Transmit data buffer is not empty"]
+    NotEmpty = 0,
+    #[doc = "1: Transmit data buffer is empty"]
+    Empty = 1,
+}
+impl From<TDBE_A> for bool {
+    #[inline(always)]
+    fn from(variant: TDBE_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl TDBE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TDBE_A {
+        match self.bits {
+            false => TDBE_A::NotEmpty,
+            true => TDBE_A::Empty,
+        }
+    }
+    #[doc = "Transmit data buffer is not empty"]
+    #[inline(always)]
+    pub fn is_not_empty(&self) -> bool {
+        *self == TDBE_A::NotEmpty
+    }
+    #[doc = "Transmit data buffer is empty"]
+    #[inline(always)]
+    pub fn is_empty(&self) -> bool {
+        *self == TDBE_A::Empty
+    }
+}
 #[doc = "Field `ACS` reader - Audio channel state"]
-pub type ACS_R = crate::BitReader;
+pub type ACS_R = crate::BitReader<ACS_A>;
+#[doc = "Audio channel state\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ACS_A {
+    #[doc = "0: Left channel"]
+    Left = 0,
+    #[doc = "1: Right channel"]
+    Right = 1,
+}
+impl From<ACS_A> for bool {
+    #[inline(always)]
+    fn from(variant: ACS_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl ACS_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ACS_A {
+        match self.bits {
+            false => ACS_A::Left,
+            true => ACS_A::Right,
+        }
+    }
+    #[doc = "Left channel"]
+    #[inline(always)]
+    pub fn is_left(&self) -> bool {
+        *self == ACS_A::Left
+    }
+    #[doc = "Right channel"]
+    #[inline(always)]
+    pub fn is_right(&self) -> bool {
+        *self == ACS_A::Right
+    }
+}
 #[doc = "Field `TUERR` reader - Transmitter underload error"]
-pub type TUERR_R = crate::BitReader;
+pub type TUERR_R = crate::BitReader<TUERR_A>;
+#[doc = "Transmitter underload error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TUERR_A {
+    #[doc = "0: No underload error"]
+    NoError = 0,
+    #[doc = "1: Underload error occurs"]
+    Underload = 1,
+}
+impl From<TUERR_A> for bool {
+    #[inline(always)]
+    fn from(variant: TUERR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl TUERR_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TUERR_A {
+        match self.bits {
+            false => TUERR_A::NoError,
+            true => TUERR_A::Underload,
+        }
+    }
+    #[doc = "No underload error"]
+    #[inline(always)]
+    pub fn is_no_error(&self) -> bool {
+        *self == TUERR_A::NoError
+    }
+    #[doc = "Underload error occurs"]
+    #[inline(always)]
+    pub fn is_underload(&self) -> bool {
+        *self == TUERR_A::Underload
+    }
+}
 #[doc = "Field `CCERR` reader - CRC calculation error"]
-pub type CCERR_R = crate::BitReader;
+pub type CCERR_R = crate::BitReader<CCERRR_A>;
+#[doc = "CRC calculation error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CCERRR_A {
+    #[doc = "0: No CRC error"]
+    NoError = 0,
+    #[doc = "1: CRC error occurs"]
+    Error = 1,
+}
+impl From<CCERRR_A> for bool {
+    #[inline(always)]
+    fn from(variant: CCERRR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl CCERR_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CCERRR_A {
+        match self.bits {
+            false => CCERRR_A::NoError,
+            true => CCERRR_A::Error,
+        }
+    }
+    #[doc = "No CRC error"]
+    #[inline(always)]
+    pub fn is_no_error(&self) -> bool {
+        *self == CCERRR_A::NoError
+    }
+    #[doc = "CRC error occurs"]
+    #[inline(always)]
+    pub fn is_error(&self) -> bool {
+        *self == CCERRR_A::Error
+    }
+}
+#[doc = "CRC calculation error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CCERRW_AW {
+    #[doc = "0: Clear CRC error"]
+    Clear = 0,
+}
+impl From<CCERRW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: CCERRW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `CCERR` writer - CRC calculation error"]
-pub type CCERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CCERR_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, CCERRW_AW>;
+impl<'a, REG, const O: u8> CCERR_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Clear CRC error"]
+    #[inline(always)]
+    pub fn clear(self) -> &'a mut crate::W<REG> {
+        self.variant(CCERRW_AW::Clear)
+    }
+}
 #[doc = "Field `MMERR` reader - Master mode error"]
-pub type MMERR_R = crate::BitReader;
+pub type MMERR_R = crate::BitReader<MMERR_A>;
+#[doc = "Master mode error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MMERR_A {
+    #[doc = "0: No mode error"]
+    NoError = 0,
+    #[doc = "1: Mode error occurs"]
+    Error = 1,
+}
+impl From<MMERR_A> for bool {
+    #[inline(always)]
+    fn from(variant: MMERR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MMERR_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MMERR_A {
+        match self.bits {
+            false => MMERR_A::NoError,
+            true => MMERR_A::Error,
+        }
+    }
+    #[doc = "No mode error"]
+    #[inline(always)]
+    pub fn is_no_error(&self) -> bool {
+        *self == MMERR_A::NoError
+    }
+    #[doc = "Mode error occurs"]
+    #[inline(always)]
+    pub fn is_error(&self) -> bool {
+        *self == MMERR_A::Error
+    }
+}
 #[doc = "Field `ROERR` reader - Receiver overflow error"]
-pub type ROERR_R = crate::BitReader;
+pub type ROERR_R = crate::BitReader<ROERR_A>;
+#[doc = "Receiver overflow error\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ROERR_A {
+    #[doc = "0: No overflow error"]
+    NoError = 0,
+    #[doc = "1: Overflow error occurs"]
+    Overflow = 1,
+}
+impl From<ROERR_A> for bool {
+    #[inline(always)]
+    fn from(variant: ROERR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl ROERR_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ROERR_A {
+        match self.bits {
+            false => ROERR_A::NoError,
+            true => ROERR_A::Overflow,
+        }
+    }
+    #[doc = "No overflow error"]
+    #[inline(always)]
+    pub fn is_no_error(&self) -> bool {
+        *self == ROERR_A::NoError
+    }
+    #[doc = "Overflow error occurs"]
+    #[inline(always)]
+    pub fn is_overflow(&self) -> bool {
+        *self == ROERR_A::Overflow
+    }
+}
 #[doc = "Field `BF` reader - Busy flag"]
-pub type BF_R = crate::BitReader;
+pub type BF_R = crate::BitReader<BF_A>;
+#[doc = "Busy flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum BF_A {
+    #[doc = "0: SPI is not busy"]
+    Idle = 0,
+    #[doc = "1: SPI is busy"]
+    Busy = 1,
+}
+impl From<BF_A> for bool {
+    #[inline(always)]
+    fn from(variant: BF_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl BF_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> BF_A {
+        match self.bits {
+            false => BF_A::Idle,
+            true => BF_A::Busy,
+        }
+    }
+    #[doc = "SPI is not busy"]
+    #[inline(always)]
+    pub fn is_idle(&self) -> bool {
+        *self == BF_A::Idle
+    }
+    #[doc = "SPI is busy"]
+    #[inline(always)]
+    pub fn is_busy(&self) -> bool {
+        *self == BF_A::Busy
+    }
+}
 #[doc = "Field `CSPAS` reader - CS pulse abnormal setting fiag"]
 pub type CSPAS_R = crate::BitReader;
 #[doc = "Field `CSPAS` writer - CS pulse abnormal setting fiag"]
@@ -100,7 +394,7 @@ impl crate::RegisterSpec for STS_SPEC {
 impl crate::Readable for STS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts::W`](W) writer structure"]
 impl crate::Writable for STS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x10;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STS to value 0x02"]

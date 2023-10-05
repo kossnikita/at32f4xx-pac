@@ -5,7 +5,7 @@ pub type W = crate::W<CVAL_SPEC>;
 #[doc = "Field `CVAL` reader - Counter value"]
 pub type CVAL_R = crate::FieldReader<u16>;
 #[doc = "Field `CVAL` writer - Counter value"]
-pub type CVAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CVAL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Counter value"]
     #[inline(always)]

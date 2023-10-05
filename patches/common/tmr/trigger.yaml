@@ -1,0 +1,19 @@
+IDEN:
+  TIEN:
+    _read:
+      Disabled: [0, "Trigger interrupt is disabled"]
+      Enabled: [1, "Trigger interrupt is enabled"]
+    _write:
+      Disable: [0, "Trigger interrupt disable"]
+      Enable: [1, "Trigger interrupt enable"] 
+ISTS: 
+  TRGIF:
+    _read:
+      NoEvent: [0, "No trigger event occurs"]
+      TriggerEvent: [1, "Trigger event is generated"]
+    _W0C:
+      Clear: [0, "Trigger interrupt flag clear"]  
+SWEVT:
+  TRGSWTR:
+    _W1S:
+      Event: [1, "Generate a trigger event"]

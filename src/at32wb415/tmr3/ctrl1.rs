@@ -243,13 +243,143 @@ where
     }
 }
 #[doc = "Field `OWCDIR` reader - One-way count direction"]
-pub type OWCDIR_R = crate::BitReader;
+pub type OWCDIR_R = crate::BitReader<OWCDIR_A>;
+#[doc = "One-way count direction\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OWCDIR_A {
+    #[doc = "0: Up"]
+    Up = 0,
+    #[doc = "1: Down"]
+    Down = 1,
+}
+impl From<OWCDIR_A> for bool {
+    #[inline(always)]
+    fn from(variant: OWCDIR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl OWCDIR_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> OWCDIR_A {
+        match self.bits {
+            false => OWCDIR_A::Up,
+            true => OWCDIR_A::Down,
+        }
+    }
+    #[doc = "Up"]
+    #[inline(always)]
+    pub fn is_up(&self) -> bool {
+        *self == OWCDIR_A::Up
+    }
+    #[doc = "Down"]
+    #[inline(always)]
+    pub fn is_down(&self) -> bool {
+        *self == OWCDIR_A::Down
+    }
+}
 #[doc = "Field `OWCDIR` writer - One-way count direction"]
-pub type OWCDIR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OWCDIR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OWCDIR_A>;
+impl<'a, REG, const O: u8> OWCDIR_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Up"]
+    #[inline(always)]
+    pub fn up(self) -> &'a mut crate::W<REG> {
+        self.variant(OWCDIR_A::Up)
+    }
+    #[doc = "Down"]
+    #[inline(always)]
+    pub fn down(self) -> &'a mut crate::W<REG> {
+        self.variant(OWCDIR_A::Down)
+    }
+}
 #[doc = "Field `TWCMSEL` reader - Two-way count mode selection"]
-pub type TWCMSEL_R = crate::FieldReader;
+pub type TWCMSEL_R = crate::FieldReader<TWCMSEL_A>;
+#[doc = "Two-way count mode selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum TWCMSEL_A {
+    #[doc = "0: One-way counting mode, depending on the OWCDIR bit"]
+    OneWay = 0,
+    #[doc = "1: Two-way counting mode1, count up and down alternately, the CxIF bit is set only when the counter counts down"]
+    Mode1 = 1,
+    #[doc = "2: Two-way counting mode2, count up and down alternately, the CxIF bit is set only when the counter counts up"]
+    Mode2 = 2,
+    #[doc = "3: Two-way counting mode3, count up and down alternately, the CxIF bit is set when the counter counts up/down"]
+    Mode3 = 3,
+}
+impl From<TWCMSEL_A> for u8 {
+    #[inline(always)]
+    fn from(variant: TWCMSEL_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for TWCMSEL_A {
+    type Ux = u8;
+}
+impl TWCMSEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TWCMSEL_A {
+        match self.bits {
+            0 => TWCMSEL_A::OneWay,
+            1 => TWCMSEL_A::Mode1,
+            2 => TWCMSEL_A::Mode2,
+            3 => TWCMSEL_A::Mode3,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "One-way counting mode, depending on the OWCDIR bit"]
+    #[inline(always)]
+    pub fn is_one_way(&self) -> bool {
+        *self == TWCMSEL_A::OneWay
+    }
+    #[doc = "Two-way counting mode1, count up and down alternately, the CxIF bit is set only when the counter counts down"]
+    #[inline(always)]
+    pub fn is_mode1(&self) -> bool {
+        *self == TWCMSEL_A::Mode1
+    }
+    #[doc = "Two-way counting mode2, count up and down alternately, the CxIF bit is set only when the counter counts up"]
+    #[inline(always)]
+    pub fn is_mode2(&self) -> bool {
+        *self == TWCMSEL_A::Mode2
+    }
+    #[doc = "Two-way counting mode3, count up and down alternately, the CxIF bit is set when the counter counts up/down"]
+    #[inline(always)]
+    pub fn is_mode3(&self) -> bool {
+        *self == TWCMSEL_A::Mode3
+    }
+}
 #[doc = "Field `TWCMSEL` writer - Two-way count mode selection"]
-pub type TWCMSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TWCMSEL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, TWCMSEL_A>;
+impl<'a, REG, const O: u8> TWCMSEL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "One-way counting mode, depending on the OWCDIR bit"]
+    #[inline(always)]
+    pub fn one_way(self) -> &'a mut crate::W<REG> {
+        self.variant(TWCMSEL_A::OneWay)
+    }
+    #[doc = "Two-way counting mode1, count up and down alternately, the CxIF bit is set only when the counter counts down"]
+    #[inline(always)]
+    pub fn mode1(self) -> &'a mut crate::W<REG> {
+        self.variant(TWCMSEL_A::Mode1)
+    }
+    #[doc = "Two-way counting mode2, count up and down alternately, the CxIF bit is set only when the counter counts up"]
+    #[inline(always)]
+    pub fn mode2(self) -> &'a mut crate::W<REG> {
+        self.variant(TWCMSEL_A::Mode2)
+    }
+    #[doc = "Two-way counting mode3, count up and down alternately, the CxIF bit is set when the counter counts up/down"]
+    #[inline(always)]
+    pub fn mode3(self) -> &'a mut crate::W<REG> {
+        self.variant(TWCMSEL_A::Mode3)
+    }
+}
 #[doc = "Field `PRBEN` reader - Period buffer enable"]
 pub type PRBEN_R = crate::BitReader<PRBENR_A>;
 #[doc = "Period buffer enable\n\nValue on reset: 0"]

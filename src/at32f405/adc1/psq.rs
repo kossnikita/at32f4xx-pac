@@ -2,46 +2,40 @@
 pub type R = crate::R<PSQ_SPEC>;
 #[doc = "Register `PSQ` writer"]
 pub type W = crate::W<PSQ_SPEC>;
-#[doc = "Field `PSN1` reader - Number of 1st conversion in Preempted sequence"]
-pub type PSN1_R = crate::FieldReader;
-#[doc = "Field `PSN1` writer - Number of 1st conversion in Preempted sequence"]
-pub type PSN1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
-#[doc = "Field `PSN2` reader - Number of 2nd conversion in Preempted sequence"]
-pub type PSN2_R = crate::FieldReader;
-#[doc = "Field `PSN2` writer - Number of 2nd conversion in Preempted sequence"]
-pub type PSN2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
-#[doc = "Field `PSN3` reader - Number of 3rd conversion in Preempted sequence"]
-pub type PSN3_R = crate::FieldReader;
-#[doc = "Field `PSN3` writer - Number of 3rd conversion in Preempted sequence"]
-pub type PSN3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
-#[doc = "Field `PSN4` reader - Number of 4th conversion in Preempted sequence"]
-pub type PSN4_R = crate::FieldReader;
-#[doc = "Field `PSN4` writer - Number of 4th conversion in Preempted sequence"]
-pub type PSN4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+#[doc = "Field `PSN[1-4]` reader - Number of %s conversion in preempted sequence"]
+pub type PSN_R = crate::FieldReader;
+#[doc = "Field `PSN[1-4]` writer - Number of %s conversion in preempted sequence"]
+pub type PSN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `PCLEN` reader - Preempted conversion sequence length"]
 pub type PCLEN_R = crate::FieldReader;
 #[doc = "Field `PCLEN` writer - Preempted conversion sequence length"]
-pub type PCLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PCLEN_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
 impl R {
-    #[doc = "Bits 0:4 - Number of 1st conversion in Preempted sequence"]
+    #[doc = "Number of [1-4]
+conversion in preempted sequence"]
     #[inline(always)]
-    pub fn psn1(&self) -> PSN1_R {
-        PSN1_R::new((self.bits & 0x1f) as u8)
+    pub unsafe fn psn(&self, n: u8) -> PSN_R {
+        PSN_R::new(((self.bits >> ((n - 1) * 5)) & 0x1f) as u8)
     }
-    #[doc = "Bits 5:9 - Number of 2nd conversion in Preempted sequence"]
+    #[doc = "Bits 0:4 - Number of 1 conversion in preempted sequence"]
     #[inline(always)]
-    pub fn psn2(&self) -> PSN2_R {
-        PSN2_R::new(((self.bits >> 5) & 0x1f) as u8)
+    pub fn psn1(&self) -> PSN_R {
+        PSN_R::new((self.bits & 0x1f) as u8)
     }
-    #[doc = "Bits 10:14 - Number of 3rd conversion in Preempted sequence"]
+    #[doc = "Bits 5:9 - Number of 2 conversion in preempted sequence"]
     #[inline(always)]
-    pub fn psn3(&self) -> PSN3_R {
-        PSN3_R::new(((self.bits >> 10) & 0x1f) as u8)
+    pub fn psn2(&self) -> PSN_R {
+        PSN_R::new(((self.bits >> 5) & 0x1f) as u8)
     }
-    #[doc = "Bits 15:19 - Number of 4th conversion in Preempted sequence"]
+    #[doc = "Bits 10:14 - Number of 3 conversion in preempted sequence"]
     #[inline(always)]
-    pub fn psn4(&self) -> PSN4_R {
-        PSN4_R::new(((self.bits >> 15) & 0x1f) as u8)
+    pub fn psn3(&self) -> PSN_R {
+        PSN_R::new(((self.bits >> 10) & 0x1f) as u8)
+    }
+    #[doc = "Bits 15:19 - Number of 4 conversion in preempted sequence"]
+    #[inline(always)]
+    pub fn psn4(&self) -> PSN_R {
+        PSN_R::new(((self.bits >> 15) & 0x1f) as u8)
     }
     #[doc = "Bits 20:21 - Preempted conversion sequence length"]
     #[inline(always)]
@@ -50,29 +44,36 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - Number of 1st conversion in Preempted sequence"]
+    #[doc = "Number of [1-4]
+conversion in preempted sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn psn1(&mut self) -> PSN1_W<PSQ_SPEC, 0> {
-        PSN1_W::new(self)
+    pub unsafe fn psn<const O: u8>(&mut self) -> PSN_W<PSQ_SPEC, O> {
+        PSN_W::new(self)
     }
-    #[doc = "Bits 5:9 - Number of 2nd conversion in Preempted sequence"]
+    #[doc = "Bits 0:4 - Number of 1 conversion in preempted sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn psn2(&mut self) -> PSN2_W<PSQ_SPEC, 5> {
-        PSN2_W::new(self)
+    pub fn psn1(&mut self) -> PSN_W<PSQ_SPEC, 0> {
+        PSN_W::new(self)
     }
-    #[doc = "Bits 10:14 - Number of 3rd conversion in Preempted sequence"]
+    #[doc = "Bits 5:9 - Number of 2 conversion in preempted sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn psn3(&mut self) -> PSN3_W<PSQ_SPEC, 10> {
-        PSN3_W::new(self)
+    pub fn psn2(&mut self) -> PSN_W<PSQ_SPEC, 5> {
+        PSN_W::new(self)
     }
-    #[doc = "Bits 15:19 - Number of 4th conversion in Preempted sequence"]
+    #[doc = "Bits 10:14 - Number of 3 conversion in preempted sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn psn4(&mut self) -> PSN4_W<PSQ_SPEC, 15> {
-        PSN4_W::new(self)
+    pub fn psn3(&mut self) -> PSN_W<PSQ_SPEC, 10> {
+        PSN_W::new(self)
+    }
+    #[doc = "Bits 15:19 - Number of 4 conversion in preempted sequence"]
+    #[inline(always)]
+    #[must_use]
+    pub fn psn4(&mut self) -> PSN_W<PSQ_SPEC, 15> {
+        PSN_W::new(self)
     }
     #[doc = "Bits 20:21 - Preempted conversion sequence length"]
     #[inline(always)]

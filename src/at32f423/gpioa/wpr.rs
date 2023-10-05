@@ -2,154 +2,211 @@
 pub type R = crate::R<WPR_SPEC>;
 #[doc = "Register `WPR` writer"]
 pub type W = crate::W<WPR_SPEC>;
-#[doc = "Field `WPEN0` reader - Write protect enable 0"]
-pub type WPEN0_R = crate::BitReader;
-#[doc = "Field `WPEN0` writer - Write protect enable 0"]
-pub type WPEN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN1` reader - Write protect enable 1"]
-pub type WPEN1_R = crate::BitReader;
-#[doc = "Field `WPEN1` writer - Write protect enable 1"]
-pub type WPEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN2` reader - Write protect enable 2"]
-pub type WPEN2_R = crate::BitReader;
-#[doc = "Field `WPEN2` writer - Write protect enable 2"]
-pub type WPEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN3` reader - Write protect enable 3"]
-pub type WPEN3_R = crate::BitReader;
-#[doc = "Field `WPEN3` writer - Write protect enable 3"]
-pub type WPEN3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN4` reader - Write protect enable 4"]
-pub type WPEN4_R = crate::BitReader;
-#[doc = "Field `WPEN4` writer - Write protect enable 4"]
-pub type WPEN4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN5` reader - Write protect enable 5"]
-pub type WPEN5_R = crate::BitReader;
-#[doc = "Field `WPEN5` writer - Write protect enable 5"]
-pub type WPEN5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN6` reader - Write protect enable 6"]
-pub type WPEN6_R = crate::BitReader;
-#[doc = "Field `WPEN6` writer - Write protect enable 6"]
-pub type WPEN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN7` reader - Write protect enable 7"]
-pub type WPEN7_R = crate::BitReader;
-#[doc = "Field `WPEN7` writer - Write protect enable 7"]
-pub type WPEN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN8` reader - Write protect enable 8"]
-pub type WPEN8_R = crate::BitReader;
-#[doc = "Field `WPEN8` writer - Write protect enable 8"]
-pub type WPEN8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN9` reader - Write protect enable 9"]
-pub type WPEN9_R = crate::BitReader;
-#[doc = "Field `WPEN9` writer - Write protect enable 9"]
-pub type WPEN9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN10` reader - Write protect enable 10"]
-pub type WPEN10_R = crate::BitReader;
-#[doc = "Field `WPEN10` writer - Write protect enable 10"]
-pub type WPEN10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN11` reader - Write protect enable 11"]
-pub type WPEN11_R = crate::BitReader;
-#[doc = "Field `WPEN11` writer - Write protect enable 11"]
-pub type WPEN11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN12` reader - Write protect enable 12"]
-pub type WPEN12_R = crate::BitReader;
-#[doc = "Field `WPEN12` writer - Write protect enable 12"]
-pub type WPEN12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN13` reader - Write protect enable 13"]
-pub type WPEN13_R = crate::BitReader;
-#[doc = "Field `WPEN13` writer - Write protect enable 13"]
-pub type WPEN13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN14` reader - Write protect enable 14"]
-pub type WPEN14_R = crate::BitReader;
-#[doc = "Field `WPEN14` writer - Write protect enable 14"]
-pub type WPEN14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `WPEN15` reader - Write protect enable 15"]
-pub type WPEN15_R = crate::BitReader;
-#[doc = "Field `WPEN15` writer - Write protect enable 15"]
-pub type WPEN15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `WPEN[0-15]` reader - Write protect enable %s"]
+pub type WPEN_R = crate::BitReader<WPEN0R_A>;
+#[doc = "Write protect enable %s\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum WPEN0R_A {
+    #[doc = "0: Port is not write protected"]
+    NotProtected = 0,
+    #[doc = "1: Port is write protected"]
+    Protected = 1,
+}
+impl From<WPEN0R_A> for bool {
+    #[inline(always)]
+    fn from(variant: WPEN0R_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl WPEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> WPEN0R_A {
+        match self.bits {
+            false => WPEN0R_A::NotProtected,
+            true => WPEN0R_A::Protected,
+        }
+    }
+    #[doc = "Port is not write protected"]
+    #[inline(always)]
+    pub fn is_not_protected(&self) -> bool {
+        *self == WPEN0R_A::NotProtected
+    }
+    #[doc = "Port is write protected"]
+    #[inline(always)]
+    pub fn is_protected(&self) -> bool {
+        *self == WPEN0R_A::Protected
+    }
+}
+#[doc = "Write protect enable %s\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum WPEN0W_AW {
+    #[doc = "0: No effect"]
+    NoProtect = 0,
+    #[doc = "1: Write protect"]
+    Protect = 1,
+}
+impl From<WPEN0W_AW> for bool {
+    #[inline(always)]
+    fn from(variant: WPEN0W_AW) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `WPEN[0-15]` writer - Write protect enable %s"]
+pub type WPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, WPEN0W_AW>;
+impl<'a, REG, const O: u8> WPEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No effect"]
+    #[inline(always)]
+    pub fn no_protect(self) -> &'a mut crate::W<REG> {
+        self.variant(WPEN0W_AW::NoProtect)
+    }
+    #[doc = "Write protect"]
+    #[inline(always)]
+    pub fn protect(self) -> &'a mut crate::W<REG> {
+        self.variant(WPEN0W_AW::Protect)
+    }
+}
 #[doc = "Field `WPSEQ` reader - Write protect sequence"]
-pub type WPSEQ_R = crate::BitReader;
+pub type WPSEQ_R = crate::BitReader<WPSEQ_A>;
+#[doc = "Write protect sequence\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum WPSEQ_A {
+    #[doc = "0: Clear"]
+    Clear = 0,
+    #[doc = "1: Set"]
+    Set = 1,
+}
+impl From<WPSEQ_A> for bool {
+    #[inline(always)]
+    fn from(variant: WPSEQ_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl WPSEQ_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> WPSEQ_A {
+        match self.bits {
+            false => WPSEQ_A::Clear,
+            true => WPSEQ_A::Set,
+        }
+    }
+    #[doc = "Clear"]
+    #[inline(always)]
+    pub fn is_clear(&self) -> bool {
+        *self == WPSEQ_A::Clear
+    }
+    #[doc = "Set"]
+    #[inline(always)]
+    pub fn is_set(&self) -> bool {
+        *self == WPSEQ_A::Set
+    }
+}
 #[doc = "Field `WPSEQ` writer - Write protect sequence"]
-pub type WPSEQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WPSEQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, WPSEQ_A>;
+impl<'a, REG, const O: u8> WPSEQ_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Clear"]
+    #[inline(always)]
+    pub fn clear(self) -> &'a mut crate::W<REG> {
+        self.variant(WPSEQ_A::Clear)
+    }
+    #[doc = "Set"]
+    #[inline(always)]
+    pub fn set(self) -> &'a mut crate::W<REG> {
+        self.variant(WPSEQ_A::Set)
+    }
+}
 impl R {
+    #[doc = "Write protect enable [0-15]"]
+    #[inline(always)]
+    pub unsafe fn wpen(&self, n: u8) -> WPEN_R {
+        WPEN_R::new(((self.bits >> n) & 1) != 0)
+    }
     #[doc = "Bit 0 - Write protect enable 0"]
     #[inline(always)]
-    pub fn wpen0(&self) -> WPEN0_R {
-        WPEN0_R::new((self.bits & 1) != 0)
+    pub fn wpen0(&self) -> WPEN_R {
+        WPEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Write protect enable 1"]
     #[inline(always)]
-    pub fn wpen1(&self) -> WPEN1_R {
-        WPEN1_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn wpen1(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Write protect enable 2"]
     #[inline(always)]
-    pub fn wpen2(&self) -> WPEN2_R {
-        WPEN2_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn wpen2(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Write protect enable 3"]
     #[inline(always)]
-    pub fn wpen3(&self) -> WPEN3_R {
-        WPEN3_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn wpen3(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Write protect enable 4"]
     #[inline(always)]
-    pub fn wpen4(&self) -> WPEN4_R {
-        WPEN4_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn wpen4(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - Write protect enable 5"]
     #[inline(always)]
-    pub fn wpen5(&self) -> WPEN5_R {
-        WPEN5_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn wpen5(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - Write protect enable 6"]
     #[inline(always)]
-    pub fn wpen6(&self) -> WPEN6_R {
-        WPEN6_R::new(((self.bits >> 6) & 1) != 0)
+    pub fn wpen6(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - Write protect enable 7"]
     #[inline(always)]
-    pub fn wpen7(&self) -> WPEN7_R {
-        WPEN7_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn wpen7(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - Write protect enable 8"]
     #[inline(always)]
-    pub fn wpen8(&self) -> WPEN8_R {
-        WPEN8_R::new(((self.bits >> 8) & 1) != 0)
+    pub fn wpen8(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 9 - Write protect enable 9"]
     #[inline(always)]
-    pub fn wpen9(&self) -> WPEN9_R {
-        WPEN9_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn wpen9(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 10 - Write protect enable 10"]
     #[inline(always)]
-    pub fn wpen10(&self) -> WPEN10_R {
-        WPEN10_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn wpen10(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - Write protect enable 11"]
     #[inline(always)]
-    pub fn wpen11(&self) -> WPEN11_R {
-        WPEN11_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn wpen11(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - Write protect enable 12"]
     #[inline(always)]
-    pub fn wpen12(&self) -> WPEN12_R {
-        WPEN12_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn wpen12(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 13 - Write protect enable 13"]
     #[inline(always)]
-    pub fn wpen13(&self) -> WPEN13_R {
-        WPEN13_R::new(((self.bits >> 13) & 1) != 0)
+    pub fn wpen13(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 14 - Write protect enable 14"]
     #[inline(always)]
-    pub fn wpen14(&self) -> WPEN14_R {
-        WPEN14_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn wpen14(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - Write protect enable 15"]
     #[inline(always)]
-    pub fn wpen15(&self) -> WPEN15_R {
-        WPEN15_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn wpen15(&self) -> WPEN_R {
+        WPEN_R::new(((self.bits >> 15) & 1) != 0)
     }
     #[doc = "Bit 16 - Write protect sequence"]
     #[inline(always)]
@@ -158,101 +215,107 @@ impl R {
     }
 }
 impl W {
+    #[doc = "Write protect enable [0-15]"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn wpen<const O: u8>(&mut self) -> WPEN_W<WPR_SPEC, O> {
+        WPEN_W::new(self)
+    }
     #[doc = "Bit 0 - Write protect enable 0"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen0(&mut self) -> WPEN0_W<WPR_SPEC, 0> {
-        WPEN0_W::new(self)
+    pub fn wpen0(&mut self) -> WPEN_W<WPR_SPEC, 0> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 1 - Write protect enable 1"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen1(&mut self) -> WPEN1_W<WPR_SPEC, 1> {
-        WPEN1_W::new(self)
+    pub fn wpen1(&mut self) -> WPEN_W<WPR_SPEC, 1> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 2 - Write protect enable 2"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen2(&mut self) -> WPEN2_W<WPR_SPEC, 2> {
-        WPEN2_W::new(self)
+    pub fn wpen2(&mut self) -> WPEN_W<WPR_SPEC, 2> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 3 - Write protect enable 3"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen3(&mut self) -> WPEN3_W<WPR_SPEC, 3> {
-        WPEN3_W::new(self)
+    pub fn wpen3(&mut self) -> WPEN_W<WPR_SPEC, 3> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 4 - Write protect enable 4"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen4(&mut self) -> WPEN4_W<WPR_SPEC, 4> {
-        WPEN4_W::new(self)
+    pub fn wpen4(&mut self) -> WPEN_W<WPR_SPEC, 4> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 5 - Write protect enable 5"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen5(&mut self) -> WPEN5_W<WPR_SPEC, 5> {
-        WPEN5_W::new(self)
+    pub fn wpen5(&mut self) -> WPEN_W<WPR_SPEC, 5> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 6 - Write protect enable 6"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen6(&mut self) -> WPEN6_W<WPR_SPEC, 6> {
-        WPEN6_W::new(self)
+    pub fn wpen6(&mut self) -> WPEN_W<WPR_SPEC, 6> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 7 - Write protect enable 7"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen7(&mut self) -> WPEN7_W<WPR_SPEC, 7> {
-        WPEN7_W::new(self)
+    pub fn wpen7(&mut self) -> WPEN_W<WPR_SPEC, 7> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 8 - Write protect enable 8"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen8(&mut self) -> WPEN8_W<WPR_SPEC, 8> {
-        WPEN8_W::new(self)
+    pub fn wpen8(&mut self) -> WPEN_W<WPR_SPEC, 8> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 9 - Write protect enable 9"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen9(&mut self) -> WPEN9_W<WPR_SPEC, 9> {
-        WPEN9_W::new(self)
+    pub fn wpen9(&mut self) -> WPEN_W<WPR_SPEC, 9> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 10 - Write protect enable 10"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen10(&mut self) -> WPEN10_W<WPR_SPEC, 10> {
-        WPEN10_W::new(self)
+    pub fn wpen10(&mut self) -> WPEN_W<WPR_SPEC, 10> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 11 - Write protect enable 11"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen11(&mut self) -> WPEN11_W<WPR_SPEC, 11> {
-        WPEN11_W::new(self)
+    pub fn wpen11(&mut self) -> WPEN_W<WPR_SPEC, 11> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 12 - Write protect enable 12"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen12(&mut self) -> WPEN12_W<WPR_SPEC, 12> {
-        WPEN12_W::new(self)
+    pub fn wpen12(&mut self) -> WPEN_W<WPR_SPEC, 12> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 13 - Write protect enable 13"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen13(&mut self) -> WPEN13_W<WPR_SPEC, 13> {
-        WPEN13_W::new(self)
+    pub fn wpen13(&mut self) -> WPEN_W<WPR_SPEC, 13> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 14 - Write protect enable 14"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen14(&mut self) -> WPEN14_W<WPR_SPEC, 14> {
-        WPEN14_W::new(self)
+    pub fn wpen14(&mut self) -> WPEN_W<WPR_SPEC, 14> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 15 - Write protect enable 15"]
     #[inline(always)]
     #[must_use]
-    pub fn wpen15(&mut self) -> WPEN15_W<WPR_SPEC, 15> {
-        WPEN15_W::new(self)
+    pub fn wpen15(&mut self) -> WPEN_W<WPR_SPEC, 15> {
+        WPEN_W::new(self)
     }
     #[doc = "Bit 16 - Write protect sequence"]
     #[inline(always)]

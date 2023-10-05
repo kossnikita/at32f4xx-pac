@@ -63,55 +63,55 @@ where
     }
 }
 #[doc = "Field `CIF[1-4]` reader - Channel %s interrupt flag"]
-pub type CIF_R = crate::BitReader<CIFR_A>;
+pub type CIF_R = crate::BitReader<C1IFR_A>;
 #[doc = "Channel %s interrupt flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CIFR_A {
+pub enum C1IFR_A {
     #[doc = "0: No compare event occurs"]
     NoEvent = 0,
     #[doc = "1: Capture/Compare event is generated"]
     CaptureCompare = 1,
 }
-impl From<CIFR_A> for bool {
+impl From<C1IFR_A> for bool {
     #[inline(always)]
-    fn from(variant: CIFR_A) -> Self {
+    fn from(variant: C1IFR_A) -> Self {
         variant as u8 != 0
     }
 }
 impl CIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CIFR_A {
+    pub fn variant(&self) -> C1IFR_A {
         match self.bits {
-            false => CIFR_A::NoEvent,
-            true => CIFR_A::CaptureCompare,
+            false => C1IFR_A::NoEvent,
+            true => C1IFR_A::CaptureCompare,
         }
     }
     #[doc = "No compare event occurs"]
     #[inline(always)]
     pub fn is_no_event(&self) -> bool {
-        *self == CIFR_A::NoEvent
+        *self == C1IFR_A::NoEvent
     }
     #[doc = "Capture/Compare event is generated"]
     #[inline(always)]
     pub fn is_capture_compare(&self) -> bool {
-        *self == CIFR_A::CaptureCompare
+        *self == C1IFR_A::CaptureCompare
     }
 }
 #[doc = "Channel %s interrupt flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CIFW_AW {
+pub enum C1IFW_AW {
     #[doc = "0: Interrupt flag clear"]
     Clear = 0,
 }
-impl From<CIFW_AW> for bool {
+impl From<C1IFW_AW> for bool {
     #[inline(always)]
-    fn from(variant: CIFW_AW) -> Self {
+    fn from(variant: C1IFW_AW) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CIF[1-4]` writer - Channel %s interrupt flag"]
-pub type CIF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, CIFW_AW>;
+pub type CIF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, C1IFW_AW>;
 impl<'a, REG, const O: u8> CIF_W<'a, REG, O>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -119,7 +119,7 @@ where
     #[doc = "Interrupt flag clear"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(CIFW_AW::Clear)
+        self.variant(C1IFW_AW::Clear)
     }
 }
 #[doc = "Field `HALLIF` reader - HALL interrupt flag"]
@@ -303,55 +303,55 @@ where
     }
 }
 #[doc = "Field `CRF[1-4]` reader - Channel %s recapture flag"]
-pub type CRF_R = crate::BitReader<CRFR_A>;
+pub type CRF_R = crate::BitReader<C1RFR_A>;
 #[doc = "Channel %s recapture flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CRFR_A {
+pub enum C1RFR_A {
     #[doc = "0: No capture is detected"]
     NoEvent = 0,
     #[doc = "1: Capture is detected"]
     Capture = 1,
 }
-impl From<CRFR_A> for bool {
+impl From<C1RFR_A> for bool {
     #[inline(always)]
-    fn from(variant: CRFR_A) -> Self {
+    fn from(variant: C1RFR_A) -> Self {
         variant as u8 != 0
     }
 }
 impl CRF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CRFR_A {
+    pub fn variant(&self) -> C1RFR_A {
         match self.bits {
-            false => CRFR_A::NoEvent,
-            true => CRFR_A::Capture,
+            false => C1RFR_A::NoEvent,
+            true => C1RFR_A::Capture,
         }
     }
     #[doc = "No capture is detected"]
     #[inline(always)]
     pub fn is_no_event(&self) -> bool {
-        *self == CRFR_A::NoEvent
+        *self == C1RFR_A::NoEvent
     }
     #[doc = "Capture is detected"]
     #[inline(always)]
     pub fn is_capture(&self) -> bool {
-        *self == CRFR_A::Capture
+        *self == C1RFR_A::Capture
     }
 }
 #[doc = "Channel %s recapture flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CRFW_AW {
+pub enum C1RFW_AW {
     #[doc = "0: Recapture flag clear"]
     Clear = 0,
 }
-impl From<CRFW_AW> for bool {
+impl From<C1RFW_AW> for bool {
     #[inline(always)]
-    fn from(variant: CRFW_AW) -> Self {
+    fn from(variant: C1RFW_AW) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CRF[1-4]` writer - Channel %s recapture flag"]
-pub type CRF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, CRFW_AW>;
+pub type CRF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, C1RFW_AW>;
 impl<'a, REG, const O: u8> CRF_W<'a, REG, O>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -359,7 +359,7 @@ where
     #[doc = "Recapture flag clear"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(CRFW_AW::Clear)
+        self.variant(C1RFW_AW::Clear)
     }
 }
 impl R {

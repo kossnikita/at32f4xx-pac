@@ -5,7 +5,7 @@ pub type W = crate::W<CDT_SPEC>;
 #[doc = "Field `CDT` reader - Channel data value"]
 pub type CDT_R = crate::FieldReader<u16>;
 #[doc = "Field `CDT` writer - Channel data value"]
-pub type CDT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CDT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Channel data value"]
     #[inline(always)]

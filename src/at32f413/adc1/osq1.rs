@@ -2,46 +2,39 @@
 pub type R = crate::R<OSQ1_SPEC>;
 #[doc = "Register `OSQ1` writer"]
 pub type W = crate::W<OSQ1_SPEC>;
-#[doc = "Field `OSN13` reader - Number of 13th conversion in ordinary sequence"]
-pub type OSN13_R = crate::FieldReader;
-#[doc = "Field `OSN13` writer - Number of 13th conversion in ordinary sequence"]
-pub type OSN13_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
-#[doc = "Field `OSN14` reader - Number of 14th conversion in ordinary sequence"]
-pub type OSN14_R = crate::FieldReader;
-#[doc = "Field `OSN14` writer - Number of 14th conversion in ordinary sequence"]
-pub type OSN14_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
-#[doc = "Field `OSN15` reader - Number of 15th conversion in ordinary sequence"]
-pub type OSN15_R = crate::FieldReader;
-#[doc = "Field `OSN15` writer - Number of 15th conversion in ordinary sequence"]
-pub type OSN15_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
-#[doc = "Field `OSN16` reader - Number of 16th conversion in ordinary sequence"]
-pub type OSN16_R = crate::FieldReader;
-#[doc = "Field `OSN16` writer - Number of 16th conversion in ordinary sequence"]
-pub type OSN16_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+#[doc = "Field `OSN[13-16]` reader - Number of %sth conversion in ordinary sequence"]
+pub type OSN_R = crate::FieldReader;
+#[doc = "Field `OSN[13-16]` writer - Number of %sth conversion in ordinary sequence"]
+pub type OSN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `OCLEN` reader - Ordinary conversion sequence length"]
 pub type OCLEN_R = crate::FieldReader;
 #[doc = "Field `OCLEN` writer - Ordinary conversion sequence length"]
-pub type OCLEN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type OCLEN_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 impl R {
+    #[doc = "Number of [13-16]th conversion in ordinary sequence"]
+    #[inline(always)]
+    pub unsafe fn osn(&self, n: u8) -> OSN_R {
+        OSN_R::new(((self.bits >> ((n - 13) * 5)) & 0x1f) as u8)
+    }
     #[doc = "Bits 0:4 - Number of 13th conversion in ordinary sequence"]
     #[inline(always)]
-    pub fn osn13(&self) -> OSN13_R {
-        OSN13_R::new((self.bits & 0x1f) as u8)
+    pub fn osn13(&self) -> OSN_R {
+        OSN_R::new((self.bits & 0x1f) as u8)
     }
     #[doc = "Bits 5:9 - Number of 14th conversion in ordinary sequence"]
     #[inline(always)]
-    pub fn osn14(&self) -> OSN14_R {
-        OSN14_R::new(((self.bits >> 5) & 0x1f) as u8)
+    pub fn osn14(&self) -> OSN_R {
+        OSN_R::new(((self.bits >> 5) & 0x1f) as u8)
     }
     #[doc = "Bits 10:14 - Number of 15th conversion in ordinary sequence"]
     #[inline(always)]
-    pub fn osn15(&self) -> OSN15_R {
-        OSN15_R::new(((self.bits >> 10) & 0x1f) as u8)
+    pub fn osn15(&self) -> OSN_R {
+        OSN_R::new(((self.bits >> 10) & 0x1f) as u8)
     }
     #[doc = "Bits 15:19 - Number of 16th conversion in ordinary sequence"]
     #[inline(always)]
-    pub fn osn16(&self) -> OSN16_R {
-        OSN16_R::new(((self.bits >> 15) & 0x1f) as u8)
+    pub fn osn16(&self) -> OSN_R {
+        OSN_R::new(((self.bits >> 15) & 0x1f) as u8)
     }
     #[doc = "Bits 20:23 - Ordinary conversion sequence length"]
     #[inline(always)]
@@ -50,29 +43,35 @@ impl R {
     }
 }
 impl W {
+    #[doc = "Number of [13-16]th conversion in ordinary sequence"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn osn<const O: u8>(&mut self) -> OSN_W<OSQ1_SPEC, O> {
+        OSN_W::new(self)
+    }
     #[doc = "Bits 0:4 - Number of 13th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn13(&mut self) -> OSN13_W<OSQ1_SPEC, 0> {
-        OSN13_W::new(self)
+    pub fn osn13(&mut self) -> OSN_W<OSQ1_SPEC, 0> {
+        OSN_W::new(self)
     }
     #[doc = "Bits 5:9 - Number of 14th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn14(&mut self) -> OSN14_W<OSQ1_SPEC, 5> {
-        OSN14_W::new(self)
+    pub fn osn14(&mut self) -> OSN_W<OSQ1_SPEC, 5> {
+        OSN_W::new(self)
     }
     #[doc = "Bits 10:14 - Number of 15th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn15(&mut self) -> OSN15_W<OSQ1_SPEC, 10> {
-        OSN15_W::new(self)
+    pub fn osn15(&mut self) -> OSN_W<OSQ1_SPEC, 10> {
+        OSN_W::new(self)
     }
     #[doc = "Bits 15:19 - Number of 16th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn16(&mut self) -> OSN16_W<OSQ1_SPEC, 15> {
-        OSN16_W::new(self)
+    pub fn osn16(&mut self) -> OSN_W<OSQ1_SPEC, 15> {
+        OSN_W::new(self)
     }
     #[doc = "Bits 20:23 - Ordinary conversion sequence length"]
     #[inline(always)]

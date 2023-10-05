@@ -3,9 +3,72 @@ pub type R = crate::R<CTRL2_SPEC>;
 #[doc = "Register `CTRL2` writer"]
 pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `CBCTRL` reader - Channel buffer control"]
-pub type CBCTRL_R = crate::BitReader;
+pub type CBCTRL_R = crate::BitReader<CBCTRLR_A>;
+#[doc = "Channel buffer control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CBCTRLR_A {
+    #[doc = "0: CxEN, CxCEN and CxOCTRL bits are not buffered"]
+    Disabled = 0,
+    #[doc = "1: CxEN, CxCEN and CxOCTRL bits are buffered"]
+    Enabled = 1,
+}
+impl From<CBCTRLR_A> for bool {
+    #[inline(always)]
+    fn from(variant: CBCTRLR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl CBCTRL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CBCTRLR_A {
+        match self.bits {
+            false => CBCTRLR_A::Disabled,
+            true => CBCTRLR_A::Enabled,
+        }
+    }
+    #[doc = "CxEN, CxCEN and CxOCTRL bits are not buffered"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == CBCTRLR_A::Disabled
+    }
+    #[doc = "CxEN, CxCEN and CxOCTRL bits are buffered"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == CBCTRLR_A::Enabled
+    }
+}
+#[doc = "Channel buffer control\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CBCTRLW_AW {
+    #[doc = "0: CxEN, CxCEN and CxOCTRL bits buffer disable"]
+    Disable = 0,
+    #[doc = "1: CxEN, CxCEN and CxOCTRL bits buffer enable"]
+    Enable = 1,
+}
+impl From<CBCTRLW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: CBCTRLW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `CBCTRL` writer - Channel buffer control"]
-pub type CBCTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CBCTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CBCTRLW_AW>;
+impl<'a, REG, const O: u8> CBCTRL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "CxEN, CxCEN and CxOCTRL bits buffer disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(CBCTRLW_AW::Disable)
+    }
+    #[doc = "CxEN, CxCEN and CxOCTRL bits buffer enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(CBCTRLW_AW::Enable)
+    }
+}
 #[doc = "Field `CCFS` reader - Channel control bit flash select"]
 pub type CCFS_R = crate::BitReader;
 #[doc = "Field `CCFS` writer - Channel control bit flash select"]

@@ -3,11 +3,108 @@ pub type R = crate::R<CTRL_SPEC>;
 #[doc = "Register `CTRL` writer"]
 pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `HICKEN` reader - High speed internal clock enable"]
-pub type HICKEN_R = crate::BitReader;
+pub type HICKEN_R = crate::BitReader<HICKENR_A>;
+#[doc = "High speed internal clock enable\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HICKENR_A {
+    #[doc = "0: High speed internal clock is disabled"]
+    Disabled = 0,
+    #[doc = "1: High speed internal clock is enabled"]
+    Enabled = 1,
+}
+impl From<HICKENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: HICKENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl HICKEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HICKENR_A {
+        match self.bits {
+            false => HICKENR_A::Disabled,
+            true => HICKENR_A::Enabled,
+        }
+    }
+    #[doc = "High speed internal clock is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == HICKENR_A::Disabled
+    }
+    #[doc = "High speed internal clock is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == HICKENR_A::Enabled
+    }
+}
+#[doc = "High speed internal clock enable\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HICKENW_AW {
+    #[doc = "0: High speed internal clock disable"]
+    Disable = 0,
+    #[doc = "1: High speed internal clock enable"]
+    Enable = 1,
+}
+impl From<HICKENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: HICKENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `HICKEN` writer - High speed internal clock enable"]
-pub type HICKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HICKENW_AW>;
+impl<'a, REG, const O: u8> HICKEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "High speed internal clock disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(HICKENW_AW::Disable)
+    }
+    #[doc = "High speed internal clock enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(HICKENW_AW::Enable)
+    }
+}
 #[doc = "Field `HICKSTBL` reader - High speed internal clock ready flag"]
-pub type HICKSTBL_R = crate::BitReader;
+pub type HICKSTBL_R = crate::BitReader<HICKSTBLR_A>;
+#[doc = "High speed internal clock ready flag\n\nValue on reset: 1"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HICKSTBLR_A {
+    #[doc = "0: Not ready"]
+    NotReady = 0,
+    #[doc = "1: Ready"]
+    Ready = 1,
+}
+impl From<HICKSTBLR_A> for bool {
+    #[inline(always)]
+    fn from(variant: HICKSTBLR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl HICKSTBL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HICKSTBLR_A {
+        match self.bits {
+            false => HICKSTBLR_A::NotReady,
+            true => HICKSTBLR_A::Ready,
+        }
+    }
+    #[doc = "Not ready"]
+    #[inline(always)]
+    pub fn is_not_ready(&self) -> bool {
+        *self == HICKSTBLR_A::NotReady
+    }
+    #[doc = "Ready"]
+    #[inline(always)]
+    pub fn is_ready(&self) -> bool {
+        *self == HICKSTBLR_A::Ready
+    }
+}
 #[doc = "Field `HICKTRIM` reader - High speed internal clock trimming"]
 pub type HICKTRIM_R = crate::FieldReader;
 #[doc = "Field `HICKTRIM` writer - High speed internal clock trimming"]
@@ -15,25 +112,345 @@ pub type HICKTRIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
 #[doc = "Field `HICKCAL` reader - High speed internal clock calibration"]
 pub type HICKCAL_R = crate::FieldReader;
 #[doc = "Field `HEXTEN` reader - High speed exernal crystal enable"]
-pub type HEXTEN_R = crate::BitReader;
+pub type HEXTEN_R = crate::BitReader<HEXTENR_A>;
+#[doc = "High speed exernal crystal enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HEXTENR_A {
+    #[doc = "0: High speed external crystal is disabled"]
+    Disabled = 0,
+    #[doc = "1: High speed external crystal is enabled"]
+    Enabled = 1,
+}
+impl From<HEXTENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: HEXTENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl HEXTEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HEXTENR_A {
+        match self.bits {
+            false => HEXTENR_A::Disabled,
+            true => HEXTENR_A::Enabled,
+        }
+    }
+    #[doc = "High speed external crystal is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == HEXTENR_A::Disabled
+    }
+    #[doc = "High speed external crystal is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == HEXTENR_A::Enabled
+    }
+}
+#[doc = "High speed exernal crystal enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HEXTENW_AW {
+    #[doc = "0: High speed external crystal disable"]
+    Disable = 0,
+    #[doc = "1: High speed external crystal enable"]
+    Enable = 1,
+}
+impl From<HEXTENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: HEXTENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `HEXTEN` writer - High speed exernal crystal enable"]
-pub type HEXTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEXTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HEXTENW_AW>;
+impl<'a, REG, const O: u8> HEXTEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "High speed external crystal disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(HEXTENW_AW::Disable)
+    }
+    #[doc = "High speed external crystal enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(HEXTENW_AW::Enable)
+    }
+}
 #[doc = "Field `HEXTSTBL` reader - High speed exernal crystal ready flag"]
-pub type HEXTSTBL_R = crate::BitReader;
+pub type HEXTSTBL_R = crate::BitReader<HEXTSTBLR_A>;
+#[doc = "High speed exernal crystal ready flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HEXTSTBLR_A {
+    #[doc = "0: Not ready"]
+    NotReady = 0,
+    #[doc = "1: Ready"]
+    Ready = 1,
+}
+impl From<HEXTSTBLR_A> for bool {
+    #[inline(always)]
+    fn from(variant: HEXTSTBLR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl HEXTSTBL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HEXTSTBLR_A {
+        match self.bits {
+            false => HEXTSTBLR_A::NotReady,
+            true => HEXTSTBLR_A::Ready,
+        }
+    }
+    #[doc = "Not ready"]
+    #[inline(always)]
+    pub fn is_not_ready(&self) -> bool {
+        *self == HEXTSTBLR_A::NotReady
+    }
+    #[doc = "Ready"]
+    #[inline(always)]
+    pub fn is_ready(&self) -> bool {
+        *self == HEXTSTBLR_A::Ready
+    }
+}
 #[doc = "Field `HEXTBYPS` reader - High speed exernal crystal bypass"]
-pub type HEXTBYPS_R = crate::BitReader;
+pub type HEXTBYPS_R = crate::BitReader<HEXTBYPSR_A>;
+#[doc = "High speed exernal crystal bypass\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HEXTBYPSR_A {
+    #[doc = "0: High speed external crystal bypass is disabled"]
+    Disabled = 0,
+    #[doc = "1: High speed external crystal bypass is enabled"]
+    Enabled = 1,
+}
+impl From<HEXTBYPSR_A> for bool {
+    #[inline(always)]
+    fn from(variant: HEXTBYPSR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl HEXTBYPS_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HEXTBYPSR_A {
+        match self.bits {
+            false => HEXTBYPSR_A::Disabled,
+            true => HEXTBYPSR_A::Enabled,
+        }
+    }
+    #[doc = "High speed external crystal bypass is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == HEXTBYPSR_A::Disabled
+    }
+    #[doc = "High speed external crystal bypass is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == HEXTBYPSR_A::Enabled
+    }
+}
+#[doc = "High speed exernal crystal bypass\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HEXTBYPSW_AW {
+    #[doc = "0: High speed external crystal bypass disable"]
+    Disable = 0,
+    #[doc = "1: High speed external crystal bypass enable"]
+    Enable = 1,
+}
+impl From<HEXTBYPSW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: HEXTBYPSW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `HEXTBYPS` writer - High speed exernal crystal bypass"]
-pub type HEXTBYPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEXTBYPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HEXTBYPSW_AW>;
+impl<'a, REG, const O: u8> HEXTBYPS_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "High speed external crystal bypass disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(HEXTBYPSW_AW::Disable)
+    }
+    #[doc = "High speed external crystal bypass enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(HEXTBYPSW_AW::Enable)
+    }
+}
 #[doc = "Field `CFDEN` reader - Clock failure detection enable"]
-pub type CFDEN_R = crate::BitReader;
+pub type CFDEN_R = crate::BitReader<CFDENR_A>;
+#[doc = "Clock failure detection enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CFDENR_A {
+    #[doc = "0: Clock failure detector is disabled"]
+    Disabled = 0,
+    #[doc = "1: Clock failure detector is enabled"]
+    Enabled = 1,
+}
+impl From<CFDENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: CFDENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl CFDEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CFDENR_A {
+        match self.bits {
+            false => CFDENR_A::Disabled,
+            true => CFDENR_A::Enabled,
+        }
+    }
+    #[doc = "Clock failure detector is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == CFDENR_A::Disabled
+    }
+    #[doc = "Clock failure detector is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == CFDENR_A::Enabled
+    }
+}
+#[doc = "Clock failure detection enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CFDENW_AW {
+    #[doc = "0: Clock failure detector disable"]
+    Disable = 0,
+    #[doc = "1: Clock failure detector enable"]
+    Enable = 1,
+}
+impl From<CFDENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: CFDENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `CFDEN` writer - Clock failure detection enable"]
-pub type CFDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CFDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CFDENW_AW>;
+impl<'a, REG, const O: u8> CFDEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Clock failure detector disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(CFDENW_AW::Disable)
+    }
+    #[doc = "Clock failure detector enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(CFDENW_AW::Enable)
+    }
+}
 #[doc = "Field `PLLEN` reader - PLL enable"]
-pub type PLLEN_R = crate::BitReader;
+pub type PLLEN_R = crate::BitReader<PLLENR_A>;
+#[doc = "PLL enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PLLENR_A {
+    #[doc = "0: PLL is disabled"]
+    Disabled = 0,
+    #[doc = "1: PLL is enabled"]
+    Enabled = 1,
+}
+impl From<PLLENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: PLLENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl PLLEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PLLENR_A {
+        match self.bits {
+            false => PLLENR_A::Disabled,
+            true => PLLENR_A::Enabled,
+        }
+    }
+    #[doc = "PLL is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == PLLENR_A::Disabled
+    }
+    #[doc = "PLL is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == PLLENR_A::Enabled
+    }
+}
+#[doc = "PLL enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PLLENW_AW {
+    #[doc = "0: PLL disable"]
+    Disable = 0,
+    #[doc = "1: PLL enable"]
+    Enable = 1,
+}
+impl From<PLLENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: PLLENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `PLLEN` writer - PLL enable"]
-pub type PLLEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PLLENW_AW>;
+impl<'a, REG, const O: u8> PLLEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "PLL disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(PLLENW_AW::Disable)
+    }
+    #[doc = "PLL enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(PLLENW_AW::Enable)
+    }
+}
 #[doc = "Field `PLLSTBL` reader - PLL clock ready flag"]
-pub type PLLSTBL_R = crate::BitReader;
+pub type PLLSTBL_R = crate::BitReader<PLLSTBLR_A>;
+#[doc = "PLL clock ready flag\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PLLSTBLR_A {
+    #[doc = "0: Not ready"]
+    NotReady = 0,
+    #[doc = "1: Ready"]
+    Ready = 1,
+}
+impl From<PLLSTBLR_A> for bool {
+    #[inline(always)]
+    fn from(variant: PLLSTBLR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl PLLSTBL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PLLSTBLR_A {
+        match self.bits {
+            false => PLLSTBLR_A::NotReady,
+            true => PLLSTBLR_A::Ready,
+        }
+    }
+    #[doc = "Not ready"]
+    #[inline(always)]
+    pub fn is_not_ready(&self) -> bool {
+        *self == PLLSTBLR_A::NotReady
+    }
+    #[doc = "Ready"]
+    #[inline(always)]
+    pub fn is_ready(&self) -> bool {
+        *self == PLLSTBLR_A::Ready
+    }
+}
 #[doc = "Field `PLLUSTBL` reader - PLLU clock ready flag"]
 pub type PLLUSTBL_R = crate::BitReader;
 impl R {

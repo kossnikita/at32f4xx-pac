@@ -2,23 +2,23 @@
 pub type R = crate::R<AHBRST3_SPEC>;
 #[doc = "Register `AHBRST3` writer"]
 pub type W = crate::W<AHBRST3_SPEC>;
-#[doc = "Field `QSPI1RST` reader - QSPI1 reset"]
-pub type QSPI1RST_R = crate::BitReader;
-#[doc = "Field `QSPI1RST` writer - QSPI1 reset"]
-pub type QSPI1RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `QSPI1` reader - QSPI1 reset"]
+pub type QSPI1_R = crate::BitReader;
+#[doc = "Field `QSPI1` writer - QSPI1 reset"]
+pub type QSPI1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 1 - QSPI1 reset"]
     #[inline(always)]
-    pub fn qspi1rst(&self) -> QSPI1RST_R {
-        QSPI1RST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn qspi1(&self) -> QSPI1_R {
+        QSPI1_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 1 - QSPI1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi1rst(&mut self) -> QSPI1RST_W<AHBRST3_SPEC, 1> {
-        QSPI1RST_W::new(self)
+    pub fn qspi1(&mut self) -> QSPI1_W<AHBRST3_SPEC, 1> {
+        QSPI1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

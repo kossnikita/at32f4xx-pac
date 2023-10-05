@@ -2,23 +2,23 @@
 pub type R = crate::R<AHBEN3_SPEC>;
 #[doc = "Register `AHBEN3` writer"]
 pub type W = crate::W<AHBEN3_SPEC>;
-#[doc = "Field `XMCEN` reader - XMC clock enable"]
-pub type XMCEN_R = crate::BitReader;
-#[doc = "Field `XMCEN` writer - XMC clock enable"]
-pub type XMCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `XMC` reader - XMC clock enable"]
+pub type XMC_R = crate::BitReader;
+#[doc = "Field `XMC` writer - XMC clock enable"]
+pub type XMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - XMC clock enable"]
     #[inline(always)]
-    pub fn xmcen(&self) -> XMCEN_R {
-        XMCEN_R::new((self.bits & 1) != 0)
+    pub fn xmc(&self) -> XMC_R {
+        XMC_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - XMC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn xmcen(&mut self) -> XMCEN_W<AHBEN3_SPEC, 0> {
-        XMCEN_W::new(self)
+    pub fn xmc(&mut self) -> XMC_W<AHBEN3_SPEC, 0> {
+        XMC_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

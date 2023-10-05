@@ -8,10 +8,18 @@ _include:
   - common/crm/pllhextdiv.yaml
   - common/flash/common.yaml
   - common/gpio/gpio-v1.yaml
+  - common/adc/common.yaml
   - common/can/common.yaml
+  - common/exint/common.yaml
+  - common/dma/common.yaml
+  - common/bpr/common.yaml
   - common/crc/common.yaml
   - common/crc/poly.yaml
+  - common/usart/common.yaml
+  - common/spi/common.yaml
   - common/tmr/common.yaml
+  - common/tmr/tmr2_32.yaml
+  - common/tmr/tmr10.yaml
   - common/iomux/common.yaml
   - common/iomux/iomux_gpiof.yaml
   - common/wwdt/common.yaml

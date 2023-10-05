@@ -167,17 +167,17 @@ IOMUX:
       MUX1: [1, "TMR3_GMUX IO signal is connected to TMR3 channel 1"] # duplicate
       MUX2: [2, "CMP output signal is connected to TMR3 channel 1"]
       MUX3: [3, "Either CMP output signal or TMR3_GMUX IO signal is connected to TMR3 channel 1"]
-TMR1:
-  STCTRL:
-    _add:
-      COSSEL:
-        description: Channel output switch selection
-        bitOffset: 3
-        bitWidth: 1
-        access: read-write
-    COSSEL:
-      EXT: [0, "Select EXT as CxORAW switch"]
-      CxORAW_OFF: [1, "Select CxORAW_OFF as CxORAW switch"]
+# TMR1:
+#   STCTRL:
+#     _add:
+#       COSSEL:
+#         description: Channel output switch selection
+#         bitOffset: 3
+#         bitWidth: 1
+#         access: read-write
+#     COSSEL:
+#       EXT: [0, "Select EXT as CxORAW switch"]
+#       CxORAW_OFF: [1, "Select CxORAW_OFF as CxORAW switch"]
 ACC:
   CTRL2:
     _strip:
@@ -197,10 +197,17 @@ _include:
   - common/ertc/common.yaml
   - common/flash/common.yaml
   - common/gpio/gpio-v1.yaml
+  - common/adc/common.yaml
   - common/can/common.yaml
+  - common/exint/common.yaml
+  - common/dma/common.yaml
   - common/crc/common.yaml
   - common/crc/poly.yaml
+  - common/usart/common.yaml
+  - common/spi/common.yaml
   - common/tmr/common.yaml
+  - common/tmr/tmr2_32.yaml
+  - common/tmr/tmr10.yaml
   - common/iomux/common.yaml
   - common/iomux/iomux_gpiof.yaml
   - common/wwdt/common.yaml

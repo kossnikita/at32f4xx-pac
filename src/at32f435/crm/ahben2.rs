@@ -2,53 +2,53 @@
 pub type R = crate::R<AHBEN2_SPEC>;
 #[doc = "Register `AHBEN2` writer"]
 pub type W = crate::W<AHBEN2_SPEC>;
-#[doc = "Field `DVPEN` reader - DVP clock enable"]
-pub type DVPEN_R = crate::BitReader;
-#[doc = "Field `DVPEN` writer - DVP clock enable"]
-pub type DVPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `OTGFS1EN` reader - OTGFS1 clock enable"]
-pub type OTGFS1EN_R = crate::BitReader;
-#[doc = "Field `OTGFS1EN` writer - OTGFS1 clock enable"]
-pub type OTGFS1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `SDIO1EN` reader - SDIO1 clock enable"]
-pub type SDIO1EN_R = crate::BitReader;
-#[doc = "Field `SDIO1EN` writer - SDIO1 clock enable"]
-pub type SDIO1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `DVP` reader - DVP clock enable"]
+pub type DVP_R = crate::BitReader;
+#[doc = "Field `DVP` writer - DVP clock enable"]
+pub type DVP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `OTGFS1` reader - OTGFS1 clock enable"]
+pub type OTGFS1_R = crate::BitReader;
+#[doc = "Field `OTGFS1` writer - OTGFS1 clock enable"]
+pub type OTGFS1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `SDIO1` reader - SDIO1 clock enable"]
+pub type SDIO1_R = crate::BitReader;
+#[doc = "Field `SDIO1` writer - SDIO1 clock enable"]
+pub type SDIO1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - DVP clock enable"]
     #[inline(always)]
-    pub fn dvpen(&self) -> DVPEN_R {
-        DVPEN_R::new((self.bits & 1) != 0)
+    pub fn dvp(&self) -> DVP_R {
+        DVP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 7 - OTGFS1 clock enable"]
     #[inline(always)]
-    pub fn otgfs1en(&self) -> OTGFS1EN_R {
-        OTGFS1EN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn otgfs1(&self) -> OTGFS1_R {
+        OTGFS1_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 15 - SDIO1 clock enable"]
     #[inline(always)]
-    pub fn sdio1en(&self) -> SDIO1EN_R {
-        SDIO1EN_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn sdio1(&self) -> SDIO1_R {
+        SDIO1_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - DVP clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dvpen(&mut self) -> DVPEN_W<AHBEN2_SPEC, 0> {
-        DVPEN_W::new(self)
+    pub fn dvp(&mut self) -> DVP_W<AHBEN2_SPEC, 0> {
+        DVP_W::new(self)
     }
     #[doc = "Bit 7 - OTGFS1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn otgfs1en(&mut self) -> OTGFS1EN_W<AHBEN2_SPEC, 7> {
-        OTGFS1EN_W::new(self)
+    pub fn otgfs1(&mut self) -> OTGFS1_W<AHBEN2_SPEC, 7> {
+        OTGFS1_W::new(self)
     }
     #[doc = "Bit 15 - SDIO1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio1en(&mut self) -> SDIO1EN_W<AHBEN2_SPEC, 15> {
-        SDIO1EN_W::new(self)
+    pub fn sdio1(&mut self) -> SDIO1_W<AHBEN2_SPEC, 15> {
+        SDIO1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

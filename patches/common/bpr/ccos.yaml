@@ -1,0 +1,14 @@
+BPR:
+  RTCCAL:
+    CCOS:
+      _read:
+        Disabled: [0, "Calibration clock output is disabled"]
+        Enabled: [1, "Calibration clock output is enabled"]
+      _W1S:
+        Enable: [1, "Calibration clock output enable"]
+    OUTM:
+      _read:
+        Pulse: [0, "Pulse output"]
+        Toggle: [1, "Toggle output"]
+      _W1S:
+        Toggle: [1, "Toggle output"]

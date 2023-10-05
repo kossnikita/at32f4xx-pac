@@ -62,9 +62,9 @@ where
         self.variant(OVFIFW_AW::Clear)
     }
 }
-#[doc = "Field `C1IF` reader - Channel 1 interrupt flag"]
-pub type C1IF_R = crate::BitReader<C1IFR_A>;
-#[doc = "Channel 1 interrupt flag\n\nValue on reset: 0"]
+#[doc = "Field `CIF[1-1]` reader - Channel %s interrupt flag"]
+pub type CIF_R = crate::BitReader<C1IFR_A>;
+#[doc = "Channel %s interrupt flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum C1IFR_A {
     #[doc = "0: No compare event occurs"]
@@ -78,7 +78,7 @@ impl From<C1IFR_A> for bool {
         variant as u8 != 0
     }
 }
-impl C1IF_R {
+impl CIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> C1IFR_A {
@@ -98,7 +98,7 @@ impl C1IF_R {
         *self == C1IFR_A::CaptureCompare
     }
 }
-#[doc = "Channel 1 interrupt flag\n\nValue on reset: 0"]
+#[doc = "Channel %s interrupt flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum C1IFW_AW {
     #[doc = "0: Interrupt flag clear"]
@@ -110,9 +110,9 @@ impl From<C1IFW_AW> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `C1IF` writer - Channel 1 interrupt flag"]
-pub type C1IF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, C1IFW_AW>;
-impl<'a, REG, const O: u8> C1IF_W<'a, REG, O>
+#[doc = "Field `CIF[1-1]` writer - Channel %s interrupt flag"]
+pub type CIF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, C1IFW_AW>;
+impl<'a, REG, const O: u8> CIF_W<'a, REG, O>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -130,9 +130,9 @@ pub type HALLIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 pub type BRKIF_R = crate::BitReader;
 #[doc = "Field `BRKIF` writer - Brake interrupt flag"]
 pub type BRKIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `C1RF` reader - Channel 1 recapture flag"]
-pub type C1RF_R = crate::BitReader<C1RFR_A>;
-#[doc = "Channel 1 recapture flag\n\nValue on reset: 0"]
+#[doc = "Field `CRF[1-1]` reader - Channel %s recapture flag"]
+pub type CRF_R = crate::BitReader<C1RFR_A>;
+#[doc = "Channel %s recapture flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum C1RFR_A {
     #[doc = "0: No capture is detected"]
@@ -146,7 +146,7 @@ impl From<C1RFR_A> for bool {
         variant as u8 != 0
     }
 }
-impl C1RF_R {
+impl CRF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> C1RFR_A {
@@ -166,7 +166,7 @@ impl C1RF_R {
         *self == C1RFR_A::Capture
     }
 }
-#[doc = "Channel 1 recapture flag\n\nValue on reset: 0"]
+#[doc = "Channel %s recapture flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum C1RFW_AW {
     #[doc = "0: Recapture flag clear"]
@@ -178,9 +178,9 @@ impl From<C1RFW_AW> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `C1RF` writer - Channel 1 recapture flag"]
-pub type C1RF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, C1RFW_AW>;
-impl<'a, REG, const O: u8> C1RF_W<'a, REG, O>
+#[doc = "Field `CRF[1-1]` writer - Channel %s recapture flag"]
+pub type CRF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, C1RFW_AW>;
+impl<'a, REG, const O: u8> CRF_W<'a, REG, O>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -196,10 +196,16 @@ impl R {
     pub fn ovfif(&self) -> OVFIF_R {
         OVFIF_R::new((self.bits & 1) != 0)
     }
+    #[doc = "Channel [1-1]
+interrupt flag"]
+    #[inline(always)]
+    pub unsafe fn cif(&self, n: u8) -> CIF_R {
+        CIF_R::new(((self.bits >> ((n - 1) * 0 + 1)) & 1) != 0)
+    }
     #[doc = "Bit 1 - Channel 1 interrupt flag"]
     #[inline(always)]
-    pub fn c1if(&self) -> C1IF_R {
-        C1IF_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn c1if(&self) -> CIF_R {
+        CIF_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 5 - HALL interrupt flag"]
     #[inline(always)]
@@ -211,10 +217,16 @@ impl R {
     pub fn brkif(&self) -> BRKIF_R {
         BRKIF_R::new(((self.bits >> 7) & 1) != 0)
     }
+    #[doc = "Channel [1-1]
+recapture flag"]
+    #[inline(always)]
+    pub unsafe fn crf(&self, n: u8) -> CRF_R {
+        CRF_R::new(((self.bits >> ((n - 1) * 0 + 9)) & 1) != 0)
+    }
     #[doc = "Bit 9 - Channel 1 recapture flag"]
     #[inline(always)]
-    pub fn c1rf(&self) -> C1RF_R {
-        C1RF_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn c1rf(&self) -> CRF_R {
+        CRF_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
 impl W {
@@ -224,11 +236,18 @@ impl W {
     pub fn ovfif(&mut self) -> OVFIF_W<ISTS_SPEC, 0> {
         OVFIF_W::new(self)
     }
+    #[doc = "Channel [1-1]
+interrupt flag"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn cif<const O: u8>(&mut self) -> CIF_W<ISTS_SPEC, O> {
+        CIF_W::new(self)
+    }
     #[doc = "Bit 1 - Channel 1 interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn c1if(&mut self) -> C1IF_W<ISTS_SPEC, 1> {
-        C1IF_W::new(self)
+    pub fn c1if(&mut self) -> CIF_W<ISTS_SPEC, 1> {
+        CIF_W::new(self)
     }
     #[doc = "Bit 5 - HALL interrupt flag"]
     #[inline(always)]
@@ -242,11 +261,18 @@ impl W {
     pub fn brkif(&mut self) -> BRKIF_W<ISTS_SPEC, 7> {
         BRKIF_W::new(self)
     }
+    #[doc = "Channel [1-1]
+recapture flag"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn crf<const O: u8>(&mut self) -> CRF_W<ISTS_SPEC, O> {
+        CRF_W::new(self)
+    }
     #[doc = "Bit 9 - Channel 1 recapture flag"]
     #[inline(always)]
     #[must_use]
-    pub fn c1rf(&mut self) -> C1RF_W<ISTS_SPEC, 9> {
-        C1RF_W::new(self)
+    pub fn c1rf(&mut self) -> CRF_W<ISTS_SPEC, 9> {
+        CRF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

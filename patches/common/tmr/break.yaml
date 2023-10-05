@@ -1,0 +1,64 @@
+IDEN:
+  BRKIE:
+    _read:
+      Disabled: [0, "Break interrupt is disabled"]
+      Enabled: [1, "Break interrupt is enabled"]
+    _write:
+      Disable: [0, "Break interrupt disable"]
+      Enable: [1, "Break interrupt enable"]
+ISTS: 
+  BRKIF:
+    _read:
+      Inactive: [0, "Inactive level"]
+      Active: [1, "Active level"]
+    _W0C:
+      Clear: [0, "Break interrupt flag clear"]
+SWEVT:
+  BRKSWTR:
+    _W1S:
+      Event: [1, "Generate a break event"]
+BRK:
+  DTC: [0, 0xff]
+  WPC:
+    NoProtect: [0, "Write protection is OFF"]
+    Level3: [1, "Write protection level 3, and the following bits are write protected"]
+    Level2: [2, "Write protection level 2. The following bits and all bits in level 3 are write protected"]
+    Level1: [3, "Write protection level 1. The following bits and all bits in level 2 are write protected"]
+  FCSODIS:
+    _read:
+      Disabled: [0, "CxOUT/CxCOUT outputs are disabled"]
+      Enabled: [1, "CxOUT/CxCOUT outputs are enabled"]
+    _write:
+      Disable: [0, "CxOUT/CxCOUT outputs disable"]
+      Enable: [1, "CxOUT/CxCOUT outputs enable"]    
+  FCSOEN:
+    _read:
+      Disabled: [0, "CxOUT/CxCOUT outputs are disabled"]
+      Enabled: [1, "CxOUT/CxCOUT outputs are enabled"]
+    _write:
+      Disable: [0, "CxOUT/CxCOUT outputs disable"]
+      Enable: [1, "CxOUT/CxCOUT outputs enable"]
+  BRKEN:
+    _read:
+      Disabled: [0, "Break input is disabled"]
+      Enabled: [1, "Break input is enabled"]
+    _write:
+      Disable: [0, "Break input disable"]
+      Enable: [1, "Break input enable"]
+  BRKV:
+    Low: [0, "Break input is active low"]
+    High: [1, "Break input is active high"]
+  AOEN:
+    _read:
+      Disabled: [0, "Automatic output is disabled"]
+      Enabled: [1, "Automatic output is enabled"]
+    _write:
+      Disable: [0, "Automatic output disable"]
+      Enable: [1, "Automatic output enable"]
+  OEN:
+    _read:
+      Disabled: [0, "Output is disabled"]
+      Enabled: [1, "Output is enabled"]
+    _write:
+      Disable: [0, "Output disable"]
+      Enable: [1, "Output enable"]     

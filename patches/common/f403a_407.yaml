@@ -4,10 +4,18 @@ _include:
   - flash/common.yaml
   - gpio/gpio-v1.yaml
   - gpio/hdrv.yaml
+  - adc/common.yaml
   - can/common.yaml
+  - exint/common.yaml
+  - dma/common.yaml
+  - bpr/common.yaml
   - crc/common.yaml
   - crc/poly.yaml
+  - usart/common.yaml
+  - spi/common.yaml
   - tmr/common.yaml
+  - tmr/tmr2_32.yaml
+  - tmr/tmr10.yaml
   - iomux/iomux_gpioe.yaml
   - iomux/common.yaml
   - wwdt/common.yaml

@@ -3,33 +3,411 @@ pub type R = crate::R<CTRL2_SPEC>;
 #[doc = "Register `CTRL2` writer"]
 pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `DMAREN` reader - DMA receive enable"]
-pub type DMAREN_R = crate::BitReader;
+pub type DMAREN_R = crate::BitReader<DMARENR_A>;
+#[doc = "DMA receive enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum DMARENR_A {
+    #[doc = "0: DMA receive is disabled"]
+    Disabled = 0,
+    #[doc = "1: DMA receive is enabled"]
+    Enabled = 1,
+}
+impl From<DMARENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: DMARENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl DMAREN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> DMARENR_A {
+        match self.bits {
+            false => DMARENR_A::Disabled,
+            true => DMARENR_A::Enabled,
+        }
+    }
+    #[doc = "DMA receive is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == DMARENR_A::Disabled
+    }
+    #[doc = "DMA receive is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == DMARENR_A::Enabled
+    }
+}
+#[doc = "DMA receive enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum DMARENW_AW {
+    #[doc = "0: DMA receive disable"]
+    Disable = 0,
+    #[doc = "1: DMA receive enable"]
+    Enable = 1,
+}
+impl From<DMARENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: DMARENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `DMAREN` writer - DMA receive enable"]
-pub type DMAREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMARENW_AW>;
+impl<'a, REG, const O: u8> DMAREN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "DMA receive disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(DMARENW_AW::Disable)
+    }
+    #[doc = "DMA receive enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(DMARENW_AW::Enable)
+    }
+}
 #[doc = "Field `DMATEN` reader - DMA transmit enable"]
-pub type DMATEN_R = crate::BitReader;
+pub type DMATEN_R = crate::BitReader<DMATENR_A>;
+#[doc = "DMA transmit enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum DMATENR_A {
+    #[doc = "0: DMA transmit is disabled"]
+    Disabled = 0,
+    #[doc = "1: DMA transmit is enabled"]
+    Enabled = 1,
+}
+impl From<DMATENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: DMATENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl DMATEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> DMATENR_A {
+        match self.bits {
+            false => DMATENR_A::Disabled,
+            true => DMATENR_A::Enabled,
+        }
+    }
+    #[doc = "DMA transmit is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == DMATENR_A::Disabled
+    }
+    #[doc = "DMA transmit is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == DMATENR_A::Enabled
+    }
+}
+#[doc = "DMA transmit enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum DMATENW_AW {
+    #[doc = "0: DMA transmit disable"]
+    Disable = 0,
+    #[doc = "1: DMA transmit enable"]
+    Enable = 1,
+}
+impl From<DMATENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: DMATENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `DMATEN` writer - DMA transmit enable"]
-pub type DMATEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMATEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMATENW_AW>;
+impl<'a, REG, const O: u8> DMATEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "DMA transmit disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(DMATENW_AW::Disable)
+    }
+    #[doc = "DMA transmit enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(DMATENW_AW::Enable)
+    }
+}
 #[doc = "Field `HWCSOE` reader - Hardware CS output enable"]
-pub type HWCSOE_R = crate::BitReader;
+pub type HWCSOE_R = crate::BitReader<HWCSOER_A>;
+#[doc = "Hardware CS output enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HWCSOER_A {
+    #[doc = "0: Hardware CS output is disabled"]
+    Disabled = 0,
+    #[doc = "1: Hardware CS output is enabled"]
+    Enabled = 1,
+}
+impl From<HWCSOER_A> for bool {
+    #[inline(always)]
+    fn from(variant: HWCSOER_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl HWCSOE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> HWCSOER_A {
+        match self.bits {
+            false => HWCSOER_A::Disabled,
+            true => HWCSOER_A::Enabled,
+        }
+    }
+    #[doc = "Hardware CS output is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == HWCSOER_A::Disabled
+    }
+    #[doc = "Hardware CS output is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == HWCSOER_A::Enabled
+    }
+}
+#[doc = "Hardware CS output enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HWCSOEW_AW {
+    #[doc = "0: Hardware CS output disable"]
+    Disable = 0,
+    #[doc = "1: Hardware CS output enable"]
+    Enable = 1,
+}
+impl From<HWCSOEW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: HWCSOEW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `HWCSOE` writer - Hardware CS output enable"]
-pub type HWCSOE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HWCSOE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HWCSOEW_AW>;
+impl<'a, REG, const O: u8> HWCSOE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Hardware CS output disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(HWCSOEW_AW::Disable)
+    }
+    #[doc = "Hardware CS output enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(HWCSOEW_AW::Enable)
+    }
+}
 #[doc = "Field `TIEN` reader - TI mode enable"]
 pub type TIEN_R = crate::BitReader;
 #[doc = "Field `TIEN` writer - TI mode enable"]
 pub type TIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ERRIE` reader - Error interrupt enable"]
-pub type ERRIE_R = crate::BitReader;
+pub type ERRIE_R = crate::BitReader<ERRIER_A>;
+#[doc = "Error interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ERRIER_A {
+    #[doc = "0: Error interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: Error interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<ERRIER_A> for bool {
+    #[inline(always)]
+    fn from(variant: ERRIER_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl ERRIE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> ERRIER_A {
+        match self.bits {
+            false => ERRIER_A::Disabled,
+            true => ERRIER_A::Enabled,
+        }
+    }
+    #[doc = "Error interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == ERRIER_A::Disabled
+    }
+    #[doc = "Error interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == ERRIER_A::Enabled
+    }
+}
+#[doc = "Error interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ERRIEW_AW {
+    #[doc = "0: Error interrupt disable"]
+    Disable = 0,
+    #[doc = "1: Error interrupt enable"]
+    Enable = 1,
+}
+impl From<ERRIEW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: ERRIEW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `ERRIE` writer - Error interrupt enable"]
-pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ERRIEW_AW>;
+impl<'a, REG, const O: u8> ERRIE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Error interrupt disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(ERRIEW_AW::Disable)
+    }
+    #[doc = "Error interrupt enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(ERRIEW_AW::Enable)
+    }
+}
 #[doc = "Field `RDBFIE` reader - Receive data buffer full interrupt enable"]
-pub type RDBFIE_R = crate::BitReader;
+pub type RDBFIE_R = crate::BitReader<RDBFIER_A>;
+#[doc = "Receive data buffer full interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RDBFIER_A {
+    #[doc = "0: Receive data buffer full interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: Receive data buffer full interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<RDBFIER_A> for bool {
+    #[inline(always)]
+    fn from(variant: RDBFIER_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl RDBFIE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> RDBFIER_A {
+        match self.bits {
+            false => RDBFIER_A::Disabled,
+            true => RDBFIER_A::Enabled,
+        }
+    }
+    #[doc = "Receive data buffer full interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == RDBFIER_A::Disabled
+    }
+    #[doc = "Receive data buffer full interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == RDBFIER_A::Enabled
+    }
+}
+#[doc = "Receive data buffer full interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RDBFIEW_AW {
+    #[doc = "0: Receive data buffer full interrupt disable"]
+    Disable = 0,
+    #[doc = "1: Receive data buffer full interrupt enable"]
+    Enable = 1,
+}
+impl From<RDBFIEW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: RDBFIEW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `RDBFIE` writer - Receive data buffer full interrupt enable"]
-pub type RDBFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RDBFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RDBFIEW_AW>;
+impl<'a, REG, const O: u8> RDBFIE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Receive data buffer full interrupt disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(RDBFIEW_AW::Disable)
+    }
+    #[doc = "Receive data buffer full interrupt enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(RDBFIEW_AW::Enable)
+    }
+}
 #[doc = "Field `TDBEIE` reader - Transmit data buffer empty interrupt enable"]
-pub type TDBEIE_R = crate::BitReader;
+pub type TDBEIE_R = crate::BitReader<TDBEIER_A>;
+#[doc = "Transmit data buffer empty interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TDBEIER_A {
+    #[doc = "0: Transmit data buffer empty interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: Transmit data buffer empty interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<TDBEIER_A> for bool {
+    #[inline(always)]
+    fn from(variant: TDBEIER_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl TDBEIE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TDBEIER_A {
+        match self.bits {
+            false => TDBEIER_A::Disabled,
+            true => TDBEIER_A::Enabled,
+        }
+    }
+    #[doc = "Transmit data buffer empty interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == TDBEIER_A::Disabled
+    }
+    #[doc = "Transmit data buffer empty interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == TDBEIER_A::Enabled
+    }
+}
+#[doc = "Transmit data buffer empty interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TDBEIEW_AW {
+    #[doc = "0: Transmit data buffer empty interrupt disable"]
+    Disable = 0,
+    #[doc = "1: Transmit data buffer empty interrupt enable"]
+    Enable = 1,
+}
+impl From<TDBEIEW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: TDBEIEW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `TDBEIE` writer - Transmit data buffer empty interrupt enable"]
-pub type TDBEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TDBEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TDBEIEW_AW>;
+impl<'a, REG, const O: u8> TDBEIE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Transmit data buffer empty interrupt disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(TDBEIEW_AW::Disable)
+    }
+    #[doc = "Transmit data buffer empty interrupt enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(TDBEIEW_AW::Enable)
+    }
+}
 #[doc = "Field `MDIV3` reader - Master clock frequency division bit3"]
 pub type MDIV3_R = crate::BitReader;
 #[doc = "Field `MDIV3` writer - Master clock frequency division bit3"]

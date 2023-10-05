@@ -18,7 +18,7 @@ pub struct RegisterBlock {
     #[doc = "0x1c - I2S control register"]
     pub i2sctrl: I2SCTRL,
     #[doc = "0x20 - I2S clock register"]
-    pub i2sclkp: I2SCLKP,
+    pub i2sclk: I2SCLK,
 }
 #[doc = "CTRL1 (rw) register accessor: control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl1`]
 module"]
@@ -60,8 +60,8 @@ module"]
 pub type I2SCTRL = crate::Reg<i2sctrl::I2SCTRL_SPEC>;
 #[doc = "I2S control register"]
 pub mod i2sctrl;
-#[doc = "I2SCLKP (rw) register accessor: I2S clock register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2sclkp::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2sclkp::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`i2sclkp`]
+#[doc = "I2SCLK (rw) register accessor: I2S clock register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2sclk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2sclk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`i2sclk`]
 module"]
-pub type I2SCLKP = crate::Reg<i2sclkp::I2SCLKP_SPEC>;
+pub type I2SCLK = crate::Reg<i2sclk::I2SCLK_SPEC>;
 #[doc = "I2S clock register"]
-pub mod i2sclkp;
+pub mod i2sclk;

@@ -1,0 +1,23 @@
+CTRL2:
+  CCFS:
+    Hall: [0, "Control bits are updated by setting the HALL bit"]
+    TRGIN: [1, "Control bits are updated by setting the HALL bit or a rising edge on TRGIN"]
+IDEN:
+  HALLIEN:
+    _read:
+      Disabled: [0, "HALL interrupt is disabled"]
+      Enabled: [1, "HALL interrupt is enabled"]
+    _write:
+      Disable: [0, "HALL interrupt disable"]
+      Enable: [1, "HALL interrupt enable"]
+ISTS:
+  HALLIF:
+    _read:
+      NoEvent: [0, "No hall event occurs"]
+      HallEvent: [1, "Hall event is detected"]
+    _W0C:
+      Clear: [0, "Hall event flag clear"]
+SWEVT:
+  HALLSWTR:
+    _W1S:
+      Event: [1, "Generate a HALL event"]

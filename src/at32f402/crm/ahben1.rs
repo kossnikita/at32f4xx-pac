@@ -2,143 +2,143 @@
 pub type R = crate::R<AHBEN1_SPEC>;
 #[doc = "Register `AHBEN1` writer"]
 pub type W = crate::W<AHBEN1_SPEC>;
-#[doc = "Field `GPIOAEN` reader - IO A clock enable"]
-pub type GPIOAEN_R = crate::BitReader;
-#[doc = "Field `GPIOAEN` writer - IO A clock enable"]
-pub type GPIOAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `GPIOBEN` reader - IO B clock enable"]
-pub type GPIOBEN_R = crate::BitReader;
-#[doc = "Field `GPIOBEN` writer - IO B clock enable"]
-pub type GPIOBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `GPIOCEN` reader - IO C clock enable"]
-pub type GPIOCEN_R = crate::BitReader;
-#[doc = "Field `GPIOCEN` writer - IO C clock enable"]
-pub type GPIOCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `GPIODEN` reader - IO D clock enable"]
-pub type GPIODEN_R = crate::BitReader;
-#[doc = "Field `GPIODEN` writer - IO D clock enable"]
-pub type GPIODEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `GPIOFEN` reader - IO F clock enable"]
-pub type GPIOFEN_R = crate::BitReader;
-#[doc = "Field `GPIOFEN` writer - IO F clock enable"]
-pub type GPIOFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `CRCEN` reader - CRC clock enable"]
-pub type CRCEN_R = crate::BitReader;
-#[doc = "Field `CRCEN` writer - CRC clock enable"]
-pub type CRCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `DMA1EN` reader - DMA1 clock enable"]
-pub type DMA1EN_R = crate::BitReader;
-#[doc = "Field `DMA1EN` writer - DMA1 clock enable"]
-pub type DMA1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `DMA2EN` reader - DMA2 clock enable"]
-pub type DMA2EN_R = crate::BitReader;
-#[doc = "Field `DMA2EN` writer - DMA2 clock enable"]
-pub type DMA2EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `OTGHSEN` reader - OTGHS clock enable"]
-pub type OTGHSEN_R = crate::BitReader;
-#[doc = "Field `OTGHSEN` writer - OTGHS clock enable"]
-pub type OTGHSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOA` reader - IO A clock enable"]
+pub type GPIOA_R = crate::BitReader;
+#[doc = "Field `GPIOA` writer - IO A clock enable"]
+pub type GPIOA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOB` reader - IO B clock enable"]
+pub type GPIOB_R = crate::BitReader;
+#[doc = "Field `GPIOB` writer - IO B clock enable"]
+pub type GPIOB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOC` reader - IO C clock enable"]
+pub type GPIOC_R = crate::BitReader;
+#[doc = "Field `GPIOC` writer - IO C clock enable"]
+pub type GPIOC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOD` reader - IO D clock enable"]
+pub type GPIOD_R = crate::BitReader;
+#[doc = "Field `GPIOD` writer - IO D clock enable"]
+pub type GPIOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOF` reader - IO F clock enable"]
+pub type GPIOF_R = crate::BitReader;
+#[doc = "Field `GPIOF` writer - IO F clock enable"]
+pub type GPIOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `CRC` reader - CRC clock enable"]
+pub type CRC_R = crate::BitReader;
+#[doc = "Field `CRC` writer - CRC clock enable"]
+pub type CRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `DMA1` reader - DMA1 clock enable"]
+pub type DMA1_R = crate::BitReader;
+#[doc = "Field `DMA1` writer - DMA1 clock enable"]
+pub type DMA1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `DMA2` reader - DMA2 clock enable"]
+pub type DMA2_R = crate::BitReader;
+#[doc = "Field `DMA2` writer - DMA2 clock enable"]
+pub type DMA2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `OTGHS` reader - OTGHS clock enable"]
+pub type OTGHS_R = crate::BitReader;
+#[doc = "Field `OTGHS` writer - OTGHS clock enable"]
+pub type OTGHS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - IO A clock enable"]
     #[inline(always)]
-    pub fn gpioaen(&self) -> GPIOAEN_R {
-        GPIOAEN_R::new((self.bits & 1) != 0)
+    pub fn gpioa(&self) -> GPIOA_R {
+        GPIOA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - IO B clock enable"]
     #[inline(always)]
-    pub fn gpioben(&self) -> GPIOBEN_R {
-        GPIOBEN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn gpiob(&self) -> GPIOB_R {
+        GPIOB_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - IO C clock enable"]
     #[inline(always)]
-    pub fn gpiocen(&self) -> GPIOCEN_R {
-        GPIOCEN_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn gpioc(&self) -> GPIOC_R {
+        GPIOC_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - IO D clock enable"]
     #[inline(always)]
-    pub fn gpioden(&self) -> GPIODEN_R {
-        GPIODEN_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn gpiod(&self) -> GPIOD_R {
+        GPIOD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - IO F clock enable"]
     #[inline(always)]
-    pub fn gpiofen(&self) -> GPIOFEN_R {
-        GPIOFEN_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn gpiof(&self) -> GPIOF_R {
+        GPIOF_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 12 - CRC clock enable"]
     #[inline(always)]
-    pub fn crcen(&self) -> CRCEN_R {
-        CRCEN_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn crc(&self) -> CRC_R {
+        CRC_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 22 - DMA1 clock enable"]
     #[inline(always)]
-    pub fn dma1en(&self) -> DMA1EN_R {
-        DMA1EN_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn dma1(&self) -> DMA1_R {
+        DMA1_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 24 - DMA2 clock enable"]
     #[inline(always)]
-    pub fn dma2en(&self) -> DMA2EN_R {
-        DMA2EN_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn dma2(&self) -> DMA2_R {
+        DMA2_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 29 - OTGHS clock enable"]
     #[inline(always)]
-    pub fn otghsen(&self) -> OTGHSEN_R {
-        OTGHSEN_R::new(((self.bits >> 29) & 1) != 0)
+    pub fn otghs(&self) -> OTGHS_R {
+        OTGHS_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - IO A clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioaen(&mut self) -> GPIOAEN_W<AHBEN1_SPEC, 0> {
-        GPIOAEN_W::new(self)
+    pub fn gpioa(&mut self) -> GPIOA_W<AHBEN1_SPEC, 0> {
+        GPIOA_W::new(self)
     }
     #[doc = "Bit 1 - IO B clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioben(&mut self) -> GPIOBEN_W<AHBEN1_SPEC, 1> {
-        GPIOBEN_W::new(self)
+    pub fn gpiob(&mut self) -> GPIOB_W<AHBEN1_SPEC, 1> {
+        GPIOB_W::new(self)
     }
     #[doc = "Bit 2 - IO C clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiocen(&mut self) -> GPIOCEN_W<AHBEN1_SPEC, 2> {
-        GPIOCEN_W::new(self)
+    pub fn gpioc(&mut self) -> GPIOC_W<AHBEN1_SPEC, 2> {
+        GPIOC_W::new(self)
     }
     #[doc = "Bit 3 - IO D clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioden(&mut self) -> GPIODEN_W<AHBEN1_SPEC, 3> {
-        GPIODEN_W::new(self)
+    pub fn gpiod(&mut self) -> GPIOD_W<AHBEN1_SPEC, 3> {
+        GPIOD_W::new(self)
     }
     #[doc = "Bit 5 - IO F clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiofen(&mut self) -> GPIOFEN_W<AHBEN1_SPEC, 5> {
-        GPIOFEN_W::new(self)
+    pub fn gpiof(&mut self) -> GPIOF_W<AHBEN1_SPEC, 5> {
+        GPIOF_W::new(self)
     }
     #[doc = "Bit 12 - CRC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn crcen(&mut self) -> CRCEN_W<AHBEN1_SPEC, 12> {
-        CRCEN_W::new(self)
+    pub fn crc(&mut self) -> CRC_W<AHBEN1_SPEC, 12> {
+        CRC_W::new(self)
     }
     #[doc = "Bit 22 - DMA1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dma1en(&mut self) -> DMA1EN_W<AHBEN1_SPEC, 22> {
-        DMA1EN_W::new(self)
+    pub fn dma1(&mut self) -> DMA1_W<AHBEN1_SPEC, 22> {
+        DMA1_W::new(self)
     }
     #[doc = "Bit 24 - DMA2 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dma2en(&mut self) -> DMA2EN_W<AHBEN1_SPEC, 24> {
-        DMA2EN_W::new(self)
+    pub fn dma2(&mut self) -> DMA2_W<AHBEN1_SPEC, 24> {
+        DMA2_W::new(self)
     }
     #[doc = "Bit 29 - OTGHS clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn otghsen(&mut self) -> OTGHSEN_W<AHBEN1_SPEC, 29> {
-        OTGHSEN_W::new(self)
+    pub fn otghs(&mut self) -> OTGHS_W<AHBEN1_SPEC, 29> {
+        OTGHS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

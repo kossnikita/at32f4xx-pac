@@ -87,9 +87,9 @@ where
         self.variant(C1C_A::Stis)
     }
 }
-#[doc = "Field `C1IDIV` reader - Channel 1 input divider"]
-pub type C1IDIV_R = crate::FieldReader<C1IDIV_A>;
-#[doc = "Channel 1 input divider\n\nValue on reset: 0"]
+#[doc = "Field `CIDIV[1-2]` reader - Channel %s input divider"]
+pub type CIDIV_R = crate::FieldReader<C1IDIV_A>;
+#[doc = "Channel %s input divider\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum C1IDIV_A {
@@ -111,7 +111,7 @@ impl From<C1IDIV_A> for u8 {
 impl crate::FieldSpec for C1IDIV_A {
     type Ux = u8;
 }
-impl C1IDIV_R {
+impl CIDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> C1IDIV_A {
@@ -144,9 +144,9 @@ impl C1IDIV_R {
         *self == C1IDIV_A::Div8
     }
 }
-#[doc = "Field `C1IDIV` writer - Channel 1 input divider"]
-pub type C1IDIV_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, C1IDIV_A>;
-impl<'a, REG, const O: u8> C1IDIV_W<'a, REG, O>
+#[doc = "Field `CIDIV[1-2]` writer - Channel %s input divider"]
+pub type CIDIV_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, C1IDIV_A>;
+impl<'a, REG, const O: u8> CIDIV_W<'a, REG, O>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -172,12 +172,12 @@ where
         self.variant(C1IDIV_A::Div8)
     }
 }
-#[doc = "Field `C1DF` reader - Channel 1 digital filter"]
-pub type C1DF_R = crate::FieldReader<C1DF_A>;
-#[doc = "Channel 1 digital filter\n\nValue on reset: 0"]
+#[doc = "Field `CDF[1-2]` reader - Channel %s digital filter"]
+pub type CDF_R = crate::FieldReader<CDF_A>;
+#[doc = "Channel %s digital filter\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
-pub enum C1DF_A {
+pub enum CDF_A {
     #[doc = "0: No filter, sampling is done at f_DTS"]
     NoFilter = 0,
     #[doc = "1: f_sampling = f_DTS, N=2"]
@@ -211,123 +211,123 @@ pub enum C1DF_A {
     #[doc = "15: f_sampling = f_DTS/32, N=8"]
     Div32n8 = 15,
 }
-impl From<C1DF_A> for u8 {
+impl From<CDF_A> for u8 {
     #[inline(always)]
-    fn from(variant: C1DF_A) -> Self {
+    fn from(variant: CDF_A) -> Self {
         variant as _
     }
 }
-impl crate::FieldSpec for C1DF_A {
+impl crate::FieldSpec for CDF_A {
     type Ux = u8;
 }
-impl C1DF_R {
+impl CDF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1DF_A {
+    pub fn variant(&self) -> CDF_A {
         match self.bits {
-            0 => C1DF_A::NoFilter,
-            1 => C1DF_A::N2,
-            2 => C1DF_A::N4,
-            3 => C1DF_A::N8,
-            4 => C1DF_A::Div2n6,
-            5 => C1DF_A::Div2n8,
-            6 => C1DF_A::Div4n6,
-            7 => C1DF_A::Div4n8,
-            8 => C1DF_A::Div8n6,
-            9 => C1DF_A::Div8n8,
-            10 => C1DF_A::Div16n5,
-            11 => C1DF_A::Div16n6,
-            12 => C1DF_A::Div16n8,
-            13 => C1DF_A::Div32n5,
-            14 => C1DF_A::Div32n6,
-            15 => C1DF_A::Div32n8,
+            0 => CDF_A::NoFilter,
+            1 => CDF_A::N2,
+            2 => CDF_A::N4,
+            3 => CDF_A::N8,
+            4 => CDF_A::Div2n6,
+            5 => CDF_A::Div2n8,
+            6 => CDF_A::Div4n6,
+            7 => CDF_A::Div4n8,
+            8 => CDF_A::Div8n6,
+            9 => CDF_A::Div8n8,
+            10 => CDF_A::Div16n5,
+            11 => CDF_A::Div16n6,
+            12 => CDF_A::Div16n8,
+            13 => CDF_A::Div32n5,
+            14 => CDF_A::Div32n6,
+            15 => CDF_A::Div32n8,
             _ => unreachable!(),
         }
     }
     #[doc = "No filter, sampling is done at f_DTS"]
     #[inline(always)]
     pub fn is_no_filter(&self) -> bool {
-        *self == C1DF_A::NoFilter
+        *self == CDF_A::NoFilter
     }
     #[doc = "f_sampling = f_DTS, N=2"]
     #[inline(always)]
     pub fn is_n2(&self) -> bool {
-        *self == C1DF_A::N2
+        *self == CDF_A::N2
     }
     #[doc = "f_sampling = f_DTS, N=4"]
     #[inline(always)]
     pub fn is_n4(&self) -> bool {
-        *self == C1DF_A::N4
+        *self == CDF_A::N4
     }
     #[doc = "f_sampling = f_DTS, N=8"]
     #[inline(always)]
     pub fn is_n8(&self) -> bool {
-        *self == C1DF_A::N8
+        *self == CDF_A::N8
     }
     #[doc = "f_sampling = f_DTS/2, N=6"]
     #[inline(always)]
     pub fn is_div2n6(&self) -> bool {
-        *self == C1DF_A::Div2n6
+        *self == CDF_A::Div2n6
     }
     #[doc = "f_sampling = f_DTS/2, N=8"]
     #[inline(always)]
     pub fn is_div2n8(&self) -> bool {
-        *self == C1DF_A::Div2n8
+        *self == CDF_A::Div2n8
     }
     #[doc = "f_sampling = f_DTS/4, N=6"]
     #[inline(always)]
     pub fn is_div4n6(&self) -> bool {
-        *self == C1DF_A::Div4n6
+        *self == CDF_A::Div4n6
     }
     #[doc = "f_sampling = f_DTS/4, N=8"]
     #[inline(always)]
     pub fn is_div4n8(&self) -> bool {
-        *self == C1DF_A::Div4n8
+        *self == CDF_A::Div4n8
     }
     #[doc = "f_sampling = f_DTS/8, N=6"]
     #[inline(always)]
     pub fn is_div8n6(&self) -> bool {
-        *self == C1DF_A::Div8n6
+        *self == CDF_A::Div8n6
     }
     #[doc = "f_sampling = f_DTS/8, N=8"]
     #[inline(always)]
     pub fn is_div8n8(&self) -> bool {
-        *self == C1DF_A::Div8n8
+        *self == CDF_A::Div8n8
     }
     #[doc = "f_sampling = f_DTS/16, N=5"]
     #[inline(always)]
     pub fn is_div16n5(&self) -> bool {
-        *self == C1DF_A::Div16n5
+        *self == CDF_A::Div16n5
     }
     #[doc = "f_sampling = f_DTS/16, N=6"]
     #[inline(always)]
     pub fn is_div16n6(&self) -> bool {
-        *self == C1DF_A::Div16n6
+        *self == CDF_A::Div16n6
     }
     #[doc = "f_sampling = f_DTS/16, N=8"]
     #[inline(always)]
     pub fn is_div16n8(&self) -> bool {
-        *self == C1DF_A::Div16n8
+        *self == CDF_A::Div16n8
     }
     #[doc = "f_sampling = f_DTS/32, N=5"]
     #[inline(always)]
     pub fn is_div32n5(&self) -> bool {
-        *self == C1DF_A::Div32n5
+        *self == CDF_A::Div32n5
     }
     #[doc = "f_sampling = f_DTS/32, N=6"]
     #[inline(always)]
     pub fn is_div32n6(&self) -> bool {
-        *self == C1DF_A::Div32n6
+        *self == CDF_A::Div32n6
     }
     #[doc = "f_sampling = f_DTS/32, N=8"]
     #[inline(always)]
     pub fn is_div32n8(&self) -> bool {
-        *self == C1DF_A::Div32n8
+        *self == CDF_A::Div32n8
     }
 }
-#[doc = "Field `C1DF` writer - Channel 1 digital filter"]
-pub type C1DF_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O, C1DF_A>;
-impl<'a, REG, const O: u8> C1DF_W<'a, REG, O>
+#[doc = "Field `CDF[1-2]` writer - Channel %s digital filter"]
+pub type CDF_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O, CDF_A>;
+impl<'a, REG, const O: u8> CDF_W<'a, REG, O>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -335,82 +335,82 @@ where
     #[doc = "No filter, sampling is done at f_DTS"]
     #[inline(always)]
     pub fn no_filter(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::NoFilter)
+        self.variant(CDF_A::NoFilter)
     }
     #[doc = "f_sampling = f_DTS, N=2"]
     #[inline(always)]
     pub fn n2(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::N2)
+        self.variant(CDF_A::N2)
     }
     #[doc = "f_sampling = f_DTS, N=4"]
     #[inline(always)]
     pub fn n4(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::N4)
+        self.variant(CDF_A::N4)
     }
     #[doc = "f_sampling = f_DTS, N=8"]
     #[inline(always)]
     pub fn n8(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::N8)
+        self.variant(CDF_A::N8)
     }
     #[doc = "f_sampling = f_DTS/2, N=6"]
     #[inline(always)]
     pub fn div2n6(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div2n6)
+        self.variant(CDF_A::Div2n6)
     }
     #[doc = "f_sampling = f_DTS/2, N=8"]
     #[inline(always)]
     pub fn div2n8(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div2n8)
+        self.variant(CDF_A::Div2n8)
     }
     #[doc = "f_sampling = f_DTS/4, N=6"]
     #[inline(always)]
     pub fn div4n6(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div4n6)
+        self.variant(CDF_A::Div4n6)
     }
     #[doc = "f_sampling = f_DTS/4, N=8"]
     #[inline(always)]
     pub fn div4n8(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div4n8)
+        self.variant(CDF_A::Div4n8)
     }
     #[doc = "f_sampling = f_DTS/8, N=6"]
     #[inline(always)]
     pub fn div8n6(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div8n6)
+        self.variant(CDF_A::Div8n6)
     }
     #[doc = "f_sampling = f_DTS/8, N=8"]
     #[inline(always)]
     pub fn div8n8(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div8n8)
+        self.variant(CDF_A::Div8n8)
     }
     #[doc = "f_sampling = f_DTS/16, N=5"]
     #[inline(always)]
     pub fn div16n5(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div16n5)
+        self.variant(CDF_A::Div16n5)
     }
     #[doc = "f_sampling = f_DTS/16, N=6"]
     #[inline(always)]
     pub fn div16n6(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div16n6)
+        self.variant(CDF_A::Div16n6)
     }
     #[doc = "f_sampling = f_DTS/16, N=8"]
     #[inline(always)]
     pub fn div16n8(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div16n8)
+        self.variant(CDF_A::Div16n8)
     }
     #[doc = "f_sampling = f_DTS/32, N=5"]
     #[inline(always)]
     pub fn div32n5(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div32n5)
+        self.variant(CDF_A::Div32n5)
     }
     #[doc = "f_sampling = f_DTS/32, N=6"]
     #[inline(always)]
     pub fn div32n6(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div32n6)
+        self.variant(CDF_A::Div32n6)
     }
     #[doc = "f_sampling = f_DTS/32, N=8"]
     #[inline(always)]
     pub fn div32n8(self) -> &'a mut crate::W<REG> {
-        self.variant(C1DF_A::Div32n8)
+        self.variant(CDF_A::Div32n8)
     }
 }
 #[doc = "Field `C2C` reader - Channel 2 configure"]
@@ -498,44 +498,48 @@ where
         self.variant(C2C_A::Stis)
     }
 }
-#[doc = "Field `C2DF` reader - Channel 2 digital filter"]
-pub use C1DF_R as C2DF_R;
-#[doc = "Field `C2DF` writer - Channel 2 digital filter"]
-pub use C1DF_W as C2DF_W;
-#[doc = "Field `C2IDIV` reader - Channel 2 input divider"]
-pub use C1IDIV_R as C2IDIV_R;
-#[doc = "Field `C2IDIV` writer - Channel 2 input divider"]
-pub use C1IDIV_W as C2IDIV_W;
 impl R {
     #[doc = "Bits 0:1 - Channel 1 configure"]
     #[inline(always)]
     pub fn c1c(&self) -> C1C_R {
         C1C_R::new((self.bits & 3) as u8)
     }
+    #[doc = "Channel [1-2]
+input divider"]
+    #[inline(always)]
+    pub unsafe fn cidiv(&self, n: u8) -> CIDIV_R {
+        CIDIV_R::new(((self.bits >> ((n - 1) * 8 + 2)) & 3) as u8)
+    }
     #[doc = "Bits 2:3 - Channel 1 input divider"]
     #[inline(always)]
-    pub fn c1idiv(&self) -> C1IDIV_R {
-        C1IDIV_R::new(((self.bits >> 2) & 3) as u8)
+    pub fn c1idiv(&self) -> CIDIV_R {
+        CIDIV_R::new(((self.bits >> 2) & 3) as u8)
+    }
+    #[doc = "Bits 10:11 - Channel 2 input divider"]
+    #[inline(always)]
+    pub fn c2idiv(&self) -> CIDIV_R {
+        CIDIV_R::new(((self.bits >> 10) & 3) as u8)
+    }
+    #[doc = "Channel [1-2]
+digital filter"]
+    #[inline(always)]
+    pub unsafe fn cdf(&self, n: u8) -> CDF_R {
+        CDF_R::new(((self.bits >> ((n - 1) * 8 + 4)) & 0x0f) as u8)
     }
     #[doc = "Bits 4:7 - Channel 1 digital filter"]
     #[inline(always)]
-    pub fn c1df(&self) -> C1DF_R {
-        C1DF_R::new(((self.bits >> 4) & 0x0f) as u8)
+    pub fn c1df(&self) -> CDF_R {
+        CDF_R::new(((self.bits >> 4) & 0x0f) as u8)
+    }
+    #[doc = "Bits 12:15 - Channel 2 digital filter"]
+    #[inline(always)]
+    pub fn c2df(&self) -> CDF_R {
+        CDF_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
     #[doc = "Bits 8:9 - Channel 2 configure"]
     #[inline(always)]
     pub fn c2c(&self) -> C2C_R {
         C2C_R::new(((self.bits >> 8) & 3) as u8)
-    }
-    #[doc = "Bits 10:11 - Channel 2 input divider"]
-    #[inline(always)]
-    pub fn c2idiv(&self) -> C2IDIV_R {
-        C2IDIV_R::new(((self.bits >> 10) & 3) as u8)
-    }
-    #[doc = "Bits 12:15 - Channel 2 digital filter"]
-    #[inline(always)]
-    pub fn c2df(&self) -> C2DF_R {
-        C2DF_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
 }
 impl W {
@@ -545,35 +549,49 @@ impl W {
     pub fn c1c(&mut self) -> C1C_W<CM1_INPUT_SPEC, 0> {
         C1C_W::new(self)
     }
+    #[doc = "Channel [1-2]
+input divider"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn cidiv<const O: u8>(&mut self) -> CIDIV_W<CM1_INPUT_SPEC, O> {
+        CIDIV_W::new(self)
+    }
     #[doc = "Bits 2:3 - Channel 1 input divider"]
     #[inline(always)]
     #[must_use]
-    pub fn c1idiv(&mut self) -> C1IDIV_W<CM1_INPUT_SPEC, 2> {
-        C1IDIV_W::new(self)
+    pub fn c1idiv(&mut self) -> CIDIV_W<CM1_INPUT_SPEC, 2> {
+        CIDIV_W::new(self)
+    }
+    #[doc = "Bits 10:11 - Channel 2 input divider"]
+    #[inline(always)]
+    #[must_use]
+    pub fn c2idiv(&mut self) -> CIDIV_W<CM1_INPUT_SPEC, 10> {
+        CIDIV_W::new(self)
+    }
+    #[doc = "Channel [1-2]
+digital filter"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn cdf<const O: u8>(&mut self) -> CDF_W<CM1_INPUT_SPEC, O> {
+        CDF_W::new(self)
     }
     #[doc = "Bits 4:7 - Channel 1 digital filter"]
     #[inline(always)]
     #[must_use]
-    pub fn c1df(&mut self) -> C1DF_W<CM1_INPUT_SPEC, 4> {
-        C1DF_W::new(self)
+    pub fn c1df(&mut self) -> CDF_W<CM1_INPUT_SPEC, 4> {
+        CDF_W::new(self)
+    }
+    #[doc = "Bits 12:15 - Channel 2 digital filter"]
+    #[inline(always)]
+    #[must_use]
+    pub fn c2df(&mut self) -> CDF_W<CM1_INPUT_SPEC, 12> {
+        CDF_W::new(self)
     }
     #[doc = "Bits 8:9 - Channel 2 configure"]
     #[inline(always)]
     #[must_use]
     pub fn c2c(&mut self) -> C2C_W<CM1_INPUT_SPEC, 8> {
         C2C_W::new(self)
-    }
-    #[doc = "Bits 10:11 - Channel 2 input divider"]
-    #[inline(always)]
-    #[must_use]
-    pub fn c2idiv(&mut self) -> C2IDIV_W<CM1_INPUT_SPEC, 10> {
-        C2IDIV_W::new(self)
-    }
-    #[doc = "Bits 12:15 - Channel 2 digital filter"]
-    #[inline(always)]
-    #[must_use]
-    pub fn c2df(&mut self) -> C2DF_W<CM1_INPUT_SPEC, 12> {
-        C2DF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

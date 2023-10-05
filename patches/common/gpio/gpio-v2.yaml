@@ -1,0 +1,57 @@
+GPIO?:
+  _include:
+    - common.yaml
+  CFGR:
+    _array:
+      IOMC*: {}
+    IOMC*:
+      Input: [0, "Input mode"]
+      Output: [1, "General-purpose output mode"]
+      Multiplexed: [2, "Multiplexed function mode"]
+      Analog: [3, "Analog mode"]
+  OMODE:
+    _array:
+      OM*: {}
+    OM*:
+      PushPull: [0, "Push-pull"]
+      OpenDrain: [1, "Open-drain"]
+  ODRVR:
+    _array:
+      ODRV*: {}
+    ODRV*:
+      Normal: [0, "Normal sourcing/sinking strength"]
+      Large: [1, "Large sourcing/sinking strength"]
+  PULL:
+    _array:
+      PULL*: {}
+    PULL*:
+      NoPull: [0, "No pull-up/pull-down"]
+      PullUp: [1, "Pull-up"]
+      PullDown: [2, "Pull-down"]
+  IDT:
+    _array:
+      IDT*: {}
+    IDT*:
+      Low: [0, "Input is logic low"]
+      High: [1, "Input is logic high"]
+  ODT:
+    _array:
+      ODT*: {}
+    ODT*:
+      _read:
+        PullDown: [0, "Pull-down"]
+        PullUp: [1, "Pull-up"]
+      _write:
+        Low: [0, "Set output to logic low"]
+        High: [1, "Set output to logic high"]
+  MUXL:
+    _array:
+      MUXL*:
+        name: MUX%s
+    MUXL*: [0, 15]
+  MUXH:
+    _array:
+      MUXH*:
+        name: MUX%s
+        description: "GPIOx pin %s muxing"
+    MUXH*: [0, 15]

@@ -2,143 +2,143 @@
 pub type R = crate::R<AHBRST1_SPEC>;
 #[doc = "Register `AHBRST1` writer"]
 pub type W = crate::W<AHBRST1_SPEC>;
-#[doc = "Field `GPIOARST` reader - IO port A reset"]
-pub type GPIOARST_R = crate::BitReader;
-#[doc = "Field `GPIOARST` writer - IO port A reset"]
-pub type GPIOARST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `GPIOBRST` reader - IO port B reset"]
-pub type GPIOBRST_R = crate::BitReader;
-#[doc = "Field `GPIOBRST` writer - IO port B reset"]
-pub type GPIOBRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `GPIOCRST` reader - IO port C reset"]
-pub type GPIOCRST_R = crate::BitReader;
-#[doc = "Field `GPIOCRST` writer - IO port C reset"]
-pub type GPIOCRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `GPIODRST` reader - IO port D reset"]
-pub type GPIODRST_R = crate::BitReader;
-#[doc = "Field `GPIODRST` writer - IO port D reset"]
-pub type GPIODRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `GPIOERST` reader - IO port E reset"]
-pub type GPIOERST_R = crate::BitReader;
-#[doc = "Field `GPIOERST` writer - IO port E reset"]
-pub type GPIOERST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `GPIOFRST` reader - IO port F reset"]
-pub type GPIOFRST_R = crate::BitReader;
-#[doc = "Field `GPIOFRST` writer - IO port F reset"]
-pub type GPIOFRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `CRCRST` reader - CRC reset"]
-pub type CRCRST_R = crate::BitReader;
-#[doc = "Field `CRCRST` writer - CRC reset"]
-pub type CRCRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `DMA1RST` reader - DMA1 reset"]
-pub type DMA1RST_R = crate::BitReader;
-#[doc = "Field `DMA1RST` writer - DMA1 reset"]
-pub type DMA1RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `DMA2RST` reader - DMA2 reset"]
-pub type DMA2RST_R = crate::BitReader;
-#[doc = "Field `DMA2RST` writer - DMA2 reset"]
-pub type DMA2RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOA` reader - IO port A reset"]
+pub type GPIOA_R = crate::BitReader;
+#[doc = "Field `GPIOA` writer - IO port A reset"]
+pub type GPIOA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOB` reader - IO port B reset"]
+pub type GPIOB_R = crate::BitReader;
+#[doc = "Field `GPIOB` writer - IO port B reset"]
+pub type GPIOB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOC` reader - IO port C reset"]
+pub type GPIOC_R = crate::BitReader;
+#[doc = "Field `GPIOC` writer - IO port C reset"]
+pub type GPIOC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOD` reader - IO port D reset"]
+pub type GPIOD_R = crate::BitReader;
+#[doc = "Field `GPIOD` writer - IO port D reset"]
+pub type GPIOD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOE` reader - IO port E reset"]
+pub type GPIOE_R = crate::BitReader;
+#[doc = "Field `GPIOE` writer - IO port E reset"]
+pub type GPIOE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `GPIOF` reader - IO port F reset"]
+pub type GPIOF_R = crate::BitReader;
+#[doc = "Field `GPIOF` writer - IO port F reset"]
+pub type GPIOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `CRC` reader - CRC reset"]
+pub type CRC_R = crate::BitReader;
+#[doc = "Field `CRC` writer - CRC reset"]
+pub type CRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `DMA1` reader - DMA1 reset"]
+pub type DMA1_R = crate::BitReader;
+#[doc = "Field `DMA1` writer - DMA1 reset"]
+pub type DMA1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `DMA2` reader - DMA2 reset"]
+pub type DMA2_R = crate::BitReader;
+#[doc = "Field `DMA2` writer - DMA2 reset"]
+pub type DMA2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - IO port A reset"]
     #[inline(always)]
-    pub fn gpioarst(&self) -> GPIOARST_R {
-        GPIOARST_R::new((self.bits & 1) != 0)
+    pub fn gpioa(&self) -> GPIOA_R {
+        GPIOA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - IO port B reset"]
     #[inline(always)]
-    pub fn gpiobrst(&self) -> GPIOBRST_R {
-        GPIOBRST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn gpiob(&self) -> GPIOB_R {
+        GPIOB_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - IO port C reset"]
     #[inline(always)]
-    pub fn gpiocrst(&self) -> GPIOCRST_R {
-        GPIOCRST_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn gpioc(&self) -> GPIOC_R {
+        GPIOC_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - IO port D reset"]
     #[inline(always)]
-    pub fn gpiodrst(&self) -> GPIODRST_R {
-        GPIODRST_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn gpiod(&self) -> GPIOD_R {
+        GPIOD_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - IO port E reset"]
     #[inline(always)]
-    pub fn gpioerst(&self) -> GPIOERST_R {
-        GPIOERST_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn gpioe(&self) -> GPIOE_R {
+        GPIOE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - IO port F reset"]
     #[inline(always)]
-    pub fn gpiofrst(&self) -> GPIOFRST_R {
-        GPIOFRST_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn gpiof(&self) -> GPIOF_R {
+        GPIOF_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 12 - CRC reset"]
     #[inline(always)]
-    pub fn crcrst(&self) -> CRCRST_R {
-        CRCRST_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn crc(&self) -> CRC_R {
+        CRC_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 22 - DMA1 reset"]
     #[inline(always)]
-    pub fn dma1rst(&self) -> DMA1RST_R {
-        DMA1RST_R::new(((self.bits >> 22) & 1) != 0)
+    pub fn dma1(&self) -> DMA1_R {
+        DMA1_R::new(((self.bits >> 22) & 1) != 0)
     }
     #[doc = "Bit 24 - DMA2 reset"]
     #[inline(always)]
-    pub fn dma2rst(&self) -> DMA2RST_R {
-        DMA2RST_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn dma2(&self) -> DMA2_R {
+        DMA2_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - IO port A reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioarst(&mut self) -> GPIOARST_W<AHBRST1_SPEC, 0> {
-        GPIOARST_W::new(self)
+    pub fn gpioa(&mut self) -> GPIOA_W<AHBRST1_SPEC, 0> {
+        GPIOA_W::new(self)
     }
     #[doc = "Bit 1 - IO port B reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiobrst(&mut self) -> GPIOBRST_W<AHBRST1_SPEC, 1> {
-        GPIOBRST_W::new(self)
+    pub fn gpiob(&mut self) -> GPIOB_W<AHBRST1_SPEC, 1> {
+        GPIOB_W::new(self)
     }
     #[doc = "Bit 2 - IO port C reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiocrst(&mut self) -> GPIOCRST_W<AHBRST1_SPEC, 2> {
-        GPIOCRST_W::new(self)
+    pub fn gpioc(&mut self) -> GPIOC_W<AHBRST1_SPEC, 2> {
+        GPIOC_W::new(self)
     }
     #[doc = "Bit 3 - IO port D reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiodrst(&mut self) -> GPIODRST_W<AHBRST1_SPEC, 3> {
-        GPIODRST_W::new(self)
+    pub fn gpiod(&mut self) -> GPIOD_W<AHBRST1_SPEC, 3> {
+        GPIOD_W::new(self)
     }
     #[doc = "Bit 4 - IO port E reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioerst(&mut self) -> GPIOERST_W<AHBRST1_SPEC, 4> {
-        GPIOERST_W::new(self)
+    pub fn gpioe(&mut self) -> GPIOE_W<AHBRST1_SPEC, 4> {
+        GPIOE_W::new(self)
     }
     #[doc = "Bit 5 - IO port F reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiofrst(&mut self) -> GPIOFRST_W<AHBRST1_SPEC, 5> {
-        GPIOFRST_W::new(self)
+    pub fn gpiof(&mut self) -> GPIOF_W<AHBRST1_SPEC, 5> {
+        GPIOF_W::new(self)
     }
     #[doc = "Bit 12 - CRC reset"]
     #[inline(always)]
     #[must_use]
-    pub fn crcrst(&mut self) -> CRCRST_W<AHBRST1_SPEC, 12> {
-        CRCRST_W::new(self)
+    pub fn crc(&mut self) -> CRC_W<AHBRST1_SPEC, 12> {
+        CRC_W::new(self)
     }
     #[doc = "Bit 22 - DMA1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn dma1rst(&mut self) -> DMA1RST_W<AHBRST1_SPEC, 22> {
-        DMA1RST_W::new(self)
+    pub fn dma1(&mut self) -> DMA1_W<AHBRST1_SPEC, 22> {
+        DMA1_W::new(self)
     }
     #[doc = "Bit 24 - DMA2 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn dma2rst(&mut self) -> DMA2RST_W<AHBRST1_SPEC, 24> {
-        DMA2RST_W::new(self)
+    pub fn dma2(&mut self) -> DMA2_W<AHBRST1_SPEC, 24> {
+        DMA2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

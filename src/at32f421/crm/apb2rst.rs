@@ -2,143 +2,143 @@
 pub type R = crate::R<APB2RST_SPEC>;
 #[doc = "Register `APB2RST` writer"]
 pub type W = crate::W<APB2RST_SPEC>;
-#[doc = "Field `SCFGCMPRST` reader - System config and comparator reset"]
-pub type SCFGCMPRST_R = crate::BitReader;
-#[doc = "Field `SCFGCMPRST` writer - System config and comparator reset"]
-pub type SCFGCMPRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `EXINTRST` reader - External interrupt reset"]
-pub type EXINTRST_R = crate::BitReader;
-#[doc = "Field `EXINTRST` writer - External interrupt reset"]
-pub type EXINTRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `ADCRST` reader - ADC reset"]
-pub type ADCRST_R = crate::BitReader;
-#[doc = "Field `ADCRST` writer - ADC reset"]
-pub type ADCRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `TMR1RST` reader - TMR1 reset"]
-pub type TMR1RST_R = crate::BitReader;
-#[doc = "Field `TMR1RST` writer - TMR1 reset"]
-pub type TMR1RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `SPI1RST` reader - SPI1 reset"]
-pub type SPI1RST_R = crate::BitReader;
-#[doc = "Field `SPI1RST` writer - SPI1 reset"]
-pub type SPI1RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `USART1RST` reader - USART1 reset"]
-pub type USART1RST_R = crate::BitReader;
-#[doc = "Field `USART1RST` writer - USART1 reset"]
-pub type USART1RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `TMR15RST` reader - Timer15 reset"]
-pub type TMR15RST_R = crate::BitReader;
-#[doc = "Field `TMR15RST` writer - Timer15 reset"]
-pub type TMR15RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `TMR16RST` reader - Timer16 reset"]
-pub type TMR16RST_R = crate::BitReader;
-#[doc = "Field `TMR16RST` writer - Timer16 reset"]
-pub type TMR16RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `TMR17RST` reader - Timer17 reset"]
-pub type TMR17RST_R = crate::BitReader;
-#[doc = "Field `TMR17RST` writer - Timer17 reset"]
-pub type TMR17RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `SCFGCMP` reader - System config and comparator reset"]
+pub type SCFGCMP_R = crate::BitReader;
+#[doc = "Field `SCFGCMP` writer - System config and comparator reset"]
+pub type SCFGCMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `EXINT` reader - External interrupt reset"]
+pub type EXINT_R = crate::BitReader;
+#[doc = "Field `EXINT` writer - External interrupt reset"]
+pub type EXINT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `ADC` reader - ADC reset"]
+pub type ADC_R = crate::BitReader;
+#[doc = "Field `ADC` writer - ADC reset"]
+pub type ADC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `TMR1` reader - TMR1 reset"]
+pub type TMR1_R = crate::BitReader;
+#[doc = "Field `TMR1` writer - TMR1 reset"]
+pub type TMR1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `SPI1` reader - SPI1 reset"]
+pub type SPI1_R = crate::BitReader;
+#[doc = "Field `SPI1` writer - SPI1 reset"]
+pub type SPI1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `USART1` reader - USART1 reset"]
+pub type USART1_R = crate::BitReader;
+#[doc = "Field `USART1` writer - USART1 reset"]
+pub type USART1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `TMR15` reader - Timer15 reset"]
+pub type TMR15_R = crate::BitReader;
+#[doc = "Field `TMR15` writer - Timer15 reset"]
+pub type TMR15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `TMR16` reader - Timer16 reset"]
+pub type TMR16_R = crate::BitReader;
+#[doc = "Field `TMR16` writer - Timer16 reset"]
+pub type TMR16_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `TMR17` reader - Timer17 reset"]
+pub type TMR17_R = crate::BitReader;
+#[doc = "Field `TMR17` writer - Timer17 reset"]
+pub type TMR17_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - System config and comparator reset"]
     #[inline(always)]
-    pub fn scfgcmprst(&self) -> SCFGCMPRST_R {
-        SCFGCMPRST_R::new((self.bits & 1) != 0)
+    pub fn scfgcmp(&self) -> SCFGCMP_R {
+        SCFGCMP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - External interrupt reset"]
     #[inline(always)]
-    pub fn exintrst(&self) -> EXINTRST_R {
-        EXINTRST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn exint(&self) -> EXINT_R {
+        EXINT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 9 - ADC reset"]
     #[inline(always)]
-    pub fn adcrst(&self) -> ADCRST_R {
-        ADCRST_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn adc(&self) -> ADC_R {
+        ADC_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 11 - TMR1 reset"]
     #[inline(always)]
-    pub fn tmr1rst(&self) -> TMR1RST_R {
-        TMR1RST_R::new(((self.bits >> 11) & 1) != 0)
+    pub fn tmr1(&self) -> TMR1_R {
+        TMR1_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - SPI1 reset"]
     #[inline(always)]
-    pub fn spi1rst(&self) -> SPI1RST_R {
-        SPI1RST_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn spi1(&self) -> SPI1_R {
+        SPI1_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 14 - USART1 reset"]
     #[inline(always)]
-    pub fn usart1rst(&self) -> USART1RST_R {
-        USART1RST_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn usart1(&self) -> USART1_R {
+        USART1_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 16 - Timer15 reset"]
     #[inline(always)]
-    pub fn tmr15rst(&self) -> TMR15RST_R {
-        TMR15RST_R::new(((self.bits >> 16) & 1) != 0)
+    pub fn tmr15(&self) -> TMR15_R {
+        TMR15_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bit 17 - Timer16 reset"]
     #[inline(always)]
-    pub fn tmr16rst(&self) -> TMR16RST_R {
-        TMR16RST_R::new(((self.bits >> 17) & 1) != 0)
+    pub fn tmr16(&self) -> TMR16_R {
+        TMR16_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Bit 18 - Timer17 reset"]
     #[inline(always)]
-    pub fn tmr17rst(&self) -> TMR17RST_R {
-        TMR17RST_R::new(((self.bits >> 18) & 1) != 0)
+    pub fn tmr17(&self) -> TMR17_R {
+        TMR17_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - System config and comparator reset"]
     #[inline(always)]
     #[must_use]
-    pub fn scfgcmprst(&mut self) -> SCFGCMPRST_W<APB2RST_SPEC, 0> {
-        SCFGCMPRST_W::new(self)
+    pub fn scfgcmp(&mut self) -> SCFGCMP_W<APB2RST_SPEC, 0> {
+        SCFGCMP_W::new(self)
     }
     #[doc = "Bit 1 - External interrupt reset"]
     #[inline(always)]
     #[must_use]
-    pub fn exintrst(&mut self) -> EXINTRST_W<APB2RST_SPEC, 1> {
-        EXINTRST_W::new(self)
+    pub fn exint(&mut self) -> EXINT_W<APB2RST_SPEC, 1> {
+        EXINT_W::new(self)
     }
     #[doc = "Bit 9 - ADC reset"]
     #[inline(always)]
     #[must_use]
-    pub fn adcrst(&mut self) -> ADCRST_W<APB2RST_SPEC, 9> {
-        ADCRST_W::new(self)
+    pub fn adc(&mut self) -> ADC_W<APB2RST_SPEC, 9> {
+        ADC_W::new(self)
     }
     #[doc = "Bit 11 - TMR1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr1rst(&mut self) -> TMR1RST_W<APB2RST_SPEC, 11> {
-        TMR1RST_W::new(self)
+    pub fn tmr1(&mut self) -> TMR1_W<APB2RST_SPEC, 11> {
+        TMR1_W::new(self)
     }
     #[doc = "Bit 12 - SPI1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn spi1rst(&mut self) -> SPI1RST_W<APB2RST_SPEC, 12> {
-        SPI1RST_W::new(self)
+    pub fn spi1(&mut self) -> SPI1_W<APB2RST_SPEC, 12> {
+        SPI1_W::new(self)
     }
     #[doc = "Bit 14 - USART1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn usart1rst(&mut self) -> USART1RST_W<APB2RST_SPEC, 14> {
-        USART1RST_W::new(self)
+    pub fn usart1(&mut self) -> USART1_W<APB2RST_SPEC, 14> {
+        USART1_W::new(self)
     }
     #[doc = "Bit 16 - Timer15 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr15rst(&mut self) -> TMR15RST_W<APB2RST_SPEC, 16> {
-        TMR15RST_W::new(self)
+    pub fn tmr15(&mut self) -> TMR15_W<APB2RST_SPEC, 16> {
+        TMR15_W::new(self)
     }
     #[doc = "Bit 17 - Timer16 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr16rst(&mut self) -> TMR16RST_W<APB2RST_SPEC, 17> {
-        TMR16RST_W::new(self)
+    pub fn tmr16(&mut self) -> TMR16_W<APB2RST_SPEC, 17> {
+        TMR16_W::new(self)
     }
     #[doc = "Bit 18 - Timer17 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr17rst(&mut self) -> TMR17RST_W<APB2RST_SPEC, 18> {
-        TMR17RST_W::new(self)
+    pub fn tmr17(&mut self) -> TMR17_W<APB2RST_SPEC, 18> {
+        TMR17_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

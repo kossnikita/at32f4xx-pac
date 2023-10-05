@@ -2,23 +2,23 @@
 pub type R = crate::R<AHBLPEN2_SPEC>;
 #[doc = "Register `AHBLPEN2` writer"]
 pub type W = crate::W<AHBLPEN2_SPEC>;
-#[doc = "Field `OTGFS1LPEN` reader - OTGFS1 clock enable during sleep mode"]
-pub type OTGFS1LPEN_R = crate::BitReader;
-#[doc = "Field `OTGFS1LPEN` writer - OTGFS1 clock enable during sleep mode"]
-pub type OTGFS1LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `OTGFS1LP` reader - OTGFS1 clock enable during sleep mode"]
+pub type OTGFS1LP_R = crate::BitReader;
+#[doc = "Field `OTGFS1LP` writer - OTGFS1 clock enable during sleep mode"]
+pub type OTGFS1LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 7 - OTGFS1 clock enable during sleep mode"]
     #[inline(always)]
-    pub fn otgfs1lpen(&self) -> OTGFS1LPEN_R {
-        OTGFS1LPEN_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn otgfs1lp(&self) -> OTGFS1LP_R {
+        OTGFS1LP_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 7 - OTGFS1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn otgfs1lpen(&mut self) -> OTGFS1LPEN_W<AHBLPEN2_SPEC, 7> {
-        OTGFS1LPEN_W::new(self)
+    pub fn otgfs1lp(&mut self) -> OTGFS1LP_W<AHBLPEN2_SPEC, 7> {
+        OTGFS1LP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

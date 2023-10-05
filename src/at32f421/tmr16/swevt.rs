@@ -43,28 +43,145 @@ where
         self.variant(OVFSWTRW_A::Overflow)
     }
 }
-#[doc = "Field `C1SWTR` reader - Channel 1 event triggered by software"]
-pub type C1SWTR_R = crate::BitReader;
-#[doc = "Field `C1SWTR` writer - Channel 1 event triggered by software"]
-pub type C1SWTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `CSWTR[1-1]` reader - Channel %s event triggered by software"]
+pub type CSWTR_R = crate::BitReader<C1SWTRW_A>;
+#[doc = "Channel %s event triggered by software\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum C1SWTRW_A {
+    #[doc = "1: Generate a channel event"]
+    Event = 1,
+}
+impl From<C1SWTRW_A> for bool {
+    #[inline(always)]
+    fn from(variant: C1SWTRW_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl CSWTR_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<C1SWTRW_A> {
+        match self.bits {
+            true => Some(C1SWTRW_A::Event),
+            _ => None,
+        }
+    }
+    #[doc = "Generate a channel event"]
+    #[inline(always)]
+    pub fn is_event(&self) -> bool {
+        *self == C1SWTRW_A::Event
+    }
+}
+#[doc = "Field `CSWTR[1-1]` writer - Channel %s event triggered by software"]
+pub type CSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, C1SWTRW_A>;
+impl<'a, REG, const O: u8> CSWTR_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Generate a channel event"]
+    #[inline(always)]
+    pub fn event(self) -> &'a mut crate::W<REG> {
+        self.variant(C1SWTRW_A::Event)
+    }
+}
 #[doc = "Field `HALLSWTR` reader - HALL event triggered by software"]
-pub type HALLSWTR_R = crate::BitReader;
+pub type HALLSWTR_R = crate::BitReader<HALLSWTRW_A>;
+#[doc = "HALL event triggered by software\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum HALLSWTRW_A {
+    #[doc = "1: Generate a HALL event"]
+    Event = 1,
+}
+impl From<HALLSWTRW_A> for bool {
+    #[inline(always)]
+    fn from(variant: HALLSWTRW_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl HALLSWTR_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<HALLSWTRW_A> {
+        match self.bits {
+            true => Some(HALLSWTRW_A::Event),
+            _ => None,
+        }
+    }
+    #[doc = "Generate a HALL event"]
+    #[inline(always)]
+    pub fn is_event(&self) -> bool {
+        *self == HALLSWTRW_A::Event
+    }
+}
 #[doc = "Field `HALLSWTR` writer - HALL event triggered by software"]
-pub type HALLSWTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HALLSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, HALLSWTRW_A>;
+impl<'a, REG, const O: u8> HALLSWTR_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Generate a HALL event"]
+    #[inline(always)]
+    pub fn event(self) -> &'a mut crate::W<REG> {
+        self.variant(HALLSWTRW_A::Event)
+    }
+}
 #[doc = "Field `BRKSWTR` reader - Brake event triggered by software"]
-pub type BRKSWTR_R = crate::BitReader;
+pub type BRKSWTR_R = crate::BitReader<BRKSWTRW_A>;
+#[doc = "Brake event triggered by software\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum BRKSWTRW_A {
+    #[doc = "1: Generate a break event"]
+    Event = 1,
+}
+impl From<BRKSWTRW_A> for bool {
+    #[inline(always)]
+    fn from(variant: BRKSWTRW_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl BRKSWTR_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<BRKSWTRW_A> {
+        match self.bits {
+            true => Some(BRKSWTRW_A::Event),
+            _ => None,
+        }
+    }
+    #[doc = "Generate a break event"]
+    #[inline(always)]
+    pub fn is_event(&self) -> bool {
+        *self == BRKSWTRW_A::Event
+    }
+}
 #[doc = "Field `BRKSWTR` writer - Brake event triggered by software"]
-pub type BRKSWTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BRKSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, BRKSWTRW_A>;
+impl<'a, REG, const O: u8> BRKSWTR_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Generate a break event"]
+    #[inline(always)]
+    pub fn event(self) -> &'a mut crate::W<REG> {
+        self.variant(BRKSWTRW_A::Event)
+    }
+}
 impl R {
     #[doc = "Bit 0 - Overflow event triggered by software"]
     #[inline(always)]
     pub fn ovfswtr(&self) -> OVFSWTR_R {
         OVFSWTR_R::new((self.bits & 1) != 0)
     }
+    #[doc = "Channel [1-1]
+event triggered by software"]
+    #[inline(always)]
+    pub unsafe fn cswtr(&self, n: u8) -> CSWTR_R {
+        CSWTR_R::new(((self.bits >> ((n - 1) * 0 + 1)) & 1) != 0)
+    }
     #[doc = "Bit 1 - Channel 1 event triggered by software"]
     #[inline(always)]
-    pub fn c1swtr(&self) -> C1SWTR_R {
-        C1SWTR_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn c1swtr(&self) -> CSWTR_R {
+        CSWTR_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 5 - HALL event triggered by software"]
     #[inline(always)]
@@ -84,11 +201,18 @@ impl W {
     pub fn ovfswtr(&mut self) -> OVFSWTR_W<SWEVT_SPEC, 0> {
         OVFSWTR_W::new(self)
     }
+    #[doc = "Channel [1-1]
+event triggered by software"]
+    #[inline(always)]
+    #[must_use]
+    pub unsafe fn cswtr<const O: u8>(&mut self) -> CSWTR_W<SWEVT_SPEC, O> {
+        CSWTR_W::new(self)
+    }
     #[doc = "Bit 1 - Channel 1 event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn c1swtr(&mut self) -> C1SWTR_W<SWEVT_SPEC, 1> {
-        C1SWTR_W::new(self)
+    pub fn c1swtr(&mut self) -> CSWTR_W<SWEVT_SPEC, 1> {
+        CSWTR_W::new(self)
     }
     #[doc = "Bit 5 - HALL event triggered by software"]
     #[inline(always)]
@@ -119,7 +243,7 @@ impl crate::Readable for SWEVT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swevt::W`](W) writer structure"]
 impl crate::Writable for SWEVT_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x01;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0xa3;
 }
 #[doc = "`reset()` method sets SWEVT to value 0"]
 impl crate::Resettable for SWEVT_SPEC {

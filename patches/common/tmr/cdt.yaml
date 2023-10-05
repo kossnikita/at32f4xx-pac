@@ -1,0 +1,10 @@
+_array:
+  C[1-4]DT: {}
+_modify:
+  C?DT:
+    description: "Channel data register"
+C?DT:
+  _modify:
+    C?DT:
+      name: CDT
+      description: "Channel data value"

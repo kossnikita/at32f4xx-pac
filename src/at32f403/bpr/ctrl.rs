@@ -3,13 +3,125 @@ pub type R = crate::R<CTRL_SPEC>;
 #[doc = "Register `CTRL` writer"]
 pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `TPEN` reader - Tamper pin enable"]
-pub type TPEN_R = crate::BitReader;
+pub type TPEN_R = crate::BitReader<TPENR_A>;
+#[doc = "Tamper pin enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TPENR_A {
+    #[doc = "0: TAMPER pin is disabled"]
+    Disabled = 0,
+    #[doc = "1: TAMPER pin is enabled"]
+    Enabled = 1,
+}
+impl From<TPENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: TPENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl TPEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TPENR_A {
+        match self.bits {
+            false => TPENR_A::Disabled,
+            true => TPENR_A::Enabled,
+        }
+    }
+    #[doc = "TAMPER pin is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == TPENR_A::Disabled
+    }
+    #[doc = "TAMPER pin is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == TPENR_A::Enabled
+    }
+}
+#[doc = "Tamper pin enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TPENW_AW {
+    #[doc = "0: TAMPER pin disable"]
+    Disable = 0,
+    #[doc = "1: TAMPER pin enable"]
+    Enable = 1,
+}
+impl From<TPENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: TPENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `TPEN` writer - Tamper pin enable"]
-pub type TPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TPENW_AW>;
+impl<'a, REG, const O: u8> TPEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "TAMPER pin disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(TPENW_AW::Disable)
+    }
+    #[doc = "TAMPER pin enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(TPENW_AW::Enable)
+    }
+}
 #[doc = "Field `TPP` reader - TAMPER pin polarity"]
-pub type TPP_R = crate::BitReader;
+pub type TPP_R = crate::BitReader<TPP_A>;
+#[doc = "TAMPER pin polarity\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TPP_A {
+    #[doc = "0: Active high"]
+    High = 0,
+    #[doc = "1: Active low"]
+    Low = 1,
+}
+impl From<TPP_A> for bool {
+    #[inline(always)]
+    fn from(variant: TPP_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl TPP_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TPP_A {
+        match self.bits {
+            false => TPP_A::High,
+            true => TPP_A::Low,
+        }
+    }
+    #[doc = "Active high"]
+    #[inline(always)]
+    pub fn is_high(&self) -> bool {
+        *self == TPP_A::High
+    }
+    #[doc = "Active low"]
+    #[inline(always)]
+    pub fn is_low(&self) -> bool {
+        *self == TPP_A::Low
+    }
+}
 #[doc = "Field `TPP` writer - TAMPER pin polarity"]
-pub type TPP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TPP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TPP_A>;
+impl<'a, REG, const O: u8> TPP_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Active high"]
+    #[inline(always)]
+    pub fn high(self) -> &'a mut crate::W<REG> {
+        self.variant(TPP_A::High)
+    }
+    #[doc = "Active low"]
+    #[inline(always)]
+    pub fn low(self) -> &'a mut crate::W<REG> {
+        self.variant(TPP_A::Low)
+    }
+}
 impl R {
     #[doc = "Bit 0 - Tamper pin enable"]
     #[inline(always)]

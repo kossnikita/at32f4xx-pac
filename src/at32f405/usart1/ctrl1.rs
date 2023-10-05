@@ -3,61 +3,838 @@ pub type R = crate::R<CTRL1_SPEC>;
 #[doc = "Register `CTRL1` writer"]
 pub type W = crate::W<CTRL1_SPEC>;
 #[doc = "Field `SBF` reader - Send break frame"]
-pub type SBF_R = crate::BitReader;
+pub type SBF_R = crate::BitReader<SBFR_A>;
+#[doc = "Send break frame\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum SBFR_A {
+    #[doc = "0: No break frame is transmitted"]
+    NoTransmission = 0,
+    #[doc = "1: Break frame is transmitted"]
+    Transmitting = 1,
+}
+impl From<SBFR_A> for bool {
+    #[inline(always)]
+    fn from(variant: SBFR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl SBF_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> SBFR_A {
+        match self.bits {
+            false => SBFR_A::NoTransmission,
+            true => SBFR_A::Transmitting,
+        }
+    }
+    #[doc = "No break frame is transmitted"]
+    #[inline(always)]
+    pub fn is_no_transmission(&self) -> bool {
+        *self == SBFR_A::NoTransmission
+    }
+    #[doc = "Break frame is transmitted"]
+    #[inline(always)]
+    pub fn is_transmitting(&self) -> bool {
+        *self == SBFR_A::Transmitting
+    }
+}
+#[doc = "Send break frame\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum SBFW_AW {
+    #[doc = "0: Clear send break frame"]
+    Clear = 0,
+    #[doc = "1: Send break frame"]
+    Send = 1,
+}
+impl From<SBFW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: SBFW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `SBF` writer - Send break frame"]
-pub type SBF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SBF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SBFW_AW>;
+impl<'a, REG, const O: u8> SBF_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Clear send break frame"]
+    #[inline(always)]
+    pub fn clear(self) -> &'a mut crate::W<REG> {
+        self.variant(SBFW_AW::Clear)
+    }
+    #[doc = "Send break frame"]
+    #[inline(always)]
+    pub fn send(self) -> &'a mut crate::W<REG> {
+        self.variant(SBFW_AW::Send)
+    }
+}
 #[doc = "Field `RM` reader - Receiver mute"]
-pub type RM_R = crate::BitReader;
+pub type RM_R = crate::BitReader<RM_A>;
+#[doc = "Receiver mute\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RM_A {
+    #[doc = "0: Receiver is in active mode"]
+    Active = 0,
+    #[doc = "1: Receiver is in mute mode"]
+    Mute = 1,
+}
+impl From<RM_A> for bool {
+    #[inline(always)]
+    fn from(variant: RM_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl RM_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> RM_A {
+        match self.bits {
+            false => RM_A::Active,
+            true => RM_A::Mute,
+        }
+    }
+    #[doc = "Receiver is in active mode"]
+    #[inline(always)]
+    pub fn is_active(&self) -> bool {
+        *self == RM_A::Active
+    }
+    #[doc = "Receiver is in mute mode"]
+    #[inline(always)]
+    pub fn is_mute(&self) -> bool {
+        *self == RM_A::Mute
+    }
+}
 #[doc = "Field `RM` writer - Receiver mute"]
-pub type RM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RM_A>;
+impl<'a, REG, const O: u8> RM_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Receiver is in active mode"]
+    #[inline(always)]
+    pub fn active(self) -> &'a mut crate::W<REG> {
+        self.variant(RM_A::Active)
+    }
+    #[doc = "Receiver is in mute mode"]
+    #[inline(always)]
+    pub fn mute(self) -> &'a mut crate::W<REG> {
+        self.variant(RM_A::Mute)
+    }
+}
 #[doc = "Field `REN` reader - Receiver enable"]
-pub type REN_R = crate::BitReader;
+pub type REN_R = crate::BitReader<RENR_A>;
+#[doc = "Receiver enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RENR_A {
+    #[doc = "0: Receiver is disabled"]
+    Disabled = 0,
+    #[doc = "1: Receiver is enabled"]
+    Enabled = 1,
+}
+impl From<RENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: RENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl REN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> RENR_A {
+        match self.bits {
+            false => RENR_A::Disabled,
+            true => RENR_A::Enabled,
+        }
+    }
+    #[doc = "Receiver is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == RENR_A::Disabled
+    }
+    #[doc = "Receiver is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == RENR_A::Enabled
+    }
+}
+#[doc = "Receiver enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RENW_AW {
+    #[doc = "0: Receiver disable"]
+    Disable = 0,
+    #[doc = "1: Receiver enable"]
+    Enable = 1,
+}
+impl From<RENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: RENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `REN` writer - Receiver enable"]
-pub type REN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RENW_AW>;
+impl<'a, REG, const O: u8> REN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Receiver disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(RENW_AW::Disable)
+    }
+    #[doc = "Receiver enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(RENW_AW::Enable)
+    }
+}
 #[doc = "Field `TEN` reader - Transmitter enable"]
-pub type TEN_R = crate::BitReader;
+pub type TEN_R = crate::BitReader<TENR_A>;
+#[doc = "Transmitter enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TENR_A {
+    #[doc = "0: Transmitter is disabled"]
+    Disabled = 0,
+    #[doc = "1: Transmitter is enabled"]
+    Enabled = 1,
+}
+impl From<TENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: TENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl TEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TENR_A {
+        match self.bits {
+            false => TENR_A::Disabled,
+            true => TENR_A::Enabled,
+        }
+    }
+    #[doc = "Transmitter is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == TENR_A::Disabled
+    }
+    #[doc = "Transmitter is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == TENR_A::Enabled
+    }
+}
+#[doc = "Transmitter enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TENW_AW {
+    #[doc = "0: Transmitter disable"]
+    Disable = 0,
+    #[doc = "1: Transmitter enable"]
+    Enable = 1,
+}
+impl From<TENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: TENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `TEN` writer - Transmitter enable"]
-pub type TEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TENW_AW>;
+impl<'a, REG, const O: u8> TEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Transmitter disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(TENW_AW::Disable)
+    }
+    #[doc = "Transmitter enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(TENW_AW::Enable)
+    }
+}
 #[doc = "Field `IDLEIEN` reader - IDLE interrupt enable"]
-pub type IDLEIEN_R = crate::BitReader;
+pub type IDLEIEN_R = crate::BitReader<IDLEIENR_A>;
+#[doc = "IDLE interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum IDLEIENR_A {
+    #[doc = "0: IDLE interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: IDLE interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<IDLEIENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: IDLEIENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl IDLEIEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> IDLEIENR_A {
+        match self.bits {
+            false => IDLEIENR_A::Disabled,
+            true => IDLEIENR_A::Enabled,
+        }
+    }
+    #[doc = "IDLE interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == IDLEIENR_A::Disabled
+    }
+    #[doc = "IDLE interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == IDLEIENR_A::Enabled
+    }
+}
+#[doc = "IDLE interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum IDLEIENW_AW {
+    #[doc = "0: IDLE interrupt disable"]
+    Disable = 0,
+    #[doc = "1: IDLE interrupt enable"]
+    Enable = 1,
+}
+impl From<IDLEIENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: IDLEIENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `IDLEIEN` writer - IDLE interrupt enable"]
-pub type IDLEIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IDLEIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, IDLEIENW_AW>;
+impl<'a, REG, const O: u8> IDLEIEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "IDLE interrupt disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(IDLEIENW_AW::Disable)
+    }
+    #[doc = "IDLE interrupt enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(IDLEIENW_AW::Enable)
+    }
+}
 #[doc = "Field `RDBFIEN` reader - RDBF interrupt enable"]
-pub type RDBFIEN_R = crate::BitReader;
+pub type RDBFIEN_R = crate::BitReader<RDBFIENR_A>;
+#[doc = "RDBF interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RDBFIENR_A {
+    #[doc = "0: RDBF interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: RDBF interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<RDBFIENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: RDBFIENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl RDBFIEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> RDBFIENR_A {
+        match self.bits {
+            false => RDBFIENR_A::Disabled,
+            true => RDBFIENR_A::Enabled,
+        }
+    }
+    #[doc = "RDBF interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == RDBFIENR_A::Disabled
+    }
+    #[doc = "RDBF interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == RDBFIENR_A::Enabled
+    }
+}
+#[doc = "RDBF interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum RDBFIENW_AW {
+    #[doc = "0: RDBF interrupt disable"]
+    Disable = 0,
+    #[doc = "1: RDBF interrupt enable"]
+    Enable = 1,
+}
+impl From<RDBFIENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: RDBFIENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `RDBFIEN` writer - RDBF interrupt enable"]
-pub type RDBFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RDBFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RDBFIENW_AW>;
+impl<'a, REG, const O: u8> RDBFIEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "RDBF interrupt disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(RDBFIENW_AW::Disable)
+    }
+    #[doc = "RDBF interrupt enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(RDBFIENW_AW::Enable)
+    }
+}
 #[doc = "Field `TDCIEN` reader - TDC interrupt enable"]
-pub type TDCIEN_R = crate::BitReader;
+pub type TDCIEN_R = crate::BitReader<TDCIENR_A>;
+#[doc = "TDC interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TDCIENR_A {
+    #[doc = "0: TDC interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: TDC interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<TDCIENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: TDCIENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl TDCIEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TDCIENR_A {
+        match self.bits {
+            false => TDCIENR_A::Disabled,
+            true => TDCIENR_A::Enabled,
+        }
+    }
+    #[doc = "TDC interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == TDCIENR_A::Disabled
+    }
+    #[doc = "TDC interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == TDCIENR_A::Enabled
+    }
+}
+#[doc = "TDC interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TDCIENW_AW {
+    #[doc = "0: TDC interrupt disable"]
+    Disable = 0,
+    #[doc = "1: TDC interrupt enable"]
+    Enable = 1,
+}
+impl From<TDCIENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: TDCIENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `TDCIEN` writer - TDC interrupt enable"]
-pub type TDCIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TDCIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TDCIENW_AW>;
+impl<'a, REG, const O: u8> TDCIEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "TDC interrupt disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(TDCIENW_AW::Disable)
+    }
+    #[doc = "TDC interrupt enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(TDCIENW_AW::Enable)
+    }
+}
 #[doc = "Field `TDBEIEN` reader - TDBE interrupt enable"]
-pub type TDBEIEN_R = crate::BitReader;
+pub type TDBEIEN_R = crate::BitReader<TDBEIENR_A>;
+#[doc = "TDBE interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TDBEIENR_A {
+    #[doc = "0: TDBE interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: TDBE interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<TDBEIENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: TDBEIENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl TDBEIEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> TDBEIENR_A {
+        match self.bits {
+            false => TDBEIENR_A::Disabled,
+            true => TDBEIENR_A::Enabled,
+        }
+    }
+    #[doc = "TDBE interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == TDBEIENR_A::Disabled
+    }
+    #[doc = "TDBE interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == TDBEIENR_A::Enabled
+    }
+}
+#[doc = "TDBE interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TDBEIENW_AW {
+    #[doc = "0: TDBE interrupt disable"]
+    Disable = 0,
+    #[doc = "1: TDBE interrupt enable"]
+    Enable = 1,
+}
+impl From<TDBEIENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: TDBEIENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `TDBEIEN` writer - TDBE interrupt enable"]
-pub type TDBEIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TDBEIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TDBEIENW_AW>;
+impl<'a, REG, const O: u8> TDBEIEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "TDBE interrupt disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(TDBEIENW_AW::Disable)
+    }
+    #[doc = "TDBE interrupt enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(TDBEIENW_AW::Enable)
+    }
+}
 #[doc = "Field `PERRIEN` reader - PERR interrupt enable"]
-pub type PERRIEN_R = crate::BitReader;
+pub type PERRIEN_R = crate::BitReader<PERRIENR_A>;
+#[doc = "PERR interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PERRIENR_A {
+    #[doc = "0: PERR interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: PERR interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<PERRIENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: PERRIENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl PERRIEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PERRIENR_A {
+        match self.bits {
+            false => PERRIENR_A::Disabled,
+            true => PERRIENR_A::Enabled,
+        }
+    }
+    #[doc = "PERR interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == PERRIENR_A::Disabled
+    }
+    #[doc = "PERR interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == PERRIENR_A::Enabled
+    }
+}
+#[doc = "PERR interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PERRIENW_AW {
+    #[doc = "0: PERR interrupt disable"]
+    Disable = 0,
+    #[doc = "1: PERR interrupt enable"]
+    Enable = 1,
+}
+impl From<PERRIENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: PERRIENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `PERRIEN` writer - PERR interrupt enable"]
-pub type PERRIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PERRIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PERRIENW_AW>;
+impl<'a, REG, const O: u8> PERRIEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "PERR interrupt disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(PERRIENW_AW::Disable)
+    }
+    #[doc = "PERR interrupt enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(PERRIENW_AW::Enable)
+    }
+}
 #[doc = "Field `PSEL` reader - Parity selection"]
-pub type PSEL_R = crate::BitReader;
+pub type PSEL_R = crate::BitReader<PSEL_A>;
+#[doc = "Parity selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PSEL_A {
+    #[doc = "0: Even parity"]
+    Even = 0,
+    #[doc = "1: Odd parity"]
+    Odd = 1,
+}
+impl From<PSEL_A> for bool {
+    #[inline(always)]
+    fn from(variant: PSEL_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl PSEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PSEL_A {
+        match self.bits {
+            false => PSEL_A::Even,
+            true => PSEL_A::Odd,
+        }
+    }
+    #[doc = "Even parity"]
+    #[inline(always)]
+    pub fn is_even(&self) -> bool {
+        *self == PSEL_A::Even
+    }
+    #[doc = "Odd parity"]
+    #[inline(always)]
+    pub fn is_odd(&self) -> bool {
+        *self == PSEL_A::Odd
+    }
+}
 #[doc = "Field `PSEL` writer - Parity selection"]
-pub type PSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PSEL_A>;
+impl<'a, REG, const O: u8> PSEL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Even parity"]
+    #[inline(always)]
+    pub fn even(self) -> &'a mut crate::W<REG> {
+        self.variant(PSEL_A::Even)
+    }
+    #[doc = "Odd parity"]
+    #[inline(always)]
+    pub fn odd(self) -> &'a mut crate::W<REG> {
+        self.variant(PSEL_A::Odd)
+    }
+}
 #[doc = "Field `PEN` reader - Parity enable"]
-pub type PEN_R = crate::BitReader;
+pub type PEN_R = crate::BitReader<PENR_A>;
+#[doc = "Parity enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PENR_A {
+    #[doc = "0: Parity is disabled"]
+    Disabled = 0,
+    #[doc = "1: Parity is enabled"]
+    Enabled = 1,
+}
+impl From<PENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: PENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl PEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> PENR_A {
+        match self.bits {
+            false => PENR_A::Disabled,
+            true => PENR_A::Enabled,
+        }
+    }
+    #[doc = "Parity is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == PENR_A::Disabled
+    }
+    #[doc = "Parity is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == PENR_A::Enabled
+    }
+}
+#[doc = "Parity enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum PENW_AW {
+    #[doc = "0: Parity disable"]
+    Disable = 0,
+    #[doc = "1: Parity enable"]
+    Enable = 1,
+}
+impl From<PENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: PENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `PEN` writer - Parity enable"]
-pub type PEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PENW_AW>;
+impl<'a, REG, const O: u8> PEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Parity disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(PENW_AW::Disable)
+    }
+    #[doc = "Parity enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(PENW_AW::Enable)
+    }
+}
 #[doc = "Field `WUM` reader - Wake up mode"]
-pub type WUM_R = crate::BitReader;
+pub type WUM_R = crate::BitReader<WUM_A>;
+#[doc = "Wake up mode\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum WUM_A {
+    #[doc = "0: Waken up by idle line"]
+    Idle = 0,
+    #[doc = "1: Waken up by ID match"]
+    Id = 1,
+}
+impl From<WUM_A> for bool {
+    #[inline(always)]
+    fn from(variant: WUM_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl WUM_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> WUM_A {
+        match self.bits {
+            false => WUM_A::Idle,
+            true => WUM_A::Id,
+        }
+    }
+    #[doc = "Waken up by idle line"]
+    #[inline(always)]
+    pub fn is_idle(&self) -> bool {
+        *self == WUM_A::Idle
+    }
+    #[doc = "Waken up by ID match"]
+    #[inline(always)]
+    pub fn is_id(&self) -> bool {
+        *self == WUM_A::Id
+    }
+}
 #[doc = "Field `WUM` writer - Wake up mode"]
-pub type WUM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WUM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, WUM_A>;
+impl<'a, REG, const O: u8> WUM_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Waken up by idle line"]
+    #[inline(always)]
+    pub fn idle(self) -> &'a mut crate::W<REG> {
+        self.variant(WUM_A::Idle)
+    }
+    #[doc = "Waken up by ID match"]
+    #[inline(always)]
+    pub fn id(self) -> &'a mut crate::W<REG> {
+        self.variant(WUM_A::Id)
+    }
+}
 #[doc = "Field `DBN0` reader - low bit for Data bit num"]
 pub type DBN0_R = crate::BitReader;
 #[doc = "Field `DBN0` writer - low bit for Data bit num"]
 pub type DBN0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `UEN` reader - USART enable"]
-pub type UEN_R = crate::BitReader;
+pub type UEN_R = crate::BitReader<UENR_A>;
+#[doc = "USART enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum UENR_A {
+    #[doc = "0: USART is disabled"]
+    Disabled = 0,
+    #[doc = "1: USART is enabled"]
+    Enabled = 1,
+}
+impl From<UENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: UENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl UEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> UENR_A {
+        match self.bits {
+            false => UENR_A::Disabled,
+            true => UENR_A::Enabled,
+        }
+    }
+    #[doc = "USART is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == UENR_A::Disabled
+    }
+    #[doc = "USART is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == UENR_A::Enabled
+    }
+}
+#[doc = "USART enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum UENW_AW {
+    #[doc = "0: USART disable"]
+    Disable = 0,
+    #[doc = "1: USART enable"]
+    Enable = 1,
+}
+impl From<UENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: UENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `UEN` writer - USART enable"]
-pub type UEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, UENW_AW>;
+impl<'a, REG, const O: u8> UEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "USART disable"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(UENW_AW::Disable)
+    }
+    #[doc = "USART enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(UENW_AW::Enable)
+    }
+}
 #[doc = "Field `CMDIE` reader - Character match detection interrupt enable"]
 pub type CMDIE_R = crate::BitReader;
 #[doc = "Field `CMDIE` writer - Character match detection interrupt enable"]

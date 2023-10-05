@@ -1,0 +1,252 @@
+UART?,USART?:
+  STS:
+    PERR:
+      NoError: [0, "No parity error occurs"]
+      Error: [1, "Parity error occurs"]
+    FERR:
+      NoError: [0, "No framing error is detected"]
+      Error: [1, "Framing error is detected"]
+    NERR:
+      NoNoise: [0, "No noise is detected"]
+      Noise: [1, "Noise is detected"]
+    ROERR:
+      NoError: [0, "No overflow error"]
+      Overflow: [1, "Overflow error is detected"]
+    IDLEF:
+      NoIdle: [0, "No idle line is detected"]
+      Idle: [1, "Idle line is detected"]
+    RDBF:
+      _read:
+        NotFull: [0, "Data is not received"]
+        Full: [1, "Data is received"]
+      _W0C:
+        Clear: [0, "Clear receive buffer full flag"]
+    TDC:
+      _read:
+        NotCompleted: [0, "Transmission is not completed"]
+        Completed: [1, "Transmission is completed"]
+      _W0C:
+        Clear: [0, "Clear transmit data complete flag"]
+    TDBE:
+      NotEmpty: [0, "Data is not transferred to the shift register"]
+      Empty: [1, "Data is transferred to the shift register"]
+    BFF:
+      _read:
+        NoBreak: [0, "Break frame is not detected"]
+        Break: [1, "Break frame is detected"]
+      _W0C:
+        Clear: [0, "Clear break frame flag"]
+    CTSCF:
+      _read:
+        NoChange: [0, "No change on the CTS status line"]
+        Change: [1, "A change occurs on the CTS status line"]
+      _W0C:
+        Clear: [0, "Clear CTS change flag"]
+  DT:
+    DT: [0, 0x1FF]
+  BAUDR:
+    DIV: [0, 0xFFFF]
+  CTRL1:
+    SBF:
+      _read:
+        NoTransmission: [0, "No break frame is transmitted"]
+        Transmitting: [1, "Break frame is transmitted"]
+      _write:
+        Clear: [0, "Clear send break frame"]
+        Send: [1, "Send break frame"]
+    RM:
+      Active: [0, "Receiver is in active mode"]
+      Mute: [1, "Receiver is in mute mode"]
+    REN:
+      _read:
+        Disabled: [0, "Receiver is disabled"]
+        Enabled: [1, "Receiver is enabled"]
+      _write:
+        Disable: [0, "Receiver disable"]
+        Enable: [1, "Receiver enable"]
+    TEN:
+      _read:
+        Disabled: [0, "Transmitter is disabled"]
+        Enabled: [1, "Transmitter is enabled"]
+      _write:
+        Disable: [0, "Transmitter disable"]
+        Enable: [1, "Transmitter enable"]
+    IDLEIEN:
+      _read:
+        Disabled: [0, "IDLE interrupt is disabled"]
+        Enabled: [1, "IDLE interrupt is enabled"]
+      _write:
+        Disable: [0, "IDLE interrupt disable"]
+        Enable: [1, "IDLE interrupt enable"]
+    RDBFIEN:
+      _read:
+        Disabled: [0, "RDBF interrupt is disabled"]
+        Enabled: [1, "RDBF interrupt is enabled"]
+      _write:
+        Disable: [0, "RDBF interrupt disable"]
+        Enable: [1, "RDBF interrupt enable"]
+    TDCIEN:
+      _read:
+        Disabled: [0, "TDC interrupt is disabled"]
+        Enabled: [1, "TDC interrupt is enabled"]
+      _write:
+        Disable: [0, "TDC interrupt disable"]
+        Enable: [1, "TDC interrupt enable"]
+    TDBEIEN:
+      _read:
+        Disabled: [0, "TDBE interrupt is disabled"]
+        Enabled: [1, "TDBE interrupt is enabled"]
+      _write:
+        Disable: [0, "TDBE interrupt disable"]
+        Enable: [1, "TDBE interrupt enable"]
+    PERRIEN:
+      _read:
+        Disabled: [0, "PERR interrupt is disabled"]
+        Enabled: [1, "PERR interrupt is enabled"]
+      _write:
+        Disable: [0, "PERR interrupt disable"]
+        Enable: [1, "PERR interrupt enable"]
+    PSEL:
+      Even: [0, "Even parity"]
+      Odd: [1, "Odd parity"]
+    PEN:
+      _read:
+        Disabled: [0, "Parity is disabled"]
+        Enabled: [1, "Parity is enabled"]
+      _write:
+        Disable: [0, "Parity disable"]
+        Enable: [1, "Parity enable"]
+    WUM:
+      Idle: [0, "Waken up by idle line"]
+      ID: [1, "Waken up by ID match"]
+    UEN:
+      _read:
+        Disabled: [0, "USART is disabled"]
+        Enabled: [1, "USART is enabled"]
+      _write:
+        Disable: [0, "USART disable"]
+        Enable: [1, "USART enable"]
+  CTRL2:
+    BFBN:
+      bit10: [0, "10-bit break frame"]
+      bit11: [1, "11-bit break frame"]
+    BFIEN:
+      _read:
+        Disabled: [0, "Break frame interrupt is disabled"]
+        Enabled: [1, "Break frame interrupt is enabled"]
+      _write:
+        Disable: [0, "Break frame interrupt disable"]
+        Enable: [1, "Break frame interrupt enable"]
+    LBCP:
+      _read:
+        Disabled: [0, "The clock pulse of the last data bit is no output on the clock pin"]
+        Enabled: [1, "The clock pulse of the last data bit is output on the clock pin"]
+      _write:
+        Disable: [0, "The clock pulse of the last data bit is no output on the clock pin"]
+        Enable: [1, "The clock pulse of the last data bit is output on the clock pin"]
+    CLKPHA:
+      First: [0, "Data capture is done on the first clock edge"]
+      Second: [1, "Data capture is done on the second clock edge"]
+    CLKPOL:
+      Low: [0, "Clock output low"]
+      High: [1, "Clock output high"]
+    CLKEN:
+      _read:
+        Disabled: [0, "Clock is disabled"]
+        Enabled: [1, "Clock is enabled"]
+      _write:
+        Disable: [0, "Clock disable"]
+        Enable: [1, "Clock enable"]
+    STOPBN:
+      bit1: [0, "1 stop bit"]
+      bit05: [1, "0.5 stop bit"]
+      bit2: [2, "2 stop bits"]
+      bit15: [3, "1.5 stop bit"]
+    LINEN:
+      _read:
+        Disabled: [0, "LIN mode is disabled"]
+        Enabled: [1, "LIN mode is enabled"]
+      _write:
+        Disable: [0, "LIN mode disable"]
+        Enable: [1, "LIN mode enable"]
+  CTRL3:
+    ERRIEN:
+      _read:
+        Disabled: [0, "Error interrupt is disabled"]
+        Enabled: [1, "Error interrupt is enabled"]
+      _write:
+        Disable: [0, "Error interrupt disable"]
+        Enable: [1, "Error interrupt enable"]
+    IRDAEN:
+      _read:
+        Disabled: [0, "IrDA is disabled"]
+        Enabled: [1, "IrDA is enabled"]
+      _write:
+        Disable: [0, "IrDA disable"]
+        Enable: [1, "IrDA enable"]
+    IRDALP:
+      _read:
+        Disabled: [0, "IrDA low-power mode is disabled"]
+        Enabled: [1, "IrDA low-power mode is enabled"]
+      _write:
+        Disable: [0, "IrDA low-power mode disable"]
+        Enable: [1, "IrDA low-power mode enable"]
+    SLBEN:
+      _read:
+        Disabled: [0, "Single-wire bidirectional half-duplex is disabled"]
+        Enabled: [1, "Single-wire bidirectional half-duplex is enabled"]
+      _write:
+        Disable: [0, "Single-wire bidirectional half-duplex disable"]
+        Enable: [1, "Single-wire bidirectional half-duplex enable"]
+    SCNACKEN:
+      _read:
+        Disabled: [0, "Smartcard NACK is disabled"]
+        Enabled: [1, "Smartcard NACK is enabled"]
+      _write:
+        Disable: [0, "Smartcard NACK disable"]
+        Enable: [1, "Smartcard NACK enable"]
+    SCMEN:
+      _read:
+        Disabled: [0, "Smartcard mode is disabled"]
+        Enabled: [1, "Smartcard mode is enabled"]
+      _write:
+        Disable: [0, "Smartcard mode disable"]
+        Enable: [1, "Smartcard mode enable"]
+    DMAREN:
+      _read:
+        Disabled: [0, "DMA receiver is disabled"]
+        Enabled: [1, "DMA receiver is enabled"]
+      _write:
+        Disable: [0, "DMA receiver disable"]
+        Enable: [1, "DMA receiver enable"]
+    DMATEN:
+      _read:
+        Disabled: [0, "DMA transmitter is disabled"]
+        Enabled: [1, "DMA transmitter is enabled"]
+      _write:
+        Disable: [0, "DMA transmitter disable"]
+        Enable: [1, "DMA transmitter enable"]
+    RTSEN:
+      _read:
+        Disabled: [0, "RTS is disabled"]
+        Enabled: [1, "RTS is enabled"]
+      _write:
+        Disable: [0, "RTS disable"]
+        Enable: [1, "RTS enable"]    
+    CTSEN:
+      _read:
+        Disabled: [0, "CTS is disabled"]
+        Enabled: [1, "CTS is enabled"]
+      _write:
+        Disable: [0, "CTS disable"]
+        Enable: [1, "CTS enable"]    
+    CTSCFIEN:
+      _read:
+        Disabled: [0, "CTSCF interrupt is disabled"]
+        Enabled: [1, "CTSCF interrupt is enabled"]
+      _write:
+        Disable: [0, "CTSCF interrupt disable"]
+        Enable: [1, "CTSCF interrupt enable"]  
+  GDIV:
+    ISDIV: [0, 0xFF]
+    SCGT: [0, 0xFF]

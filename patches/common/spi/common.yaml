@@ -1,0 +1,68 @@
+_include:
+  - wo_i2s.yaml
+SPI?:
+  CTRL2:
+    HWCSOE:
+      _read:
+        Disabled: [0, "Hardware CS output is disabled"]
+        Enabled: [1, "Hardware CS output is enabled"]
+      _write:
+        Disable: [0, "Hardware CS output disable"]
+        Enable: [1, "Hardware CS output enable"]
+  STS:
+    ACS:
+      Left: [0, "Left channel"]
+      Right: [1, "Right channel"]
+    TUERR:
+      NoError: [0, "No underload error"]
+      Underload: [1, "Underload error occurs"]
+  I2SCTRL:
+    _strip: "I2S"
+    CBN:
+      bit16: [0, "16-bit wide"]
+      bit32: [1, "32-bit wide"]
+    DBN:
+      bit16: [0, "16-bit wide"]
+      bit24: [1, "24-bit wide"]
+      bit32: [3, "32-bit wide"]
+    CLKPOL:
+      Low: [0, "Low"]
+      High: [1, "High"]
+    STDSEL:
+      Philips: [0, "Philips standard"]
+      MSB: [1, "MSB-aligned standard (left-aligned)"]
+      LSB: [2, "LSB-aligned standard (right-aligned)"]
+      PCM: [3, "PCM standard"]
+    PCMFSSEL:
+      Short: [0, "Short frame synchronization"]
+      Long: [1, "Long frame synchronization"]
+    OPERSEL:
+      SlaveTrasmission: [0, "Slave transmission"]
+      SlaveReception: [1, "Slave reception"]
+      MasterTrasmission: [2, "Master transmission"]
+      MasterReception: [3, "Master reception"]
+    EN:
+      _read:
+        Disabled: [0, "I2S is disabled"]
+        Enabled: [1, "I2S is enabled"]
+      _write:
+        Disable: [0, "I2S disable"]
+        Enable: [1, "I2S enable"]
+    MSEL:
+      SPI: [0, "SPI mode"]
+      I2S: [1, "I2S mode"]
+  I2SCLK:
+    _strip: "I2S"
+    DIV7_0: [0, 0xFF]
+    ODD:
+      Double: [0, "Actual divider factor = DIV*2"]
+      DoublePlusOne: [1, "Actual divider factor = (DIV*2)+1"]
+    MCLKOE:
+      _read:
+        Disabled: [0, "Master clock output is disabled"]
+        Enabled: [1, "Master clock output is enabled"]
+      _write:
+        Disable: [0, "Master clock output disable"]
+        Enable: [1, "Master clock output enable"]
+    DIV9_8: [0, 3]
+    

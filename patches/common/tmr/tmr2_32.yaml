@@ -1,3 +1,9 @@
 TMR2:
-  C?DT:
+  _include:
+    - 32bit.yaml
+  CTRL1:
+    PMEN:
+      bit16: [0, "CVAL, PR and CxDT are 16-bit"]
+      bit32: [1, "CVAL, PR and CxDT are extended from 16-bit to 32-bit"]
+  C%sDT:
     CDT: [0, 0xffffffff]

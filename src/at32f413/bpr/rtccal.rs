@@ -5,19 +5,187 @@ pub type W = crate::W<RTCCAL_SPEC>;
 #[doc = "Field `CALVAL` reader - Calibration value"]
 pub type CALVAL_R = crate::FieldReader;
 #[doc = "Field `CALVAL` writer - Calibration value"]
-pub type CALVAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type CALVAL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 7, O>;
 #[doc = "Field `CALOUT` reader - Calibration Clock Output"]
-pub type CALOUT_R = crate::BitReader;
+pub type CALOUT_R = crate::BitReader<CALOUTR_A>;
+#[doc = "Calibration Clock Output\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CALOUTR_A {
+    #[doc = "0: No effect"]
+    NoOutput = 0,
+    #[doc = "1: Output the RTC clock with a frequency divided by 64 on the TAMPER pin"]
+    Output = 1,
+}
+impl From<CALOUTR_A> for bool {
+    #[inline(always)]
+    fn from(variant: CALOUTR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl CALOUT_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> CALOUTR_A {
+        match self.bits {
+            false => CALOUTR_A::NoOutput,
+            true => CALOUTR_A::Output,
+        }
+    }
+    #[doc = "No effect"]
+    #[inline(always)]
+    pub fn is_no_output(&self) -> bool {
+        *self == CALOUTR_A::NoOutput
+    }
+    #[doc = "Output the RTC clock with a frequency divided by 64 on the TAMPER pin"]
+    #[inline(always)]
+    pub fn is_output(&self) -> bool {
+        *self == CALOUTR_A::Output
+    }
+}
+#[doc = "Calibration Clock Output\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CALOUTW_AW {
+    #[doc = "1: Output the RTC clock with a frequency divided by 64 on the TAMPER pin"]
+    Output = 1,
+}
+impl From<CALOUTW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: CALOUTW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `CALOUT` writer - Calibration Clock Output"]
-pub type CALOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CALOUT_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, CALOUTW_AW>;
+impl<'a, REG, const O: u8> CALOUT_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Output the RTC clock with a frequency divided by 64 on the TAMPER pin"]
+    #[inline(always)]
+    pub fn output(self) -> &'a mut crate::W<REG> {
+        self.variant(CALOUTW_AW::Output)
+    }
+}
 #[doc = "Field `OUTEN` reader - Output enable"]
-pub type OUTEN_R = crate::BitReader;
+pub type OUTEN_R = crate::BitReader<OUTENR_A>;
+#[doc = "Output enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OUTENR_A {
+    #[doc = "0: Output is disabled"]
+    Disabled = 0,
+    #[doc = "1: Output is enabled"]
+    Enabled = 1,
+}
+impl From<OUTENR_A> for bool {
+    #[inline(always)]
+    fn from(variant: OUTENR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl OUTEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> OUTENR_A {
+        match self.bits {
+            false => OUTENR_A::Disabled,
+            true => OUTENR_A::Enabled,
+        }
+    }
+    #[doc = "Output is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == OUTENR_A::Disabled
+    }
+    #[doc = "Output is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == OUTENR_A::Enabled
+    }
+}
+#[doc = "Output enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OUTENW_AW {
+    #[doc = "1: Output enable"]
+    Enable = 1,
+}
+impl From<OUTENW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: OUTENW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `OUTEN` writer - Output enable"]
-pub type OUTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTEN_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, OUTENW_AW>;
+impl<'a, REG, const O: u8> OUTEN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Output enable"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(OUTENW_AW::Enable)
+    }
+}
 #[doc = "Field `OUTSEL` reader - Output selection"]
-pub type OUTSEL_R = crate::BitReader;
+pub type OUTSEL_R = crate::BitReader<OUTSELR_A>;
+#[doc = "Output selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OUTSELR_A {
+    #[doc = "0: RTC alarm event output"]
+    Rtc = 0,
+    #[doc = "1: Second event output"]
+    Second = 1,
+}
+impl From<OUTSELR_A> for bool {
+    #[inline(always)]
+    fn from(variant: OUTSELR_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl OUTSEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> OUTSELR_A {
+        match self.bits {
+            false => OUTSELR_A::Rtc,
+            true => OUTSELR_A::Second,
+        }
+    }
+    #[doc = "RTC alarm event output"]
+    #[inline(always)]
+    pub fn is_rtc(&self) -> bool {
+        *self == OUTSELR_A::Rtc
+    }
+    #[doc = "Second event output"]
+    #[inline(always)]
+    pub fn is_second(&self) -> bool {
+        *self == OUTSELR_A::Second
+    }
+}
+#[doc = "Output selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum OUTSELW_AW {
+    #[doc = "1: Second event output"]
+    Second = 1,
+}
+impl From<OUTSELW_AW> for bool {
+    #[inline(always)]
+    fn from(variant: OUTSELW_AW) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `OUTSEL` writer - Output selection"]
-pub type OUTSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTSEL_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, OUTSELW_AW>;
+impl<'a, REG, const O: u8> OUTSEL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Second event output"]
+    #[inline(always)]
+    pub fn second(self) -> &'a mut crate::W<REG> {
+        self.variant(OUTSELW_AW::Second)
+    }
+}
 impl R {
     #[doc = "Bits 0:6 - Calibration value"]
     #[inline(always)]
@@ -82,7 +250,7 @@ impl crate::Readable for RTCCAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rtccal::W`](W) writer structure"]
 impl crate::Writable for RTCCAL_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x0380;
 }
 #[doc = "`reset()` method sets RTCCAL to value 0"]
 impl crate::Resettable for RTCCAL_SPEC {

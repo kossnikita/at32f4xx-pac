@@ -1,0 +1,49 @@
+CTRL:
+  HICKEN:
+    _read:
+      Disabled: [0, "High speed internal clock is disabled"]
+      Enabled: [1, "High speed internal clock is enabled"]
+    _write:
+      Disable: [0, "High speed internal clock disable"]
+      Enable: [1, "High speed internal clock enable"]
+  HICKSTBL:
+    _read:
+      NotReady: [0, "Not ready"]
+      Ready: [1, "Ready"]
+  HICKCAL: [0, 0xFF]
+  HEXTEN:
+    _read:
+      Disabled: [0, "High speed external crystal is disabled"]
+      Enabled: [1, "High speed external crystal is enabled"]
+    _write:
+      Disable: [0, "High speed external crystal disable"]
+      Enable: [1, "High speed external crystal enable"]
+  HEXTSTBL:
+    _read:
+      NotReady: [0, "Not ready"]
+      Ready: [1, "Ready"]
+  HEXTBYPS:
+    _read:
+      Disabled: [0, "High speed external crystal bypass is disabled"]
+      Enabled: [1, "High speed external crystal bypass is enabled"]
+    _write:
+      Disable: [0, "High speed external crystal bypass disable"]
+      Enable: [1, "High speed external crystal bypass enable"]
+  CFDEN:
+    _read:
+      Disabled: [0, "Clock failure detector is disabled"]
+      Enabled: [1, "Clock failure detector is enabled"]
+    _write:
+      Disable: [0, "Clock failure detector disable"]
+      Enable: [1, "Clock failure detector enable"]
+  PLLEN:
+    _read:
+      Disabled: [0, "PLL is disabled"]
+      Enabled: [1, "PLL is enabled"]
+    _write:
+      Disable: [0, "PLL disable"]
+      Enable: [1, "PLL enable"]
+  PLLSTBL:
+    _read:
+      NotReady: [0, "Not ready"]
+      Ready: [1, "Ready"]

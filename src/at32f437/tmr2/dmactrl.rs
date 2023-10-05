@@ -5,11 +5,11 @@ pub type W = crate::W<DMACTRL_SPEC>;
 #[doc = "Field `ADDR` reader - DMA transfer address offset"]
 pub type ADDR_R = crate::FieldReader;
 #[doc = "Field `ADDR` writer - DMA transfer address offset"]
-pub type ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type ADDR_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 5, O>;
 #[doc = "Field `DTB` reader - DMA transfer bytes"]
 pub type DTB_R = crate::FieldReader;
 #[doc = "Field `DTB` writer - DMA transfer bytes"]
-pub type DTB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type DTB_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - DMA transfer address offset"]
     #[inline(always)]

@@ -2,68 +2,68 @@
 pub type R = crate::R<AHBRST3_SPEC>;
 #[doc = "Register `AHBRST3` writer"]
 pub type W = crate::W<AHBRST3_SPEC>;
-#[doc = "Field `XMCRST` reader - XMC reset"]
-pub type XMCRST_R = crate::BitReader;
-#[doc = "Field `XMCRST` writer - XMC reset"]
-pub type XMCRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `QSPI1RST` reader - QSPI1 reset"]
-pub type QSPI1RST_R = crate::BitReader;
-#[doc = "Field `QSPI1RST` writer - QSPI1 reset"]
-pub type QSPI1RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `QSPI2RST` reader - QSPI2 reset"]
-pub type QSPI2RST_R = crate::BitReader;
-#[doc = "Field `QSPI2RST` writer - QSPI2 reset"]
-pub type QSPI2RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `SDIO2RST` reader - SDIO2 reset"]
-pub type SDIO2RST_R = crate::BitReader;
-#[doc = "Field `SDIO2RST` writer - SDIO2 reset"]
-pub type SDIO2RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `XMC` reader - XMC reset"]
+pub type XMC_R = crate::BitReader;
+#[doc = "Field `XMC` writer - XMC reset"]
+pub type XMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `QSPI1` reader - QSPI1 reset"]
+pub type QSPI1_R = crate::BitReader;
+#[doc = "Field `QSPI1` writer - QSPI1 reset"]
+pub type QSPI1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `QSPI2` reader - QSPI2 reset"]
+pub type QSPI2_R = crate::BitReader;
+#[doc = "Field `QSPI2` writer - QSPI2 reset"]
+pub type QSPI2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `SDIO2` reader - SDIO2 reset"]
+pub type SDIO2_R = crate::BitReader;
+#[doc = "Field `SDIO2` writer - SDIO2 reset"]
+pub type SDIO2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - XMC reset"]
     #[inline(always)]
-    pub fn xmcrst(&self) -> XMCRST_R {
-        XMCRST_R::new((self.bits & 1) != 0)
+    pub fn xmc(&self) -> XMC_R {
+        XMC_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - QSPI1 reset"]
     #[inline(always)]
-    pub fn qspi1rst(&self) -> QSPI1RST_R {
-        QSPI1RST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn qspi1(&self) -> QSPI1_R {
+        QSPI1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 14 - QSPI2 reset"]
     #[inline(always)]
-    pub fn qspi2rst(&self) -> QSPI2RST_R {
-        QSPI2RST_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn qspi2(&self) -> QSPI2_R {
+        QSPI2_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - SDIO2 reset"]
     #[inline(always)]
-    pub fn sdio2rst(&self) -> SDIO2RST_R {
-        SDIO2RST_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn sdio2(&self) -> SDIO2_R {
+        SDIO2_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - XMC reset"]
     #[inline(always)]
     #[must_use]
-    pub fn xmcrst(&mut self) -> XMCRST_W<AHBRST3_SPEC, 0> {
-        XMCRST_W::new(self)
+    pub fn xmc(&mut self) -> XMC_W<AHBRST3_SPEC, 0> {
+        XMC_W::new(self)
     }
     #[doc = "Bit 1 - QSPI1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi1rst(&mut self) -> QSPI1RST_W<AHBRST3_SPEC, 1> {
-        QSPI1RST_W::new(self)
+    pub fn qspi1(&mut self) -> QSPI1_W<AHBRST3_SPEC, 1> {
+        QSPI1_W::new(self)
     }
     #[doc = "Bit 14 - QSPI2 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi2rst(&mut self) -> QSPI2RST_W<AHBRST3_SPEC, 14> {
-        QSPI2RST_W::new(self)
+    pub fn qspi2(&mut self) -> QSPI2_W<AHBRST3_SPEC, 14> {
+        QSPI2_W::new(self)
     }
     #[doc = "Bit 15 - SDIO2 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio2rst(&mut self) -> SDIO2RST_W<AHBRST3_SPEC, 15> {
-        SDIO2RST_W::new(self)
+    pub fn sdio2(&mut self) -> SDIO2_W<AHBRST3_SPEC, 15> {
+        SDIO2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

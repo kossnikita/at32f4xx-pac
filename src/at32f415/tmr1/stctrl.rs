@@ -139,59 +139,6 @@ where
         self.variant(SMSEL_A::External)
     }
 }
-#[doc = "Field `COSSEL` reader - Channel output switch selection"]
-pub type COSSEL_R = crate::BitReader<COSSEL_A>;
-#[doc = "Channel output switch selection\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum COSSEL_A {
-    #[doc = "0: Select EXT as CxORAW switch"]
-    Ext = 0,
-    #[doc = "1: Select CxORAW_OFF as CxORAW switch"]
-    CxOrawOff = 1,
-}
-impl From<COSSEL_A> for bool {
-    #[inline(always)]
-    fn from(variant: COSSEL_A) -> Self {
-        variant as u8 != 0
-    }
-}
-impl COSSEL_R {
-    #[doc = "Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> COSSEL_A {
-        match self.bits {
-            false => COSSEL_A::Ext,
-            true => COSSEL_A::CxOrawOff,
-        }
-    }
-    #[doc = "Select EXT as CxORAW switch"]
-    #[inline(always)]
-    pub fn is_ext(&self) -> bool {
-        *self == COSSEL_A::Ext
-    }
-    #[doc = "Select CxORAW_OFF as CxORAW switch"]
-    #[inline(always)]
-    pub fn is_cx_oraw_off(&self) -> bool {
-        *self == COSSEL_A::CxOrawOff
-    }
-}
-#[doc = "Field `COSSEL` writer - Channel output switch selection"]
-pub type COSSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, COSSEL_A>;
-impl<'a, REG, const O: u8> COSSEL_W<'a, REG, O>
-where
-    REG: crate::Writable + crate::RegisterSpec,
-{
-    #[doc = "Select EXT as CxORAW switch"]
-    #[inline(always)]
-    pub fn ext(self) -> &'a mut crate::W<REG> {
-        self.variant(COSSEL_A::Ext)
-    }
-    #[doc = "Select CxORAW_OFF as CxORAW switch"]
-    #[inline(always)]
-    pub fn cx_oraw_off(self) -> &'a mut crate::W<REG> {
-        self.variant(COSSEL_A::CxOrawOff)
-    }
-}
 #[doc = "Field `STIS` reader - Subordinate TMR input selection"]
 pub type STIS_R = crate::FieldReader<STIS_A>;
 #[doc = "Subordinate TMR input selection\n\nValue on reset: 0"]
@@ -848,11 +795,6 @@ impl R {
     pub fn smsel(&self) -> SMSEL_R {
         SMSEL_R::new((self.bits & 7) as u8)
     }
-    #[doc = "Bit 3 - Channel output switch selection"]
-    #[inline(always)]
-    pub fn cossel(&self) -> COSSEL_R {
-        COSSEL_R::new(((self.bits >> 3) & 1) != 0)
-    }
     #[doc = "Bits 4:6 - Subordinate TMR input selection"]
     #[inline(always)]
     pub fn stis(&self) -> STIS_R {
@@ -890,12 +832,6 @@ impl W {
     #[must_use]
     pub fn smsel(&mut self) -> SMSEL_W<STCTRL_SPEC, 0> {
         SMSEL_W::new(self)
-    }
-    #[doc = "Bit 3 - Channel output switch selection"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cossel(&mut self) -> COSSEL_W<STCTRL_SPEC, 3> {
-        COSSEL_W::new(self)
     }
     #[doc = "Bits 4:6 - Subordinate TMR input selection"]
     #[inline(always)]

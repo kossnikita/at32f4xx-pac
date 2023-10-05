@@ -2,68 +2,68 @@
 pub type R = crate::R<AHBEN3_SPEC>;
 #[doc = "Register `AHBEN3` writer"]
 pub type W = crate::W<AHBEN3_SPEC>;
-#[doc = "Field `XMCEN` reader - XMC clock enable"]
-pub type XMCEN_R = crate::BitReader;
-#[doc = "Field `XMCEN` writer - XMC clock enable"]
-pub type XMCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `QSPI1EN` reader - QSPI1 clock enable"]
-pub type QSPI1EN_R = crate::BitReader;
-#[doc = "Field `QSPI1EN` writer - QSPI1 clock enable"]
-pub type QSPI1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `QSPI2EN` reader - QSPI2 clock enable"]
-pub type QSPI2EN_R = crate::BitReader;
-#[doc = "Field `QSPI2EN` writer - QSPI2 clock enable"]
-pub type QSPI2EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `SDIO2EN` reader - SDIO 2 clock enable"]
-pub type SDIO2EN_R = crate::BitReader;
-#[doc = "Field `SDIO2EN` writer - SDIO 2 clock enable"]
-pub type SDIO2EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `XMC` reader - XMC clock enable"]
+pub type XMC_R = crate::BitReader;
+#[doc = "Field `XMC` writer - XMC clock enable"]
+pub type XMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `QSPI1` reader - QSPI1 clock enable"]
+pub type QSPI1_R = crate::BitReader;
+#[doc = "Field `QSPI1` writer - QSPI1 clock enable"]
+pub type QSPI1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `QSPI2` reader - QSPI2 clock enable"]
+pub type QSPI2_R = crate::BitReader;
+#[doc = "Field `QSPI2` writer - QSPI2 clock enable"]
+pub type QSPI2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `SDIO2` reader - SDIO 2 clock enable"]
+pub type SDIO2_R = crate::BitReader;
+#[doc = "Field `SDIO2` writer - SDIO 2 clock enable"]
+pub type SDIO2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - XMC clock enable"]
     #[inline(always)]
-    pub fn xmcen(&self) -> XMCEN_R {
-        XMCEN_R::new((self.bits & 1) != 0)
+    pub fn xmc(&self) -> XMC_R {
+        XMC_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - QSPI1 clock enable"]
     #[inline(always)]
-    pub fn qspi1en(&self) -> QSPI1EN_R {
-        QSPI1EN_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn qspi1(&self) -> QSPI1_R {
+        QSPI1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 14 - QSPI2 clock enable"]
     #[inline(always)]
-    pub fn qspi2en(&self) -> QSPI2EN_R {
-        QSPI2EN_R::new(((self.bits >> 14) & 1) != 0)
+    pub fn qspi2(&self) -> QSPI2_R {
+        QSPI2_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - SDIO 2 clock enable"]
     #[inline(always)]
-    pub fn sdio2en(&self) -> SDIO2EN_R {
-        SDIO2EN_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn sdio2(&self) -> SDIO2_R {
+        SDIO2_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - XMC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn xmcen(&mut self) -> XMCEN_W<AHBEN3_SPEC, 0> {
-        XMCEN_W::new(self)
+    pub fn xmc(&mut self) -> XMC_W<AHBEN3_SPEC, 0> {
+        XMC_W::new(self)
     }
     #[doc = "Bit 1 - QSPI1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi1en(&mut self) -> QSPI1EN_W<AHBEN3_SPEC, 1> {
-        QSPI1EN_W::new(self)
+    pub fn qspi1(&mut self) -> QSPI1_W<AHBEN3_SPEC, 1> {
+        QSPI1_W::new(self)
     }
     #[doc = "Bit 14 - QSPI2 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi2en(&mut self) -> QSPI2EN_W<AHBEN3_SPEC, 14> {
-        QSPI2EN_W::new(self)
+    pub fn qspi2(&mut self) -> QSPI2_W<AHBEN3_SPEC, 14> {
+        QSPI2_W::new(self)
     }
     #[doc = "Bit 15 - SDIO 2 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio2en(&mut self) -> SDIO2EN_W<AHBEN3_SPEC, 15> {
-        SDIO2EN_W::new(self)
+    pub fn sdio2(&mut self) -> SDIO2_W<AHBEN3_SPEC, 15> {
+        SDIO2_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

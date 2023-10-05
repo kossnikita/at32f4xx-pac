@@ -2,53 +2,53 @@
 pub type R = crate::R<AHBRST2_SPEC>;
 #[doc = "Register `AHBRST2` writer"]
 pub type W = crate::W<AHBRST2_SPEC>;
-#[doc = "Field `DVPRST` reader - DVP reset"]
-pub type DVPRST_R = crate::BitReader;
-#[doc = "Field `DVPRST` writer - DVP reset"]
-pub type DVPRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `OTGFS1RST` reader - OTGFS1 reset"]
-pub type OTGFS1RST_R = crate::BitReader;
-#[doc = "Field `OTGFS1RST` writer - OTGFS1 reset"]
-pub type OTGFS1RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
-#[doc = "Field `SDIO1RST` reader - SDIO1 reset"]
-pub type SDIO1RST_R = crate::BitReader;
-#[doc = "Field `SDIO1RST` writer - SDIO1 reset"]
-pub type SDIO1RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `DVP` reader - DVP reset"]
+pub type DVP_R = crate::BitReader;
+#[doc = "Field `DVP` writer - DVP reset"]
+pub type DVP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `OTGFS1` reader - OTGFS1 reset"]
+pub type OTGFS1_R = crate::BitReader;
+#[doc = "Field `OTGFS1` writer - OTGFS1 reset"]
+pub type OTGFS1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+#[doc = "Field `SDIO1` reader - SDIO1 reset"]
+pub type SDIO1_R = crate::BitReader;
+#[doc = "Field `SDIO1` writer - SDIO1 reset"]
+pub type SDIO1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0 - DVP reset"]
     #[inline(always)]
-    pub fn dvprst(&self) -> DVPRST_R {
-        DVPRST_R::new((self.bits & 1) != 0)
+    pub fn dvp(&self) -> DVP_R {
+        DVP_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 7 - OTGFS1 reset"]
     #[inline(always)]
-    pub fn otgfs1rst(&self) -> OTGFS1RST_R {
-        OTGFS1RST_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn otgfs1(&self) -> OTGFS1_R {
+        OTGFS1_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 15 - SDIO1 reset"]
     #[inline(always)]
-    pub fn sdio1rst(&self) -> SDIO1RST_R {
-        SDIO1RST_R::new(((self.bits >> 15) & 1) != 0)
+    pub fn sdio1(&self) -> SDIO1_R {
+        SDIO1_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - DVP reset"]
     #[inline(always)]
     #[must_use]
-    pub fn dvprst(&mut self) -> DVPRST_W<AHBRST2_SPEC, 0> {
-        DVPRST_W::new(self)
+    pub fn dvp(&mut self) -> DVP_W<AHBRST2_SPEC, 0> {
+        DVP_W::new(self)
     }
     #[doc = "Bit 7 - OTGFS1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn otgfs1rst(&mut self) -> OTGFS1RST_W<AHBRST2_SPEC, 7> {
-        OTGFS1RST_W::new(self)
+    pub fn otgfs1(&mut self) -> OTGFS1_W<AHBRST2_SPEC, 7> {
+        OTGFS1_W::new(self)
     }
     #[doc = "Bit 15 - SDIO1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio1rst(&mut self) -> SDIO1RST_W<AHBRST2_SPEC, 15> {
-        SDIO1RST_W::new(self)
+    pub fn sdio1(&mut self) -> SDIO1_W<AHBRST2_SPEC, 15> {
+        SDIO1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -11,18 +11,10 @@ pub struct RegisterBlock {
     pub spt1: SPT1,
     #[doc = "0x10 - sample time register 2"]
     pub spt2: SPT2,
-    #[doc = "0x14 - Preempted channel 1 data offset register"]
-    pub pcdto1: PCDTO1,
-    #[doc = "0x18 - Preempted channel 2 data offset register"]
-    pub pcdto2: PCDTO2,
-    #[doc = "0x1c - Preempted channel 3 data offset register"]
-    pub pcdto3: PCDTO3,
-    #[doc = "0x20 - Preempted channel 4 data offset register"]
-    pub pcdto4: PCDTO4,
-    #[doc = "0x24 - Voltage monitoring high boundary register"]
-    pub vmhb: VMHB,
-    #[doc = "0x28 - Voltage monitoring low boundary register"]
-    pub vmlb: VMLB,
+    #[doc = "0x14..0x24 - Data offset for Preempted channel %s"]
+    pub pcdto: [PCDTO; 4],
+    #[doc = "0x24..0x2c - Voltage monitoring %s boundary register"]
+    pub vmb: [VMB; 2],
     #[doc = "0x2c - Ordinary sequence register 1"]
     pub osq1: OSQ1,
     #[doc = "0x30 - Ordinary sequence register 2"]
@@ -31,16 +23,62 @@ pub struct RegisterBlock {
     pub osq3: OSQ3,
     #[doc = "0x38 - Preempted sequence register"]
     pub psq: PSQ,
-    #[doc = "0x3c - Preempted data register 1"]
-    pub pdt1: PDT1,
-    #[doc = "0x40 - Preempted data register 2"]
-    pub pdt2: PDT2,
-    #[doc = "0x44 - Preempted data register 3"]
-    pub pdt3: PDT3,
-    #[doc = "0x48 - Preempted data register 4"]
-    pub pdt4: PDT4,
+    #[doc = "0x3c..0x4c - Preempted data register %s"]
+    pub pdt: [PDT; 4],
     #[doc = "0x4c - Ordinary data register"]
     pub odt: ODT,
+}
+impl RegisterBlock {
+    #[doc = "0x14 - Data offset for Preempted channel %s"]
+    #[inline(always)]
+    pub fn pcdto1(&self) -> &PCDTO {
+        &self.pcdto[0]
+    }
+    #[doc = "0x18 - Data offset for Preempted channel %s"]
+    #[inline(always)]
+    pub fn pcdto2(&self) -> &PCDTO {
+        &self.pcdto[1]
+    }
+    #[doc = "0x1c - Data offset for Preempted channel %s"]
+    #[inline(always)]
+    pub fn pcdto3(&self) -> &PCDTO {
+        &self.pcdto[2]
+    }
+    #[doc = "0x20 - Data offset for Preempted channel %s"]
+    #[inline(always)]
+    pub fn pcdto4(&self) -> &PCDTO {
+        &self.pcdto[3]
+    }
+    #[doc = "0x24 - Voltage monitoring %s boundary register"]
+    #[inline(always)]
+    pub fn vmhb(&self) -> &VMB {
+        &self.vmb[0]
+    }
+    #[doc = "0x28 - Voltage monitoring %s boundary register"]
+    #[inline(always)]
+    pub fn vmlb(&self) -> &VMB {
+        &self.vmb[1]
+    }
+    #[doc = "0x3c - Preempted data register %s"]
+    #[inline(always)]
+    pub fn pdt1(&self) -> &PDT {
+        &self.pdt[0]
+    }
+    #[doc = "0x40 - Preempted data register %s"]
+    #[inline(always)]
+    pub fn pdt2(&self) -> &PDT {
+        &self.pdt[1]
+    }
+    #[doc = "0x44 - Preempted data register %s"]
+    #[inline(always)]
+    pub fn pdt3(&self) -> &PDT {
+        &self.pdt[2]
+    }
+    #[doc = "0x48 - Preempted data register %s"]
+    #[inline(always)]
+    pub fn pdt4(&self) -> &PDT {
+        &self.pdt[3]
+    }
 }
 #[doc = "STS (rw) register accessor: status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sts`]
 module"]
@@ -67,36 +105,16 @@ module"]
 pub type SPT2 = crate::Reg<spt2::SPT2_SPEC>;
 #[doc = "sample time register 2"]
 pub mod spt2;
-#[doc = "PCDTO1 (rw) register accessor: Preempted channel 1 data offset register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcdto1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pcdto1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pcdto1`]
+#[doc = "PCDTO (rw) register accessor: Data offset for Preempted channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcdto::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pcdto::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pcdto`]
 module"]
-pub type PCDTO1 = crate::Reg<pcdto1::PCDTO1_SPEC>;
-#[doc = "Preempted channel 1 data offset register"]
-pub mod pcdto1;
-#[doc = "PCDTO2 (rw) register accessor: Preempted channel 2 data offset register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcdto2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pcdto2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pcdto2`]
+pub type PCDTO = crate::Reg<pcdto::PCDTO_SPEC>;
+#[doc = "Data offset for Preempted channel %s"]
+pub mod pcdto;
+#[doc = "VMB (rw) register accessor: Voltage monitoring %s boundary register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vmb::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`vmb::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`vmb`]
 module"]
-pub type PCDTO2 = crate::Reg<pcdto2::PCDTO2_SPEC>;
-#[doc = "Preempted channel 2 data offset register"]
-pub mod pcdto2;
-#[doc = "PCDTO3 (rw) register accessor: Preempted channel 3 data offset register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcdto3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pcdto3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pcdto3`]
-module"]
-pub type PCDTO3 = crate::Reg<pcdto3::PCDTO3_SPEC>;
-#[doc = "Preempted channel 3 data offset register"]
-pub mod pcdto3;
-#[doc = "PCDTO4 (rw) register accessor: Preempted channel 4 data offset register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcdto4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pcdto4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pcdto4`]
-module"]
-pub type PCDTO4 = crate::Reg<pcdto4::PCDTO4_SPEC>;
-#[doc = "Preempted channel 4 data offset register"]
-pub mod pcdto4;
-#[doc = "VMHB (rw) register accessor: Voltage monitoring high boundary register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vmhb::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`vmhb::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`vmhb`]
-module"]
-pub type VMHB = crate::Reg<vmhb::VMHB_SPEC>;
-#[doc = "Voltage monitoring high boundary register"]
-pub mod vmhb;
-#[doc = "VMLB (rw) register accessor: Voltage monitoring low boundary register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vmlb::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`vmlb::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`vmlb`]
-module"]
-pub type VMLB = crate::Reg<vmlb::VMLB_SPEC>;
-#[doc = "Voltage monitoring low boundary register"]
-pub mod vmlb;
+pub type VMB = crate::Reg<vmb::VMB_SPEC>;
+#[doc = "Voltage monitoring %s boundary register"]
+pub mod vmb;
 #[doc = "OSQ1 (rw) register accessor: Ordinary sequence register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`osq1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`osq1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`osq1`]
 module"]
 pub type OSQ1 = crate::Reg<osq1::OSQ1_SPEC>;
@@ -117,26 +135,11 @@ module"]
 pub type PSQ = crate::Reg<psq::PSQ_SPEC>;
 #[doc = "Preempted sequence register"]
 pub mod psq;
-#[doc = "PDT1 (r) register accessor: Preempted data register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pdt1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pdt1`]
+#[doc = "PDT (r) register accessor: Preempted data register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pdt::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pdt`]
 module"]
-pub type PDT1 = crate::Reg<pdt1::PDT1_SPEC>;
-#[doc = "Preempted data register 1"]
-pub mod pdt1;
-#[doc = "PDT2 (r) register accessor: Preempted data register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pdt2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pdt2`]
-module"]
-pub type PDT2 = crate::Reg<pdt2::PDT2_SPEC>;
-#[doc = "Preempted data register 2"]
-pub mod pdt2;
-#[doc = "PDT3 (r) register accessor: Preempted data register 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pdt3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pdt3`]
-module"]
-pub type PDT3 = crate::Reg<pdt3::PDT3_SPEC>;
-#[doc = "Preempted data register 3"]
-pub mod pdt3;
-#[doc = "PDT4 (r) register accessor: Preempted data register 4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pdt4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`pdt4`]
-module"]
-pub type PDT4 = crate::Reg<pdt4::PDT4_SPEC>;
-#[doc = "Preempted data register 4"]
-pub mod pdt4;
+pub type PDT = crate::Reg<pdt::PDT_SPEC>;
+#[doc = "Preempted data register %s"]
+pub mod pdt;
 #[doc = "ODT (r) register accessor: Ordinary data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`odt::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`odt`]
 module"]
 pub type ODT = crate::Reg<odt::ODT_SPEC>;
