@@ -15,8 +15,12 @@ WDT:
       div256: [6, "LICK divided by 256"]
       div256_2: [7, "LICK divided by 256"]
   RLD:
-    RLD: [0, 0xFFF]
+    _delete:
+      - RLD
   _modify:
+    RLD:
+      size: 12
+      writeConstraint: [0, 0xFFF]
     STS:
       access: read-only
   STS:

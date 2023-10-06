@@ -9,7 +9,7 @@ pub type SBS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
 #[doc = "Field `SBSMSK` reader - Sub-second mask"]
 pub type SBSMSK_R = crate::FieldReader;
 #[doc = "Field `SBSMSK` writer - Sub-second mask"]
-pub type SBSMSK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SBSMSK_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 impl R {
     #[doc = "Bits 0:14 - Sub-seconds value"]
     #[inline(always)]

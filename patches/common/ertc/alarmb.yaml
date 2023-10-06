@@ -1,0 +1,7 @@
+ERTC:
+  _derive:
+    ALB: ALA
+    ALBSBS: ALASBS
+  CTRL:
+    OUTSEL:
+      AlarmB: [2, "Alarm clock B"]

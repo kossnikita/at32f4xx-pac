@@ -1,0 +1,142 @@
+ADC,ADC?:
+  _array:
+    PCDTO?:
+      description: Data offset for Preempted channel %s
+    PDT?:
+      description: Preempted data register %s
+    VM?B:
+      description: Voltage monitoring %s boundary register
+  _modify:
+    PCDTO?:
+      size: 12
+      writeConstraint: [0, 0xFFF]
+    VM?B:
+      size: 12
+      writeConstraint: [0, 0xFFF]
+    PDT?:
+      size: 16
+      writeConstraint: [0, 0xFFFF]
+  STS:
+    VMOR:
+      _read:
+        InRange: [0, "Voltage is within the value programmed"]
+        OutOfRange: [1, "Voltage is outside the value programmed"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+    CCE,?CCE:
+      _read:
+        NotComplete: [0, "Conversion is not complete"]
+        Complete: [1, "Conversion is complete"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+    CCS,?CCS:
+      _read:
+        Idle: [0, "No channel conversion started"]
+        Started: [1, "Channel conversion has started"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+  CTRL1:
+    VMCSEL: [0, 17]
+    CCEIEN,?CCEIEN:
+      _read:
+        Disabled: [0, "Channel conversion end interrupt is disabled"]
+        Enabled: [1, "Channel conversion end interrupt is enabled"]
+      _write:
+        Disable: [0, "Channel conversion end interrupt disable"]
+        Enable: [1, "Channel conversion end interrupt enable"]
+    VMORIEN:
+      _read:
+        Disabled: [0, "Voltage monitoring out of range interrupt is disabled"]
+        Enabled: [1, "Voltage monitoring out of range interrupt is enabled"]
+      _write:
+        Disable: [0, "Voltage monitoring out of range interrupt disable"]
+        Enable: [1, "Voltage monitoring out of range interrupt enable"]
+    SQEN:
+      _read:
+        Disabled: [0, "Sequence mode is disabled"]
+        Enabled: [1, "Sequence mode is enabled"]
+      _write:
+        Disable: [0, "Sequence mode disable"]
+        Enable: [1, "Sequence mode enable"]
+    VMSGEN:
+      All: [0, "Voltage monitoring enabled on all channels"]
+      Single: [1, "Voltage monitoring enabled a single channel"]
+    PCAUTOEN:
+      _read:
+        Disabled: [0, "Preempted group automatic conversion is disabled"]
+        Enabled: [1, "Preempted group automatic conversion is enabled"]
+      _write:
+        Disable: [0, "Preempted group automatic conversion disable"]
+        Enable: [1, "Preempted group automatic conversion enable"]
+    "?CPEN":
+      _read:
+        Disabled: [0, "Partitioned mode on channels is disabled"]
+        Enabled: [1, "Partitioned mode on channels is enabled"]
+      _write:
+        Disable: [0, "Partitioned mode on channels disable"]
+        Enable: [1, "Partitioned mode on channels enable"]
+    OCPCNT: [0, 7]
+    "?CVMEN":
+      _read:
+        Disabled: [0, "Voltage monitoring is disabled"]
+        Enabled: [1, "Voltage monitoring is enabled"]
+      _write:
+        Disable: [0, "Voltage monitoring disable"]
+        Enable: [1, "Voltage monitoring enable"]
+  CTRL2:
+    ADCEN:
+      _read:
+        Disabled: [0, "ADC is disabled"]
+        Enabled: [1, "ADC is enabled"]
+      _write:
+        Disable: [0, "ADC disable"]
+        Enable: [1, "ADC enable"]
+    RPEN:
+      _read:
+        Disabled: [0, "Repetition mode is disabled"]
+        Enabled: [1, "Repetition mode is enabled"]
+      _write:
+        Disable: [0, "Repetition mode disable"]
+        Enable: [1, "Repetition mode enable"]
+    ADCAL:
+      _read:
+        Completed: [0, "Calibration completed"]
+        InProgress: [1, "Calibration is in process"]
+      _write:
+        Calibrate: [1, "Enable calibration"]
+    ADCALINIT:
+      _read:
+        Completed: [0, "Initialization completed"]
+        InProgress: [1, "Initialization is in process"]
+      _write:
+        Init: [1, "Enable initialization"]
+    DTALIGN:
+      Right: [0, "Right alignment"]
+      Left: [1, "Left alignment"]
+    "?CSWTRG":
+      NotTriggered: [0, "Conversion of ordinary channels not triggered"]
+      Triggered: [1, "Conversion of ordinary channels triggered"]
+  SPT?:
+    CSPT*: [0, 7]
+  PCDTO?:
+    _delete:
+      - PCDTO?
+  VM?B:
+    _delete:
+      - VM?B
+  OSQ1:
+    OCLEN: [0, 15]
+  OSQ?:
+    _array:
+      OSN*:
+        description: "Number of %sth conversion in ordinary sequence"
+    OSN*: [0, 17]
+  PSQ:
+    _array:
+      PSN?:
+        description: "Number of %s conversion in preempted sequence"
+    PSN?: [0, 17]
+    PCLEN: [0, 3]
+  PDT?:
+    _delete:
+      - PDT?

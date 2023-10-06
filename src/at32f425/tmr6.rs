@@ -15,8 +15,10 @@ pub struct RegisterBlock {
     _reserved5: [u8; 0x0c],
     #[doc = "0x24 - Counter value"]
     pub cval: CVAL,
+    _reserved6: [u8; 0x02],
     #[doc = "0x28 - Divider value"]
     pub div: DIV,
+    _reserved7: [u8; 0x02],
     #[doc = "0x2c - Period value"]
     pub pr: PR,
 }

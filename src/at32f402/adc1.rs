@@ -11,10 +11,24 @@ pub struct RegisterBlock {
     pub spt1: SPT1,
     #[doc = "0x10 - sample time register 2"]
     pub spt2: SPT2,
-    #[doc = "0x14..0x24 - Data offset for Preempted channel %s"]
-    pub pcdto: [PCDTO; 4],
-    #[doc = "0x24..0x2c - Voltage monitoring %s boundary register"]
-    pub vmb: [VMB; 2],
+    #[doc = "0x14 - Data offset for Preempted channel %s"]
+    pub pcdto1: PCDTO,
+    _reserved6: [u8; 0x02],
+    #[doc = "0x18 - Data offset for Preempted channel %s"]
+    pub pcdto2: PCDTO,
+    _reserved7: [u8; 0x02],
+    #[doc = "0x1c - Data offset for Preempted channel %s"]
+    pub pcdto3: PCDTO,
+    _reserved8: [u8; 0x02],
+    #[doc = "0x20 - Data offset for Preempted channel %s"]
+    pub pcdto4: PCDTO,
+    _reserved9: [u8; 0x02],
+    #[doc = "0x24 - Voltage monitoring %s boundary register"]
+    pub vmhb: VMB,
+    _reserved10: [u8; 0x02],
+    #[doc = "0x28 - Voltage monitoring %s boundary register"]
+    pub vmlb: VMB,
+    _reserved11: [u8; 0x02],
     #[doc = "0x2c - Ordinary sequence register 1"]
     pub osq1: OSQ1,
     #[doc = "0x30 - Ordinary sequence register 2"]
@@ -23,65 +37,23 @@ pub struct RegisterBlock {
     pub osq3: OSQ3,
     #[doc = "0x38 - Preempted sequence register"]
     pub psq: PSQ,
-    #[doc = "0x3c..0x4c - Preempted data register %s"]
-    pub pdt: [PDT; 4],
+    #[doc = "0x3c - Preempted data register %s"]
+    pub pdt1: PDT,
+    _reserved16: [u8; 0x02],
+    #[doc = "0x40 - Preempted data register %s"]
+    pub pdt2: PDT,
+    _reserved17: [u8; 0x02],
+    #[doc = "0x44 - Preempted data register %s"]
+    pub pdt3: PDT,
+    _reserved18: [u8; 0x02],
+    #[doc = "0x48 - Preempted data register %s"]
+    pub pdt4: PDT,
+    _reserved19: [u8; 0x02],
     #[doc = "0x4c - Ordinary data register"]
     pub odt: ODT,
-    _reserved13: [u8; 0x30],
+    _reserved20: [u8; 0x32],
     #[doc = "0x80 - oversampling register"]
     pub ovsp: OVSP,
-}
-impl RegisterBlock {
-    #[doc = "0x14 - Data offset for Preempted channel %s"]
-    #[inline(always)]
-    pub fn pcdto1(&self) -> &PCDTO {
-        &self.pcdto[0]
-    }
-    #[doc = "0x18 - Data offset for Preempted channel %s"]
-    #[inline(always)]
-    pub fn pcdto2(&self) -> &PCDTO {
-        &self.pcdto[1]
-    }
-    #[doc = "0x1c - Data offset for Preempted channel %s"]
-    #[inline(always)]
-    pub fn pcdto3(&self) -> &PCDTO {
-        &self.pcdto[2]
-    }
-    #[doc = "0x20 - Data offset for Preempted channel %s"]
-    #[inline(always)]
-    pub fn pcdto4(&self) -> &PCDTO {
-        &self.pcdto[3]
-    }
-    #[doc = "0x24 - Voltage monitoring %s boundary register"]
-    #[inline(always)]
-    pub fn vmhb(&self) -> &VMB {
-        &self.vmb[0]
-    }
-    #[doc = "0x28 - Voltage monitoring %s boundary register"]
-    #[inline(always)]
-    pub fn vmlb(&self) -> &VMB {
-        &self.vmb[1]
-    }
-    #[doc = "0x3c - Preempted data register %s"]
-    #[inline(always)]
-    pub fn pdt1(&self) -> &PDT {
-        &self.pdt[0]
-    }
-    #[doc = "0x40 - Preempted data register %s"]
-    #[inline(always)]
-    pub fn pdt2(&self) -> &PDT {
-        &self.pdt[1]
-    }
-    #[doc = "0x44 - Preempted data register %s"]
-    #[inline(always)]
-    pub fn pdt3(&self) -> &PDT {
-        &self.pdt[2]
-    }
-    #[doc = "0x48 - Preempted data register %s"]
-    #[inline(always)]
-    pub fn pdt4(&self) -> &PDT {
-        &self.pdt[3]
-    }
 }
 #[doc = "STS (rw) register accessor: status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`sts`]
 module"]

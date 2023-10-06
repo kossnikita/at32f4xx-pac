@@ -43,16 +43,23 @@ TMR*:
     OVFSWTR:
       _W1S:
         Overflow: [1, "Generate an overflow event"]
+  _modify:
+    DIV:
+      size: 16
+      writeConstraint: [0, 0xFFFF]
   DIV:
-    DIV: [0, 0xFFFF]
+    _delete:
+      - DIV
 
 TMR[1369],TMR??:
   _include:
     - 16bit.yaml
 
 TMR[139],TMR??:
-  C*DT:
-    C*DT: [0, 0xffff]
+  _modify:
+    C*DT:
+      size: 16
+      writeConstraint: [0, 0xFFFF]
 
 TMR[1239],TMR??:
   _include:

@@ -9,18 +9,20 @@ pub struct RegisterBlock {
     pub ctrl: CTRL,
     #[doc = "0x0c - initialization and status register"]
     pub sts: STS,
-    #[doc = "0x10 - Diveder register"]
+    #[doc = "0x10 - Divider register"]
     pub div: DIV,
     #[doc = "0x14 - Wakeup timer register"]
     pub wat: WAT,
-    _reserved6: [u8; 0x04],
+    _reserved6: [u8; 0x06],
     #[doc = "0x1c - Alarm A register"]
     pub ala: ALA,
     _reserved7: [u8; 0x04],
     #[doc = "0x24 - write protection register"]
     pub wp: WP,
+    _reserved8: [u8; 0x03],
     #[doc = "0x28 - sub second register"]
     pub sbs: SBS,
+    _reserved9: [u8; 0x02],
     #[doc = "0x2c - time adjust register"]
     pub tadj: TADJ,
     #[doc = "0x30 - time stamp time register"]
@@ -86,10 +88,10 @@ module"]
 pub type STS = crate::Reg<sts::STS_SPEC>;
 #[doc = "initialization and status register"]
 pub mod sts;
-#[doc = "DIV (rw) register accessor: Diveder register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`div::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`div`]
+#[doc = "DIV (rw) register accessor: Divider register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`div::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`div`]
 module"]
 pub type DIV = crate::Reg<div::DIV_SPEC>;
-#[doc = "Diveder register"]
+#[doc = "Divider register"]
 pub mod div;
 #[doc = "WAT (rw) register accessor: Wakeup timer register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wat::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wat::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`wat`]
 module"]

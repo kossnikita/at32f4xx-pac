@@ -4788,23 +4788,15 @@
             <displayName>C1DTCNT</displayName>
             <description>DMA channel %s number of data to transfer register</description>
             <addressOffset>0x4</addressOffset>
-            <size>0x20</size>
+            <size>0x10</size>
             <access>read-write</access>
             <resetValue>0x00000000</resetValue>
-            <fields>
-              <field>
-                <name>CNT</name>
-                <description>Number of data to transfer</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>16</bitWidth>
-                <writeConstraint>
-                  <range>
-                    <minimum>0</minimum>
-                    <maximum>65535</maximum>
-                  </range>
-                </writeConstraint>
-              </field>
-            </fields>
+            <writeConstraint>
+              <range>
+                <minimum>0</minimum>
+                <maximum>65535</maximum>
+              </range>
+            </writeConstraint>
           </register>
           <register>
             <name>PADDR</name>
@@ -4814,20 +4806,12 @@
             <size>0x20</size>
             <access>read-write</access>
             <resetValue>0x00000000</resetValue>
-            <fields>
-              <field>
-                <name>PADDR</name>
-                <description>Peripheral address</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-                <writeConstraint>
-                  <range>
-                    <minimum>0</minimum>
-                    <maximum>4294967295</maximum>
-                  </range>
-                </writeConstraint>
-              </field>
-            </fields>
+            <writeConstraint>
+              <range>
+                <minimum>0</minimum>
+                <maximum>4294967295</maximum>
+              </range>
+            </writeConstraint>
           </register>
           <register>
             <name>MADDR</name>
@@ -4837,20 +4821,12 @@
             <size>0x20</size>
             <access>read-write</access>
             <resetValue>0x00000000</resetValue>
-            <fields>
-              <field>
-                <name>MADDR</name>
-                <description>Memory address</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-                <writeConstraint>
-                  <range>
-                    <minimum>0</minimum>
-                    <maximum>4294967295</maximum>
-                  </range>
-                </writeConstraint>
-              </field>
-            </fields>
+            <writeConstraint>
+              <range>
+                <minimum>0</minimum>
+                <maximum>4294967295</maximum>
+              </range>
+            </writeConstraint>
           </register>
         </cluster>
         <register>
@@ -6483,23 +6459,15 @@
           <displayName>RLD</displayName>
           <description>Reload register</description>
           <addressOffset>0x8</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
-          <fields>
-            <field>
-              <name>RLD</name>
-              <description>Reload value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4095</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>STS</name>
@@ -9090,92 +9058,60 @@
           <displayName>CVAL</displayName>
           <description>Counter value</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
           <displayName>PR</displayName>
           <description>Period value</description>
           <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>RPR</name>
           <displayName>RPR</displayName>
           <description>Repetition of period value</description>
           <addressOffset>0x30</addressOffset>
-          <size>0x20</size>
+          <size>0x8</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>RPR</name>
-              <description>Repetition of period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>255</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>4</dim>
@@ -9185,23 +9121,15 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>BRK</name>
@@ -11271,43 +11199,27 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
@@ -11317,20 +11229,12 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>4</dim>
@@ -11343,20 +11247,12 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DMACTRL</name>
@@ -13134,69 +13030,45 @@
           <displayName>CVAL</displayName>
           <description>Counter value</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
           <displayName>PR</displayName>
           <description>Period value</description>
           <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>4</dim>
@@ -13206,23 +13078,15 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DMACTRL</name>
@@ -14118,69 +13982,45 @@
           <displayName>CVAL</displayName>
           <description>Counter value</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
           <displayName>PR</displayName>
           <description>Period value</description>
           <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>2</dim>
@@ -14190,23 +14030,15 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -14911,69 +14743,45 @@
           <displayName>CVAL</displayName>
           <description>Counter value</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
           <displayName>PR</displayName>
           <description>Period value</description>
           <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>1</dim>
@@ -14983,23 +14791,15 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -15267,69 +15067,42 @@
           <displayName>C1</displayName>
           <description>compare value 1</description>
           <addressOffset>0xC</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <resetValue>0x00001F2C</resetValue>
-          <fields>
-            <field>
-              <name>C1</name>
-              <description>Compare 1</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>C2</name>
           <displayName>C2</displayName>
           <description>compare value 2</description>
           <addressOffset>0x10</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <resetValue>0x00001F40</resetValue>
-          <fields>
-            <field>
-              <name>C2</name>
-              <description>Compare 2</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>C3</name>
           <displayName>C3</displayName>
           <description>compare value 3</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <resetValue>0x00001F54</resetValue>
-          <fields>
-            <field>
-              <name>C3</name>
-              <description>Compare 3</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <access>read-write</access>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -15735,69 +15508,45 @@
           <displayName>CVAL</displayName>
           <description>Counter value</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
           <displayName>PR</displayName>
           <description>Period value</description>
           <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -17060,92 +16809,48 @@
           <displayName>DT</displayName>
           <description>data register</description>
           <addressOffset>0xC</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DT</name>
-              <description>Data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>CPOLY</name>
           <displayName>CPOLY</displayName>
           <description>CRC polynomial register</description>
           <addressOffset>0x10</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000007</resetValue>
-          <fields>
-            <field>
-              <name>CPOLY</name>
-              <description>CRC polynomial</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>RCRC</name>
           <displayName>RCRC</displayName>
           <description>Receive CRC register</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>RCRC</name>
-              <description>Receive CRC</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
         </register>
         <register>
           <name>TCRC</name>
           <displayName>TCRC</displayName>
           <description>Transmit CRC register</description>
           <addressOffset>0x18</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>TCRC</name>
-              <description>Transmit CRC</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
         </register>
         <register>
           <name>I2SCTRL</name>
@@ -17765,46 +17470,30 @@
           <displayName>DT</displayName>
           <description>Data register</description>
           <addressOffset>0x4</addressOffset>
-          <size>0x20</size>
+          <size>0x9</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DT</name>
-              <description>Data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>9</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>511</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>511</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>BAUDR</name>
           <displayName>BAUDR</displayName>
           <description>Baud rate register</description>
           <addressOffset>0x8</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Division</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>CTRL1</name>
@@ -19651,23 +19340,15 @@
           <displayName>PCDTO1</displayName>
           <description>Data offset for Preempted channel %s</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PCDTO</name>
-              <description>Data offset for Preempted channel 1</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4095</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>2</dim>
@@ -19677,23 +19358,15 @@
           <displayName>VMHB</displayName>
           <description>Voltage monitoring %s boundary register</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
-          <fields>
-            <field>
-              <name>VMB</name>
-              <description>Voltage monitoring boundary</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4095</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>OSQ1</name>
@@ -19831,23 +19504,15 @@
           <displayName>PDT1</displayName>
           <description>Preempted data register %s</description>
           <addressOffset>0x3C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PDT</name>
-              <description>Preempted data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>ODT</name>
@@ -19869,12 +19534,6 @@
               <description>Conversion data of ordinary channel</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -20598,23 +20257,15 @@
           <displayName>PCDTO1</displayName>
           <description>Data offset for Preempted channel %s</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PCDTO</name>
-              <description>Data offset for Preempted channel 1</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4095</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>2</dim>
@@ -20624,23 +20275,15 @@
           <displayName>VMHB</displayName>
           <description>Voltage monitoring %s boundary register</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
-          <fields>
-            <field>
-              <name>VMB</name>
-              <description>Voltage monitoring boundary</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4095</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>OSQ1</name>
@@ -20778,23 +20421,15 @@
           <displayName>PDT1</displayName>
           <description>Preempted data register %s</description>
           <addressOffset>0x3C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PDT</name>
-              <description>Preempted data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>ODT</name>
@@ -20810,12 +20445,6 @@
               <description>Conversion data of ordinary channel</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -21545,23 +21174,15 @@
           <displayName>PCDTO1</displayName>
           <description>Data offset for Preempted channel %s</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PCDTO</name>
-              <description>Data offset for Preempted channel 1</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4095</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>2</dim>
@@ -21571,23 +21192,15 @@
           <displayName>VMHB</displayName>
           <description>Voltage monitoring %s boundary register</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
-          <fields>
-            <field>
-              <name>VMB</name>
-              <description>Voltage monitoring boundary</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4095</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>OSQ1</name>
@@ -21725,23 +21338,15 @@
           <displayName>PDT1</displayName>
           <description>Preempted data register %s</description>
           <addressOffset>0x3C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PDT</name>
-              <description>Preempted data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>ODT</name>
@@ -21757,12 +21362,6 @@
               <description>Conversion data of ordinary channel</description>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -23979,23 +23578,12 @@
             <size>0x20</size>
             <access>read-write</access>
             <resetValue>0x00000000</resetValue>
-            <fields>
-              <field>
-                <dim>32</dim>
-                <dimIncrement>0x1</dimIncrement>
-                <dimIndex>0-31</dimIndex>
-                <name>FFDB%s</name>
-                <description>Filter data bit</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>1</bitWidth>
-                <writeConstraint>
-                  <range>
-                    <minimum>0</minimum>
-                    <maximum>1</maximum>
-                  </range>
-                </writeConstraint>
-              </field>
-            </fields>
+            <writeConstraint>
+              <range>
+                <minimum>0</minimum>
+                <maximum>4294967295</maximum>
+              </range>
+            </writeConstraint>
           </register>
         </cluster>
       </registers>
@@ -24381,20 +23969,6 @@
           <size>0x20</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PID</name>
-              <description>PID information</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
         </register>
         <register>
           <name>CTRL</name>
@@ -24763,43 +24337,27 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0xFFFFFFFF</resetValue>
-          <fields>
-            <field>
-              <name>DT</name>
-              <description>Data Register</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>CDT</name>
           <displayName>CDT</displayName>
           <description>Common data register</description>
           <addressOffset>0x4</addressOffset>
-          <size>0x20</size>
+          <size>0x8</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Common Data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>255</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>CTRL</name>
@@ -24917,20 +24475,12 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0xFFFFFFFF</resetValue>
-          <fields>
-            <field>
-              <name>IDT</name>
-              <description>Initial Data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>POLY</name>
@@ -24940,20 +24490,12 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x04C11DB7</resetValue>
-          <fields>
-            <field>
-              <name>POLY</name>
-              <description>polynomial coefficient</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>

@@ -9,7 +9,7 @@ pub struct RegisterBlock {
     pub ctrl: CTRL,
     #[doc = "0x0c - initialization and status register"]
     pub sts: STS,
-    #[doc = "0x10 - Diveder register"]
+    #[doc = "0x10 - Divider register"]
     pub div: DIV,
     _reserved5: [u8; 0x08],
     #[doc = "0x1c - Alarm A register"]
@@ -17,8 +17,10 @@ pub struct RegisterBlock {
     _reserved6: [u8; 0x04],
     #[doc = "0x24 - write protection register"]
     pub wp: WP,
+    _reserved7: [u8; 0x03],
     #[doc = "0x28 - sub second register"]
     pub sbs: SBS,
+    _reserved8: [u8; 0x02],
     #[doc = "0x2c - time adjust register"]
     pub tadj: TADJ,
     #[doc = "0x30 - time stamp time register"]
@@ -84,10 +86,10 @@ module"]
 pub type STS = crate::Reg<sts::STS_SPEC>;
 #[doc = "initialization and status register"]
 pub mod sts;
-#[doc = "DIV (rw) register accessor: Diveder register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`div::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`div`]
+#[doc = "DIV (rw) register accessor: Divider register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`div::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`div`]
 module"]
 pub type DIV = crate::Reg<div::DIV_SPEC>;
-#[doc = "Diveder register"]
+#[doc = "Divider register"]
 pub mod div;
 #[doc = "ALA (rw) register accessor: Alarm A register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ala::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ala::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ala`]
 module"]

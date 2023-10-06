@@ -5,8 +5,10 @@ pub struct RegisterBlock {
     pub sts: STS,
     #[doc = "0x04 - Data register"]
     pub dt: DT,
+    _reserved2: [u8; 0x02],
     #[doc = "0x08 - Baud rate register"]
     pub baudr: BAUDR,
+    _reserved3: [u8; 0x02],
     #[doc = "0x0c - Control register 1"]
     pub ctrl1: CTRL1,
     #[doc = "0x10 - Control register 2"]

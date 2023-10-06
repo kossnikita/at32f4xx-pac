@@ -1,12 +1,13 @@
 #[doc = "Register `IDCODE` reader"]
 pub type R = crate::R<IDCODE_SPEC>;
-#[doc = "Field `PID` reader - PID information"]
-pub type PID_R = crate::FieldReader<u32>;
-impl R {
-    #[doc = "Bits 0:31 - PID information"]
-    #[inline(always)]
-    pub fn pid(&self) -> PID_R {
-        PID_R::new(self.bits)
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<IDCODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 #[doc = "DEBUG IDCODE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idcode::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

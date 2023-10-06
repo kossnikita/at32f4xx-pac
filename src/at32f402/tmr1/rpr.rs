@@ -2,27 +2,20 @@
 pub type R = crate::R<RPR_SPEC>;
 #[doc = "Register `RPR` writer"]
 pub type W = crate::W<RPR_SPEC>;
-#[doc = "Field `RPR` reader - Repetition of period value"]
-pub type RPR_R = crate::FieldReader<u16>;
-#[doc = "Field `RPR` writer - Repetition of period value"]
-pub type RPR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
-impl R {
-    #[doc = "Bits 0:15 - Repetition of period value"]
-    #[inline(always)]
-    pub fn rpr(&self) -> RPR_R {
-        RPR_R::new((self.bits & 0xffff) as u16)
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<RPR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - Repetition of period value"]
-    #[inline(always)]
-    #[must_use]
-    pub fn rpr(&mut self) -> RPR_W<RPR_SPEC, 0> {
-        RPR_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+    pub fn bits(&mut self, bits: u8) -> &mut Self {
         self.bits = bits;
         self
     }
@@ -30,7 +23,7 @@ impl W {
 #[doc = "Repetition of period value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rpr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rpr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RPR_SPEC;
 impl crate::RegisterSpec for RPR_SPEC {
-    type Ux = u32;
+    type Ux = u8;
 }
 #[doc = "`read()` method returns [`rpr::R`](R) reader structure"]
 impl crate::Readable for RPR_SPEC {}

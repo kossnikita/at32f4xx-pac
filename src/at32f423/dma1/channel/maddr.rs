@@ -2,24 +2,17 @@
 pub type R = crate::R<MADDR_SPEC>;
 #[doc = "Register `MADDR` writer"]
 pub type W = crate::W<MADDR_SPEC>;
-#[doc = "Field `MADDR` reader - Memory address"]
-pub type MADDR_R = crate::FieldReader<u32>;
-#[doc = "Field `MADDR` writer - Memory address"]
-pub type MADDR_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 32, O, u32>;
-impl R {
-    #[doc = "Bits 0:31 - Memory address"]
-    #[inline(always)]
-    pub fn maddr(&self) -> MADDR_R {
-        MADDR_R::new(self.bits)
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Memory address"]
-    #[inline(always)]
-    #[must_use]
-    pub fn maddr(&mut self) -> MADDR_W<MADDR_SPEC, 0> {
-        MADDR_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub fn bits(&mut self, bits: u32) -> &mut Self {

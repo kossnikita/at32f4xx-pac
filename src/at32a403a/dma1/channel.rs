@@ -5,6 +5,7 @@ pub struct CHANNEL {
     pub ctrl: CTRL,
     #[doc = "0x04 - DMA channel %s number of data to transfer register"]
     pub dtcnt: DTCNT,
+    _reserved2: [u8; 0x02],
     #[doc = "0x08 - DMA channel %s peripheral base address register"]
     pub paddr: PADDR,
     #[doc = "0x0c - DMA channel %s memory base address register"]

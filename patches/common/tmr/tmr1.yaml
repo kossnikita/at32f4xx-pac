@@ -33,6 +33,9 @@ TMR1:
   _modify:
     SWEVT:
       access: write-only
+    RPR:
+      size: 8
+      writeConstraint: [0, 0xFF]    
   CM?_OUTPUT:
     C%sOCTRL:
       Disconnected: [0, "Disconnected. CxORAW is disconnected from CxOUT"]
@@ -71,4 +74,5 @@ TMR1:
       _write:
         _derivedFrom: C1ENW
   RPR:
-    RPR: [0, 0xff]
+    _delete:
+      - RPR

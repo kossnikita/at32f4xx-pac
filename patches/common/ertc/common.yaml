@@ -1,5 +1,158 @@
 ERTC:
   _array:
     BPR*DT: {}
+  _modify:
+    DIV:
+      description: "Divider register"
+    WP:
+      size: 8
+      writeConstraint: [0, 0xFF]
+    SBS:
+      size: 16
+    BPR*DT:
+      writeConstraint: [0, 0xffffffff]
+  TIME:
+    SU: [0, 0xF]
+    ST: [0, 0x7]
+    MU: [0, 0xF]
+    MT: [0, 0x7]
+    HU: [0, 0xF]
+    HT: [0, 0x3]
+    AMPM:
+      AM: [0, "AM"]
+      PM: [1, "PM"]
+  DATE:
+    DU: [0, 0xF]
+    DT: [0, 0x3]
+    MU: [0, 0xF]
+    MT: [0, 0x1]
+    WK:
+      Monday: [1, "Monday"]
+      Tuesday: [2, "Tuesday"]
+      Wednesday: [3, "Wednesday"]
+      Thursday: [4, "Thursday"]
+      Friday: [5, "Friday"]
+      Saturday: [6, "Saturday"]
+      Sunday: [7, "Sunday"]
+    YU: [0, 0xF]
+    YT: [0, 0xF]
+  CTRL:
+    TSEDG:
+      Rising: [0, "Rising edge"]
+      Falling: [1, "Falling edge"]
+    RCDEN:
+      _read:
+        Disabled: [0, "Reference clock detection is disabled"]
+        Enabled: [1, "Reference clock detection is enabled"]
+      _write:
+        Disable: [0, "Reference clock detection disable"]
+        Enable: [1, "Reference clock detection enable"]
+    DREN:
+      _read:
+        Disabled: [0, "Date/time register direct read is disabled"]
+        Enabled: [1, "Date/time register direct read is enabled"]
+      _write:
+        Disable: [0, "Date/time register direct read disable"]
+        Enable: [1, "Date/time register direct read enable"]
+    HM:
+      hour24: [0, "24-hour format"]
+      hour12: [1, "12-hour format"]
+    AL?EN:
+      _read:
+        Disabled: [0, "Alarm is disabled"]
+        Enabled: [1, "Alarm is enabled"]
+      _write:
+        Disable: [0, "Alarm disable"]
+        Enable: [1, "Alarm enable"]
+    TSEN:
+      _read:
+        Disabled: [0, "Timestamp is disabled"]
+        Enabled: [1, "Timestamp is enabled"]
+      _write:
+        Disable: [0, "Timestamp disable"]
+        Enable: [1, "Timestamp enable"]
+    AL?IEN:
+      _read:
+        Disabled: [0, "Alarm interrupt is disabled"]
+        Enabled: [1, "Alarm interrupt is enabled"]
+      _write:
+        Disable: [0, "Alarm interrupt disable"]
+        Enable: [1, "Alarm interrupt enable"]
+    TSIEN:
+      _read:
+        Disabled: [0, "Timestamp interrupt is disabled"]
+        Enabled: [1, "Timestamp interrupt is enabled"]
+      _write:
+        Disable: [0, "Timestamp interrupt disable"]
+        Enable: [1, "Timestamp interrupt enable"]
+    ADD1H:
+      _W1S:
+        Add: [1, "Add 1 hour"]
+    DEC1H:
+      _W1S:
+        Sub: [1, "Subtract 1 hour"]
+    BPR: [0, 1]
+    CALOSEL:
+      Hz512: [0, "512Hz"]
+      Hz1: [1, "1Hz"]
+    OUTP:
+      High: [0, "High"]
+      Low: [1, "Low"]
+    OUTSEL:
+      Disabled: [0, ""]
+      AlarmA: [1, "Alarm clock A"]
+      Wakeup: [3, "Wakeup events"]
+    CALOEN:
+      _read:
+        Disabled: [0, "Calibration output is disabled"]
+        Enabled: [1, "Calibration output is enabled"]
+      _write:
+        Disable: [0, "Calibration output disable"]
+        Enable: [1, "Calibration output enable"]
+  DIV:
+    _modify:
+      DIVA:
+        description: "Divider A"
+      DIVB:
+        description: "Divider B"
+    DIVB: [0, 0x7FF]
+    DIVA: [0, 0x7F]
+  WP:
+    _delete:
+      - CMD
+  SBS,TSSBS:
+    _delete:
+      - SBS
   BPR*DT:
-    DT: [0, 0xffffffff]
+    _delete:
+      - DT
+  ALA:
+    SU: [0, 0xF]
+    ST: [0, 0x7]
+    MASK1:
+      NoMask: [0, "No second mask"]
+      Mask: [1, "Alarm clock doesn't care about seconds"]
+    MU: [0, 0xF]
+    MT: [0, 0x7]
+    MASK2:
+      NoMask: [0, "No minute mask"]
+      Mask: [1, "Alarm clock doesn't care about minutes"]
+    HU: [0, 0xF]
+    HT: [0, 0x3]
+    AMPM:
+      AM: [0, "AM"]
+      PM: [1, "PM"]
+    MASK3:
+      NoMask: [0, "No hour mask"]
+      Mask: [1, "Alarm clock doesn't care about hours"]
+    DU: [0, 0xF]
+    DT: [0, 0x3]
+    WKSEL:
+      Date: [0, "Date"]
+      WeekDay: [1, "Week day"]
+    MASK4:
+      NoMask: [0, "Date/week day is not masked"]
+      Mask: [1, "Alarm clock doesn't care about date/week day"]
+  ALASBS:
+    SBS: [0, 0x7F]
+    SBSMSK: [0, 0xF]

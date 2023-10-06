@@ -2,24 +2,17 @@
 pub type R = crate::R<DT_SPEC>;
 #[doc = "Register `DT` writer"]
 pub type W = crate::W<DT_SPEC>;
-#[doc = "Field `DT` reader - Data Register"]
-pub type DT_R = crate::FieldReader<u32>;
-#[doc = "Field `DT` writer - Data Register"]
-pub type DT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 32, O, u32>;
-impl R {
-    #[doc = "Bits 0:31 - Data Register"]
-    #[inline(always)]
-    pub fn dt(&self) -> DT_R {
-        DT_R::new(self.bits)
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Data Register"]
-    #[inline(always)]
-    #[must_use]
-    pub fn dt(&mut self) -> DT_W<DT_SPEC, 0> {
-        DT_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub fn bits(&mut self, bits: u32) -> &mut Self {

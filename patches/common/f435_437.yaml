@@ -6,8 +6,11 @@ _include:
   - crm/common.yaml
   - crm/crm_pllcfg.yaml
   - ertc/common.yaml
+  - ertc/alarmb.yaml
+  - ertc/wat.yaml
   - gpio/gpio-v2.yaml
   - adc/common.yaml
+  - adc/odt.yaml
   - flash/common.yaml
   - can/common.yaml
   - exint/common.yaml

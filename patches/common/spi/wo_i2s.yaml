@@ -1,4 +1,15 @@
 SPI?:
+  _modify:
+    DT:
+      size: 16
+      writeConstraint: [0, 0xFFFF]
+    CPOLY:
+      size: 16
+      writeConstraint: [0, 0xFFFF]
+    RCRC:
+      size: 16
+    TCRC:
+      size: 16
   CTRL1:
     CLKPHA:
       First:  [0, "Data capture starts from the first clock edge"]
@@ -117,10 +128,14 @@ SPI?:
       Idle: [0, "SPI is not busy"]
       Busy: [1, "SPI is busy"]
   DT:
-    DT: [0, 0xFFFF]
+    _delete:
+      - DT
   CPOLY:
-    CPOLY: [0, 0xFFFF]
+    _delete:
+      - CPOLY
   RCRC:
-    RCRC: [0, 0xFFFF]
+    _delete:
+      - RCRC
   TCRC:
-    TCRC: [0, 0xFFFF]
+    _delete:
+      - TCRC

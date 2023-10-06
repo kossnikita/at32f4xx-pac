@@ -1,4 +1,11 @@
 UART?,USART?:
+  _modify:
+    DT:
+      size: 9
+      writeConstraint: [0, 0x1FF]    
+    BAUDR:
+      size: 16
+      writeConstraint: [0, 0xFFFF]    
   STS:
     PERR:
       NoError: [0, "No parity error occurs"]
@@ -43,9 +50,11 @@ UART?,USART?:
       _W0C:
         Clear: [0, "Clear CTS change flag"]
   DT:
-    DT: [0, 0x1FF]
+    _delete:
+      - DT
   BAUDR:
-    DIV: [0, 0xFFFF]
+    _delete:
+      - DIV
   CTRL1:
     SBF:
       _read:

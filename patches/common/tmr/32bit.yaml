@@ -1,4 +1,13 @@
+_modify:
+  CVAL:
+    size: 32
+    writeConstraint: [0, 0xFFFFFFFF]
+  PR:
+    size: 32
+    writeConstraint: [0, 0xFFFFFFFF]
 CVAL:
-  CVAL: [0, 0xffffffff]
+  _delete:
+    - CVAL
 PR:
-  PR: [0, 0xffffffff]
+  _delete:
+    - PR

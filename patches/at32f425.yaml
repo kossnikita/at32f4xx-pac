@@ -21,9 +21,11 @@ _include:
   - common/crm/common.yaml
   - common/crm/pllhextdiv.yaml
   - common/ertc/common.yaml
+  - common/ertc/wat.yaml
   - common/flash/common.yaml
   - common/gpio/gpio-v2.yaml
   - common/adc/common.yaml
+  - common/adc/odt.yaml
   - common/exint/common.yaml
   - common/dma/common.yaml
   - common/can/common.yaml

@@ -1,7 +1,7 @@
 EXINT:
   INTEN:
     _array:
-      INTEN?,INTEN1[0-7]:
+      INTEN?,INTEN[1][0-7]:
         description: "Interrupt enable or disable on line %s"
     INTEN*:
       _read:
@@ -12,7 +12,7 @@ EXINT:
         Enable: [1, "Interrupt request enable"]
   EVTEN:
     _array:
-      EVTEN?,EVTEN1[0-7]:
+      EVTEN?,EVTEN[1][0-7]:
         description: "Event enable or disable on line %s"
     EVTEN*:
       _read:
@@ -23,7 +23,7 @@ EXINT:
         Enable: [1, "Event request enable"]
   POLCFG1:
     _array:
-      RP?,RP1[0-7]:
+      RP?,RP[1][0-7]:
         description: "Rising polarity configuration bit on line %s"
     RP*:
       _read:
@@ -34,7 +34,7 @@ EXINT:
         Enable: [1, "Rising trigger enable"]
   POLCFG2:
     _array:
-      FP?,FP1[0-7]:
+      FP?,FP[1][0-7]:
         description: "Falling polarity configuration bit on line %s"
     FP*:
       _read:
@@ -45,7 +45,7 @@ EXINT:
         Enable: [1, "Falling polarity enable"]
   SWTRG:
     _array:
-      SWT?,SWT1[0-7]:
+      SWT?,SWT[1][0-7]:
         description: "Software trigger on line %s"
     SWT*:
       _read:
@@ -55,7 +55,7 @@ EXINT:
         Trigger: [1, "Generate trigger"]
   INTSTS:
     _array:
-      LINE?,LINE1[0-7]:
+      LINE?,LINE[1][0-7]:
         description: "Line %s status bit"
     LINE*:
       _read:

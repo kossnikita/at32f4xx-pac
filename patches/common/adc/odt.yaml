@@ -1,0 +1,8 @@
+ADC,ADC?:
+  _modify:
+    ODT:
+      size: 16
+      writeConstraint: [0, 0xFFFF]
+  ODT:
+    _delete:
+      - ODT

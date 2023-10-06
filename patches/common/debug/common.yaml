@@ -1,9 +1,8 @@
 DEBUG:
+  _modify:
   IDCODE:
-    _modify:
-      PID:
-        description: "PID information"
-    PID: [0, 0xFFFFFFFF]
+    _delete:
+      - PID
   CTRL:
     _modify:
       SLEEP_DEBUG:

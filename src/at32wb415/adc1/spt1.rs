@@ -5,19 +5,19 @@ pub type W = crate::W<SPT1_SPEC>;
 #[doc = "Field `CSPT10` reader - Selection sample time of channel ADC_IN10"]
 pub type CSPT10_R = crate::FieldReader;
 #[doc = "Field `CSPT10` writer - Selection sample time of channel ADC_IN10"]
-pub type CSPT10_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CSPT10_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
 #[doc = "Field `CSPT11` reader - Selection sample time of channel ADC_IN11"]
 pub type CSPT11_R = crate::FieldReader;
 #[doc = "Field `CSPT11` writer - Selection sample time of channel ADC_IN11"]
-pub type CSPT11_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CSPT11_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
 #[doc = "Field `CSPT16` reader - Selection sample time of channel ADC_IN16"]
 pub type CSPT16_R = crate::FieldReader;
 #[doc = "Field `CSPT16` writer - Selection sample time of channel ADC_IN16"]
-pub type CSPT16_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CSPT16_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
 #[doc = "Field `CSPT17` reader - Selection sample time of channel ADC_IN17"]
 pub type CSPT17_R = crate::FieldReader;
 #[doc = "Field `CSPT17` writer - Selection sample time of channel ADC_IN17"]
-pub type CSPT17_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CSPT17_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
 impl R {
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN10"]
     #[inline(always)]

@@ -4,7 +4,5 @@ _modify:
   C?DT:
     description: "Channel data register"
 C?DT:
-  _modify:
-    C?DT:
-      name: CDT
-      description: "Channel data value"
+  _delete:
+    - C?DT

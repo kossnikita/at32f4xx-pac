@@ -3584,23 +3584,15 @@
             <displayName>C1DTCNT</displayName>
             <description>DMA channel %s number of data to transfer register</description>
             <addressOffset>0x4</addressOffset>
-            <size>0x20</size>
+            <size>0x10</size>
             <access>read-write</access>
             <resetValue>0x00000000</resetValue>
-            <fields>
-              <field>
-                <name>CNT</name>
-                <description>Number of data to transfer</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>16</bitWidth>
-                <writeConstraint>
-                  <range>
-                    <minimum>0</minimum>
-                    <maximum>65535</maximum>
-                  </range>
-                </writeConstraint>
-              </field>
-            </fields>
+            <writeConstraint>
+              <range>
+                <minimum>0</minimum>
+                <maximum>65535</maximum>
+              </range>
+            </writeConstraint>
           </register>
           <register>
             <name>PADDR</name>
@@ -3610,20 +3602,12 @@
             <size>0x20</size>
             <access>read-write</access>
             <resetValue>0x00000000</resetValue>
-            <fields>
-              <field>
-                <name>PADDR</name>
-                <description>Peripheral address</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-                <writeConstraint>
-                  <range>
-                    <minimum>0</minimum>
-                    <maximum>4294967295</maximum>
-                  </range>
-                </writeConstraint>
-              </field>
-            </fields>
+            <writeConstraint>
+              <range>
+                <minimum>0</minimum>
+                <maximum>4294967295</maximum>
+              </range>
+            </writeConstraint>
           </register>
           <register>
             <name>MADDR</name>
@@ -3633,20 +3617,12 @@
             <size>0x20</size>
             <access>read-write</access>
             <resetValue>0x00000000</resetValue>
-            <fields>
-              <field>
-                <name>MADDR</name>
-                <description>Memory address</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-                <writeConstraint>
-                  <range>
-                    <minimum>0</minimum>
-                    <maximum>4294967295</maximum>
-                  </range>
-                </writeConstraint>
-              </field>
-            </fields>
+            <writeConstraint>
+              <range>
+                <minimum>0</minimum>
+                <maximum>4294967295</maximum>
+              </range>
+            </writeConstraint>
           </register>
         </cluster>
         <register>
@@ -4004,69 +3980,45 @@
           <displayName>C1</displayName>
           <description>Compare 1</description>
           <addressOffset>0xC</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00001F2C</resetValue>
-          <fields>
-            <field>
-              <name>C1</name>
-              <description>Compare 1</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>C2</name>
           <displayName>C2</displayName>
           <description>Compare 2</description>
           <addressOffset>0x10</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00001F40</resetValue>
-          <fields>
-            <field>
-              <name>C2</name>
-              <description>Compare 2</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>C3</name>
           <displayName>C3</displayName>
           <description>Compare 3</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00001F54</resetValue>
-          <fields>
-            <field>
-              <name>C3</name>
-              <description>Compare 3</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -4095,42 +4047,92 @@
               <description>AM/PM notation</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>AMPM</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>AM</name>
+                  <description>AM</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PM</name>
+                  <description>PM</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>HT</name>
               <description>Hour tens</description>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>HU</name>
               <description>Hour units</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>MT</name>
               <description>Minute tens</description>
               <bitOffset>12</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>MU</name>
               <description>Minute units</description>
               <bitOffset>8</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>ST</name>
               <description>Second tens</description>
               <bitOffset>4</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>SU</name>
               <description>Second units</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -4148,42 +4150,117 @@
               <description>Year tens</description>
               <bitOffset>20</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>YU</name>
               <description>Year units</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>WK</name>
               <description>Week</description>
               <bitOffset>13</bitOffset>
               <bitWidth>3</bitWidth>
+              <enumeratedValues>
+                <name>WK</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>Monday</name>
+                  <description>Monday</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Tuesday</name>
+                  <description>Tuesday</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Wednesday</name>
+                  <description>Wednesday</description>
+                  <value>3</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Thursday</name>
+                  <description>Thursday</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Friday</name>
+                  <description>Friday</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Saturday</name>
+                  <description>Saturday</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Sunday</name>
+                  <description>Sunday</description>
+                  <value>7</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MT</name>
               <description>Month tens</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>1</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>MU</name>
               <description>Month units</description>
               <bitOffset>8</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>DT</name>
               <description>Date tens</description>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>DU</name>
               <description>Date units</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -4201,48 +4278,181 @@
               <description>Calibration output enable</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>CALOENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Calibration output is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Calibration output is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>CALOENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Calibration output disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Calibration output enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OUTSEL</name>
               <description>Output source selection</description>
               <bitOffset>21</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                <name>OUTSEL</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>AlarmA</name>
+                  <description>Alarm clock A</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>AlarmB</name>
+                  <description>Alarm clock B</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Wakeup</name>
+                  <description>Wakeup events</description>
+                  <value>3</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OUTP</name>
               <description>Output polarity</description>
               <bitOffset>20</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>OUTP</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>High</name>
+                  <description>High</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Low</name>
+                  <description>Low</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>CALOSEL</name>
               <description>Calibration output selection</description>
               <bitOffset>19</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>CALOSEL</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>Hz512</name>
+                  <description>512Hz</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Hz1</name>
+                  <description>1Hz</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>BPR</name>
               <description>Battery power domain data register</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>1</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>DEC1H</name>
               <description>Decrease 1 hour</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
+              <modifiedWriteValues>oneToSet</modifiedWriteValues>
+              <enumeratedValues>
+                <name>DEC1HW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Sub</name>
+                  <description>Subtract 1 hour</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ADD1H</name>
               <description>Add 1 hour</description>
               <bitOffset>16</bitOffset>
               <bitWidth>1</bitWidth>
+              <modifiedWriteValues>oneToSet</modifiedWriteValues>
+              <enumeratedValues>
+                <name>ADD1HW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Add</name>
+                  <description>Add 1 hour</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>TSIEN</name>
               <description>Timestamp interrupt enable</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>TSIENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Timestamp interrupt is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Timestamp interrupt is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>TSIENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Timestamp interrupt disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Timestamp interrupt enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>WATIEN</name>
@@ -4255,18 +4465,80 @@
               <description>Alarm B interrupt enable</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="ALAIEN.ALAIENR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="ALAIEN.ALAIENW">
+                <usage>write</usage>
+              </enumeratedValues>
             </field>
             <field>
               <name>ALAIEN</name>
               <description>Alarm A interrupt enable</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>ALAIENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Alarm interrupt is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Alarm interrupt is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>ALAIENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Alarm interrupt disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Alarm interrupt enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>TSEN</name>
               <description>Timestamp enable</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>TSENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Timestamp is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Timestamp is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>TSENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Timestamp disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Timestamp enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>WATEN</name>
@@ -4279,12 +4551,46 @@
               <description>Alarm B enable</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="ALAEN.ALAENR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="ALAEN.ALAENW">
+                <usage>write</usage>
+              </enumeratedValues>
             </field>
             <field>
               <name>ALAEN</name>
               <description>Alarm A enable</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>ALAENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Alarm is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Alarm is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>ALAENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Alarm disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Alarm enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>CCALEN</name>
@@ -4297,24 +4603,108 @@
               <description>Hour mode</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>HM</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>hour24</name>
+                  <description>24-hour format</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>hour12</name>
+                  <description>12-hour format</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>DREN</name>
               <description>Date/time register direct read enable</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>DRENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Date/time register direct read is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Date/time register direct read is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>DRENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Date/time register direct read disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Date/time register direct read enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>RCDEN</name>
               <description>Reference clock detection enable</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>RCDENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Reference clock detection is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Reference clock detection is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>RCDENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Reference clock detection disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Reference clock detection enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>TSEDG</name>
               <description>Timestamp trigger edge</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>TSEDG</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>Rising</name>
+                  <description>Rising edge</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Falling</name>
+                  <description>Falling edge</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>WATCLK</name>
@@ -4443,7 +4833,7 @@
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
-          <description>Diveder register</description>
+          <description>Divider register</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
@@ -4451,15 +4841,27 @@
           <fields>
             <field>
               <name>DIVA</name>
-              <description>Diveder A</description>
+              <description>Divider A</description>
               <bitOffset>16</bitOffset>
               <bitWidth>7</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>127</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>DIVB</name>
-              <description>Diveder B</description>
+              <description>Divider B</description>
               <bitOffset>0</bitOffset>
               <bitWidth>15</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>2047</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -4468,17 +4870,15 @@
           <displayName>WAT</displayName>
           <description>Wakeup timer register</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x0000FFFF</resetValue>
-          <fields>
-            <field>
-              <name>VAL</name>
-              <description>Wakeup timer reload value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>CCAL</name>
@@ -4517,215 +4917,248 @@
               <description>Date/week mask</description>
               <bitOffset>31</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>MASK4</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NoMask</name>
+                  <description>Date/week day is not masked</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Mask</name>
+                  <description>Alarm clock doesn't care about date/week day</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>WKSEL</name>
               <description>Date/week mode select</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>WKSEL</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>Date</name>
+                  <description>Date</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>WeekDay</name>
+                  <description>Week day</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>DT</name>
               <description>Date tens</description>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>DU</name>
               <description>Date units</description>
               <bitOffset>24</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>MASK3</name>
               <description>Hours mask</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>MASK3</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NoMask</name>
+                  <description>No hour mask</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Mask</name>
+                  <description>Alarm clock doesn't care about hours</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>AMPM</name>
               <description>AM/PM</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>AMPM</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>AM</name>
+                  <description>AM</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PM</name>
+                  <description>PM</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>HT</name>
               <description>Hour tens</description>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>HU</name>
               <description>Hour units</description>
               <bitOffset>16</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>MASK2</name>
               <description>Minutes mask</description>
               <bitOffset>15</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>MASK2</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NoMask</name>
+                  <description>No minute mask</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Mask</name>
+                  <description>Alarm clock doesn't care about minutes</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>MT</name>
               <description>Minute tens</description>
               <bitOffset>12</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>MU</name>
               <description>Minute units</description>
               <bitOffset>8</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>MASK1</name>
               <description>Seconds mask</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>MASK1</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NoMask</name>
+                  <description>No second mask</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Mask</name>
+                  <description>Alarm clock doesn't care about seconds</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ST</name>
               <description>Second tens</description>
               <bitOffset>4</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>SU</name>
               <description>Second units</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
-        <register>
+        <register derivedFrom="ALA">
           <name>ALB</name>
           <displayName>ALB</displayName>
           <description>Alarm B register</description>
           <addressOffset>0x20</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>MASK4</name>
-              <description>Date/week mask</description>
-              <bitOffset>31</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>WKSEL</name>
-              <description>Date/week mode select</description>
-              <bitOffset>30</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>DT</name>
-              <description>Date tens</description>
-              <bitOffset>28</bitOffset>
-              <bitWidth>2</bitWidth>
-            </field>
-            <field>
-              <name>DU</name>
-              <description>Date units</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-            <field>
-              <name>MASK3</name>
-              <description>Hours mask</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>AMPM</name>
-              <description>AM/PM</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>HT</name>
-              <description>Hour tens</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>2</bitWidth>
-            </field>
-            <field>
-              <name>HU</name>
-              <description>Hour units</description>
-              <bitOffset>16</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-            <field>
-              <name>MASK2</name>
-              <description>Minutes mask</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>MT</name>
-              <description>Minute tens</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>3</bitWidth>
-            </field>
-            <field>
-              <name>MU</name>
-              <description>Minute units</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-            <field>
-              <name>MASK1</name>
-              <description>Seconds mask</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>ST</name>
-              <description>Second tens</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>3</bitWidth>
-            </field>
-            <field>
-              <name>SU</name>
-              <description>Second units</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-          </fields>
         </register>
         <register>
           <name>WP</name>
           <displayName>WP</displayName>
           <description>write protection register</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x8</size>
           <access>write-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CMD</name>
-              <description>Command register</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>SBS</name>
           <displayName>SBS</displayName>
           <description>sub second register</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>SBS</name>
-              <description>Sub second value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
         </register>
         <register>
           <name>TADJ</name>
@@ -4852,14 +5285,6 @@
           <size>0x20</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>SBS</name>
-              <description>Sub second value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
         </register>
         <register>
           <name>SCAL</name>
@@ -4976,37 +5401,32 @@
               <description>Sub-second mask</description>
               <bitOffset>24</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>SBS</name>
               <description>Sub-seconds value</description>
               <bitOffset>0</bitOffset>
               <bitWidth>15</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>127</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
-        <register>
+        <register derivedFrom="ALASBS">
           <name>ALBSBS</name>
           <displayName>ALBSBS</displayName>
           <description>alarm B sub second register</description>
           <addressOffset>0x48</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>SBSMSK</name>
-              <description>Sub-second mask</description>
-              <bitOffset>24</bitOffset>
-              <bitWidth>4</bitWidth>
-            </field>
-            <field>
-              <name>SBS</name>
-              <description>Sub-seconds value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>15</bitWidth>
-            </field>
-          </fields>
         </register>
         <register>
           <dim>20</dim>
@@ -5019,20 +5439,12 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DT</name>
-              <description>Battery powered domain data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -5149,23 +5561,15 @@
           <displayName>RLD</displayName>
           <description>Reload register</description>
           <addressOffset>0x8</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
-          <fields>
-            <field>
-              <name>RLD</name>
-              <description>Reload value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4095</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>STS</name>
@@ -7756,92 +8160,60 @@
           <displayName>CVAL</displayName>
           <description>Counter value</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
           <displayName>PR</displayName>
           <description>Period value</description>
           <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>RPR</name>
           <displayName>RPR</displayName>
           <description>Repetition of period value</description>
           <addressOffset>0x30</addressOffset>
-          <size>0x20</size>
+          <size>0x8</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>RPR</name>
-              <description>Repetition of period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>255</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>4</dim>
@@ -7851,23 +8223,15 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>BRK</name>
@@ -9913,23 +10277,15 @@
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
@@ -9959,14 +10315,6 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-            </field>
-          </fields>
         </register>
         <register>
           <name>DMACTRL</name>
@@ -11744,69 +12092,45 @@
           <displayName>CVAL</displayName>
           <description>Counter value</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
           <displayName>PR</displayName>
           <description>Period value</description>
           <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>4</dim>
@@ -11816,23 +12140,15 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DMACTRL</name>
@@ -12728,69 +13044,45 @@
           <displayName>CVAL</displayName>
           <description>Counter value</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
           <displayName>PR</displayName>
           <description>Period value</description>
           <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>2</dim>
@@ -12800,23 +13092,15 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -13511,69 +13795,45 @@
           <displayName>CVAL</displayName>
           <description>Counter value</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CVAL</name>
-              <description>Counter value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>DIV</name>
           <displayName>DIV</displayName>
           <description>Divider value</description>
           <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Divider value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>PR</name>
           <displayName>PR</displayName>
           <description>Period value</description>
           <addressOffset>0x2C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PR</name>
-              <description>Period value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <dim>1</dim>
@@ -13583,23 +13843,15 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Channel data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -14759,92 +15011,48 @@
           <displayName>DT</displayName>
           <description>data register</description>
           <addressOffset>0xC</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DT</name>
-              <description>Data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>CPOLY</name>
           <displayName>CPOLY</displayName>
           <description>CRC polynomial register</description>
           <addressOffset>0x10</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000007</resetValue>
-          <fields>
-            <field>
-              <name>CPOLY</name>
-              <description>CRC polynomial</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>RCRC</name>
           <displayName>RCRC</displayName>
           <description>Receive CRC register</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>RCRC</name>
-              <description>Receive CRC</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
         </register>
         <register>
           <name>TCRC</name>
           <displayName>TCRC</displayName>
           <description>Transmit CRC register</description>
           <addressOffset>0x18</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>TCRC</name>
-              <description>Transmit CRC</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
         </register>
       </registers>
     </peripheral>
@@ -15130,46 +15338,30 @@
           <displayName>DT</displayName>
           <description>Data register</description>
           <addressOffset>0x4</addressOffset>
-          <size>0x20</size>
+          <size>0x9</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DT</name>
-              <description>Data value</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>9</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>511</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>511</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>BAUDR</name>
           <displayName>BAUDR</displayName>
           <description>Baud rate register</description>
           <addressOffset>0x8</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>DIV</name>
-              <description>Division</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>65535</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>CTRL1</name>
@@ -16301,30 +16493,116 @@
               <description>Ordinary channel conversion start flag</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <modifiedWriteValues>zeroToClear</modifiedWriteValues>
+              <enumeratedValues derivedFrom="PCCS.PCCSR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="PCCS.PCCSW">
+                <usage>write</usage>
+              </enumeratedValues>
             </field>
             <field>
               <name>PCCS</name>
               <description>Preempted channel conversion start flag</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <modifiedWriteValues>zeroToClear</modifiedWriteValues>
+              <enumeratedValues>
+                <name>PCCSR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Idle</name>
+                  <description>No channel conversion started</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Started</name>
+                  <description>Channel conversion has started</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>PCCSW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Clear</name>
+                  <description>Clear flag</description>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PCCE</name>
               <description>Preempted channels conversion end flag</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <modifiedWriteValues>zeroToClear</modifiedWriteValues>
+              <enumeratedValues derivedFrom="CCE.CCER">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="CCE.CCEW">
+                <usage>write</usage>
+              </enumeratedValues>
             </field>
             <field>
               <name>CCE</name>
               <description>Channels conversion end flag</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <modifiedWriteValues>zeroToClear</modifiedWriteValues>
+              <enumeratedValues>
+                <name>CCER</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>NotComplete</name>
+                  <description>Conversion is not complete</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Complete</name>
+                  <description>Conversion is complete</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>CCEW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Clear</name>
+                  <description>Clear flag</description>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>VMOR</name>
               <description>Voltage monitoring out of range flag</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <modifiedWriteValues>zeroToClear</modifiedWriteValues>
+              <enumeratedValues>
+                <name>VMORR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>InRange</name>
+                  <description>Voltage is within the value programmed</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>OutOfRange</name>
+                  <description>Voltage is outside the value programmed</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>VMORW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Clear</name>
+                  <description>Clear flag</description>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -16342,72 +16620,284 @@
               <description>Voltage monitoring enable on ordinary channels</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="PCVMEN.PCVMENR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="PCVMEN.PCVMENW">
+                <usage>write</usage>
+              </enumeratedValues>
             </field>
             <field>
               <name>PCVMEN</name>
               <description>Voltage monitoring enable on preempted channels</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>PCVMENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Voltage monitoring is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Voltage monitoring is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>PCVMENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Voltage monitoring disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Voltage monitoring enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OCPCNT</name>
               <description>Partitioned mode conversion count of ordinary channels</description>
               <bitOffset>13</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>PCPEN</name>
               <description>Partitioned mode enable on preempted channels</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="OCPEN.OCPENR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="OCPEN.OCPENW">
+                <usage>write</usage>
+              </enumeratedValues>
             </field>
             <field>
               <name>OCPEN</name>
               <description>Partitioned mode enable on ordinary channels</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>OCPENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Partitioned mode on channels is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Partitioned mode on channels is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>OCPENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Partitioned mode on channels disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Partitioned mode on channels enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PCAUTOEN</name>
               <description>Preempted group automatic conversion enable after ordinary group</description>
               <bitOffset>10</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>PCAUTOENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Preempted group automatic conversion is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Preempted group automatic conversion is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>PCAUTOENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Preempted group automatic conversion disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Preempted group automatic conversion enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>VMSGEN</name>
               <description>Voltage monitoring enable on a single channel</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>VMSGEN</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>All</name>
+                  <description>Voltage monitoring enabled on all channels</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Single</name>
+                  <description>Voltage monitoring enabled a single channel</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>SQEN</name>
               <description>Sequence mode enable</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>SQENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Sequence mode is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Sequence mode is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>SQENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Sequence mode disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Sequence mode enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PCCEIEN</name>
               <description>Conversion end interrupt enable for preempted channels</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="CCEIEN.CCEIENR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="CCEIEN.CCEIENW">
+                <usage>write</usage>
+              </enumeratedValues>
             </field>
             <field>
               <name>VMORIEN</name>
               <description>Voltage monitoring out of range interrupt enable</description>
               <bitOffset>6</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>VMORIENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Voltage monitoring out of range interrupt is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Voltage monitoring out of range interrupt is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>VMORIENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Voltage monitoring out of range interrupt disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Voltage monitoring out of range interrupt enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>CCEIEN</name>
               <description>Channel conversion end interrupt enable</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>CCEIENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Channel conversion end interrupt is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Channel conversion end interrupt is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>CCEIENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Channel conversion end interrupt disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Channel conversion end interrupt enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>VMCSEL</name>
               <description>Voltage monitoring channel select</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>17</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -16443,12 +16933,27 @@
               <description>Conversion trigger by software of ordinary channels</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="PCSWTRG.PCSWTRG"/>
             </field>
             <field>
               <name>PCSWTRG</name>
               <description>Conversion trigger by software of preempted channels</description>
               <bitOffset>21</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>PCSWTRG</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NotTriggered</name>
+                  <description>Conversion of ordinary channels not triggered</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Triggered</name>
+                  <description>Conversion of ordinary channels triggered</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OCTEN</name>
@@ -16479,6 +16984,20 @@
               <description>Data alignment</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>DTALIGN</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>Right</name>
+                  <description>Right alignment</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Left</name>
+                  <description>Left alignment</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>OCDMAEN</name>
@@ -16491,24 +17010,126 @@
               <description>initialize A/D calibration</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>ADCALINITR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Completed</name>
+                  <description>Initialization completed</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>InProgress</name>
+                  <description>Initialization is in process</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>ADCALINITW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Init</name>
+                  <description>Enable initialization</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ADCAL</name>
               <description>A/D Calibration</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>ADCALR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Completed</name>
+                  <description>Calibration completed</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>InProgress</name>
+                  <description>Calibration is in process</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>ADCALW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Calibrate</name>
+                  <description>Enable calibration</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>RPEN</name>
               <description>Repeat mode enable</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>RPENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Repetition mode is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Repetition mode is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>RPENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Repetition mode disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Repetition mode enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>ADCEN</name>
               <description>A/D converter enable</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>ADCENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>ADC is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>ADC is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>ADCENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>ADC disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>ADC enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>
@@ -16526,24 +17147,48 @@
               <description>Selection sample time of channel ADC_IN17</description>
               <bitOffset>21</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>CSPT16</name>
               <description>Selection sample time of channel ADC_IN16</description>
               <bitOffset>18</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>CSPT11</name>
               <description>Selection sample time of channel ADC_IN11</description>
               <bitOffset>3</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>CSPT10</name>
               <description>Selection sample time of channel ADC_IN10</description>
               <bitOffset>0</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -16561,140 +17206,110 @@
               <description>Selection sample time of channel ADC_IN5</description>
               <bitOffset>15</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>CSPT4</name>
               <description>Selection sample time of channel ADC_IN4</description>
               <bitOffset>12</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>CSPT3</name>
               <description>Selection sample time of channel ADC_IN3</description>
               <bitOffset>9</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>CSPT2</name>
               <description>Selection sample time of channel ADC_IN2</description>
               <bitOffset>6</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>CSPT1</name>
               <description>Selection sample time of channel ADC_IN1</description>
               <bitOffset>3</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
               <name>CSPT0</name>
               <description>Selection sample time of channel ADC_IN0</description>
               <bitOffset>0</bitOffset>
               <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>7</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
         <register>
-          <name>PCDTO1</name>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>1-4</dimIndex>
+          <name>PCDTO%s</name>
           <displayName>PCDTO1</displayName>
-          <description>Preempted channel 1 data offset register</description>
+          <description>Data offset for Preempted channel %s</description>
           <addressOffset>0x14</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PCDTO1</name>
-              <description>Data offset for Preempted channel 1</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
-          <name>PCDTO2</name>
-          <displayName>PCDTO2</displayName>
-          <description>Preempted channel 2 data offset register</description>
-          <addressOffset>0x18</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PCDTO2</name>
-              <description>Data offset for Preempted channel 2</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PCDTO3</name>
-          <displayName>PCDTO3</displayName>
-          <description>Preempted channel 3 data offset register</description>
-          <addressOffset>0x1C</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PCDTO3</name>
-              <description>Data offset for Preempted channel 3</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PCDTO4</name>
-          <displayName>PCDTO4</displayName>
-          <description>Preempted channel 4 data offset register</description>
-          <addressOffset>0x20</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PCDTO4</name>
-              <description>Data offset for Preempted channel 4</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>VMHB</name>
+          <dim>2</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>H,L</dimIndex>
+          <name>VM%sB</name>
           <displayName>VMHB</displayName>
-          <description>Voltage monitoring high boundary register</description>
+          <description>Voltage monitoring %s boundary register</description>
           <addressOffset>0x24</addressOffset>
-          <size>0x20</size>
+          <size>0xc</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
-          <fields>
-            <field>
-              <name>VMHB</name>
-              <description>Voltage monitoring high boundary</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>VMLB</name>
-          <displayName>VMLB</displayName>
-          <description>Voltage monitoring low boundary register</description>
-          <addressOffset>0x28</addressOffset>
-          <size>0x20</size>
-          <access>read-write</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>VMLB</name>
-              <description>Voltage monitoring low boundary</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4095</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>OSQ1</name>
@@ -16710,30 +17325,27 @@
               <description>Ordinary conversion sequence length</description>
               <bitOffset>20</bitOffset>
               <bitWidth>4</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>15</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
-              <name>OSN16</name>
-              <description>Number of 16th conversion in ordinary sequence</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN15</name>
-              <description>Number of 15th conversion in ordinary sequence</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN14</name>
-              <description>Number of 14th conversion in ordinary sequence</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN13</name>
-              <description>Number of 13th conversion in ordinary sequence</description>
+              <dim>4</dim>
+              <dimIncrement>0x5</dimIncrement>
+              <dimIndex>13-16</dimIndex>
+              <name>OSN%s</name>
+              <description>Number of %sth conversion in ordinary sequence</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>17</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -16747,40 +17359,19 @@
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
-              <name>OSN12</name>
-              <description>Number of 12th conversion in ordinary sequence</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN11</name>
-              <description>Number of 11th conversion in ordinary sequence</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN10</name>
-              <description>Number of 10th conversion in ordinary sequence</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN9</name>
-              <description>Number of 8th conversion in ordinary sequence</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN8</name>
-              <description>Number of 7th conversion in ordinary sequence</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN7</name>
-              <description>Number of 13th conversion in ordinary sequence</description>
+              <dim>6</dim>
+              <dimIncrement>0x5</dimIncrement>
+              <dimIndex>7-12</dimIndex>
+              <name>OSN%s</name>
+              <description>Number of %sth conversion in ordinary sequence</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>17</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -16794,40 +17385,19 @@
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
-              <name>OSN6</name>
-              <description>Number of 6th conversion in ordinary sequence</description>
-              <bitOffset>25</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN5</name>
-              <description>Number of 5th conversion in ordinary sequence</description>
-              <bitOffset>20</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN4</name>
-              <description>Number of 4th conversion in ordinary sequence</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN3</name>
-              <description>number of 3rd conversion in ordinary sequence</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN2</name>
-              <description>Number of 2nd conversion in ordinary sequence</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>OSN1</name>
-              <description>Number of 1st conversion in ordinary sequence</description>
+              <dim>6</dim>
+              <dimIncrement>0x5</dimIncrement>
+              <dimIndex>1-6</dimIndex>
+              <name>OSN%s</name>
+              <description>Number of %sth conversion in ordinary sequence</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>17</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -16845,117 +17415,62 @@
               <description>Preempted conversion sequence length</description>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
             </field>
             <field>
-              <name>PSN4</name>
-              <description>Number of 4th conversion in Preempted sequence</description>
-              <bitOffset>15</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>PSN3</name>
-              <description>Number of 3rd conversion in Preempted sequence</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>PSN2</name>
-              <description>Number of 2nd conversion in Preempted sequence</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>5</bitWidth>
-            </field>
-            <field>
-              <name>PSN1</name>
-              <description>Number of 1st conversion in Preempted sequence</description>
+              <dim>4</dim>
+              <dimIncrement>0x5</dimIncrement>
+              <dimIndex>1-4</dimIndex>
+              <name>PSN%s</name>
+              <description>Number of %s conversion in preempted sequence</description>
               <bitOffset>0</bitOffset>
               <bitWidth>5</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>17</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
         <register>
-          <name>PDT1</name>
+          <dim>4</dim>
+          <dimIncrement>0x4</dimIncrement>
+          <dimIndex>1-4</dimIndex>
+          <name>PDT%s</name>
           <displayName>PDT1</displayName>
-          <description>Preempted data register 1</description>
+          <description>Preempted data register %s</description>
           <addressOffset>0x3C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PDT1</name>
-              <description>Preempted data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PDT2</name>
-          <displayName>PDT2</displayName>
-          <description>Preempted data register 2</description>
-          <addressOffset>0x40</addressOffset>
-          <size>0x20</size>
-          <access>read-only</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PDT2</name>
-              <description>Preempted data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PDT3</name>
-          <displayName>PDT3</displayName>
-          <description>Preempted data register 3</description>
-          <addressOffset>0x44</addressOffset>
-          <size>0x20</size>
-          <access>read-only</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PDT3</name>
-              <description>Preempted data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>PDT4</name>
-          <displayName>PDT4</displayName>
-          <description>Preempted data register 4</description>
-          <addressOffset>0x48</addressOffset>
-          <size>0x20</size>
-          <access>read-only</access>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PDT4</name>
-              <description>Preempted data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>ODT</name>
           <displayName>ODT</displayName>
           <description>Ordinary  data register</description>
           <addressOffset>0x4C</addressOffset>
-          <size>0x20</size>
+          <size>0x10</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>ODT</name>
-              <description>Conversion data of ordinary channel</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>16</bitWidth>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>65535</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>
@@ -19170,23 +19685,12 @@
             <size>0x20</size>
             <access>read-write</access>
             <resetValue>0x00000000</resetValue>
-            <fields>
-              <field>
-                <dim>32</dim>
-                <dimIncrement>0x1</dimIncrement>
-                <dimIndex>0-31</dimIndex>
-                <name>FFDB%s</name>
-                <description>Filter data bit</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>1</bitWidth>
-                <writeConstraint>
-                  <range>
-                    <minimum>0</minimum>
-                    <maximum>1</maximum>
-                  </range>
-                </writeConstraint>
-              </field>
-            </fields>
+            <writeConstraint>
+              <range>
+                <minimum>0</minimum>
+                <maximum>4294967295</maximum>
+              </range>
+            </writeConstraint>
           </register>
         </cluster>
       </registers>
@@ -19393,20 +19897,6 @@
           <size>0x20</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>PID</name>
-              <description>PID information</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
         </register>
         <register>
           <name>CTRL</name>
@@ -19675,43 +20165,27 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0xFFFFFFFF</resetValue>
-          <fields>
-            <field>
-              <name>DT</name>
-              <description>Data Register</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>CDT</name>
           <displayName>CDT</displayName>
           <description>Common data register</description>
           <addressOffset>0x4</addressOffset>
-          <size>0x20</size>
+          <size>0x8</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>CDT</name>
-              <description>Common Data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>255</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>255</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>CTRL</name>
@@ -19829,20 +20303,12 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0xFFFFFFFF</resetValue>
-          <fields>
-            <field>
-              <name>IDT</name>
-              <description>Initial Data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
         <register>
           <name>POLY</name>
@@ -19852,20 +20318,12 @@
           <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x04C11DB7</resetValue>
-          <fields>
-            <field>
-              <name>POLY</name>
-              <description>polynomial coefficient</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>32</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>4294967295</maximum>
-                </range>
-              </writeConstraint>
-            </field>
-          </fields>
+          <writeConstraint>
+            <range>
+              <minimum>0</minimum>
+              <maximum>4294967295</maximum>
+            </range>
+          </writeConstraint>
         </register>
       </registers>
     </peripheral>

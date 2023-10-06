@@ -1,4 +1,12 @@
 DMA?:
+  _modify:
+    C?DTCNT:
+      size: 16
+      writeConstraint: [0, 0xFFFF]
+    C?PADDR:
+      writeConstraint: [0, 0xFFFFFFFF]
+    C?MADDR:
+      writeConstraint: [0, 0xFFFFFFFF]
   _cluster:
     Channel%s:
       description: "DMA Channel %s"
@@ -90,8 +98,11 @@ DMA?:
             Disable: [0, "Memory to memory mode disable"]
             Enable: [1, "Memory to memory mode enable"] 
       DTCNT:
-        CNT: [0, 0xFFFF]
+        _delete:
+          - CNT
       PADDR:
-        PADDR: [0, 0xFFFFFFFF]
+        _delete:
+          - PADDR
       MADDR:
-        MADDR: [0, 0xFFFFFFFF]
+        _delete:
+          - MADDR

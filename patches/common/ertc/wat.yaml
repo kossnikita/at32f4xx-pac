@@ -1,0 +1,8 @@
+ERTC:
+  _modify:
+    WAT:
+      size: 16
+      writeConstraint: [0, 0xFFFF]
+  WAT:
+    _delete:
+      - VAL

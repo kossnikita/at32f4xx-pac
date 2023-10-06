@@ -1,7 +1,9 @@
 CAN?:
   _array:
     RF?: {}
-
+  _modify:
+    F?FB?,F??FB?:
+      writeConstraint: [0, 0xFFFFFFFF]
   _cluster:
     Mailbox%s:
       description: "Mailbox %s"
@@ -96,9 +98,8 @@ CAN?:
       _array:
         FFB?: {}
       FFB?:
-        _array:
-          FFDB*: {}
-        FFDB*: [0,1]
+        _delete:
+          - FFDB*
   MCTRL:
     FZEN:
       _read:

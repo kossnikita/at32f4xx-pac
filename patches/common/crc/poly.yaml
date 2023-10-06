@@ -1,4 +1,8 @@
 CRC:
+  _modify:
+    POLY:
+      size: 32
+      writeConstraint: [0, 0xFFFFFFFF]  
   CTRL:
     POLY_SIZE:
       bits32: [0, "32 bits"]
@@ -6,4 +10,5 @@ CRC:
       bits8: [2, "8 bits"]
       bits7: [3, "7 bits"]
   POLY:
-    POLY: [0, 0xFFFFFFFF]
+    _delete:
+      - POLY

@@ -21,6 +21,7 @@ pub struct RegisterBlock {
     pub cval: CVAL,
     #[doc = "0x28 - Divider value"]
     pub div: DIV,
+    _reserved11: [u8; 0x02],
     #[doc = "0x2c - Period value"]
     pub pr: PR,
     _reserved12: [u8; 0x04],

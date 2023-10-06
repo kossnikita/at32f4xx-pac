@@ -2,24 +2,17 @@
 pub type R = crate::R<PADDR_SPEC>;
 #[doc = "Register `PADDR` writer"]
 pub type W = crate::W<PADDR_SPEC>;
-#[doc = "Field `PADDR` reader - Peripheral address"]
-pub type PADDR_R = crate::FieldReader<u32>;
-#[doc = "Field `PADDR` writer - Peripheral address"]
-pub type PADDR_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 32, O, u32>;
-impl R {
-    #[doc = "Bits 0:31 - Peripheral address"]
-    #[inline(always)]
-    pub fn paddr(&self) -> PADDR_R {
-        PADDR_R::new(self.bits)
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Peripheral address"]
-    #[inline(always)]
-    #[must_use]
-    pub fn paddr(&mut self) -> PADDR_W<PADDR_SPEC, 0> {
-        PADDR_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub fn bits(&mut self, bits: u32) -> &mut Self {

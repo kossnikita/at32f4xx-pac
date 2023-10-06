@@ -10,6 +10,7 @@ _include:
   - common/flash/common.yaml
   - common/gpio/gpio-v2.yaml
   - common/adc/common.yaml
+  - common/adc/odt.yaml
   - common/dma/common.yaml
   - common/exint/wo18-20.yaml
   - common/crc/common.yaml

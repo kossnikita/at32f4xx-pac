@@ -1,6 +1,6 @@
 BPR:
   _array:
-    DT?,DT10:
+    DT?,DT[1][0]:
       description: Battery powered domain data register %s
     DT??:
       description: Battery powered domain data register %s

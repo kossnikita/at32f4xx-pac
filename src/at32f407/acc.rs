@@ -9,8 +9,10 @@ pub struct RegisterBlock {
     pub ctrl2: CTRL2,
     #[doc = "0x0c - compare value 1"]
     pub c1: C1,
+    _reserved4: [u8; 0x02],
     #[doc = "0x10 - compare value 2"]
     pub c2: C2,
+    _reserved5: [u8; 0x02],
     #[doc = "0x14 - compare value 3"]
     pub c3: C3,
 }

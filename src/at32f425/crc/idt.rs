@@ -2,24 +2,17 @@
 pub type R = crate::R<IDT_SPEC>;
 #[doc = "Register `IDT` writer"]
 pub type W = crate::W<IDT_SPEC>;
-#[doc = "Field `IDT` reader - Initial Data"]
-pub type IDT_R = crate::FieldReader<u32>;
-#[doc = "Field `IDT` writer - Initial Data"]
-pub type IDT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 32, O, u32>;
-impl R {
-    #[doc = "Bits 0:31 - Initial Data"]
-    #[inline(always)]
-    pub fn idt(&self) -> IDT_R {
-        IDT_R::new(self.bits)
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<IDT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Initial Data"]
-    #[inline(always)]
-    #[must_use]
-    pub fn idt(&mut self) -> IDT_W<IDT_SPEC, 0> {
-        IDT_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub fn bits(&mut self, bits: u32) -> &mut Self {

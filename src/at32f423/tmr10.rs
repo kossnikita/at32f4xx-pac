@@ -18,15 +18,18 @@ pub struct RegisterBlock {
     pub cctrl: CCTRL,
     #[doc = "0x24 - Counter value"]
     pub cval: CVAL,
+    _reserved8: [u8; 0x02],
     #[doc = "0x28 - Divider value"]
     pub div: DIV,
+    _reserved9: [u8; 0x02],
     #[doc = "0x2c - Period value"]
     pub pr: PR,
+    _reserved10: [u8; 0x02],
     #[doc = "0x30 - Repetition of period value"]
     pub rpr: RPR,
     #[doc = "0x34 - Channel data register"]
     pub cdt: [CDT; 1],
-    _reserved12: [u8; 0x0c],
+    _reserved12: [u8; 0x0e],
     #[doc = "0x44 - Brake register"]
     pub brk: BRK,
     #[doc = "0x48 - DMA control register"]

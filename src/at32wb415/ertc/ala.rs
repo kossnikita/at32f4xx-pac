@@ -5,59 +5,353 @@ pub type W = crate::W<ALA_SPEC>;
 #[doc = "Field `SU` reader - Second units"]
 pub type SU_R = crate::FieldReader;
 #[doc = "Field `SU` writer - Second units"]
-pub type SU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 #[doc = "Field `ST` reader - Second tens"]
 pub type ST_R = crate::FieldReader;
 #[doc = "Field `ST` writer - Second tens"]
-pub type ST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ST_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
 #[doc = "Field `MASK1` reader - Seconds mask"]
-pub type MASK1_R = crate::BitReader;
+pub type MASK1_R = crate::BitReader<MASK1_A>;
+#[doc = "Seconds mask\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MASK1_A {
+    #[doc = "0: No second mask"]
+    NoMask = 0,
+    #[doc = "1: Alarm clock doesn't care about seconds"]
+    Mask = 1,
+}
+impl From<MASK1_A> for bool {
+    #[inline(always)]
+    fn from(variant: MASK1_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MASK1_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MASK1_A {
+        match self.bits {
+            false => MASK1_A::NoMask,
+            true => MASK1_A::Mask,
+        }
+    }
+    #[doc = "No second mask"]
+    #[inline(always)]
+    pub fn is_no_mask(&self) -> bool {
+        *self == MASK1_A::NoMask
+    }
+    #[doc = "Alarm clock doesn't care about seconds"]
+    #[inline(always)]
+    pub fn is_mask(&self) -> bool {
+        *self == MASK1_A::Mask
+    }
+}
 #[doc = "Field `MASK1` writer - Seconds mask"]
-pub type MASK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MASK1_A>;
+impl<'a, REG, const O: u8> MASK1_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No second mask"]
+    #[inline(always)]
+    pub fn no_mask(self) -> &'a mut crate::W<REG> {
+        self.variant(MASK1_A::NoMask)
+    }
+    #[doc = "Alarm clock doesn't care about seconds"]
+    #[inline(always)]
+    pub fn mask(self) -> &'a mut crate::W<REG> {
+        self.variant(MASK1_A::Mask)
+    }
+}
 #[doc = "Field `MU` reader - Minute units"]
 pub type MU_R = crate::FieldReader;
 #[doc = "Field `MU` writer - Minute units"]
-pub type MU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type MU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 #[doc = "Field `MT` reader - Minute tens"]
 pub type MT_R = crate::FieldReader;
 #[doc = "Field `MT` writer - Minute tens"]
-pub type MT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
 #[doc = "Field `MASK2` reader - Minutes mask"]
-pub type MASK2_R = crate::BitReader;
+pub type MASK2_R = crate::BitReader<MASK2_A>;
+#[doc = "Minutes mask\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MASK2_A {
+    #[doc = "0: No minute mask"]
+    NoMask = 0,
+    #[doc = "1: Alarm clock doesn't care about minutes"]
+    Mask = 1,
+}
+impl From<MASK2_A> for bool {
+    #[inline(always)]
+    fn from(variant: MASK2_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MASK2_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MASK2_A {
+        match self.bits {
+            false => MASK2_A::NoMask,
+            true => MASK2_A::Mask,
+        }
+    }
+    #[doc = "No minute mask"]
+    #[inline(always)]
+    pub fn is_no_mask(&self) -> bool {
+        *self == MASK2_A::NoMask
+    }
+    #[doc = "Alarm clock doesn't care about minutes"]
+    #[inline(always)]
+    pub fn is_mask(&self) -> bool {
+        *self == MASK2_A::Mask
+    }
+}
 #[doc = "Field `MASK2` writer - Minutes mask"]
-pub type MASK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MASK2_A>;
+impl<'a, REG, const O: u8> MASK2_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No minute mask"]
+    #[inline(always)]
+    pub fn no_mask(self) -> &'a mut crate::W<REG> {
+        self.variant(MASK2_A::NoMask)
+    }
+    #[doc = "Alarm clock doesn't care about minutes"]
+    #[inline(always)]
+    pub fn mask(self) -> &'a mut crate::W<REG> {
+        self.variant(MASK2_A::Mask)
+    }
+}
 #[doc = "Field `HU` reader - Hour units"]
 pub type HU_R = crate::FieldReader;
 #[doc = "Field `HU` writer - Hour units"]
-pub type HU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type HU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 #[doc = "Field `HT` reader - Hour tens"]
 pub type HT_R = crate::FieldReader;
 #[doc = "Field `HT` writer - Hour tens"]
-pub type HT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type HT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
 #[doc = "Field `AMPM` reader - AM/PM"]
-pub type AMPM_R = crate::BitReader;
+pub type AMPM_R = crate::BitReader<AMPM_A>;
+#[doc = "AM/PM\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum AMPM_A {
+    #[doc = "0: AM"]
+    Am = 0,
+    #[doc = "1: PM"]
+    Pm = 1,
+}
+impl From<AMPM_A> for bool {
+    #[inline(always)]
+    fn from(variant: AMPM_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl AMPM_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> AMPM_A {
+        match self.bits {
+            false => AMPM_A::Am,
+            true => AMPM_A::Pm,
+        }
+    }
+    #[doc = "AM"]
+    #[inline(always)]
+    pub fn is_am(&self) -> bool {
+        *self == AMPM_A::Am
+    }
+    #[doc = "PM"]
+    #[inline(always)]
+    pub fn is_pm(&self) -> bool {
+        *self == AMPM_A::Pm
+    }
+}
 #[doc = "Field `AMPM` writer - AM/PM"]
-pub type AMPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AMPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, AMPM_A>;
+impl<'a, REG, const O: u8> AMPM_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "AM"]
+    #[inline(always)]
+    pub fn am(self) -> &'a mut crate::W<REG> {
+        self.variant(AMPM_A::Am)
+    }
+    #[doc = "PM"]
+    #[inline(always)]
+    pub fn pm(self) -> &'a mut crate::W<REG> {
+        self.variant(AMPM_A::Pm)
+    }
+}
 #[doc = "Field `MASK3` reader - Hours mask"]
-pub type MASK3_R = crate::BitReader;
+pub type MASK3_R = crate::BitReader<MASK3_A>;
+#[doc = "Hours mask\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MASK3_A {
+    #[doc = "0: No hour mask"]
+    NoMask = 0,
+    #[doc = "1: Alarm clock doesn't care about hours"]
+    Mask = 1,
+}
+impl From<MASK3_A> for bool {
+    #[inline(always)]
+    fn from(variant: MASK3_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MASK3_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MASK3_A {
+        match self.bits {
+            false => MASK3_A::NoMask,
+            true => MASK3_A::Mask,
+        }
+    }
+    #[doc = "No hour mask"]
+    #[inline(always)]
+    pub fn is_no_mask(&self) -> bool {
+        *self == MASK3_A::NoMask
+    }
+    #[doc = "Alarm clock doesn't care about hours"]
+    #[inline(always)]
+    pub fn is_mask(&self) -> bool {
+        *self == MASK3_A::Mask
+    }
+}
 #[doc = "Field `MASK3` writer - Hours mask"]
-pub type MASK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MASK3_A>;
+impl<'a, REG, const O: u8> MASK3_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "No hour mask"]
+    #[inline(always)]
+    pub fn no_mask(self) -> &'a mut crate::W<REG> {
+        self.variant(MASK3_A::NoMask)
+    }
+    #[doc = "Alarm clock doesn't care about hours"]
+    #[inline(always)]
+    pub fn mask(self) -> &'a mut crate::W<REG> {
+        self.variant(MASK3_A::Mask)
+    }
+}
 #[doc = "Field `DU` reader - Date units"]
 pub type DU_R = crate::FieldReader;
 #[doc = "Field `DU` writer - Date units"]
-pub type DU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 #[doc = "Field `DT` reader - Date tens"]
 pub type DT_R = crate::FieldReader;
 #[doc = "Field `DT` writer - Date tens"]
-pub type DT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
 #[doc = "Field `WKSEL` reader - Date/week mode select"]
-pub type WKSEL_R = crate::BitReader;
+pub type WKSEL_R = crate::BitReader<WKSEL_A>;
+#[doc = "Date/week mode select\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum WKSEL_A {
+    #[doc = "0: Date"]
+    Date = 0,
+    #[doc = "1: Week day"]
+    WeekDay = 1,
+}
+impl From<WKSEL_A> for bool {
+    #[inline(always)]
+    fn from(variant: WKSEL_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl WKSEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> WKSEL_A {
+        match self.bits {
+            false => WKSEL_A::Date,
+            true => WKSEL_A::WeekDay,
+        }
+    }
+    #[doc = "Date"]
+    #[inline(always)]
+    pub fn is_date(&self) -> bool {
+        *self == WKSEL_A::Date
+    }
+    #[doc = "Week day"]
+    #[inline(always)]
+    pub fn is_week_day(&self) -> bool {
+        *self == WKSEL_A::WeekDay
+    }
+}
 #[doc = "Field `WKSEL` writer - Date/week mode select"]
-pub type WKSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WKSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, WKSEL_A>;
+impl<'a, REG, const O: u8> WKSEL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Date"]
+    #[inline(always)]
+    pub fn date(self) -> &'a mut crate::W<REG> {
+        self.variant(WKSEL_A::Date)
+    }
+    #[doc = "Week day"]
+    #[inline(always)]
+    pub fn week_day(self) -> &'a mut crate::W<REG> {
+        self.variant(WKSEL_A::WeekDay)
+    }
+}
 #[doc = "Field `MASK4` reader - Date/week mask"]
-pub type MASK4_R = crate::BitReader;
+pub type MASK4_R = crate::BitReader<MASK4_A>;
+#[doc = "Date/week mask\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum MASK4_A {
+    #[doc = "0: Date/week day is not masked"]
+    NoMask = 0,
+    #[doc = "1: Alarm clock doesn't care about date/week day"]
+    Mask = 1,
+}
+impl From<MASK4_A> for bool {
+    #[inline(always)]
+    fn from(variant: MASK4_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl MASK4_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> MASK4_A {
+        match self.bits {
+            false => MASK4_A::NoMask,
+            true => MASK4_A::Mask,
+        }
+    }
+    #[doc = "Date/week day is not masked"]
+    #[inline(always)]
+    pub fn is_no_mask(&self) -> bool {
+        *self == MASK4_A::NoMask
+    }
+    #[doc = "Alarm clock doesn't care about date/week day"]
+    #[inline(always)]
+    pub fn is_mask(&self) -> bool {
+        *self == MASK4_A::Mask
+    }
+}
 #[doc = "Field `MASK4` writer - Date/week mask"]
-pub type MASK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MASK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MASK4_A>;
+impl<'a, REG, const O: u8> MASK4_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Date/week day is not masked"]
+    #[inline(always)]
+    pub fn no_mask(self) -> &'a mut crate::W<REG> {
+        self.variant(MASK4_A::NoMask)
+    }
+    #[doc = "Alarm clock doesn't care about date/week day"]
+    #[inline(always)]
+    pub fn mask(self) -> &'a mut crate::W<REG> {
+        self.variant(MASK4_A::Mask)
+    }
+}
 impl R {
     #[doc = "Bits 0:3 - Second units"]
     #[inline(always)]

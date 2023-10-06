@@ -5,31 +5,80 @@ pub type W = crate::W<TIME_SPEC>;
 #[doc = "Field `SU` reader - Second units"]
 pub type SU_R = crate::FieldReader;
 #[doc = "Field `SU` writer - Second units"]
-pub type SU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 #[doc = "Field `ST` reader - Second tens"]
 pub type ST_R = crate::FieldReader;
 #[doc = "Field `ST` writer - Second tens"]
-pub type ST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ST_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
 #[doc = "Field `MU` reader - Minute units"]
 pub type MU_R = crate::FieldReader;
 #[doc = "Field `MU` writer - Minute units"]
-pub type MU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type MU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 #[doc = "Field `MT` reader - Minute tens"]
 pub type MT_R = crate::FieldReader;
 #[doc = "Field `MT` writer - Minute tens"]
-pub type MT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
 #[doc = "Field `HU` reader - Hour units"]
 pub type HU_R = crate::FieldReader;
 #[doc = "Field `HU` writer - Hour units"]
-pub type HU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type HU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
 #[doc = "Field `HT` reader - Hour tens"]
 pub type HT_R = crate::FieldReader;
 #[doc = "Field `HT` writer - Hour tens"]
-pub type HT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type HT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
 #[doc = "Field `AMPM` reader - AM/PM notation"]
-pub type AMPM_R = crate::BitReader;
+pub type AMPM_R = crate::BitReader<AMPM_A>;
+#[doc = "AM/PM notation\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum AMPM_A {
+    #[doc = "0: AM"]
+    Am = 0,
+    #[doc = "1: PM"]
+    Pm = 1,
+}
+impl From<AMPM_A> for bool {
+    #[inline(always)]
+    fn from(variant: AMPM_A) -> Self {
+        variant as u8 != 0
+    }
+}
+impl AMPM_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> AMPM_A {
+        match self.bits {
+            false => AMPM_A::Am,
+            true => AMPM_A::Pm,
+        }
+    }
+    #[doc = "AM"]
+    #[inline(always)]
+    pub fn is_am(&self) -> bool {
+        *self == AMPM_A::Am
+    }
+    #[doc = "PM"]
+    #[inline(always)]
+    pub fn is_pm(&self) -> bool {
+        *self == AMPM_A::Pm
+    }
+}
 #[doc = "Field `AMPM` writer - AM/PM notation"]
-pub type AMPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AMPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, AMPM_A>;
+impl<'a, REG, const O: u8> AMPM_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "AM"]
+    #[inline(always)]
+    pub fn am(self) -> &'a mut crate::W<REG> {
+        self.variant(AMPM_A::Am)
+    }
+    #[doc = "PM"]
+    #[inline(always)]
+    pub fn pm(self) -> &'a mut crate::W<REG> {
+        self.variant(AMPM_A::Pm)
+    }
+}
 impl R {
     #[doc = "Bits 0:3 - Second units"]
     #[inline(always)]

@@ -9,12 +9,16 @@ pub struct RegisterBlock {
     pub sts: STS,
     #[doc = "0x0c - data register"]
     pub dt: DT,
+    _reserved4: [u8; 0x02],
     #[doc = "0x10 - CRC polynomial register"]
     pub cpoly: CPOLY,
+    _reserved5: [u8; 0x02],
     #[doc = "0x14 - Receive CRC register"]
     pub rcrc: RCRC,
+    _reserved6: [u8; 0x02],
     #[doc = "0x18 - Transmit CRC register"]
     pub tcrc: TCRC,
+    _reserved7: [u8; 0x02],
     #[doc = "0x1c - I2S control register"]
     pub i2sctrl: I2SCTRL,
     #[doc = "0x20 - I2S clock register"]

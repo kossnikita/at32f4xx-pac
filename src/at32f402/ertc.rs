@@ -9,10 +9,11 @@ pub struct RegisterBlock {
     pub ctrl: CTRL,
     #[doc = "0x0c - initialization and status register"]
     pub sts: STS,
-    #[doc = "0x10 - Diveder register"]
+    #[doc = "0x10 - Divider register"]
     pub div: DIV,
     #[doc = "0x14 - Wakeup timer register"]
     pub wat: WAT,
+    _reserved6: [u8; 0x02],
     #[doc = "0x18 - Calibration register"]
     pub ccal: CCAL,
     #[doc = "0x1c - Alarm A register"]
@@ -21,8 +22,10 @@ pub struct RegisterBlock {
     pub alb: ALB,
     #[doc = "0x24 - write protection register"]
     pub wp: WP,
+    _reserved10: [u8; 0x03],
     #[doc = "0x28 - sub second register"]
     pub sbs: SBS,
+    _reserved11: [u8; 0x02],
     #[doc = "0x2c - time adjust register"]
     pub tadj: TADJ,
     #[doc = "0x30 - time stamp time register"]
@@ -165,10 +168,10 @@ module"]
 pub type STS = crate::Reg<sts::STS_SPEC>;
 #[doc = "initialization and status register"]
 pub mod sts;
-#[doc = "DIV (rw) register accessor: Diveder register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`div::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`div`]
+#[doc = "DIV (rw) register accessor: Divider register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`div::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`div`]
 module"]
 pub type DIV = crate::Reg<div::DIV_SPEC>;
-#[doc = "Diveder register"]
+#[doc = "Divider register"]
 pub mod div;
 #[doc = "WAT (rw) register accessor: Wakeup timer register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wat::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wat::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`wat`]
 module"]
@@ -185,11 +188,8 @@ module"]
 pub type ALA = crate::Reg<ala::ALA_SPEC>;
 #[doc = "Alarm A register"]
 pub mod ala;
-#[doc = "ALB (rw) register accessor: Alarm B register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`alb::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alb::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`alb`]
-module"]
-pub type ALB = crate::Reg<alb::ALB_SPEC>;
-#[doc = "Alarm B register"]
-pub mod alb;
+pub use ala as alb;
+pub use ALA as ALB;
 #[doc = "WP (w) register accessor: write protection register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wp::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`wp`]
 module"]
 pub type WP = crate::Reg<wp::WP_SPEC>;
@@ -235,11 +235,8 @@ module"]
 pub type ALASBS = crate::Reg<alasbs::ALASBS_SPEC>;
 #[doc = "alarm A sub second register"]
 pub mod alasbs;
-#[doc = "ALBSBS (rw) register accessor: alarm B sub second register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`albsbs::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`albsbs::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`albsbs`]
-module"]
-pub type ALBSBS = crate::Reg<albsbs::ALBSBS_SPEC>;
-#[doc = "alarm B sub second register"]
-pub mod albsbs;
+pub use alasbs as albsbs;
+pub use ALASBS as ALBSBS;
 #[doc = "BPRDT (rw) register accessor: Battery powered domain register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bprdt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bprdt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`bprdt`]
 module"]
 pub type BPRDT = crate::Reg<bprdt::BPRDT_SPEC>;

@@ -16,14 +16,16 @@ pub struct RegisterBlock {
     pub cctrl: CCTRL,
     #[doc = "0x24 - Counter value"]
     pub cval: CVAL,
+    _reserved7: [u8; 0x02],
     #[doc = "0x28 - Divider value"]
     pub div: DIV,
+    _reserved8: [u8; 0x02],
     #[doc = "0x2c - Period value"]
     pub pr: PR,
-    _reserved9: [u8; 0x04],
+    _reserved9: [u8; 0x06],
     #[doc = "0x34 - Channel data register"]
     pub cdt: [CDT; 1],
-    _reserved10: [u8; 0x18],
+    _reserved10: [u8; 0x1a],
     #[doc = "0x50 - TMR14 channel 1 input remap"]
     pub rmp: RMP,
 }

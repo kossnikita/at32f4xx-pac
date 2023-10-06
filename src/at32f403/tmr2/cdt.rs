@@ -2,24 +2,17 @@
 pub type R = crate::R<CDT_SPEC>;
 #[doc = "Register `C%sDT` writer"]
 pub type W = crate::W<CDT_SPEC>;
-#[doc = "Field `CDT` reader - Channel data value"]
-pub type CDT_R = crate::FieldReader<u32>;
-#[doc = "Field `CDT` writer - Channel data value"]
-pub type CDT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
-impl R {
-    #[doc = "Bits 0:31 - Channel data value"]
-    #[inline(always)]
-    pub fn cdt(&self) -> CDT_R {
-        CDT_R::new(self.bits)
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CDT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Channel data value"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cdt(&mut self) -> CDT_W<CDT_SPEC, 0> {
-        CDT_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {

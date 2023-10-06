@@ -2,24 +2,17 @@
 pub type R = crate::R<CVAL_SPEC>;
 #[doc = "Register `CVAL` writer"]
 pub type W = crate::W<CVAL_SPEC>;
-#[doc = "Field `CVAL` reader - Counter value"]
-pub type CVAL_R = crate::FieldReader<u32>;
-#[doc = "Field `CVAL` writer - Counter value"]
-pub type CVAL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 32, O, u32>;
-impl R {
-    #[doc = "Bits 0:31 - Counter value"]
-    #[inline(always)]
-    pub fn cval(&self) -> CVAL_R {
-        CVAL_R::new(self.bits)
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CVAL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Counter value"]
-    #[inline(always)]
-    #[must_use]
-    pub fn cval(&mut self) -> CVAL_W<CVAL_SPEC, 0> {
-        CVAL_W::new(self)
-    }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
     pub fn bits(&mut self, bits: u32) -> &mut Self {
