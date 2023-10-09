@@ -139,6 +139,32 @@ impl R {
         WD_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MACCTRL")
+            .field("re", &format_args!("{}", self.re().bit()))
+            .field("te", &format_args!("{}", self.te().bit()))
+            .field("dc", &format_args!("{}", self.dc().bit()))
+            .field("bl", &format_args!("{}", self.bl().bits()))
+            .field("acs", &format_args!("{}", self.acs().bit()))
+            .field("dr", &format_args!("{}", self.dr().bit()))
+            .field("ipc", &format_args!("{}", self.ipc().bit()))
+            .field("dm", &format_args!("{}", self.dm().bit()))
+            .field("lm", &format_args!("{}", self.lm().bit()))
+            .field("dro", &format_args!("{}", self.dro().bit()))
+            .field("fes", &format_args!("{}", self.fes().bit()))
+            .field("dcs", &format_args!("{}", self.dcs().bit()))
+            .field("ifg", &format_args!("{}", self.ifg().bits()))
+            .field("jd", &format_args!("{}", self.jd().bit()))
+            .field("wd", &format_args!("{}", self.wd().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MACCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 2 - Receiver enable"]
     #[inline(always)]

@@ -67,6 +67,24 @@ impl R {
         RWFFPR_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MACPMTCTRLSTS")
+            .field("pd", &format_args!("{}", self.pd().bit()))
+            .field("emp", &format_args!("{}", self.emp().bit()))
+            .field("erwf", &format_args!("{}", self.erwf().bit()))
+            .field("rmp", &format_args!("{}", self.rmp().bit()))
+            .field("rrwf", &format_args!("{}", self.rrwf().bit()))
+            .field("guc", &format_args!("{}", self.guc().bit()))
+            .field("rwffpr", &format_args!("{}", self.rwffpr().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MACPMTCTRLSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Power down"]
     #[inline(always)]

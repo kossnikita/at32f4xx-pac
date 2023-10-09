@@ -40,6 +40,21 @@ impl R {
         I2C1SEL_R::new(((self.bits >> 12) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PICLKS")
+            .field("usart1sel", &format_args!("{}", self.usart1sel().bits()))
+            .field("usart2sel", &format_args!("{}", self.usart2sel().bits()))
+            .field("usart3sel", &format_args!("{}", self.usart3sel().bits()))
+            .field("i2c1sel", &format_args!("{}", self.i2c1sel().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PICLKS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - USART1 clock select"]
     #[inline(always)]

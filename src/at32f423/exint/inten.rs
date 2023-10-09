@@ -229,6 +229,42 @@ impl R {
         INTEN28_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTEN")
+            .field("inten0", &format_args!("{}", self.inten0().bit()))
+            .field("inten1", &format_args!("{}", self.inten1().bit()))
+            .field("inten2", &format_args!("{}", self.inten2().bit()))
+            .field("inten3", &format_args!("{}", self.inten3().bit()))
+            .field("inten4", &format_args!("{}", self.inten4().bit()))
+            .field("inten5", &format_args!("{}", self.inten5().bit()))
+            .field("inten6", &format_args!("{}", self.inten6().bit()))
+            .field("inten7", &format_args!("{}", self.inten7().bit()))
+            .field("inten8", &format_args!("{}", self.inten8().bit()))
+            .field("inten9", &format_args!("{}", self.inten9().bit()))
+            .field("inten10", &format_args!("{}", self.inten10().bit()))
+            .field("inten11", &format_args!("{}", self.inten11().bit()))
+            .field("inten12", &format_args!("{}", self.inten12().bit()))
+            .field("inten13", &format_args!("{}", self.inten13().bit()))
+            .field("inten14", &format_args!("{}", self.inten14().bit()))
+            .field("inten15", &format_args!("{}", self.inten15().bit()))
+            .field("inten16", &format_args!("{}", self.inten16().bit()))
+            .field("inten17", &format_args!("{}", self.inten17().bit()))
+            .field("inten18", &format_args!("{}", self.inten18().bit()))
+            .field("inten21", &format_args!("{}", self.inten21().bit()))
+            .field("inten22", &format_args!("{}", self.inten22().bit()))
+            .field("inten23", &format_args!("{}", self.inten23().bit()))
+            .field("inten25", &format_args!("{}", self.inten25().bit()))
+            .field("inten26", &format_args!("{}", self.inten26().bit()))
+            .field("inten28", &format_args!("{}", self.inten28().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<INTEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Interrupt enable or disable on line 0"]
     #[inline(always)]

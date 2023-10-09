@@ -76,6 +76,25 @@ impl R {
         MSDMASEL_H_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CCTRL")
+            .field("msdmasel_h", &format_args!("{}", self.msdmasel_h().bit()))
+            .field("itsrven", &format_args!("{}", self.itsrven().bit()))
+            .field("vbaten", &format_args!("{}", self.vbaten().bit()))
+            .field("adcdiv", &format_args!("{}", self.adcdiv().bits()))
+            .field("msdmasel_l", &format_args!("{}", self.msdmasel_l().bits()))
+            .field("msdrcen", &format_args!("{}", self.msdrcen().bit()))
+            .field("asisel", &format_args!("{}", self.asisel().bits()))
+            .field("mssel", &format_args!("{}", self.mssel().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:4 - Master slave mode select"]
     #[inline(always)]

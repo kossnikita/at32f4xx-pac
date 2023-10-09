@@ -184,6 +184,23 @@ impl R {
         LOEN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BTMG")
+            .field("loen", &format_args!("{}", self.loen().bit()))
+            .field("lben", &format_args!("{}", self.lben().bit()))
+            .field("rsaw", &format_args!("{}", self.rsaw().bits()))
+            .field("bts2", &format_args!("{}", self.bts2().bits()))
+            .field("bts1", &format_args!("{}", self.bts1().bits()))
+            .field("brdiv", &format_args!("{}", self.brdiv().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BTMG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:11 - Baud rate division"]
     #[inline(always)]

@@ -43,6 +43,22 @@ conversion in preempted sequence"]
         PCLEN_R::new(((self.bits >> 20) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PSQ")
+            .field("pclen", &format_args!("{}", self.pclen().bits()))
+            .field("psn1", &format_args!("{}", self.psn1().bits()))
+            .field("psn2", &format_args!("{}", self.psn2().bits()))
+            .field("psn3", &format_args!("{}", self.psn3().bits()))
+            .field("psn4", &format_args!("{}", self.psn4().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PSQ_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Number of [1-4]
 conversion in preempted sequence"]

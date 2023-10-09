@@ -22,6 +22,19 @@ impl R {
         AST_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PTPTSLUD")
+            .field("tss", &format_args!("{}", self.tss().bits()))
+            .field("ast", &format_args!("{}", self.ast().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PTPTSLUD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:30 - Timestamp subseconds"]
     #[inline(always)]

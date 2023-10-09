@@ -76,6 +76,25 @@ impl R {
         CLKDIV98_R::new(((self.bits >> 15) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLKCTRL")
+            .field("clkdiv", &format_args!("{}", self.clkdiv().bits()))
+            .field("clkoen", &format_args!("{}", self.clkoen().bit()))
+            .field("pwrsven", &format_args!("{}", self.pwrsven().bit()))
+            .field("bypsen", &format_args!("{}", self.bypsen().bit()))
+            .field("busws", &format_args!("{}", self.busws().bits()))
+            .field("clkeds", &format_args!("{}", self.clkeds().bit()))
+            .field("hfcen", &format_args!("{}", self.hfcen().bit()))
+            .field("clkdiv98", &format_args!("{}", self.clkdiv98().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CLKCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - Clock division"]
     #[inline(always)]

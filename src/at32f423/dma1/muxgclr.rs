@@ -40,6 +40,21 @@ impl R {
         TRGOVFC4_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MUXGCLR")
+            .field("trgovfc1", &format_args!("{}", self.trgovfc1().bit()))
+            .field("trgovfc2", &format_args!("{}", self.trgovfc2().bit()))
+            .field("trgovfc3", &format_args!("{}", self.trgovfc3().bit()))
+            .field("trgovfc4", &format_args!("{}", self.trgovfc4().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MUXGCLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Clear trigger overrun interrupt flag"]
     #[inline(always)]

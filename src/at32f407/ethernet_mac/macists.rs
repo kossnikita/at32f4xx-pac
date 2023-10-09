@@ -49,6 +49,22 @@ impl R {
         TIS_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MACISTS")
+            .field("pis", &format_args!("{}", self.pis().bit()))
+            .field("mis", &format_args!("{}", self.mis().bit()))
+            .field("mris", &format_args!("{}", self.mris().bit()))
+            .field("mtis", &format_args!("{}", self.mtis().bit()))
+            .field("tis", &format_args!("{}", self.tis().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MACISTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 3 - PMT interrupt status"]
     #[inline(always)]

@@ -37,6 +37,22 @@ impl R {
         HSES_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ESTS")
+            .field("hses", &format_args!("{}", self.hses().bit()))
+            .field("vses", &format_args!("{}", self.vses().bit()))
+            .field("esees", &format_args!("{}", self.esees().bit()))
+            .field("ovres", &format_args!("{}", self.ovres().bit()))
+            .field("cfdes", &format_args!("{}", self.cfdes().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<ESTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Event status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ests::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ESTS_SPEC;
 impl crate::RegisterSpec for ESTS_SPEC {

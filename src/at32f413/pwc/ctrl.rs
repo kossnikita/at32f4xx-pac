@@ -58,6 +58,23 @@ impl R {
         BPWEN_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("lpsel", &format_args!("{}", self.lpsel().bit()))
+            .field("clswef", &format_args!("{}", self.clswef().bit()))
+            .field("clsef", &format_args!("{}", self.clsef().bit()))
+            .field("pvmen", &format_args!("{}", self.pvmen().bit()))
+            .field("pvmsel", &format_args!("{}", self.pvmsel().bits()))
+            .field("bpwen", &format_args!("{}", self.bpwen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Low power mode select when Cortex-M4F sleepdeep"]
     #[inline(always)]

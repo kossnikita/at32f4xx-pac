@@ -76,6 +76,25 @@ impl R {
         S8_2DEN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("S2DCTRL")
+            .field("s1_2den", &format_args!("{}", self.s1_2den().bit()))
+            .field("s2_2den", &format_args!("{}", self.s2_2den().bit()))
+            .field("s3_2den", &format_args!("{}", self.s3_2den().bit()))
+            .field("s4_2den", &format_args!("{}", self.s4_2den().bit()))
+            .field("s5_2den", &format_args!("{}", self.s5_2den().bit()))
+            .field("s6_2den", &format_args!("{}", self.s6_2den().bit()))
+            .field("s7_2den", &format_args!("{}", self.s7_2den().bit()))
+            .field("s8_2den", &format_args!("{}", self.s8_2den().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<S2DCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Stream 1 2D transfer enable"]
     #[inline(always)]

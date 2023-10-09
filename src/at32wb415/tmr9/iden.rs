@@ -168,6 +168,21 @@ interrupt enable"]
         TIEN_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IDEN")
+            .field("tien", &format_args!("{}", self.tien().bit()))
+            .field("c1ien", &format_args!("{}", self.c1ien().bit()))
+            .field("c2ien", &format_args!("{}", self.c2ien().bit()))
+            .field("ovfien", &format_args!("{}", self.ovfien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<IDEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]

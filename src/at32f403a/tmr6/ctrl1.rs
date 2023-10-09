@@ -336,6 +336,22 @@ impl R {
         PRBEN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field("prben", &format_args!("{}", self.prben().bit()))
+            .field("ocmen", &format_args!("{}", self.ocmen().bit()))
+            .field("ovfs", &format_args!("{}", self.ovfs().bit()))
+            .field("ovfen", &format_args!("{}", self.ovfen().bit()))
+            .field("tmren", &format_args!("{}", self.tmren().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - TMR enable"]
     #[inline(always)]

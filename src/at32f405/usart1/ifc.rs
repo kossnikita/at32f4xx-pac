@@ -22,6 +22,19 @@ impl R {
         CMDFC_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IFC")
+            .field("cmdfc", &format_args!("{}", self.cmdfc().bit()))
+            .field("rtodfc", &format_args!("{}", self.rtodfc().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<IFC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 11 - Receiver time out detection flag clear"]
     #[inline(always)]

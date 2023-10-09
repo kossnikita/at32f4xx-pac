@@ -483,6 +483,31 @@ impl R {
         PLLMULT5_4_R::new(((self.bits >> 29) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG")
+            .field("sclksel", &format_args!("{}", self.sclksel().bits()))
+            .field("sclksts", &format_args!("{}", self.sclksts().bits()))
+            .field("ahbdiv", &format_args!("{}", self.ahbdiv().bits()))
+            .field("apb1div", &format_args!("{}", self.apb1div().bits()))
+            .field("apb2div", &format_args!("{}", self.apb2div().bits()))
+            .field("adcdiv1_0", &format_args!("{}", self.adcdiv1_0().bits()))
+            .field("pllrcs", &format_args!("{}", self.pllrcs().bit()))
+            .field("pllhextdiv", &format_args!("{}", self.pllhextdiv().bit()))
+            .field("pllmult3_0", &format_args!("{}", self.pllmult3_0().bits()))
+            .field("usbdiv1_0", &format_args!("{}", self.usbdiv1_0().bits()))
+            .field("clkout_sel", &format_args!("{}", self.clkout_sel().bits()))
+            .field("usbdiv2", &format_args!("{}", self.usbdiv2().bit()))
+            .field("adcdiv2", &format_args!("{}", self.adcdiv2().bit()))
+            .field("pllmult5_4", &format_args!("{}", self.pllmult5_4().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - System clock select"]
     #[inline(always)]

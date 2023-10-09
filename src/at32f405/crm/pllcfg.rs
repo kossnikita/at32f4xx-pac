@@ -58,6 +58,23 @@ impl R {
         PLLRCS_R::new(((self.bits >> 30) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLLCFG")
+            .field("pll_ms", &format_args!("{}", self.pll_ms().bits()))
+            .field("pll_ns", &format_args!("{}", self.pll_ns().bits()))
+            .field("pll_fp", &format_args!("{}", self.pll_fp().bits()))
+            .field("pll_fu", &format_args!("{}", self.pll_fu().bits()))
+            .field("pllu_en", &format_args!("{}", self.pllu_en().bit()))
+            .field("pllrcs", &format_args!("{}", self.pllrcs().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PLLCFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - PLL pre-division"]
     #[inline(always)]

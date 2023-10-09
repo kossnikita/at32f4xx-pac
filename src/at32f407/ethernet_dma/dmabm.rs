@@ -94,6 +94,27 @@ impl R {
         AAB_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMABM")
+            .field("swr", &format_args!("{}", self.swr().bit()))
+            .field("da", &format_args!("{}", self.da().bit()))
+            .field("dsl", &format_args!("{}", self.dsl().bits()))
+            .field("pbl", &format_args!("{}", self.pbl().bits()))
+            .field("pr", &format_args!("{}", self.pr().bits()))
+            .field("fb", &format_args!("{}", self.fb().bit()))
+            .field("rdp", &format_args!("{}", self.rdp().bits()))
+            .field("usp", &format_args!("{}", self.usp().bit()))
+            .field("pblx8", &format_args!("{}", self.pblx8().bit()))
+            .field("aab", &format_args!("{}", self.aab().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DMABM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Software reset"]
     #[inline(always)]

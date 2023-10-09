@@ -139,6 +139,32 @@ impl R {
         MWMC_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BK1CTRL3")
+            .field("mwmc", &format_args!("{}", self.mwmc().bit()))
+            .field("crpgs", &format_args!("{}", self.crpgs().bits()))
+            .field("nwasen", &format_args!("{}", self.nwasen().bit()))
+            .field("rwtd", &format_args!("{}", self.rwtd().bit()))
+            .field("nwsen", &format_args!("{}", self.nwsen().bit()))
+            .field("wen", &format_args!("{}", self.wen().bit()))
+            .field("nwtcfg", &format_args!("{}", self.nwtcfg().bit()))
+            .field("wrapen", &format_args!("{}", self.wrapen().bit()))
+            .field("nwpol", &format_args!("{}", self.nwpol().bit()))
+            .field("syncben", &format_args!("{}", self.syncben().bit()))
+            .field("noren", &format_args!("{}", self.noren().bit()))
+            .field("extmdbw", &format_args!("{}", self.extmdbw().bits()))
+            .field("dev", &format_args!("{}", self.dev().bits()))
+            .field("admuxen", &format_args!("{}", self.admuxen().bit()))
+            .field("en", &format_args!("{}", self.en().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BK1CTRL3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Memory bank enable"]
     #[inline(always)]

@@ -157,6 +157,34 @@ impl R {
         OTGFS2_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBEN1")
+            .field("gpioa", &format_args!("{}", self.gpioa().bit()))
+            .field("gpiob", &format_args!("{}", self.gpiob().bit()))
+            .field("gpioc", &format_args!("{}", self.gpioc().bit()))
+            .field("gpiod", &format_args!("{}", self.gpiod().bit()))
+            .field("gpioe", &format_args!("{}", self.gpioe().bit()))
+            .field("gpiof", &format_args!("{}", self.gpiof().bit()))
+            .field("gpiog", &format_args!("{}", self.gpiog().bit()))
+            .field("gpioh", &format_args!("{}", self.gpioh().bit()))
+            .field("crc", &format_args!("{}", self.crc().bit()))
+            .field("edma", &format_args!("{}", self.edma().bit()))
+            .field("dma1", &format_args!("{}", self.dma1().bit()))
+            .field("dma2", &format_args!("{}", self.dma2().bit()))
+            .field("emac", &format_args!("{}", self.emac().bit()))
+            .field("emactx", &format_args!("{}", self.emactx().bit()))
+            .field("emacrx", &format_args!("{}", self.emacrx().bit()))
+            .field("emacptp", &format_args!("{}", self.emacptp().bit()))
+            .field("otgfs2", &format_args!("{}", self.otgfs2().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBEN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - IO A clock enable"]
     #[inline(always)]

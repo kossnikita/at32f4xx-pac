@@ -9,6 +9,18 @@ impl R {
         INEPTXFSAV_R::new((self.bits & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DTXFSTS5")
+            .field("ineptxfsav", &format_args!("{}", self.ineptxfsav().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DTXFSTS5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "OTGHS device IN endpoint-5 transmit FIFO status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dtxfsts5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DTXFSTS5_SPEC;
 impl crate::RegisterSpec for DTXFSTS5_SPEC {

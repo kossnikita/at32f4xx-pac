@@ -6,6 +6,11 @@ pub type CRC_SS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 pub type CRC_SN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
 #[doc = "Field `CRC_STRT` writer - CRC start"]
 pub type CRC_STRT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+impl core::fmt::Debug for crate::generic::Reg<CRC_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:6 - CRC start sector"]
     #[inline(always)]

@@ -20,6 +20,22 @@ impl R {
         FSLSSUPP_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCFG")
+            .field(
+                "fslspclksel",
+                &format_args!("{}", self.fslspclksel().bits()),
+            )
+            .field("fslssupp", &format_args!("{}", self.fslssupp().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HCFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - FS/LS PHY clock select"]
     #[inline(always)]

@@ -163,6 +163,23 @@ event triggered by software"]
         TRGSWTR_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWEVT")
+            .field("trgswtr", &format_args!("{}", self.trgswtr().bit()))
+            .field("c1swtr", &format_args!("{}", self.c1swtr().bit()))
+            .field("c2swtr", &format_args!("{}", self.c2swtr().bit()))
+            .field("c3swtr", &format_args!("{}", self.c3swtr().bit()))
+            .field("c4swtr", &format_args!("{}", self.c4swtr().bit()))
+            .field("ovfswtr", &format_args!("{}", self.ovfswtr().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SWEVT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Overflow event triggered by software"]
     #[inline(always)]

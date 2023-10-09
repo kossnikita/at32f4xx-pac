@@ -229,6 +229,42 @@ impl R {
         RP28_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POLCFG1")
+            .field("rp0", &format_args!("{}", self.rp0().bit()))
+            .field("rp1", &format_args!("{}", self.rp1().bit()))
+            .field("rp2", &format_args!("{}", self.rp2().bit()))
+            .field("rp3", &format_args!("{}", self.rp3().bit()))
+            .field("rp4", &format_args!("{}", self.rp4().bit()))
+            .field("rp5", &format_args!("{}", self.rp5().bit()))
+            .field("rp6", &format_args!("{}", self.rp6().bit()))
+            .field("rp7", &format_args!("{}", self.rp7().bit()))
+            .field("rp8", &format_args!("{}", self.rp8().bit()))
+            .field("rp9", &format_args!("{}", self.rp9().bit()))
+            .field("rp10", &format_args!("{}", self.rp10().bit()))
+            .field("rp11", &format_args!("{}", self.rp11().bit()))
+            .field("rp12", &format_args!("{}", self.rp12().bit()))
+            .field("rp13", &format_args!("{}", self.rp13().bit()))
+            .field("rp14", &format_args!("{}", self.rp14().bit()))
+            .field("rp15", &format_args!("{}", self.rp15().bit()))
+            .field("rp16", &format_args!("{}", self.rp16().bit()))
+            .field("rp17", &format_args!("{}", self.rp17().bit()))
+            .field("rp18", &format_args!("{}", self.rp18().bit()))
+            .field("rp21", &format_args!("{}", self.rp21().bit()))
+            .field("rp22", &format_args!("{}", self.rp22().bit()))
+            .field("rp23", &format_args!("{}", self.rp23().bit()))
+            .field("rp25", &format_args!("{}", self.rp25().bit()))
+            .field("rp26", &format_args!("{}", self.rp26().bit()))
+            .field("rp28", &format_args!("{}", self.rp28().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<POLCFG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Rising polarity configuration bit of line 0"]
     #[inline(always)]

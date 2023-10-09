@@ -226,6 +226,23 @@ impl R {
         OUTM_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTCCAL")
+            .field("calval", &format_args!("{}", self.calval().bits()))
+            .field("calout", &format_args!("{}", self.calout().bit()))
+            .field("outen", &format_args!("{}", self.outen().bit()))
+            .field("outsel", &format_args!("{}", self.outsel().bit()))
+            .field("ccos", &format_args!("{}", self.ccos().bit()))
+            .field("outm", &format_args!("{}", self.outm().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<RTCCAL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:6 - Calibration value"]
     #[inline(always)]

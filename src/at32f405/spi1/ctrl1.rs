@@ -823,6 +823,31 @@ impl R {
         SLBEN_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field("slben", &format_args!("{}", self.slben().bit()))
+            .field("slbtd", &format_args!("{}", self.slbtd().bit()))
+            .field("ccen", &format_args!("{}", self.ccen().bit()))
+            .field("ntc", &format_args!("{}", self.ntc().bit()))
+            .field("fbn", &format_args!("{}", self.fbn().bit()))
+            .field("ora", &format_args!("{}", self.ora().bit()))
+            .field("swcsen", &format_args!("{}", self.swcsen().bit()))
+            .field("swcsil", &format_args!("{}", self.swcsil().bit()))
+            .field("ltf", &format_args!("{}", self.ltf().bit()))
+            .field("spien", &format_args!("{}", self.spien().bit()))
+            .field("mdiv2_0", &format_args!("{}", self.mdiv2_0().bits()))
+            .field("msten", &format_args!("{}", self.msten().bit()))
+            .field("clkpol", &format_args!("{}", self.clkpol().bit()))
+            .field("clkpha", &format_args!("{}", self.clkpha().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Clock phase"]
     #[inline(always)]

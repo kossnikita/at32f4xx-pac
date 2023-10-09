@@ -918,6 +918,32 @@ impl R {
         CALOEN_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("caloen", &format_args!("{}", self.caloen().bit()))
+            .field("outsel", &format_args!("{}", self.outsel().bits()))
+            .field("outp", &format_args!("{}", self.outp().bit()))
+            .field("calosel", &format_args!("{}", self.calosel().bit()))
+            .field("bpr", &format_args!("{}", self.bpr().bit()))
+            .field("dec1h", &format_args!("{}", self.dec1h().bit()))
+            .field("add1h", &format_args!("{}", self.add1h().bit()))
+            .field("tsien", &format_args!("{}", self.tsien().bit()))
+            .field("alaien", &format_args!("{}", self.alaien().bit()))
+            .field("tsen", &format_args!("{}", self.tsen().bit()))
+            .field("alaen", &format_args!("{}", self.alaen().bit()))
+            .field("hm", &format_args!("{}", self.hm().bit()))
+            .field("dren", &format_args!("{}", self.dren().bit()))
+            .field("rcden", &format_args!("{}", self.rcden().bit()))
+            .field("tsedg", &format_args!("{}", self.tsedg().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 3 - Timestamp trigger edge"]
     #[inline(always)]

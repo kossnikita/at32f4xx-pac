@@ -111,6 +111,30 @@ impl R {
         CALUPDF_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STS")
+            .field("alawf", &format_args!("{}", self.alawf().bit()))
+            .field("watwf", &format_args!("{}", self.watwf().bit()))
+            .field("tadjf", &format_args!("{}", self.tadjf().bit()))
+            .field("initf", &format_args!("{}", self.initf().bit()))
+            .field("updf", &format_args!("{}", self.updf().bit()))
+            .field("imf", &format_args!("{}", self.imf().bit()))
+            .field("imen", &format_args!("{}", self.imen().bit()))
+            .field("alaf", &format_args!("{}", self.alaf().bit()))
+            .field("watf", &format_args!("{}", self.watf().bit()))
+            .field("tsf", &format_args!("{}", self.tsf().bit()))
+            .field("tsof", &format_args!("{}", self.tsof().bit()))
+            .field("tp1f", &format_args!("{}", self.tp1f().bit()))
+            .field("calupdf", &format_args!("{}", self.calupdf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 3 - Time adjustment flag"]
     #[inline(always)]

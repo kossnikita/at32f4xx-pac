@@ -22,6 +22,19 @@ impl R {
         HSRTF_R::new(((self.bits >> 16) & 0x1fff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HSCF")
+            .field("hsrtf", &format_args!("{}", self.hsrtf().bits()))
+            .field("hsrsf", &format_args!("{}", self.hsrsf().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HSCF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:12 - Horizontal scaling resize source factor"]
     #[inline(always)]

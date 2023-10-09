@@ -102,6 +102,19 @@ event triggered by software"]
         CSWTR_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWEVT")
+            .field("c1swtr", &format_args!("{}", self.c1swtr().bit()))
+            .field("ovfswtr", &format_args!("{}", self.ovfswtr().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SWEVT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Overflow event triggered by software"]
     #[inline(always)]

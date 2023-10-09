@@ -13,6 +13,18 @@ impl R {
         CVAL_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CVAL")
+            .field("cval", &format_args!("{}", self.cval().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CVAL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - Counter value"]
     #[inline(always)]

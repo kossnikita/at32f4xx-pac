@@ -40,6 +40,21 @@ impl R {
         PEMEN_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD_W1")
+            .field("adrlen", &format_args!("{}", self.adrlen().bits()))
+            .field("dum2", &format_args!("{}", self.dum2().bits()))
+            .field("inslen", &format_args!("{}", self.inslen().bits()))
+            .field("pemen", &format_args!("{}", self.pemen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CMD_W1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - SPI address length"]
     #[inline(always)]

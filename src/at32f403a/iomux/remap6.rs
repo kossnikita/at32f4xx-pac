@@ -67,6 +67,33 @@ impl R {
         UART4_GMUX_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP6")
+            .field("can1_gmux", &format_args!("{}", self.can1_gmux().bits()))
+            .field("can2_gmux", &format_args!("{}", self.can2_gmux().bits()))
+            .field("sdio2_gmux", &format_args!("{}", self.sdio2_gmux().bits()))
+            .field(
+                "usart1_gmux",
+                &format_args!("{}", self.usart1_gmux().bits()),
+            )
+            .field(
+                "usart2_gmux",
+                &format_args!("{}", self.usart2_gmux().bits()),
+            )
+            .field(
+                "usart3_gmux",
+                &format_args!("{}", self.usart3_gmux().bits()),
+            )
+            .field("uart4_gmux", &format_args!("{}", self.uart4_gmux().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - CAN1 muxing"]
     #[inline(always)]

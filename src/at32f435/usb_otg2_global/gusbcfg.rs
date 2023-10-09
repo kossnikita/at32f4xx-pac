@@ -49,6 +49,22 @@ impl R {
         COTXPKT_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GUSBCFG")
+            .field("toutcal", &format_args!("{}", self.toutcal().bits()))
+            .field("usbtrdtim", &format_args!("{}", self.usbtrdtim().bits()))
+            .field("fhstmode", &format_args!("{}", self.fhstmode().bit()))
+            .field("fdevmode", &format_args!("{}", self.fdevmode().bit()))
+            .field("cotxpkt", &format_args!("{}", self.cotxpkt().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GUSBCFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - FS timeout calibration"]
     #[inline(always)]

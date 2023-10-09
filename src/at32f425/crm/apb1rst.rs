@@ -157,6 +157,34 @@ impl R {
         PWC_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB1RST")
+            .field("tmr2", &format_args!("{}", self.tmr2().bit()))
+            .field("tmr3", &format_args!("{}", self.tmr3().bit()))
+            .field("tmr6", &format_args!("{}", self.tmr6().bit()))
+            .field("tmr7", &format_args!("{}", self.tmr7().bit()))
+            .field("tmr13", &format_args!("{}", self.tmr13().bit()))
+            .field("tmr14", &format_args!("{}", self.tmr14().bit()))
+            .field("wwdt", &format_args!("{}", self.wwdt().bit()))
+            .field("spi2", &format_args!("{}", self.spi2().bit()))
+            .field("spi3", &format_args!("{}", self.spi3().bit()))
+            .field("usart2", &format_args!("{}", self.usart2().bit()))
+            .field("usart3", &format_args!("{}", self.usart3().bit()))
+            .field("usart4", &format_args!("{}", self.usart4().bit()))
+            .field("i2c1", &format_args!("{}", self.i2c1().bit()))
+            .field("i2c2", &format_args!("{}", self.i2c2().bit()))
+            .field("can1", &format_args!("{}", self.can1().bit()))
+            .field("acc", &format_args!("{}", self.acc().bit()))
+            .field("pwc", &format_args!("{}", self.pwc().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB1RST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Timer 2 reset"]
     #[inline(always)]

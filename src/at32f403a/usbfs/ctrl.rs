@@ -121,6 +121,30 @@ impl R {
         TCIEN_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("csrst", &format_args!("{}", self.csrst().bit()))
+            .field("disusb", &format_args!("{}", self.disusb().bit()))
+            .field("lpm", &format_args!("{}", self.lpm().bit()))
+            .field("ssp", &format_args!("{}", self.ssp().bit()))
+            .field("gresume", &format_args!("{}", self.gresume().bit()))
+            .field("lsofien", &format_args!("{}", self.lsofien().bit()))
+            .field("sofien", &format_args!("{}", self.sofien().bit()))
+            .field("rstien", &format_args!("{}", self.rstien().bit()))
+            .field("spien", &format_args!("{}", self.spien().bit()))
+            .field("wkien", &format_args!("{}", self.wkien().bit()))
+            .field("beien", &format_args!("{}", self.beien().bit()))
+            .field("ucforien", &format_args!("{}", self.ucforien().bit()))
+            .field("tcien", &format_args!("{}", self.tcien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Core soft reset"]
     #[inline(always)]

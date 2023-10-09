@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct RegisterBlock {
     #[doc = "0x00 - Power control register (PWC_CTRL)"]
     pub ctrl: CTRL,

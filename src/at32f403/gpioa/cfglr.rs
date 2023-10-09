@@ -266,6 +266,33 @@ function configurate bits"]
         IOFC_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFGLR")
+            .field("iomc0", &format_args!("{}", self.iomc0().bits()))
+            .field("iomc1", &format_args!("{}", self.iomc1().bits()))
+            .field("iomc2", &format_args!("{}", self.iomc2().bits()))
+            .field("iomc3", &format_args!("{}", self.iomc3().bits()))
+            .field("iomc4", &format_args!("{}", self.iomc4().bits()))
+            .field("iomc5", &format_args!("{}", self.iomc5().bits()))
+            .field("iomc6", &format_args!("{}", self.iomc6().bits()))
+            .field("iomc7", &format_args!("{}", self.iomc7().bits()))
+            .field("iofc0", &format_args!("{}", self.iofc0().bits()))
+            .field("iofc1", &format_args!("{}", self.iofc1().bits()))
+            .field("iofc2", &format_args!("{}", self.iofc2().bits()))
+            .field("iofc3", &format_args!("{}", self.iofc3().bits()))
+            .field("iofc4", &format_args!("{}", self.iofc4().bits()))
+            .field("iofc5", &format_args!("{}", self.iofc5().bits()))
+            .field("iofc6", &format_args!("{}", self.iofc6().bits()))
+            .field("iofc7", &format_args!("{}", self.iofc7().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CFGLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Port n.[0-7]
 mode configurate bits"]

@@ -445,6 +445,26 @@ impl R {
         REALRX_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MSTS")
+            .field("realrx", &format_args!("{}", self.realrx().bit()))
+            .field("lsamprx", &format_args!("{}", self.lsamprx().bit()))
+            .field("curs", &format_args!("{}", self.curs().bit()))
+            .field("cuss", &format_args!("{}", self.cuss().bit()))
+            .field("edzif", &format_args!("{}", self.edzif().bit()))
+            .field("qdzif", &format_args!("{}", self.qdzif().bit()))
+            .field("eoif", &format_args!("{}", self.eoif().bit()))
+            .field("dzc", &format_args!("{}", self.dzc().bit()))
+            .field("fzc", &format_args!("{}", self.fzc().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 2 - Error occur Interrupt flag"]
     #[inline(always)]

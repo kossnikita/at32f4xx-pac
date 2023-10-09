@@ -139,6 +139,32 @@ impl R {
         ACC_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB2EN")
+            .field("tmr1", &format_args!("{}", self.tmr1().bit()))
+            .field("tmr8", &format_args!("{}", self.tmr8().bit()))
+            .field("usart1", &format_args!("{}", self.usart1().bit()))
+            .field("usart6", &format_args!("{}", self.usart6().bit()))
+            .field("adc1", &format_args!("{}", self.adc1().bit()))
+            .field("adc2", &format_args!("{}", self.adc2().bit()))
+            .field("adc3", &format_args!("{}", self.adc3().bit()))
+            .field("spi1", &format_args!("{}", self.spi1().bit()))
+            .field("spi4", &format_args!("{}", self.spi4().bit()))
+            .field("scfg", &format_args!("{}", self.scfg().bit()))
+            .field("tmr9", &format_args!("{}", self.tmr9().bit()))
+            .field("tmr10", &format_args!("{}", self.tmr10().bit()))
+            .field("tmr11", &format_args!("{}", self.tmr11().bit()))
+            .field("tmr20", &format_args!("{}", self.tmr20().bit()))
+            .field("acc", &format_args!("{}", self.acc().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB2EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Timer1 clock enable"]
     #[inline(always)]

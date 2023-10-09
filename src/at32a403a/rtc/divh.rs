@@ -2,6 +2,11 @@
 pub type W = crate::W<DIVH_SPEC>;
 #[doc = "Field `DIV` writer - RTC divider high"]
 pub type DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+impl core::fmt::Debug for crate::generic::Reg<DIVH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - RTC divider high"]
     #[inline(always)]

@@ -542,6 +542,23 @@ digital filter"]
         C2C_R::new(((self.bits >> 8) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CM1_INPUT")
+            .field("c1df", &format_args!("{}", self.c1df().bits()))
+            .field("c2df", &format_args!("{}", self.c2df().bits()))
+            .field("c1idiv", &format_args!("{}", self.c1idiv().bits()))
+            .field("c2idiv", &format_args!("{}", self.c2idiv().bits()))
+            .field("c2c", &format_args!("{}", self.c2c().bits()))
+            .field("c1c", &format_args!("{}", self.c1c().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CM1_INPUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - Channel 1 configure"]
     #[inline(always)]

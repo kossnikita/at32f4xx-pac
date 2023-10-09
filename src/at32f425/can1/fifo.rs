@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct FIFO {
     #[doc = "0x00 - Receive FIFO mailbox identifier register"]
     pub rfi: RFI,

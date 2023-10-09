@@ -240,6 +240,20 @@ impl R {
         TPIF_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRLSTS")
+            .field("tpien", &format_args!("{}", self.tpien().bit()))
+            .field("tpef", &format_args!("{}", self.tpef().bit()))
+            .field("tpif", &format_args!("{}", self.tpif().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRLSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Tamper event flag clear"]
     #[inline(always)]

@@ -143,6 +143,33 @@ outpu mode configurate"]
         OM_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OMODE")
+            .field("om0", &format_args!("{}", self.om0().bit()))
+            .field("om1", &format_args!("{}", self.om1().bit()))
+            .field("om2", &format_args!("{}", self.om2().bit()))
+            .field("om3", &format_args!("{}", self.om3().bit()))
+            .field("om4", &format_args!("{}", self.om4().bit()))
+            .field("om5", &format_args!("{}", self.om5().bit()))
+            .field("om6", &format_args!("{}", self.om6().bit()))
+            .field("om7", &format_args!("{}", self.om7().bit()))
+            .field("om8", &format_args!("{}", self.om8().bit()))
+            .field("om9", &format_args!("{}", self.om9().bit()))
+            .field("om10", &format_args!("{}", self.om10().bit()))
+            .field("om11", &format_args!("{}", self.om11().bit()))
+            .field("om12", &format_args!("{}", self.om12().bit()))
+            .field("om13", &format_args!("{}", self.om13().bit()))
+            .field("om14", &format_args!("{}", self.om14().bit()))
+            .field("om15", &format_args!("{}", self.om15().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<OMODE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "GPIOx pin [0-15]
 outpu mode configurate"]

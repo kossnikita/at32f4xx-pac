@@ -148,6 +148,33 @@ impl R {
         ACC_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB2RST")
+            .field("iomux", &format_args!("{}", self.iomux().bit()))
+            .field("gpioa", &format_args!("{}", self.gpioa().bit()))
+            .field("gpiob", &format_args!("{}", self.gpiob().bit()))
+            .field("gpioc", &format_args!("{}", self.gpioc().bit()))
+            .field("gpiod", &format_args!("{}", self.gpiod().bit()))
+            .field("gpiof", &format_args!("{}", self.gpiof().bit()))
+            .field("adc1", &format_args!("{}", self.adc1().bit()))
+            .field("adc2", &format_args!("{}", self.adc2().bit()))
+            .field("tmr1", &format_args!("{}", self.tmr1().bit()))
+            .field("spi1", &format_args!("{}", self.spi1().bit()))
+            .field("tmr8", &format_args!("{}", self.tmr8().bit()))
+            .field("usart1", &format_args!("{}", self.usart1().bit()))
+            .field("tmr9", &format_args!("{}", self.tmr9().bit()))
+            .field("tmr10", &format_args!("{}", self.tmr10().bit()))
+            .field("tmr11", &format_args!("{}", self.tmr11().bit()))
+            .field("acc", &format_args!("{}", self.acc().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB2RST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - MUX function I/O reset"]
     #[inline(always)]

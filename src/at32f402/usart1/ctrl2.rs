@@ -628,6 +628,33 @@ impl R {
         IDH_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field("idh", &format_args!("{}", self.idh().bits()))
+            .field("mtf", &format_args!("{}", self.mtf().bit()))
+            .field("dtrev", &format_args!("{}", self.dtrev().bit()))
+            .field("txrev", &format_args!("{}", self.txrev().bit()))
+            .field("rxrev", &format_args!("{}", self.rxrev().bit()))
+            .field("trpswap", &format_args!("{}", self.trpswap().bit()))
+            .field("linen", &format_args!("{}", self.linen().bit()))
+            .field("stopbn", &format_args!("{}", self.stopbn().bits()))
+            .field("clken", &format_args!("{}", self.clken().bit()))
+            .field("clkpol", &format_args!("{}", self.clkpol().bit()))
+            .field("clkpha", &format_args!("{}", self.clkpha().bit()))
+            .field("lbcp", &format_args!("{}", self.lbcp().bit()))
+            .field("bfien", &format_args!("{}", self.bfien().bit()))
+            .field("bfbn", &format_args!("{}", self.bfbn().bit()))
+            .field("idbn", &format_args!("{}", self.idbn().bit()))
+            .field("idl", &format_args!("{}", self.idl().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - bit 3-0 for usart identification"]
     #[inline(always)]

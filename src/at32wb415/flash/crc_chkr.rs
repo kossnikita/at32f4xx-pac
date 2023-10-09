@@ -9,6 +9,18 @@ impl R {
         FCRC_OUT_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CRC_CHKR")
+            .field("fcrc_out", &format_args!("{}", self.fcrc_out().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CRC_CHKR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "FLASH CRC check result register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`crc_chkr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CRC_CHKR_SPEC;
 impl crate::RegisterSpec for CRC_CHKR_SPEC {

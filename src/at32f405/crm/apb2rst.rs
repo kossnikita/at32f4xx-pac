@@ -112,6 +112,29 @@ impl R {
         OTGHSPHY_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB2RST")
+            .field("tmr1", &format_args!("{}", self.tmr1().bit()))
+            .field("usart1", &format_args!("{}", self.usart1().bit()))
+            .field("usart6", &format_args!("{}", self.usart6().bit()))
+            .field("adc", &format_args!("{}", self.adc().bit()))
+            .field("spi1", &format_args!("{}", self.spi1().bit()))
+            .field("scfg", &format_args!("{}", self.scfg().bit()))
+            .field("tmr9", &format_args!("{}", self.tmr9().bit()))
+            .field("tmr10", &format_args!("{}", self.tmr10().bit()))
+            .field("tmr11", &format_args!("{}", self.tmr11().bit()))
+            .field("i2s5", &format_args!("{}", self.i2s5().bit()))
+            .field("acc", &format_args!("{}", self.acc().bit()))
+            .field("otghsphy", &format_args!("{}", self.otghsphy().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB2RST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Timer1 reset"]
     #[inline(always)]

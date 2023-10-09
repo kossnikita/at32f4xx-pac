@@ -20,6 +20,19 @@ impl R {
         AE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MACA0H")
+            .field("ma0h", &format_args!("{}", self.ma0h().bits()))
+            .field("ae", &format_args!("{}", self.ae().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MACA0H_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - MAC address0 high"]
     #[inline(always)]

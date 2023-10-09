@@ -58,6 +58,23 @@ impl R {
         INSC_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD_W3")
+            .field("wen", &format_args!("{}", self.wen().bit()))
+            .field("rstsen", &format_args!("{}", self.rstsen().bit()))
+            .field("rstsc", &format_args!("{}", self.rstsc().bit()))
+            .field("opmode", &format_args!("{}", self.opmode().bits()))
+            .field("pemopc", &format_args!("{}", self.pemopc().bits()))
+            .field("insc", &format_args!("{}", self.insc().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CMD_W3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Write data enable"]
     #[inline(always)]

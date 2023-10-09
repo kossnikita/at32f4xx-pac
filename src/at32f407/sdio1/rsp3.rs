@@ -9,6 +9,18 @@ impl R {
         CARDSTS3_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RSP3")
+            .field("cardsts3", &format_args!("{}", self.cardsts3().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<RSP3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Bits 31:0 = CARDSTATUS3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rsp3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RSP3_SPEC;
 impl crate::RegisterSpec for RSP3_SPEC {

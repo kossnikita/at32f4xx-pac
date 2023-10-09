@@ -22,6 +22,19 @@ impl R {
         DD2DT12L_R::new(((self.bits >> 20) & 0x0fff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DDTH12L")
+            .field("dd1dt12l", &format_args!("{}", self.dd1dt12l().bits()))
+            .field("dd2dt12l", &format_args!("{}", self.dd2dt12l().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DDTH12L_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 4:15 - DAC1 12-bit left-aligned data"]
     #[inline(always)]

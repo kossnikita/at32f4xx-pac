@@ -85,6 +85,26 @@ impl R {
         PF15_UH_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UHDRV")
+            .field("pf15_uh", &format_args!("{}", self.pf15_uh().bit()))
+            .field("pf14_uh", &format_args!("{}", self.pf14_uh().bit()))
+            .field("pd15_uh", &format_args!("{}", self.pd15_uh().bit()))
+            .field("pd14_uh", &format_args!("{}", self.pd14_uh().bit()))
+            .field("pd13_uh", &format_args!("{}", self.pd13_uh().bit()))
+            .field("pd12_uh", &format_args!("{}", self.pd12_uh().bit()))
+            .field("pb10_uh", &format_args!("{}", self.pb10_uh().bit()))
+            .field("pb9_uh", &format_args!("{}", self.pb9_uh().bit()))
+            .field("pb3_uh", &format_args!("{}", self.pb3_uh().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<UHDRV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - PB3 ultra high sourcing/sinking strength"]
     #[inline(always)]

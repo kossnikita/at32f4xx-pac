@@ -67,6 +67,24 @@ impl R {
         SYNCSEL_R::new(((self.bits >> 24) & 0x1f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MUXS6CTRL")
+            .field("reqsel", &format_args!("{}", self.reqsel().bits()))
+            .field("syncovien", &format_args!("{}", self.syncovien().bit()))
+            .field("evtgen", &format_args!("{}", self.evtgen().bit()))
+            .field("syncen", &format_args!("{}", self.syncen().bit()))
+            .field("syncpol", &format_args!("{}", self.syncpol().bits()))
+            .field("reqcnt", &format_args!("{}", self.reqcnt().bits()))
+            .field("syncsel", &format_args!("{}", self.syncsel().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MUXS6CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:6 - DMA request select"]
     #[inline(always)]

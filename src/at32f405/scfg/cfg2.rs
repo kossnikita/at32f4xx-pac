@@ -49,6 +49,28 @@ impl R {
         I2S_FD_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG2")
+            .field("lockup_lk", &format_args!("{}", self.lockup_lk().bit()))
+            .field(
+                "sram_operr_lk",
+                &format_args!("{}", self.sram_operr_lk().bit()),
+            )
+            .field("pvm_lk", &format_args!("{}", self.pvm_lk().bit()))
+            .field(
+                "sram_operr_sts",
+                &format_args!("{}", self.sram_operr_sts().bit()),
+            )
+            .field("i2s_fd", &format_args!("{}", self.i2s_fd().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CFG2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - CM4F LOCKUP bit enable"]
     #[inline(always)]

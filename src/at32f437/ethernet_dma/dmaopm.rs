@@ -112,6 +112,29 @@ impl R {
         DT_R::new(((self.bits >> 26) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMAOPM")
+            .field("ssr", &format_args!("{}", self.ssr().bit()))
+            .field("osf", &format_args!("{}", self.osf().bit()))
+            .field("rtc", &format_args!("{}", self.rtc().bits()))
+            .field("fugf", &format_args!("{}", self.fugf().bit()))
+            .field("fef", &format_args!("{}", self.fef().bit()))
+            .field("sstc", &format_args!("{}", self.sstc().bit()))
+            .field("ttc", &format_args!("{}", self.ttc().bits()))
+            .field("ftf", &format_args!("{}", self.ftf().bit()))
+            .field("tsf", &format_args!("{}", self.tsf().bit()))
+            .field("dfrf", &format_args!("{}", self.dfrf().bit()))
+            .field("rsf", &format_args!("{}", self.rsf().bit()))
+            .field("dt", &format_args!("{}", self.dt().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DMAOPM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Start or stop receive"]
     #[inline(always)]

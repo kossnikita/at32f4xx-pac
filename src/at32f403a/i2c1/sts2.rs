@@ -58,6 +58,25 @@ impl R {
         PECVAL_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STS2")
+            .field("pecval", &format_args!("{}", self.pecval().bits()))
+            .field("addr2f", &format_args!("{}", self.addr2f().bit()))
+            .field("hostaddrf", &format_args!("{}", self.hostaddrf().bit()))
+            .field("devaddrf", &format_args!("{}", self.devaddrf().bit()))
+            .field("gcaddrf", &format_args!("{}", self.gcaddrf().bit()))
+            .field("dirf", &format_args!("{}", self.dirf().bit()))
+            .field("busyf", &format_args!("{}", self.busyf().bit()))
+            .field("trmode", &format_args!("{}", self.trmode().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STS2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Status register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS2_SPEC;
 impl crate::RegisterSpec for STS2_SPEC {

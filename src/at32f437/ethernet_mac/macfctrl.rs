@@ -67,6 +67,24 @@ impl R {
         PT_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MACFCTRL")
+            .field("fcb_bpa", &format_args!("{}", self.fcb_bpa().bit()))
+            .field("etf", &format_args!("{}", self.etf().bit()))
+            .field("erf", &format_args!("{}", self.erf().bit()))
+            .field("dup", &format_args!("{}", self.dup().bit()))
+            .field("plt", &format_args!("{}", self.plt().bits()))
+            .field("dzqp", &format_args!("{}", self.dzqp().bit()))
+            .field("pt", &format_args!("{}", self.pt().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MACFCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Flow control busy/back pressure activate"]
     #[inline(always)]

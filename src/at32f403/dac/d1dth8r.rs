@@ -13,6 +13,18 @@ impl R {
         D1DT8R_R::new((self.bits & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("D1DTH8R")
+            .field("d1dt8r", &format_args!("{}", self.d1dt8r().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<D1DTH8R_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - DAC1 8-bit right-aligned data"]
     #[inline(always)]

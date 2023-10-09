@@ -40,6 +40,21 @@ impl R {
         CH4_SRC_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMA_SRC_SEL0")
+            .field("ch1_src", &format_args!("{}", self.ch1_src().bits()))
+            .field("ch2_src", &format_args!("{}", self.ch2_src().bits()))
+            .field("ch3_src", &format_args!("{}", self.ch3_src().bits()))
+            .field("ch4_src", &format_args!("{}", self.ch4_src().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DMA_SRC_SEL0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - CH1 SRC select"]
     #[inline(always)]

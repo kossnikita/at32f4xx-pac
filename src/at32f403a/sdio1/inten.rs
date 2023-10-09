@@ -211,6 +211,52 @@ impl R {
         IOIFIEN_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTEN")
+            .field("cmdfailien", &format_args!("{}", self.cmdfailien().bit()))
+            .field("dtfailien", &format_args!("{}", self.dtfailien().bit()))
+            .field(
+                "cmdtimeoutien",
+                &format_args!("{}", self.cmdtimeoutien().bit()),
+            )
+            .field(
+                "dttimeoutien",
+                &format_args!("{}", self.dttimeoutien().bit()),
+            )
+            .field("txerruien", &format_args!("{}", self.txerruien().bit()))
+            .field("rxerruien", &format_args!("{}", self.rxerruien().bit()))
+            .field(
+                "cmdrspcmplien",
+                &format_args!("{}", self.cmdrspcmplien().bit()),
+            )
+            .field("cmdcmplien", &format_args!("{}", self.cmdcmplien().bit()))
+            .field("dtcmplien", &format_args!("{}", self.dtcmplien().bit()))
+            .field("sbiterrien", &format_args!("{}", self.sbiterrien().bit()))
+            .field(
+                "dtblkcmplien",
+                &format_args!("{}", self.dtblkcmplien().bit()),
+            )
+            .field("docmdien", &format_args!("{}", self.docmdien().bit()))
+            .field("dotxien", &format_args!("{}", self.dotxien().bit()))
+            .field("dorxien", &format_args!("{}", self.dorxien().bit()))
+            .field("txbufhien", &format_args!("{}", self.txbufhien().bit()))
+            .field("rxbufhien", &format_args!("{}", self.rxbufhien().bit()))
+            .field("txbuffien", &format_args!("{}", self.txbuffien().bit()))
+            .field("rxbuffien", &format_args!("{}", self.rxbuffien().bit()))
+            .field("txbufeien", &format_args!("{}", self.txbufeien().bit()))
+            .field("rxbufeien", &format_args!("{}", self.rxbufeien().bit()))
+            .field("txbufien", &format_args!("{}", self.txbufien().bit()))
+            .field("rxbufien", &format_args!("{}", self.rxbufien().bit()))
+            .field("ioifien", &format_args!("{}", self.ioifien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<INTEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Command crc fail interrupt enable"]
     #[inline(always)]

@@ -63,6 +63,27 @@ impl R {
         CSPT_R::new(((self.bits >> 27) & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPT2")
+            .field("cspt0", &format_args!("{}", self.cspt0().bits()))
+            .field("cspt1", &format_args!("{}", self.cspt1().bits()))
+            .field("cspt2", &format_args!("{}", self.cspt2().bits()))
+            .field("cspt3", &format_args!("{}", self.cspt3().bits()))
+            .field("cspt4", &format_args!("{}", self.cspt4().bits()))
+            .field("cspt5", &format_args!("{}", self.cspt5().bits()))
+            .field("cspt6", &format_args!("{}", self.cspt6().bits()))
+            .field("cspt7", &format_args!("{}", self.cspt7().bits()))
+            .field("cspt8", &format_args!("{}", self.cspt8().bits()))
+            .field("cspt9", &format_args!("{}", self.cspt9().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SPT2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Selection sample time of channel ADC_IN[0-9]"]
     #[inline(always)]

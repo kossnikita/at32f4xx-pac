@@ -130,6 +130,31 @@ impl R {
         RESET_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field("reset", &format_args!("{}", self.reset().bit()))
+            .field("smbalert", &format_args!("{}", self.smbalert().bit()))
+            .field("pecten", &format_args!("{}", self.pecten().bit()))
+            .field("mackctrl", &format_args!("{}", self.mackctrl().bit()))
+            .field("acken", &format_args!("{}", self.acken().bit()))
+            .field("genstop", &format_args!("{}", self.genstop().bit()))
+            .field("genstart", &format_args!("{}", self.genstart().bit()))
+            .field("stretch", &format_args!("{}", self.stretch().bit()))
+            .field("gcaen", &format_args!("{}", self.gcaen().bit()))
+            .field("pecen", &format_args!("{}", self.pecen().bit()))
+            .field("arpen", &format_args!("{}", self.arpen().bit()))
+            .field("smbmode", &format_args!("{}", self.smbmode().bit()))
+            .field("permode", &format_args!("{}", self.permode().bit()))
+            .field("i2cen", &format_args!("{}", self.i2cen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Peripheral enable"]
     #[inline(always)]

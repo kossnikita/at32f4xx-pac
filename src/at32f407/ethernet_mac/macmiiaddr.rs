@@ -49,6 +49,22 @@ impl R {
         PA_R::new(((self.bits >> 11) & 0x1f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MACMIIADDR")
+            .field("mb", &format_args!("{}", self.mb().bit()))
+            .field("mw", &format_args!("{}", self.mw().bit()))
+            .field("cr", &format_args!("{}", self.cr().bits()))
+            .field("mii", &format_args!("{}", self.mii().bits()))
+            .field("pa", &format_args!("{}", self.pa().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MACMIIADDR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - MII busy"]
     #[inline(always)]

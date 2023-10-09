@@ -128,6 +128,21 @@ external interrupt"]
         EXINT_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXINTC4")
+            .field("exint12", &format_args!("{}", self.exint12().bits()))
+            .field("exint13", &format_args!("{}", self.exint13().bits()))
+            .field("exint14", &format_args!("{}", self.exint14().bits()))
+            .field("exint15", &format_args!("{}", self.exint15().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<EXINTC4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Select the input source for EXINT[12-15]
 external interrupt"]

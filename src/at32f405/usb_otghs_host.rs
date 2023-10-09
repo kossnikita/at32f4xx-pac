@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct RegisterBlock {
     #[doc = "0x00 - OTGHS host configuration register (OTGHS_HCFG)"]
     pub hcfg: HCFG,

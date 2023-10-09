@@ -13,6 +13,21 @@ impl R {
         USBHS_PHY12_SEL_R::new(((self.bits >> 3) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OTGHS")
+            .field(
+                "usbhs_phy12_sel",
+                &format_args!("{}", self.usbhs_phy12_sel().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<OTGHS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 3:4 - USBHS phy12 select value"]
     #[inline(always)]

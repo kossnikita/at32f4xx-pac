@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x50],
     #[doc = "0x50 - TMR14 channel 1 input remap"]

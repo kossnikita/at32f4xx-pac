@@ -13,6 +13,18 @@ impl R {
         D2DT12R_R::new((self.bits & 0x0fff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("D2DTH12R")
+            .field("d2dt12r", &format_args!("{}", self.d2dt12r().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<D2DTH12R_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:11 - DAC2 12-bit right-aligned data"]
     #[inline(always)]

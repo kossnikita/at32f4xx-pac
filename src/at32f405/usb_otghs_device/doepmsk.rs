@@ -112,6 +112,32 @@ impl R {
         NYETMSK_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPMSK")
+            .field("xfercmsk", &format_args!("{}", self.xfercmsk().bit()))
+            .field("eptdismsk", &format_args!("{}", self.eptdismsk().bit()))
+            .field("ahberrmsk", &format_args!("{}", self.ahberrmsk().bit()))
+            .field("setupmsk", &format_args!("{}", self.setupmsk().bit()))
+            .field("outtepdmsk", &format_args!("{}", self.outtepdmsk().bit()))
+            .field(
+                "stsphsercvdmsk",
+                &format_args!("{}", self.stsphsercvdmsk().bit()),
+            )
+            .field("b2bsetupmsk", &format_args!("{}", self.b2bsetupmsk().bit()))
+            .field("outperrmsk", &format_args!("{}", self.outperrmsk().bit()))
+            .field("bnaoutmsk", &format_args!("{}", self.bnaoutmsk().bit()))
+            .field("bbleerrmsk", &format_args!("{}", self.bbleerrmsk().bit()))
+            .field("nakmsk", &format_args!("{}", self.nakmsk().bit()))
+            .field("nyetmsk", &format_args!("{}", self.nyetmsk().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DOEPMSK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]

@@ -67,6 +67,24 @@ impl R {
         TRCD_R::new(((self.bits >> 24) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TM1")
+            .field("tmrd", &format_args!("{}", self.tmrd().bits()))
+            .field("txsr", &format_args!("{}", self.txsr().bits()))
+            .field("tras", &format_args!("{}", self.tras().bits()))
+            .field("trc", &format_args!("{}", self.trc().bits()))
+            .field("twr", &format_args!("{}", self.twr().bits()))
+            .field("trp", &format_args!("{}", self.trp().bits()))
+            .field("trcd", &format_args!("{}", self.trcd().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TM1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Mode register program to active delay"]
     #[inline(always)]

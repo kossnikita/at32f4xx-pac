@@ -193,6 +193,38 @@ impl R {
         UART8LPEN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB1LPEN")
+            .field("tmr2lpen", &format_args!("{}", self.tmr2lpen().bit()))
+            .field("tmr3lpen", &format_args!("{}", self.tmr3lpen().bit()))
+            .field("tmr4lpen", &format_args!("{}", self.tmr4lpen().bit()))
+            .field("tmr6lpen", &format_args!("{}", self.tmr6lpen().bit()))
+            .field("tmr7lpen", &format_args!("{}", self.tmr7lpen().bit()))
+            .field("tmr13lpen", &format_args!("{}", self.tmr13lpen().bit()))
+            .field("tmr14lpen", &format_args!("{}", self.tmr14lpen().bit()))
+            .field("wwdtlpen", &format_args!("{}", self.wwdtlpen().bit()))
+            .field("spi2lpen", &format_args!("{}", self.spi2lpen().bit()))
+            .field("spi3lpen", &format_args!("{}", self.spi3lpen().bit()))
+            .field("usart2lpen", &format_args!("{}", self.usart2lpen().bit()))
+            .field("usart3lpen", &format_args!("{}", self.usart3lpen().bit()))
+            .field("usart4lpen", &format_args!("{}", self.usart4lpen().bit()))
+            .field("usart5lpen", &format_args!("{}", self.usart5lpen().bit()))
+            .field("i2c1cpen", &format_args!("{}", self.i2c1cpen().bit()))
+            .field("i2c2cpen", &format_args!("{}", self.i2c2cpen().bit()))
+            .field("i2c3cpen", &format_args!("{}", self.i2c3cpen().bit()))
+            .field("can1lpen", &format_args!("{}", self.can1lpen().bit()))
+            .field("pwclpen", &format_args!("{}", self.pwclpen().bit()))
+            .field("uart7lpen", &format_args!("{}", self.uart7lpen().bit()))
+            .field("uart8lpen", &format_args!("{}", self.uart8lpen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB1LPEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Timer2 clock enable during sleep mode"]
     #[inline(always)]

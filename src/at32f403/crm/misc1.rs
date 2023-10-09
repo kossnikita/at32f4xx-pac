@@ -31,6 +31,23 @@ impl R {
         USBBUFS_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISC1")
+            .field(
+                "hickcal_key",
+                &format_args!("{}", self.hickcal_key().bits()),
+            )
+            .field("clkout_sel3", &format_args!("{}", self.clkout_sel3().bit()))
+            .field("usbbufs", &format_args!("{}", self.usbbufs().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MISC1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - HICKCAL write key value"]
     #[inline(always)]

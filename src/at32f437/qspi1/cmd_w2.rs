@@ -13,6 +13,18 @@ impl R {
         DCNT_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD_W2")
+            .field("dcnt", &format_args!("{}", self.dcnt().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CMD_W2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - Read write data counter"]
     #[inline(always)]

@@ -94,6 +94,51 @@ impl R {
         XMC_NADV_GMUX_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP7")
+            .field(
+                "ext_spim_gmux",
+                &format_args!("{}", self.ext_spim_gmux().bits()),
+            )
+            .field(
+                "ext_spim_gen",
+                &format_args!("{}", self.ext_spim_gen().bit()),
+            )
+            .field(
+                "adc1_etp_gmux",
+                &format_args!("{}", self.adc1_etp_gmux().bit()),
+            )
+            .field(
+                "adc1_eto_gmux",
+                &format_args!("{}", self.adc1_eto_gmux().bit()),
+            )
+            .field(
+                "adc2_etp_gmux",
+                &format_args!("{}", self.adc2_etp_gmux().bit()),
+            )
+            .field(
+                "adc2_eto_gmux",
+                &format_args!("{}", self.adc2_eto_gmux().bit()),
+            )
+            .field(
+                "swjtag_gmux",
+                &format_args!("{}", self.swjtag_gmux().bits()),
+            )
+            .field("pd01_gmux", &format_args!("{}", self.pd01_gmux().bit()))
+            .field("xmc_gmux", &format_args!("{}", self.xmc_gmux().bits()))
+            .field(
+                "xmc_nadv_gmux",
+                &format_args!("{}", self.xmc_nadv_gmux().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP7_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - SPIM muxing"]
     #[inline(always)]

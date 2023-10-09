@@ -166,6 +166,35 @@ impl R {
         PECEN_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field("i2cen", &format_args!("{}", self.i2cen().bit()))
+            .field("tdien", &format_args!("{}", self.tdien().bit()))
+            .field("rdien", &format_args!("{}", self.rdien().bit()))
+            .field("addrien", &format_args!("{}", self.addrien().bit()))
+            .field("ackfailien", &format_args!("{}", self.ackfailien().bit()))
+            .field("stopien", &format_args!("{}", self.stopien().bit()))
+            .field("tdcien", &format_args!("{}", self.tdcien().bit()))
+            .field("errien", &format_args!("{}", self.errien().bit()))
+            .field("dflt", &format_args!("{}", self.dflt().bits()))
+            .field("dmaten", &format_args!("{}", self.dmaten().bit()))
+            .field("dmaren", &format_args!("{}", self.dmaren().bit()))
+            .field("sctrl", &format_args!("{}", self.sctrl().bit()))
+            .field("stretch", &format_args!("{}", self.stretch().bit()))
+            .field("gcaen", &format_args!("{}", self.gcaen().bit()))
+            .field("haddren", &format_args!("{}", self.haddren().bit()))
+            .field("devaddren", &format_args!("{}", self.devaddren().bit()))
+            .field("smbalert", &format_args!("{}", self.smbalert().bit()))
+            .field("pecen", &format_args!("{}", self.pecen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - I2C peripheral enable"]
     #[inline(always)]

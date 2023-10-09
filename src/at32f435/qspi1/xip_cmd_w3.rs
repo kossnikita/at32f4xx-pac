@@ -22,6 +22,19 @@ impl R {
         CSTS_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("XIP_CMD_W3")
+            .field("bypassc", &format_args!("{}", self.bypassc().bit()))
+            .field("csts", &format_args!("{}", self.csts().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<XIP_CMD_W3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Bypass cache function"]
     #[inline(always)]

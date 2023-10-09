@@ -13,6 +13,18 @@ impl R {
         RTOV_R::new(self.bits & 0x00ff_ffff)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RTOV")
+            .field("rtov", &format_args!("{}", self.rtov().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<RTOV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:23 - Receiver time out value"]
     #[inline(always)]

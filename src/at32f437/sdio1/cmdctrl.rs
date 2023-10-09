@@ -58,6 +58,23 @@ impl R {
         IOSUSP_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMDCTRL")
+            .field("cmdidx", &format_args!("{}", self.cmdidx().bits()))
+            .field("rspwt", &format_args!("{}", self.rspwt().bits()))
+            .field("intwt", &format_args!("{}", self.intwt().bit()))
+            .field("pndwt", &format_args!("{}", self.pndwt().bit()))
+            .field("ccsmen", &format_args!("{}", self.ccsmen().bit()))
+            .field("iosusp", &format_args!("{}", self.iosusp().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CMDCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:5 - CMDIDX"]
     #[inline(always)]

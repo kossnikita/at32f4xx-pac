@@ -40,6 +40,21 @@ impl R {
         PD13_UH_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("UHDRV")
+            .field("pd13_uh", &format_args!("{}", self.pd13_uh().bit()))
+            .field("pd12_uh", &format_args!("{}", self.pd12_uh().bit()))
+            .field("pb8_uh", &format_args!("{}", self.pb8_uh().bit()))
+            .field("pb9_uh", &format_args!("{}", self.pb9_uh().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<UHDRV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - PB9 ultra high sourcing/sinking strength"]
     #[inline(always)]

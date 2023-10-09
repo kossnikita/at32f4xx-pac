@@ -9,6 +9,18 @@ impl R {
         HRDAP_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMACRD")
+            .field("hrdap", &format_args!("{}", self.hrdap().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DMACRD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Ethernet DMA current host receive descriptor register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmacrd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMACRD_SPEC;
 impl crate::RegisterSpec for DMACRD_SPEC {

@@ -23,6 +23,26 @@ impl R {
         NPTXQTOP_R::new(((self.bits >> 24) & 0x7f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GNPTXSTS")
+            .field(
+                "nptxfspcavail",
+                &format_args!("{}", self.nptxfspcavail().bits()),
+            )
+            .field(
+                "nptxqspcavail",
+                &format_args!("{}", self.nptxqspcavail().bits()),
+            )
+            .field("nptxqtop", &format_args!("{}", self.nptxqtop().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GNPTXSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "OTGHS non-periodic transmit FIFO/queue status register (OTGHS_GNPTXSTS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gnptxsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GNPTXSTS_SPEC;
 impl crate::RegisterSpec for GNPTXSTS_SPEC {

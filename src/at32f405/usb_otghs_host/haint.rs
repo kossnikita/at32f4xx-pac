@@ -9,6 +9,18 @@ impl R {
         HAINT_R::new((self.bits & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HAINT")
+            .field("haint", &format_args!("{}", self.haint().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HAINT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "OTGHS Host all channels interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`haint::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HAINT_SPEC;
 impl crate::RegisterSpec for HAINT_SPEC {

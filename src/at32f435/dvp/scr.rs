@@ -40,6 +40,21 @@ impl R {
         FMEC_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SCR")
+            .field("fmec", &format_args!("{}", self.fmec().bits()))
+            .field("lnec", &format_args!("{}", self.lnec().bits()))
+            .field("lnsc", &format_args!("{}", self.lnsc().bits()))
+            .field("fmsc", &format_args!("{}", self.fmsc().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SCR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - Frame start code"]
     #[inline(always)]

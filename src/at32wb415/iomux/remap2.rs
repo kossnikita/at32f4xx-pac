@@ -2,6 +2,11 @@
 pub type W = crate::W<REMAP2_SPEC>;
 #[doc = "Field `CMP_MUX` writer - CMP internal muxing"]
 pub type CMP_MUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+impl core::fmt::Debug for crate::generic::Reg<REMAP2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 26:27 - CMP internal muxing"]
     #[inline(always)]

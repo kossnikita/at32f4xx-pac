@@ -37,6 +37,22 @@ impl R {
         WK_R::new(((self.bits >> 13) & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TSDT")
+            .field("wk", &format_args!("{}", self.wk().bits()))
+            .field("mt", &format_args!("{}", self.mt().bit()))
+            .field("mu", &format_args!("{}", self.mu().bits()))
+            .field("dt", &format_args!("{}", self.dt().bits()))
+            .field("du", &format_args!("{}", self.du().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TSDT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "timestamp date register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsdt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TSDT_SPEC;
 impl crate::RegisterSpec for TSDT_SPEC {

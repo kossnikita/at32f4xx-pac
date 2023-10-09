@@ -40,6 +40,21 @@ impl R {
         EXINT11_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXINTC3")
+            .field("exint8", &format_args!("{}", self.exint8().bits()))
+            .field("exint9", &format_args!("{}", self.exint9().bits()))
+            .field("exint10", &format_args!("{}", self.exint10().bits()))
+            .field("exint11", &format_args!("{}", self.exint11().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<EXINTC3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Configure EXINT8 source"]
     #[inline(always)]

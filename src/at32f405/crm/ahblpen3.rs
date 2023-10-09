@@ -13,6 +13,18 @@ impl R {
         QSPI1LP_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBLPEN3")
+            .field("qspi1lp", &format_args!("{}", self.qspi1lp().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBLPEN3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - QSPI1 clock enable during sleep mode"]
     #[inline(always)]

@@ -40,6 +40,24 @@ impl R {
         SWAP_XMC_R::new(((self.bits >> 10) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG1")
+            .field(
+                "mem_map_sel",
+                &format_args!("{}", self.mem_map_sel().bits()),
+            )
+            .field("ir_pol", &format_args!("{}", self.ir_pol().bit()))
+            .field("ir_src_sel", &format_args!("{}", self.ir_src_sel().bits()))
+            .field("swap_xmc", &format_args!("{}", self.swap_xmc().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CFG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - Memory address mapping selection bits"]
     #[inline(always)]

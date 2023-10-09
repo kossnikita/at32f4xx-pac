@@ -264,6 +264,33 @@ impl R {
         IOFC_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFGHR")
+            .field("iomc8", &format_args!("{}", self.iomc8().bits()))
+            .field("iomc9", &format_args!("{}", self.iomc9().bits()))
+            .field("iomc10", &format_args!("{}", self.iomc10().bits()))
+            .field("iomc11", &format_args!("{}", self.iomc11().bits()))
+            .field("iomc12", &format_args!("{}", self.iomc12().bits()))
+            .field("iomc13", &format_args!("{}", self.iomc13().bits()))
+            .field("iomc14", &format_args!("{}", self.iomc14().bits()))
+            .field("iomc15", &format_args!("{}", self.iomc15().bits()))
+            .field("iofc8", &format_args!("{}", self.iofc8().bits()))
+            .field("iofc9", &format_args!("{}", self.iofc9().bits()))
+            .field("iofc10", &format_args!("{}", self.iofc10().bits()))
+            .field("iofc11", &format_args!("{}", self.iofc11().bits()))
+            .field("iofc12", &format_args!("{}", self.iofc12().bits()))
+            .field("iofc13", &format_args!("{}", self.iofc13().bits()))
+            .field("iofc14", &format_args!("{}", self.iofc14().bits()))
+            .field("iofc15", &format_args!("{}", self.iofc15().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CFGHR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Port n.8 mode configurate bits"]
     #[inline(always)]

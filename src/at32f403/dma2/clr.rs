@@ -184,6 +184,37 @@ impl R {
         DTERRFC5_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLR")
+            .field("gfc1", &format_args!("{}", self.gfc1().bit()))
+            .field("gfc2", &format_args!("{}", self.gfc2().bit()))
+            .field("gfc3", &format_args!("{}", self.gfc3().bit()))
+            .field("gfc4", &format_args!("{}", self.gfc4().bit()))
+            .field("gfc5", &format_args!("{}", self.gfc5().bit()))
+            .field("fdtfc1", &format_args!("{}", self.fdtfc1().bit()))
+            .field("fdtfc2", &format_args!("{}", self.fdtfc2().bit()))
+            .field("fdtfc3", &format_args!("{}", self.fdtfc3().bit()))
+            .field("fdtfc4", &format_args!("{}", self.fdtfc4().bit()))
+            .field("fdtfc5", &format_args!("{}", self.fdtfc5().bit()))
+            .field("hdtfc1", &format_args!("{}", self.hdtfc1().bit()))
+            .field("hdtfc2", &format_args!("{}", self.hdtfc2().bit()))
+            .field("hdtfc3", &format_args!("{}", self.hdtfc3().bit()))
+            .field("hdtfc4", &format_args!("{}", self.hdtfc4().bit()))
+            .field("hdtfc5", &format_args!("{}", self.hdtfc5().bit()))
+            .field("dterrfc1", &format_args!("{}", self.dterrfc1().bit()))
+            .field("dterrfc2", &format_args!("{}", self.dterrfc2().bit()))
+            .field("dterrfc3", &format_args!("{}", self.dterrfc3().bit()))
+            .field("dterrfc4", &format_args!("{}", self.dterrfc4().bit()))
+            .field("dterrfc5", &format_args!("{}", self.dterrfc5().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Channel 1 Global flag clear"]
     #[inline(always)]

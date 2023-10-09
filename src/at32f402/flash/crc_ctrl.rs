@@ -15,6 +15,18 @@ impl R {
         CRC_SN_R::new((self.bits & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CRC_CTRL")
+            .field("crc_sn", &format_args!("{}", self.crc_sn().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CRC_CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - CRC sector numbler"]
     #[inline(always)]

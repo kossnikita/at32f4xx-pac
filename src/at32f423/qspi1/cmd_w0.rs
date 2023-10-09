@@ -13,6 +13,18 @@ impl R {
         SPIADR_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD_W0")
+            .field("spiadr", &format_args!("{}", self.spiadr().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CMD_W0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - SPI flash address"]
     #[inline(always)]

@@ -521,6 +521,52 @@ impl R {
         TMR14_PAUSE_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("sleep_debug", &format_args!("{}", self.sleep_debug().bit()))
+            .field(
+                "deepsleep_debug",
+                &format_args!("{}", self.deepsleep_debug().bit()),
+            )
+            .field(
+                "standby_debug",
+                &format_args!("{}", self.standby_debug().bit()),
+            )
+            .field("can_pause", &format_args!("{}", self.can_pause().bit()))
+            .field("wdt_pause", &format_args!("{}", self.wdt_pause().bit()))
+            .field("wwdt_pause", &format_args!("{}", self.wwdt_pause().bit()))
+            .field("tmr1_pause", &format_args!("{}", self.tmr1_pause().bit()))
+            .field("tmr2_pause", &format_args!("{}", self.tmr2_pause().bit()))
+            .field("tmr3_pause", &format_args!("{}", self.tmr3_pause().bit()))
+            .field("ertc_pause", &format_args!("{}", self.ertc_pause().bit()))
+            .field(
+                "i2c1_smbus_timeout",
+                &format_args!("{}", self.i2c1_smbus_timeout().bit()),
+            )
+            .field(
+                "i2c2_smbus_timeout",
+                &format_args!("{}", self.i2c2_smbus_timeout().bit()),
+            )
+            .field("tmr6_pause", &format_args!("{}", self.tmr6_pause().bit()))
+            .field("tmr7_pause", &format_args!("{}", self.tmr7_pause().bit()))
+            .field(
+                "ertc_512_pause",
+                &format_args!("{}", self.ertc_512_pause().bit()),
+            )
+            .field("tmr15_pause", &format_args!("{}", self.tmr15_pause().bit()))
+            .field("tmr16_pause", &format_args!("{}", self.tmr16_pause().bit()))
+            .field("tmr17_pause", &format_args!("{}", self.tmr17_pause().bit()))
+            .field("tmr13_pause", &format_args!("{}", self.tmr13_pause().bit()))
+            .field("tmr14_pause", &format_args!("{}", self.tmr14_pause().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Debug Sleep mode control bit"]
     #[inline(always)]

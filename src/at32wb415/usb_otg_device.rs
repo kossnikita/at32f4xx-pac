@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct RegisterBlock {
     #[doc = "0x00 - OTGFS device configuration register (OTGFS_DCFG)"]
     pub dcfg: DCFG,

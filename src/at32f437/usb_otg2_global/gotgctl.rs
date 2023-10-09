@@ -18,6 +18,19 @@ impl R {
         CURMOD_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GOTGCTL")
+            .field("conidsts", &format_args!("{}", self.conidsts().bit()))
+            .field("curmod", &format_args!("{}", self.curmod().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GOTGCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

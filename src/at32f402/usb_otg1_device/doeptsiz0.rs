@@ -31,6 +31,20 @@ impl R {
         SETUPCNT_R::new(((self.bits >> 29) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPTSIZ0")
+            .field("xfersize", &format_args!("{}", self.xfersize().bits()))
+            .field("pktcnt", &format_args!("{}", self.pktcnt().bit()))
+            .field("setupcnt", &format_args!("{}", self.setupcnt().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DOEPTSIZ0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:6 - Transfer size"]
     #[inline(always)]

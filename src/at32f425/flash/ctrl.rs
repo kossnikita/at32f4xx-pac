@@ -103,6 +103,28 @@ impl R {
         LPMEN_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("fprgm", &format_args!("{}", self.fprgm().bit()))
+            .field("secers", &format_args!("{}", self.secers().bit()))
+            .field("bankers", &format_args!("{}", self.bankers().bit()))
+            .field("usdprgm", &format_args!("{}", self.usdprgm().bit()))
+            .field("usders", &format_args!("{}", self.usders().bit()))
+            .field("erstr", &format_args!("{}", self.erstr().bit()))
+            .field("oplk", &format_args!("{}", self.oplk().bit()))
+            .field("usdulks", &format_args!("{}", self.usdulks().bit()))
+            .field("errie", &format_args!("{}", self.errie().bit()))
+            .field("odfie", &format_args!("{}", self.odfie().bit()))
+            .field("lpmen", &format_args!("{}", self.lpmen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]

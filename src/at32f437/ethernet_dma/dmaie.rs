@@ -139,6 +139,32 @@ impl R {
         NIE_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMAIE")
+            .field("tie", &format_args!("{}", self.tie().bit()))
+            .field("tse", &format_args!("{}", self.tse().bit()))
+            .field("tue", &format_args!("{}", self.tue().bit()))
+            .field("tje", &format_args!("{}", self.tje().bit()))
+            .field("ove", &format_args!("{}", self.ove().bit()))
+            .field("une", &format_args!("{}", self.une().bit()))
+            .field("rie", &format_args!("{}", self.rie().bit()))
+            .field("rbue", &format_args!("{}", self.rbue().bit()))
+            .field("rse", &format_args!("{}", self.rse().bit()))
+            .field("rwte", &format_args!("{}", self.rwte().bit()))
+            .field("eie", &format_args!("{}", self.eie().bit()))
+            .field("fbee", &format_args!("{}", self.fbee().bit()))
+            .field("ere", &format_args!("{}", self.ere().bit()))
+            .field("aie", &format_args!("{}", self.aie().bit()))
+            .field("nie", &format_args!("{}", self.nie().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DMAIE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transmit interrupt enable"]
     #[inline(always)]

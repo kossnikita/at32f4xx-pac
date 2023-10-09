@@ -31,6 +31,20 @@ impl R {
         TGFCIM_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MMCTIM")
+            .field("tscgfcim", &format_args!("{}", self.tscgfcim().bit()))
+            .field("tmcgfcim", &format_args!("{}", self.tmcgfcim().bit()))
+            .field("tgfcim", &format_args!("{}", self.tgfcim().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MMCTIM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 14 - Transmit single collision good frame counter interrupt mask"]
     #[inline(always)]

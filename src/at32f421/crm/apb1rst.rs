@@ -85,6 +85,26 @@ impl R {
         PWC_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB1RST")
+            .field("tmr3", &format_args!("{}", self.tmr3().bit()))
+            .field("tmr6", &format_args!("{}", self.tmr6().bit()))
+            .field("tmr14", &format_args!("{}", self.tmr14().bit()))
+            .field("wwdt", &format_args!("{}", self.wwdt().bit()))
+            .field("spi2", &format_args!("{}", self.spi2().bit()))
+            .field("usart2", &format_args!("{}", self.usart2().bit()))
+            .field("i2c1", &format_args!("{}", self.i2c1().bit()))
+            .field("i2c2", &format_args!("{}", self.i2c2().bit()))
+            .field("pwc", &format_args!("{}", self.pwc().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB1RST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Timer 3 reset"]
     #[inline(always)]

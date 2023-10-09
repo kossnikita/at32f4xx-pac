@@ -98,6 +98,21 @@ impl R {
         SID_R::new(((self.bits >> 21) & 0x07ff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RFI")
+            .field("sid", &format_args!("{}", self.sid().bits()))
+            .field("eid", &format_args!("{}", self.eid().bits()))
+            .field("idi", &format_args!("{}", self.idi().bit()))
+            .field("fri", &format_args!("{}", self.fri().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<RFI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Receive FIFO mailbox identifier register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFI_SPEC;
 impl crate::RegisterSpec for RFI_SPEC {

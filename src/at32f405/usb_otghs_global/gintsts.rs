@@ -198,6 +198,44 @@ impl R {
         WKUPINT_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GINTSTS")
+            .field("curmod", &format_args!("{}", self.curmod().bit()))
+            .field("modemis", &format_args!("{}", self.modemis().bit()))
+            .field("otgint", &format_args!("{}", self.otgint().bit()))
+            .field("sof", &format_args!("{}", self.sof().bit()))
+            .field("rxflvl", &format_args!("{}", self.rxflvl().bit()))
+            .field("nptxfemp", &format_args!("{}", self.nptxfemp().bit()))
+            .field("ginnakeff", &format_args!("{}", self.ginnakeff().bit()))
+            .field("goutnakeff", &format_args!("{}", self.goutnakeff().bit()))
+            .field("erlysusp", &format_args!("{}", self.erlysusp().bit()))
+            .field("usbsusp", &format_args!("{}", self.usbsusp().bit()))
+            .field("usbrst", &format_args!("{}", self.usbrst().bit()))
+            .field("enumdone", &format_args!("{}", self.enumdone().bit()))
+            .field("isooutdrop", &format_args!("{}", self.isooutdrop().bit()))
+            .field("eopf", &format_args!("{}", self.eopf().bit()))
+            .field("ieptint", &format_args!("{}", self.ieptint().bit()))
+            .field("oeptint", &format_args!("{}", self.oeptint().bit()))
+            .field("incompisoin", &format_args!("{}", self.incompisoin().bit()))
+            .field(
+                "incompip_incompisoout",
+                &format_args!("{}", self.incompip_incompisoout().bit()),
+            )
+            .field("prtint", &format_args!("{}", self.prtint().bit()))
+            .field("hchint", &format_args!("{}", self.hchint().bit()))
+            .field("ptxfemp", &format_args!("{}", self.ptxfemp().bit()))
+            .field("conidschg", &format_args!("{}", self.conidschg().bit()))
+            .field("disconint", &format_args!("{}", self.disconint().bit()))
+            .field("wkupint", &format_args!("{}", self.wkupint().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GINTSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Mode mismatch interrupt"]
     #[inline(always)]

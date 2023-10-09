@@ -22,6 +22,22 @@ impl R {
         INEPTXFDEP_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPTXF3")
+            .field(
+                "ineptxfstaddr",
+                &format_args!("{}", self.ineptxfstaddr().bits()),
+            )
+            .field("ineptxfdep", &format_args!("{}", self.ineptxfdep().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DIEPTXF3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - IN endpoint FIFO3 transmit RAM start address"]
     #[inline(always)]

@@ -40,6 +40,21 @@ impl R {
         CSPT17_R::new(((self.bits >> 21) & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SPT1")
+            .field("cspt17", &format_args!("{}", self.cspt17().bits()))
+            .field("cspt16", &format_args!("{}", self.cspt16().bits()))
+            .field("cspt11", &format_args!("{}", self.cspt11().bits()))
+            .field("cspt10", &format_args!("{}", self.cspt10().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SPT1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN10"]
     #[inline(always)]

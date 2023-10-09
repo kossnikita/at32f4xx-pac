@@ -424,6 +424,31 @@ impl R {
         MASK4_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ALA")
+            .field("mask4", &format_args!("{}", self.mask4().bit()))
+            .field("wksel", &format_args!("{}", self.wksel().bit()))
+            .field("dt", &format_args!("{}", self.dt().bits()))
+            .field("du", &format_args!("{}", self.du().bits()))
+            .field("mask3", &format_args!("{}", self.mask3().bit()))
+            .field("ampm", &format_args!("{}", self.ampm().bit()))
+            .field("ht", &format_args!("{}", self.ht().bits()))
+            .field("hu", &format_args!("{}", self.hu().bits()))
+            .field("mask2", &format_args!("{}", self.mask2().bit()))
+            .field("mt", &format_args!("{}", self.mt().bits()))
+            .field("mu", &format_args!("{}", self.mu().bits()))
+            .field("mask1", &format_args!("{}", self.mask1().bit()))
+            .field("st", &format_args!("{}", self.st().bits()))
+            .field("su", &format_args!("{}", self.su().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<ALA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Second units"]
     #[inline(always)]

@@ -175,6 +175,38 @@ status bit"]
         LINE_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTSTS")
+            .field("line0", &format_args!("{}", self.line0().bit()))
+            .field("line1", &format_args!("{}", self.line1().bit()))
+            .field("line2", &format_args!("{}", self.line2().bit()))
+            .field("line3", &format_args!("{}", self.line3().bit()))
+            .field("line4", &format_args!("{}", self.line4().bit()))
+            .field("line5", &format_args!("{}", self.line5().bit()))
+            .field("line6", &format_args!("{}", self.line6().bit()))
+            .field("line7", &format_args!("{}", self.line7().bit()))
+            .field("line8", &format_args!("{}", self.line8().bit()))
+            .field("line9", &format_args!("{}", self.line9().bit()))
+            .field("line10", &format_args!("{}", self.line10().bit()))
+            .field("line11", &format_args!("{}", self.line11().bit()))
+            .field("line12", &format_args!("{}", self.line12().bit()))
+            .field("line13", &format_args!("{}", self.line13().bit()))
+            .field("line14", &format_args!("{}", self.line14().bit()))
+            .field("line15", &format_args!("{}", self.line15().bit()))
+            .field("line16", &format_args!("{}", self.line16().bit()))
+            .field("line17", &format_args!("{}", self.line17().bit()))
+            .field("line18", &format_args!("{}", self.line18().bit()))
+            .field("line19", &format_args!("{}", self.line19().bit()))
+            .field("line20", &format_args!("{}", self.line20().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<INTSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Line [0-20]
 status bit"]

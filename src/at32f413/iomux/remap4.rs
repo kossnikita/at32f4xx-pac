@@ -58,6 +58,29 @@ impl R {
         TMR5CH4_GMUX_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP4")
+            .field("tmr1_gmux", &format_args!("{}", self.tmr1_gmux().bits()))
+            .field("tmr2_gmux", &format_args!("{}", self.tmr2_gmux().bits()))
+            .field(
+                "tmr2itr1_gmux",
+                &format_args!("{}", self.tmr2itr1_gmux().bit()),
+            )
+            .field("tmr3_gmux", &format_args!("{}", self.tmr3_gmux().bits()))
+            .field("tmr5_gmux", &format_args!("{}", self.tmr5_gmux().bits()))
+            .field(
+                "tmr5ch4_gmux",
+                &format_args!("{}", self.tmr5ch4_gmux().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - TMR1 muxing"]
     #[inline(always)]

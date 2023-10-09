@@ -63,6 +63,24 @@ impl R {
         PFT_LAT_DIS_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PSR")
+            .field("wtcyc", &format_args!("{}", self.wtcyc().bits()))
+            .field("hfcyc_en", &format_args!("{}", self.hfcyc_en().bit()))
+            .field("pft_en", &format_args!("{}", self.pft_en().bit()))
+            .field("pft_enf", &format_args!("{}", self.pft_enf().bit()))
+            .field("pft_en2", &format_args!("{}", self.pft_en2().bit()))
+            .field("pft_enf2", &format_args!("{}", self.pft_enf2().bit()))
+            .field("pft_lat_dis", &format_args!("{}", self.pft_lat_dis().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PSR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - Wait cycle"]
     #[inline(always)]

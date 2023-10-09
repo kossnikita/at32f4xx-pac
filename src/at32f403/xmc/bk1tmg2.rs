@@ -67,6 +67,24 @@ impl R {
         ASYNCM_R::new(((self.bits >> 28) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BK1TMG2")
+            .field("asyncm", &format_args!("{}", self.asyncm().bits()))
+            .field("dtlat", &format_args!("{}", self.dtlat().bits()))
+            .field("clkpsc", &format_args!("{}", self.clkpsc().bits()))
+            .field("buslat", &format_args!("{}", self.buslat().bits()))
+            .field("dtst", &format_args!("{}", self.dtst().bits()))
+            .field("addrht", &format_args!("{}", self.addrht().bits()))
+            .field("addrst", &format_args!("{}", self.addrst().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BK1TMG2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Address setup time"]
     #[inline(always)]

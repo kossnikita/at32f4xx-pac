@@ -221,6 +221,26 @@ impl R {
         STANDBY_DEBUG_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("sleep_debug", &format_args!("{}", self.sleep_debug().bit()))
+            .field(
+                "deepsleep_debug",
+                &format_args!("{}", self.deepsleep_debug().bit()),
+            )
+            .field(
+                "standby_debug",
+                &format_args!("{}", self.standby_debug().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Debug Sleep mode control bit"]
     #[inline(always)]

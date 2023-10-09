@@ -49,6 +49,22 @@ impl R {
         HSIE_R::new(((self.bits >> 4) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IENA")
+            .field("hsie", &format_args!("{}", self.hsie().bit()))
+            .field("vsie", &format_args!("{}", self.vsie().bit()))
+            .field("eseie", &format_args!("{}", self.eseie().bit()))
+            .field("ovrie", &format_args!("{}", self.ovrie().bit()))
+            .field("cfdie", &format_args!("{}", self.cfdie().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<IENA_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Capture frame done interrupt enable"]
     #[inline(always)]

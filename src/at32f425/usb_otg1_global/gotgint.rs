@@ -13,6 +13,18 @@ impl R {
         SESENDDET_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GOTGINT")
+            .field("sesenddet", &format_args!("{}", self.sesenddet().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GOTGINT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 2 - VBUS is deasserted"]
     #[inline(always)]

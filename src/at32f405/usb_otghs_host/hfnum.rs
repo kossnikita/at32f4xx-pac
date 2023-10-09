@@ -16,6 +16,19 @@ impl R {
         FTREM_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HFNUM")
+            .field("frnum", &format_args!("{}", self.frnum().bits()))
+            .field("ftrem", &format_args!("{}", self.ftrem().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HFNUM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "OTGHS host frame number/frame time remaining register (OTGHS_HFNUM)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hfnum::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HFNUM_SPEC;
 impl crate::RegisterSpec for HFNUM_SPEC {

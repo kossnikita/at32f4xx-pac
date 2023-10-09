@@ -112,6 +112,35 @@ impl R {
         SWJTAG_MUX_R::new(((self.bits >> 24) & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP")
+            .field("i2c1_mux", &format_args!("{}", self.i2c1_mux().bit()))
+            .field("usart1_mux", &format_args!("{}", self.usart1_mux().bit()))
+            .field("usart3_mux", &format_args!("{}", self.usart3_mux().bits()))
+            .field("tmr1_mux", &format_args!("{}", self.tmr1_mux().bits()))
+            .field("tmr2_mux", &format_args!("{}", self.tmr2_mux().bits()))
+            .field("tmr3_mux", &format_args!("{}", self.tmr3_mux().bits()))
+            .field("can_mux", &format_args!("{}", self.can_mux().bits()))
+            .field("pd01_mux", &format_args!("{}", self.pd01_mux().bit()))
+            .field("tmr5ch4_mux", &format_args!("{}", self.tmr5ch4_mux().bit()))
+            .field(
+                "adc1_etp_mux",
+                &format_args!("{}", self.adc1_etp_mux().bit()),
+            )
+            .field(
+                "adc1_eto_mux",
+                &format_args!("{}", self.adc1_eto_mux().bit()),
+            )
+            .field("swjtag_mux", &format_args!("{}", self.swjtag_mux().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - I2C1 muxing"]
     #[inline(always)]

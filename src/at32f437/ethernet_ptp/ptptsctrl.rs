@@ -148,6 +148,33 @@ impl R {
         EMAFPFF_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PTPTSCTRL")
+            .field("te", &format_args!("{}", self.te().bit()))
+            .field("tfcu", &format_args!("{}", self.tfcu().bit()))
+            .field("ti", &format_args!("{}", self.ti().bit()))
+            .field("tu", &format_args!("{}", self.tu().bit()))
+            .field("tite", &format_args!("{}", self.tite().bit()))
+            .field("aru", &format_args!("{}", self.aru().bit()))
+            .field("etaf", &format_args!("{}", self.etaf().bit()))
+            .field("tdbrc", &format_args!("{}", self.tdbrc().bit()))
+            .field("eppv2f", &format_args!("{}", self.eppv2f().bit()))
+            .field("eppef", &format_args!("{}", self.eppef().bit()))
+            .field("eppfsip6u", &format_args!("{}", self.eppfsip6u().bit()))
+            .field("eppfsip4u", &format_args!("{}", self.eppfsip4u().bit()))
+            .field("etsfem", &format_args!("{}", self.etsfem().bit()))
+            .field("esfmrtm", &format_args!("{}", self.esfmrtm().bit()))
+            .field("sppfts", &format_args!("{}", self.sppfts().bits()))
+            .field("emafpff", &format_args!("{}", self.emafpff().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PTPTSCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Timestamp enable"]
     #[inline(always)]

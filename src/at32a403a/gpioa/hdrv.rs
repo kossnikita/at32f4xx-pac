@@ -142,6 +142,33 @@ impl R {
         HDRV_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HDRV")
+            .field("hdrv0", &format_args!("{}", self.hdrv0().bit()))
+            .field("hdrv1", &format_args!("{}", self.hdrv1().bit()))
+            .field("hdrv2", &format_args!("{}", self.hdrv2().bit()))
+            .field("hdrv3", &format_args!("{}", self.hdrv3().bit()))
+            .field("hdrv4", &format_args!("{}", self.hdrv4().bit()))
+            .field("hdrv5", &format_args!("{}", self.hdrv5().bit()))
+            .field("hdrv6", &format_args!("{}", self.hdrv6().bit()))
+            .field("hdrv7", &format_args!("{}", self.hdrv7().bit()))
+            .field("hdrv8", &format_args!("{}", self.hdrv8().bit()))
+            .field("hdrv9", &format_args!("{}", self.hdrv9().bit()))
+            .field("hdrv10", &format_args!("{}", self.hdrv10().bit()))
+            .field("hdrv11", &format_args!("{}", self.hdrv11().bit()))
+            .field("hdrv12", &format_args!("{}", self.hdrv12().bit()))
+            .field("hdrv13", &format_args!("{}", self.hdrv13().bit()))
+            .field("hdrv14", &format_args!("{}", self.hdrv14().bit()))
+            .field("hdrv15", &format_args!("{}", self.hdrv15().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HDRV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Port hdrv bit [0-15]"]
     #[inline(always)]

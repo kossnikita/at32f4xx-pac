@@ -184,6 +184,37 @@ impl R {
         FDTFC8_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLR2")
+            .field("fdtfc8", &format_args!("{}", self.fdtfc8().bit()))
+            .field("hdtfc8", &format_args!("{}", self.hdtfc8().bit()))
+            .field("dterrfc8", &format_args!("{}", self.dterrfc8().bit()))
+            .field("dmerrfc8", &format_args!("{}", self.dmerrfc8().bit()))
+            .field("ferrfc8", &format_args!("{}", self.ferrfc8().bit()))
+            .field("fdtfc7", &format_args!("{}", self.fdtfc7().bit()))
+            .field("hdtfc7", &format_args!("{}", self.hdtfc7().bit()))
+            .field("dterrfc7", &format_args!("{}", self.dterrfc7().bit()))
+            .field("dmerrfc7", &format_args!("{}", self.dmerrfc7().bit()))
+            .field("ferrfc7", &format_args!("{}", self.ferrfc7().bit()))
+            .field("fdtfc6", &format_args!("{}", self.fdtfc6().bit()))
+            .field("hdtfc6", &format_args!("{}", self.hdtfc6().bit()))
+            .field("dterrfc6", &format_args!("{}", self.dterrfc6().bit()))
+            .field("dmerrfc6", &format_args!("{}", self.dmerrfc6().bit()))
+            .field("ferrfc6", &format_args!("{}", self.ferrfc6().bit()))
+            .field("fdtfc5", &format_args!("{}", self.fdtfc5().bit()))
+            .field("hdtfc5", &format_args!("{}", self.hdtfc5().bit()))
+            .field("dterrfc5", &format_args!("{}", self.dterrfc5().bit()))
+            .field("dmerrfc5", &format_args!("{}", self.dmerrfc5().bit()))
+            .field("ferrfc5", &format_args!("{}", self.ferrfc5().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CLR2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Stream 5 clear FIFO error interrupt flag"]
     #[inline(always)]

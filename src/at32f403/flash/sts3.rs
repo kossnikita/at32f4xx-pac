@@ -38,6 +38,21 @@ impl R {
         ODF_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STS3")
+            .field("obf", &format_args!("{}", self.obf().bit()))
+            .field("prgmerr", &format_args!("{}", self.prgmerr().bit()))
+            .field("epperr", &format_args!("{}", self.epperr().bit()))
+            .field("odf", &format_args!("{}", self.odf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STS3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 2 - program error"]
     #[inline(always)]

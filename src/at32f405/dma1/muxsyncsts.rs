@@ -53,6 +53,24 @@ impl R {
         SYNCOVF7_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MUXSYNCSTS")
+            .field("syncovf1", &format_args!("{}", self.syncovf1().bit()))
+            .field("syncovf2", &format_args!("{}", self.syncovf2().bit()))
+            .field("syncovf3", &format_args!("{}", self.syncovf3().bit()))
+            .field("syncovf4", &format_args!("{}", self.syncovf4().bit()))
+            .field("syncovf5", &format_args!("{}", self.syncovf5().bit()))
+            .field("syncovf6", &format_args!("{}", self.syncovf6().bit()))
+            .field("syncovf7", &format_args!("{}", self.syncovf7().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MUXSYNCSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

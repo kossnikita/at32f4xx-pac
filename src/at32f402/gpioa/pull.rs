@@ -162,6 +162,33 @@ pull configuration"]
         PULL_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PULL")
+            .field("pull0", &format_args!("{}", self.pull0().bits()))
+            .field("pull1", &format_args!("{}", self.pull1().bits()))
+            .field("pull2", &format_args!("{}", self.pull2().bits()))
+            .field("pull3", &format_args!("{}", self.pull3().bits()))
+            .field("pull4", &format_args!("{}", self.pull4().bits()))
+            .field("pull5", &format_args!("{}", self.pull5().bits()))
+            .field("pull6", &format_args!("{}", self.pull6().bits()))
+            .field("pull7", &format_args!("{}", self.pull7().bits()))
+            .field("pull8", &format_args!("{}", self.pull8().bits()))
+            .field("pull9", &format_args!("{}", self.pull9().bits()))
+            .field("pull10", &format_args!("{}", self.pull10().bits()))
+            .field("pull11", &format_args!("{}", self.pull11().bits()))
+            .field("pull12", &format_args!("{}", self.pull12().bits()))
+            .field("pull13", &format_args!("{}", self.pull13().bits()))
+            .field("pull14", &format_args!("{}", self.pull14().bits()))
+            .field("pull15", &format_args!("{}", self.pull15().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PULL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "GPIOx pin [0-15]
 pull configuration"]

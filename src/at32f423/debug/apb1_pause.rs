@@ -157,6 +157,46 @@ impl R {
         I2C3_SMBUS_TIMEOUT_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB1_PAUSE")
+            .field("tmr2_pause", &format_args!("{}", self.tmr2_pause().bit()))
+            .field("tmr3_pause", &format_args!("{}", self.tmr3_pause().bit()))
+            .field("tmr4_pause", &format_args!("{}", self.tmr4_pause().bit()))
+            .field("tmr6_pause", &format_args!("{}", self.tmr6_pause().bit()))
+            .field("tmr7_pause", &format_args!("{}", self.tmr7_pause().bit()))
+            .field("tmr12_pause", &format_args!("{}", self.tmr12_pause().bit()))
+            .field("tmr13_pause", &format_args!("{}", self.tmr13_pause().bit()))
+            .field("tmr14_pause", &format_args!("{}", self.tmr14_pause().bit()))
+            .field("ertc_pause", &format_args!("{}", self.ertc_pause().bit()))
+            .field("wwdt_pause", &format_args!("{}", self.wwdt_pause().bit()))
+            .field("wdt_pause", &format_args!("{}", self.wdt_pause().bit()))
+            .field(
+                "ertc512_pause",
+                &format_args!("{}", self.ertc512_pause().bit()),
+            )
+            .field(
+                "i2c1_smbus_timeout",
+                &format_args!("{}", self.i2c1_smbus_timeout().bit()),
+            )
+            .field("can1_pause", &format_args!("{}", self.can1_pause().bit()))
+            .field("can2_pause", &format_args!("{}", self.can2_pause().bit()))
+            .field(
+                "i2c2_smbus_timeout",
+                &format_args!("{}", self.i2c2_smbus_timeout().bit()),
+            )
+            .field(
+                "i2c3_smbus_timeout",
+                &format_args!("{}", self.i2c3_smbus_timeout().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB1_PAUSE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - TMR2_PAUSE"]
     #[inline(always)]

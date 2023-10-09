@@ -103,6 +103,28 @@ impl R {
         VSEID_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ACTRL")
+            .field("vseid", &format_args!("{}", self.vseid().bit()))
+            .field("hseid", &format_args!("{}", self.hseid().bit()))
+            .field("dmabt", &format_args!("{}", self.dmabt().bit()))
+            .field("idus", &format_args!("{}", self.idus().bit()))
+            .field("idun", &format_args!("{}", self.idun().bits()))
+            .field("efdm", &format_args!("{}", self.efdm().bit()))
+            .field("efdf", &format_args!("{}", self.efdf().bits()))
+            .field("pcdes", &format_args!("{}", self.pcdes().bit()))
+            .field("mibe", &format_args!("{}", self.mibe().bit()))
+            .field("efrce", &format_args!("{}", self.efrce().bit()))
+            .field("eisre", &format_args!("{}", self.eisre().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<ACTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Enhanced image scaling resize enable"]
     #[inline(always)]

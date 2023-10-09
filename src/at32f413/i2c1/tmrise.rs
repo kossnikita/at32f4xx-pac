@@ -13,6 +13,18 @@ impl R {
         RISETIME_R::new((self.bits & 0x3f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TMRISE")
+            .field("risetime", &format_args!("{}", self.risetime().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TMRISE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:5 - I2C bus rise time"]
     #[inline(always)]

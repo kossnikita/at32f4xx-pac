@@ -116,6 +116,31 @@ impl R {
         ALERTF_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STS1")
+            .field("alertf", &format_args!("{}", self.alertf().bit()))
+            .field("tmout", &format_args!("{}", self.tmout().bit()))
+            .field("pecerr", &format_args!("{}", self.pecerr().bit()))
+            .field("ouf", &format_args!("{}", self.ouf().bit()))
+            .field("ackfail", &format_args!("{}", self.ackfail().bit()))
+            .field("arlost", &format_args!("{}", self.arlost().bit()))
+            .field("buserr", &format_args!("{}", self.buserr().bit()))
+            .field("tdbe", &format_args!("{}", self.tdbe().bit()))
+            .field("rdbf", &format_args!("{}", self.rdbf().bit()))
+            .field("stopf", &format_args!("{}", self.stopf().bit()))
+            .field("addrhf", &format_args!("{}", self.addrhf().bit()))
+            .field("tdc", &format_args!("{}", self.tdc().bit()))
+            .field("addr7f", &format_args!("{}", self.addr7f().bit()))
+            .field("startf", &format_args!("{}", self.startf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STS1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 8 - Bus error"]
     #[inline(always)]

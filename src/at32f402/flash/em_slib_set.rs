@@ -4,6 +4,11 @@ pub type W = crate::W<EM_SLIB_SET_SPEC>;
 pub type EM_SLIB_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `EM_SLIB_ISS_SET` writer - Extension memory sLib instruction start sector setting"]
 pub type EM_SLIB_ISS_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+impl core::fmt::Debug for crate::generic::Reg<EM_SLIB_SET_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - Extension memory sLib setting"]
     #[inline(always)]

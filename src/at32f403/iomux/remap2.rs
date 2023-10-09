@@ -103,6 +103,34 @@ impl R {
         EXT_SPIM_EN_MUX_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP2")
+            .field("tmr15_mux", &format_args!("{}", self.tmr15_mux().bit()))
+            .field("tmr9_mux", &format_args!("{}", self.tmr9_mux().bit()))
+            .field("tmr10_mux", &format_args!("{}", self.tmr10_mux().bit()))
+            .field("tmr11_mux", &format_args!("{}", self.tmr11_mux().bit()))
+            .field("tmr13_mux", &format_args!("{}", self.tmr13_mux().bit()))
+            .field("tmr14_mux", &format_args!("{}", self.tmr14_mux().bit()))
+            .field(
+                "xmc_nadv_mux",
+                &format_args!("{}", self.xmc_nadv_mux().bit()),
+            )
+            .field("spi4_mux", &format_args!("{}", self.spi4_mux().bit()))
+            .field("i2c3_mux", &format_args!("{}", self.i2c3_mux().bit()))
+            .field("sdio2_mux", &format_args!("{}", self.sdio2_mux().bits()))
+            .field(
+                "ext_spim_en_mux",
+                &format_args!("{}", self.ext_spim_en_mux().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - TMR15 muxing"]
     #[inline(always)]

@@ -119,6 +119,33 @@ impl R {
         CMPWP_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRLSTS")
+            .field("cmpen", &format_args!("{}", self.cmpen().bit()))
+            .field("cmpis", &format_args!("{}", self.cmpis().bit()))
+            .field("cmpssel", &format_args!("{}", self.cmpssel().bits()))
+            .field("cmpinvsel", &format_args!("{}", self.cmpinvsel().bits()))
+            .field("cmpninvsel", &format_args!("{}", self.cmpninvsel().bits()))
+            .field("cmptag", &format_args!("{}", self.cmptag().bits()))
+            .field("cmpp", &format_args!("{}", self.cmpp().bit()))
+            .field("cmphyst", &format_args!("{}", self.cmphyst().bits()))
+            .field(
+                "cmpblanking",
+                &format_args!("{}", self.cmpblanking().bits()),
+            )
+            .field("brgen", &format_args!("{}", self.brgen().bit()))
+            .field("scalen", &format_args!("{}", self.scalen().bit()))
+            .field("cmpvalue", &format_args!("{}", self.cmpvalue().bit()))
+            .field("cmpwp", &format_args!("{}", self.cmpwp().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRLSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Comparator enable bit"]
     #[inline(always)]

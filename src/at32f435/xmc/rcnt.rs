@@ -24,6 +24,19 @@ impl R {
         ERIEN_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RCNT")
+            .field("rc", &format_args!("{}", self.rc().bits()))
+            .field("erien", &format_args!("{}", self.erien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<RCNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - error flag clear"]
     #[inline(always)]

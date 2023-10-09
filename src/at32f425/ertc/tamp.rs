@@ -85,6 +85,26 @@ impl R {
         OUTTYPE_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TAMP")
+            .field("outtype", &format_args!("{}", self.outtype().bit()))
+            .field("tppu", &format_args!("{}", self.tppu().bit()))
+            .field("tppr", &format_args!("{}", self.tppr().bits()))
+            .field("tpflt", &format_args!("{}", self.tpflt().bits()))
+            .field("tpfreq", &format_args!("{}", self.tpfreq().bits()))
+            .field("tptsen", &format_args!("{}", self.tptsen().bit()))
+            .field("tpien", &format_args!("{}", self.tpien().bit()))
+            .field("tp1edg", &format_args!("{}", self.tp1edg().bit()))
+            .field("tp1en", &format_args!("{}", self.tp1en().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TAMP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Tamper detection 1 enable"]
     #[inline(always)]

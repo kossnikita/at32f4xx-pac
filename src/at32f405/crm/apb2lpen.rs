@@ -103,6 +103,31 @@ impl R {
         OTGHSPHYLPEN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB2LPEN")
+            .field("tmr1lpen", &format_args!("{}", self.tmr1lpen().bit()))
+            .field("usart1lpen", &format_args!("{}", self.usart1lpen().bit()))
+            .field("usart6lpen", &format_args!("{}", self.usart6lpen().bit()))
+            .field("spi1lpen", &format_args!("{}", self.spi1lpen().bit()))
+            .field("scfglpen", &format_args!("{}", self.scfglpen().bit()))
+            .field("tmr9lpen", &format_args!("{}", self.tmr9lpen().bit()))
+            .field("tmr10lpen", &format_args!("{}", self.tmr10lpen().bit()))
+            .field("tmr11lpen", &format_args!("{}", self.tmr11lpen().bit()))
+            .field("i2s5lpen", &format_args!("{}", self.i2s5lpen().bit()))
+            .field("acclpen", &format_args!("{}", self.acclpen().bit()))
+            .field(
+                "otghsphylpen",
+                &format_args!("{}", self.otghsphylpen().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB2LPEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Timer1 clock enable during sleep mode"]
     #[inline(always)]

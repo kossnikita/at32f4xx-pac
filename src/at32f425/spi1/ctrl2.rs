@@ -463,6 +463,26 @@ impl R {
         MDIV3EN_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field("mdiv3en", &format_args!("{}", self.mdiv3en().bit()))
+            .field("mdiv3", &format_args!("{}", self.mdiv3().bit()))
+            .field("tdbeie", &format_args!("{}", self.tdbeie().bit()))
+            .field("rdbfie", &format_args!("{}", self.rdbfie().bit()))
+            .field("errie", &format_args!("{}", self.errie().bit()))
+            .field("tien", &format_args!("{}", self.tien().bit()))
+            .field("hwcsoe", &format_args!("{}", self.hwcsoe().bit()))
+            .field("dmaten", &format_args!("{}", self.dmaten().bit()))
+            .field("dmaren", &format_args!("{}", self.dmaren().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - DMA receive enable"]
     #[inline(always)]

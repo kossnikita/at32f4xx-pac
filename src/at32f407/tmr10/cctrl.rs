@@ -161,6 +161,20 @@ complementary polarity"]
         CCP_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CCTRL")
+            .field("c1cp", &format_args!("{}", self.c1cp().bit()))
+            .field("c1p", &format_args!("{}", self.c1p().bit()))
+            .field("c1en", &format_args!("{}", self.c1en().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Channel [1-1]
 enable"]

@@ -76,6 +76,25 @@ impl R {
         S8LLEN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LLCTRL")
+            .field("s1llen", &format_args!("{}", self.s1llen().bit()))
+            .field("s2llen", &format_args!("{}", self.s2llen().bit()))
+            .field("s3llen", &format_args!("{}", self.s3llen().bit()))
+            .field("s4llen", &format_args!("{}", self.s4llen().bit()))
+            .field("s5llen", &format_args!("{}", self.s5llen().bit()))
+            .field("s6llen", &format_args!("{}", self.s6llen().bit()))
+            .field("s7llen", &format_args!("{}", self.s7llen().bit()))
+            .field("s8llen", &format_args!("{}", self.s8llen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<LLCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Stream 1 link list enable"]
     #[inline(always)]

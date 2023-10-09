@@ -202,6 +202,45 @@ impl R {
         SEL_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FBWCFG")
+            .field("sel0", &format_args!("{}", self.sel0().bit()))
+            .field("sel1", &format_args!("{}", self.sel1().bit()))
+            .field("sel2", &format_args!("{}", self.sel2().bit()))
+            .field("sel3", &format_args!("{}", self.sel3().bit()))
+            .field("sel4", &format_args!("{}", self.sel4().bit()))
+            .field("sel5", &format_args!("{}", self.sel5().bit()))
+            .field("sel6", &format_args!("{}", self.sel6().bit()))
+            .field("sel7", &format_args!("{}", self.sel7().bit()))
+            .field("sel8", &format_args!("{}", self.sel8().bit()))
+            .field("sel9", &format_args!("{}", self.sel9().bit()))
+            .field("sel10", &format_args!("{}", self.sel10().bit()))
+            .field("sel11", &format_args!("{}", self.sel11().bit()))
+            .field("sel12", &format_args!("{}", self.sel12().bit()))
+            .field("sel13", &format_args!("{}", self.sel13().bit()))
+            .field("sel14", &format_args!("{}", self.sel14().bit()))
+            .field("sel15", &format_args!("{}", self.sel15().bit()))
+            .field("sel16", &format_args!("{}", self.sel16().bit()))
+            .field("sel17", &format_args!("{}", self.sel17().bit()))
+            .field("sel18", &format_args!("{}", self.sel18().bit()))
+            .field("sel19", &format_args!("{}", self.sel19().bit()))
+            .field("sel20", &format_args!("{}", self.sel20().bit()))
+            .field("sel21", &format_args!("{}", self.sel21().bit()))
+            .field("sel22", &format_args!("{}", self.sel22().bit()))
+            .field("sel23", &format_args!("{}", self.sel23().bit()))
+            .field("sel24", &format_args!("{}", self.sel24().bit()))
+            .field("sel25", &format_args!("{}", self.sel25().bit()))
+            .field("sel26", &format_args!("{}", self.sel26().bit()))
+            .field("sel27", &format_args!("{}", self.sel27().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<FBWCFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Filter bit width select"]
     #[inline(always)]

@@ -166,6 +166,35 @@ impl R {
         MBURST_R::new(((self.bits >> 23) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("S2CTRL")
+            .field("mburst", &format_args!("{}", self.mburst().bits()))
+            .field("pburst", &format_args!("{}", self.pburst().bits()))
+            .field("cm", &format_args!("{}", self.cm().bit()))
+            .field("dmm", &format_args!("{}", self.dmm().bit()))
+            .field("spl", &format_args!("{}", self.spl().bits()))
+            .field("pincos", &format_args!("{}", self.pincos().bit()))
+            .field("mwidth", &format_args!("{}", self.mwidth().bits()))
+            .field("pwidth", &format_args!("{}", self.pwidth().bits()))
+            .field("mincm", &format_args!("{}", self.mincm().bit()))
+            .field("pincm", &format_args!("{}", self.pincm().bit()))
+            .field("lm", &format_args!("{}", self.lm().bit()))
+            .field("dtd", &format_args!("{}", self.dtd().bits()))
+            .field("pfctrl", &format_args!("{}", self.pfctrl().bit()))
+            .field("fdtien", &format_args!("{}", self.fdtien().bit()))
+            .field("hdtien", &format_args!("{}", self.hdtien().bit()))
+            .field("dterrien", &format_args!("{}", self.dterrien().bit()))
+            .field("dmerrien", &format_args!("{}", self.dmerrien().bit()))
+            .field("sen", &format_args!("{}", self.sen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<S2CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Stream enable / flag stream ready when read low"]
     #[inline(always)]

@@ -148,6 +148,33 @@ impl R {
         D2DMAUDRIEN_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("d1en", &format_args!("{}", self.d1en().bit()))
+            .field("d1obdis", &format_args!("{}", self.d1obdis().bit()))
+            .field("d1trgen", &format_args!("{}", self.d1trgen().bit()))
+            .field("d1trgsel", &format_args!("{}", self.d1trgsel().bits()))
+            .field("d1nm", &format_args!("{}", self.d1nm().bits()))
+            .field("d1nbsel", &format_args!("{}", self.d1nbsel().bits()))
+            .field("d1dmaen", &format_args!("{}", self.d1dmaen().bit()))
+            .field("d1dmaudrien", &format_args!("{}", self.d1dmaudrien().bit()))
+            .field("d2en", &format_args!("{}", self.d2en().bit()))
+            .field("d2obdis", &format_args!("{}", self.d2obdis().bit()))
+            .field("d2trgen", &format_args!("{}", self.d2trgen().bit()))
+            .field("d2trgsel", &format_args!("{}", self.d2trgsel().bits()))
+            .field("d2nm", &format_args!("{}", self.d2nm().bits()))
+            .field("d2nbsel", &format_args!("{}", self.d2nbsel().bits()))
+            .field("d2dmaen", &format_args!("{}", self.d2dmaen().bit()))
+            .field("d2dmaudrien", &format_args!("{}", self.d2dmaudrien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - DAC1 enable"]
     #[inline(always)]

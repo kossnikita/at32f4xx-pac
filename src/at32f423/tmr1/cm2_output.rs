@@ -572,6 +572,27 @@ output switch enable"]
         C4C_R::new(((self.bits >> 8) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CM2_OUTPUT")
+            .field("c3osen", &format_args!("{}", self.c3osen().bit()))
+            .field("c4osen", &format_args!("{}", self.c4osen().bit()))
+            .field("c3octrl", &format_args!("{}", self.c3octrl().bits()))
+            .field("c4octrl", &format_args!("{}", self.c4octrl().bits()))
+            .field("c3oben", &format_args!("{}", self.c3oben().bit()))
+            .field("c4oben", &format_args!("{}", self.c4oben().bit()))
+            .field("c3oien", &format_args!("{}", self.c3oien().bit()))
+            .field("c4oien", &format_args!("{}", self.c4oien().bit()))
+            .field("c4c", &format_args!("{}", self.c4c().bits()))
+            .field("c3c", &format_args!("{}", self.c3c().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CM2_OUTPUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - Channel 3 configure"]
     #[inline(always)]

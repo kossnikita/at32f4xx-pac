@@ -40,6 +40,21 @@ impl R {
         EXTINT11_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXTIC3")
+            .field("extint11", &format_args!("{}", self.extint11().bits()))
+            .field("extint10", &format_args!("{}", self.extint10().bits()))
+            .field("extint9", &format_args!("{}", self.extint9().bits()))
+            .field("extint8", &format_args!("{}", self.extint8().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<EXTIC3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - EXTINT 8 configuration bits"]
     #[inline(always)]

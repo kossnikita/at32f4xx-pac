@@ -814,6 +814,30 @@ impl R {
         DEP_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL3")
+            .field("dep", &format_args!("{}", self.dep().bit()))
+            .field("rs485en", &format_args!("{}", self.rs485en().bit()))
+            .field("ctscfien", &format_args!("{}", self.ctscfien().bit()))
+            .field("ctsen", &format_args!("{}", self.ctsen().bit()))
+            .field("rtsen", &format_args!("{}", self.rtsen().bit()))
+            .field("dmaten", &format_args!("{}", self.dmaten().bit()))
+            .field("dmaren", &format_args!("{}", self.dmaren().bit()))
+            .field("scmen", &format_args!("{}", self.scmen().bit()))
+            .field("scnacken", &format_args!("{}", self.scnacken().bit()))
+            .field("slben", &format_args!("{}", self.slben().bit()))
+            .field("irdalp", &format_args!("{}", self.irdalp().bit()))
+            .field("irdaen", &format_args!("{}", self.irdaen().bit()))
+            .field("errien", &format_args!("{}", self.errien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Error interrupt enable"]
     #[inline(always)]

@@ -30,6 +30,21 @@ impl R {
         PKTSTS_R::new(((self.bits >> 17) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GRXSTSR_Host")
+            .field("chnum", &format_args!("{}", self.chnum().bits()))
+            .field("bcnt", &format_args!("{}", self.bcnt().bits()))
+            .field("dpid", &format_args!("{}", self.dpid().bits()))
+            .field("pktsts", &format_args!("{}", self.pktsts().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GRXSTSR_HOST_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "OTGFS Receive status debug read(Host mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grxstsr_host::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GRXSTSR_HOST_SPEC;
 impl crate::RegisterSpec for GRXSTSR_HOST_SPEC {

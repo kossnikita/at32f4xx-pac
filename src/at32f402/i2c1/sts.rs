@@ -127,6 +127,34 @@ impl R {
         ADDR_R::new(((self.bits >> 17) & 0x7f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STS")
+            .field("addr", &format_args!("{}", self.addr().bits()))
+            .field("sdir", &format_args!("{}", self.sdir().bit()))
+            .field("busyf", &format_args!("{}", self.busyf().bit()))
+            .field("alertf", &format_args!("{}", self.alertf().bit()))
+            .field("tmout", &format_args!("{}", self.tmout().bit()))
+            .field("pecerr", &format_args!("{}", self.pecerr().bit()))
+            .field("ouf", &format_args!("{}", self.ouf().bit()))
+            .field("arlost", &format_args!("{}", self.arlost().bit()))
+            .field("buserr", &format_args!("{}", self.buserr().bit()))
+            .field("tcrld", &format_args!("{}", self.tcrld().bit()))
+            .field("tdc", &format_args!("{}", self.tdc().bit()))
+            .field("stopf", &format_args!("{}", self.stopf().bit()))
+            .field("ackfail", &format_args!("{}", self.ackfail().bit()))
+            .field("addrf", &format_args!("{}", self.addrf().bit()))
+            .field("rdbf", &format_args!("{}", self.rdbf().bit()))
+            .field("tdis", &format_args!("{}", self.tdis().bit()))
+            .field("tdbe", &format_args!("{}", self.tdbe().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transmit data buffer empty flag"]
     #[inline(always)]

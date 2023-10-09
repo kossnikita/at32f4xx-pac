@@ -43,6 +43,23 @@ impl R {
         OSN_R::new(((self.bits >> 25) & 0x1f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OSQ4")
+            .field("osn17", &format_args!("{}", self.osn17().bits()))
+            .field("osn18", &format_args!("{}", self.osn18().bits()))
+            .field("osn19", &format_args!("{}", self.osn19().bits()))
+            .field("osn20", &format_args!("{}", self.osn20().bits()))
+            .field("osn21", &format_args!("{}", self.osn21().bits()))
+            .field("osn22", &format_args!("{}", self.osn22().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<OSQ4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Number of [17-22]th conversion in ordinary sequence"]
     #[inline(always)]

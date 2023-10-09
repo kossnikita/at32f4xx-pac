@@ -152,6 +152,21 @@ impl R {
         DIV9_8_R::new(((self.bits >> 10) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2SCLK")
+            .field("div9_8", &format_args!("{}", self.div9_8().bits()))
+            .field("mclkoe", &format_args!("{}", self.mclkoe().bit()))
+            .field("odd", &format_args!("{}", self.odd().bit()))
+            .field("div7_0", &format_args!("{}", self.div7_0().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<I2SCLK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - I2S division bit7 to bit0"]
     #[inline(always)]

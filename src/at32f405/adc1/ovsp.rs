@@ -58,6 +58,23 @@ impl R {
         OOSRSEL_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OVSP")
+            .field("oosrsel", &format_args!("{}", self.oosrsel().bit()))
+            .field("oostren", &format_args!("{}", self.oostren().bit()))
+            .field("osssel", &format_args!("{}", self.osssel().bits()))
+            .field("osrsel", &format_args!("{}", self.osrsel().bits()))
+            .field("posen", &format_args!("{}", self.posen().bit()))
+            .field("oosen", &format_args!("{}", self.oosen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<OVSP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Ordinary oversampling enable"]
     #[inline(always)]

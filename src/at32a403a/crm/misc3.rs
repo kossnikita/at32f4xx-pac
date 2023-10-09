@@ -40,6 +40,27 @@ impl R {
         HEXTDIV_R::new(((self.bits >> 12) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISC3")
+            .field(
+                "auto_step_en",
+                &format_args!("{}", self.auto_step_en().bits()),
+            )
+            .field("hick_to_usb", &format_args!("{}", self.hick_to_usb().bit()))
+            .field(
+                "hick_to_sclk",
+                &format_args!("{}", self.hick_to_sclk().bit()),
+            )
+            .field("hextdiv", &format_args!("{}", self.hextdiv().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MISC3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]

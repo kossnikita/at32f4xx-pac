@@ -40,6 +40,21 @@ impl R {
         SPDHIZT_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BK3TMGSP")
+            .field("spdhizt", &format_args!("{}", self.spdhizt().bits()))
+            .field("spht", &format_args!("{}", self.spht().bits()))
+            .field("spwt", &format_args!("{}", self.spwt().bits()))
+            .field("spst", &format_args!("{}", self.spst().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BK3TMGSP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - special memory setup time"]
     #[inline(always)]

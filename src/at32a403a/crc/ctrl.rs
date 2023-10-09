@@ -181,6 +181,20 @@ impl R {
         REVOD_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("rst", &format_args!("{}", self.rst().bit()))
+            .field("revid", &format_args!("{}", self.revid().bits()))
+            .field("revod", &format_args!("{}", self.revod().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Reset bit"]
     #[inline(always)]

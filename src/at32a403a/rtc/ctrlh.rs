@@ -31,6 +31,20 @@ impl R {
         TSIEN_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRLH")
+            .field("ovfien", &format_args!("{}", self.ovfien().bit()))
+            .field("taien", &format_args!("{}", self.taien().bit()))
+            .field("tsien", &format_args!("{}", self.tsien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRLH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]

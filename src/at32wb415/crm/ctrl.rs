@@ -503,6 +503,27 @@ impl R {
         PLLSTBL_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("hicken", &format_args!("{}", self.hicken().bit()))
+            .field("hickstbl", &format_args!("{}", self.hickstbl().bit()))
+            .field("hicktrim", &format_args!("{}", self.hicktrim().bits()))
+            .field("hickcal", &format_args!("{}", self.hickcal().bits()))
+            .field("hexten", &format_args!("{}", self.hexten().bit()))
+            .field("hextstbl", &format_args!("{}", self.hextstbl().bit()))
+            .field("hextbyps", &format_args!("{}", self.hextbyps().bit()))
+            .field("cfden", &format_args!("{}", self.cfden().bit()))
+            .field("pllen", &format_args!("{}", self.pllen().bit()))
+            .field("pllstbl", &format_args!("{}", self.pllstbl().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - High speed internal clock enable"]
     #[inline(always)]

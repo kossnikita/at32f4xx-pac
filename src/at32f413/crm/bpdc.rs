@@ -56,6 +56,23 @@ impl R {
         BPDRST_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BPDC")
+            .field("lexten", &format_args!("{}", self.lexten().bit()))
+            .field("lextstbl", &format_args!("{}", self.lextstbl().bit()))
+            .field("lextbyps", &format_args!("{}", self.lextbyps().bit()))
+            .field("rtcsel", &format_args!("{}", self.rtcsel().bits()))
+            .field("rtcen", &format_args!("{}", self.rtcen().bit()))
+            .field("bpdrst", &format_args!("{}", self.bpdrst().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BPDC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Low speed external crystal enable"]
     #[inline(always)]

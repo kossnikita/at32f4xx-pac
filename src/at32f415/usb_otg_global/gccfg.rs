@@ -49,6 +49,22 @@ impl R {
         VBUSIG_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GCCFG")
+            .field("pwrdown", &format_args!("{}", self.pwrdown().bit()))
+            .field("avalidsesen", &format_args!("{}", self.avalidsesen().bit()))
+            .field("bvalidsesen", &format_args!("{}", self.bvalidsesen().bit()))
+            .field("sofouten", &format_args!("{}", self.sofouten().bit()))
+            .field("vbusig", &format_args!("{}", self.vbusig().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GCCFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 16 - Power down"]
     #[inline(always)]

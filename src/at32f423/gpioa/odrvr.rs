@@ -149,6 +149,33 @@ output drive capability"]
         ODRV_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ODRVR")
+            .field("odrv0", &format_args!("{}", self.odrv0().bits()))
+            .field("odrv1", &format_args!("{}", self.odrv1().bits()))
+            .field("odrv2", &format_args!("{}", self.odrv2().bits()))
+            .field("odrv3", &format_args!("{}", self.odrv3().bits()))
+            .field("odrv4", &format_args!("{}", self.odrv4().bits()))
+            .field("odrv5", &format_args!("{}", self.odrv5().bits()))
+            .field("odrv6", &format_args!("{}", self.odrv6().bits()))
+            .field("odrv7", &format_args!("{}", self.odrv7().bits()))
+            .field("odrv8", &format_args!("{}", self.odrv8().bits()))
+            .field("odrv9", &format_args!("{}", self.odrv9().bits()))
+            .field("odrv10", &format_args!("{}", self.odrv10().bits()))
+            .field("odrv11", &format_args!("{}", self.odrv11().bits()))
+            .field("odrv12", &format_args!("{}", self.odrv12().bits()))
+            .field("odrv13", &format_args!("{}", self.odrv13().bits()))
+            .field("odrv14", &format_args!("{}", self.odrv14().bits()))
+            .field("odrv15", &format_args!("{}", self.odrv15().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<ODRVR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "GPIOx pin [0-15]
 output drive capability"]

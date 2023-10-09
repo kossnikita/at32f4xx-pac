@@ -103,6 +103,28 @@ impl R {
         PLLSTBLIEN_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLKINT")
+            .field("lickstblf", &format_args!("{}", self.lickstblf().bit()))
+            .field("lextstblf", &format_args!("{}", self.lextstblf().bit()))
+            .field("hickstblf", &format_args!("{}", self.hickstblf().bit()))
+            .field("hextstblf", &format_args!("{}", self.hextstblf().bit()))
+            .field("pllstblf", &format_args!("{}", self.pllstblf().bit()))
+            .field("cfdf", &format_args!("{}", self.cfdf().bit()))
+            .field("lickstblien", &format_args!("{}", self.lickstblien().bit()))
+            .field("lextstblien", &format_args!("{}", self.lextstblien().bit()))
+            .field("hickstblien", &format_args!("{}", self.hickstblien().bit()))
+            .field("hextstblien", &format_args!("{}", self.hextstblien().bit()))
+            .field("pllstblien", &format_args!("{}", self.pllstblien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CLKINT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 8 - LICK ready interrupt enable"]
     #[inline(always)]

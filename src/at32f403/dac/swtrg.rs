@@ -22,6 +22,19 @@ impl R {
         D2SWTRG_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWTRG")
+            .field("d1swtrg", &format_args!("{}", self.d1swtrg().bit()))
+            .field("d2swtrg", &format_args!("{}", self.d2swtrg().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SWTRG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - DAC1 software trigger"]
     #[inline(always)]

@@ -4,6 +4,11 @@ pub type W = crate::W<TADJ_SPEC>;
 pub type DECSBS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
 #[doc = "Field `ADD1S` writer - Add 1 second"]
 pub type ADD1S_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+impl core::fmt::Debug for crate::generic::Reg<TADJ_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:14 - Decrease sub-second value"]
     #[inline(always)]

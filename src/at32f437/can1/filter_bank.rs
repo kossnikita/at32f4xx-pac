@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct FILTER_BANK {
     #[doc = "0x00..0x08 - CAN filter bank filter bit register"]
     pub ffb: [FFB; 2],

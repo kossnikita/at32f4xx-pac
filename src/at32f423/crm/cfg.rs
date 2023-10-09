@@ -429,6 +429,28 @@ impl R {
         CLKOUT_SEL1_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG")
+            .field("sclksel", &format_args!("{}", self.sclksel().bits()))
+            .field("sclksts", &format_args!("{}", self.sclksts().bits()))
+            .field("ahbdiv", &format_args!("{}", self.ahbdiv().bits()))
+            .field("apb1div", &format_args!("{}", self.apb1div().bits()))
+            .field("apb2div", &format_args!("{}", self.apb2div().bits()))
+            .field("ertcdiv", &format_args!("{}", self.ertcdiv().bits()))
+            .field("clkoutdiv1", &format_args!("{}", self.clkoutdiv1().bits()))
+            .field(
+                "clkout_sel1",
+                &format_args!("{}", self.clkout_sel1().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - System clock select"]
     #[inline(always)]

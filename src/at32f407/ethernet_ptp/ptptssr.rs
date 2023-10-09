@@ -16,6 +16,19 @@ impl R {
         TTTR_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PTPTSSR")
+            .field("tso", &format_args!("{}", self.tso().bit()))
+            .field("tttr", &format_args!("{}", self.tttr().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PTPTSSR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Ethernet PTP time stamp status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptptssr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PTPTSSR_SPEC;
 impl crate::RegisterSpec for PTPTSSR_SPEC {

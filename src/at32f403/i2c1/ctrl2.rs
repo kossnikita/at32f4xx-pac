@@ -58,6 +58,23 @@ impl R {
         DMAEND_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field("dmaend", &format_args!("{}", self.dmaend().bit()))
+            .field("dmaen", &format_args!("{}", self.dmaen().bit()))
+            .field("dataien", &format_args!("{}", self.dataien().bit()))
+            .field("evtien", &format_args!("{}", self.evtien().bit()))
+            .field("errien", &format_args!("{}", self.errien().bit()))
+            .field("clkfreq", &format_args!("{}", self.clkfreq().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - Input clock frequency"]
     #[inline(always)]

@@ -90,6 +90,27 @@ impl R {
         PWROPRGDNE_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DCTL")
+            .field("rwkupsig", &format_args!("{}", self.rwkupsig().bit()))
+            .field("sftdiscon", &format_args!("{}", self.sftdiscon().bit()))
+            .field("gnpinnaksts", &format_args!("{}", self.gnpinnaksts().bit()))
+            .field("goutnaksts", &format_args!("{}", self.goutnaksts().bit()))
+            .field("tstctl", &format_args!("{}", self.tstctl().bits()))
+            .field("sgnpinnak", &format_args!("{}", self.sgnpinnak().bit()))
+            .field("cgnpinnak", &format_args!("{}", self.cgnpinnak().bit()))
+            .field("sgoutnak", &format_args!("{}", self.sgoutnak().bit()))
+            .field("cgoutnak", &format_args!("{}", self.cgoutnak().bit()))
+            .field("pwroprgdne", &format_args!("{}", self.pwroprgdne().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Remote wakeup signaling"]
     #[inline(always)]

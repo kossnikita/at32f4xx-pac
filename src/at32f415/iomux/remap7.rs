@@ -268,6 +268,30 @@ impl R {
         PD01_GMUX_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP7")
+            .field("pd01_gmux", &format_args!("{}", self.pd01_gmux().bit()))
+            .field(
+                "swjtag_gmux",
+                &format_args!("{}", self.swjtag_gmux().bits()),
+            )
+            .field(
+                "adc1_eto_gmux",
+                &format_args!("{}", self.adc1_eto_gmux().bit()),
+            )
+            .field(
+                "adc1_etp_gmux",
+                &format_args!("{}", self.adc1_etp_gmux().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP7_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 4 - ADC1 external trigger preempted conversion muxing"]
     #[inline(always)]

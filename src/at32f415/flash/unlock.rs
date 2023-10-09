@@ -2,6 +2,11 @@
 pub type W = crate::W<UNLOCK_SPEC>;
 #[doc = "Field `UKVAL` writer - Unlock key value"]
 pub type UKVAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+impl core::fmt::Debug for crate::generic::Reg<UNLOCK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - Unlock key value"]
     #[inline(always)]

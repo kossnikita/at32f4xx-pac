@@ -13,6 +13,18 @@ impl R {
         XMCLP_R::new((self.bits & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBLPEN3")
+            .field("xmclp", &format_args!("{}", self.xmclp().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBLPEN3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - XMC clock enable during sleep mode"]
     #[inline(always)]

@@ -30,6 +30,24 @@ impl R {
         EM_SLIB_DAT_SS_R::new(((self.bits >> 16) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLIB_STS0")
+            .field("btm_ap_enf", &format_args!("{}", self.btm_ap_enf().bit()))
+            .field("em_slib_enf", &format_args!("{}", self.em_slib_enf().bit()))
+            .field("slib_enf", &format_args!("{}", self.slib_enf().bit()))
+            .field(
+                "em_slib_dat_ss",
+                &format_args!("{}", self.em_slib_dat_ss().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SLIB_STS0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "sLib status 0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slib_sts0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLIB_STS0_SPEC;
 impl crate::RegisterSpec for SLIB_STS0_SPEC {

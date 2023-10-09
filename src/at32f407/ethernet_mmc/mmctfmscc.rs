@@ -9,6 +9,18 @@ impl R {
         TGFMSCC_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MMCTFMSCC")
+            .field("tgfmscc", &format_args!("{}", self.tgfmscc().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MMCTFMSCC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Ethernet MMC transmitted good frames after more than a single collision\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mmctfmscc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MMCTFMSCC_SPEC;
 impl crate::RegisterSpec for MMCTFMSCC_SPEC {

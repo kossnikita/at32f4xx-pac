@@ -54,6 +54,25 @@ muxing"]
         MUX_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MUXH")
+            .field("mux8", &format_args!("{}", self.mux8().bits()))
+            .field("mux9", &format_args!("{}", self.mux9().bits()))
+            .field("mux10", &format_args!("{}", self.mux10().bits()))
+            .field("mux11", &format_args!("{}", self.mux11().bits()))
+            .field("mux12", &format_args!("{}", self.mux12().bits()))
+            .field("mux13", &format_args!("{}", self.mux13().bits()))
+            .field("mux14", &format_args!("{}", self.mux14().bits()))
+            .field("mux15", &format_args!("{}", self.mux15().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MUXH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "GPIOx pin [8-15]
 muxing"]

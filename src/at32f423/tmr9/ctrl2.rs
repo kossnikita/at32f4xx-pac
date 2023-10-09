@@ -76,6 +76,25 @@ impl R {
         C2CIOS_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field("c2cios", &format_args!("{}", self.c2cios().bit()))
+            .field("c2ios", &format_args!("{}", self.c2ios().bit()))
+            .field("c1cios", &format_args!("{}", self.c1cios().bit()))
+            .field("c1ios", &format_args!("{}", self.c1ios().bit()))
+            .field("ptos", &format_args!("{}", self.ptos().bits()))
+            .field("drs", &format_args!("{}", self.drs().bit()))
+            .field("ccfs", &format_args!("{}", self.ccfs().bit()))
+            .field("cbctrl", &format_args!("{}", self.cbctrl().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Channel buffer control"]
     #[inline(always)]

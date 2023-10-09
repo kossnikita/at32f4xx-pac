@@ -184,6 +184,37 @@ impl R {
         OTGFS2LP_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBLPEN1")
+            .field("gpioalp", &format_args!("{}", self.gpioalp().bit()))
+            .field("gpioblp", &format_args!("{}", self.gpioblp().bit()))
+            .field("gpioclp", &format_args!("{}", self.gpioclp().bit()))
+            .field("gpiodlp", &format_args!("{}", self.gpiodlp().bit()))
+            .field("gpioelp", &format_args!("{}", self.gpioelp().bit()))
+            .field("gpioflp", &format_args!("{}", self.gpioflp().bit()))
+            .field("gpioglp", &format_args!("{}", self.gpioglp().bit()))
+            .field("gpiohlp", &format_args!("{}", self.gpiohlp().bit()))
+            .field("crclp", &format_args!("{}", self.crclp().bit()))
+            .field("flashlp", &format_args!("{}", self.flashlp().bit()))
+            .field("sram1lp", &format_args!("{}", self.sram1lp().bit()))
+            .field("sram2lp", &format_args!("{}", self.sram2lp().bit()))
+            .field("edmalp", &format_args!("{}", self.edmalp().bit()))
+            .field("dma1lp", &format_args!("{}", self.dma1lp().bit()))
+            .field("dma2lp", &format_args!("{}", self.dma2lp().bit()))
+            .field("emaclp", &format_args!("{}", self.emaclp().bit()))
+            .field("emactxlp", &format_args!("{}", self.emactxlp().bit()))
+            .field("emacrxlp", &format_args!("{}", self.emacrxlp().bit()))
+            .field("emacptplp", &format_args!("{}", self.emacptplp().bit()))
+            .field("otgfs2lp", &format_args!("{}", self.otgfs2lp().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBLPEN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - IO A clock enable during sleep mode"]
     #[inline(always)]

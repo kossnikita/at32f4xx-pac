@@ -76,6 +76,25 @@ impl R {
         S8SYNC_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SYNCEN")
+            .field("s1sync", &format_args!("{}", self.s1sync().bit()))
+            .field("s2sync", &format_args!("{}", self.s2sync().bit()))
+            .field("s3sync", &format_args!("{}", self.s3sync().bit()))
+            .field("s4sync", &format_args!("{}", self.s4sync().bit()))
+            .field("s5sync", &format_args!("{}", self.s5sync().bit()))
+            .field("s6sync", &format_args!("{}", self.s6sync().bit()))
+            .field("s7sync", &format_args!("{}", self.s7sync().bit()))
+            .field("s8sync", &format_args!("{}", self.s8sync().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SYNCEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Stream 1 sync enable"]
     #[inline(always)]

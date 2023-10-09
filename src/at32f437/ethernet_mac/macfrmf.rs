@@ -103,6 +103,28 @@ impl R {
         RA_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MACFRMF")
+            .field("pr", &format_args!("{}", self.pr().bit()))
+            .field("huc", &format_args!("{}", self.huc().bit()))
+            .field("hmc", &format_args!("{}", self.hmc().bit()))
+            .field("daif", &format_args!("{}", self.daif().bit()))
+            .field("pmc", &format_args!("{}", self.pmc().bit()))
+            .field("dbf", &format_args!("{}", self.dbf().bit()))
+            .field("pcf", &format_args!("{}", self.pcf().bits()))
+            .field("saif", &format_args!("{}", self.saif().bit()))
+            .field("saf", &format_args!("{}", self.saf().bit()))
+            .field("hpf", &format_args!("{}", self.hpf().bit()))
+            .field("ra", &format_args!("{}", self.ra().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MACFRMF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Promiscuous mode"]
     #[inline(always)]

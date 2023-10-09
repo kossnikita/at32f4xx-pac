@@ -149,6 +149,38 @@ impl R {
         RDY3_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CSTS")
+            .field("rdy3", &format_args!("{}", self.rdy3().bit()))
+            .field("occo3", &format_args!("{}", self.occo3().bit()))
+            .field("occs3", &format_args!("{}", self.occs3().bit()))
+            .field("pccs3", &format_args!("{}", self.pccs3().bit()))
+            .field("pcce3", &format_args!("{}", self.pcce3().bit()))
+            .field("occe3", &format_args!("{}", self.occe3().bit()))
+            .field("vmor3", &format_args!("{}", self.vmor3().bit()))
+            .field("rdy2", &format_args!("{}", self.rdy2().bit()))
+            .field("occo2", &format_args!("{}", self.occo2().bit()))
+            .field("occs2", &format_args!("{}", self.occs2().bit()))
+            .field("pccs2", &format_args!("{}", self.pccs2().bit()))
+            .field("pcce2", &format_args!("{}", self.pcce2().bit()))
+            .field("occe2", &format_args!("{}", self.occe2().bit()))
+            .field("vmor2", &format_args!("{}", self.vmor2().bit()))
+            .field("rdy1", &format_args!("{}", self.rdy1().bit()))
+            .field("occo1", &format_args!("{}", self.occo1().bit()))
+            .field("occs1", &format_args!("{}", self.occs1().bit()))
+            .field("pccs1", &format_args!("{}", self.pccs1().bit()))
+            .field("pcce1", &format_args!("{}", self.pcce1().bit()))
+            .field("occe1", &format_args!("{}", self.occe1().bit()))
+            .field("vmor1", &format_args!("{}", self.vmor1().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Common status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`csts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CSTS_SPEC;
 impl crate::RegisterSpec for CSTS_SPEC {

@@ -58,6 +58,23 @@ impl R {
         XIPW_SEL_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("XIP_CMD_W2")
+            .field("xipr_dcnt", &format_args!("{}", self.xipr_dcnt().bits()))
+            .field("xipr_tcnt", &format_args!("{}", self.xipr_tcnt().bits()))
+            .field("xipr_sel", &format_args!("{}", self.xipr_sel().bit()))
+            .field("xipw_dcnt", &format_args!("{}", self.xipw_dcnt().bits()))
+            .field("xipw_tcnt", &format_args!("{}", self.xipw_tcnt().bits()))
+            .field("xipw_sel", &format_args!("{}", self.xipw_sel().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<XIP_CMD_W2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:5 - XIP read data counter"]
     #[inline(always)]

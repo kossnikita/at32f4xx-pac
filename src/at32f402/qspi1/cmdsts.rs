@@ -9,6 +9,18 @@ impl R {
         CMDSTS_R::new((self.bits & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMDSTS")
+            .field("cmdsts", &format_args!("{}", self.cmdsts().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CMDSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "CMD status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmdsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CMDSTS_SPEC;
 impl crate::RegisterSpec for CMDSTS_SPEC {

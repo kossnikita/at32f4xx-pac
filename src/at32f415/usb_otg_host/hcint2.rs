@@ -85,6 +85,26 @@ impl R {
         DTGLERR_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCINT2")
+            .field("xferc", &format_args!("{}", self.xferc().bit()))
+            .field("chhltd", &format_args!("{}", self.chhltd().bit()))
+            .field("stall", &format_args!("{}", self.stall().bit()))
+            .field("nak", &format_args!("{}", self.nak().bit()))
+            .field("ack", &format_args!("{}", self.ack().bit()))
+            .field("xacterr", &format_args!("{}", self.xacterr().bit()))
+            .field("bblerr", &format_args!("{}", self.bblerr().bit()))
+            .field("frmovrun", &format_args!("{}", self.frmovrun().bit()))
+            .field("dtglerr", &format_args!("{}", self.dtglerr().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HCINT2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer completed"]
     #[inline(always)]

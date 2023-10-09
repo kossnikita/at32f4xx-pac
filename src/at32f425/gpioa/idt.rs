@@ -123,6 +123,33 @@ impl R {
         IDT_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IDT")
+            .field("idt0", &format_args!("{}", self.idt0().bit()))
+            .field("idt1", &format_args!("{}", self.idt1().bit()))
+            .field("idt2", &format_args!("{}", self.idt2().bit()))
+            .field("idt3", &format_args!("{}", self.idt3().bit()))
+            .field("idt4", &format_args!("{}", self.idt4().bit()))
+            .field("idt5", &format_args!("{}", self.idt5().bit()))
+            .field("idt6", &format_args!("{}", self.idt6().bit()))
+            .field("idt7", &format_args!("{}", self.idt7().bit()))
+            .field("idt8", &format_args!("{}", self.idt8().bit()))
+            .field("idt9", &format_args!("{}", self.idt9().bit()))
+            .field("idt10", &format_args!("{}", self.idt10().bit()))
+            .field("idt11", &format_args!("{}", self.idt11().bit()))
+            .field("idt12", &format_args!("{}", self.idt12().bit()))
+            .field("idt13", &format_args!("{}", self.idt13().bit()))
+            .field("idt14", &format_args!("{}", self.idt14().bit()))
+            .field("idt15", &format_args!("{}", self.idt15().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<IDT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "GPIO input data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IDT_SPEC;
 impl crate::RegisterSpec for IDT_SPEC {

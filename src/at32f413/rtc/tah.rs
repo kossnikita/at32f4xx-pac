@@ -2,6 +2,11 @@
 pub type W = crate::W<TAH_SPEC>;
 #[doc = "Field `TA` writer - Time alarm register high"]
 pub type TA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+impl core::fmt::Debug for crate::generic::Reg<TAH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - Time alarm register high"]
     #[inline(always)]

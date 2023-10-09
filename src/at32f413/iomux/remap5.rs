@@ -40,6 +40,21 @@ impl R {
         SPI2_GMUX_R::new(((self.bits >> 20) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP5")
+            .field("i2c1_gmux", &format_args!("{}", self.i2c1_gmux().bits()))
+            .field("i2c2_gmux", &format_args!("{}", self.i2c2_gmux().bits()))
+            .field("spi1_gmux", &format_args!("{}", self.spi1_gmux().bits()))
+            .field("spi2_gmux", &format_args!("{}", self.spi2_gmux().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP5_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 4:7 - I2C1 muxing"]
     #[inline(always)]

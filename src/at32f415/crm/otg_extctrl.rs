@@ -22,6 +22,19 @@ impl R {
         EP3_RMPEN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OTG_EXTCTRL")
+            .field("usbdiv_rst", &format_args!("{}", self.usbdiv_rst().bit()))
+            .field("ep3_rmpen", &format_args!("{}", self.ep3_rmpen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<OTG_EXTCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 30 - USB divider reset"]
     #[inline(always)]

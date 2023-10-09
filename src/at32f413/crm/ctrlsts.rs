@@ -83,6 +83,26 @@ impl R {
         LPRSTF_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRLSTS")
+            .field("licken", &format_args!("{}", self.licken().bit()))
+            .field("lickstbl", &format_args!("{}", self.lickstbl().bit()))
+            .field("rstfc", &format_args!("{}", self.rstfc().bit()))
+            .field("nrstf", &format_args!("{}", self.nrstf().bit()))
+            .field("porrstf", &format_args!("{}", self.porrstf().bit()))
+            .field("swrstf", &format_args!("{}", self.swrstf().bit()))
+            .field("wdtrstf", &format_args!("{}", self.wdtrstf().bit()))
+            .field("wwdtrstf", &format_args!("{}", self.wwdtrstf().bit()))
+            .field("lprstf", &format_args!("{}", self.lprstf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRLSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Low speed internal clock enable"]
     #[inline(always)]

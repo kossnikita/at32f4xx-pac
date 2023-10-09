@@ -116,6 +116,24 @@ impl R {
         AMPM_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TIME")
+            .field("ampm", &format_args!("{}", self.ampm().bit()))
+            .field("ht", &format_args!("{}", self.ht().bits()))
+            .field("hu", &format_args!("{}", self.hu().bits()))
+            .field("mt", &format_args!("{}", self.mt().bits()))
+            .field("mu", &format_args!("{}", self.mu().bits()))
+            .field("st", &format_args!("{}", self.st().bits()))
+            .field("su", &format_args!("{}", self.su().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TIME_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Second units"]
     #[inline(always)]

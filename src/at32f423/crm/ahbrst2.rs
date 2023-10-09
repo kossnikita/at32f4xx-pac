@@ -13,6 +13,18 @@ impl R {
         OTGFS1_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBRST2")
+            .field("otgfs1", &format_args!("{}", self.otgfs1().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBRST2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 7 - OTGFS1 reset"]
     #[inline(always)]

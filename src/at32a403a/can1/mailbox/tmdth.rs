@@ -33,6 +33,21 @@ impl R {
         TMDT_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TMDTH")
+            .field("tmdt4", &format_args!("{}", self.tmdt4().bits()))
+            .field("tmdt5", &format_args!("{}", self.tmdt5().bits()))
+            .field("tmdt6", &format_args!("{}", self.tmdt6().bits()))
+            .field("tmdt7", &format_args!("{}", self.tmdt7().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TMDTH_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Transmit mailbox data byte 4"]
     #[inline(always)]

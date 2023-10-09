@@ -13,6 +13,21 @@ impl R {
         I2SFPCMCKSEL_R::new((self.bits & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISC1")
+            .field(
+                "i2sfpcmcksel",
+                &format_args!("{}", self.i2sfpcmcksel().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MISC1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - I2S PCM clock edge select"]
     #[inline(always)]

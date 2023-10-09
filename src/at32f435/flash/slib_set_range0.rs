@@ -4,6 +4,11 @@ pub type W = crate::W<SLIB_SET_RANGE0_SPEC>;
 pub type SLIB_SS_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 #[doc = "Field `SLIB_ES_SET` writer - sLib end sector setting"]
 pub type SLIB_ES_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+impl core::fmt::Debug for crate::generic::Reg<SLIB_SET_RANGE0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - sLib start sector setting"]
     #[inline(always)]

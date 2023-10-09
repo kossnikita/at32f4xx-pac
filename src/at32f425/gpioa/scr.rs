@@ -48,6 +48,11 @@ where
         self.variant(IOCB0W_AW::Clear)
     }
 }
+impl core::fmt::Debug for crate::generic::Reg<SCR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Set bit [0-15]"]
     #[inline(always)]

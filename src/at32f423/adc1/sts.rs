@@ -233,6 +233,24 @@ impl R {
         RDY_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STS")
+            .field("rdy", &format_args!("{}", self.rdy().bit()))
+            .field("occo", &format_args!("{}", self.occo().bit()))
+            .field("occs", &format_args!("{}", self.occs().bit()))
+            .field("pccs", &format_args!("{}", self.pccs().bit()))
+            .field("pcce", &format_args!("{}", self.pcce().bit()))
+            .field("occe", &format_args!("{}", self.occe().bit()))
+            .field("vmor", &format_args!("{}", self.vmor().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Voltage monitoring out of range flag"]
     #[inline(always)]

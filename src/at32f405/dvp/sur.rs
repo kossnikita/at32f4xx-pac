@@ -40,6 +40,21 @@ impl R {
         FMEU_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SUR")
+            .field("fmeu", &format_args!("{}", self.fmeu().bits()))
+            .field("lneu", &format_args!("{}", self.lneu().bits()))
+            .field("lnsu", &format_args!("{}", self.lnsu().bits()))
+            .field("fmsu", &format_args!("{}", self.fmsu().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SUR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - Frame start unmask"]
     #[inline(always)]

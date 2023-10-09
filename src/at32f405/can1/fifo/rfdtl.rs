@@ -29,6 +29,21 @@ impl R {
         RFDT_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RFDTL")
+            .field("rfdt0", &format_args!("{}", self.rfdt0().bits()))
+            .field("rfdt1", &format_args!("{}", self.rfdt1().bits()))
+            .field("rfdt2", &format_args!("{}", self.rfdt2().bits()))
+            .field("rfdt3", &format_args!("{}", self.rfdt3().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<RFDTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Receive FIFO mailbox data low register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfdtl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFDTL_SPEC;
 impl crate::RegisterSpec for RFDTL_SPEC {

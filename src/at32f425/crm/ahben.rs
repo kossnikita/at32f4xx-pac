@@ -94,6 +94,27 @@ impl R {
         GPIOF_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBEN")
+            .field("dma1", &format_args!("{}", self.dma1().bit()))
+            .field("sram", &format_args!("{}", self.sram().bit()))
+            .field("flash", &format_args!("{}", self.flash().bit()))
+            .field("crc", &format_args!("{}", self.crc().bit()))
+            .field("otgfs1", &format_args!("{}", self.otgfs1().bit()))
+            .field("gpioa", &format_args!("{}", self.gpioa().bit()))
+            .field("gpiob", &format_args!("{}", self.gpiob().bit()))
+            .field("gpioc", &format_args!("{}", self.gpioc().bit()))
+            .field("gpiod", &format_args!("{}", self.gpiod().bit()))
+            .field("gpiof", &format_args!("{}", self.gpiof().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - DMA1 clock enable"]
     #[inline(always)]

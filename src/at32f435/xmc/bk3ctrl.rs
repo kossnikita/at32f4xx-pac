@@ -76,6 +76,25 @@ impl R {
         ECCPGS_R::new(((self.bits >> 17) & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BK3CTRL")
+            .field("eccpgs", &format_args!("{}", self.eccpgs().bits()))
+            .field("tar", &format_args!("{}", self.tar().bits()))
+            .field("tcr", &format_args!("{}", self.tcr().bits()))
+            .field("eccen", &format_args!("{}", self.eccen().bit()))
+            .field("extmdbw", &format_args!("{}", self.extmdbw().bits()))
+            .field("dev", &format_args!("{}", self.dev().bit()))
+            .field("en", &format_args!("{}", self.en().bit()))
+            .field("nwen", &format_args!("{}", self.nwen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BK3CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Wait feature enable"]
     #[inline(always)]

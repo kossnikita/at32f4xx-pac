@@ -22,6 +22,19 @@ impl R {
         ADDR1MODE_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OADDR1")
+            .field("addr1mode", &format_args!("{}", self.addr1mode().bit()))
+            .field("addr1", &format_args!("{}", self.addr1().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<OADDR1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:9 - Own address 1"]
     #[inline(always)]

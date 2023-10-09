@@ -530,6 +530,39 @@ lowest priority flag"]
         TMLPF_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TSTS")
+            .field("tm0lpf", &format_args!("{}", self.tm0lpf().bit()))
+            .field("tm1lpf", &format_args!("{}", self.tm1lpf().bit()))
+            .field("tm2lpf", &format_args!("{}", self.tm2lpf().bit()))
+            .field("tm0ef", &format_args!("{}", self.tm0ef().bit()))
+            .field("tm1ef", &format_args!("{}", self.tm1ef().bit()))
+            .field("tm2ef", &format_args!("{}", self.tm2ef().bit()))
+            .field("tmnr", &format_args!("{}", self.tmnr().bits()))
+            .field("tm0ct", &format_args!("{}", self.tm0ct().bit()))
+            .field("tm1ct", &format_args!("{}", self.tm1ct().bit()))
+            .field("tm2ct", &format_args!("{}", self.tm2ct().bit()))
+            .field("tm0tef", &format_args!("{}", self.tm0tef().bit()))
+            .field("tm1tef", &format_args!("{}", self.tm1tef().bit()))
+            .field("tm2tef", &format_args!("{}", self.tm2tef().bit()))
+            .field("tm0alf", &format_args!("{}", self.tm0alf().bit()))
+            .field("tm1alf", &format_args!("{}", self.tm1alf().bit()))
+            .field("tm2alf", &format_args!("{}", self.tm2alf().bit()))
+            .field("tm0tsf", &format_args!("{}", self.tm0tsf().bit()))
+            .field("tm1tsf", &format_args!("{}", self.tm1tsf().bit()))
+            .field("tm2tsf", &format_args!("{}", self.tm2tsf().bit()))
+            .field("tm0tcf", &format_args!("{}", self.tm0tcf().bit()))
+            .field("tm1tcf", &format_args!("{}", self.tm1tcf().bit()))
+            .field("tm2tcf", &format_args!("{}", self.tm2tcf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Transmit mailbox [0-2]
 transmission complete flag"]

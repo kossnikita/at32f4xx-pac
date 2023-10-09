@@ -76,6 +76,28 @@ impl R {
         PB8_UH_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG1")
+            .field(
+                "mem_map_sel",
+                &format_args!("{}", self.mem_map_sel().bits()),
+            )
+            .field("pa11_12_rmp", &format_args!("{}", self.pa11_12_rmp().bit()))
+            .field("ir_pol", &format_args!("{}", self.ir_pol().bit()))
+            .field("ir_src_sel", &format_args!("{}", self.ir_src_sel().bits()))
+            .field("pb14_uh", &format_args!("{}", self.pb14_uh().bit()))
+            .field("pb13_uh", &format_args!("{}", self.pb13_uh().bit()))
+            .field("pb9_uh", &format_args!("{}", self.pb9_uh().bit()))
+            .field("pb8_uh", &format_args!("{}", self.pb8_uh().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CFG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - Memory mapping selection bits"]
     #[inline(always)]

@@ -9,6 +9,18 @@ impl R {
         DT_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DT")
+            .field("dt", &format_args!("{}", self.dt().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DT_SPEC;
 impl crate::RegisterSpec for DT_SPEC {

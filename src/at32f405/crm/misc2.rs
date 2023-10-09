@@ -40,6 +40,33 @@ impl R {
         HEXT_TO_SCLK_DIV_R::new(((self.bits >> 19) & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISC2")
+            .field(
+                "auto_step_en",
+                &format_args!("{}", self.auto_step_en().bits()),
+            )
+            .field(
+                "pllu_usb48_sel",
+                &format_args!("{}", self.pllu_usb48_sel().bit()),
+            )
+            .field(
+                "hick_to_sclk_div",
+                &format_args!("{}", self.hick_to_sclk_div().bits()),
+            )
+            .field(
+                "hext_to_sclk_div",
+                &format_args!("{}", self.hext_to_sclk_div().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MISC2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]

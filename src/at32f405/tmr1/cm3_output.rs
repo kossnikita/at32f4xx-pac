@@ -372,6 +372,21 @@ output switch enable"]
         COSEN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CM3_OUTPUT")
+            .field("c5osen", &format_args!("{}", self.c5osen().bit()))
+            .field("c5octrl", &format_args!("{}", self.c5octrl().bits()))
+            .field("c5oben", &format_args!("{}", self.c5oben().bit()))
+            .field("c5oien", &format_args!("{}", self.c5oien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CM3_OUTPUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Channel [5-5]
 output immediately enable"]

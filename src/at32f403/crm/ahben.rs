@@ -76,6 +76,25 @@ impl R {
         SDIO2_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBEN")
+            .field("dma1", &format_args!("{}", self.dma1().bit()))
+            .field("dma2", &format_args!("{}", self.dma2().bit()))
+            .field("sram", &format_args!("{}", self.sram().bit()))
+            .field("flash", &format_args!("{}", self.flash().bit()))
+            .field("crc", &format_args!("{}", self.crc().bit()))
+            .field("xmc", &format_args!("{}", self.xmc().bit()))
+            .field("sdio1", &format_args!("{}", self.sdio1().bit()))
+            .field("sdio2", &format_args!("{}", self.sdio2().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - DMA1 clock enable"]
     #[inline(always)]

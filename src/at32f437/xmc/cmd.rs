@@ -28,6 +28,19 @@ impl R {
         MRD_R::new(((self.bits >> 9) & 0x1fff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CMD")
+            .field("art", &format_args!("{}", self.art().bits()))
+            .field("mrd", &format_args!("{}", self.mrd().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - SDRAM Command"]
     #[inline(always)]

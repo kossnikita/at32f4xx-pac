@@ -360,6 +360,20 @@ impl R {
         STS_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STCTRL")
+            .field("sts", &format_args!("{}", self.sts().bit()))
+            .field("stis", &format_args!("{}", self.stis().bits()))
+            .field("smsel", &format_args!("{}", self.smsel().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - Subordinate TMR mode selection"]
     #[inline(always)]

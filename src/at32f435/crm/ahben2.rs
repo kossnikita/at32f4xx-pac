@@ -31,6 +31,20 @@ impl R {
         SDIO1_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBEN2")
+            .field("dvp", &format_args!("{}", self.dvp().bit()))
+            .field("otgfs1", &format_args!("{}", self.otgfs1().bit()))
+            .field("sdio1", &format_args!("{}", self.sdio1().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBEN2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - DVP clock enable"]
     #[inline(always)]

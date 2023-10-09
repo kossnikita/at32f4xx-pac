@@ -365,6 +365,26 @@ impl R {
         CSPAS_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STS")
+            .field("cspas", &format_args!("{}", self.cspas().bit()))
+            .field("bf", &format_args!("{}", self.bf().bit()))
+            .field("roerr", &format_args!("{}", self.roerr().bit()))
+            .field("mmerr", &format_args!("{}", self.mmerr().bit()))
+            .field("ccerr", &format_args!("{}", self.ccerr().bit()))
+            .field("tuerr", &format_args!("{}", self.tuerr().bit()))
+            .field("acs", &format_args!("{}", self.acs().bit()))
+            .field("tdbe", &format_args!("{}", self.tdbe().bit()))
+            .field("rdbf", &format_args!("{}", self.rdbf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 4 - CRC calculation error"]
     #[inline(always)]

@@ -22,6 +22,19 @@ impl R {
         CVNUM_R::new(((self.bits >> 16) & 0x3fff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CWSZ")
+            .field("cvnum", &format_args!("{}", self.cvnum().bits()))
+            .field("chnum", &format_args!("{}", self.chnum().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CWSZ_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:13 - Cropping window horizontal pixel number"]
     #[inline(always)]

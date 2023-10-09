@@ -13,6 +13,18 @@ impl R {
         CLK_TO_TMR_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MISC2")
+            .field("clk_to_tmr", &format_args!("{}", self.clk_to_tmr().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MISC2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 16 - Clock output internal connect to timer10"]
     #[inline(always)]

@@ -85,6 +85,26 @@ impl R {
         RD_R::new(((self.bits >> 13) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field("ca", &format_args!("{}", self.ca().bits()))
+            .field("ra", &format_args!("{}", self.ra().bits()))
+            .field("db", &format_args!("{}", self.db().bits()))
+            .field("inbk", &format_args!("{}", self.inbk().bit()))
+            .field("cas", &format_args!("{}", self.cas().bits()))
+            .field("wrp", &format_args!("{}", self.wrp().bit()))
+            .field("clkdiv", &format_args!("{}", self.clkdiv().bits()))
+            .field("bstr", &format_args!("{}", self.bstr().bit()))
+            .field("rd", &format_args!("{}", self.rd().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - Number of column address bits"]
     #[inline(always)]

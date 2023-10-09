@@ -113,6 +113,30 @@ impl R {
         PRTSPD_R::new(((self.bits >> 17) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HPRT")
+            .field("prtconsts", &format_args!("{}", self.prtconsts().bit()))
+            .field("prtcondet", &format_args!("{}", self.prtcondet().bit()))
+            .field("prtena", &format_args!("{}", self.prtena().bit()))
+            .field("prtenchng", &format_args!("{}", self.prtenchng().bit()))
+            .field("prtovrcact", &format_args!("{}", self.prtovrcact().bit()))
+            .field("prtovrcchng", &format_args!("{}", self.prtovrcchng().bit()))
+            .field("prtres", &format_args!("{}", self.prtres().bit()))
+            .field("prtsusp", &format_args!("{}", self.prtsusp().bit()))
+            .field("prtrst", &format_args!("{}", self.prtrst().bit()))
+            .field("prtlnsts", &format_args!("{}", self.prtlnsts().bits()))
+            .field("prtpwr", &format_args!("{}", self.prtpwr().bit()))
+            .field("prttstctl", &format_args!("{}", self.prttstctl().bits()))
+            .field("prtspd", &format_args!("{}", self.prtspd().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HPRT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Port connect detected"]
     #[inline(always)]

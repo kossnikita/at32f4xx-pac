@@ -283,6 +283,23 @@ impl R {
         REC_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ESTS")
+            .field("rec", &format_args!("{}", self.rec().bits()))
+            .field("tec", &format_args!("{}", self.tec().bits()))
+            .field("etr", &format_args!("{}", self.etr().bits()))
+            .field("bof", &format_args!("{}", self.bof().bit()))
+            .field("epf", &format_args!("{}", self.epf().bit()))
+            .field("eaf", &format_args!("{}", self.eaf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<ESTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 4:6 - Error type record"]
     #[inline(always)]

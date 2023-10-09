@@ -22,6 +22,19 @@ impl R {
         YCONUT_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("S2_2DCNT")
+            .field("xconut", &format_args!("{}", self.xconut().bits()))
+            .field("yconut", &format_args!("{}", self.yconut().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<S2_2DCNT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - X dimension transfer count"]
     #[inline(always)]

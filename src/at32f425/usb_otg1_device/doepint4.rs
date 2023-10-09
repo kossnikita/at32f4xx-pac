@@ -49,6 +49,22 @@ impl R {
         B2BSTUP_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPINT4")
+            .field("xferc", &format_args!("{}", self.xferc().bit()))
+            .field("eptdisd", &format_args!("{}", self.eptdisd().bit()))
+            .field("setup", &format_args!("{}", self.setup().bit()))
+            .field("outtepd", &format_args!("{}", self.outtepd().bit()))
+            .field("b2bstup", &format_args!("{}", self.b2bstup().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DOEPINT4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]

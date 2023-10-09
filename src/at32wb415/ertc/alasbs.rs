@@ -22,6 +22,19 @@ impl R {
         SBSMSK_R::new(((self.bits >> 24) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ALASBS")
+            .field("sbsmsk", &format_args!("{}", self.sbsmsk().bits()))
+            .field("sbs", &format_args!("{}", self.sbs().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<ALASBS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:14 - Sub-seconds value"]
     #[inline(always)]

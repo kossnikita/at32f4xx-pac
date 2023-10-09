@@ -112,6 +112,29 @@ impl R {
         IOIF_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTCLR")
+            .field("cmdfail", &format_args!("{}", self.cmdfail().bit()))
+            .field("dtfail", &format_args!("{}", self.dtfail().bit()))
+            .field("cmdtimeout", &format_args!("{}", self.cmdtimeout().bit()))
+            .field("dttimeout", &format_args!("{}", self.dttimeout().bit()))
+            .field("txerru", &format_args!("{}", self.txerru().bit()))
+            .field("rxerru", &format_args!("{}", self.rxerru().bit()))
+            .field("cmdrspcmpl", &format_args!("{}", self.cmdrspcmpl().bit()))
+            .field("cmdcmpl", &format_args!("{}", self.cmdcmpl().bit()))
+            .field("dtcmpl", &format_args!("{}", self.dtcmpl().bit()))
+            .field("sbiterr", &format_args!("{}", self.sbiterr().bit()))
+            .field("dtblkcmpl", &format_args!("{}", self.dtblkcmpl().bit()))
+            .field("ioif", &format_args!("{}", self.ioif().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<INTCLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Command crc fail flag clear"]
     #[inline(always)]

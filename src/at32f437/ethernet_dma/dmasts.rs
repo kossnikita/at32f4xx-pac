@@ -181,6 +181,38 @@ impl R {
         TTI_R::new(((self.bits >> 29) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DMASTS")
+            .field("ti", &format_args!("{}", self.ti().bit()))
+            .field("tps", &format_args!("{}", self.tps().bit()))
+            .field("tbu", &format_args!("{}", self.tbu().bit()))
+            .field("tjt", &format_args!("{}", self.tjt().bit()))
+            .field("ovf", &format_args!("{}", self.ovf().bit()))
+            .field("unf", &format_args!("{}", self.unf().bit()))
+            .field("ri", &format_args!("{}", self.ri().bit()))
+            .field("rbu", &format_args!("{}", self.rbu().bit()))
+            .field("rps", &format_args!("{}", self.rps().bit()))
+            .field("rwt", &format_args!("{}", self.rwt().bit()))
+            .field("eti", &format_args!("{}", self.eti().bit()))
+            .field("fbei", &format_args!("{}", self.fbei().bit()))
+            .field("eri", &format_args!("{}", self.eri().bit()))
+            .field("ais", &format_args!("{}", self.ais().bit()))
+            .field("nis", &format_args!("{}", self.nis().bit()))
+            .field("rs", &format_args!("{}", self.rs().bits()))
+            .field("ts", &format_args!("{}", self.ts().bits()))
+            .field("eb", &format_args!("{}", self.eb().bits()))
+            .field("mmi", &format_args!("{}", self.mmi().bit()))
+            .field("mpi", &format_args!("{}", self.mpi().bit()))
+            .field("tti", &format_args!("{}", self.tti().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DMASTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transmit interrupt"]
     #[inline(always)]

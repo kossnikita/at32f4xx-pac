@@ -31,6 +31,20 @@ impl R {
         RUGFCIM_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MMCRIM")
+            .field("rcefcim", &format_args!("{}", self.rcefcim().bit()))
+            .field("raefacim", &format_args!("{}", self.raefacim().bit()))
+            .field("rugfcim", &format_args!("{}", self.rugfcim().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MMCRIM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 5 - Received CRC error frame counter interrupt mask"]
     #[inline(always)]

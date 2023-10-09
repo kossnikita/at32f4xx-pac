@@ -31,6 +31,20 @@ impl R {
         ADDR2EN_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OADDR2")
+            .field("addr2", &format_args!("{}", self.addr2().bits()))
+            .field("addr2mask", &format_args!("{}", self.addr2mask().bits()))
+            .field("addr2en", &format_args!("{}", self.addr2en().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<OADDR2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 1:7 - Own address 2"]
     #[inline(always)]

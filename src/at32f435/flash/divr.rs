@@ -20,6 +20,19 @@ impl R {
         FDIV_STS_R::new(((self.bits >> 4) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIVR")
+            .field("fdiv", &format_args!("{}", self.fdiv().bits()))
+            .field("fdiv_sts", &format_args!("{}", self.fdiv_sts().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DIVR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - Flash divider"]
     #[inline(always)]

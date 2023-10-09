@@ -22,6 +22,19 @@ impl R {
         BUSLATR2R_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EXT4")
+            .field("buslatw2w", &format_args!("{}", self.buslatw2w().bits()))
+            .field("buslatr2r", &format_args!("{}", self.buslatr2r().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<EXT4_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - BUSLATW2W"]
     #[inline(always)]

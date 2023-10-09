@@ -198,6 +198,45 @@ impl R {
         DTERRF7_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STS")
+            .field("gf1", &format_args!("{}", self.gf1().bit()))
+            .field("gf2", &format_args!("{}", self.gf2().bit()))
+            .field("gf3", &format_args!("{}", self.gf3().bit()))
+            .field("gf4", &format_args!("{}", self.gf4().bit()))
+            .field("gf5", &format_args!("{}", self.gf5().bit()))
+            .field("gf6", &format_args!("{}", self.gf6().bit()))
+            .field("gf7", &format_args!("{}", self.gf7().bit()))
+            .field("fdtf1", &format_args!("{}", self.fdtf1().bit()))
+            .field("fdtf2", &format_args!("{}", self.fdtf2().bit()))
+            .field("fdtf3", &format_args!("{}", self.fdtf3().bit()))
+            .field("fdtf4", &format_args!("{}", self.fdtf4().bit()))
+            .field("fdtf5", &format_args!("{}", self.fdtf5().bit()))
+            .field("fdtf6", &format_args!("{}", self.fdtf6().bit()))
+            .field("fdtf7", &format_args!("{}", self.fdtf7().bit()))
+            .field("hdtf1", &format_args!("{}", self.hdtf1().bit()))
+            .field("hdtf2", &format_args!("{}", self.hdtf2().bit()))
+            .field("hdtf3", &format_args!("{}", self.hdtf3().bit()))
+            .field("hdtf4", &format_args!("{}", self.hdtf4().bit()))
+            .field("hdtf5", &format_args!("{}", self.hdtf5().bit()))
+            .field("hdtf6", &format_args!("{}", self.hdtf6().bit()))
+            .field("hdtf7", &format_args!("{}", self.hdtf7().bit()))
+            .field("dterrf1", &format_args!("{}", self.dterrf1().bit()))
+            .field("dterrf2", &format_args!("{}", self.dterrf2().bit()))
+            .field("dterrf3", &format_args!("{}", self.dterrf3().bit()))
+            .field("dterrf4", &format_args!("{}", self.dterrf4().bit()))
+            .field("dterrf5", &format_args!("{}", self.dterrf5().bit()))
+            .field("dterrf6", &format_args!("{}", self.dterrf6().bit()))
+            .field("dterrf7", &format_args!("{}", self.dterrf7().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "DMA interrupt status register (DMA_STS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
 impl crate::RegisterSpec for STS_SPEC {

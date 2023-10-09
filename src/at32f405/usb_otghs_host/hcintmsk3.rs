@@ -103,6 +103,28 @@ impl R {
         DTGLERRMSK_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCINTMSK3")
+            .field("xfercmsk", &format_args!("{}", self.xfercmsk().bit()))
+            .field("chhltdmsk", &format_args!("{}", self.chhltdmsk().bit()))
+            .field("ahberrmsk", &format_args!("{}", self.ahberrmsk().bit()))
+            .field("stallmsk", &format_args!("{}", self.stallmsk().bit()))
+            .field("nakmsk", &format_args!("{}", self.nakmsk().bit()))
+            .field("ackmsk", &format_args!("{}", self.ackmsk().bit()))
+            .field("nyetmsk", &format_args!("{}", self.nyetmsk().bit()))
+            .field("xacterrmsk", &format_args!("{}", self.xacterrmsk().bit()))
+            .field("bblerrmsk", &format_args!("{}", self.bblerrmsk().bit()))
+            .field("frmovrunmsk", &format_args!("{}", self.frmovrunmsk().bit()))
+            .field("dtglerrmsk", &format_args!("{}", self.dtglerrmsk().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HCINTMSK3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer completed mask"]
     #[inline(always)]

@@ -49,6 +49,31 @@ impl R {
         UART8_GMUX_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP8")
+            .field(
+                "mii_rmii_sel_gmux",
+                &format_args!("{}", self.mii_rmii_sel_gmux().bit()),
+            )
+            .field(
+                "ptp_pps_gmux",
+                &format_args!("{}", self.ptp_pps_gmux().bit()),
+            )
+            .field(
+                "usart6_gmux",
+                &format_args!("{}", self.usart6_gmux().bits()),
+            )
+            .field("uart7_gmux", &format_args!("{}", self.uart7_gmux().bits()))
+            .field("uart8_gmux", &format_args!("{}", self.uart8_gmux().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP8_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 18 - MII_RMII select muxing"]
     #[inline(always)]

@@ -13,6 +13,18 @@ impl R {
         LDOOVSEL_R::new((self.bits & 7) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LDOOV")
+            .field("ldoovsel", &format_args!("{}", self.ldoovsel().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<LDOOV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - LDO output voltage select"]
     #[inline(always)]

@@ -103,6 +103,28 @@ impl R {
         PECTEN_R::new(((self.bits >> 26) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field("pecten", &format_args!("{}", self.pecten().bit()))
+            .field("astopen", &format_args!("{}", self.astopen().bit()))
+            .field("rlden", &format_args!("{}", self.rlden().bit()))
+            .field("cnt", &format_args!("{}", self.cnt().bits()))
+            .field("nacken", &format_args!("{}", self.nacken().bit()))
+            .field("genstop", &format_args!("{}", self.genstop().bit()))
+            .field("genstart", &format_args!("{}", self.genstart().bit()))
+            .field("readh10", &format_args!("{}", self.readh10().bit()))
+            .field("addr10", &format_args!("{}", self.addr10().bit()))
+            .field("dir", &format_args!("{}", self.dir().bit()))
+            .field("saddr", &format_args!("{}", self.saddr().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:9 - Slave address"]
     #[inline(always)]

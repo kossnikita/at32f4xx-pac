@@ -13,6 +13,18 @@ impl R {
         REVISION_R::new(self.bits & 0x7fff_ffff)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REV")
+            .field("revision", &format_args!("{}", self.revision().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:30 - Revision number"]
     #[inline(always)]

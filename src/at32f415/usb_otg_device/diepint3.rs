@@ -56,6 +56,23 @@ impl R {
         TXFEMP_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPINT3")
+            .field("xferc", &format_args!("{}", self.xferc().bit()))
+            .field("eptdisd", &format_args!("{}", self.eptdisd().bit()))
+            .field("timeout", &format_args!("{}", self.timeout().bit()))
+            .field("intkntxfemp", &format_args!("{}", self.intkntxfemp().bit()))
+            .field("ineptnak", &format_args!("{}", self.ineptnak().bit()))
+            .field("txfemp", &format_args!("{}", self.txfemp().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DIEPINT3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]

@@ -148,6 +148,19 @@ impl R {
         OVFDEN_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IDEN")
+            .field("ovfden", &format_args!("{}", self.ovfden().bit()))
+            .field("ovfien", &format_args!("{}", self.ovfien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<IDEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]

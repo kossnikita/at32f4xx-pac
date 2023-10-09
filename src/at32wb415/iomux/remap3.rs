@@ -31,6 +31,20 @@ impl R {
         TMR11_GMUX_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP3")
+            .field("tmr11_gmux", &format_args!("{}", self.tmr11_gmux().bits()))
+            .field("tmr10_gmux", &format_args!("{}", self.tmr10_gmux().bits()))
+            .field("tmr9_gmux", &format_args!("{}", self.tmr9_gmux().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - TMR9 muxing"]
     #[inline(always)]

@@ -175,6 +175,33 @@ mode configurate"]
         IOMC_R::new(((self.bits >> 30) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFGR")
+            .field("iomc0", &format_args!("{}", self.iomc0().bits()))
+            .field("iomc1", &format_args!("{}", self.iomc1().bits()))
+            .field("iomc2", &format_args!("{}", self.iomc2().bits()))
+            .field("iomc3", &format_args!("{}", self.iomc3().bits()))
+            .field("iomc4", &format_args!("{}", self.iomc4().bits()))
+            .field("iomc5", &format_args!("{}", self.iomc5().bits()))
+            .field("iomc6", &format_args!("{}", self.iomc6().bits()))
+            .field("iomc7", &format_args!("{}", self.iomc7().bits()))
+            .field("iomc8", &format_args!("{}", self.iomc8().bits()))
+            .field("iomc9", &format_args!("{}", self.iomc9().bits()))
+            .field("iomc10", &format_args!("{}", self.iomc10().bits()))
+            .field("iomc11", &format_args!("{}", self.iomc11().bits()))
+            .field("iomc12", &format_args!("{}", self.iomc12().bits()))
+            .field("iomc13", &format_args!("{}", self.iomc13().bits()))
+            .field("iomc14", &format_args!("{}", self.iomc14().bits()))
+            .field("iomc15", &format_args!("{}", self.iomc15().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CFGR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "GPIOx pin [0-15]
 mode configurate"]

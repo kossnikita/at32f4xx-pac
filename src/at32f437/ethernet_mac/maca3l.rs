@@ -13,6 +13,18 @@ impl R {
         MA3L_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MACA3L")
+            .field("ma3l", &format_args!("{}", self.ma3l().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MACA3L_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - MAC address3 low"]
     #[inline(always)]

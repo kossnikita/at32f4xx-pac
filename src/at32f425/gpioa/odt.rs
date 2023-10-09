@@ -156,6 +156,33 @@ impl R {
         ODT_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ODT")
+            .field("odt0", &format_args!("{}", self.odt0().bit()))
+            .field("odt1", &format_args!("{}", self.odt1().bit()))
+            .field("odt2", &format_args!("{}", self.odt2().bit()))
+            .field("odt3", &format_args!("{}", self.odt3().bit()))
+            .field("odt4", &format_args!("{}", self.odt4().bit()))
+            .field("odt5", &format_args!("{}", self.odt5().bit()))
+            .field("odt6", &format_args!("{}", self.odt6().bit()))
+            .field("odt7", &format_args!("{}", self.odt7().bit()))
+            .field("odt8", &format_args!("{}", self.odt8().bit()))
+            .field("odt9", &format_args!("{}", self.odt9().bit()))
+            .field("odt10", &format_args!("{}", self.odt10().bit()))
+            .field("odt11", &format_args!("{}", self.odt11().bit()))
+            .field("odt12", &format_args!("{}", self.odt12().bit()))
+            .field("odt13", &format_args!("{}", self.odt13().bit()))
+            .field("odt14", &format_args!("{}", self.odt14().bit()))
+            .field("odt15", &format_args!("{}", self.odt15().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<ODT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Port output data"]
     #[inline(always)]

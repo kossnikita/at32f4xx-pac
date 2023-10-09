@@ -13,6 +13,18 @@ impl R {
         GFE_R::new((self.bits & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("G_FILTER_EN")
+            .field("gfe", &format_args!("{}", self.gfe().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<G_FILTER_EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Glitch filter enable"]
     #[inline(always)]

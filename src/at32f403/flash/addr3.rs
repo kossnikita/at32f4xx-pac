@@ -2,6 +2,11 @@
 pub type W = crate::W<ADDR3_SPEC>;
 #[doc = "Field `FA` writer - Flash Address"]
 pub type FA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+impl core::fmt::Debug for crate::generic::Reg<ADDR3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - Flash Address"]
     #[inline(always)]

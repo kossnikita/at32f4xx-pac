@@ -94,6 +94,27 @@ impl R {
         TC_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTSTS")
+            .field("ept_num", &format_args!("{}", self.ept_num().bits()))
+            .field("inout", &format_args!("{}", self.inout().bit()))
+            .field("lsof", &format_args!("{}", self.lsof().bit()))
+            .field("sof", &format_args!("{}", self.sof().bit()))
+            .field("rst", &format_args!("{}", self.rst().bit()))
+            .field("sp", &format_args!("{}", self.sp().bit()))
+            .field("wk", &format_args!("{}", self.wk().bit()))
+            .field("be", &format_args!("{}", self.be().bit()))
+            .field("ucfor", &format_args!("{}", self.ucfor().bit()))
+            .field("tc", &format_args!("{}", self.tc().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<INTSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Endpoint number"]
     #[inline(always)]

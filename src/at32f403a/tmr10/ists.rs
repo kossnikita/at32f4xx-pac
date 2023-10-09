@@ -211,6 +211,20 @@ recapture flag"]
         CRF_R::new(((self.bits >> 9) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("ISTS")
+            .field("c1rf", &format_args!("{}", self.c1rf().bit()))
+            .field("c1if", &format_args!("{}", self.c1if().bit()))
+            .field("ovfif", &format_args!("{}", self.ovfif().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<ISTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Overflow interrupt flag"]
     #[inline(always)]

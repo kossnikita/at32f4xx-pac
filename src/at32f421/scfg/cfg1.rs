@@ -85,6 +85,41 @@ impl R {
         TMR17_DMA_RMP_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CFG1")
+            .field(
+                "tmr17_dma_rmp",
+                &format_args!("{}", self.tmr17_dma_rmp().bit()),
+            )
+            .field(
+                "tmr16_dma_rmp",
+                &format_args!("{}", self.tmr16_dma_rmp().bit()),
+            )
+            .field(
+                "usart1_rx_dma_rmp",
+                &format_args!("{}", self.usart1_rx_dma_rmp().bit()),
+            )
+            .field(
+                "usart1_tx_dma_rmp",
+                &format_args!("{}", self.usart1_tx_dma_rmp().bit()),
+            )
+            .field("adc_dma_rmp", &format_args!("{}", self.adc_dma_rmp().bit()))
+            .field("ir_src_sel", &format_args!("{}", self.ir_src_sel().bits()))
+            .field("ir_pol", &format_args!("{}", self.ir_pol().bit()))
+            .field("pa11_12_rmp", &format_args!("{}", self.pa11_12_rmp().bit()))
+            .field(
+                "mem_map_sel",
+                &format_args!("{}", self.mem_map_sel().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CFG1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - Memory address mapping selection bits"]
     #[inline(always)]

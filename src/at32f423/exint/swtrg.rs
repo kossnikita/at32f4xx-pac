@@ -229,6 +229,42 @@ impl R {
         SWT28_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SWTRG")
+            .field("swt0", &format_args!("{}", self.swt0().bit()))
+            .field("swt1", &format_args!("{}", self.swt1().bit()))
+            .field("swt2", &format_args!("{}", self.swt2().bit()))
+            .field("swt3", &format_args!("{}", self.swt3().bit()))
+            .field("swt4", &format_args!("{}", self.swt4().bit()))
+            .field("swt5", &format_args!("{}", self.swt5().bit()))
+            .field("swt6", &format_args!("{}", self.swt6().bit()))
+            .field("swt7", &format_args!("{}", self.swt7().bit()))
+            .field("swt8", &format_args!("{}", self.swt8().bit()))
+            .field("swt9", &format_args!("{}", self.swt9().bit()))
+            .field("swt10", &format_args!("{}", self.swt10().bit()))
+            .field("swt11", &format_args!("{}", self.swt11().bit()))
+            .field("swt12", &format_args!("{}", self.swt12().bit()))
+            .field("swt13", &format_args!("{}", self.swt13().bit()))
+            .field("swt14", &format_args!("{}", self.swt14().bit()))
+            .field("swt15", &format_args!("{}", self.swt15().bit()))
+            .field("swt16", &format_args!("{}", self.swt16().bit()))
+            .field("swt17", &format_args!("{}", self.swt17().bit()))
+            .field("swt18", &format_args!("{}", self.swt18().bit()))
+            .field("swt21", &format_args!("{}", self.swt21().bit()))
+            .field("swt22", &format_args!("{}", self.swt22().bit()))
+            .field("swt23", &format_args!("{}", self.swt23().bit()))
+            .field("swt25", &format_args!("{}", self.swt25().bit()))
+            .field("swt26", &format_args!("{}", self.swt26().bit()))
+            .field("swt28", &format_args!("{}", self.swt28().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SWTRG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Software triggle on line 0"]
     #[inline(always)]

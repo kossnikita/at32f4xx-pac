@@ -32,6 +32,24 @@ impl R {
         SLIB_RCNT_R::new(((self.bits >> 16) & 0x01ff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLIB_MISC_STS")
+            .field(
+                "slib_pwd_err",
+                &format_args!("{}", self.slib_pwd_err().bit()),
+            )
+            .field("slib_pwd_ok", &format_args!("{}", self.slib_pwd_ok().bit()))
+            .field("slib_ulkf", &format_args!("{}", self.slib_ulkf().bit()))
+            .field("slib_rcnt", &format_args!("{}", self.slib_rcnt().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SLIB_MISC_STS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

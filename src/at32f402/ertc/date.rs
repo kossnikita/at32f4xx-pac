@@ -187,6 +187,24 @@ impl R {
         YT_R::new(((self.bits >> 20) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DATE")
+            .field("yt", &format_args!("{}", self.yt().bits()))
+            .field("yu", &format_args!("{}", self.yu().bits()))
+            .field("wk", &format_args!("{}", self.wk().bits()))
+            .field("mt", &format_args!("{}", self.mt().bit()))
+            .field("mu", &format_args!("{}", self.mu().bits()))
+            .field("dt", &format_args!("{}", self.dt().bits()))
+            .field("du", &format_args!("{}", self.du().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Date units"]
     #[inline(always)]

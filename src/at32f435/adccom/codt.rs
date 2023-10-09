@@ -16,6 +16,19 @@ impl R {
         CODTH_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CODT")
+            .field("codth", &format_args!("{}", self.codth().bits()))
+            .field("codtl", &format_args!("{}", self.codtl().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CODT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Common Ordinary data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`codt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CODT_SPEC;
 impl crate::RegisterSpec for CODT_SPEC {

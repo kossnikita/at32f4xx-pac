@@ -112,6 +112,29 @@ impl R {
         STUPPKTRCVD_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPINT2")
+            .field("xferc", &format_args!("{}", self.xferc().bit()))
+            .field("eptdisd", &format_args!("{}", self.eptdisd().bit()))
+            .field("setup", &format_args!("{}", self.setup().bit()))
+            .field("outtepd", &format_args!("{}", self.outtepd().bit()))
+            .field("b2bstup", &format_args!("{}", self.b2bstup().bit()))
+            .field("outpkterr", &format_args!("{}", self.outpkterr().bit()))
+            .field("bnaintr", &format_args!("{}", self.bnaintr().bit()))
+            .field("pktdrpsts", &format_args!("{}", self.pktdrpsts().bit()))
+            .field("bbleerr", &format_args!("{}", self.bbleerr().bit()))
+            .field("nakintpt", &format_args!("{}", self.nakintpt().bit()))
+            .field("nyetintpt", &format_args!("{}", self.nyetintpt().bit()))
+            .field("stuppktrcvd", &format_args!("{}", self.stuppktrcvd().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DOEPINT2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]

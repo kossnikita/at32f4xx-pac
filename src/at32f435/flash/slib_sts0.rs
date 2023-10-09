@@ -11,6 +11,18 @@ impl R {
         SLIB_ENF_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLIB_STS0")
+            .field("slib_enf", &format_args!("{}", self.slib_enf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SLIB_STS0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

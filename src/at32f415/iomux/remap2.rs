@@ -43,6 +43,11 @@ where
         self.variant(CMP_MUX_AW::Mux2)
     }
 }
+impl core::fmt::Debug for crate::generic::Reg<REMAP2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 26:27 - CMP internal muxing"]
     #[inline(always)]

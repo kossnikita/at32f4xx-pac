@@ -466,6 +466,31 @@ impl R {
         OCTESEL_H_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field("octesel_h", &format_args!("{}", self.octesel_h().bit()))
+            .field("pctesel_h", &format_args!("{}", self.pctesel_h().bit()))
+            .field("ocswtrg", &format_args!("{}", self.ocswtrg().bit()))
+            .field("pcswtrg", &format_args!("{}", self.pcswtrg().bit()))
+            .field("octen", &format_args!("{}", self.octen().bit()))
+            .field("octesel_l", &format_args!("{}", self.octesel_l().bits()))
+            .field("pcten", &format_args!("{}", self.pcten().bit()))
+            .field("pctesel_l", &format_args!("{}", self.pctesel_l().bits()))
+            .field("dtalign", &format_args!("{}", self.dtalign().bit()))
+            .field("ocdmaen", &format_args!("{}", self.ocdmaen().bit()))
+            .field("adcalinit", &format_args!("{}", self.adcalinit().bit()))
+            .field("adcal", &format_args!("{}", self.adcal().bit()))
+            .field("rpen", &format_args!("{}", self.rpen().bit()))
+            .field("adcen", &format_args!("{}", self.adcen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - A/D converter enable"]
     #[inline(always)]

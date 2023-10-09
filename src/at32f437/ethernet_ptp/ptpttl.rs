@@ -13,6 +13,18 @@ impl R {
         TTLR_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PTPTTL")
+            .field("ttlr", &format_args!("{}", self.ttlr().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<PTPTTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - Target timestamp low register"]
     #[inline(always)]

@@ -162,6 +162,35 @@ impl R {
         CMP2WP_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRLSTS1")
+            .field("cmp1en", &format_args!("{}", self.cmp1en().bit()))
+            .field("cmp1is", &format_args!("{}", self.cmp1is().bit()))
+            .field("cmp1ssel", &format_args!("{}", self.cmp1ssel().bits()))
+            .field("cmp1invsel", &format_args!("{}", self.cmp1invsel().bits()))
+            .field("cmp1tag", &format_args!("{}", self.cmp1tag().bits()))
+            .field("cmp1p", &format_args!("{}", self.cmp1p().bit()))
+            .field("cmp1hyst", &format_args!("{}", self.cmp1hyst().bits()))
+            .field("cmp1value", &format_args!("{}", self.cmp1value().bit()))
+            .field("cmp1wp", &format_args!("{}", self.cmp1wp().bit()))
+            .field("cmp2en", &format_args!("{}", self.cmp2en().bit()))
+            .field("cmp2ssel", &format_args!("{}", self.cmp2ssel().bits()))
+            .field("cmp2invsel", &format_args!("{}", self.cmp2invsel().bits()))
+            .field("dcmpen", &format_args!("{}", self.dcmpen().bit()))
+            .field("cmp2tag", &format_args!("{}", self.cmp2tag().bits()))
+            .field("cmp2p", &format_args!("{}", self.cmp2p().bit()))
+            .field("cmp2hyst", &format_args!("{}", self.cmp2hyst().bits()))
+            .field("cmp2value", &format_args!("{}", self.cmp2value().bit()))
+            .field("cmp2wp", &format_args!("{}", self.cmp2wp().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRLSTS1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Comparator1 enable bit"]
     #[inline(always)]

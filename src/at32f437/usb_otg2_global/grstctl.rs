@@ -65,6 +65,24 @@ impl R {
         AHBIDLE_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GRSTCTL")
+            .field("csftrst", &format_args!("{}", self.csftrst().bit()))
+            .field("piusftrst", &format_args!("{}", self.piusftrst().bit()))
+            .field("frmcntrst", &format_args!("{}", self.frmcntrst().bit()))
+            .field("rxfflsh", &format_args!("{}", self.rxfflsh().bit()))
+            .field("txfflsh", &format_args!("{}", self.txfflsh().bit()))
+            .field("txfnum", &format_args!("{}", self.txfnum().bits()))
+            .field("ahbidle", &format_args!("{}", self.ahbidle().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GRSTCTL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Core soft reset"]
     #[inline(always)]

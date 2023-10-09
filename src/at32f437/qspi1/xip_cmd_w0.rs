@@ -40,6 +40,24 @@ impl R {
         XIPR_INSC_R::new(((self.bits >> 12) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("XIP_CMD_W0")
+            .field("xipr_dum2", &format_args!("{}", self.xipr_dum2().bits()))
+            .field(
+                "xipr_opmode",
+                &format_args!("{}", self.xipr_opmode().bits()),
+            )
+            .field("xipr_adrlen", &format_args!("{}", self.xipr_adrlen().bit()))
+            .field("xipr_insc", &format_args!("{}", self.xipr_insc().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<XIP_CMD_W0_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - XIP read second dummy cycle"]
     #[inline(always)]

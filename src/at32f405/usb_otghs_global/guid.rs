@@ -13,6 +13,18 @@ impl R {
         USERID_R::new(self.bits)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GUID")
+            .field("userid", &format_args!("{}", self.userid().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GUID_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:31 - Product ID field"]
     #[inline(always)]

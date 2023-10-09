@@ -76,6 +76,25 @@ impl R {
         TMR17_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB2EN")
+            .field("scfgcmp", &format_args!("{}", self.scfgcmp().bit()))
+            .field("adc", &format_args!("{}", self.adc().bit()))
+            .field("tmr1", &format_args!("{}", self.tmr1().bit()))
+            .field("spi1", &format_args!("{}", self.spi1().bit()))
+            .field("usart1", &format_args!("{}", self.usart1().bit()))
+            .field("tmr15", &format_args!("{}", self.tmr15().bit()))
+            .field("tmr16", &format_args!("{}", self.tmr16().bit()))
+            .field("tmr17", &format_args!("{}", self.tmr17().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB2EN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Syscfg and comparator clock enable"]
     #[inline(always)]

@@ -40,6 +40,21 @@ impl R {
         FMC_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MMCCTRL")
+            .field("rc", &format_args!("{}", self.rc().bit()))
+            .field("scr", &format_args!("{}", self.scr().bit()))
+            .field("rr", &format_args!("{}", self.rr().bit()))
+            .field("fmc", &format_args!("{}", self.fmc().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MMCCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Reset counter"]
     #[inline(always)]

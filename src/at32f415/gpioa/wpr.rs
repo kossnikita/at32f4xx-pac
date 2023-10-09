@@ -214,6 +214,34 @@ impl R {
         WPSEQ_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WPR")
+            .field("wpen0", &format_args!("{}", self.wpen0().bit()))
+            .field("wpen1", &format_args!("{}", self.wpen1().bit()))
+            .field("wpen2", &format_args!("{}", self.wpen2().bit()))
+            .field("wpen3", &format_args!("{}", self.wpen3().bit()))
+            .field("wpen4", &format_args!("{}", self.wpen4().bit()))
+            .field("wpen5", &format_args!("{}", self.wpen5().bit()))
+            .field("wpen6", &format_args!("{}", self.wpen6().bit()))
+            .field("wpen7", &format_args!("{}", self.wpen7().bit()))
+            .field("wpen8", &format_args!("{}", self.wpen8().bit()))
+            .field("wpen9", &format_args!("{}", self.wpen9().bit()))
+            .field("wpen10", &format_args!("{}", self.wpen10().bit()))
+            .field("wpen11", &format_args!("{}", self.wpen11().bit()))
+            .field("wpen12", &format_args!("{}", self.wpen12().bit()))
+            .field("wpen13", &format_args!("{}", self.wpen13().bit()))
+            .field("wpen14", &format_args!("{}", self.wpen14().bit()))
+            .field("wpen15", &format_args!("{}", self.wpen15().bit()))
+            .field("wpseq", &format_args!("{}", self.wpseq().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<WPR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Write protect enable [0-15]"]
     #[inline(always)]

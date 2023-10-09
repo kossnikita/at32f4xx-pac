@@ -209,6 +209,61 @@ impl R {
         WKUPINTMSK_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GINTMSK")
+            .field("modemismsk", &format_args!("{}", self.modemismsk().bit()))
+            .field("otgintmsk", &format_args!("{}", self.otgintmsk().bit()))
+            .field("sofmsk", &format_args!("{}", self.sofmsk().bit()))
+            .field("rxflvlmsk", &format_args!("{}", self.rxflvlmsk().bit()))
+            .field("nptxfempmsk", &format_args!("{}", self.nptxfempmsk().bit()))
+            .field(
+                "ginnakeffmsk",
+                &format_args!("{}", self.ginnakeffmsk().bit()),
+            )
+            .field(
+                "goutnakeffmsk",
+                &format_args!("{}", self.goutnakeffmsk().bit()),
+            )
+            .field("erlysuspmsk", &format_args!("{}", self.erlysuspmsk().bit()))
+            .field("usbsuspmsk", &format_args!("{}", self.usbsuspmsk().bit()))
+            .field("usbrstmsk", &format_args!("{}", self.usbrstmsk().bit()))
+            .field("enumdonemsk", &format_args!("{}", self.enumdonemsk().bit()))
+            .field(
+                "isooutdropmsk",
+                &format_args!("{}", self.isooutdropmsk().bit()),
+            )
+            .field("eopfmsk", &format_args!("{}", self.eopfmsk().bit()))
+            .field("ieptintmsk", &format_args!("{}", self.ieptintmsk().bit()))
+            .field("oeptintmsk", &format_args!("{}", self.oeptintmsk().bit()))
+            .field(
+                "incomisoinmsk",
+                &format_args!("{}", self.incomisoinmsk().bit()),
+            )
+            .field(
+                "incompip_incompisooutmsk",
+                &format_args!("{}", self.incompip_incompisooutmsk().bit()),
+            )
+            .field("prtintmsk", &format_args!("{}", self.prtintmsk().bit()))
+            .field("hchintmsk", &format_args!("{}", self.hchintmsk().bit()))
+            .field("ptxfempmsk", &format_args!("{}", self.ptxfempmsk().bit()))
+            .field(
+                "conidschgmsk",
+                &format_args!("{}", self.conidschgmsk().bit()),
+            )
+            .field(
+                "disconintmsk",
+                &format_args!("{}", self.disconintmsk().bit()),
+            )
+            .field("wkupintmsk", &format_args!("{}", self.wkupintmsk().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GINTMSK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 1 - Mode mismatch interrupt mask"]
     #[inline(always)]

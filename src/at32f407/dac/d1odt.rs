@@ -9,6 +9,18 @@ impl R {
         D1ODT_R::new((self.bits & 0x0fff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("D1ODT")
+            .field("d1odt", &format_args!("{}", self.d1odt().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<D1ODT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "DAC1 data output register (DAC_D1ODT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`d1odt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct D1ODT_SPEC;
 impl crate::RegisterSpec for D1ODT_SPEC {

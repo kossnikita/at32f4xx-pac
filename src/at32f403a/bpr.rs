@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct RegisterBlock {
     #[doc = "0x00..0x28 - Battery powered domain data register %s"]
     pub dt: [DT; 10],

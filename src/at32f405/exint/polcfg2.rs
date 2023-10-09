@@ -191,6 +191,40 @@ impl R {
         FP_R::new(((self.bits >> 22) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("POLCFG2")
+            .field("fp0", &format_args!("{}", self.fp0().bit()))
+            .field("fp1", &format_args!("{}", self.fp1().bit()))
+            .field("fp2", &format_args!("{}", self.fp2().bit()))
+            .field("fp3", &format_args!("{}", self.fp3().bit()))
+            .field("fp4", &format_args!("{}", self.fp4().bit()))
+            .field("fp5", &format_args!("{}", self.fp5().bit()))
+            .field("fp6", &format_args!("{}", self.fp6().bit()))
+            .field("fp7", &format_args!("{}", self.fp7().bit()))
+            .field("fp8", &format_args!("{}", self.fp8().bit()))
+            .field("fp9", &format_args!("{}", self.fp9().bit()))
+            .field("fp10", &format_args!("{}", self.fp10().bit()))
+            .field("fp11", &format_args!("{}", self.fp11().bit()))
+            .field("fp12", &format_args!("{}", self.fp12().bit()))
+            .field("fp13", &format_args!("{}", self.fp13().bit()))
+            .field("fp14", &format_args!("{}", self.fp14().bit()))
+            .field("fp15", &format_args!("{}", self.fp15().bit()))
+            .field("fp16", &format_args!("{}", self.fp16().bit()))
+            .field("fp17", &format_args!("{}", self.fp17().bit()))
+            .field("fp18", &format_args!("{}", self.fp18().bit()))
+            .field("fp19", &format_args!("{}", self.fp19().bit()))
+            .field("fp20", &format_args!("{}", self.fp20().bit()))
+            .field("fp21", &format_args!("{}", self.fp21().bit()))
+            .field("fp22", &format_args!("{}", self.fp22().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<POLCFG2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Falling polarity configuration bit on line [0-22]"]
     #[inline(always)]

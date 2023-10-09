@@ -94,6 +94,20 @@ impl R {
         TS_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TMC")
+            .field("ts", &format_args!("{}", self.ts().bits()))
+            .field("tsten", &format_args!("{}", self.tsten().bit()))
+            .field("dtbl", &format_args!("{}", self.dtbl().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TMC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Transmit mailbox data byte length"]
     #[inline(always)]

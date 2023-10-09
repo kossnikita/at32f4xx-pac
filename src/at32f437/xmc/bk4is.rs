@@ -65,6 +65,24 @@ impl R {
         FIFOE_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BK4IS")
+            .field("fifoe", &format_args!("{}", self.fifoe().bit()))
+            .field("feien", &format_args!("{}", self.feien().bit()))
+            .field("hlien", &format_args!("{}", self.hlien().bit()))
+            .field("reien", &format_args!("{}", self.reien().bit()))
+            .field("fes", &format_args!("{}", self.fes().bit()))
+            .field("hls", &format_args!("{}", self.hls().bit()))
+            .field("res", &format_args!("{}", self.res().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BK4IS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Rising edge capture status"]
     #[inline(always)]

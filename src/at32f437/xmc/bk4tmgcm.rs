@@ -40,6 +40,21 @@ impl R {
         CMDHIZT_R::new(((self.bits >> 24) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BK4TMGCM")
+            .field("cmdhizt", &format_args!("{}", self.cmdhizt().bits()))
+            .field("cmht", &format_args!("{}", self.cmht().bits()))
+            .field("cmwt", &format_args!("{}", self.cmwt().bits()))
+            .field("cmst", &format_args!("{}", self.cmst().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BK4TMGCM_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - Regular memory setup time"]
     #[inline(always)]

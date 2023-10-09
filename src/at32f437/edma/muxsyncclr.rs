@@ -76,6 +76,25 @@ impl R {
         SYNCOVFC8_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MUXSYNCCLR")
+            .field("syncovfc1", &format_args!("{}", self.syncovfc1().bit()))
+            .field("syncovfc2", &format_args!("{}", self.syncovfc2().bit()))
+            .field("syncovfc3", &format_args!("{}", self.syncovfc3().bit()))
+            .field("syncovfc4", &format_args!("{}", self.syncovfc4().bit()))
+            .field("syncovfc5", &format_args!("{}", self.syncovfc5().bit()))
+            .field("syncovfc6", &format_args!("{}", self.syncovfc6().bit()))
+            .field("syncovfc7", &format_args!("{}", self.syncovfc7().bit()))
+            .field("syncovfc8", &format_args!("{}", self.syncovfc8().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MUXSYNCCLR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]

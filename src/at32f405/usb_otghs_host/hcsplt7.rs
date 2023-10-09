@@ -49,6 +49,22 @@ impl R {
         SPLTENA_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCSPLT7")
+            .field("prtaddr", &format_args!("{}", self.prtaddr().bits()))
+            .field("hubaddr", &format_args!("{}", self.hubaddr().bits()))
+            .field("xactpos", &format_args!("{}", self.xactpos().bits()))
+            .field("compsplt", &format_args!("{}", self.compsplt().bit()))
+            .field("spltena", &format_args!("{}", self.spltena().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HCSPLT7_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:6 - Port Address"]
     #[inline(always)]

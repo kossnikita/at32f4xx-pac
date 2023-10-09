@@ -94,6 +94,36 @@ impl R {
         NAKMSK_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPMSK")
+            .field("xfercmsk", &format_args!("{}", self.xfercmsk().bit()))
+            .field("eptdismsk", &format_args!("{}", self.eptdismsk().bit()))
+            .field("ahberrmsk", &format_args!("{}", self.ahberrmsk().bit()))
+            .field("timeoutmsk", &format_args!("{}", self.timeoutmsk().bit()))
+            .field(
+                "intkntxfempmsk",
+                &format_args!("{}", self.intkntxfempmsk().bit()),
+            )
+            .field(
+                "intkneptmismsk",
+                &format_args!("{}", self.intkneptmismsk().bit()),
+            )
+            .field("ineptnakmsk", &format_args!("{}", self.ineptnakmsk().bit()))
+            .field(
+                "txfifoudrmsk",
+                &format_args!("{}", self.txfifoudrmsk().bit()),
+            )
+            .field("bnainmsk", &format_args!("{}", self.bnainmsk().bit()))
+            .field("nakmsk", &format_args!("{}", self.nakmsk().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DIEPMSK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]

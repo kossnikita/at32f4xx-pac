@@ -229,6 +229,42 @@ impl R {
         EVTEN28_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EVTEN")
+            .field("evten0", &format_args!("{}", self.evten0().bit()))
+            .field("evten1", &format_args!("{}", self.evten1().bit()))
+            .field("evten2", &format_args!("{}", self.evten2().bit()))
+            .field("evten3", &format_args!("{}", self.evten3().bit()))
+            .field("evten4", &format_args!("{}", self.evten4().bit()))
+            .field("evten5", &format_args!("{}", self.evten5().bit()))
+            .field("evten6", &format_args!("{}", self.evten6().bit()))
+            .field("evten7", &format_args!("{}", self.evten7().bit()))
+            .field("evten8", &format_args!("{}", self.evten8().bit()))
+            .field("evten9", &format_args!("{}", self.evten9().bit()))
+            .field("evten10", &format_args!("{}", self.evten10().bit()))
+            .field("evten11", &format_args!("{}", self.evten11().bit()))
+            .field("evten12", &format_args!("{}", self.evten12().bit()))
+            .field("evten13", &format_args!("{}", self.evten13().bit()))
+            .field("evten14", &format_args!("{}", self.evten14().bit()))
+            .field("evten15", &format_args!("{}", self.evten15().bit()))
+            .field("evten16", &format_args!("{}", self.evten16().bit()))
+            .field("evten17", &format_args!("{}", self.evten17().bit()))
+            .field("evten18", &format_args!("{}", self.evten18().bit()))
+            .field("evten21", &format_args!("{}", self.evten21().bit()))
+            .field("evten22", &format_args!("{}", self.evten22().bit()))
+            .field("evten23", &format_args!("{}", self.evten23().bit()))
+            .field("evten25", &format_args!("{}", self.evten25().bit()))
+            .field("evten26", &format_args!("{}", self.evten26().bit()))
+            .field("evten28", &format_args!("{}", self.evten28().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<EVTEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Event enable or disable on line 0"]
     #[inline(always)]

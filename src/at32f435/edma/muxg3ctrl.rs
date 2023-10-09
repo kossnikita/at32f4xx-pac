@@ -49,6 +49,22 @@ impl R {
         GREQCNT_R::new(((self.bits >> 19) & 0x1f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MUXG3CTRL")
+            .field("sigsel", &format_args!("{}", self.sigsel().bits()))
+            .field("trgovien", &format_args!("{}", self.trgovien().bit()))
+            .field("gen", &format_args!("{}", self.gen().bit()))
+            .field("gpol", &format_args!("{}", self.gpol().bits()))
+            .field("greqcnt", &format_args!("{}", self.greqcnt().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MUXG3CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:4 - Signal select"]
     #[inline(always)]

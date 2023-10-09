@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct CHANNEL {
     #[doc = "0x00 - DMA channel %s configuration register"]
     pub ctrl: CTRL,

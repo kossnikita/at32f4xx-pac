@@ -139,6 +139,32 @@ impl R {
         LCDS_R::new(((self.bits >> 20) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("lcds", &format_args!("{}", self.lcds().bit()))
+            .field("lcdc", &format_args!("{}", self.lcdc().bit()))
+            .field("pcds", &format_args!("{}", self.pcds().bit()))
+            .field("pcdc", &format_args!("{}", self.pcdc().bits()))
+            .field("ena", &format_args!("{}", self.ena().bit()))
+            .field("pdl", &format_args!("{}", self.pdl().bits()))
+            .field("bfrc", &format_args!("{}", self.bfrc().bits()))
+            .field("vsp", &format_args!("{}", self.vsp().bit()))
+            .field("hsp", &format_args!("{}", self.hsp().bit()))
+            .field("ckp", &format_args!("{}", self.ckp().bit()))
+            .field("sm", &format_args!("{}", self.sm().bit()))
+            .field("jpeg", &format_args!("{}", self.jpeg().bit()))
+            .field("crp", &format_args!("{}", self.crp().bit()))
+            .field("cfm", &format_args!("{}", self.cfm().bit()))
+            .field("cap", &format_args!("{}", self.cap().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Capture function enable"]
     #[inline(always)]

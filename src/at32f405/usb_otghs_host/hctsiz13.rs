@@ -40,6 +40,21 @@ impl R {
         DOPNG_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("HCTSIZ13")
+            .field("xfersize", &format_args!("{}", self.xfersize().bits()))
+            .field("pktcnt", &format_args!("{}", self.pktcnt().bits()))
+            .field("pid", &format_args!("{}", self.pid().bits()))
+            .field("dopng", &format_args!("{}", self.dopng().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<HCTSIZ13_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:18 - Transfer size"]
     #[inline(always)]

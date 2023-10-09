@@ -829,6 +829,31 @@ overflow interrupt enable"]
         EDZIEN_R::new(((self.bits >> 17) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTEN")
+            .field("edzien", &format_args!("{}", self.edzien().bit()))
+            .field("qdzien", &format_args!("{}", self.qdzien().bit()))
+            .field("eoien", &format_args!("{}", self.eoien().bit()))
+            .field("etrien", &format_args!("{}", self.etrien().bit()))
+            .field("boien", &format_args!("{}", self.boien().bit()))
+            .field("epien", &format_args!("{}", self.epien().bit()))
+            .field("eaien", &format_args!("{}", self.eaien().bit()))
+            .field("rf0oien", &format_args!("{}", self.rf0oien().bit()))
+            .field("rf1oien", &format_args!("{}", self.rf1oien().bit()))
+            .field("rf0fien", &format_args!("{}", self.rf0fien().bit()))
+            .field("rf1fien", &format_args!("{}", self.rf1fien().bit()))
+            .field("rf0mien", &format_args!("{}", self.rf0mien().bit()))
+            .field("rf1mien", &format_args!("{}", self.rf1mien().bit()))
+            .field("tcien", &format_args!("{}", self.tcien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<INTEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transmission complete interrupt enable"]
     #[inline(always)]

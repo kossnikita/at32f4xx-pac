@@ -565,6 +565,25 @@ impl R {
         MSEL_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2SCTRL")
+            .field("msel", &format_args!("{}", self.msel().bit()))
+            .field("en", &format_args!("{}", self.en().bit()))
+            .field("opersel", &format_args!("{}", self.opersel().bits()))
+            .field("pcmfssel", &format_args!("{}", self.pcmfssel().bit()))
+            .field("stdsel", &format_args!("{}", self.stdsel().bits()))
+            .field("clkpol", &format_args!("{}", self.clkpol().bit()))
+            .field("dbn", &format_args!("{}", self.dbn().bits()))
+            .field("cbn", &format_args!("{}", self.cbn().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<I2SCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - I2S channel bit num"]
     #[inline(always)]

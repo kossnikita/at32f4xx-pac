@@ -6,6 +6,11 @@ pub type RTODFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 pub type CMDFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `LPWUFC` writer - Low power wake up flag clear"]
 pub type LPWUFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+impl core::fmt::Debug for crate::generic::Reg<IFC_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bit 11 - Receiver time out detection flag clear"]
     #[inline(always)]

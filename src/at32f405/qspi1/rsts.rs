@@ -9,6 +9,18 @@ impl R {
         SPISTS_R::new((self.bits & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("RSTS")
+            .field("spists", &format_args!("{}", self.spists().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<RSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "SPI read status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RSTS_SPEC;
 impl crate::RegisterSpec for RSTS_SPEC {

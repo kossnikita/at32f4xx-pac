@@ -58,6 +58,23 @@ impl R {
         TMR11_PAUSE_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB2_PAUSE")
+            .field("tmr1_pause", &format_args!("{}", self.tmr1_pause().bit()))
+            .field("tmr8_pause", &format_args!("{}", self.tmr8_pause().bit()))
+            .field("tmr20_pause", &format_args!("{}", self.tmr20_pause().bit()))
+            .field("tmr9_pause", &format_args!("{}", self.tmr9_pause().bit()))
+            .field("tmr10_pause", &format_args!("{}", self.tmr10_pause().bit()))
+            .field("tmr11_pause", &format_args!("{}", self.tmr11_pause().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<APB2_PAUSE_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - TMR1_PAUSE"]
     #[inline(always)]

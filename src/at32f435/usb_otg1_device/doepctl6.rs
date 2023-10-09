@@ -85,6 +85,26 @@ impl R {
         EPTENA_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DOEPCTL6")
+            .field("mps", &format_args!("{}", self.mps().bits()))
+            .field("usbacept", &format_args!("{}", self.usbacept().bit()))
+            .field("dpid", &format_args!("{}", self.dpid().bit()))
+            .field("naksts", &format_args!("{}", self.naksts().bit()))
+            .field("eptype", &format_args!("{}", self.eptype().bits()))
+            .field("snp", &format_args!("{}", self.snp().bit()))
+            .field("stall", &format_args!("{}", self.stall().bit()))
+            .field("eptdis", &format_args!("{}", self.eptdis().bit()))
+            .field("eptena", &format_args!("{}", self.eptena().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DOEPCTL6_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]

@@ -142,6 +142,37 @@ impl R {
         FDTF8_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("STS2")
+            .field("fdtf8", &format_args!("{}", self.fdtf8().bit()))
+            .field("hdtf8", &format_args!("{}", self.hdtf8().bit()))
+            .field("dterrf8", &format_args!("{}", self.dterrf8().bit()))
+            .field("dmerrf8", &format_args!("{}", self.dmerrf8().bit()))
+            .field("ferrf8", &format_args!("{}", self.ferrf8().bit()))
+            .field("fdtf7", &format_args!("{}", self.fdtf7().bit()))
+            .field("hdtf7", &format_args!("{}", self.hdtf7().bit()))
+            .field("dterrf7", &format_args!("{}", self.dterrf7().bit()))
+            .field("dmerrf7", &format_args!("{}", self.dmerrf7().bit()))
+            .field("ferrf7", &format_args!("{}", self.ferrf7().bit()))
+            .field("fdtf6", &format_args!("{}", self.fdtf6().bit()))
+            .field("hdtf6", &format_args!("{}", self.hdtf6().bit()))
+            .field("dterrf6", &format_args!("{}", self.dterrf6().bit()))
+            .field("dmerrf6", &format_args!("{}", self.dmerrf6().bit()))
+            .field("ferrf6", &format_args!("{}", self.ferrf6().bit()))
+            .field("fdtf5", &format_args!("{}", self.fdtf5().bit()))
+            .field("hdtf5", &format_args!("{}", self.hdtf5().bit()))
+            .field("dterrf5", &format_args!("{}", self.dterrf5().bit()))
+            .field("dmerrf5", &format_args!("{}", self.dmerrf5().bit()))
+            .field("ferrf5", &format_args!("{}", self.ferrf5().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STS2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Interrupt status register2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS2_SPEC;
 impl crate::RegisterSpec for STS2_SPEC {

@@ -200,6 +200,20 @@ impl R {
         EVOEN_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EVTOUT")
+            .field("selpin", &format_args!("{}", self.selpin().bits()))
+            .field("selport", &format_args!("{}", self.selport().bits()))
+            .field("evoen", &format_args!("{}", self.evoen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<EVTOUT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Select pin"]
     #[inline(always)]

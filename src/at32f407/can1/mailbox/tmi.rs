@@ -203,6 +203,22 @@ impl R {
         SID_R::new(((self.bits >> 21) & 0x07ff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TMI")
+            .field("sid", &format_args!("{}", self.sid().bits()))
+            .field("eid", &format_args!("{}", self.eid().bits()))
+            .field("idsel", &format_args!("{}", self.idsel().bit()))
+            .field("frsel", &format_args!("{}", self.frsel().bit()))
+            .field("sr", &format_args!("{}", self.sr().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TMI_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Transmit mailbox send request"]
     #[inline(always)]

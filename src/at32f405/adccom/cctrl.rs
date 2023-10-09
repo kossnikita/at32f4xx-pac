@@ -13,6 +13,18 @@ impl R {
         ADCDIV_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CCTRL")
+            .field("adcdiv", &format_args!("{}", self.adcdiv().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CCTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 16:19 - ADC division"]
     #[inline(always)]

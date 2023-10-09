@@ -13,6 +13,21 @@ impl R {
         EXT_SPIM_EN_MUX_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP2")
+            .field(
+                "ext_spim_en_mux",
+                &format_args!("{}", self.ext_spim_en_mux().bit()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 21 - SPIM enable"]
     #[inline(always)]

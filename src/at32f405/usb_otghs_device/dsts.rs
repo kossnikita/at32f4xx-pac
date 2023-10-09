@@ -37,6 +37,22 @@ impl R {
         DEVLNSTS_R::new(((self.bits >> 22) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DSTS")
+            .field("suspsts", &format_args!("{}", self.suspsts().bit()))
+            .field("enumspd", &format_args!("{}", self.enumspd().bits()))
+            .field("eticerr", &format_args!("{}", self.eticerr().bit()))
+            .field("soffn", &format_args!("{}", self.soffn().bits()))
+            .field("devlnsts", &format_args!("{}", self.devlnsts().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "OTGHS device status register (OTGHS_DSTS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DSTS_SPEC;
 impl crate::RegisterSpec for DSTS_SPEC {

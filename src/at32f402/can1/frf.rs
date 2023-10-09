@@ -132,6 +132,31 @@ impl R {
         SEL_R::new(((self.bits >> 13) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FRF")
+            .field("sel0", &format_args!("{}", self.sel0().bit()))
+            .field("sel1", &format_args!("{}", self.sel1().bit()))
+            .field("sel2", &format_args!("{}", self.sel2().bit()))
+            .field("sel3", &format_args!("{}", self.sel3().bit()))
+            .field("sel4", &format_args!("{}", self.sel4().bit()))
+            .field("sel5", &format_args!("{}", self.sel5().bit()))
+            .field("sel6", &format_args!("{}", self.sel6().bit()))
+            .field("sel7", &format_args!("{}", self.sel7().bit()))
+            .field("sel8", &format_args!("{}", self.sel8().bit()))
+            .field("sel9", &format_args!("{}", self.sel9().bit()))
+            .field("sel10", &format_args!("{}", self.sel10().bit()))
+            .field("sel11", &format_args!("{}", self.sel11().bit()))
+            .field("sel12", &format_args!("{}", self.sel12().bit()))
+            .field("sel13", &format_args!("{}", self.sel13().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<FRF_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Filter relation FIFO select"]
     #[inline(always)]

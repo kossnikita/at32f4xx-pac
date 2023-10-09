@@ -16,6 +16,19 @@ impl R {
         SER_ID_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SER_ID")
+            .field("rev_id", &format_args!("{}", self.rev_id().bits()))
+            .field("ser_id", &format_args!("{}", self.ser_id().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SER_ID_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "SERIES ID\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ser_id::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SER_ID_SPEC;
 impl crate::RegisterSpec for SER_ID_SPEC {

@@ -56,6 +56,23 @@ impl R {
         CFGF_R::new(((self.bits >> 5) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRLL")
+            .field("tsf", &format_args!("{}", self.tsf().bit()))
+            .field("taf", &format_args!("{}", self.taf().bit()))
+            .field("ovff", &format_args!("{}", self.ovff().bit()))
+            .field("updf", &format_args!("{}", self.updf().bit()))
+            .field("cfgen", &format_args!("{}", self.cfgen().bit()))
+            .field("cfgf", &format_args!("{}", self.cfgf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRLL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Time second flag"]
     #[inline(always)]

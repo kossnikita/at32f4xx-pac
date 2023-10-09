@@ -368,6 +368,33 @@ impl R {
         TMR3_CH1_CMP_GMUX_R::new(((self.bits >> 6) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP8")
+            .field(
+                "tmr3_ch1_cmp_gmux",
+                &format_args!("{}", self.tmr3_ch1_cmp_gmux().bits()),
+            )
+            .field(
+                "tmr2_ch4_cmp_gmux",
+                &format_args!("{}", self.tmr2_ch4_cmp_gmux().bits()),
+            )
+            .field(
+                "tmr1_ch1_cmp_gmux",
+                &format_args!("{}", self.tmr1_ch1_cmp_gmux().bits()),
+            )
+            .field(
+                "tmr1_bk1_cmp_gmux",
+                &format_args!("{}", self.tmr1_bk1_cmp_gmux().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP8_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:1 - TMR1 BK1 CMP muxing"]
     #[inline(always)]

@@ -961,6 +961,37 @@ impl R {
         DBN1_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL1")
+            .field("dbn1", &format_args!("{}", self.dbn1().bit()))
+            .field("rtoden", &format_args!("{}", self.rtoden().bit()))
+            .field("retodie", &format_args!("{}", self.retodie().bit()))
+            .field("tsdt", &format_args!("{}", self.tsdt().bits()))
+            .field("tcdt", &format_args!("{}", self.tcdt().bits()))
+            .field("cmdie", &format_args!("{}", self.cmdie().bit()))
+            .field("uen", &format_args!("{}", self.uen().bit()))
+            .field("dbn0", &format_args!("{}", self.dbn0().bit()))
+            .field("wum", &format_args!("{}", self.wum().bit()))
+            .field("pen", &format_args!("{}", self.pen().bit()))
+            .field("psel", &format_args!("{}", self.psel().bit()))
+            .field("perrien", &format_args!("{}", self.perrien().bit()))
+            .field("tdbeien", &format_args!("{}", self.tdbeien().bit()))
+            .field("tdcien", &format_args!("{}", self.tdcien().bit()))
+            .field("rdbfien", &format_args!("{}", self.rdbfien().bit()))
+            .field("idleien", &format_args!("{}", self.idleien().bit()))
+            .field("ten", &format_args!("{}", self.ten().bit()))
+            .field("ren", &format_args!("{}", self.ren().bit()))
+            .field("rm", &format_args!("{}", self.rm().bit()))
+            .field("sbf", &format_args!("{}", self.sbf().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Send break frame"]
     #[inline(always)]

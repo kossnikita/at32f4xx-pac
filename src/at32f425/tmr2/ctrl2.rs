@@ -262,6 +262,20 @@ impl R {
         C1INSEL_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL2")
+            .field("c1insel", &format_args!("{}", self.c1insel().bit()))
+            .field("ptos", &format_args!("{}", self.ptos().bits()))
+            .field("drs", &format_args!("{}", self.drs().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 3 - DMA request source"]
     #[inline(always)]

@@ -216,6 +216,45 @@ impl R {
         EN_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("FACFG")
+            .field("en0", &format_args!("{}", self.en0().bit()))
+            .field("en1", &format_args!("{}", self.en1().bit()))
+            .field("en2", &format_args!("{}", self.en2().bit()))
+            .field("en3", &format_args!("{}", self.en3().bit()))
+            .field("en4", &format_args!("{}", self.en4().bit()))
+            .field("en5", &format_args!("{}", self.en5().bit()))
+            .field("en6", &format_args!("{}", self.en6().bit()))
+            .field("en7", &format_args!("{}", self.en7().bit()))
+            .field("en8", &format_args!("{}", self.en8().bit()))
+            .field("en9", &format_args!("{}", self.en9().bit()))
+            .field("en10", &format_args!("{}", self.en10().bit()))
+            .field("en11", &format_args!("{}", self.en11().bit()))
+            .field("en12", &format_args!("{}", self.en12().bit()))
+            .field("en13", &format_args!("{}", self.en13().bit()))
+            .field("en14", &format_args!("{}", self.en14().bit()))
+            .field("en15", &format_args!("{}", self.en15().bit()))
+            .field("en16", &format_args!("{}", self.en16().bit()))
+            .field("en17", &format_args!("{}", self.en17().bit()))
+            .field("en18", &format_args!("{}", self.en18().bit()))
+            .field("en19", &format_args!("{}", self.en19().bit()))
+            .field("en20", &format_args!("{}", self.en20().bit()))
+            .field("en21", &format_args!("{}", self.en21().bit()))
+            .field("en22", &format_args!("{}", self.en22().bit()))
+            .field("en23", &format_args!("{}", self.en23().bit()))
+            .field("en24", &format_args!("{}", self.en24().bit()))
+            .field("en25", &format_args!("{}", self.en25().bit()))
+            .field("en26", &format_args!("{}", self.en26().bit()))
+            .field("en27", &format_args!("{}", self.en27().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<FACFG_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Filter activate enable"]
     #[inline(always)]

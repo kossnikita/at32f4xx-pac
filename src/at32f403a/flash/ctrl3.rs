@@ -67,6 +67,24 @@ impl R {
         ODFIE_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL3")
+            .field("fprgm", &format_args!("{}", self.fprgm().bit()))
+            .field("secers", &format_args!("{}", self.secers().bit()))
+            .field("chpers", &format_args!("{}", self.chpers().bit()))
+            .field("erstr", &format_args!("{}", self.erstr().bit()))
+            .field("oplk", &format_args!("{}", self.oplk().bit()))
+            .field("errie", &format_args!("{}", self.errie().bit()))
+            .field("odfie", &format_args!("{}", self.odfie().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]

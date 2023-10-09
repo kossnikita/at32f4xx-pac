@@ -42,6 +42,22 @@ impl R {
         OCLEN_R::new(((self.bits >> 20) & 0x1f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("OSQ1")
+            .field("oclen", &format_args!("{}", self.oclen().bits()))
+            .field("osn13", &format_args!("{}", self.osn13().bits()))
+            .field("osn14", &format_args!("{}", self.osn14().bits()))
+            .field("osn15", &format_args!("{}", self.osn15().bits()))
+            .field("osn16", &format_args!("{}", self.osn16().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<OSQ1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Number of [13-16]th conversion in ordinary sequence"]
     #[inline(always)]

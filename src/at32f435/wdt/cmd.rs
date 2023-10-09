@@ -43,6 +43,11 @@ where
         self.variant(CMD_AW::Enable)
     }
 }
+impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - Command register"]
     #[inline(always)]

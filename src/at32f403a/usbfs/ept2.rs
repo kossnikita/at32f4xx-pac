@@ -94,6 +94,27 @@ impl R {
         RXTC_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("EPT2")
+            .field("eptaddr", &format_args!("{}", self.eptaddr().bits()))
+            .field("txsts", &format_args!("{}", self.txsts().bits()))
+            .field("txdts", &format_args!("{}", self.txdts().bit()))
+            .field("txtc", &format_args!("{}", self.txtc().bit()))
+            .field("exf", &format_args!("{}", self.exf().bit()))
+            .field("trans_type", &format_args!("{}", self.trans_type().bits()))
+            .field("setuptc", &format_args!("{}", self.setuptc().bit()))
+            .field("rxsts", &format_args!("{}", self.rxsts().bits()))
+            .field("rxdts", &format_args!("{}", self.rxdts().bit()))
+            .field("rxtc", &format_args!("{}", self.rxtc().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<EPT2_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:3 - Endpoint address"]
     #[inline(always)]

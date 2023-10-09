@@ -103,6 +103,28 @@ impl R {
         DMA2LP_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBLPEN1")
+            .field("gpioalp", &format_args!("{}", self.gpioalp().bit()))
+            .field("gpioblp", &format_args!("{}", self.gpioblp().bit()))
+            .field("gpioclp", &format_args!("{}", self.gpioclp().bit()))
+            .field("gpiodlp", &format_args!("{}", self.gpiodlp().bit()))
+            .field("gpioelp", &format_args!("{}", self.gpioelp().bit()))
+            .field("gpioflp", &format_args!("{}", self.gpioflp().bit()))
+            .field("crclp", &format_args!("{}", self.crclp().bit()))
+            .field("flashlp", &format_args!("{}", self.flashlp().bit()))
+            .field("sramlp", &format_args!("{}", self.sramlp().bit()))
+            .field("dma1lp", &format_args!("{}", self.dma1lp().bit()))
+            .field("dma2lp", &format_args!("{}", self.dma2lp().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBLPEN1_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - IO A clock enable during sleep mode"]
     #[inline(always)]

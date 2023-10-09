@@ -22,6 +22,19 @@ impl R {
         ETV_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MACVLT")
+            .field("vti", &format_args!("{}", self.vti().bits()))
+            .field("etv", &format_args!("{}", self.etv().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<MACVLT_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - VLAN tag identifier (for receive frames)"]
     #[inline(always)]

@@ -40,6 +40,21 @@ impl R {
         SDIO2_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("AHBEN3")
+            .field("xmc", &format_args!("{}", self.xmc().bit()))
+            .field("qspi1", &format_args!("{}", self.qspi1().bit()))
+            .field("qspi2", &format_args!("{}", self.qspi2().bit()))
+            .field("sdio2", &format_args!("{}", self.sdio2().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<AHBEN3_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - XMC clock enable"]
     #[inline(always)]

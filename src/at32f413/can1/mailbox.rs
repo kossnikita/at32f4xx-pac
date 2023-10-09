@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct MAILBOX {
     #[doc = "0x00 - Transmit mailbox identifier register"]
     pub tmi: TMI,

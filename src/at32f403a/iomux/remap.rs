@@ -220,6 +220,59 @@ impl R {
         SPI1_MUX1_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("REMAP")
+            .field("spi1_mux0", &format_args!("{}", self.spi1_mux0().bit()))
+            .field("i2c1_mux", &format_args!("{}", self.i2c1_mux().bit()))
+            .field("usart1_mux", &format_args!("{}", self.usart1_mux().bit()))
+            .field("usart2_mux", &format_args!("{}", self.usart2_mux().bit()))
+            .field("usart3_mux", &format_args!("{}", self.usart3_mux().bits()))
+            .field("tmr1_mux", &format_args!("{}", self.tmr1_mux().bits()))
+            .field("tmr2_mux", &format_args!("{}", self.tmr2_mux().bits()))
+            .field("tmr3_mux", &format_args!("{}", self.tmr3_mux().bits()))
+            .field("tmr4_mux", &format_args!("{}", self.tmr4_mux().bit()))
+            .field("can_mux", &format_args!("{}", self.can_mux().bits()))
+            .field("pd01_mux", &format_args!("{}", self.pd01_mux().bit()))
+            .field("tmr5ch4_mux", &format_args!("{}", self.tmr5ch4_mux().bit()))
+            .field(
+                "adc1_etp_mux",
+                &format_args!("{}", self.adc1_etp_mux().bit()),
+            )
+            .field(
+                "adc1_eto_mux",
+                &format_args!("{}", self.adc1_eto_mux().bit()),
+            )
+            .field(
+                "adc2_etp_mux",
+                &format_args!("{}", self.adc2_etp_mux().bit()),
+            )
+            .field(
+                "adc2_eto_mux",
+                &format_args!("{}", self.adc2_eto_mux().bit()),
+            )
+            .field("emac_mux", &format_args!("{}", self.emac_mux().bit()))
+            .field("can2_mux", &format_args!("{}", self.can2_mux().bit()))
+            .field(
+                "mii_rmii_sel_mux",
+                &format_args!("{}", self.mii_rmii_sel_mux().bit()),
+            )
+            .field("swjtag_mux", &format_args!("{}", self.swjtag_mux().bits()))
+            .field("spi3_mux", &format_args!("{}", self.spi3_mux().bit()))
+            .field(
+                "tmr2itr1_mux",
+                &format_args!("{}", self.tmr2itr1_mux().bit()),
+            )
+            .field("ptp_pps_mux", &format_args!("{}", self.ptp_pps_mux().bit()))
+            .field("spi1_mux1", &format_args!("{}", self.spi1_mux1().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<REMAP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - SPI1 muxing bit0"]
     #[inline(always)]

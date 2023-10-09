@@ -13,6 +13,21 @@ impl R {
         INEPTXFEMSK_R::new((self.bits & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DIEPEMPMSK")
+            .field(
+                "ineptxfemsk",
+                &format_args!("{}", self.ineptxfemsk().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DIEPEMPMSK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - IN EP Tx FIFO empty interrupt mask bits"]
     #[inline(always)]

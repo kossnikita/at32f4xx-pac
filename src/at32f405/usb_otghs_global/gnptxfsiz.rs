@@ -22,6 +22,22 @@ impl R {
         NPTXFDEP_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("GNPTXFSIZ")
+            .field(
+                "nptxfstaddr",
+                &format_args!("{}", self.nptxfstaddr().bits()),
+            )
+            .field("nptxfdep", &format_args!("{}", self.nptxfdep().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GNPTXFSIZ_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:15 - Non-periodic Transmit RAM Start address"]
     #[inline(always)]

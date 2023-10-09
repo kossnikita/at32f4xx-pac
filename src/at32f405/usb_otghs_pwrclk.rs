@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct RegisterBlock {
     #[doc = "0x00 - OTGHS power and clock gating control register (OTGHS_PCGCCTL)"]
     pub pcgcctl: PCGCCTL,

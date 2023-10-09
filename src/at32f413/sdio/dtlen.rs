@@ -13,6 +13,18 @@ impl R {
         DTLEN_R::new(self.bits & 0x01ff_ffff)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("DTLEN")
+            .field("dtlen", &format_args!("{}", self.dtlen().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<DTLEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:24 - Data length value"]
     #[inline(always)]

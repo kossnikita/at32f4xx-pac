@@ -76,6 +76,25 @@ impl R {
         KEYEN_R::new(((self.bits >> 21) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("clkdiv", &format_args!("{}", self.clkdiv().bits()))
+            .field("sckmode", &format_args!("{}", self.sckmode().bit()))
+            .field("xipidle", &format_args!("{}", self.xipidle().bit()))
+            .field("abort", &format_args!("{}", self.abort().bit()))
+            .field("busy", &format_args!("{}", self.busy().bits()))
+            .field("xiprcmdf", &format_args!("{}", self.xiprcmdf().bit()))
+            .field("xipsel", &format_args!("{}", self.xipsel().bit()))
+            .field("keyen", &format_args!("{}", self.keyen().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:2 - SPI clock divider"]
     #[inline(always)]

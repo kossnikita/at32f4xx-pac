@@ -9,6 +9,18 @@ impl R {
         WIN_R::new((self.bits & 0x0fff) as u16)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("WIN")
+            .field("win", &format_args!("{}", self.win().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<WIN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Window register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`win::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WIN_SPEC;
 impl crate::RegisterSpec for WIN_SPEC {

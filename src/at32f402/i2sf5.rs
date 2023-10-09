@@ -1,5 +1,6 @@
 #[doc = r"Register block"]
 #[repr(C)]
+#[derive(Debug)]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x04],
     #[doc = "0x04 - control register 2"]

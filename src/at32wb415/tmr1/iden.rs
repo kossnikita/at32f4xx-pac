@@ -694,6 +694,32 @@ DMA request enable"]
         TDEN_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IDEN")
+            .field("tden", &format_args!("{}", self.tden().bit()))
+            .field("hallde", &format_args!("{}", self.hallde().bit()))
+            .field("c1den", &format_args!("{}", self.c1den().bit()))
+            .field("c2den", &format_args!("{}", self.c2den().bit()))
+            .field("c3den", &format_args!("{}", self.c3den().bit()))
+            .field("c4den", &format_args!("{}", self.c4den().bit()))
+            .field("ovfden", &format_args!("{}", self.ovfden().bit()))
+            .field("brkie", &format_args!("{}", self.brkie().bit()))
+            .field("tien", &format_args!("{}", self.tien().bit()))
+            .field("hallien", &format_args!("{}", self.hallien().bit()))
+            .field("c1ien", &format_args!("{}", self.c1ien().bit()))
+            .field("c2ien", &format_args!("{}", self.c2ien().bit()))
+            .field("c3ien", &format_args!("{}", self.c3ien().bit()))
+            .field("c4ien", &format_args!("{}", self.c4ien().bit()))
+            .field("ovfien", &format_args!("{}", self.ovfien().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<IDEN_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]

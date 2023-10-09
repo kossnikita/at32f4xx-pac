@@ -13,6 +13,18 @@ impl R {
         FCONTR_EN_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CONTR")
+            .field("fcontr_en", &format_args!("{}", self.fcontr_en().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CONTR_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 31 - Flash continue read enable"]
     #[inline(always)]

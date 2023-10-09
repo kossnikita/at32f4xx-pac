@@ -530,6 +530,26 @@ impl R {
         BKF_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("BRK")
+            .field("bkf", &format_args!("{}", self.bkf().bits()))
+            .field("oen", &format_args!("{}", self.oen().bit()))
+            .field("aoen", &format_args!("{}", self.aoen().bit()))
+            .field("brkv", &format_args!("{}", self.brkv().bit()))
+            .field("brken", &format_args!("{}", self.brken().bit()))
+            .field("fcsoen", &format_args!("{}", self.fcsoen().bit()))
+            .field("fcsodis", &format_args!("{}", self.fcsodis().bit()))
+            .field("wpc", &format_args!("{}", self.wpc().bits()))
+            .field("dtc", &format_args!("{}", self.dtc().bits()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<BRK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 0:7 - Dead-time configuration"]
     #[inline(always)]

@@ -13,6 +13,21 @@ impl R {
         TMR2_CH1_IRMP_R::new(((self.bits >> 10) & 3) as u8)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("TMR2_RMP")
+            .field(
+                "tmr2_ch1_irmp",
+                &format_args!("{}", self.tmr2_ch1_irmp().bits()),
+            )
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<TMR2_RMP_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bits 10:11 - TMR2 channel 1 input remap"]
     #[inline(always)]

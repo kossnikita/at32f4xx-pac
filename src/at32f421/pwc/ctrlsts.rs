@@ -61,6 +61,24 @@ impl R {
         SWPEN7_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRLSTS")
+            .field("swef", &format_args!("{}", self.swef().bit()))
+            .field("sef", &format_args!("{}", self.sef().bit()))
+            .field("pvmof", &format_args!("{}", self.pvmof().bit()))
+            .field("swpen1", &format_args!("{}", self.swpen1().bit()))
+            .field("swpen2", &format_args!("{}", self.swpen2().bit()))
+            .field("swpen6", &format_args!("{}", self.swpen6().bit()))
+            .field("swpen7", &format_args!("{}", self.swpen7().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRLSTS_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 8 - Standby wake-up pin1 enable"]
     #[inline(always)]

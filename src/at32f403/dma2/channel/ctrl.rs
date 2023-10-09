@@ -882,6 +882,29 @@ impl R {
         M2M_R::new(((self.bits >> 14) & 1) != 0)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CTRL")
+            .field("chen", &format_args!("{}", self.chen().bit()))
+            .field("fdtien", &format_args!("{}", self.fdtien().bit()))
+            .field("hdtien", &format_args!("{}", self.hdtien().bit()))
+            .field("dterrien", &format_args!("{}", self.dterrien().bit()))
+            .field("dtd", &format_args!("{}", self.dtd().bit()))
+            .field("lm", &format_args!("{}", self.lm().bit()))
+            .field("pincm", &format_args!("{}", self.pincm().bit()))
+            .field("mincm", &format_args!("{}", self.mincm().bit()))
+            .field("pwidth", &format_args!("{}", self.pwidth().bits()))
+            .field("mwidth", &format_args!("{}", self.mwidth().bits()))
+            .field("chpl", &format_args!("{}", self.chpl().bits()))
+            .field("m2m", &format_args!("{}", self.m2m().bit()))
+            .finish()
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Bit 0 - Channel enable"]
     #[inline(always)]
