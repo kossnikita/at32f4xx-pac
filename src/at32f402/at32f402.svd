@@ -9796,7 +9796,7 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <writeConstraint>
@@ -10281,7 +10281,7 @@
           <displayName>C5DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x74</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <writeConstraint>
@@ -13928,7 +13928,7 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <writeConstraint>
@@ -15021,7 +15021,7 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <writeConstraint>
@@ -16010,7 +16010,7 @@
           <displayName>C1DT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <writeConstraint>

@@ -30,7 +30,7 @@ pub struct RegisterBlock {
     pub rpr: RPR,
     #[doc = "0x34 - Channel data register"]
     pub cdt: [CDT; 1],
-    _reserved12: [u8; 0x0e],
+    _reserved12: [u8; 0x0c],
     #[doc = "0x44 - Brake register"]
     pub brk: BRK,
     #[doc = "0x48 - DMA control register"]

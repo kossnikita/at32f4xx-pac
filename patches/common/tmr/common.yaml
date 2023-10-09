@@ -58,7 +58,7 @@ TMR[1369],TMR??:
 TMR[139],TMR??:
   _modify:
     C*DT:
-      size: 16
+      # size: 16
       writeConstraint: [0, 0xFFFF]
 
 TMR[1239],TMR??:

@@ -26,7 +26,7 @@ pub struct RegisterBlock {
     _reserved9: [u8; 0x06],
     #[doc = "0x34 - Channel data register"]
     pub cdt: [CDT; 1],
-    _reserved10: [u8; 0x1a],
+    _reserved10: [u8; 0x18],
     #[doc = "0x50 - TMR14 channel 1 input remap"]
     pub rmp: RMP,
 }
