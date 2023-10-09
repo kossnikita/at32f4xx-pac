@@ -26,7 +26,7 @@ Foreach-Object -Parallel {
     Copy-Item $svd -Destination ./$dirName/$svd_name
     Push-Location ./$dirName
     cargo init -q
-    svd2rust -m -g -s --pascal_enum_values --max_cluster_size --atomics --atomics_feature atomics --impl_debug -l warn -i $svd_name
+    svd2rust -m -g -s --const_generic --pascal_enum_values --max_cluster_size --atomics --atomics_feature atomics --impl_debug -l warn -i $svd_name
     if ($LastExitCode) {
         Pop-Location
         return;
