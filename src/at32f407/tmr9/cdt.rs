@@ -13,13 +13,9 @@ impl core::fmt::Debug for crate::generic::Reg<CDT_SPEC> {
     }
 }
 impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
+    #[doc = "Writes raw bits to the register."]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+    pub fn bits(&mut self, bits: u16) -> &mut Self {
         self.bits = bits;
         self
     }
@@ -27,7 +23,7 @@ impl W {
 #[doc = "Channel data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cdt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cdt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CDT_SPEC;
 impl crate::RegisterSpec for CDT_SPEC {
-    type Ux = u32;
+    type Ux = u16;
 }
 #[doc = "`read()` method returns [`cdt::R`](R) reader structure"]
 impl crate::Readable for CDT_SPEC {}
