@@ -27,9 +27,18 @@ pub struct RegisterBlock {
     #[doc = "0x2c - Period value"]
     pub pr: PR,
     _reserved12: [u8; 0x06],
-    #[doc = "0x34..0x44 - Channel data register"]
-    pub cdt: [CDT; 4],
-    _reserved13: [u8; 0x04],
+    #[doc = "0x34 - Channel data register"]
+    pub c1dt: CDT,
+    _reserved13: [u8; 0x02],
+    #[doc = "0x38 - Channel data register"]
+    pub c2dt: CDT,
+    _reserved14: [u8; 0x02],
+    #[doc = "0x3c - Channel data register"]
+    pub c3dt: CDT,
+    _reserved15: [u8; 0x02],
+    #[doc = "0x40 - Channel data register"]
+    pub c4dt: CDT,
+    _reserved16: [u8; 0x06],
     #[doc = "0x48 - DMA control register"]
     pub dmactrl: DMACTRL,
     #[doc = "0x4c - DMA data register"]
@@ -55,26 +64,6 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn cm2_output(&self) -> &CM2_OUTPUT {
         unsafe { &*(self as *const Self).cast::<u8>().add(28usize).cast() }
-    }
-    #[doc = "0x34 - Channel data register"]
-    #[inline(always)]
-    pub fn c1dt(&self) -> &CDT {
-        &self.cdt[0]
-    }
-    #[doc = "0x38 - Channel data register"]
-    #[inline(always)]
-    pub fn c2dt(&self) -> &CDT {
-        &self.cdt[1]
-    }
-    #[doc = "0x3c - Channel data register"]
-    #[inline(always)]
-    pub fn c3dt(&self) -> &CDT {
-        &self.cdt[2]
-    }
-    #[doc = "0x40 - Channel data register"]
-    #[inline(always)]
-    pub fn c4dt(&self) -> &CDT {
-        &self.cdt[3]
     }
 }
 #[doc = "CTRL1 (rw) register accessor: Control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ctrl1`]
