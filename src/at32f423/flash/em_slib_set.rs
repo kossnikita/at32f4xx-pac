@@ -22,7 +22,11 @@ impl W {
     pub fn em_slib_iss_set(&mut self) -> EM_SLIB_ISS_SET_W<EM_SLIB_SET_SPEC, 16> {
         EM_SLIB_ISS_SET_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

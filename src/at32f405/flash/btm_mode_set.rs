@@ -14,7 +14,11 @@ impl W {
     pub fn btm_mode_set(&mut self) -> BTM_MODE_SET_W<BTM_MODE_SET_SPEC, 0> {
         BTM_MODE_SET_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;

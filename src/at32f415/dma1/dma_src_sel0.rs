@@ -80,7 +80,11 @@ impl W {
     pub fn ch4_src(&mut self) -> CH4_SRC_W<DMA_SRC_SEL0_SPEC, 24> {
         CH4_SRC_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
         self.bits = bits;
