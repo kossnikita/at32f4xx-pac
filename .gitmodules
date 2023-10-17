@@ -1,3 +1,4 @@
 [submodule "PACKs"]
 	path = PACKs
 	url = https://github.com/ArteryTek/PACKs.git
+	update = none
