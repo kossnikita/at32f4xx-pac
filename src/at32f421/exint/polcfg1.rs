@@ -70,13 +70,13 @@ where
     }
 }
 #[doc = "Field `RP19` reader - Rising polarity configuration bit of line 19"]
-pub use RP0_R as RP19_R;
+pub use RP_R as RP19_R;
 #[doc = "Field `RP21` reader - Rising polarity configuration bit of line 21"]
-pub use RP0_R as RP21_R;
+pub use RP_R as RP21_R;
 #[doc = "Field `RP19` writer - Rising polarity configuration bit of line 19"]
-pub use RP0_W as RP19_W;
+pub use RP_W as RP19_W;
 #[doc = "Field `RP21` writer - Rising polarity configuration bit of line 21"]
-pub use RP0_W as RP21_W;
+pub use RP_W as RP21_W;
 impl R {
     #[doc = "Rising polarity configuration bit on line [0-17]"]
     #[inline(always)]

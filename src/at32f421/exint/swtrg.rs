@@ -63,13 +63,13 @@ where
     }
 }
 #[doc = "Field `SWT19` reader - Software triggle on line 19"]
-pub use SWT0_R as SWT19_R;
+pub use SWT_R as SWT19_R;
 #[doc = "Field `SWT21` reader - Software triggle on line 21"]
-pub use SWT0_R as SWT21_R;
+pub use SWT_R as SWT21_R;
 #[doc = "Field `SWT19` writer - Software triggle on line 19"]
-pub use SWT0_W as SWT19_W;
+pub use SWT_W as SWT19_W;
 #[doc = "Field `SWT21` writer - Software triggle on line 21"]
-pub use SWT0_W as SWT21_W;
+pub use SWT_W as SWT21_W;
 impl R {
     #[doc = "Software trigger on line [0-17]"]
     #[inline(always)]

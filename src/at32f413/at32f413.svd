@@ -563,7 +563,7 @@
               <bitOffset>11</bitOffset>
               <bitWidth>3</bitWidth>
               <access>read-write</access>
-              <enumeratedValues derivedFrom="APB1DIV.APB1DIV"/>
+              <enumeratedValues derivedFrom="APB1DIV"/>
             </field>
             <field>
               <name>ADCDIV1_0</name>
@@ -13628,7 +13628,7 @@
         </register>
         <register>
           <dim>1</dim>
-          <dimIncrement>0x0</dimIncrement>
+          <dimIncrement>0x2</dimIncrement>
           <dimIndex>1-1</dimIndex>
           <name>C%sDT</name>
           <displayName>C1DT</displayName>
@@ -16971,19 +16971,6 @@
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
-              <name>OCCS</name>
-              <description>Ordinary channel conversion start flag</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <modifiedWriteValues>zeroToClear</modifiedWriteValues>
-              <enumeratedValues derivedFrom="PCCS.PCCSR">
-                <usage>read</usage>
-              </enumeratedValues>
-              <enumeratedValues derivedFrom="PCCS.PCCSW">
-                <usage>write</usage>
-              </enumeratedValues>
-            </field>
-            <field>
               <name>PCCS</name>
               <description>Preempted channel conversion start flag</description>
               <bitOffset>3</bitOffset>
@@ -17014,15 +17001,15 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>PCCE</name>
-              <description>Preempted channels conversion end flag</description>
-              <bitOffset>2</bitOffset>
+              <name>OCCS</name>
+              <description>Ordinary channel conversion start flag</description>
+              <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <modifiedWriteValues>zeroToClear</modifiedWriteValues>
-              <enumeratedValues derivedFrom="CCE.CCER">
+              <enumeratedValues derivedFrom="PCCSR">
                 <usage>read</usage>
               </enumeratedValues>
-              <enumeratedValues derivedFrom="CCE.CCEW">
+              <enumeratedValues derivedFrom="PCCSW">
                 <usage>write</usage>
               </enumeratedValues>
             </field>
@@ -17054,6 +17041,19 @@
                   <description>Clear flag</description>
                   <value>0</value>
                 </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PCCE</name>
+              <description>Preempted channels conversion end flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <modifiedWriteValues>zeroToClear</modifiedWriteValues>
+              <enumeratedValues derivedFrom="CCER">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="CCEW">
+                <usage>write</usage>
               </enumeratedValues>
             </field>
             <field>
@@ -17098,18 +17098,6 @@
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
-              <name>OCVMEN</name>
-              <description>Voltage monitoring enable on ordinary channels</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="PCVMEN.PCVMENR">
-                <usage>read</usage>
-              </enumeratedValues>
-              <enumeratedValues derivedFrom="PCVMEN.PCVMENW">
-                <usage>write</usage>
-              </enumeratedValues>
-            </field>
-            <field>
               <name>PCVMEN</name>
               <description>Voltage monitoring enable on preempted channels</description>
               <bitOffset>22</bitOffset>
@@ -17144,6 +17132,18 @@
               </enumeratedValues>
             </field>
             <field>
+              <name>OCVMEN</name>
+              <description>Voltage monitoring enable on ordinary channels</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="PCVMENR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="PCVMENW">
+                <usage>write</usage>
+              </enumeratedValues>
+            </field>
+            <field>
               <name>MSSEL</name>
               <description>Master slave mode select</description>
               <bitOffset>16</bitOffset>
@@ -17160,18 +17160,6 @@
                   <maximum>7</maximum>
                 </range>
               </writeConstraint>
-            </field>
-            <field>
-              <name>PCPEN</name>
-              <description>Partitioned mode enable on preempted channels</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="OCPEN.OCPENR">
-                <usage>read</usage>
-              </enumeratedValues>
-              <enumeratedValues derivedFrom="OCPEN.OCPENW">
-                <usage>write</usage>
-              </enumeratedValues>
             </field>
             <field>
               <name>OCPEN</name>
@@ -17205,6 +17193,18 @@
                   <description>Partitioned mode on channels enable</description>
                   <value>1</value>
                 </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PCPEN</name>
+              <description>Partitioned mode enable on preempted channels</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="OCPENR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="OCPENW">
+                <usage>write</usage>
               </enumeratedValues>
             </field>
             <field>
@@ -17296,14 +17296,48 @@
               </enumeratedValues>
             </field>
             <field>
+              <name>CCEIEN</name>
+              <description>Channel conversion end interrupt enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>CCEIENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Channel conversion end interrupt is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Channel conversion end interrupt is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>CCEIENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Channel conversion end interrupt disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Channel conversion end interrupt enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
               <name>PCCEIEN</name>
               <description>Conversion end interrupt enable for preempted channels</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="CCEIEN.CCEIENR">
+              <enumeratedValues derivedFrom="CCEIENR">
                 <usage>read</usage>
               </enumeratedValues>
-              <enumeratedValues derivedFrom="CCEIEN.CCEIENW">
+              <enumeratedValues derivedFrom="CCEIENW">
                 <usage>write</usage>
               </enumeratedValues>
             </field>
@@ -17337,40 +17371,6 @@
                 <enumeratedValue>
                   <name>Enable</name>
                   <description>Voltage monitoring out of range interrupt enable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CCEIEN</name>
-              <description>Channel conversion end interrupt enable</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <name>CCEIENR</name>
-                <usage>read</usage>
-                <enumeratedValue>
-                  <name>Disabled</name>
-                  <description>Channel conversion end interrupt is disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enabled</name>
-                  <description>Channel conversion end interrupt is enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-              <enumeratedValues>
-                <name>CCEIENW</name>
-                <usage>write</usage>
-                <enumeratedValue>
-                  <name>Disable</name>
-                  <description>Channel conversion end interrupt disable</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enable</name>
-                  <description>Channel conversion end interrupt enable</description>
                   <value>1</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -17417,13 +17417,6 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>OCSWTRG</name>
-              <description>Conversion trigger by software of ordinary channels</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="PCSWTRG.PCSWTRG"/>
-            </field>
-            <field>
               <name>PCSWTRG</name>
               <description>Conversion trigger by software of preempted channels</description>
               <bitOffset>21</bitOffset>
@@ -17442,6 +17435,13 @@
                   <value>1</value>
                 </enumeratedValue>
               </enumeratedValues>
+            </field>
+            <field>
+              <name>OCSWTRG</name>
+              <description>Conversion trigger by software of ordinary channels</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="PCSWTRG"/>
             </field>
             <field>
               <name>OCTEN</name>
@@ -17906,19 +17906,6 @@
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
-              <name>OCCS</name>
-              <description>Ordinary channel conversion start flag</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <modifiedWriteValues>zeroToClear</modifiedWriteValues>
-              <enumeratedValues derivedFrom="PCCS.PCCSR">
-                <usage>read</usage>
-              </enumeratedValues>
-              <enumeratedValues derivedFrom="PCCS.PCCSW">
-                <usage>write</usage>
-              </enumeratedValues>
-            </field>
-            <field>
               <name>PCCS</name>
               <description>Preempted channel conversion start flag</description>
               <bitOffset>3</bitOffset>
@@ -17949,15 +17936,15 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>PCCE</name>
-              <description>Preempted channels conversion end flag</description>
-              <bitOffset>2</bitOffset>
+              <name>OCCS</name>
+              <description>Ordinary channel conversion start flag</description>
+              <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
               <modifiedWriteValues>zeroToClear</modifiedWriteValues>
-              <enumeratedValues derivedFrom="CCE.CCER">
+              <enumeratedValues derivedFrom="PCCSR">
                 <usage>read</usage>
               </enumeratedValues>
-              <enumeratedValues derivedFrom="CCE.CCEW">
+              <enumeratedValues derivedFrom="PCCSW">
                 <usage>write</usage>
               </enumeratedValues>
             </field>
@@ -17989,6 +17976,19 @@
                   <description>Clear flag</description>
                   <value>0</value>
                 </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PCCE</name>
+              <description>Preempted channels conversion end flag</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <modifiedWriteValues>zeroToClear</modifiedWriteValues>
+              <enumeratedValues derivedFrom="CCER">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="CCEW">
+                <usage>write</usage>
               </enumeratedValues>
             </field>
             <field>
@@ -18033,18 +18033,6 @@
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
-              <name>OCVMEN</name>
-              <description>Voltage monitoring enable on ordinary channels</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="PCVMEN.PCVMENR">
-                <usage>read</usage>
-              </enumeratedValues>
-              <enumeratedValues derivedFrom="PCVMEN.PCVMENW">
-                <usage>write</usage>
-              </enumeratedValues>
-            </field>
-            <field>
               <name>PCVMEN</name>
               <description>Voltage monitoring enable on preempted channels</description>
               <bitOffset>22</bitOffset>
@@ -18079,6 +18067,18 @@
               </enumeratedValues>
             </field>
             <field>
+              <name>OCVMEN</name>
+              <description>Voltage monitoring enable on ordinary channels</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="PCVMENR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="PCVMENW">
+                <usage>write</usage>
+              </enumeratedValues>
+            </field>
+            <field>
               <name>OCPCNT</name>
               <description>Partitioned mode conversion count of ordinary channels</description>
               <bitOffset>13</bitOffset>
@@ -18089,18 +18089,6 @@
                   <maximum>7</maximum>
                 </range>
               </writeConstraint>
-            </field>
-            <field>
-              <name>PCPEN</name>
-              <description>Partitioned mode enable on preempted channels</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="OCPEN.OCPENR">
-                <usage>read</usage>
-              </enumeratedValues>
-              <enumeratedValues derivedFrom="OCPEN.OCPENW">
-                <usage>write</usage>
-              </enumeratedValues>
             </field>
             <field>
               <name>OCPEN</name>
@@ -18134,6 +18122,18 @@
                   <description>Partitioned mode on channels enable</description>
                   <value>1</value>
                 </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>PCPEN</name>
+              <description>Partitioned mode enable on preempted channels</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="OCPENR">
+                <usage>read</usage>
+              </enumeratedValues>
+              <enumeratedValues derivedFrom="OCPENW">
+                <usage>write</usage>
               </enumeratedValues>
             </field>
             <field>
@@ -18225,14 +18225,48 @@
               </enumeratedValues>
             </field>
             <field>
+              <name>CCEIEN</name>
+              <description>Channel conversion end interrupt enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>CCEIENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Channel conversion end interrupt is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Channel conversion end interrupt is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>CCEIENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Channel conversion end interrupt disable</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Channel conversion end interrupt enable</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
               <name>PCCEIEN</name>
               <description>Conversion end interrupt enable for preempted channels</description>
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="CCEIEN.CCEIENR">
+              <enumeratedValues derivedFrom="CCEIENR">
                 <usage>read</usage>
               </enumeratedValues>
-              <enumeratedValues derivedFrom="CCEIEN.CCEIENW">
+              <enumeratedValues derivedFrom="CCEIENW">
                 <usage>write</usage>
               </enumeratedValues>
             </field>
@@ -18266,40 +18300,6 @@
                 <enumeratedValue>
                   <name>Enable</name>
                   <description>Voltage monitoring out of range interrupt enable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CCEIEN</name>
-              <description>Channel conversion end interrupt enable</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <name>CCEIENR</name>
-                <usage>read</usage>
-                <enumeratedValue>
-                  <name>Disabled</name>
-                  <description>Channel conversion end interrupt is disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enabled</name>
-                  <description>Channel conversion end interrupt is enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-              <enumeratedValues>
-                <name>CCEIENW</name>
-                <usage>write</usage>
-                <enumeratedValue>
-                  <name>Disable</name>
-                  <description>Channel conversion end interrupt disable</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enable</name>
-                  <description>Channel conversion end interrupt enable</description>
                   <value>1</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -18340,13 +18340,6 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>OCSWTRG</name>
-              <description>Conversion trigger by software of ordinary channels</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="PCSWTRG.PCSWTRG"/>
-            </field>
-            <field>
               <name>PCSWTRG</name>
               <description>Conversion trigger by software of preempted channels</description>
               <bitOffset>21</bitOffset>
@@ -18365,6 +18358,13 @@
                   <value>1</value>
                 </enumeratedValue>
               </enumeratedValues>
+            </field>
+            <field>
+              <name>OCSWTRG</name>
+              <description>Conversion trigger by software of ordinary channels</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="PCSWTRG"/>
             </field>
             <field>
               <name>OCTEN</name>
@@ -21244,21 +21244,21 @@
               <description>Timer pause control bit</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="TMR1_PAUSE.TMR1_PAUSE"/>
+              <enumeratedValues derivedFrom="TMR1_PAUSE"/>
             </field>
             <field>
               <name>TMR3_PAUSE</name>
               <description>Timer pause control bit</description>
               <bitOffset>12</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="TMR1_PAUSE.TMR1_PAUSE"/>
+              <enumeratedValues derivedFrom="TMR1_PAUSE"/>
             </field>
             <field>
               <name>TMR4_PAUSE</name>
               <description>Timer pause control bit</description>
               <bitOffset>13</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="TMR1_PAUSE.TMR1_PAUSE"/>
+              <enumeratedValues derivedFrom="TMR1_PAUSE"/>
             </field>
             <field>
               <name>CAN1_PAUSE</name>
@@ -21283,14 +21283,14 @@
               <description>Timer pause control bit</description>
               <bitOffset>17</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="TMR1_PAUSE.TMR1_PAUSE"/>
+              <enumeratedValues derivedFrom="TMR1_PAUSE"/>
             </field>
             <field>
               <name>TMR5_PAUSE</name>
               <description>Timer pause control bit</description>
               <bitOffset>18</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="TMR1_PAUSE.TMR1_PAUSE"/>
+              <enumeratedValues derivedFrom="TMR1_PAUSE"/>
             </field>
             <field>
               <name>CAN2_PAUSE</name>
@@ -21303,21 +21303,21 @@
               <description>Timer pause control bit</description>
               <bitOffset>28</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="TMR1_PAUSE.TMR1_PAUSE"/>
+              <enumeratedValues derivedFrom="TMR1_PAUSE"/>
             </field>
             <field>
               <name>TMR10_PAUSE</name>
               <description>Timer pause control bit</description>
               <bitOffset>29</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="TMR1_PAUSE.TMR1_PAUSE"/>
+              <enumeratedValues derivedFrom="TMR1_PAUSE"/>
             </field>
             <field>
               <name>TMR11_PAUSE</name>
               <description>Timer pause control bit</description>
               <bitOffset>30</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues derivedFrom="TMR1_PAUSE.TMR1_PAUSE"/>
+              <enumeratedValues derivedFrom="TMR1_PAUSE"/>
             </field>
           </fields>
         </register>

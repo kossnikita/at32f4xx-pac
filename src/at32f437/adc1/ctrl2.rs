@@ -497,11 +497,11 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
             .field("octesel_h", &format_args!("{}", self.octesel_h().bit()))
+            .field("pcswtrg", &format_args!("{}", self.pcswtrg().bit()))
             .field("ocswtrg", &format_args!("{}", self.ocswtrg().bit()))
             .field("ocete", &format_args!("{}", self.ocete().bits()))
             .field("octesel_l", &format_args!("{}", self.octesel_l().bits()))
             .field("pctesel_h", &format_args!("{}", self.pctesel_h().bit()))
-            .field("pcswtrg", &format_args!("{}", self.pcswtrg().bit()))
             .field("pcete", &format_args!("{}", self.pcete().bits()))
             .field("pctesel_l", &format_args!("{}", self.pctesel_l().bits()))
             .field("dtalign", &format_args!("{}", self.dtalign().bit()))

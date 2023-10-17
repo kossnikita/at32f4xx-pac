@@ -220,10 +220,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS")
-            .field("occs", &format_args!("{}", self.occs().bit()))
             .field("pccs", &format_args!("{}", self.pccs().bit()))
-            .field("pcce", &format_args!("{}", self.pcce().bit()))
+            .field("occs", &format_args!("{}", self.occs().bit()))
             .field("cce", &format_args!("{}", self.cce().bit()))
+            .field("pcce", &format_args!("{}", self.pcce().bit()))
             .field("vmor", &format_args!("{}", self.vmor().bit()))
             .finish()
     }

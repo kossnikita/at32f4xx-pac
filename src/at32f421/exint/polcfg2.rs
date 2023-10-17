@@ -70,13 +70,13 @@ where
     }
 }
 #[doc = "Field `FP19` reader - Falling polarity event configuration bit of line 19"]
-pub use FP0_R as FP19_R;
+pub use FP_R as FP19_R;
 #[doc = "Field `FP21` reader - Falling polarity event configuration bit of line 21"]
-pub use FP0_R as FP21_R;
+pub use FP_R as FP21_R;
 #[doc = "Field `FP19` writer - Falling polarity event configuration bit of line 19"]
-pub use FP0_W as FP19_W;
+pub use FP_W as FP19_W;
 #[doc = "Field `FP21` writer - Falling polarity event configuration bit of line 21"]
-pub use FP0_W as FP21_W;
+pub use FP_W as FP21_W;
 impl R {
     #[doc = "Falling polarity configuration bit on line [0-17]"]
     #[inline(always)]

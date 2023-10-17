@@ -63,13 +63,13 @@ where
     }
 }
 #[doc = "Field `LINE19` reader - Line 19 state bit"]
-pub use LINE0_R as LINE19_R;
+pub use LINE_R as LINE19_R;
 #[doc = "Field `LINE21` reader - Line 21 state bit"]
-pub use LINE0_R as LINE21_R;
+pub use LINE_R as LINE21_R;
 #[doc = "Field `LINE19` writer - Line 19 state bit"]
-pub use LINE0_W as LINE19_W;
+pub use LINE_W as LINE19_W;
 #[doc = "Field `LINE21` writer - Line 21 state bit"]
-pub use LINE0_W as LINE21_W;
+pub use LINE_W as LINE21_W;
 impl R {
     #[doc = "Line [0-17]
 status bit"]

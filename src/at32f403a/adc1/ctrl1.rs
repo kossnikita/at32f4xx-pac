@@ -551,18 +551,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
-            .field("ocvmen", &format_args!("{}", self.ocvmen().bit()))
             .field("pcvmen", &format_args!("{}", self.pcvmen().bit()))
+            .field("ocvmen", &format_args!("{}", self.ocvmen().bit()))
             .field("mssel", &format_args!("{}", self.mssel().bits()))
             .field("ocpcnt", &format_args!("{}", self.ocpcnt().bits()))
-            .field("pcpen", &format_args!("{}", self.pcpen().bit()))
             .field("ocpen", &format_args!("{}", self.ocpen().bit()))
+            .field("pcpen", &format_args!("{}", self.pcpen().bit()))
             .field("pcautoen", &format_args!("{}", self.pcautoen().bit()))
             .field("vmsgen", &format_args!("{}", self.vmsgen().bit()))
             .field("sqen", &format_args!("{}", self.sqen().bit()))
+            .field("cceien", &format_args!("{}", self.cceien().bit()))
             .field("pcceien", &format_args!("{}", self.pcceien().bit()))
             .field("vmorien", &format_args!("{}", self.vmorien().bit()))
-            .field("cceien", &format_args!("{}", self.cceien().bit()))
             .field("vmcsel", &format_args!("{}", self.vmcsel().bits()))
             .finish()
     }

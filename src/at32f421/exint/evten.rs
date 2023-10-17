@@ -70,13 +70,13 @@ where
     }
 }
 #[doc = "Field `EVTEN19` reader - Event enable or disable on line 19"]
-pub use EVTEN0_R as EVTEN19_R;
+pub use EVTEN_R as EVTEN19_R;
 #[doc = "Field `EVTEN21` reader - Event enable or disable on line 21"]
-pub use EVTEN0_R as EVTEN21_R;
+pub use EVTEN_R as EVTEN21_R;
 #[doc = "Field `EVTEN19` writer - Event enable or disable on line 19"]
-pub use EVTEN0_W as EVTEN19_W;
+pub use EVTEN_W as EVTEN19_W;
 #[doc = "Field `EVTEN21` writer - Event enable or disable on line 21"]
-pub use EVTEN0_W as EVTEN21_W;
+pub use EVTEN_W as EVTEN21_W;
 impl R {
     #[doc = "Event enable or disable on line [0-17]"]
     #[inline(always)]

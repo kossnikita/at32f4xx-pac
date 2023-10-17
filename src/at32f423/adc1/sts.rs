@@ -238,10 +238,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("STS")
             .field("rdy", &format_args!("{}", self.rdy().bit()))
             .field("occo", &format_args!("{}", self.occo().bit()))
-            .field("occs", &format_args!("{}", self.occs().bit()))
             .field("pccs", &format_args!("{}", self.pccs().bit()))
-            .field("pcce", &format_args!("{}", self.pcce().bit()))
+            .field("occs", &format_args!("{}", self.occs().bit()))
             .field("occe", &format_args!("{}", self.occe().bit()))
+            .field("pcce", &format_args!("{}", self.pcce().bit()))
             .field("vmor", &format_args!("{}", self.vmor().bit()))
             .finish()
     }

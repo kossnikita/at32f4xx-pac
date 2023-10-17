@@ -461,8 +461,8 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
             .field("itsrven", &format_args!("{}", self.itsrven().bit()))
-            .field("ocswtrg", &format_args!("{}", self.ocswtrg().bit()))
             .field("pcswtrg", &format_args!("{}", self.pcswtrg().bit()))
+            .field("ocswtrg", &format_args!("{}", self.ocswtrg().bit()))
             .field("octen", &format_args!("{}", self.octen().bit()))
             .field("octesel", &format_args!("{}", self.octesel().bits()))
             .field("pcten", &format_args!("{}", self.pcten().bit()))

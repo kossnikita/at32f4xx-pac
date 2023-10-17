@@ -70,13 +70,13 @@ where
     }
 }
 #[doc = "Field `INTEN19` reader - Interrupt enable or disable on line 19"]
-pub use INTEN0_R as INTEN19_R;
+pub use INTEN_R as INTEN19_R;
 #[doc = "Field `INTEN21` reader - Interrupt enable or disable on line 21"]
-pub use INTEN0_R as INTEN21_R;
+pub use INTEN_R as INTEN21_R;
 #[doc = "Field `INTEN19` writer - Interrupt enable or disable on line 19"]
-pub use INTEN0_W as INTEN19_W;
+pub use INTEN_W as INTEN19_W;
 #[doc = "Field `INTEN21` writer - Interrupt enable or disable on line 21"]
-pub use INTEN0_W as INTEN21_W;
+pub use INTEN_W as INTEN21_W;
 impl R {
     #[doc = "Interrupt enable or disable on line [0-17]"]
     #[inline(always)]
