@@ -21,7 +21,7 @@ impl From<WPEN0R_A> for bool {
 impl WPEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> WPEN0R_A {
+    pub const fn variant(&self) -> WPEN0R_A {
         match self.bits {
             false => WPEN0R_A::NotProtected,
             true => WPEN0R_A::Protected,
@@ -88,7 +88,7 @@ impl From<WPSEQ_A> for bool {
 impl WPSEQ_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> WPSEQ_A {
+    pub const fn variant(&self) -> WPSEQ_A {
         match self.bits {
             false => WPSEQ_A::Clear,
             true => WPSEQ_A::Set,

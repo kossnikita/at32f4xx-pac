@@ -21,7 +21,7 @@ impl From<RLDFR_A> for bool {
 impl RLDF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RLDFR_A {
+    pub const fn variant(&self) -> RLDFR_A {
         match self.bits {
             false => RLDFR_A::NotReached,
             true => RLDFR_A::Reached,

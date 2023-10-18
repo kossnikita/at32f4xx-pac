@@ -23,7 +23,7 @@ impl From<FFR_A> for bool {
 impl FF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FFR_A {
+    pub const fn variant(&self) -> FFR_A {
         match self.bits {
             false => FFR_A::NotFull,
             true => FFR_A::Full,
@@ -83,7 +83,7 @@ impl From<OFR_A> for bool {
 impl OF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OFR_A {
+    pub const fn variant(&self) -> OFR_A {
         match self.bits {
             false => OFR_A::NoOverflow,
             true => OFR_A::Overflow,
@@ -143,7 +143,7 @@ impl From<RR_A> for bool {
 impl R_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RR_A {
+    pub const fn variant(&self) -> RR_A {
         match self.bits {
             false => RR_A::Released,
             true => RR_A::Releasing,

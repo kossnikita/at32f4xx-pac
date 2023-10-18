@@ -21,7 +21,7 @@ impl From<C5OIEN_A> for bool {
 impl COIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C5OIEN_A {
+    pub const fn variant(&self) -> C5OIEN_A {
         match self.bits {
             false => C5OIEN_A::Compare,
             true => C5OIEN_A::Immediately,
@@ -74,7 +74,7 @@ impl From<C5OBENR_A> for bool {
 impl COBEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C5OBENR_A {
+    pub const fn variant(&self) -> C5OBENR_A {
         match self.bits {
             false => C5OBENR_A::Disabled,
             true => C5OBENR_A::Enabled,
@@ -157,7 +157,7 @@ impl crate::FieldSpec for COCTRL_A {
 impl COCTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> COCTRL_A {
+    pub const fn variant(&self) -> COCTRL_A {
         match self.bits {
             0 => COCTRL_A::Disconnected,
             1 => COCTRL_A::High,
@@ -278,7 +278,7 @@ impl From<C5OSENR_A> for bool {
 impl COSEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C5OSENR_A {
+    pub const fn variant(&self) -> C5OSENR_A {
         match self.bits {
             false => C5OSENR_A::Disabled,
             true => C5OSENR_A::Enabled,

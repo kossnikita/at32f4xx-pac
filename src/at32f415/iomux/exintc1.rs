@@ -31,7 +31,7 @@ impl crate::FieldSpec for EXINT0_A {
 impl EXINT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<EXINT0_A> {
+    pub const fn variant(&self) -> Option<EXINT0_A> {
         match self.bits {
             0 => Some(EXINT0_A::Gpioa),
             1 => Some(EXINT0_A::Gpiob),

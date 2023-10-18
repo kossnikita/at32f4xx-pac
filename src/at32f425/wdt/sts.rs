@@ -19,7 +19,7 @@ impl From<DIVF_A> for bool {
 impl DIVF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DIVF_A {
+    pub const fn variant(&self) -> DIVF_A {
         match self.bits {
             false => DIVF_A::Complete,
             true => DIVF_A::InProgress,
@@ -55,7 +55,7 @@ impl From<RLDF_A> for bool {
 impl RLDF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RLDF_A {
+    pub const fn variant(&self) -> RLDF_A {
         match self.bits {
             false => RLDF_A::Complete,
             true => RLDF_A::InProgress,
@@ -91,7 +91,7 @@ impl From<WINF_A> for bool {
 impl WINF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> WINF_A {
+    pub const fn variant(&self) -> WINF_A {
         match self.bits {
             false => WINF_A::Complete,
             true => WINF_A::InProgress,

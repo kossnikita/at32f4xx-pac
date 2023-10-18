@@ -21,7 +21,7 @@ impl From<CBCTRLR_A> for bool {
 impl CBCTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CBCTRLR_A {
+    pub const fn variant(&self) -> CBCTRLR_A {
         match self.bits {
             false => CBCTRLR_A::Disabled,
             true => CBCTRLR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<CCFS_A> for bool {
 impl CCFS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CCFS_A {
+    pub const fn variant(&self) -> CCFS_A {
         match self.bits {
             false => CCFS_A::Hall,
             true => CCFS_A::Trgin,
@@ -141,7 +141,7 @@ impl From<DRS_A> for bool {
 impl DRS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DRS_A {
+    pub const fn variant(&self) -> DRS_A {
         match self.bits {
             false => DRS_A::CaptureCompare,
             true => DRS_A::Overflow,
@@ -210,7 +210,7 @@ impl crate::FieldSpec for PTOS_A {
 impl PTOS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PTOS_A {
+    pub const fn variant(&self) -> PTOS_A {
         match self.bits {
             0 => PTOS_A::Reset,
             1 => PTOS_A::Enable,
@@ -331,7 +331,7 @@ impl From<C1INSEL_A> for bool {
 impl C1INSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1INSEL_A {
+    pub const fn variant(&self) -> C1INSEL_A {
         match self.bits {
             false => C1INSEL_A::Ch1,
             true => C1INSEL_A::Xor,
@@ -384,7 +384,7 @@ impl From<C1IOS_A> for bool {
 impl CIOS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1IOS_A {
+    pub const fn variant(&self) -> C1IOS_A {
         match self.bits {
             false => C1IOS_A::Low,
             true => C1IOS_A::High,
@@ -437,7 +437,7 @@ impl From<C1CIOS_A> for bool {
 impl CCIOS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1CIOS_A {
+    pub const fn variant(&self) -> C1CIOS_A {
         match self.bits {
             false => C1CIOS_A::Low,
             true => C1CIOS_A::High,

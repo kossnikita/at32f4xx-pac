@@ -35,7 +35,7 @@ impl crate::FieldSpec for SELPORT_A {
 impl SELPORT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SELPORT_A> {
+    pub const fn variant(&self) -> Option<SELPORT_A> {
         match self.bits {
             0 => Some(SELPORT_A::Gpioa),
             1 => Some(SELPORT_A::Gpiob),
@@ -123,7 +123,7 @@ impl From<EVOEN_A> for bool {
 impl EVOEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> EVOEN_A {
+    pub const fn variant(&self) -> EVOEN_A {
         match self.bits {
             false => EVOEN_A::Disable,
             true => EVOEN_A::Enable,

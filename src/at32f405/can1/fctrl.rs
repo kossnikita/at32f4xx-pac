@@ -21,7 +21,7 @@ impl From<FCS_A> for bool {
 impl FCS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FCS_A {
+    pub const fn variant(&self) -> FCS_A {
         match self.bits {
             false => FCS_A::Active,
             true => FCS_A::Configuration,

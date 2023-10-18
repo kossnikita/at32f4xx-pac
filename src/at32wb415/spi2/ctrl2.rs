@@ -21,7 +21,7 @@ impl From<DMARENR_A> for bool {
 impl DMAREN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMARENR_A {
+    pub const fn variant(&self) -> DMARENR_A {
         match self.bits {
             false => DMARENR_A::Disabled,
             true => DMARENR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<DMATENR_A> for bool {
 impl DMATEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DMATENR_A {
+    pub const fn variant(&self) -> DMATENR_A {
         match self.bits {
             false => DMATENR_A::Disabled,
             true => DMATENR_A::Enabled,
@@ -155,7 +155,7 @@ impl From<ERRIER_A> for bool {
 impl ERRIE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ERRIER_A {
+    pub const fn variant(&self) -> ERRIER_A {
         match self.bits {
             false => ERRIER_A::Disabled,
             true => ERRIER_A::Enabled,
@@ -222,7 +222,7 @@ impl From<RDBFIER_A> for bool {
 impl RDBFIE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RDBFIER_A {
+    pub const fn variant(&self) -> RDBFIER_A {
         match self.bits {
             false => RDBFIER_A::Disabled,
             true => RDBFIER_A::Enabled,
@@ -289,7 +289,7 @@ impl From<TDBEIER_A> for bool {
 impl TDBEIE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TDBEIER_A {
+    pub const fn variant(&self) -> TDBEIER_A {
         match self.bits {
             false => TDBEIER_A::Disabled,
             true => TDBEIER_A::Enabled,

@@ -29,7 +29,7 @@ impl crate::FieldSpec for IOMC8_A {
 impl IOMC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IOMC8_A {
+    pub const fn variant(&self) -> IOMC8_A {
         match self.bits {
             0 => IOMC8_A::Input,
             1 => IOMC8_A::OutputLarge,
@@ -114,7 +114,7 @@ impl crate::FieldSpec for IOFC8_A {
 impl IOFC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IOFC8_A {
+    pub const fn variant(&self) -> IOFC8_A {
         match self.bits {
             0 => IOFC8_A::Analog,
             1 => IOFC8_A::Floating,

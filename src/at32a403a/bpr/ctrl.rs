@@ -21,7 +21,7 @@ impl From<TPENR_A> for bool {
 impl TPEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TPENR_A {
+    pub const fn variant(&self) -> TPENR_A {
         match self.bits {
             false => TPENR_A::Disabled,
             true => TPENR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<TPP_A> for bool {
 impl TPP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TPP_A {
+    pub const fn variant(&self) -> TPP_A {
         match self.bits {
             false => TPP_A::High,
             true => TPP_A::Low,

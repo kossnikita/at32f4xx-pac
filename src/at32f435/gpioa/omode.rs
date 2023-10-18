@@ -21,7 +21,7 @@ impl From<OM0_A> for bool {
 impl OM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OM0_A {
+    pub const fn variant(&self) -> OM0_A {
         match self.bits {
             false => OM0_A::PushPull,
             true => OM0_A::OpenDrain,

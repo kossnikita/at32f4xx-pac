@@ -21,7 +21,7 @@ impl From<OVFIENR_A> for bool {
 impl OVFIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OVFIENR_A {
+    pub const fn variant(&self) -> OVFIENR_A {
         match self.bits {
             false => OVFIENR_A::Disabled,
             true => OVFIENR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<C1IENR_A> for bool {
 impl CIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1IENR_A {
+    pub const fn variant(&self) -> C1IENR_A {
         match self.bits {
             false => C1IENR_A::Disabled,
             true => C1IENR_A::Enabled,
@@ -159,7 +159,7 @@ impl From<TIENR_A> for bool {
 impl TIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TIENR_A {
+    pub const fn variant(&self) -> TIENR_A {
         match self.bits {
             false => TIENR_A::Disabled,
             true => TIENR_A::Enabled,
@@ -230,7 +230,7 @@ impl From<OVFDENR_A> for bool {
 impl OVFDEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OVFDENR_A {
+    pub const fn variant(&self) -> OVFDENR_A {
         match self.bits {
             false => OVFDENR_A::Disabled,
             true => OVFDENR_A::Enabled,
@@ -297,7 +297,7 @@ impl From<C1DENR_A> for bool {
 impl CDEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1DENR_A {
+    pub const fn variant(&self) -> C1DENR_A {
         match self.bits {
             false => C1DENR_A::Disabled,
             true => C1DENR_A::Enabled,

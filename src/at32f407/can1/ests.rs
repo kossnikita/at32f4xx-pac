@@ -21,7 +21,7 @@ impl From<EAF_A> for bool {
 impl EAF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> EAF_A {
+    pub const fn variant(&self) -> EAF_A {
         match self.bits {
             false => EAF_A::NotEntered,
             true => EAF_A::Entered,
@@ -57,7 +57,7 @@ impl From<EPF_A> for bool {
 impl EPF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> EPF_A {
+    pub const fn variant(&self) -> EPF_A {
         match self.bits {
             false => EPF_A::NotEntered,
             true => EPF_A::Entered,
@@ -93,7 +93,7 @@ impl From<BOF_A> for bool {
 impl BOF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BOF_A {
+    pub const fn variant(&self) -> BOF_A {
         match self.bits {
             false => BOF_A::NotEntered,
             true => BOF_A::Entered,
@@ -145,7 +145,7 @@ impl crate::FieldSpec for ETR_A {
 impl ETR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ETR_A {
+    pub const fn variant(&self) -> ETR_A {
         match self.bits {
             0 => ETR_A::NoError,
             1 => ETR_A::BitStuffing,

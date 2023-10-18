@@ -21,7 +21,7 @@ impl From<LINE0R_A> for bool {
 impl LINE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LINE0R_A {
+    pub const fn variant(&self) -> LINE0R_A {
         match self.bits {
             false => LINE0R_A::NoInterrupt,
             true => LINE0R_A::Interrupt,

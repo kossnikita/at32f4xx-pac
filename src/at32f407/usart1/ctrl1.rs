@@ -21,7 +21,7 @@ impl From<SBFR_A> for bool {
 impl SBF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SBFR_A {
+    pub const fn variant(&self) -> SBFR_A {
         match self.bits {
             false => SBFR_A::NoTransmission,
             true => SBFR_A::Transmitting,
@@ -88,7 +88,7 @@ impl From<RM_A> for bool {
 impl RM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RM_A {
+    pub const fn variant(&self) -> RM_A {
         match self.bits {
             false => RM_A::Active,
             true => RM_A::Mute,
@@ -141,7 +141,7 @@ impl From<RENR_A> for bool {
 impl REN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RENR_A {
+    pub const fn variant(&self) -> RENR_A {
         match self.bits {
             false => RENR_A::Disabled,
             true => RENR_A::Enabled,
@@ -208,7 +208,7 @@ impl From<TENR_A> for bool {
 impl TEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TENR_A {
+    pub const fn variant(&self) -> TENR_A {
         match self.bits {
             false => TENR_A::Disabled,
             true => TENR_A::Enabled,
@@ -275,7 +275,7 @@ impl From<IDLEIENR_A> for bool {
 impl IDLEIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IDLEIENR_A {
+    pub const fn variant(&self) -> IDLEIENR_A {
         match self.bits {
             false => IDLEIENR_A::Disabled,
             true => IDLEIENR_A::Enabled,
@@ -342,7 +342,7 @@ impl From<RDBFIENR_A> for bool {
 impl RDBFIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RDBFIENR_A {
+    pub const fn variant(&self) -> RDBFIENR_A {
         match self.bits {
             false => RDBFIENR_A::Disabled,
             true => RDBFIENR_A::Enabled,
@@ -409,7 +409,7 @@ impl From<TDCIENR_A> for bool {
 impl TDCIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TDCIENR_A {
+    pub const fn variant(&self) -> TDCIENR_A {
         match self.bits {
             false => TDCIENR_A::Disabled,
             true => TDCIENR_A::Enabled,
@@ -476,7 +476,7 @@ impl From<TDBEIENR_A> for bool {
 impl TDBEIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TDBEIENR_A {
+    pub const fn variant(&self) -> TDBEIENR_A {
         match self.bits {
             false => TDBEIENR_A::Disabled,
             true => TDBEIENR_A::Enabled,
@@ -543,7 +543,7 @@ impl From<PERRIENR_A> for bool {
 impl PERRIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PERRIENR_A {
+    pub const fn variant(&self) -> PERRIENR_A {
         match self.bits {
             false => PERRIENR_A::Disabled,
             true => PERRIENR_A::Enabled,
@@ -610,7 +610,7 @@ impl From<PSEL_A> for bool {
 impl PSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PSEL_A {
+    pub const fn variant(&self) -> PSEL_A {
         match self.bits {
             false => PSEL_A::Even,
             true => PSEL_A::Odd,
@@ -663,7 +663,7 @@ impl From<PENR_A> for bool {
 impl PEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PENR_A {
+    pub const fn variant(&self) -> PENR_A {
         match self.bits {
             false => PENR_A::Disabled,
             true => PENR_A::Enabled,
@@ -730,7 +730,7 @@ impl From<WUM_A> for bool {
 impl WUM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> WUM_A {
+    pub const fn variant(&self) -> WUM_A {
         match self.bits {
             false => WUM_A::Idle,
             true => WUM_A::Id,
@@ -787,7 +787,7 @@ impl From<UENR_A> for bool {
 impl UEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> UENR_A {
+    pub const fn variant(&self) -> UENR_A {
         match self.bits {
             false => UENR_A::Disabled,
             true => UENR_A::Enabled,

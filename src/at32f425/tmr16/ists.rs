@@ -21,7 +21,7 @@ impl From<OVFIFR_A> for bool {
 impl OVFIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OVFIFR_A {
+    pub const fn variant(&self) -> OVFIFR_A {
         match self.bits {
             false => OVFIFR_A::NoOverflow,
             true => OVFIFR_A::Overflow,
@@ -81,7 +81,7 @@ impl From<C1IFR_A> for bool {
 impl CIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1IFR_A {
+    pub const fn variant(&self) -> C1IFR_A {
         match self.bits {
             false => C1IFR_A::NoEvent,
             true => C1IFR_A::CaptureCompare,
@@ -141,7 +141,7 @@ impl From<HALLIFR_A> for bool {
 impl HALLIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HALLIFR_A {
+    pub const fn variant(&self) -> HALLIFR_A {
         match self.bits {
             false => HALLIFR_A::NoEvent,
             true => HALLIFR_A::HallEvent,
@@ -201,7 +201,7 @@ impl From<BRKIFR_A> for bool {
 impl BRKIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BRKIFR_A {
+    pub const fn variant(&self) -> BRKIFR_A {
         match self.bits {
             false => BRKIFR_A::Inactive,
             true => BRKIFR_A::Active,
@@ -261,7 +261,7 @@ impl From<C1RFR_A> for bool {
 impl CRF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1RFR_A {
+    pub const fn variant(&self) -> C1RFR_A {
         match self.bits {
             false => C1RFR_A::NoEvent,
             true => C1RFR_A::Capture,

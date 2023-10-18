@@ -27,7 +27,7 @@ impl crate::FieldSpec for CMD_A {
 impl CMD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<CMD_A> {
+    pub const fn variant(&self) -> Option<CMD_A> {
         match self.bits {
             21845 => Some(CMD_A::Unlock),
             43690 => Some(CMD_A::Reload),

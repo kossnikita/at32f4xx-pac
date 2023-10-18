@@ -25,7 +25,7 @@ impl From<WWDTENR_A> for bool {
 impl WWDTEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> WWDTENR_A {
+    pub const fn variant(&self) -> WWDTENR_A {
         match self.bits {
             false => WWDTENR_A::Disabled,
             true => WWDTENR_A::Enabled,

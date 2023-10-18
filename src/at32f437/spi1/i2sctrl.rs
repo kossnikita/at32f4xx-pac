@@ -21,7 +21,7 @@ impl From<CBN_A> for bool {
 impl CBN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CBN_A {
+    pub const fn variant(&self) -> CBN_A {
         match self.bits {
             false => CBN_A::Bit16,
             true => CBN_A::Bit32,
@@ -80,7 +80,7 @@ impl crate::FieldSpec for DBN_A {
 impl DBN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<DBN_A> {
+    pub const fn variant(&self) -> Option<DBN_A> {
         match self.bits {
             0 => Some(DBN_A::Bit16),
             1 => Some(DBN_A::Bit24),
@@ -146,7 +146,7 @@ impl From<CLKPOL_A> for bool {
 impl CLKPOL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CLKPOL_A {
+    pub const fn variant(&self) -> CLKPOL_A {
         match self.bits {
             false => CLKPOL_A::Low,
             true => CLKPOL_A::High,
@@ -207,7 +207,7 @@ impl crate::FieldSpec for STDSEL_A {
 impl STDSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STDSEL_A {
+    pub const fn variant(&self) -> STDSEL_A {
         match self.bits {
             0 => STDSEL_A::Philips,
             1 => STDSEL_A::Msb,
@@ -284,7 +284,7 @@ impl From<PCMFSSEL_A> for bool {
 impl PCMFSSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PCMFSSEL_A {
+    pub const fn variant(&self) -> PCMFSSEL_A {
         match self.bits {
             false => PCMFSSEL_A::Short,
             true => PCMFSSEL_A::Long,
@@ -345,7 +345,7 @@ impl crate::FieldSpec for OPERSEL_A {
 impl OPERSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OPERSEL_A {
+    pub const fn variant(&self) -> OPERSEL_A {
         match self.bits {
             0 => OPERSEL_A::SlaveTrasmission,
             1 => OPERSEL_A::SlaveReception,
@@ -422,7 +422,7 @@ impl From<ENR_A> for bool {
 impl EN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ENR_A {
+    pub const fn variant(&self) -> ENR_A {
         match self.bits {
             false => ENR_A::Disabled,
             true => ENR_A::Enabled,
@@ -489,7 +489,7 @@ impl From<MSEL_A> for bool {
 impl MSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MSEL_A {
+    pub const fn variant(&self) -> MSEL_A {
         match self.bits {
             false => MSEL_A::Spi,
             true => MSEL_A::I2s,

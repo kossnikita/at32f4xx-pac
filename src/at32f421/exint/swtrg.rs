@@ -21,7 +21,7 @@ impl From<SWT0R_A> for bool {
 impl SWT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SWT0R_A {
+    pub const fn variant(&self) -> SWT0R_A {
         match self.bits {
             false => SWT0R_A::NoTrigger,
             true => SWT0R_A::Triggered,

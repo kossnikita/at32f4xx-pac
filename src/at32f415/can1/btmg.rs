@@ -37,7 +37,7 @@ impl From<LBENR_A> for bool {
 impl LBEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LBENR_A {
+    pub const fn variant(&self) -> LBENR_A {
         match self.bits {
             false => LBENR_A::Disabled,
             true => LBENR_A::Enabled,
@@ -104,7 +104,7 @@ impl From<LOENR_A> for bool {
 impl LOEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LOENR_A {
+    pub const fn variant(&self) -> LOENR_A {
         match self.bits {
             false => LOENR_A::Disabled,
             true => LOENR_A::Enabled,

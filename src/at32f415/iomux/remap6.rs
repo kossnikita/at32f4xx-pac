@@ -25,7 +25,7 @@ impl crate::FieldSpec for CAN1_GMUX_A {
 impl CAN1_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<CAN1_GMUX_A> {
+    pub const fn variant(&self) -> Option<CAN1_GMUX_A> {
         match self.bits {
             0 => Some(CAN1_GMUX_A::Mux0),
             2 => Some(CAN1_GMUX_A::Mux1),
@@ -90,7 +90,7 @@ impl crate::FieldSpec for SDIO1_GMUX_A {
 impl SDIO1_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SDIO1_GMUX_A> {
+    pub const fn variant(&self) -> Option<SDIO1_GMUX_A> {
         match self.bits {
             0 => Some(SDIO1_GMUX_A::Mux0),
             4 => Some(SDIO1_GMUX_A::Mux1),
@@ -182,7 +182,7 @@ impl crate::FieldSpec for USART1_GMUX_A {
 impl USART1_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<USART1_GMUX_A> {
+    pub const fn variant(&self) -> Option<USART1_GMUX_A> {
         match self.bits {
             0 => Some(USART1_GMUX_A::Mux0),
             1 => Some(USART1_GMUX_A::Mux1),
@@ -243,7 +243,7 @@ impl crate::FieldSpec for USART3_GMUX_A {
 impl USART3_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<USART3_GMUX_A> {
+    pub const fn variant(&self) -> Option<USART3_GMUX_A> {
         match self.bits {
             0 => Some(USART3_GMUX_A::Mux0),
             1 => Some(USART3_GMUX_A::Mux1),
@@ -313,7 +313,7 @@ impl crate::FieldSpec for UART4_GMUX_A {
 impl UART4_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<UART4_GMUX_A> {
+    pub const fn variant(&self) -> Option<UART4_GMUX_A> {
         match self.bits {
             0 => Some(UART4_GMUX_A::Mux0),
             1 => Some(UART4_GMUX_A::Mux1),

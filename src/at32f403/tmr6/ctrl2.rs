@@ -37,7 +37,7 @@ impl crate::FieldSpec for PTOS_A {
 impl PTOS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PTOS_A {
+    pub const fn variant(&self) -> PTOS_A {
         match self.bits {
             0 => PTOS_A::Reset,
             1 => PTOS_A::Enable,

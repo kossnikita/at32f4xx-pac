@@ -27,7 +27,7 @@ impl crate::FieldSpec for PULL0_A {
 impl PULL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<PULL0_A> {
+    pub const fn variant(&self) -> Option<PULL0_A> {
         match self.bits {
             0 => Some(PULL0_A::NoPull),
             1 => Some(PULL0_A::PullUp),

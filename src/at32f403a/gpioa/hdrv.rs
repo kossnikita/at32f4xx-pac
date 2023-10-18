@@ -21,7 +21,7 @@ impl From<HDRV0_A> for bool {
 impl HDRV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HDRV0_A {
+    pub const fn variant(&self) -> HDRV0_A {
         match self.bits {
             false => HDRV0_A::NoEffect,
             true => HDRV0_A::MaximumSpeed,

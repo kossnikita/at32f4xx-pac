@@ -25,7 +25,7 @@ impl From<TSTENR_A> for bool {
 impl TSTEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TSTENR_A {
+    pub const fn variant(&self) -> TSTENR_A {
         match self.bits {
             false => TSTENR_A::Disabled,
             true => TSTENR_A::Enabled,

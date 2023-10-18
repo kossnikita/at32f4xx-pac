@@ -19,7 +19,7 @@ impl From<IDT0_A> for bool {
 impl IDT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IDT0_A {
+    pub const fn variant(&self) -> IDT0_A {
         match self.bits {
             false => IDT0_A::Low,
             true => IDT0_A::High,

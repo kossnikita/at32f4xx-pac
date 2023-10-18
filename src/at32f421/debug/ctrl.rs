@@ -21,7 +21,7 @@ impl From<SLEEP_DEBUGR_A> for bool {
 impl SLEEP_DEBUG_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SLEEP_DEBUGR_A {
+    pub const fn variant(&self) -> SLEEP_DEBUGR_A {
         match self.bits {
             false => SLEEP_DEBUGR_A::Disabled,
             true => SLEEP_DEBUGR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<DEEPSLEEP_DEBUGR_A> for bool {
 impl DEEPSLEEP_DEBUG_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DEEPSLEEP_DEBUGR_A {
+    pub const fn variant(&self) -> DEEPSLEEP_DEBUGR_A {
         match self.bits {
             false => DEEPSLEEP_DEBUGR_A::Disabled,
             true => DEEPSLEEP_DEBUGR_A::Enabled,
@@ -156,7 +156,7 @@ impl From<STANDBY_DEBUGR_A> for bool {
 impl STANDBY_DEBUG_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STANDBY_DEBUGR_A {
+    pub const fn variant(&self) -> STANDBY_DEBUGR_A {
         match self.bits {
             false => STANDBY_DEBUGR_A::Disabled,
             true => STANDBY_DEBUGR_A::Enabled,
@@ -223,7 +223,7 @@ impl From<WDT_PAUSE_A> for bool {
 impl WDT_PAUSE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> WDT_PAUSE_A {
+    pub const fn variant(&self) -> WDT_PAUSE_A {
         match self.bits {
             false => WDT_PAUSE_A::Continue,
             true => WDT_PAUSE_A::Pause,
@@ -276,7 +276,7 @@ impl From<WWDT_PAUSE_A> for bool {
 impl WWDT_PAUSE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> WWDT_PAUSE_A {
+    pub const fn variant(&self) -> WWDT_PAUSE_A {
         match self.bits {
             false => WWDT_PAUSE_A::Continue,
             true => WWDT_PAUSE_A::Pause,
@@ -329,7 +329,7 @@ impl From<TMR1_PAUSE_A> for bool {
 impl TMR1_PAUSE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMR1_PAUSE_A {
+    pub const fn variant(&self) -> TMR1_PAUSE_A {
         match self.bits {
             false => TMR1_PAUSE_A::Continue,
             true => TMR1_PAUSE_A::Pause,

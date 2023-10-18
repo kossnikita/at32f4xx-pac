@@ -21,7 +21,7 @@ impl From<CBCTRLR_A> for bool {
 impl CBCTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CBCTRLR_A {
+    pub const fn variant(&self) -> CBCTRLR_A {
         match self.bits {
             false => CBCTRLR_A::Disabled,
             true => CBCTRLR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<CCFS_A> for bool {
 impl CCFS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CCFS_A {
+    pub const fn variant(&self) -> CCFS_A {
         match self.bits {
             false => CCFS_A::Hall,
             true => CCFS_A::Trgin,
@@ -141,7 +141,7 @@ impl From<DRS_A> for bool {
 impl DRS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DRS_A {
+    pub const fn variant(&self) -> DRS_A {
         match self.bits {
             false => DRS_A::CaptureCompare,
             true => DRS_A::Overflow,

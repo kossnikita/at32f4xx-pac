@@ -33,7 +33,7 @@ impl crate::FieldSpec for C1IDIV_A {
 impl CIDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1IDIV_A {
+    pub const fn variant(&self) -> C1IDIV_A {
         match self.bits {
             0 => C1IDIV_A::Every,
             1 => C1IDIV_A::Div2,

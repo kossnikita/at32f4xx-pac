@@ -21,7 +21,7 @@ impl From<CHENR_A> for bool {
 impl CHEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CHENR_A {
+    pub const fn variant(&self) -> CHENR_A {
         match self.bits {
             false => CHENR_A::Disabled,
             true => CHENR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<FDTIENR_A> for bool {
 impl FDTIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FDTIENR_A {
+    pub const fn variant(&self) -> FDTIENR_A {
         match self.bits {
             false => FDTIENR_A::Disabled,
             true => FDTIENR_A::Enabled,
@@ -155,7 +155,7 @@ impl From<HDTIENR_A> for bool {
 impl HDTIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HDTIENR_A {
+    pub const fn variant(&self) -> HDTIENR_A {
         match self.bits {
             false => HDTIENR_A::Disabled,
             true => HDTIENR_A::Enabled,
@@ -222,7 +222,7 @@ impl From<DTERRIENR_A> for bool {
 impl DTERRIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DTERRIENR_A {
+    pub const fn variant(&self) -> DTERRIENR_A {
         match self.bits {
             false => DTERRIENR_A::Disabled,
             true => DTERRIENR_A::Enabled,
@@ -289,7 +289,7 @@ impl From<DTD_A> for bool {
 impl DTD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DTD_A {
+    pub const fn variant(&self) -> DTD_A {
         match self.bits {
             false => DTD_A::Peripherals,
             true => DTD_A::Memory,
@@ -342,7 +342,7 @@ impl From<LMR_A> for bool {
 impl LM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LMR_A {
+    pub const fn variant(&self) -> LMR_A {
         match self.bits {
             false => LMR_A::Disabled,
             true => LMR_A::Enabled,
@@ -409,7 +409,7 @@ impl From<PINCMR_A> for bool {
 impl PINCM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PINCMR_A {
+    pub const fn variant(&self) -> PINCMR_A {
         match self.bits {
             false => PINCMR_A::Disabled,
             true => PINCMR_A::Enabled,
@@ -476,7 +476,7 @@ impl From<MINCMR_A> for bool {
 impl MINCM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MINCMR_A {
+    pub const fn variant(&self) -> MINCMR_A {
         match self.bits {
             false => MINCMR_A::Disabled,
             true => MINCMR_A::Enabled,
@@ -549,7 +549,7 @@ impl crate::FieldSpec for PWIDTH_A {
 impl PWIDTH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<PWIDTH_A> {
+    pub const fn variant(&self) -> Option<PWIDTH_A> {
         match self.bits {
             0 => Some(PWIDTH_A::Bit8),
             1 => Some(PWIDTH_A::Bit16),
@@ -621,7 +621,7 @@ impl crate::FieldSpec for MWIDTH_A {
 impl MWIDTH_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<MWIDTH_A> {
+    pub const fn variant(&self) -> Option<MWIDTH_A> {
         match self.bits {
             0 => Some(MWIDTH_A::Bit8),
             1 => Some(MWIDTH_A::Bit16),
@@ -695,7 +695,7 @@ impl crate::FieldSpec for CHPL_A {
 impl CHPL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CHPL_A {
+    pub const fn variant(&self) -> CHPL_A {
         match self.bits {
             0 => CHPL_A::Low,
             1 => CHPL_A::Medium,
@@ -772,7 +772,7 @@ impl From<M2MR_A> for bool {
 impl M2M_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> M2MR_A {
+    pub const fn variant(&self) -> M2MR_A {
         match self.bits {
             false => M2MR_A::Disabled,
             true => M2MR_A::Enabled,

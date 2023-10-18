@@ -21,7 +21,7 @@ impl From<CBCTRLR_A> for bool {
 impl CBCTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CBCTRLR_A {
+    pub const fn variant(&self) -> CBCTRLR_A {
         match self.bits {
             false => CBCTRLR_A::Disabled,
             true => CBCTRLR_A::Enabled,
@@ -112,7 +112,7 @@ impl crate::FieldSpec for PTOS_A {
 impl PTOS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PTOS_A {
+    pub const fn variant(&self) -> PTOS_A {
         match self.bits {
             0 => PTOS_A::Reset,
             1 => PTOS_A::Enable,

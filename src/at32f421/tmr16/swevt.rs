@@ -19,7 +19,7 @@ impl From<OVFSWTRW_A> for bool {
 impl OVFSWTR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<OVFSWTRW_A> {
+    pub const fn variant(&self) -> Option<OVFSWTRW_A> {
         match self.bits {
             true => Some(OVFSWTRW_A::Overflow),
             _ => None,
@@ -60,7 +60,7 @@ impl From<C1SWTRW_A> for bool {
 impl CSWTR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<C1SWTRW_A> {
+    pub const fn variant(&self) -> Option<C1SWTRW_A> {
         match self.bits {
             true => Some(C1SWTRW_A::Event),
             _ => None,
@@ -101,7 +101,7 @@ impl From<HALLSWTRW_A> for bool {
 impl HALLSWTR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<HALLSWTRW_A> {
+    pub const fn variant(&self) -> Option<HALLSWTRW_A> {
         match self.bits {
             true => Some(HALLSWTRW_A::Event),
             _ => None,
@@ -142,7 +142,7 @@ impl From<BRKSWTRW_A> for bool {
 impl BRKSWTR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<BRKSWTRW_A> {
+    pub const fn variant(&self) -> Option<BRKSWTRW_A> {
         match self.bits {
             true => Some(BRKSWTRW_A::Event),
             _ => None,

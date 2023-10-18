@@ -21,7 +21,7 @@ impl From<DRS_A> for bool {
 impl DRS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DRS_A {
+    pub const fn variant(&self) -> DRS_A {
         match self.bits {
             false => DRS_A::CaptureCompare,
             true => DRS_A::Overflow,
@@ -90,7 +90,7 @@ impl crate::FieldSpec for PTOS_A {
 impl PTOS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PTOS_A {
+    pub const fn variant(&self) -> PTOS_A {
         match self.bits {
             0 => PTOS_A::Reset,
             1 => PTOS_A::Enable,
@@ -211,7 +211,7 @@ impl From<C1INSEL_A> for bool {
 impl C1INSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1INSEL_A {
+    pub const fn variant(&self) -> C1INSEL_A {
         match self.bits {
             false => C1INSEL_A::Ch1,
             true => C1INSEL_A::Xor,

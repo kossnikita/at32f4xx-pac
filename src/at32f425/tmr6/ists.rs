@@ -21,7 +21,7 @@ impl From<OVFIFR_A> for bool {
 impl OVFIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OVFIFR_A {
+    pub const fn variant(&self) -> OVFIFR_A {
         match self.bits {
             false => OVFIFR_A::NoOverflow,
             true => OVFIFR_A::Overflow,

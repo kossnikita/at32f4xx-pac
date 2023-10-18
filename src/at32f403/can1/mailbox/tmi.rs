@@ -21,7 +21,7 @@ impl From<SRR_A> for bool {
 impl SR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SRR_A {
+    pub const fn variant(&self) -> SRR_A {
         match self.bits {
             false => SRR_A::InProgress,
             true => SRR_A::Completed,
@@ -81,7 +81,7 @@ impl From<FRSEL_A> for bool {
 impl FRSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FRSEL_A {
+    pub const fn variant(&self) -> FRSEL_A {
         match self.bits {
             false => FRSEL_A::Data,
             true => FRSEL_A::Remote,
@@ -134,7 +134,7 @@ impl From<IDSEL_A> for bool {
 impl IDSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IDSEL_A {
+    pub const fn variant(&self) -> IDSEL_A {
         match self.bits {
             false => IDSEL_A::Standard,
             true => IDSEL_A::Extended,

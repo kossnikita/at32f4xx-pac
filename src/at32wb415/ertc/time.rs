@@ -45,7 +45,7 @@ impl From<AMPM_A> for bool {
 impl AMPM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> AMPM_A {
+    pub const fn variant(&self) -> AMPM_A {
         match self.bits {
             false => AMPM_A::Am,
             true => AMPM_A::Pm,

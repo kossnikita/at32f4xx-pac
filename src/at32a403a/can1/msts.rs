@@ -21,7 +21,7 @@ impl From<FZC_A> for bool {
 impl FZC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FZC_A {
+    pub const fn variant(&self) -> FZC_A {
         match self.bits {
             false => FZC_A::NotFreeze,
             true => FZC_A::Freeze,
@@ -57,7 +57,7 @@ impl From<DZC_A> for bool {
 impl DZC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DZC_A {
+    pub const fn variant(&self) -> DZC_A {
         match self.bits {
             false => DZC_A::NotSleep,
             true => DZC_A::Sleep,
@@ -93,7 +93,7 @@ impl From<EOIFR_A> for bool {
 impl EOIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> EOIFR_A {
+    pub const fn variant(&self) -> EOIFR_A {
         match self.bits {
             false => EOIFR_A::NoError,
             true => EOIFR_A::Error,
@@ -153,7 +153,7 @@ impl From<QDZIFR_A> for bool {
 impl QDZIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> QDZIFR_A {
+    pub const fn variant(&self) -> QDZIFR_A {
         match self.bits {
             false => QDZIFR_A::InSleep,
             true => QDZIFR_A::SleepExit,
@@ -213,7 +213,7 @@ impl From<EDZIFR_A> for bool {
 impl EDZIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> EDZIFR_A {
+    pub const fn variant(&self) -> EDZIFR_A {
         match self.bits {
             false => EDZIFR_A::NotEnter,
             true => EDZIFR_A::EnterSleep,
@@ -273,7 +273,7 @@ impl From<CUSS_A> for bool {
 impl CUSS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CUSS_A {
+    pub const fn variant(&self) -> CUSS_A {
         match self.bits {
             false => CUSS_A::Idle,
             true => CUSS_A::InProgress,
@@ -309,7 +309,7 @@ impl From<CURS_A> for bool {
 impl CURS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CURS_A {
+    pub const fn variant(&self) -> CURS_A {
         match self.bits {
             false => CURS_A::Idle,
             true => CURS_A::InProgress,
@@ -345,7 +345,7 @@ impl From<LSAMPRX_A> for bool {
 impl LSAMPRX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LSAMPRX_A {
+    pub const fn variant(&self) -> LSAMPRX_A {
         match self.bits {
             false => LSAMPRX_A::Low,
             true => LSAMPRX_A::High,
@@ -381,7 +381,7 @@ impl From<REALRX_A> for bool {
 impl REALRX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> REALRX_A {
+    pub const fn variant(&self) -> REALRX_A {
         match self.bits {
             false => REALRX_A::Low,
             true => REALRX_A::High,

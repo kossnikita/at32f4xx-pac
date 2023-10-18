@@ -25,7 +25,7 @@ impl From<CALOUTR_A> for bool {
 impl CALOUT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CALOUTR_A {
+    pub const fn variant(&self) -> CALOUTR_A {
         match self.bits {
             false => CALOUTR_A::NoOutput,
             true => CALOUTR_A::Output,
@@ -85,7 +85,7 @@ impl From<OUTENR_A> for bool {
 impl OUTEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OUTENR_A {
+    pub const fn variant(&self) -> OUTENR_A {
         match self.bits {
             false => OUTENR_A::Disabled,
             true => OUTENR_A::Enabled,
@@ -145,7 +145,7 @@ impl From<OUTSELR_A> for bool {
 impl OUTSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OUTSELR_A {
+    pub const fn variant(&self) -> OUTSELR_A {
         match self.bits {
             false => OUTSELR_A::Rtc,
             true => OUTSELR_A::Second,

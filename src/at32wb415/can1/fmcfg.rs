@@ -21,7 +21,7 @@ impl From<SEL0_A> for bool {
 impl SEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SEL0_A {
+    pub const fn variant(&self) -> SEL0_A {
         match self.bits {
             false => SEL0_A::Mask,
             true => SEL0_A::List,

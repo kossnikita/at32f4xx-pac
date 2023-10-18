@@ -37,7 +37,7 @@ impl crate::FieldSpec for SMSEL_A {
 impl SMSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SMSEL_A {
+    pub const fn variant(&self) -> SMSEL_A {
         match self.bits {
             0 => SMSEL_A::Disabled,
             1 => SMSEL_A::EncoderA,
@@ -174,7 +174,7 @@ impl crate::FieldSpec for STIS_A {
 impl STIS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STIS_A {
+    pub const fn variant(&self) -> STIS_A {
         match self.bits {
             0 => STIS_A::Is0,
             1 => STIS_A::Is1,
@@ -295,7 +295,7 @@ impl From<STSR_A> for bool {
 impl STS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STSR_A {
+    pub const fn variant(&self) -> STSR_A {
         match self.bits {
             false => STSR_A::Disabled,
             true => STSR_A::Enabled,

@@ -21,7 +21,7 @@ impl From<TMRENR_A> for bool {
 impl TMREN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMRENR_A {
+    pub const fn variant(&self) -> TMRENR_A {
         match self.bits {
             false => TMRENR_A::Disabled,
             true => TMRENR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<OVFENR_A> for bool {
 impl OVFEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OVFENR_A {
+    pub const fn variant(&self) -> OVFENR_A {
         match self.bits {
             false => OVFENR_A::Disabled,
             true => OVFENR_A::Enabled,
@@ -155,7 +155,7 @@ impl From<OVFS_A> for bool {
 impl OVFS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OVFS_A {
+    pub const fn variant(&self) -> OVFS_A {
         match self.bits {
             false => OVFS_A::Any,
             true => OVFS_A::Counter,
@@ -208,7 +208,7 @@ impl From<OCMEN_A> for bool {
 impl OCMEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OCMEN_A {
+    pub const fn variant(&self) -> OCMEN_A {
         match self.bits {
             false => OCMEN_A::Continuous,
             true => OCMEN_A::OneCycle,
@@ -261,7 +261,7 @@ impl From<OWCDIR_A> for bool {
 impl OWCDIR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OWCDIR_A {
+    pub const fn variant(&self) -> OWCDIR_A {
         match self.bits {
             false => OWCDIR_A::Up,
             true => OWCDIR_A::Down,
@@ -322,7 +322,7 @@ impl crate::FieldSpec for TWCMSEL_A {
 impl TWCMSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TWCMSEL_A {
+    pub const fn variant(&self) -> TWCMSEL_A {
         match self.bits {
             0 => TWCMSEL_A::OneWay,
             1 => TWCMSEL_A::Mode1,
@@ -399,7 +399,7 @@ impl From<PRBENR_A> for bool {
 impl PRBEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PRBENR_A {
+    pub const fn variant(&self) -> PRBENR_A {
         match self.bits {
             false => PRBENR_A::Disabled,
             true => PRBENR_A::Enabled,
@@ -472,7 +472,7 @@ impl crate::FieldSpec for CLKDIV_A {
 impl CLKDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<CLKDIV_A> {
+    pub const fn variant(&self) -> Option<CLKDIV_A> {
         match self.bits {
             0 => Some(CLKDIV_A::NoDiv),
             1 => Some(CLKDIV_A::Div2),
@@ -538,7 +538,7 @@ impl From<PMEN_A> for bool {
 impl PMEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PMEN_A {
+    pub const fn variant(&self) -> PMEN_A {
         match self.bits {
             false => PMEN_A::Bit16,
             true => PMEN_A::Bit32,

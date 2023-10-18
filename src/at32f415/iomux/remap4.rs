@@ -27,7 +27,7 @@ impl crate::FieldSpec for TMR1_GMUX_A {
 impl TMR1_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TMR1_GMUX_A> {
+    pub const fn variant(&self) -> Option<TMR1_GMUX_A> {
         match self.bits {
             0 => Some(TMR1_GMUX_A::Mux0),
             1 => Some(TMR1_GMUX_A::Mux1),
@@ -101,7 +101,7 @@ impl crate::FieldSpec for TMR2_GMUX_A {
 impl TMR2_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TMR2_GMUX_A> {
+    pub const fn variant(&self) -> Option<TMR2_GMUX_A> {
         match self.bits {
             0 => Some(TMR2_GMUX_A::Mux0),
             1 => Some(TMR2_GMUX_A::Mux1),
@@ -182,7 +182,7 @@ impl crate::FieldSpec for TMR3_GMUX_A {
 impl TMR3_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TMR3_GMUX_A> {
+    pub const fn variant(&self) -> Option<TMR3_GMUX_A> {
         match self.bits {
             0 => Some(TMR3_GMUX_A::Mux0),
             1 => Some(TMR3_GMUX_A::Mux1),
@@ -241,7 +241,7 @@ impl crate::FieldSpec for TMR5_GMUX_A {
 impl TMR5_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TMR5_GMUX_A> {
+    pub const fn variant(&self) -> Option<TMR5_GMUX_A> {
         match self.bits {
             0 => Some(TMR5_GMUX_A::Mux0),
             1 => Some(TMR5_GMUX_A::Mux1),
@@ -296,7 +296,7 @@ impl From<TMR5CH4_GMUX_A> for bool {
 impl TMR5CH4_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMR5CH4_GMUX_A {
+    pub const fn variant(&self) -> TMR5CH4_GMUX_A {
         match self.bits {
             false => TMR5CH4_GMUX_A::Pa3,
             true => TMR5CH4_GMUX_A::Lick,

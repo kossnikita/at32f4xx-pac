@@ -29,7 +29,7 @@ impl From<MASK1_A> for bool {
 impl MASK1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MASK1_A {
+    pub const fn variant(&self) -> MASK1_A {
         match self.bits {
             false => MASK1_A::NoMask,
             true => MASK1_A::Mask,
@@ -90,7 +90,7 @@ impl From<MASK2_A> for bool {
 impl MASK2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MASK2_A {
+    pub const fn variant(&self) -> MASK2_A {
         match self.bits {
             false => MASK2_A::NoMask,
             true => MASK2_A::Mask,
@@ -151,7 +151,7 @@ impl From<AMPM_A> for bool {
 impl AMPM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> AMPM_A {
+    pub const fn variant(&self) -> AMPM_A {
         match self.bits {
             false => AMPM_A::Am,
             true => AMPM_A::Pm,
@@ -204,7 +204,7 @@ impl From<MASK3_A> for bool {
 impl MASK3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MASK3_A {
+    pub const fn variant(&self) -> MASK3_A {
         match self.bits {
             false => MASK3_A::NoMask,
             true => MASK3_A::Mask,
@@ -265,7 +265,7 @@ impl From<WKSEL_A> for bool {
 impl WKSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> WKSEL_A {
+    pub const fn variant(&self) -> WKSEL_A {
         match self.bits {
             false => WKSEL_A::Date,
             true => WKSEL_A::WeekDay,
@@ -318,7 +318,7 @@ impl From<MASK4_A> for bool {
 impl MASK4_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MASK4_A {
+    pub const fn variant(&self) -> MASK4_A {
         match self.bits {
             false => MASK4_A::NoMask,
             true => MASK4_A::Mask,

@@ -21,7 +21,7 @@ impl From<EVTEN0R_A> for bool {
 impl EVTEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> EVTEN0R_A {
+    pub const fn variant(&self) -> EVTEN0R_A {
         match self.bits {
             false => EVTEN0R_A::Disabled,
             true => EVTEN0R_A::Enabled,

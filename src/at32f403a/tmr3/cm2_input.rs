@@ -29,7 +29,7 @@ impl crate::FieldSpec for C3C_A {
 impl C3C_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C3C_A {
+    pub const fn variant(&self) -> C3C_A {
         match self.bits {
             0 => C3C_A::Output,
             1 => C3C_A::C3ifp3,
@@ -114,7 +114,7 @@ impl crate::FieldSpec for C3IDIV_A {
 impl CIDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C3IDIV_A {
+    pub const fn variant(&self) -> C3IDIV_A {
         match self.bits {
             0 => C3IDIV_A::Every,
             1 => C3IDIV_A::Div2,
@@ -203,7 +203,7 @@ impl crate::FieldSpec for C4C_A {
 impl C4C_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C4C_A {
+    pub const fn variant(&self) -> C4C_A {
         match self.bits {
             0 => C4C_A::Output,
             1 => C4C_A::C4ifp4,

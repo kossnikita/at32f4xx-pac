@@ -37,7 +37,7 @@ impl crate::FieldSpec for DIV_A {
 impl DIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DIV_A {
+    pub const fn variant(&self) -> DIV_A {
         match self.bits {
             0 => DIV_A::Div4,
             1 => DIV_A::Div8,

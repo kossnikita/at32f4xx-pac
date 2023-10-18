@@ -21,7 +21,7 @@ impl From<ODT0R_A> for bool {
 impl ODT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ODT0R_A {
+    pub const fn variant(&self) -> ODT0R_A {
         match self.bits {
             false => ODT0R_A::PullDown,
             true => ODT0R_A::PullUp,

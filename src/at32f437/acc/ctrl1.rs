@@ -21,7 +21,7 @@ impl From<CALONR_A> for bool {
 impl CALON_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CALONR_A {
+    pub const fn variant(&self) -> CALONR_A {
         match self.bits {
             false => CALONR_A::Disabled,
             true => CALONR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<ENTRIM_A> for bool {
 impl ENTRIM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ENTRIM_A {
+    pub const fn variant(&self) -> ENTRIM_A {
         match self.bits {
             false => ENTRIM_A::Hickcal,
             true => ENTRIM_A::Hicktrim,
@@ -145,7 +145,7 @@ impl From<EIENR_A> for bool {
 impl EIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> EIENR_A {
+    pub const fn variant(&self) -> EIENR_A {
         match self.bits {
             false => EIENR_A::Disabled,
             true => EIENR_A::Enabled,
@@ -212,7 +212,7 @@ impl From<CALRDYIENR_A> for bool {
 impl CALRDYIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CALRDYIENR_A {
+    pub const fn variant(&self) -> CALRDYIENR_A {
         match self.bits {
             false => CALRDYIENR_A::Disabled,
             true => CALRDYIENR_A::Enabled,

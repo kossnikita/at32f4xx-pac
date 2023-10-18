@@ -25,7 +25,7 @@ impl crate::FieldSpec for TMR9_GMUX_A {
 impl TMR9_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TMR9_GMUX_A> {
+    pub const fn variant(&self) -> Option<TMR9_GMUX_A> {
         match self.bits {
             0 => Some(TMR9_GMUX_A::Mux0),
             2 => Some(TMR9_GMUX_A::Mux1),
@@ -84,7 +84,7 @@ impl crate::FieldSpec for TMR10_GMUX_A {
 impl TMR10_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TMR10_GMUX_A> {
+    pub const fn variant(&self) -> Option<TMR10_GMUX_A> {
         match self.bits {
             0 => Some(TMR10_GMUX_A::Mux0),
             2 => Some(TMR10_GMUX_A::Mux1),
@@ -143,7 +143,7 @@ impl crate::FieldSpec for TMR11_GMUX_A {
 impl TMR11_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TMR11_GMUX_A> {
+    pub const fn variant(&self) -> Option<TMR11_GMUX_A> {
         match self.bits {
             0 => Some(TMR11_GMUX_A::Mux0),
             2 => Some(TMR11_GMUX_A::Mux1),

@@ -21,7 +21,7 @@ impl From<FZENR_A> for bool {
 impl FZEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FZENR_A {
+    pub const fn variant(&self) -> FZENR_A {
         match self.bits {
             false => FZENR_A::Disabled,
             true => FZENR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<DZENR_A> for bool {
 impl DZEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DZENR_A {
+    pub const fn variant(&self) -> DZENR_A {
         match self.bits {
             false => DZENR_A::Disabled,
             true => DZENR_A::Enabled,
@@ -155,7 +155,7 @@ impl From<MMSSR_A> for bool {
 impl MMSSR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MMSSR_A {
+    pub const fn variant(&self) -> MMSSR_A {
         match self.bits {
             false => MMSSR_A::SmallestIdentifer,
             true => MMSSR_A::FirstRequestOrder,
@@ -208,7 +208,7 @@ impl From<MDRSEL_A> for bool {
 impl MDRSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MDRSEL_A {
+    pub const fn variant(&self) -> MDRSEL_A {
         match self.bits {
             false => MDRSEL_A::Previous,
             true => MDRSEL_A::Incoming,
@@ -261,7 +261,7 @@ impl From<PRSFENR_A> for bool {
 impl PRSFEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PRSFENR_A {
+    pub const fn variant(&self) -> PRSFENR_A {
         match self.bits {
             false => PRSFENR_A::Disabled,
             true => PRSFENR_A::Enabled,
@@ -328,7 +328,7 @@ impl From<AEDENR_A> for bool {
 impl AEDEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> AEDENR_A {
+    pub const fn variant(&self) -> AEDENR_A {
         match self.bits {
             false => AEDENR_A::Disabled,
             true => AEDENR_A::Enabled,
@@ -395,7 +395,7 @@ impl From<AEBOENR_A> for bool {
 impl AEBOEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> AEBOENR_A {
+    pub const fn variant(&self) -> AEBOENR_A {
         match self.bits {
             false => AEBOENR_A::Disabled,
             true => AEBOENR_A::Enabled,
@@ -462,7 +462,7 @@ impl From<TTCENR_A> for bool {
 impl TTCEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TTCENR_A {
+    pub const fn variant(&self) -> TTCENR_A {
         match self.bits {
             false => TTCENR_A::Disabled,
             true => TTCENR_A::Enabled,
@@ -529,7 +529,7 @@ impl From<SPRSTR_A> for bool {
 impl SPRST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SPRSTR_A {
+    pub const fn variant(&self) -> SPRSTR_A {
         match self.bits {
             false => SPRSTR_A::Normal,
             true => SPRSTR_A::Reset,
@@ -589,7 +589,7 @@ impl From<PTD_A> for bool {
 impl PTD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PTD_A {
+    pub const fn variant(&self) -> PTD_A {
         match self.bits {
             false => PTD_A::Work,
             true => PTD_A::Prohibited,

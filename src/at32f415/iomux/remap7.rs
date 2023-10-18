@@ -21,7 +21,7 @@ impl From<ADC1_ETP_GMUX_A> for bool {
 impl ADC1_ETP_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ADC1_ETP_GMUX_A {
+    pub const fn variant(&self) -> ADC1_ETP_GMUX_A {
         match self.bits {
             false => ADC1_ETP_GMUX_A::Exint15,
             true => ADC1_ETP_GMUX_A::Tmr1ch4,
@@ -74,7 +74,7 @@ impl From<ADC1_ETO_GMUX_A> for bool {
 impl ADC1_ETO_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ADC1_ETO_GMUX_A {
+    pub const fn variant(&self) -> ADC1_ETO_GMUX_A {
         match self.bits {
             false => ADC1_ETO_GMUX_A::Exint11,
             true => ADC1_ETO_GMUX_A::Tmr1Trgo,
@@ -135,7 +135,7 @@ impl crate::FieldSpec for SWJTAG_GMUX_A {
 impl SWJTAG_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SWJTAG_GMUX_A> {
+    pub const fn variant(&self) -> Option<SWJTAG_GMUX_A> {
         match self.bits {
             0 => Some(SWJTAG_GMUX_A::SwdandJtag),
             1 => Some(SWJTAG_GMUX_A::SwdandJtagwithoutNjtrst),
@@ -212,7 +212,7 @@ impl From<PD01_GMUX_A> for bool {
 impl PD01_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PD01_GMUX_A {
+    pub const fn variant(&self) -> PD01_GMUX_A {
         match self.bits {
             false => PD01_GMUX_A::Mux0,
             true => PD01_GMUX_A::Hext,

@@ -19,7 +19,7 @@ impl From<CALRDY_A> for bool {
 impl CALRDY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CALRDY_A {
+    pub const fn variant(&self) -> CALRDY_A {
         match self.bits {
             false => CALRDY_A::NotReady,
             true => CALRDY_A::Ready,
@@ -55,7 +55,7 @@ impl From<RSLOST_A> for bool {
 impl RSLOST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RSLOST_A {
+    pub const fn variant(&self) -> RSLOST_A {
         match self.bits {
             false => RSLOST_A::NotLost,
             true => RSLOST_A::Lost,

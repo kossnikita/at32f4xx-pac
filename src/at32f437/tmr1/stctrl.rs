@@ -37,7 +37,7 @@ impl crate::FieldSpec for SMSEL_A {
 impl SMSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SMSEL_A {
+    pub const fn variant(&self) -> SMSEL_A {
         match self.bits {
             0 => SMSEL_A::Disabled,
             1 => SMSEL_A::EncoderA,
@@ -174,7 +174,7 @@ impl crate::FieldSpec for STIS_A {
 impl STIS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STIS_A {
+    pub const fn variant(&self) -> STIS_A {
         match self.bits {
             0 => STIS_A::Is0,
             1 => STIS_A::Is1,
@@ -295,7 +295,7 @@ impl From<STSR_A> for bool {
 impl STS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STSR_A {
+    pub const fn variant(&self) -> STSR_A {
         match self.bits {
             false => STSR_A::Disabled,
             true => STSR_A::Enabled,
@@ -394,7 +394,7 @@ impl crate::FieldSpec for ESF_A {
 impl ESF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ESF_A {
+    pub const fn variant(&self) -> ESF_A {
         match self.bits {
             0 => ESF_A::NoFilter,
             1 => ESF_A::N2,
@@ -611,7 +611,7 @@ impl crate::FieldSpec for ESDIV_A {
 impl ESDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ESDIV_A {
+    pub const fn variant(&self) -> ESDIV_A {
         match self.bits {
             0 => ESDIV_A::Normal,
             1 => ESDIV_A::Div2,
@@ -688,7 +688,7 @@ impl From<ECMBENR_A> for bool {
 impl ECMBEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ECMBENR_A {
+    pub const fn variant(&self) -> ECMBENR_A {
         match self.bits {
             false => ECMBENR_A::Disabled,
             true => ECMBENR_A::Enabled,
@@ -755,7 +755,7 @@ impl From<ESP_A> for bool {
 impl ESP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ESP_A {
+    pub const fn variant(&self) -> ESP_A {
         match self.bits {
             false => ESP_A::High,
             true => ESP_A::Low,

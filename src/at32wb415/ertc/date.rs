@@ -51,7 +51,7 @@ impl crate::FieldSpec for WK_A {
 impl WK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<WK_A> {
+    pub const fn variant(&self) -> Option<WK_A> {
         match self.bits {
             1 => Some(WK_A::Monday),
             2 => Some(WK_A::Tuesday),

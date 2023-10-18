@@ -29,7 +29,7 @@ impl crate::FieldSpec for C3C_A {
 impl C3C_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C3C_A {
+    pub const fn variant(&self) -> C3C_A {
         match self.bits {
             0 => C3C_A::Output,
             1 => C3C_A::C3ifp3,
@@ -106,7 +106,7 @@ impl From<C3OIEN_A> for bool {
 impl COIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C3OIEN_A {
+    pub const fn variant(&self) -> C3OIEN_A {
         match self.bits {
             false => C3OIEN_A::Compare,
             true => C3OIEN_A::Immediately,
@@ -159,7 +159,7 @@ impl From<C3OBENR_A> for bool {
 impl COBEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C3OBENR_A {
+    pub const fn variant(&self) -> C3OBENR_A {
         match self.bits {
             false => C3OBENR_A::Disabled,
             true => C3OBENR_A::Enabled,
@@ -230,7 +230,7 @@ impl From<C3OSENR_A> for bool {
 impl COSEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C3OSENR_A {
+    pub const fn variant(&self) -> C3OSENR_A {
         match self.bits {
             false => C3OSENR_A::Disabled,
             true => C3OSENR_A::Enabled,
@@ -305,7 +305,7 @@ impl crate::FieldSpec for C4C_A {
 impl C4C_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C4C_A {
+    pub const fn variant(&self) -> C4C_A {
         match self.bits {
             0 => C4C_A::Output,
             1 => C4C_A::C4ifp4,

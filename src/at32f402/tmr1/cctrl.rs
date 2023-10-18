@@ -21,7 +21,7 @@ impl From<C1ENR_A> for bool {
 impl CEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1ENR_A {
+    pub const fn variant(&self) -> C1ENR_A {
         match self.bits {
             false => C1ENR_A::Disabled,
             true => C1ENR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<C1P_A> for bool {
 impl CP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> C1P_A {
+    pub const fn variant(&self) -> C1P_A {
         match self.bits {
             false => C1P_A::High,
             true => C1P_A::Low,

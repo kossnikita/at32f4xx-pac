@@ -21,7 +21,7 @@ impl From<RDBF_A> for bool {
 impl RDBF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RDBF_A {
+    pub const fn variant(&self) -> RDBF_A {
         match self.bits {
             false => RDBF_A::NotFull,
             true => RDBF_A::Full,
@@ -57,7 +57,7 @@ impl From<TDBE_A> for bool {
 impl TDBE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TDBE_A {
+    pub const fn variant(&self) -> TDBE_A {
         match self.bits {
             false => TDBE_A::NotEmpty,
             true => TDBE_A::Empty,
@@ -93,7 +93,7 @@ impl From<ACS_A> for bool {
 impl ACS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ACS_A {
+    pub const fn variant(&self) -> ACS_A {
         match self.bits {
             false => ACS_A::Left,
             true => ACS_A::Right,
@@ -129,7 +129,7 @@ impl From<TUERR_A> for bool {
 impl TUERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TUERR_A {
+    pub const fn variant(&self) -> TUERR_A {
         match self.bits {
             false => TUERR_A::NoError,
             true => TUERR_A::Underload,
@@ -165,7 +165,7 @@ impl From<CCERRR_A> for bool {
 impl CCERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CCERRR_A {
+    pub const fn variant(&self) -> CCERRR_A {
         match self.bits {
             false => CCERRR_A::NoError,
             true => CCERRR_A::Error,
@@ -225,7 +225,7 @@ impl From<MMERR_A> for bool {
 impl MMERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MMERR_A {
+    pub const fn variant(&self) -> MMERR_A {
         match self.bits {
             false => MMERR_A::NoError,
             true => MMERR_A::Error,
@@ -261,7 +261,7 @@ impl From<ROERR_A> for bool {
 impl ROERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ROERR_A {
+    pub const fn variant(&self) -> ROERR_A {
         match self.bits {
             false => ROERR_A::NoError,
             true => ROERR_A::Overflow,
@@ -297,7 +297,7 @@ impl From<BF_A> for bool {
 impl BF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BF_A {
+    pub const fn variant(&self) -> BF_A {
         match self.bits {
             false => BF_A::Idle,
             true => BF_A::Busy,

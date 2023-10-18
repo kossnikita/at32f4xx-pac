@@ -29,7 +29,7 @@ impl crate::FieldSpec for TMR1_BK1_CMP_GMUX_A {
 impl TMR1_BK1_CMP_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMR1_BK1_CMP_GMUX_A {
+    pub const fn variant(&self) -> TMR1_BK1_CMP_GMUX_A {
         match self.bits {
             0 => TMR1_BK1_CMP_GMUX_A::Mux0,
             1 => TMR1_BK1_CMP_GMUX_A::Mux1,
@@ -115,7 +115,7 @@ impl crate::FieldSpec for TMR1_CH1_CMP_GMUX_A {
 impl TMR1_CH1_CMP_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMR1_CH1_CMP_GMUX_A {
+    pub const fn variant(&self) -> TMR1_CH1_CMP_GMUX_A {
         match self.bits {
             0 => TMR1_CH1_CMP_GMUX_A::Mux0,
             1 => TMR1_CH1_CMP_GMUX_A::Mux1,
@@ -201,7 +201,7 @@ impl crate::FieldSpec for TMR2_CH4_CMP_GMUX_A {
 impl TMR2_CH4_CMP_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMR2_CH4_CMP_GMUX_A {
+    pub const fn variant(&self) -> TMR2_CH4_CMP_GMUX_A {
         match self.bits {
             0 => TMR2_CH4_CMP_GMUX_A::Mux0,
             1 => TMR2_CH4_CMP_GMUX_A::Mux1,
@@ -287,7 +287,7 @@ impl crate::FieldSpec for TMR3_CH1_CMP_GMUX_A {
 impl TMR3_CH1_CMP_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMR3_CH1_CMP_GMUX_A {
+    pub const fn variant(&self) -> TMR3_CH1_CMP_GMUX_A {
         match self.bits {
             0 => TMR3_CH1_CMP_GMUX_A::Mux0,
             1 => TMR3_CH1_CMP_GMUX_A::Mux1,

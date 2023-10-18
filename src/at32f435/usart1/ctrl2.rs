@@ -29,7 +29,7 @@ impl From<BFBN_A> for bool {
 impl BFBN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFBN_A {
+    pub const fn variant(&self) -> BFBN_A {
         match self.bits {
             false => BFBN_A::Bit10,
             true => BFBN_A::Bit11,
@@ -82,7 +82,7 @@ impl From<BFIENR_A> for bool {
 impl BFIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFIENR_A {
+    pub const fn variant(&self) -> BFIENR_A {
         match self.bits {
             false => BFIENR_A::Disabled,
             true => BFIENR_A::Enabled,
@@ -149,7 +149,7 @@ impl From<LBCPR_A> for bool {
 impl LBCP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LBCPR_A {
+    pub const fn variant(&self) -> LBCPR_A {
         match self.bits {
             false => LBCPR_A::Disabled,
             true => LBCPR_A::Enabled,
@@ -216,7 +216,7 @@ impl From<CLKPHA_A> for bool {
 impl CLKPHA_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CLKPHA_A {
+    pub const fn variant(&self) -> CLKPHA_A {
         match self.bits {
             false => CLKPHA_A::First,
             true => CLKPHA_A::Second,
@@ -269,7 +269,7 @@ impl From<CLKPOL_A> for bool {
 impl CLKPOL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CLKPOL_A {
+    pub const fn variant(&self) -> CLKPOL_A {
         match self.bits {
             false => CLKPOL_A::Low,
             true => CLKPOL_A::High,
@@ -322,7 +322,7 @@ impl From<CLKENR_A> for bool {
 impl CLKEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CLKENR_A {
+    pub const fn variant(&self) -> CLKENR_A {
         match self.bits {
             false => CLKENR_A::Disabled,
             true => CLKENR_A::Enabled,
@@ -397,7 +397,7 @@ impl crate::FieldSpec for STOPBN_A {
 impl STOPBN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STOPBN_A {
+    pub const fn variant(&self) -> STOPBN_A {
         match self.bits {
             0 => STOPBN_A::Bit1,
             1 => STOPBN_A::Bit05,
@@ -474,7 +474,7 @@ impl From<LINENR_A> for bool {
 impl LINEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LINENR_A {
+    pub const fn variant(&self) -> LINENR_A {
         match self.bits {
             false => LINENR_A::Disabled,
             true => LINENR_A::Enabled,

@@ -25,7 +25,7 @@ impl From<CCEIENR_A> for bool {
 impl CCEIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CCEIENR_A {
+    pub const fn variant(&self) -> CCEIENR_A {
         match self.bits {
             false => CCEIENR_A::Disabled,
             true => CCEIENR_A::Enabled,
@@ -92,7 +92,7 @@ impl From<VMORIENR_A> for bool {
 impl VMORIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> VMORIENR_A {
+    pub const fn variant(&self) -> VMORIENR_A {
         match self.bits {
             false => VMORIENR_A::Disabled,
             true => VMORIENR_A::Enabled,
@@ -163,7 +163,7 @@ impl From<SQENR_A> for bool {
 impl SQEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SQENR_A {
+    pub const fn variant(&self) -> SQENR_A {
         match self.bits {
             false => SQENR_A::Disabled,
             true => SQENR_A::Enabled,
@@ -230,7 +230,7 @@ impl From<VMSGEN_A> for bool {
 impl VMSGEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> VMSGEN_A {
+    pub const fn variant(&self) -> VMSGEN_A {
         match self.bits {
             false => VMSGEN_A::All,
             true => VMSGEN_A::Single,
@@ -283,7 +283,7 @@ impl From<PCAUTOENR_A> for bool {
 impl PCAUTOEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PCAUTOENR_A {
+    pub const fn variant(&self) -> PCAUTOENR_A {
         match self.bits {
             false => PCAUTOENR_A::Disabled,
             true => PCAUTOENR_A::Enabled,
@@ -350,7 +350,7 @@ impl From<OCPENR_A> for bool {
 impl OCPEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OCPENR_A {
+    pub const fn variant(&self) -> OCPENR_A {
         match self.bits {
             false => OCPENR_A::Disabled,
             true => OCPENR_A::Enabled,
@@ -425,7 +425,7 @@ impl From<PCVMENR_A> for bool {
 impl PCVMEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PCVMENR_A {
+    pub const fn variant(&self) -> PCVMENR_A {
         match self.bits {
             false => PCVMENR_A::Disabled,
             true => PCVMENR_A::Enabled,

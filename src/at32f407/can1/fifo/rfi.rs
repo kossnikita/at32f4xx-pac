@@ -19,7 +19,7 @@ impl From<FRI_A> for bool {
 impl FRI_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FRI_A {
+    pub const fn variant(&self) -> FRI_A {
         match self.bits {
             false => FRI_A::Data,
             true => FRI_A::Remote,
@@ -55,7 +55,7 @@ impl From<IDI_A> for bool {
 impl IDI_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IDI_A {
+    pub const fn variant(&self) -> IDI_A {
         match self.bits {
             false => IDI_A::Standard,
             true => IDI_A::Extended,

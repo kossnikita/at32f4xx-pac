@@ -21,7 +21,7 @@ impl From<VMORR_A> for bool {
 impl VMOR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> VMORR_A {
+    pub const fn variant(&self) -> VMORR_A {
         match self.bits {
             false => VMORR_A::InRange,
             true => VMORR_A::OutOfRange,
@@ -81,7 +81,7 @@ impl From<CCER_A> for bool {
 impl CCE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CCER_A {
+    pub const fn variant(&self) -> CCER_A {
         match self.bits {
             false => CCER_A::NotComplete,
             true => CCER_A::Complete,
@@ -145,7 +145,7 @@ impl From<PCCSR_A> for bool {
 impl PCCS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PCCSR_A {
+    pub const fn variant(&self) -> PCCSR_A {
         match self.bits {
             false => PCCSR_A::Idle,
             true => PCCSR_A::Started,

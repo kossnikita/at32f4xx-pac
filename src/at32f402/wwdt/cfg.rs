@@ -33,7 +33,7 @@ impl crate::FieldSpec for DIV_A {
 impl DIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DIV_A {
+    pub const fn variant(&self) -> DIV_A {
         match self.bits {
             0 => DIV_A::Div4096,
             1 => DIV_A::Div8192,
@@ -110,7 +110,7 @@ impl From<RLDIENR_A> for bool {
 impl RLDIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RLDIENR_A {
+    pub const fn variant(&self) -> RLDIENR_A {
         match self.bits {
             false => RLDIENR_A::Disabled,
             true => RLDIENR_A::Enabled,

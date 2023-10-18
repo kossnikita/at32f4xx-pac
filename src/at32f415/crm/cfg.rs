@@ -27,7 +27,7 @@ impl crate::FieldSpec for SCLKSEL_A {
 impl SCLKSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SCLKSEL_A> {
+    pub const fn variant(&self) -> Option<SCLKSEL_A> {
         match self.bits {
             0 => Some(SCLKSEL_A::Hick),
             1 => Some(SCLKSEL_A::Hext),
@@ -99,7 +99,7 @@ impl crate::FieldSpec for SCLKSTS_A {
 impl SCLKSTS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SCLKSTS_A> {
+    pub const fn variant(&self) -> Option<SCLKSTS_A> {
         match self.bits {
             0 => Some(SCLKSTS_A::Hick),
             1 => Some(SCLKSTS_A::Hext),
@@ -160,7 +160,7 @@ impl crate::FieldSpec for AHBDIV_A {
 impl AHBDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<AHBDIV_A> {
+    pub const fn variant(&self) -> Option<AHBDIV_A> {
         match self.bits {
             0 => Some(AHBDIV_A::Sclk),
             8 => Some(AHBDIV_A::Div2),
@@ -302,7 +302,7 @@ impl crate::FieldSpec for APB1DIV_A {
 impl APB1DIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<APB1DIV_A> {
+    pub const fn variant(&self) -> Option<APB1DIV_A> {
         match self.bits {
             0 => Some(APB1DIV_A::Hclk),
             4 => Some(APB1DIV_A::Div2),
@@ -402,7 +402,7 @@ impl From<PLLHEXTDIV_A> for bool {
 impl PLLHEXTDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PLLHEXTDIV_A {
+    pub const fn variant(&self) -> PLLHEXTDIV_A {
         match self.bits {
             false => PLLHEXTDIV_A::Hext,
             true => PLLHEXTDIV_A::Div2,

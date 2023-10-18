@@ -21,7 +21,7 @@ impl From<TM0TCFR_A> for bool {
 impl TMTCF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TM0TCFR_A {
+    pub const fn variant(&self) -> TM0TCFR_A {
         match self.bits {
             false => TM0TCFR_A::InProgress,
             true => TM0TCFR_A::Completed,
@@ -81,7 +81,7 @@ impl From<TM0TSFR_A> for bool {
 impl TMTSF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TM0TSFR_A {
+    pub const fn variant(&self) -> TM0TSFR_A {
         match self.bits {
             false => TM0TSFR_A::Failed,
             true => TM0TSFR_A::Successful,
@@ -141,7 +141,7 @@ impl From<TM0ALFR_A> for bool {
 impl TMALF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TM0ALFR_A {
+    pub const fn variant(&self) -> TM0ALFR_A {
         match self.bits {
             false => TM0ALFR_A::NoLost,
             true => TM0ALFR_A::Lost,
@@ -201,7 +201,7 @@ impl From<TM0TEFR_A> for bool {
 impl TMTEF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TM0TEFR_A {
+    pub const fn variant(&self) -> TM0TEFR_A {
         match self.bits {
             false => TM0TEFR_A::NoError,
             true => TM0TEFR_A::Error,
@@ -261,7 +261,7 @@ impl From<TM0CTR_A> for bool {
 impl TMCT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TM0CTR_A {
+    pub const fn variant(&self) -> TM0CTR_A {
         match self.bits {
             false => TM0CTR_A::NoCancelling,
             true => TM0CTR_A::Cancelling,
@@ -323,7 +323,7 @@ impl From<TM0EF_A> for bool {
 impl TMEF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TM0EF_A {
+    pub const fn variant(&self) -> TM0EF_A {
         match self.bits {
             false => TM0EF_A::NotEmpty,
             true => TM0EF_A::Empty,
@@ -359,7 +359,7 @@ impl From<TM0LPF_A> for bool {
 impl TMLPF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TM0LPF_A {
+    pub const fn variant(&self) -> TM0LPF_A {
         match self.bits {
             false => TM0LPF_A::NotLowest,
             true => TM0LPF_A::Lowest,

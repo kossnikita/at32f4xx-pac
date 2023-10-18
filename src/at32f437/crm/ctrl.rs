@@ -21,7 +21,7 @@ impl From<HICKENR_A> for bool {
 impl HICKEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HICKENR_A {
+    pub const fn variant(&self) -> HICKENR_A {
         match self.bits {
             false => HICKENR_A::Disabled,
             true => HICKENR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<HICKSTBLR_A> for bool {
 impl HICKSTBL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HICKSTBLR_A {
+    pub const fn variant(&self) -> HICKSTBLR_A {
         match self.bits {
             false => HICKSTBLR_A::NotReady,
             true => HICKSTBLR_A::Ready,
@@ -130,7 +130,7 @@ impl From<HEXTENR_A> for bool {
 impl HEXTEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HEXTENR_A {
+    pub const fn variant(&self) -> HEXTENR_A {
         match self.bits {
             false => HEXTENR_A::Disabled,
             true => HEXTENR_A::Enabled,
@@ -197,7 +197,7 @@ impl From<HEXTSTBLR_A> for bool {
 impl HEXTSTBL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HEXTSTBLR_A {
+    pub const fn variant(&self) -> HEXTSTBLR_A {
         match self.bits {
             false => HEXTSTBLR_A::NotReady,
             true => HEXTSTBLR_A::Ready,
@@ -233,7 +233,7 @@ impl From<HEXTBYPSR_A> for bool {
 impl HEXTBYPS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> HEXTBYPSR_A {
+    pub const fn variant(&self) -> HEXTBYPSR_A {
         match self.bits {
             false => HEXTBYPSR_A::Disabled,
             true => HEXTBYPSR_A::Enabled,
@@ -300,7 +300,7 @@ impl From<CFDENR_A> for bool {
 impl CFDEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CFDENR_A {
+    pub const fn variant(&self) -> CFDENR_A {
         match self.bits {
             false => CFDENR_A::Disabled,
             true => CFDENR_A::Enabled,
@@ -367,7 +367,7 @@ impl From<PLLENR_A> for bool {
 impl PLLEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PLLENR_A {
+    pub const fn variant(&self) -> PLLENR_A {
         match self.bits {
             false => PLLENR_A::Disabled,
             true => PLLENR_A::Enabled,
@@ -434,7 +434,7 @@ impl From<PLLSTBLR_A> for bool {
 impl PLLSTBL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PLLSTBLR_A {
+    pub const fn variant(&self) -> PLLSTBLR_A {
         match self.bits {
             false => PLLSTBLR_A::NotReady,
             true => PLLSTBLR_A::Ready,

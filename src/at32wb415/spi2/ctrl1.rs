@@ -21,7 +21,7 @@ impl From<CLKPHA_A> for bool {
 impl CLKPHA_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CLKPHA_A {
+    pub const fn variant(&self) -> CLKPHA_A {
         match self.bits {
             false => CLKPHA_A::First,
             true => CLKPHA_A::Second,
@@ -74,7 +74,7 @@ impl From<CLKPOL_A> for bool {
 impl CLKPOL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CLKPOL_A {
+    pub const fn variant(&self) -> CLKPOL_A {
         match self.bits {
             false => CLKPOL_A::Low,
             true => CLKPOL_A::High,
@@ -127,7 +127,7 @@ impl From<MSTEN_A> for bool {
 impl MSTEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MSTEN_A {
+    pub const fn variant(&self) -> MSTEN_A {
         match self.bits {
             false => MSTEN_A::Slave,
             true => MSTEN_A::Master,
@@ -184,7 +184,7 @@ impl From<SPIENR_A> for bool {
 impl SPIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SPIENR_A {
+    pub const fn variant(&self) -> SPIENR_A {
         match self.bits {
             false => SPIENR_A::Disabled,
             true => SPIENR_A::Enabled,
@@ -251,7 +251,7 @@ impl From<LTF_A> for bool {
 impl LTF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LTF_A {
+    pub const fn variant(&self) -> LTF_A {
         match self.bits {
             false => LTF_A::Msb,
             true => LTF_A::Lsb,
@@ -304,7 +304,7 @@ impl From<SWCSIL_A> for bool {
 impl SWCSIL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SWCSIL_A {
+    pub const fn variant(&self) -> SWCSIL_A {
         match self.bits {
             false => SWCSIL_A::Low,
             true => SWCSIL_A::High,
@@ -357,7 +357,7 @@ impl From<SWCSENR_A> for bool {
 impl SWCSEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SWCSENR_A {
+    pub const fn variant(&self) -> SWCSENR_A {
         match self.bits {
             false => SWCSENR_A::Disabled,
             true => SWCSENR_A::Enabled,
@@ -424,7 +424,7 @@ impl From<ORA_A> for bool {
 impl ORA_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ORA_A {
+    pub const fn variant(&self) -> ORA_A {
         match self.bits {
             false => ORA_A::RxTx,
             true => ORA_A::ReceiveOnly,
@@ -477,7 +477,7 @@ impl From<FBN_A> for bool {
 impl FBN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FBN_A {
+    pub const fn variant(&self) -> FBN_A {
         match self.bits {
             false => FBN_A::Bit8,
             true => FBN_A::Bit16,
@@ -530,7 +530,7 @@ impl From<NTC_A> for bool {
 impl NTC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> NTC_A {
+    pub const fn variant(&self) -> NTC_A {
         match self.bits {
             false => NTC_A::Normal,
             true => NTC_A::Crc,
@@ -583,7 +583,7 @@ impl From<CCENR_A> for bool {
 impl CCEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CCENR_A {
+    pub const fn variant(&self) -> CCENR_A {
         match self.bits {
             false => CCENR_A::Disabled,
             true => CCENR_A::Enabled,
@@ -650,7 +650,7 @@ impl From<SLBTD_A> for bool {
 impl SLBTD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SLBTD_A {
+    pub const fn variant(&self) -> SLBTD_A {
         match self.bits {
             false => SLBTD_A::Receive,
             true => SLBTD_A::Transmit,
@@ -703,7 +703,7 @@ impl From<SLBENR_A> for bool {
 impl SLBEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SLBENR_A {
+    pub const fn variant(&self) -> SLBENR_A {
         match self.bits {
             false => SLBENR_A::Disabled,
             true => SLBENR_A::Enabled,

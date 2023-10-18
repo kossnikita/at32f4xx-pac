@@ -21,7 +21,7 @@ impl From<PERR_A> for bool {
 impl PERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PERR_A {
+    pub const fn variant(&self) -> PERR_A {
         match self.bits {
             false => PERR_A::NoError,
             true => PERR_A::Error,
@@ -57,7 +57,7 @@ impl From<FERR_A> for bool {
 impl FERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FERR_A {
+    pub const fn variant(&self) -> FERR_A {
         match self.bits {
             false => FERR_A::NoError,
             true => FERR_A::Error,
@@ -93,7 +93,7 @@ impl From<NERR_A> for bool {
 impl NERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> NERR_A {
+    pub const fn variant(&self) -> NERR_A {
         match self.bits {
             false => NERR_A::NoNoise,
             true => NERR_A::Noise,
@@ -129,7 +129,7 @@ impl From<ROERR_A> for bool {
 impl ROERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ROERR_A {
+    pub const fn variant(&self) -> ROERR_A {
         match self.bits {
             false => ROERR_A::NoError,
             true => ROERR_A::Overflow,
@@ -165,7 +165,7 @@ impl From<IDLEF_A> for bool {
 impl IDLEF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IDLEF_A {
+    pub const fn variant(&self) -> IDLEF_A {
         match self.bits {
             false => IDLEF_A::NoIdle,
             true => IDLEF_A::Idle,
@@ -201,7 +201,7 @@ impl From<RDBFR_A> for bool {
 impl RDBF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RDBFR_A {
+    pub const fn variant(&self) -> RDBFR_A {
         match self.bits {
             false => RDBFR_A::NotFull,
             true => RDBFR_A::Full,
@@ -261,7 +261,7 @@ impl From<TDCR_A> for bool {
 impl TDC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TDCR_A {
+    pub const fn variant(&self) -> TDCR_A {
         match self.bits {
             false => TDCR_A::NotCompleted,
             true => TDCR_A::Completed,
@@ -321,7 +321,7 @@ impl From<TDBE_A> for bool {
 impl TDBE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TDBE_A {
+    pub const fn variant(&self) -> TDBE_A {
         match self.bits {
             false => TDBE_A::NotEmpty,
             true => TDBE_A::Empty,
@@ -357,7 +357,7 @@ impl From<BFFR_A> for bool {
 impl BFF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BFFR_A {
+    pub const fn variant(&self) -> BFFR_A {
         match self.bits {
             false => BFFR_A::NoBreak,
             true => BFFR_A::Break,
@@ -417,7 +417,7 @@ impl From<CTSCFR_A> for bool {
 impl CTSCF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CTSCFR_A {
+    pub const fn variant(&self) -> CTSCFR_A {
         match self.bits {
             false => CTSCFR_A::NoChange,
             true => CTSCFR_A::Change,

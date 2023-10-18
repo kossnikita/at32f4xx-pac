@@ -279,7 +279,7 @@ pub mod raw {
         /// Creates a new instance of the reader.
         #[allow(unused)]
         #[inline(always)]
-        pub(crate) fn new(bits: FI::Ux) -> Self {
+        pub(crate) const fn new(bits: FI::Ux) -> Self {
             Self {
                 bits,
                 _reg: marker::PhantomData,
@@ -296,7 +296,7 @@ pub mod raw {
         /// Creates a new instance of the reader.
         #[allow(unused)]
         #[inline(always)]
-        pub(crate) fn new(bits: bool) -> Self {
+        pub(crate) const fn new(bits: bool) -> Self {
             Self {
                 bits,
                 _reg: marker::PhantomData,
@@ -364,7 +364,7 @@ pub type R<REG> = raw::R<REG>;
 impl<REG: RegisterSpec> R<REG> {
     /// Reads raw bits from register.
     #[inline(always)]
-    pub fn bits(&self) -> REG::Ux {
+    pub const fn bits(&self) -> REG::Ux {
         self.bits
     }
 }
@@ -397,7 +397,7 @@ pub type BitReader<FI = bool> = raw::BitReader<FI>;
 impl<FI: FieldSpec> FieldReader<FI> {
     /// Reads raw bits from field.
     #[inline(always)]
-    pub fn bits(&self) -> FI::Ux {
+    pub const fn bits(&self) -> FI::Ux {
         self.bits
     }
 }
@@ -426,7 +426,7 @@ where
 impl<FI> BitReader<FI> {
     /// Value of the field as raw bits.
     #[inline(always)]
-    pub fn bit(&self) -> bool {
+    pub const fn bit(&self) -> bool {
         self.bits
     }
     /// Returns `true` if the bit is clear (0).
@@ -792,14 +792,12 @@ pub struct ArrayProxy<T, const COUNT: usize, const STRIDE: usize> {
 #[allow(clippy::len_without_is_empty)]
 impl<T, const C: usize, const S: usize> ArrayProxy<T, C, S> {
     /// Get a reference from an [ArrayProxy] with no bounds checking.
-    pub unsafe fn get_ref(&self, index: usize) -> &T {
-        let base = self as *const Self as usize;
-        let address = base + S * index;
-        &*(address as *const T)
+    pub const unsafe fn get_ref(&self, index: usize) -> &T {
+        &*(self as *const Self).cast::<u8>().add(S * index).cast::<T>()
     }
     /// Get a reference from an [ArrayProxy], or return `None` if the index
     /// is out of bounds.
-    pub fn get(&self, index: usize) -> Option<&T> {
+    pub const fn get(&self, index: usize) -> Option<&T> {
         if index < C {
             Some(unsafe { self.get_ref(index) })
         } else {
@@ -807,7 +805,7 @@ impl<T, const C: usize, const S: usize> ArrayProxy<T, C, S> {
         }
     }
     /// Return the number of items.
-    pub fn len(&self) -> usize {
+    pub const fn len(&self) -> usize {
         C
     }
 }

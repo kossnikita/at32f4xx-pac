@@ -69,7 +69,7 @@ impl From<TPIENR_A> for bool {
 impl TPIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TPIENR_A {
+    pub const fn variant(&self) -> TPIENR_A {
         match self.bits {
             false => TPIENR_A::Disabled,
             true => TPIENR_A::Enabled,
@@ -136,7 +136,7 @@ impl From<TPEFR_A> for bool {
 impl TPEF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TPEFR_A {
+    pub const fn variant(&self) -> TPEFR_A {
         match self.bits {
             false => TPEFR_A::NoEvent,
             true => TPEFR_A::Event,
@@ -189,7 +189,7 @@ impl From<TPIFR_A> for bool {
 impl TPIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TPIFR_A {
+    pub const fn variant(&self) -> TPIFR_A {
         match self.bits {
             false => TPIFR_A::NoEvent,
             true => TPIFR_A::Event,

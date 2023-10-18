@@ -21,7 +21,7 @@ impl From<SLEEP_DEBUGR_A> for bool {
 impl SLEEP_DEBUG_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SLEEP_DEBUGR_A {
+    pub const fn variant(&self) -> SLEEP_DEBUGR_A {
         match self.bits {
             false => SLEEP_DEBUGR_A::Disabled,
             true => SLEEP_DEBUGR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<DEEPSLEEP_DEBUGR_A> for bool {
 impl DEEPSLEEP_DEBUG_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DEEPSLEEP_DEBUGR_A {
+    pub const fn variant(&self) -> DEEPSLEEP_DEBUGR_A {
         match self.bits {
             false => DEEPSLEEP_DEBUGR_A::Disabled,
             true => DEEPSLEEP_DEBUGR_A::Enabled,
@@ -156,7 +156,7 @@ impl From<STANDBY_DEBUGR_A> for bool {
 impl STANDBY_DEBUG_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STANDBY_DEBUGR_A {
+    pub const fn variant(&self) -> STANDBY_DEBUGR_A {
         match self.bits {
             false => STANDBY_DEBUGR_A::Disabled,
             true => STANDBY_DEBUGR_A::Enabled,

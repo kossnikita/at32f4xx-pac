@@ -25,7 +25,7 @@ impl From<I2C1_MUX_A> for bool {
 impl I2C1_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> I2C1_MUX_A {
+    pub const fn variant(&self) -> I2C1_MUX_A {
         match self.bits {
             false => I2C1_MUX_A::Mux0,
             true => I2C1_MUX_A::Mux1,
@@ -78,7 +78,7 @@ impl From<USART1_MUX_A> for bool {
 impl USART1_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> USART1_MUX_A {
+    pub const fn variant(&self) -> USART1_MUX_A {
         match self.bits {
             false => USART1_MUX_A::Mux0,
             true => USART1_MUX_A::Mux1,
@@ -137,7 +137,7 @@ impl crate::FieldSpec for USART3_MUX_A {
 impl USART3_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<USART3_MUX_A> {
+    pub const fn variant(&self) -> Option<USART3_MUX_A> {
         match self.bits {
             0 => Some(USART3_MUX_A::Mux0),
             1 => Some(USART3_MUX_A::Mux1),
@@ -207,7 +207,7 @@ impl crate::FieldSpec for TMR1_MUX_A {
 impl TMR1_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TMR1_MUX_A> {
+    pub const fn variant(&self) -> Option<TMR1_MUX_A> {
         match self.bits {
             0 => Some(TMR1_MUX_A::Mux0),
             1 => Some(TMR1_MUX_A::Mux1),
@@ -270,7 +270,7 @@ impl crate::FieldSpec for TMR2_MUX_A {
 impl TMR2_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMR2_MUX_A {
+    pub const fn variant(&self) -> TMR2_MUX_A {
         match self.bits {
             0 => TMR2_MUX_A::Mux0,
             1 => TMR2_MUX_A::Mux1,
@@ -353,7 +353,7 @@ impl crate::FieldSpec for TMR3_MUX_A {
 impl TMR3_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TMR3_MUX_A> {
+    pub const fn variant(&self) -> Option<TMR3_MUX_A> {
         match self.bits {
             0 => Some(TMR3_MUX_A::Mux0),
             2 => Some(TMR3_MUX_A::Mux2),
@@ -423,7 +423,7 @@ impl crate::FieldSpec for CAN_MUX_A {
 impl CAN_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<CAN_MUX_A> {
+    pub const fn variant(&self) -> Option<CAN_MUX_A> {
         match self.bits {
             0 => Some(CAN_MUX_A::Mux0),
             2 => Some(CAN_MUX_A::Mux2),
@@ -478,7 +478,7 @@ impl From<PD01_MUX_A> for bool {
 impl PD01_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PD01_MUX_A {
+    pub const fn variant(&self) -> PD01_MUX_A {
         match self.bits {
             false => PD01_MUX_A::Mux0,
             true => PD01_MUX_A::Hext,
@@ -531,7 +531,7 @@ impl From<TMR5CH4_MUX_A> for bool {
 impl TMR5CH4_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMR5CH4_MUX_A {
+    pub const fn variant(&self) -> TMR5CH4_MUX_A {
         match self.bits {
             false => TMR5CH4_MUX_A::Pa3,
             true => TMR5CH4_MUX_A::Lick,
@@ -584,7 +584,7 @@ impl From<ADC1_ETP_MUX_A> for bool {
 impl ADC1_ETP_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ADC1_ETP_MUX_A {
+    pub const fn variant(&self) -> ADC1_ETP_MUX_A {
         match self.bits {
             false => ADC1_ETP_MUX_A::Exint15,
             true => ADC1_ETP_MUX_A::Tmr1ch4,
@@ -637,7 +637,7 @@ impl From<ADC1_ETO_MUX_A> for bool {
 impl ADC1_ETO_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ADC1_ETO_MUX_A {
+    pub const fn variant(&self) -> ADC1_ETO_MUX_A {
         match self.bits {
             false => ADC1_ETO_MUX_A::Exint11,
             true => ADC1_ETO_MUX_A::Tmr1Trgo,
@@ -698,7 +698,7 @@ impl crate::FieldSpec for SWJTAG_MUX_A {
 impl SWJTAG_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SWJTAG_MUX_A> {
+    pub const fn variant(&self) -> Option<SWJTAG_MUX_A> {
         match self.bits {
             0 => Some(SWJTAG_MUX_A::SwdandJtag),
             1 => Some(SWJTAG_MUX_A::SwdandJtagwithoutNjtrst),
@@ -775,7 +775,7 @@ impl From<SPI1_MUX1_A> for bool {
 impl SPI1_MUX1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SPI1_MUX1_A {
+    pub const fn variant(&self) -> SPI1_MUX1_A {
         match self.bits {
             false => SPI1_MUX1_A::Mux0,
             true => SPI1_MUX1_A::Mux1,

@@ -33,7 +33,7 @@ impl crate::FieldSpec for WPC_A {
 impl WPC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> WPC_A {
+    pub const fn variant(&self) -> WPC_A {
         match self.bits {
             0 => WPC_A::NoProtect,
             1 => WPC_A::Level3,
@@ -110,7 +110,7 @@ impl From<FCSODISR_A> for bool {
 impl FCSODIS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FCSODISR_A {
+    pub const fn variant(&self) -> FCSODISR_A {
         match self.bits {
             false => FCSODISR_A::Disabled,
             true => FCSODISR_A::Enabled,
@@ -177,7 +177,7 @@ impl From<FCSOENR_A> for bool {
 impl FCSOEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FCSOENR_A {
+    pub const fn variant(&self) -> FCSOENR_A {
         match self.bits {
             false => FCSOENR_A::Disabled,
             true => FCSOENR_A::Enabled,
@@ -244,7 +244,7 @@ impl From<BRKENR_A> for bool {
 impl BRKEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BRKENR_A {
+    pub const fn variant(&self) -> BRKENR_A {
         match self.bits {
             false => BRKENR_A::Disabled,
             true => BRKENR_A::Enabled,
@@ -311,7 +311,7 @@ impl From<BRKV_A> for bool {
 impl BRKV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> BRKV_A {
+    pub const fn variant(&self) -> BRKV_A {
         match self.bits {
             false => BRKV_A::Low,
             true => BRKV_A::High,
@@ -364,7 +364,7 @@ impl From<AOENR_A> for bool {
 impl AOEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> AOENR_A {
+    pub const fn variant(&self) -> AOENR_A {
         match self.bits {
             false => AOENR_A::Disabled,
             true => AOENR_A::Enabled,
@@ -431,7 +431,7 @@ impl From<OENR_A> for bool {
 impl OEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OENR_A {
+    pub const fn variant(&self) -> OENR_A {
         match self.bits {
             false => OENR_A::Disabled,
             true => OENR_A::Enabled,

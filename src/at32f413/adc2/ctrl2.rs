@@ -21,7 +21,7 @@ impl From<ADCENR_A> for bool {
 impl ADCEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ADCENR_A {
+    pub const fn variant(&self) -> ADCENR_A {
         match self.bits {
             false => ADCENR_A::Disabled,
             true => ADCENR_A::Enabled,
@@ -88,7 +88,7 @@ impl From<RPENR_A> for bool {
 impl RPEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RPENR_A {
+    pub const fn variant(&self) -> RPENR_A {
         match self.bits {
             false => RPENR_A::Disabled,
             true => RPENR_A::Enabled,
@@ -155,7 +155,7 @@ impl From<ADCALR_A> for bool {
 impl ADCAL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ADCALR_A {
+    pub const fn variant(&self) -> ADCALR_A {
         match self.bits {
             false => ADCALR_A::Completed,
             true => ADCALR_A::InProgress,
@@ -215,7 +215,7 @@ impl From<ADCALINITR_A> for bool {
 impl ADCALINIT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ADCALINITR_A {
+    pub const fn variant(&self) -> ADCALINITR_A {
         match self.bits {
             false => ADCALINITR_A::Completed,
             true => ADCALINITR_A::InProgress,
@@ -275,7 +275,7 @@ impl From<DTALIGN_A> for bool {
 impl DTALIGN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> DTALIGN_A {
+    pub const fn variant(&self) -> DTALIGN_A {
         match self.bits {
             false => DTALIGN_A::Right,
             true => DTALIGN_A::Left,
@@ -344,7 +344,7 @@ impl From<PCSWTRG_A> for bool {
 impl PCSWTRG_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> PCSWTRG_A {
+    pub const fn variant(&self) -> PCSWTRG_A {
         match self.bits {
             false => PCSWTRG_A::NotTriggered,
             true => PCSWTRG_A::Triggered,

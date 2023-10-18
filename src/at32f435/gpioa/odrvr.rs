@@ -25,7 +25,7 @@ impl crate::FieldSpec for ODRV0_A {
 impl ODRV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<ODRV0_A> {
+    pub const fn variant(&self) -> Option<ODRV0_A> {
         match self.bits {
             0 => Some(ODRV0_A::Normal),
             1 => Some(ODRV0_A::Large),

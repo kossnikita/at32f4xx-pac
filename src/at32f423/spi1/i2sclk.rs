@@ -25,7 +25,7 @@ impl From<ODD_A> for bool {
 impl ODD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ODD_A {
+    pub const fn variant(&self) -> ODD_A {
         match self.bits {
             false => ODD_A::Double,
             true => ODD_A::DoublePlusOne,
@@ -78,7 +78,7 @@ impl From<MCLKOER_A> for bool {
 impl MCLKOE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MCLKOER_A {
+    pub const fn variant(&self) -> MCLKOER_A {
         match self.bits {
             false => MCLKOER_A::Disabled,
             true => MCLKOER_A::Enabled,

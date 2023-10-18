@@ -27,7 +27,7 @@ impl crate::FieldSpec for I2C1_GMUX_A {
 impl I2C1_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<I2C1_GMUX_A> {
+    pub const fn variant(&self) -> Option<I2C1_GMUX_A> {
         match self.bits {
             0 => Some(I2C1_GMUX_A::Mux0),
             1 => Some(I2C1_GMUX_A::Mux1),
@@ -101,7 +101,7 @@ impl crate::FieldSpec for I2C2_GMUX_A {
 impl I2C2_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<I2C2_GMUX_A> {
+    pub const fn variant(&self) -> Option<I2C2_GMUX_A> {
         match self.bits {
             0 => Some(I2C2_GMUX_A::Mux0),
             1 => Some(I2C2_GMUX_A::Mux1),
@@ -182,7 +182,7 @@ impl crate::FieldSpec for SPI1_GMUX_A {
 impl SPI1_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SPI1_GMUX_A> {
+    pub const fn variant(&self) -> Option<SPI1_GMUX_A> {
         match self.bits {
             0 => Some(SPI1_GMUX_A::Mux0),
             1 => Some(SPI1_GMUX_A::Mux1),
@@ -241,7 +241,7 @@ impl crate::FieldSpec for SPI2_GMUX_A {
 impl SPI2_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SPI2_GMUX_A> {
+    pub const fn variant(&self) -> Option<SPI2_GMUX_A> {
         match self.bits {
             0 => Some(SPI2_GMUX_A::Mux0),
             1 => Some(SPI2_GMUX_A::Mux1),

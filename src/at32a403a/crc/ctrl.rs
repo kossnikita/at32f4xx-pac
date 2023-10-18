@@ -19,7 +19,7 @@ impl From<RSTW_A> for bool {
 impl RST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<RSTW_A> {
+    pub const fn variant(&self) -> Option<RSTW_A> {
         match self.bits {
             true => Some(RSTW_A::Reset),
             _ => None,
@@ -70,7 +70,7 @@ impl crate::FieldSpec for REVID_A {
 impl REVID_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> REVID_A {
+    pub const fn variant(&self) -> REVID_A {
         match self.bits {
             0 => REVID_A::NoEffect,
             1 => REVID_A::ByteReverse,
@@ -147,7 +147,7 @@ impl From<REVOD_A> for bool {
 impl REVOD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> REVOD_A {
+    pub const fn variant(&self) -> REVOD_A {
         match self.bits {
             false => REVOD_A::NoEffect,
             true => REVOD_A::WordReverse,

@@ -21,7 +21,7 @@ impl From<FP0R_A> for bool {
 impl FP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FP0R_A {
+    pub const fn variant(&self) -> FP0R_A {
         match self.bits {
             false => FP0R_A::Disabled,
             true => FP0R_A::Enabled,

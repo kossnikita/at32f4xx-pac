@@ -29,7 +29,7 @@ impl crate::FieldSpec for IOMC0_A {
 impl IOMC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IOMC0_A {
+    pub const fn variant(&self) -> IOMC0_A {
         match self.bits {
             0 => IOMC0_A::Input,
             1 => IOMC0_A::Output,
