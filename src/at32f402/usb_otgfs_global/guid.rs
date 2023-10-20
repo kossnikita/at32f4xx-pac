@@ -52,8 +52,8 @@ impl crate::RegisterSpec for GUID_SPEC {
 impl crate::Readable for GUID_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`guid::W`](W) writer structure"]
 impl crate::Writable for GUID_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GUID to value 0x1000"]
 impl crate::Resettable for GUID_SPEC {

@@ -68,8 +68,8 @@ impl crate::RegisterSpec for MACIMR_SPEC {
 impl crate::Readable for MACIMR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macimr::W`](W) writer structure"]
 impl crate::Writable for MACIMR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MACIMR to value 0"]
 impl crate::Resettable for MACIMR_SPEC {

@@ -340,8 +340,8 @@ impl crate::RegisterSpec for SWTRG_SPEC {
 impl crate::Readable for SWTRG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swtrg::W`](W) writer structure"]
 impl crate::Writable for SWTRG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SWTRG to value 0"]
 impl crate::Resettable for SWTRG_SPEC {

@@ -101,8 +101,8 @@ impl crate::RegisterSpec for TMDTL_SPEC {
 impl crate::Readable for TMDTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmdtl::W`](W) writer structure"]
 impl crate::Writable for TMDTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TMDTL to value 0"]
 impl crate::Resettable for TMDTL_SPEC {

@@ -29,8 +29,8 @@ impl crate::RegisterSpec for BPRDT_SPEC {
 impl crate::Readable for BPRDT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bprdt::W`](W) writer structure"]
 impl crate::Writable for BPRDT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BPR%sDT to value 0"]
 impl crate::Resettable for BPRDT_SPEC {

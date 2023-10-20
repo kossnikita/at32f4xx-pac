@@ -180,8 +180,8 @@ impl crate::RegisterSpec for HCINT12_SPEC {
 impl crate::Readable for HCINT12_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcint12::W`](W) writer structure"]
 impl crate::Writable for HCINT12_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCINT12 to value 0"]
 impl crate::Resettable for HCINT12_SPEC {

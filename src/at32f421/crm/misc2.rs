@@ -74,8 +74,8 @@ impl crate::RegisterSpec for MISC2_SPEC {
 impl crate::Readable for MISC2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`misc2::W`](W) writer structure"]
 impl crate::Writable for MISC2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MISC2 to value 0x0d"]
 impl crate::Resettable for MISC2_SPEC {

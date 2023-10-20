@@ -335,8 +335,8 @@ impl crate::RegisterSpec for GINTSTS_SPEC {
 impl crate::Readable for GINTSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gintsts::W`](W) writer structure"]
 impl crate::Writable for GINTSTS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GINTSTS to value 0x0400_0020"]
 impl crate::Resettable for GINTSTS_SPEC {

@@ -100,8 +100,8 @@ impl crate::RegisterSpec for MMCCTRL_SPEC {
 impl crate::Readable for MMCCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mmcctrl::W`](W) writer structure"]
 impl crate::Writable for MMCCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MMCCTRL to value 0"]
 impl crate::Resettable for MMCCTRL_SPEC {

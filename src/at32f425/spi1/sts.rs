@@ -410,8 +410,8 @@ impl crate::RegisterSpec for STS_SPEC {
 impl crate::Readable for STS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts::W`](W) writer structure"]
 impl crate::Writable for STS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x10;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0x10;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STS to value 0x02"]
 impl crate::Resettable for STS_SPEC {

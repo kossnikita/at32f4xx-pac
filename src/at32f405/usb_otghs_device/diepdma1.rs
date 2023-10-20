@@ -52,8 +52,8 @@ impl crate::RegisterSpec for DIEPDMA1_SPEC {
 impl crate::Readable for DIEPDMA1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepdma1::W`](W) writer structure"]
 impl crate::Writable for DIEPDMA1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPDMA1 to value 0"]
 impl crate::Resettable for DIEPDMA1_SPEC {

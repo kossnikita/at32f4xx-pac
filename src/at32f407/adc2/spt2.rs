@@ -173,8 +173,8 @@ impl crate::RegisterSpec for SPT2_SPEC {
 impl crate::Readable for SPT2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spt2::W`](W) writer structure"]
 impl crate::Writable for SPT2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPT2 to value 0"]
 impl crate::Resettable for SPT2_SPEC {

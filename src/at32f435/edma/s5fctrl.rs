@@ -92,8 +92,8 @@ impl crate::RegisterSpec for S5FCTRL_SPEC {
 impl crate::Readable for S5FCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s5fctrl::W`](W) writer structure"]
 impl crate::Writable for S5FCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S5FCTRL to value 0x21"]
 impl crate::Resettable for S5FCTRL_SPEC {

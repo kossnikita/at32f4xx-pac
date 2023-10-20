@@ -634,8 +634,8 @@ impl crate::RegisterSpec for CM1_INPUT_SPEC {
 impl crate::Readable for CM1_INPUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cm1_input::W`](W) writer structure"]
 impl crate::Writable for CM1_INPUT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CM1_INPUT to value 0"]
 impl crate::Resettable for CM1_INPUT_SPEC {

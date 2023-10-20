@@ -164,8 +164,8 @@ impl crate::RegisterSpec for BK4CTRL_SPEC {
 impl crate::Readable for BK4CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk4ctrl::W`](W) writer structure"]
 impl crate::Writable for BK4CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BK4CTRL to value 0x18"]
 impl crate::Resettable for BK4CTRL_SPEC {

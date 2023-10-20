@@ -324,8 +324,8 @@ impl crate::RegisterSpec for S3CTRL_SPEC {
 impl crate::Readable for S3CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s3ctrl::W`](W) writer structure"]
 impl crate::Writable for S3CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S3CTRL to value 0"]
 impl crate::Resettable for S3CTRL_SPEC {

@@ -29,8 +29,8 @@ impl crate::RegisterSpec for C3_SPEC {
 impl crate::Readable for C3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`c3::W`](W) writer structure"]
 impl crate::Writable for C3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets C3 to value 0x1f54"]
 impl crate::Resettable for C3_SPEC {

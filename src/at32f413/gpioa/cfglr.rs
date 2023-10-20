@@ -428,8 +428,8 @@ impl crate::RegisterSpec for CFGLR_SPEC {
 impl crate::Readable for CFGLR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfglr::W`](W) writer structure"]
 impl crate::Writable for CFGLR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFGLR to value 0x4444_4444"]
 impl crate::Resettable for CFGLR_SPEC {

@@ -270,8 +270,8 @@ impl crate::RegisterSpec for FRF_SPEC {
 impl crate::Readable for FRF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`frf::W`](W) writer structure"]
 impl crate::Writable for FRF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FRF to value 0"]
 impl crate::Resettable for FRF_SPEC {

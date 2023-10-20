@@ -32,8 +32,8 @@ impl crate::RegisterSpec for DIVL_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`divl::W`](W) writer structure"]
 impl crate::Writable for DIVL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIVL to value 0x8000"]
 impl crate::Resettable for DIVL_SPEC {

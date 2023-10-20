@@ -244,8 +244,8 @@ impl crate::RegisterSpec for APB1RST_SPEC {
 impl crate::Readable for APB1RST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb1rst::W`](W) writer structure"]
 impl crate::Writable for APB1RST_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB1RST to value 0"]
 impl crate::Resettable for APB1RST_SPEC {

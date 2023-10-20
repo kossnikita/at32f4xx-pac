@@ -68,8 +68,8 @@ impl crate::RegisterSpec for CWSZ_SPEC {
 impl crate::Readable for CWSZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cwsz::W`](W) writer structure"]
 impl crate::Writable for CWSZ_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CWSZ to value 0"]
 impl crate::Resettable for CWSZ_SPEC {

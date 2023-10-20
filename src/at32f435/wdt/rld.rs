@@ -33,8 +33,8 @@ impl crate::RegisterSpec for RLD_SPEC {
 impl crate::Readable for RLD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rld::W`](W) writer structure"]
 impl crate::Writable for RLD_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RLD to value 0x0fff"]
 impl crate::Resettable for RLD_SPEC {

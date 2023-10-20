@@ -132,8 +132,8 @@ impl crate::RegisterSpec for CMDCTRL_SPEC {
 impl crate::Readable for CMDCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cmdctrl::W`](W) writer structure"]
 impl crate::Writable for CMDCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CMDCTRL to value 0"]
 impl crate::Resettable for CMDCTRL_SPEC {

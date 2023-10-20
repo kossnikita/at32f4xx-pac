@@ -68,8 +68,8 @@ impl crate::RegisterSpec for EXT3_SPEC {
 impl crate::Readable for EXT3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ext3::W`](W) writer structure"]
 impl crate::Writable for EXT3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXT3 to value 0x0808"]
 impl crate::Resettable for EXT3_SPEC {

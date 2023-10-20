@@ -260,8 +260,8 @@ impl crate::RegisterSpec for RF_SPEC {
 impl crate::Readable for RF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rf::W`](W) writer structure"]
 impl crate::Writable for RF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x38;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0x38;
 }
 #[doc = "`reset()` method sets RF%s to value 0"]
 impl crate::Resettable for RF_SPEC {

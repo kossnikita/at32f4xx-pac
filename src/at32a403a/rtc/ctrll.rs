@@ -124,8 +124,8 @@ impl crate::RegisterSpec for CTRLL_SPEC {
 impl crate::Readable for CTRLL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrll::W`](W) writer structure"]
 impl crate::Writable for CTRLL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRLL to value 0x20"]
 impl crate::Resettable for CTRLL_SPEC {

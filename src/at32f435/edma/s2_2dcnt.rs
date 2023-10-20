@@ -68,8 +68,8 @@ impl crate::RegisterSpec for S2_2DCNT_SPEC {
 impl crate::Readable for S2_2DCNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s2_2dcnt::W`](W) writer structure"]
 impl crate::Writable for S2_2DCNT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S2_2DCNT to value 0"]
 impl crate::Resettable for S2_2DCNT_SPEC {

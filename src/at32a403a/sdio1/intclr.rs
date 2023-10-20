@@ -228,8 +228,8 @@ impl crate::RegisterSpec for INTCLR_SPEC {
 impl crate::Readable for INTCLR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intclr::W`](W) writer structure"]
 impl crate::Writable for INTCLR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTCLR to value 0"]
 impl crate::Resettable for INTCLR_SPEC {

@@ -100,8 +100,8 @@ impl crate::RegisterSpec for MACA3H_SPEC {
 impl crate::Readable for MACA3H_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`maca3h::W`](W) writer structure"]
 impl crate::Writable for MACA3H_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MACA3H to value 0xffff"]
 impl crate::Resettable for MACA3H_SPEC {

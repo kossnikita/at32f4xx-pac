@@ -32,8 +32,8 @@ impl crate::RegisterSpec for BTM_MODE_SET_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`btm_mode_set::W`](W) writer structure"]
 impl crate::Writable for BTM_MODE_SET_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BTM_MODE_SET to value 0"]
 impl crate::Resettable for BTM_MODE_SET_SPEC {

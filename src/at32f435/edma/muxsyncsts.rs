@@ -100,8 +100,8 @@ impl crate::RegisterSpec for MUXSYNCSTS_SPEC {
 impl crate::Readable for MUXSYNCSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxsyncsts::W`](W) writer structure"]
 impl crate::Writable for MUXSYNCSTS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MUXSYNCSTS to value 0"]
 impl crate::Resettable for MUXSYNCSTS_SPEC {

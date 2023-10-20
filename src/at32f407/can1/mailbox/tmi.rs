@@ -270,8 +270,8 @@ impl crate::RegisterSpec for TMI_SPEC {
 impl crate::Readable for TMI_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmi::W`](W) writer structure"]
 impl crate::Writable for TMI_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x01;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0x01;
 }
 #[doc = "`reset()` method sets TMI to value 0"]
 impl crate::Resettable for TMI_SPEC {

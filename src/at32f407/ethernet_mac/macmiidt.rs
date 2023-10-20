@@ -52,8 +52,8 @@ impl crate::RegisterSpec for MACMIIDT_SPEC {
 impl crate::Readable for MACMIIDT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macmiidt::W`](W) writer structure"]
 impl crate::Writable for MACMIIDT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MACMIIDT to value 0"]
 impl crate::Resettable for MACMIIDT_SPEC {

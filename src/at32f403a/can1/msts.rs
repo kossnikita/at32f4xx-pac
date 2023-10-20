@@ -504,8 +504,8 @@ impl crate::RegisterSpec for MSTS_SPEC {
 impl crate::Readable for MSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`msts::W`](W) writer structure"]
 impl crate::Writable for MSTS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x1c;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0x1c;
 }
 #[doc = "`reset()` method sets MSTS to value 0x0c02"]
 impl crate::Resettable for MSTS_SPEC {

@@ -212,8 +212,8 @@ impl crate::RegisterSpec for I2SCLK_SPEC {
 impl crate::Readable for I2SCLK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2sclk::W`](W) writer structure"]
 impl crate::Writable for I2SCLK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets I2SCLK to value 0x0a"]
 impl crate::Resettable for I2SCLK_SPEC {

@@ -356,8 +356,8 @@ impl crate::RegisterSpec for AHBLPEN1_SPEC {
 impl crate::Readable for AHBLPEN1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahblpen1::W`](W) writer structure"]
 impl crate::Writable for AHBLPEN1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AHBLPEN1 to value 0x3e63_90ff"]
 impl crate::Resettable for AHBLPEN1_SPEC {

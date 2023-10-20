@@ -52,8 +52,8 @@ impl crate::RegisterSpec for HCDMA11_SPEC {
 impl crate::Readable for HCDMA11_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcdma11::W`](W) writer structure"]
 impl crate::Writable for HCDMA11_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCDMA11 to value 0"]
 impl crate::Resettable for HCDMA11_SPEC {

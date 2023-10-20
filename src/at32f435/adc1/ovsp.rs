@@ -132,8 +132,8 @@ impl crate::RegisterSpec for OVSP_SPEC {
 impl crate::Readable for OVSP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ovsp::W`](W) writer structure"]
 impl crate::Writable for OVSP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OVSP to value 0"]
 impl crate::Resettable for OVSP_SPEC {

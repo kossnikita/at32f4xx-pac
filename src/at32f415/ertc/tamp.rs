@@ -180,8 +180,8 @@ impl crate::RegisterSpec for TAMP_SPEC {
 impl crate::Readable for TAMP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tamp::W`](W) writer structure"]
 impl crate::Writable for TAMP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TAMP to value 0"]
 impl crate::Resettable for TAMP_SPEC {

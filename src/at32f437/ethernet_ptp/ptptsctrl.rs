@@ -292,8 +292,8 @@ impl crate::RegisterSpec for PTPTSCTRL_SPEC {
 impl crate::Readable for PTPTSCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ptptsctrl::W`](W) writer structure"]
 impl crate::Writable for PTPTSCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PTPTSCTRL to value 0x2000"]
 impl crate::Resettable for PTPTSCTRL_SPEC {

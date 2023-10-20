@@ -52,8 +52,8 @@ impl crate::RegisterSpec for DTLEN_SPEC {
 impl crate::Readable for DTLEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dtlen::W`](W) writer structure"]
 impl crate::Writable for DTLEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DTLEN to value 0"]
 impl crate::Resettable for DTLEN_SPEC {

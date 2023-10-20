@@ -52,8 +52,8 @@ impl crate::RegisterSpec for PTPTTL_SPEC {
 impl crate::Readable for PTPTTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ptpttl::W`](W) writer structure"]
 impl crate::Writable for PTPTTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PTPTTL to value 0"]
 impl crate::Resettable for PTPTTL_SPEC {

@@ -71,8 +71,8 @@ impl crate::RegisterSpec for DIEPTXF6_SPEC {
 impl crate::Readable for DIEPTXF6_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dieptxf6::W`](W) writer structure"]
 impl crate::Writable for DIEPTXF6_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPTXF6 to value 0x0200_0400"]
 impl crate::Resettable for DIEPTXF6_SPEC {

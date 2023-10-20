@@ -84,8 +84,8 @@ impl crate::RegisterSpec for OADDR1_SPEC {
 impl crate::Readable for OADDR1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`oaddr1::W`](W) writer structure"]
 impl crate::Writable for OADDR1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OADDR1 to value 0"]
 impl crate::Resettable for OADDR1_SPEC {

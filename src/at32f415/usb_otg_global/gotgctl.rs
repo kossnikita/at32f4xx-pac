@@ -52,8 +52,8 @@ impl crate::RegisterSpec for GOTGCTL_SPEC {
 impl crate::Readable for GOTGCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gotgctl::W`](W) writer structure"]
 impl crate::Writable for GOTGCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GOTGCTL to value 0x0800"]
 impl crate::Resettable for GOTGCTL_SPEC {

@@ -308,8 +308,8 @@ impl crate::RegisterSpec for ODT_SPEC {
 impl crate::Readable for ODT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`odt::W`](W) writer structure"]
 impl crate::Writable for ODT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ODT to value 0"]
 impl crate::Resettable for ODT_SPEC {

@@ -87,8 +87,8 @@ impl crate::RegisterSpec for CFG1_SPEC {
 impl crate::Readable for CFG1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg1::W`](W) writer structure"]
 impl crate::Writable for CFG1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CFG1 to value 0"]
 impl crate::Resettable for CFG1_SPEC {

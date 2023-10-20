@@ -29,8 +29,8 @@ impl crate::RegisterSpec for RPR_SPEC {
 impl crate::Readable for RPR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rpr::W`](W) writer structure"]
 impl crate::Writable for RPR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RPR to value 0"]
 impl crate::Resettable for RPR_SPEC {

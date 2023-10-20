@@ -52,8 +52,8 @@ impl crate::RegisterSpec for S8PADDR_SPEC {
 impl crate::Readable for S8PADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s8paddr::W`](W) writer structure"]
 impl crate::Writable for S8PADDR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S8PADDR to value 0"]
 impl crate::Resettable for S8PADDR_SPEC {

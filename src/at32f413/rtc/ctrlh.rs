@@ -84,8 +84,8 @@ impl crate::RegisterSpec for CTRLH_SPEC {
 impl crate::Readable for CTRLH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlh::W`](W) writer structure"]
 impl crate::Writable for CTRLH_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRLH to value 0"]
 impl crate::Resettable for CTRLH_SPEC {

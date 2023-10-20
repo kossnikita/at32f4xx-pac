@@ -55,8 +55,8 @@ impl crate::RegisterSpec for RMP_SPEC {
 impl crate::Readable for RMP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rmp::W`](W) writer structure"]
 impl crate::Writable for RMP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RMP to value 0"]
 impl crate::Resettable for RMP_SPEC {

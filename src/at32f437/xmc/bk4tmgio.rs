@@ -100,8 +100,8 @@ impl crate::RegisterSpec for BK4TMGIO_SPEC {
 impl crate::Readable for BK4TMGIO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk4tmgio::W`](W) writer structure"]
 impl crate::Writable for BK4TMGIO_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BK4TMGIO to value 0xfcfc_fcfc"]
 impl crate::Resettable for BK4TMGIO_SPEC {

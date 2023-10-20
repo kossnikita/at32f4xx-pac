@@ -84,8 +84,8 @@ impl crate::RegisterSpec for HCTSIZ0_SPEC {
 impl crate::Readable for HCTSIZ0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hctsiz0::W`](W) writer structure"]
 impl crate::Writable for HCTSIZ0_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCTSIZ0 to value 0"]
 impl crate::Resettable for HCTSIZ0_SPEC {

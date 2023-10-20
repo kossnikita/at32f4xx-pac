@@ -116,8 +116,8 @@ impl crate::RegisterSpec for MACISTS_SPEC {
 impl crate::Readable for MACISTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macists::W`](W) writer structure"]
 impl crate::Writable for MACISTS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MACISTS to value 0"]
 impl crate::Resettable for MACISTS_SPEC {

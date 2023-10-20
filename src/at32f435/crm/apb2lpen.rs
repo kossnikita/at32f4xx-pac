@@ -276,8 +276,8 @@ impl crate::RegisterSpec for APB2LPEN_SPEC {
 impl crate::Readable for APB2LPEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb2lpen::W`](W) writer structure"]
 impl crate::Writable for APB2LPEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB2LPEN to value 0x2017_7733"]
 impl crate::Resettable for APB2LPEN_SPEC {

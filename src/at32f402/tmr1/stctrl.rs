@@ -907,8 +907,8 @@ impl crate::RegisterSpec for STCTRL_SPEC {
 impl crate::Readable for STCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stctrl::W`](W) writer structure"]
 impl crate::Writable for STCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STCTRL to value 0"]
 impl crate::Resettable for STCTRL_SPEC {

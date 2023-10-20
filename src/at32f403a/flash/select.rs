@@ -32,8 +32,8 @@ impl crate::RegisterSpec for SELECT_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`select::W`](W) writer structure"]
 impl crate::Writable for SELECT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SELECT to value 0"]
 impl crate::Resettable for SELECT_SPEC {

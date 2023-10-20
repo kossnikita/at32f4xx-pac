@@ -100,8 +100,8 @@ impl crate::RegisterSpec for DMA_SRC_SEL1_SPEC {
 impl crate::Readable for DMA_SRC_SEL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_src_sel1::W`](W) writer structure"]
 impl crate::Writable for DMA_SRC_SEL1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMA_SRC_SEL1 to value 0"]
 impl crate::Resettable for DMA_SRC_SEL1_SPEC {

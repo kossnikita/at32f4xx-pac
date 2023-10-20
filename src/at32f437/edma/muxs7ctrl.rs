@@ -148,8 +148,8 @@ impl crate::RegisterSpec for MUXS7CTRL_SPEC {
 impl crate::Readable for MUXS7CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxs7ctrl::W`](W) writer structure"]
 impl crate::Writable for MUXS7CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MUXS7CTRL to value 0"]
 impl crate::Resettable for MUXS7CTRL_SPEC {

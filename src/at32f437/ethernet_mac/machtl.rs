@@ -52,8 +52,8 @@ impl crate::RegisterSpec for MACHTL_SPEC {
 impl crate::Readable for MACHTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`machtl::W`](W) writer structure"]
 impl crate::Writable for MACHTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MACHTL to value 0"]
 impl crate::Resettable for MACHTL_SPEC {

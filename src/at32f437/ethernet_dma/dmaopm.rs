@@ -228,8 +228,8 @@ impl crate::RegisterSpec for DMAOPM_SPEC {
 impl crate::Readable for DMAOPM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmaopm::W`](W) writer structure"]
 impl crate::Writable for DMAOPM_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMAOPM to value 0"]
 impl crate::Resettable for DMAOPM_SPEC {

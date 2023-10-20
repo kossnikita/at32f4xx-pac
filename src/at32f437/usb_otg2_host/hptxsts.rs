@@ -74,8 +74,8 @@ impl crate::RegisterSpec for HPTXSTS_SPEC {
 impl crate::Readable for HPTXSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hptxsts::W`](W) writer structure"]
 impl crate::Writable for HPTXSTS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HPTXSTS to value 0x0008_0100"]
 impl crate::Resettable for HPTXSTS_SPEC {

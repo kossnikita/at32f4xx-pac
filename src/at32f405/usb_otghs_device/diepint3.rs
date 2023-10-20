@@ -204,8 +204,8 @@ impl crate::RegisterSpec for DIEPINT3_SPEC {
 impl crate::Readable for DIEPINT3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepint3::W`](W) writer structure"]
 impl crate::Writable for DIEPINT3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPINT3 to value 0x80"]
 impl crate::Resettable for DIEPINT3_SPEC {

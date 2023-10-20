@@ -40,8 +40,8 @@ impl crate::RegisterSpec for EM_SLIB_SET_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`em_slib_set::W`](W) writer structure"]
 impl crate::Writable for EM_SLIB_SET_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EM_SLIB_SET to value 0"]
 impl crate::Resettable for EM_SLIB_SET_SPEC {

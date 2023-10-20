@@ -296,8 +296,8 @@ impl crate::RegisterSpec for OMODE_SPEC {
 impl crate::Readable for OMODE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`omode::W`](W) writer structure"]
 impl crate::Writable for OMODE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OMODE to value 0"]
 impl crate::Resettable for OMODE_SPEC {

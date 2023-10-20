@@ -52,8 +52,8 @@ impl crate::RegisterSpec for BK3ECC_SPEC {
 impl crate::Readable for BK3ECC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk3ecc::W`](W) writer structure"]
 impl crate::Writable for BK3ECC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BK3ECC to value 0"]
 impl crate::Resettable for BK3ECC_SPEC {

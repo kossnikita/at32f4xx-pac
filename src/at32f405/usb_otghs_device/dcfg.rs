@@ -103,8 +103,8 @@ impl crate::RegisterSpec for DCFG_SPEC {
 impl crate::Readable for DCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dcfg::W`](W) writer structure"]
 impl crate::Writable for DCFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCFG to value 0x0220_0000"]
 impl crate::Resettable for DCFG_SPEC {

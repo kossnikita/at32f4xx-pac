@@ -68,8 +68,8 @@ impl crate::RegisterSpec for IFC_SPEC {
 impl crate::Readable for IFC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ifc::W`](W) writer structure"]
 impl crate::Writable for IFC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IFC to value 0"]
 impl crate::Resettable for IFC_SPEC {

@@ -100,8 +100,8 @@ impl crate::RegisterSpec for EXTIC2_SPEC {
 impl crate::Readable for EXTIC2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`extic2::W`](W) writer structure"]
 impl crate::Writable for EXTIC2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXTIC2 to value 0"]
 impl crate::Resettable for EXTIC2_SPEC {

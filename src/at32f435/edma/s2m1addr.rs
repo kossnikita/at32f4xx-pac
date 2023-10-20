@@ -52,8 +52,8 @@ impl crate::RegisterSpec for S2M1ADDR_SPEC {
 impl crate::Readable for S2M1ADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s2m1addr::W`](W) writer structure"]
 impl crate::Writable for S2M1ADDR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S2M1ADDR to value 0"]
 impl crate::Resettable for S2M1ADDR_SPEC {

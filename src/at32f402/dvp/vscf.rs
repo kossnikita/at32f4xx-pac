@@ -68,8 +68,8 @@ impl crate::RegisterSpec for VSCF_SPEC {
 impl crate::Readable for VSCF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vscf::W`](W) writer structure"]
 impl crate::Writable for VSCF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets VSCF to value 0"]
 impl crate::Resettable for VSCF_SPEC {

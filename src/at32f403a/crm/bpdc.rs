@@ -124,8 +124,8 @@ impl crate::RegisterSpec for BPDC_SPEC {
 impl crate::Readable for BPDC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bpdc::W`](W) writer structure"]
 impl crate::Writable for BPDC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BPDC to value 0"]
 impl crate::Resettable for BPDC_SPEC {

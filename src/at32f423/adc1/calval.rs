@@ -52,8 +52,8 @@ impl crate::RegisterSpec for CALVAL_SPEC {
 impl crate::Readable for CALVAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`calval::W`](W) writer structure"]
 impl crate::Writable for CALVAL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CALVAL to value 0"]
 impl crate::Resettable for CALVAL_SPEC {

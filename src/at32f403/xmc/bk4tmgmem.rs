@@ -100,8 +100,8 @@ impl crate::RegisterSpec for BK4TMGMEM_SPEC {
 impl crate::Readable for BK4TMGMEM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk4tmgmem::W`](W) writer structure"]
 impl crate::Writable for BK4TMGMEM_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BK4TMGMEM to value 0xfcfc_fcfc"]
 impl crate::Resettable for BK4TMGMEM_SPEC {

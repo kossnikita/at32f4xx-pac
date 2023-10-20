@@ -148,8 +148,8 @@ impl crate::RegisterSpec for GRSTCTL_SPEC {
 impl crate::Readable for GRSTCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`grstctl::W`](W) writer structure"]
 impl crate::Writable for GRSTCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GRSTCTL to value 0x2000_0000"]
 impl crate::Resettable for GRSTCTL_SPEC {

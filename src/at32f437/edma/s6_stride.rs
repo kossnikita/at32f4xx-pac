@@ -68,8 +68,8 @@ impl crate::RegisterSpec for S6_STRIDE_SPEC {
 impl crate::Readable for S6_STRIDE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s6_stride::W`](W) writer structure"]
 impl crate::Writable for S6_STRIDE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S6_STRIDE to value 0"]
 impl crate::Resettable for S6_STRIDE_SPEC {

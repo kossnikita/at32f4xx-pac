@@ -100,8 +100,8 @@ impl crate::RegisterSpec for EXINTC4_SPEC {
 impl crate::Readable for EXINTC4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`exintc4::W`](W) writer structure"]
 impl crate::Writable for EXINTC4_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EXINTC4 to value 0"]
 impl crate::Resettable for EXINTC4_SPEC {

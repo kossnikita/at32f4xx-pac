@@ -116,8 +116,8 @@ impl crate::RegisterSpec for IENA_SPEC {
 impl crate::Readable for IENA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`iena::W`](W) writer structure"]
 impl crate::Writable for IENA_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IENA to value 0"]
 impl crate::Resettable for IENA_SPEC {

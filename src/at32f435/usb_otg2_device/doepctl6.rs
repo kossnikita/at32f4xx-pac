@@ -164,8 +164,8 @@ impl crate::RegisterSpec for DOEPCTL6_SPEC {
 impl crate::Readable for DOEPCTL6_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doepctl6::W`](W) writer structure"]
 impl crate::Writable for DOEPCTL6_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DOEPCTL6 to value 0"]
 impl crate::Resettable for DOEPCTL6_SPEC {

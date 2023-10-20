@@ -52,8 +52,8 @@ impl crate::RegisterSpec for AHBEN2_SPEC {
 impl crate::Readable for AHBEN2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahben2::W`](W) writer structure"]
 impl crate::Writable for AHBEN2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets AHBEN2 to value 0"]
 impl crate::Resettable for AHBEN2_SPEC {

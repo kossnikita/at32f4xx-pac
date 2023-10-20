@@ -356,8 +356,8 @@ impl crate::RegisterSpec for CLR2_SPEC {
 impl crate::Readable for CLR2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clr2::W`](W) writer structure"]
 impl crate::Writable for CLR2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLR2 to value 0"]
 impl crate::Resettable for CLR2_SPEC {

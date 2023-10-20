@@ -55,8 +55,8 @@ impl crate::RegisterSpec for OTGHS_SPEC {
 impl crate::Readable for OTGHS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`otghs::W`](W) writer structure"]
 impl crate::Writable for OTGHS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets OTGHS to value 0"]
 impl crate::Resettable for OTGHS_SPEC {

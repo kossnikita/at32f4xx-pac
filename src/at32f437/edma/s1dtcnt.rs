@@ -52,8 +52,8 @@ impl crate::RegisterSpec for S1DTCNT_SPEC {
 impl crate::Readable for S1DTCNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s1dtcnt::W`](W) writer structure"]
 impl crate::Writable for S1DTCNT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets S1DTCNT to value 0"]
 impl crate::Resettable for S1DTCNT_SPEC {

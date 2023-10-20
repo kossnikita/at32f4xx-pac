@@ -609,8 +609,8 @@ impl crate::RegisterSpec for BRK_SPEC {
 impl crate::Readable for BRK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`brk::W`](W) writer structure"]
 impl crate::Writable for BRK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BRK to value 0"]
 impl crate::Resettable for BRK_SPEC {

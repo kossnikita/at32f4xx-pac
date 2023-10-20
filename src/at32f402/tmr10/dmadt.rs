@@ -52,8 +52,8 @@ impl crate::RegisterSpec for DMADT_SPEC {
 impl crate::Readable for DMADT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmadt::W`](W) writer structure"]
 impl crate::Writable for DMADT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMADT to value 0"]
 impl crate::Resettable for DMADT_SPEC {

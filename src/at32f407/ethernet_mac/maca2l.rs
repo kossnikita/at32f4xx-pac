@@ -52,8 +52,8 @@ impl crate::RegisterSpec for MACA2L_SPEC {
 impl crate::Readable for MACA2L_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`maca2l::W`](W) writer structure"]
 impl crate::Writable for MACA2L_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MACA2L to value 0xffff_ffff"]
 impl crate::Resettable for MACA2L_SPEC {

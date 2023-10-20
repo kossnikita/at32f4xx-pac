@@ -33,8 +33,8 @@ impl crate::RegisterSpec for VMB_SPEC {
 impl crate::Readable for VMB_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vmb::W`](W) writer structure"]
 impl crate::Writable for VMB_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets VM%sB to value 0x0fff"]
 impl crate::Resettable for VMB_SPEC {

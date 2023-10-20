@@ -52,8 +52,8 @@ impl crate::RegisterSpec for CCTRL_SPEC {
 impl crate::Readable for CCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cctrl::W`](W) writer structure"]
 impl crate::Writable for CCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CCTRL to value 0"]
 impl crate::Resettable for CCTRL_SPEC {

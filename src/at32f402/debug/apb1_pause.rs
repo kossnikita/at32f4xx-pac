@@ -288,8 +288,8 @@ impl crate::RegisterSpec for APB1_PAUSE_SPEC {
 impl crate::Readable for APB1_PAUSE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb1_pause::W`](W) writer structure"]
 impl crate::Writable for APB1_PAUSE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets APB1_PAUSE to value 0"]
 impl crate::Resettable for APB1_PAUSE_SPEC {

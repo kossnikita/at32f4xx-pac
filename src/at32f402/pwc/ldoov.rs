@@ -68,8 +68,8 @@ impl crate::RegisterSpec for LDOOV_SPEC {
 impl crate::Readable for LDOOV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ldoov::W`](W) writer structure"]
 impl crate::Writable for LDOOV_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LDOOV to value 0x12"]
 impl crate::Resettable for LDOOV_SPEC {

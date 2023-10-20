@@ -344,8 +344,8 @@ impl crate::RegisterSpec for EVTEN_SPEC {
 impl crate::Readable for EVTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`evten::W`](W) writer structure"]
 impl crate::Writable for EVTEN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EVTEN to value 0"]
 impl crate::Resettable for EVTEN_SPEC {

@@ -52,8 +52,8 @@ impl crate::RegisterSpec for REV_SPEC {
 impl crate::Readable for REV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rev::W`](W) writer structure"]
 impl crate::Writable for REV_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets REV to value 0x0001_0500"]
 impl crate::Resettable for REV_SPEC {

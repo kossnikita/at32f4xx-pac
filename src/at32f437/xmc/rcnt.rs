@@ -76,8 +76,8 @@ impl crate::RegisterSpec for RCNT_SPEC {
 impl crate::Readable for RCNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rcnt::W`](W) writer structure"]
 impl crate::Writable for RCNT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets RCNT to value 0"]
 impl crate::Resettable for RCNT_SPEC {

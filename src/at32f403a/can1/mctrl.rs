@@ -777,8 +777,8 @@ impl crate::RegisterSpec for MCTRL_SPEC {
 impl crate::Readable for MCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mctrl::W`](W) writer structure"]
 impl crate::Writable for MCTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x8000;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0x8000;
 }
 #[doc = "`reset()` method sets MCTRL to value 0x0001_0002"]
 impl crate::Resettable for MCTRL_SPEC {

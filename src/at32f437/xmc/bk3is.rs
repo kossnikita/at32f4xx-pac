@@ -140,8 +140,8 @@ impl crate::RegisterSpec for BK3IS_SPEC {
 impl crate::Readable for BK3IS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk3is::W`](W) writer structure"]
 impl crate::Writable for BK3IS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BK3IS to value 0x40"]
 impl crate::Resettable for BK3IS_SPEC {

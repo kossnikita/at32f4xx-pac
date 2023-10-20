@@ -68,8 +68,8 @@ impl crate::RegisterSpec for DDTH8R_SPEC {
 impl crate::Readable for DDTH8R_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ddth8r::W`](W) writer structure"]
 impl crate::Writable for DDTH8R_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DDTH8R to value 0"]
 impl crate::Resettable for DDTH8R_SPEC {

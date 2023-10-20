@@ -100,8 +100,8 @@ impl crate::RegisterSpec for MUXGSTS_SPEC {
 impl crate::Readable for MUXGSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxgsts::W`](W) writer structure"]
 impl crate::Writable for MUXGSTS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MUXGSTS to value 0"]
 impl crate::Resettable for MUXGSTS_SPEC {

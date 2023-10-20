@@ -196,8 +196,8 @@ impl crate::RegisterSpec for EPT4_SPEC {
 impl crate::Readable for EPT4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ept4::W`](W) writer structure"]
 impl crate::Writable for EPT4_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EPT4 to value 0"]
 impl crate::Resettable for EPT4_SPEC {

@@ -68,8 +68,8 @@ impl crate::RegisterSpec for MACVLT_SPEC {
 impl crate::Readable for MACVLT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macvlt::W`](W) writer structure"]
 impl crate::Writable for MACVLT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MACVLT to value 0"]
 impl crate::Resettable for MACVLT_SPEC {

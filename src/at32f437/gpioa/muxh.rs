@@ -151,8 +151,8 @@ impl crate::RegisterSpec for MUXH_SPEC {
 impl crate::Readable for MUXH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxh::W`](W) writer structure"]
 impl crate::Writable for MUXH_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MUXH to value 0"]
 impl crate::Resettable for MUXH_SPEC {

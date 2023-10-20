@@ -116,8 +116,8 @@ impl crate::RegisterSpec for DOEPINT2_SPEC {
 impl crate::Readable for DOEPINT2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doepint2::W`](W) writer structure"]
 impl crate::Writable for DOEPINT2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DOEPINT2 to value 0x80"]
 impl crate::Resettable for DOEPINT2_SPEC {

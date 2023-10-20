@@ -84,8 +84,8 @@ impl crate::RegisterSpec for DIEPTSIZ2_SPEC {
 impl crate::Readable for DIEPTSIZ2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dieptsiz2::W`](W) writer structure"]
 impl crate::Writable for DIEPTSIZ2_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIEPTSIZ2 to value 0"]
 impl crate::Resettable for DIEPTSIZ2_SPEC {

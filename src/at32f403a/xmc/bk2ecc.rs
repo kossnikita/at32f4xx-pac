@@ -52,8 +52,8 @@ impl crate::RegisterSpec for BK2ECC_SPEC {
 impl crate::Readable for BK2ECC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk2ecc::W`](W) writer structure"]
 impl crate::Writable for BK2ECC_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BK2ECC to value 0"]
 impl crate::Resettable for BK2ECC_SPEC {

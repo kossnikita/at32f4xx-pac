@@ -276,8 +276,8 @@ impl crate::RegisterSpec for BK1CTRL4_SPEC {
 impl crate::Readable for BK1CTRL4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk1ctrl4::W`](W) writer structure"]
 impl crate::Writable for BK1CTRL4_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BK1CTRL4 to value 0x30d2"]
 impl crate::Resettable for BK1CTRL4_SPEC {

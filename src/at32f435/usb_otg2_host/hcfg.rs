@@ -63,8 +63,8 @@ impl crate::RegisterSpec for HCFG_SPEC {
 impl crate::Readable for HCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcfg::W`](W) writer structure"]
 impl crate::Writable for HCFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCFG to value 0"]
 impl crate::Resettable for HCFG_SPEC {

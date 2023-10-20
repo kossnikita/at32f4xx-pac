@@ -373,8 +373,8 @@ impl crate::RegisterSpec for WPR_SPEC {
 impl crate::Readable for WPR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wpr::W`](W) writer structure"]
 impl crate::Writable for WPR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets WPR to value 0"]
 impl crate::Resettable for WPR_SPEC {

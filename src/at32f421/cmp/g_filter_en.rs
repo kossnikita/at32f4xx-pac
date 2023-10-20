@@ -52,8 +52,8 @@ impl crate::RegisterSpec for G_FILTER_EN_SPEC {
 impl crate::Readable for G_FILTER_EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`g_filter_en::W`](W) writer structure"]
 impl crate::Writable for G_FILTER_EN_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets G_FILTER_EN to value 0"]
 impl crate::Resettable for G_FILTER_EN_SPEC {

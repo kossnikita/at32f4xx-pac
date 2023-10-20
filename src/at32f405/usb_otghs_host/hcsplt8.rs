@@ -116,8 +116,8 @@ impl crate::RegisterSpec for HCSPLT8_SPEC {
 impl crate::Readable for HCSPLT8_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcsplt8::W`](W) writer structure"]
 impl crate::Writable for HCSPLT8_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCSPLT8 to value 0"]
 impl crate::Resettable for HCSPLT8_SPEC {

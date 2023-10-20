@@ -68,8 +68,8 @@ impl crate::RegisterSpec for ALASBS_SPEC {
 impl crate::Readable for ALASBS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`alasbs::W`](W) writer structure"]
 impl crate::Writable for ALASBS_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ALASBS to value 0"]
 impl crate::Resettable for ALASBS_SPEC {

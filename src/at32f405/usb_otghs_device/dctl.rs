@@ -180,8 +180,8 @@ impl crate::RegisterSpec for DCTL_SPEC {
 impl crate::Readable for DCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dctl::W`](W) writer structure"]
 impl crate::Writable for DCTL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DCTL to value 0"]
 impl crate::Resettable for DCTL_SPEC {

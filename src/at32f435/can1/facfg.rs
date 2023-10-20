@@ -452,8 +452,8 @@ impl crate::RegisterSpec for FACFG_SPEC {
 impl crate::Readable for FACFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`facfg::W`](W) writer structure"]
 impl crate::Writable for FACFG_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FACFG to value 0"]
 impl crate::Resettable for FACFG_SPEC {

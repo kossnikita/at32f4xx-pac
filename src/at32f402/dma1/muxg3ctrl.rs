@@ -116,8 +116,8 @@ impl crate::RegisterSpec for MUXG3CTRL_SPEC {
 impl crate::Readable for MUXG3CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxg3ctrl::W`](W) writer structure"]
 impl crate::Writable for MUXG3CTRL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MUXG3CTRL to value 0"]
 impl crate::Resettable for MUXG3CTRL_SPEC {

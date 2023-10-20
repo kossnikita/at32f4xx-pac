@@ -84,8 +84,8 @@ impl crate::RegisterSpec for MMCRI_SPEC {
 impl crate::Readable for MMCRI_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mmcri::W`](W) writer structure"]
 impl crate::Writable for MMCRI_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MMCRI to value 0"]
 impl crate::Resettable for MMCRI_SPEC {

@@ -302,8 +302,8 @@ impl crate::RegisterSpec for ODRVR_SPEC {
 impl crate::Readable for ODRVR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`odrvr::W`](W) writer structure"]
 impl crate::Writable for ODRVR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ODRVR to value 0"]
 impl crate::Resettable for ODRVR_SPEC {

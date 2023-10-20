@@ -68,8 +68,8 @@ impl crate::RegisterSpec for HPTXFSIZ_SPEC {
 impl crate::Readable for HPTXFSIZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hptxfsiz::W`](W) writer structure"]
 impl crate::Writable for HPTXFSIZ_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HPTXFSIZ to value 0x0200_0600"]
 impl crate::Resettable for HPTXFSIZ_SPEC {

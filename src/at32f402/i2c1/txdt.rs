@@ -52,8 +52,8 @@ impl crate::RegisterSpec for TXDT_SPEC {
 impl crate::Readable for TXDT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`txdt::W`](W) writer structure"]
 impl crate::Writable for TXDT_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TXDT to value 0"]
 impl crate::Resettable for TXDT_SPEC {

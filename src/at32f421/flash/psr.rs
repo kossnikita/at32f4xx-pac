@@ -132,8 +132,8 @@ impl crate::RegisterSpec for PSR_SPEC {
 impl crate::Readable for PSR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`psr::W`](W) writer structure"]
 impl crate::Writable for PSR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PSR to value 0x30"]
 impl crate::Resettable for PSR_SPEC {

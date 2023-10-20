@@ -74,8 +74,8 @@ impl crate::RegisterSpec for DEACHINTMSK_SPEC {
 impl crate::Readable for DEACHINTMSK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`deachintmsk::W`](W) writer structure"]
 impl crate::Writable for DEACHINTMSK_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DEACHINTMSK to value 0"]
 impl crate::Resettable for DEACHINTMSK_SPEC {

@@ -196,8 +196,8 @@ impl crate::RegisterSpec for HCCHAR3_SPEC {
 impl crate::Readable for HCCHAR3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcchar3::W`](W) writer structure"]
 impl crate::Writable for HCCHAR3_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCCHAR3 to value 0"]
 impl crate::Resettable for HCCHAR3_SPEC {

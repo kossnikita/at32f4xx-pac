@@ -52,8 +52,8 @@ impl crate::RegisterSpec for FSIZE_SPEC {
 impl crate::Readable for FSIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fsize::W`](W) writer structure"]
 impl crate::Writable for FSIZE_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FSIZE to value 0"]
 impl crate::Resettable for FSIZE_SPEC {

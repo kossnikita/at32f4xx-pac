@@ -32,8 +32,8 @@ impl crate::RegisterSpec for SLIB_PWD_CLR_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`slib_pwd_clr::W`](W) writer structure"]
 impl crate::Writable for SLIB_PWD_CLR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SLIB_PWD_CLR to value 0"]
 impl crate::Resettable for SLIB_PWD_CLR_SPEC {

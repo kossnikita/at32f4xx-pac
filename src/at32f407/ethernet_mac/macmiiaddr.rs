@@ -116,8 +116,8 @@ impl crate::RegisterSpec for MACMIIADDR_SPEC {
 impl crate::Readable for MACMIIADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macmiiaddr::W`](W) writer structure"]
 impl crate::Writable for MACMIIADDR_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MACMIIADDR to value 0"]
 impl crate::Resettable for MACMIIADDR_SPEC {

@@ -33,8 +33,8 @@ impl crate::RegisterSpec for MACRWFF_SPEC {
 impl crate::Readable for MACRWFF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macrwff::W`](W) writer structure"]
 impl crate::Writable for MACRWFF_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MACRWFF to value 0"]
 impl crate::Resettable for MACRWFF_SPEC {

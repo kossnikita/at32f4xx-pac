@@ -116,8 +116,8 @@ impl crate::RegisterSpec for SOFRNUM_SPEC {
 impl crate::Readable for SOFRNUM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sofrnum::W`](W) writer structure"]
 impl crate::Writable for SOFRNUM_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SOFRNUM to value 0"]
 impl crate::Resettable for SOFRNUM_SPEC {

@@ -554,8 +554,8 @@ impl crate::RegisterSpec for ALA_SPEC {
 impl crate::Readable for ALA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ala::W`](W) writer structure"]
 impl crate::Writable for ALA_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ALA to value 0"]
 impl crate::Resettable for ALA_SPEC {

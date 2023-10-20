@@ -231,8 +231,8 @@ impl crate::RegisterSpec for DOEPEACHMSK1_SPEC {
 impl crate::Readable for DOEPEACHMSK1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doepeachmsk1::W`](W) writer structure"]
 impl crate::Writable for DOEPEACHMSK1_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DOEPEACHMSK1 to value 0"]
 impl crate::Resettable for DOEPEACHMSK1_SPEC {

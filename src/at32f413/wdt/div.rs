@@ -185,8 +185,8 @@ impl crate::RegisterSpec for DIV_SPEC {
 impl crate::Readable for DIV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`div::W`](W) writer structure"]
 impl crate::Writable for DIV_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIV to value 0"]
 impl crate::Resettable for DIV_SPEC {

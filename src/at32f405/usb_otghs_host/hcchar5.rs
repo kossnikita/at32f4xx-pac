@@ -196,8 +196,8 @@ impl crate::RegisterSpec for HCCHAR5_SPEC {
 impl crate::Readable for HCCHAR5_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcchar5::W`](W) writer structure"]
 impl crate::Writable for HCCHAR5_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets HCCHAR5 to value 0"]
 impl crate::Resettable for HCCHAR5_SPEC {

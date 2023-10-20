@@ -300,8 +300,8 @@ impl crate::RegisterSpec for RTCCAL_SPEC {
 impl crate::Readable for RTCCAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rtccal::W`](W) writer structure"]
 impl crate::Writable for RTCCAL_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x0380;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0x0380;
 }
 #[doc = "`reset()` method sets RTCCAL to value 0"]
 impl crate::Resettable for RTCCAL_SPEC {

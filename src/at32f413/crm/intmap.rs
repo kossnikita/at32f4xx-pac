@@ -52,8 +52,8 @@ impl crate::RegisterSpec for INTMAP_SPEC {
 impl crate::Readable for INTMAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intmap::W`](W) writer structure"]
 impl crate::Writable for INTMAP_SPEC {
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZEROS_BITMAP: Self::Ux = 0;
+    const ONES_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTMAP to value 0"]
 impl crate::Resettable for INTMAP_SPEC {
