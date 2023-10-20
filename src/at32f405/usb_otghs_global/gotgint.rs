@@ -5,7 +5,7 @@ pub type W = crate::W<GOTGINT_SPEC>;
 #[doc = "Field `SESENDDET` reader - VBUS is deasserted"]
 pub type SESENDDET_R = crate::BitReader;
 #[doc = "Field `SESENDDET` writer - VBUS is deasserted"]
-pub type SESENDDET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SESENDDET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - VBUS is deasserted"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 2 - VBUS is deasserted"]
     #[inline(always)]
     #[must_use]
-    pub fn sesenddet(&mut self) -> SESENDDET_W<GOTGINT_SPEC, 2> {
-        SESENDDET_W::new(self)
+    pub fn sesenddet(&mut self) -> SESENDDET_W<GOTGINT_SPEC> {
+        SESENDDET_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

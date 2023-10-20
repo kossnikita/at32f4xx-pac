@@ -123,8 +123,8 @@ impl From<EOIFW_AW> for bool {
     }
 }
 #[doc = "Field `EOIF` writer - Error occur Interrupt flag"]
-pub type EOIF_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, EOIFW_AW>;
-impl<'a, REG, const O: u8> EOIF_W<'a, REG, O>
+pub type EOIF_W<'a, REG> = crate::BitWriter1C<'a, REG, EOIFW_AW>;
+impl<'a, REG> EOIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -183,8 +183,8 @@ impl From<QDZIFW_AW> for bool {
     }
 }
 #[doc = "Field `QDZIF` writer - Quit doze mode interrupt flag"]
-pub type QDZIF_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, QDZIFW_AW>;
-impl<'a, REG, const O: u8> QDZIF_W<'a, REG, O>
+pub type QDZIF_W<'a, REG> = crate::BitWriter1C<'a, REG, QDZIFW_AW>;
+impl<'a, REG> QDZIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -243,8 +243,8 @@ impl From<EDZIFW_AW> for bool {
     }
 }
 #[doc = "Field `EDZIF` writer - Enter doze mode interrupt flag"]
-pub type EDZIF_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, EDZIFW_AW>;
-impl<'a, REG, const O: u8> EDZIF_W<'a, REG, O>
+pub type EDZIF_W<'a, REG> = crate::BitWriter1C<'a, REG, EDZIFW_AW>;
+impl<'a, REG> EDZIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -469,20 +469,20 @@ impl W {
     #[doc = "Bit 2 - Error occur Interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn eoif(&mut self) -> EOIF_W<MSTS_SPEC, 2> {
-        EOIF_W::new(self)
+    pub fn eoif(&mut self) -> EOIF_W<MSTS_SPEC> {
+        EOIF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Quit doze mode interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn qdzif(&mut self) -> QDZIF_W<MSTS_SPEC, 3> {
-        QDZIF_W::new(self)
+    pub fn qdzif(&mut self) -> QDZIF_W<MSTS_SPEC> {
+        QDZIF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Enter doze mode interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn edzif(&mut self) -> EDZIF_W<MSTS_SPEC, 4> {
-        EDZIF_W::new(self)
+    pub fn edzif(&mut self) -> EDZIF_W<MSTS_SPEC> {
+        EDZIF_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

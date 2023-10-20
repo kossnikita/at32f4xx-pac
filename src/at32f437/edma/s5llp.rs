@@ -5,7 +5,7 @@ pub type W = crate::W<S5LLP_SPEC>;
 #[doc = "Field `LLP` reader - Link list pointer"]
 pub type LLP_R = crate::FieldReader<u32>;
 #[doc = "Field `LLP` writer - Link list pointer"]
-pub type LLP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type LLP_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Link list pointer"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Link list pointer"]
     #[inline(always)]
     #[must_use]
-    pub fn llp(&mut self) -> LLP_W<S5LLP_SPEC, 0> {
-        LLP_W::new(self)
+    pub fn llp(&mut self) -> LLP_W<S5LLP_SPEC> {
+        LLP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

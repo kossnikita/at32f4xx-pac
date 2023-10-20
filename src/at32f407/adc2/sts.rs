@@ -51,8 +51,8 @@ impl From<VMORW_AW> for bool {
     }
 }
 #[doc = "Field `VMOR` writer - Voltage monitoring out of range flag"]
-pub type VMOR_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, VMORW_AW>;
-impl<'a, REG, const O: u8> VMOR_W<'a, REG, O>
+pub type VMOR_W<'a, REG> = crate::BitWriter0C<'a, REG, VMORW_AW>;
+impl<'a, REG> VMOR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -111,8 +111,8 @@ impl From<CCEW_AW> for bool {
     }
 }
 #[doc = "Field `CCE` writer - Channels conversion end flag"]
-pub type CCE_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, CCEW_AW>;
-impl<'a, REG, const O: u8> CCE_W<'a, REG, O>
+pub type CCE_W<'a, REG> = crate::BitWriter0C<'a, REG, CCEW_AW>;
+impl<'a, REG> CCE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -175,8 +175,8 @@ impl From<PCCSW_AW> for bool {
     }
 }
 #[doc = "Field `PCCS` writer - Preempted channel conversion start flag"]
-pub type PCCS_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, PCCSW_AW>;
-impl<'a, REG, const O: u8> PCCS_W<'a, REG, O>
+pub type PCCS_W<'a, REG> = crate::BitWriter0C<'a, REG, PCCSW_AW>;
+impl<'a, REG> PCCS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -237,32 +237,32 @@ impl W {
     #[doc = "Bit 0 - Voltage monitoring out of range flag"]
     #[inline(always)]
     #[must_use]
-    pub fn vmor(&mut self) -> VMOR_W<STS_SPEC, 0> {
-        VMOR_W::new(self)
+    pub fn vmor(&mut self) -> VMOR_W<STS_SPEC> {
+        VMOR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channels conversion end flag"]
     #[inline(always)]
     #[must_use]
-    pub fn cce(&mut self) -> CCE_W<STS_SPEC, 1> {
-        CCE_W::new(self)
+    pub fn cce(&mut self) -> CCE_W<STS_SPEC> {
+        CCE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Preempted channels conversion end flag"]
     #[inline(always)]
     #[must_use]
-    pub fn pcce(&mut self) -> PCCE_W<STS_SPEC, 2> {
-        PCCE_W::new(self)
+    pub fn pcce(&mut self) -> PCCE_W<STS_SPEC> {
+        PCCE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Preempted channel conversion start flag"]
     #[inline(always)]
     #[must_use]
-    pub fn pccs(&mut self) -> PCCS_W<STS_SPEC, 3> {
-        PCCS_W::new(self)
+    pub fn pccs(&mut self) -> PCCS_W<STS_SPEC> {
+        PCCS_W::new(self, 3)
     }
     #[doc = "Bit 4 - Ordinary channel conversion start flag"]
     #[inline(always)]
     #[must_use]
-    pub fn occs(&mut self) -> OCCS_W<STS_SPEC, 4> {
-        OCCS_W::new(self)
+    pub fn occs(&mut self) -> OCCS_W<STS_SPEC> {
+        OCCS_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

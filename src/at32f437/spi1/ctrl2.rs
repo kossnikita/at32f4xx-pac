@@ -53,8 +53,8 @@ impl From<DMARENW_AW> for bool {
     }
 }
 #[doc = "Field `DMAREN` writer - DMA receive enable"]
-pub type DMAREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMARENW_AW>;
-impl<'a, REG, const O: u8> DMAREN_W<'a, REG, O>
+pub type DMAREN_W<'a, REG> = crate::BitWriter<'a, REG, DMARENW_AW>;
+impl<'a, REG> DMAREN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,8 +120,8 @@ impl From<DMATENW_AW> for bool {
     }
 }
 #[doc = "Field `DMATEN` writer - DMA transmit enable"]
-pub type DMATEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DMATENW_AW>;
-impl<'a, REG, const O: u8> DMATEN_W<'a, REG, O>
+pub type DMATEN_W<'a, REG> = crate::BitWriter<'a, REG, DMATENW_AW>;
+impl<'a, REG> DMATEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -187,8 +187,8 @@ impl From<HWCSOEW_AW> for bool {
     }
 }
 #[doc = "Field `HWCSOE` writer - Hardware CS output enable"]
-pub type HWCSOE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HWCSOEW_AW>;
-impl<'a, REG, const O: u8> HWCSOE_W<'a, REG, O>
+pub type HWCSOE_W<'a, REG> = crate::BitWriter<'a, REG, HWCSOEW_AW>;
+impl<'a, REG> HWCSOE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -206,7 +206,7 @@ where
 #[doc = "Field `TIEN` reader - TI mode enable"]
 pub type TIEN_R = crate::BitReader;
 #[doc = "Field `TIEN` writer - TI mode enable"]
-pub type TIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERRIE` reader - Error interrupt enable"]
 pub type ERRIE_R = crate::BitReader<ERRIER_A>;
 #[doc = "Error interrupt enable\n\nValue on reset: 0"]
@@ -258,8 +258,8 @@ impl From<ERRIEW_AW> for bool {
     }
 }
 #[doc = "Field `ERRIE` writer - Error interrupt enable"]
-pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ERRIEW_AW>;
-impl<'a, REG, const O: u8> ERRIE_W<'a, REG, O>
+pub type ERRIE_W<'a, REG> = crate::BitWriter<'a, REG, ERRIEW_AW>;
+impl<'a, REG> ERRIE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -325,8 +325,8 @@ impl From<RDBFIEW_AW> for bool {
     }
 }
 #[doc = "Field `RDBFIE` writer - Receive data buffer full interrupt enable"]
-pub type RDBFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RDBFIEW_AW>;
-impl<'a, REG, const O: u8> RDBFIE_W<'a, REG, O>
+pub type RDBFIE_W<'a, REG> = crate::BitWriter<'a, REG, RDBFIEW_AW>;
+impl<'a, REG> RDBFIE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -392,8 +392,8 @@ impl From<TDBEIEW_AW> for bool {
     }
 }
 #[doc = "Field `TDBEIE` writer - Transmit data buffer empty interrupt enable"]
-pub type TDBEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TDBEIEW_AW>;
-impl<'a, REG, const O: u8> TDBEIE_W<'a, REG, O>
+pub type TDBEIE_W<'a, REG> = crate::BitWriter<'a, REG, TDBEIEW_AW>;
+impl<'a, REG> TDBEIE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -411,11 +411,11 @@ where
 #[doc = "Field `MDIV3` reader - Master clock frequency division bit3"]
 pub type MDIV3_R = crate::BitReader;
 #[doc = "Field `MDIV3` writer - Master clock frequency division bit3"]
-pub type MDIV3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MDIV3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MDIV3EN` reader - Master clock frequency3 division enable"]
 pub type MDIV3EN_R = crate::BitReader;
 #[doc = "Field `MDIV3EN` writer - Master clock frequency3 division enable"]
-pub type MDIV3EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MDIV3EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - DMA receive enable"]
     #[inline(always)]
@@ -487,56 +487,56 @@ impl W {
     #[doc = "Bit 0 - DMA receive enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaren(&mut self) -> DMAREN_W<CTRL2_SPEC, 0> {
-        DMAREN_W::new(self)
+    pub fn dmaren(&mut self) -> DMAREN_W<CTRL2_SPEC> {
+        DMAREN_W::new(self, 0)
     }
     #[doc = "Bit 1 - DMA transmit enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaten(&mut self) -> DMATEN_W<CTRL2_SPEC, 1> {
-        DMATEN_W::new(self)
+    pub fn dmaten(&mut self) -> DMATEN_W<CTRL2_SPEC> {
+        DMATEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Hardware CS output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hwcsoe(&mut self) -> HWCSOE_W<CTRL2_SPEC, 2> {
-        HWCSOE_W::new(self)
+    pub fn hwcsoe(&mut self) -> HWCSOE_W<CTRL2_SPEC> {
+        HWCSOE_W::new(self, 2)
     }
     #[doc = "Bit 4 - TI mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tien(&mut self) -> TIEN_W<CTRL2_SPEC, 4> {
-        TIEN_W::new(self)
+    pub fn tien(&mut self) -> TIEN_W<CTRL2_SPEC> {
+        TIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTRL2_SPEC, 5> {
-        ERRIE_W::new(self)
+    pub fn errie(&mut self) -> ERRIE_W<CTRL2_SPEC> {
+        ERRIE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Receive data buffer full interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rdbfie(&mut self) -> RDBFIE_W<CTRL2_SPEC, 6> {
-        RDBFIE_W::new(self)
+    pub fn rdbfie(&mut self) -> RDBFIE_W<CTRL2_SPEC> {
+        RDBFIE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Transmit data buffer empty interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tdbeie(&mut self) -> TDBEIE_W<CTRL2_SPEC, 7> {
-        TDBEIE_W::new(self)
+    pub fn tdbeie(&mut self) -> TDBEIE_W<CTRL2_SPEC> {
+        TDBEIE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Master clock frequency division bit3"]
     #[inline(always)]
     #[must_use]
-    pub fn mdiv3(&mut self) -> MDIV3_W<CTRL2_SPEC, 8> {
-        MDIV3_W::new(self)
+    pub fn mdiv3(&mut self) -> MDIV3_W<CTRL2_SPEC> {
+        MDIV3_W::new(self, 8)
     }
     #[doc = "Bit 9 - Master clock frequency3 division enable"]
     #[inline(always)]
     #[must_use]
-    pub fn mdiv3en(&mut self) -> MDIV3EN_W<CTRL2_SPEC, 9> {
-        MDIV3EN_W::new(self)
+    pub fn mdiv3en(&mut self) -> MDIV3EN_W<CTRL2_SPEC> {
+        MDIV3EN_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

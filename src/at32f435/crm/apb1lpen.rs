@@ -5,103 +5,103 @@ pub type W = crate::W<APB1LPEN_SPEC>;
 #[doc = "Field `TMR2LPEN` reader - Timer2 clock enable during sleep mode"]
 pub type TMR2LPEN_R = crate::BitReader;
 #[doc = "Field `TMR2LPEN` writer - Timer2 clock enable during sleep mode"]
-pub type TMR2LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR2LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR3LPEN` reader - Timer3 clock enable during sleep mode"]
 pub type TMR3LPEN_R = crate::BitReader;
 #[doc = "Field `TMR3LPEN` writer - Timer3 clock enable during sleep mode"]
-pub type TMR3LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR3LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR4LPEN` reader - Timer4 clock enable during sleep mode"]
 pub type TMR4LPEN_R = crate::BitReader;
 #[doc = "Field `TMR4LPEN` writer - Timer4 clock enable during sleep mode"]
-pub type TMR4LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR4LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR5LPEN` reader - Timer5 clock enable during sleep mode"]
 pub type TMR5LPEN_R = crate::BitReader;
 #[doc = "Field `TMR5LPEN` writer - Timer5 clock enable during sleep mode"]
-pub type TMR5LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR5LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR6LPEN` reader - Timer6 clock enable during sleep mode"]
 pub type TMR6LPEN_R = crate::BitReader;
 #[doc = "Field `TMR6LPEN` writer - Timer6 clock enable during sleep mode"]
-pub type TMR6LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR6LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR7LPEN` reader - Timer7 clock enable during sleep mode"]
 pub type TMR7LPEN_R = crate::BitReader;
 #[doc = "Field `TMR7LPEN` writer - Timer7 clock enable during sleep mode"]
-pub type TMR7LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR7LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR12LPEN` reader - Timer12 clock enable during sleep mode"]
 pub type TMR12LPEN_R = crate::BitReader;
 #[doc = "Field `TMR12LPEN` writer - Timer12 clock enable during sleep mode"]
-pub type TMR12LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR12LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR13LPEN` reader - Timer13 clock enable during sleep mode"]
 pub type TMR13LPEN_R = crate::BitReader;
 #[doc = "Field `TMR13LPEN` writer - Timer13 clock enable during sleep mode"]
-pub type TMR13LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR13LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR14LPEN` reader - Timer14 clock enable during sleep mode"]
 pub type TMR14LPEN_R = crate::BitReader;
 #[doc = "Field `TMR14LPEN` writer - Timer14 clock enable during sleep mode"]
-pub type TMR14LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR14LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WWDTLPEN` reader - WWDT clock enable during sleep mode"]
 pub type WWDTLPEN_R = crate::BitReader;
 #[doc = "Field `WWDTLPEN` writer - WWDT clock enable during sleep mode"]
-pub type WWDTLPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WWDTLPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI2LPEN` reader - SPI2 clock enable during sleep mode"]
 pub type SPI2LPEN_R = crate::BitReader;
 #[doc = "Field `SPI2LPEN` writer - SPI2 clock enable during sleep mode"]
-pub type SPI2LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI2LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI3LPEN` reader - SPI3 clock enable during sleep mode"]
 pub type SPI3LPEN_R = crate::BitReader;
 #[doc = "Field `SPI3LPEN` writer - SPI3 clock enable during sleep mode"]
-pub type SPI3LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI3LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART2LPEN` reader - USART2 clock enable during sleep mode"]
 pub type USART2LPEN_R = crate::BitReader;
 #[doc = "Field `USART2LPEN` writer - USART2 clock enable during sleep mode"]
-pub type USART2LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USART2LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART3LPEN` reader - USART3 clock enable during sleep mode"]
 pub type USART3LPEN_R = crate::BitReader;
 #[doc = "Field `USART3LPEN` writer - USART3 clock enable during sleep mode"]
-pub type USART3LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USART3LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART4LPEN` reader - UART4 clock enable during sleep mode"]
 pub type UART4LPEN_R = crate::BitReader;
 #[doc = "Field `UART4LPEN` writer - UART4 clock enable during sleep mode"]
-pub type UART4LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART4LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART5LPEN` reader - UART5 clock enable during sleep mode"]
 pub type UART5LPEN_R = crate::BitReader;
 #[doc = "Field `UART5LPEN` writer - UART5 clock enable during sleep mode"]
-pub type UART5LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART5LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C1CPEN` reader - I2C1 clock enable during sleep mode"]
 pub type I2C1CPEN_R = crate::BitReader;
 #[doc = "Field `I2C1CPEN` writer - I2C1 clock enable during sleep mode"]
-pub type I2C1CPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C1CPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C2CPEN` reader - I2C2 clock enable during sleep mode"]
 pub type I2C2CPEN_R = crate::BitReader;
 #[doc = "Field `I2C2CPEN` writer - I2C2 clock enable during sleep mode"]
-pub type I2C2CPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C2CPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C3CPEN` reader - I2C3 clock enable during sleep mode"]
 pub type I2C3CPEN_R = crate::BitReader;
 #[doc = "Field `I2C3CPEN` writer - I2C3 clock enable during sleep mode"]
-pub type I2C3CPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C3CPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAN1LPEN` reader - CAN1 clock enable during sleep mode"]
 pub type CAN1LPEN_R = crate::BitReader;
 #[doc = "Field `CAN1LPEN` writer - CAN1 clock enable during sleep mode"]
-pub type CAN1LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAN1LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAN2LPEN` reader - CAN2 clock enable during sleep mode"]
 pub type CAN2LPEN_R = crate::BitReader;
 #[doc = "Field `CAN2LPEN` writer - CAN2 clock enable during sleep mode"]
-pub type CAN2LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAN2LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWCLPEN` reader - PWC clock enable during sleep mode"]
 pub type PWCLPEN_R = crate::BitReader;
 #[doc = "Field `PWCLPEN` writer - PWC clock enable during sleep mode"]
-pub type PWCLPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWCLPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DACLPEN` reader - DAC clock enable during sleep mode"]
 pub type DACLPEN_R = crate::BitReader;
 #[doc = "Field `DACLPEN` writer - DAC clock enable during sleep mode"]
-pub type DACLPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DACLPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART7LPEN` reader - UART7 clock enable during sleep mode"]
 pub type UART7LPEN_R = crate::BitReader;
 #[doc = "Field `UART7LPEN` writer - UART7 clock enable during sleep mode"]
-pub type UART7LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART7LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART8LPEN` reader - UART8 clock enable during sleep mode"]
 pub type UART8LPEN_R = crate::BitReader;
 #[doc = "Field `UART8LPEN` writer - UART8 clock enable during sleep mode"]
-pub type UART8LPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART8LPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Timer2 clock enable during sleep mode"]
     #[inline(always)]
@@ -269,152 +269,152 @@ impl W {
     #[doc = "Bit 0 - Timer2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr2lpen(&mut self) -> TMR2LPEN_W<APB1LPEN_SPEC, 0> {
-        TMR2LPEN_W::new(self)
+    pub fn tmr2lpen(&mut self) -> TMR2LPEN_W<APB1LPEN_SPEC> {
+        TMR2LPEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Timer3 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr3lpen(&mut self) -> TMR3LPEN_W<APB1LPEN_SPEC, 1> {
-        TMR3LPEN_W::new(self)
+    pub fn tmr3lpen(&mut self) -> TMR3LPEN_W<APB1LPEN_SPEC> {
+        TMR3LPEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Timer4 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr4lpen(&mut self) -> TMR4LPEN_W<APB1LPEN_SPEC, 2> {
-        TMR4LPEN_W::new(self)
+    pub fn tmr4lpen(&mut self) -> TMR4LPEN_W<APB1LPEN_SPEC> {
+        TMR4LPEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timer5 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr5lpen(&mut self) -> TMR5LPEN_W<APB1LPEN_SPEC, 3> {
-        TMR5LPEN_W::new(self)
+    pub fn tmr5lpen(&mut self) -> TMR5LPEN_W<APB1LPEN_SPEC> {
+        TMR5LPEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Timer6 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr6lpen(&mut self) -> TMR6LPEN_W<APB1LPEN_SPEC, 4> {
-        TMR6LPEN_W::new(self)
+    pub fn tmr6lpen(&mut self) -> TMR6LPEN_W<APB1LPEN_SPEC> {
+        TMR6LPEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Timer7 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr7lpen(&mut self) -> TMR7LPEN_W<APB1LPEN_SPEC, 5> {
-        TMR7LPEN_W::new(self)
+    pub fn tmr7lpen(&mut self) -> TMR7LPEN_W<APB1LPEN_SPEC> {
+        TMR7LPEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Timer12 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr12lpen(&mut self) -> TMR12LPEN_W<APB1LPEN_SPEC, 6> {
-        TMR12LPEN_W::new(self)
+    pub fn tmr12lpen(&mut self) -> TMR12LPEN_W<APB1LPEN_SPEC> {
+        TMR12LPEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Timer13 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr13lpen(&mut self) -> TMR13LPEN_W<APB1LPEN_SPEC, 7> {
-        TMR13LPEN_W::new(self)
+    pub fn tmr13lpen(&mut self) -> TMR13LPEN_W<APB1LPEN_SPEC> {
+        TMR13LPEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Timer14 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr14lpen(&mut self) -> TMR14LPEN_W<APB1LPEN_SPEC, 8> {
-        TMR14LPEN_W::new(self)
+    pub fn tmr14lpen(&mut self) -> TMR14LPEN_W<APB1LPEN_SPEC> {
+        TMR14LPEN_W::new(self, 8)
     }
     #[doc = "Bit 11 - WWDT clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn wwdtlpen(&mut self) -> WWDTLPEN_W<APB1LPEN_SPEC, 11> {
-        WWDTLPEN_W::new(self)
+    pub fn wwdtlpen(&mut self) -> WWDTLPEN_W<APB1LPEN_SPEC> {
+        WWDTLPEN_W::new(self, 11)
     }
     #[doc = "Bit 14 - SPI2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2lpen(&mut self) -> SPI2LPEN_W<APB1LPEN_SPEC, 14> {
-        SPI2LPEN_W::new(self)
+    pub fn spi2lpen(&mut self) -> SPI2LPEN_W<APB1LPEN_SPEC> {
+        SPI2LPEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - SPI3 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn spi3lpen(&mut self) -> SPI3LPEN_W<APB1LPEN_SPEC, 15> {
-        SPI3LPEN_W::new(self)
+    pub fn spi3lpen(&mut self) -> SPI3LPEN_W<APB1LPEN_SPEC> {
+        SPI3LPEN_W::new(self, 15)
     }
     #[doc = "Bit 17 - USART2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn usart2lpen(&mut self) -> USART2LPEN_W<APB1LPEN_SPEC, 17> {
-        USART2LPEN_W::new(self)
+    pub fn usart2lpen(&mut self) -> USART2LPEN_W<APB1LPEN_SPEC> {
+        USART2LPEN_W::new(self, 17)
     }
     #[doc = "Bit 18 - USART3 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn usart3lpen(&mut self) -> USART3LPEN_W<APB1LPEN_SPEC, 18> {
-        USART3LPEN_W::new(self)
+    pub fn usart3lpen(&mut self) -> USART3LPEN_W<APB1LPEN_SPEC> {
+        USART3LPEN_W::new(self, 18)
     }
     #[doc = "Bit 19 - UART4 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn uart4lpen(&mut self) -> UART4LPEN_W<APB1LPEN_SPEC, 19> {
-        UART4LPEN_W::new(self)
+    pub fn uart4lpen(&mut self) -> UART4LPEN_W<APB1LPEN_SPEC> {
+        UART4LPEN_W::new(self, 19)
     }
     #[doc = "Bit 20 - UART5 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn uart5lpen(&mut self) -> UART5LPEN_W<APB1LPEN_SPEC, 20> {
-        UART5LPEN_W::new(self)
+    pub fn uart5lpen(&mut self) -> UART5LPEN_W<APB1LPEN_SPEC> {
+        UART5LPEN_W::new(self, 20)
     }
     #[doc = "Bit 21 - I2C1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c1cpen(&mut self) -> I2C1CPEN_W<APB1LPEN_SPEC, 21> {
-        I2C1CPEN_W::new(self)
+    pub fn i2c1cpen(&mut self) -> I2C1CPEN_W<APB1LPEN_SPEC> {
+        I2C1CPEN_W::new(self, 21)
     }
     #[doc = "Bit 22 - I2C2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c2cpen(&mut self) -> I2C2CPEN_W<APB1LPEN_SPEC, 22> {
-        I2C2CPEN_W::new(self)
+    pub fn i2c2cpen(&mut self) -> I2C2CPEN_W<APB1LPEN_SPEC> {
+        I2C2CPEN_W::new(self, 22)
     }
     #[doc = "Bit 23 - I2C3 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c3cpen(&mut self) -> I2C3CPEN_W<APB1LPEN_SPEC, 23> {
-        I2C3CPEN_W::new(self)
+    pub fn i2c3cpen(&mut self) -> I2C3CPEN_W<APB1LPEN_SPEC> {
+        I2C3CPEN_W::new(self, 23)
     }
     #[doc = "Bit 25 - CAN1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn can1lpen(&mut self) -> CAN1LPEN_W<APB1LPEN_SPEC, 25> {
-        CAN1LPEN_W::new(self)
+    pub fn can1lpen(&mut self) -> CAN1LPEN_W<APB1LPEN_SPEC> {
+        CAN1LPEN_W::new(self, 25)
     }
     #[doc = "Bit 26 - CAN2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn can2lpen(&mut self) -> CAN2LPEN_W<APB1LPEN_SPEC, 26> {
-        CAN2LPEN_W::new(self)
+    pub fn can2lpen(&mut self) -> CAN2LPEN_W<APB1LPEN_SPEC> {
+        CAN2LPEN_W::new(self, 26)
     }
     #[doc = "Bit 28 - PWC clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn pwclpen(&mut self) -> PWCLPEN_W<APB1LPEN_SPEC, 28> {
-        PWCLPEN_W::new(self)
+    pub fn pwclpen(&mut self) -> PWCLPEN_W<APB1LPEN_SPEC> {
+        PWCLPEN_W::new(self, 28)
     }
     #[doc = "Bit 29 - DAC clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn daclpen(&mut self) -> DACLPEN_W<APB1LPEN_SPEC, 29> {
-        DACLPEN_W::new(self)
+    pub fn daclpen(&mut self) -> DACLPEN_W<APB1LPEN_SPEC> {
+        DACLPEN_W::new(self, 29)
     }
     #[doc = "Bit 30 - UART7 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn uart7lpen(&mut self) -> UART7LPEN_W<APB1LPEN_SPEC, 30> {
-        UART7LPEN_W::new(self)
+    pub fn uart7lpen(&mut self) -> UART7LPEN_W<APB1LPEN_SPEC> {
+        UART7LPEN_W::new(self, 30)
     }
     #[doc = "Bit 31 - UART8 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn uart8lpen(&mut self) -> UART8LPEN_W<APB1LPEN_SPEC, 31> {
-        UART8LPEN_W::new(self)
+    pub fn uart8lpen(&mut self) -> UART8LPEN_W<APB1LPEN_SPEC> {
+        UART8LPEN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

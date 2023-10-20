@@ -5,35 +5,35 @@ pub type W = crate::W<CLKCTRL_SPEC>;
 #[doc = "Field `CLKPSC` reader - Clock divide factor"]
 pub type CLKPSC_R = crate::FieldReader;
 #[doc = "Field `CLKPSC` writer - Clock divide factor"]
-pub type CLKPSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CLKPSC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CLKEN` reader - Clock enable bit"]
 pub type CLKEN_R = crate::BitReader;
 #[doc = "Field `CLKEN` writer - Clock enable bit"]
-pub type CLKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLKEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWRSVG` reader - Power saving configuration bit"]
 pub type PWRSVG_R = crate::BitReader;
 #[doc = "Field `PWRSVG` writer - Power saving configuration bit"]
-pub type PWRSVG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWRSVG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BYPS` reader - Clock divider bypass enable bit"]
 pub type BYPS_R = crate::BitReader;
 #[doc = "Field `BYPS` writer - Clock divider bypass enable bit"]
-pub type BYPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BYPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUSWIDTH` reader - Wide bus mode enable bit"]
 pub type BUSWIDTH_R = crate::FieldReader;
 #[doc = "Field `BUSWIDTH` writer - Wide bus mode enable bit"]
-pub type BUSWIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BUSWIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CLKEDG` reader - SDIO_CK dephasing selection bit"]
 pub type CLKEDG_R = crate::BitReader;
 #[doc = "Field `CLKEDG` writer - SDIO_CK dephasing selection bit"]
-pub type CLKEDG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLKEDG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLWCTRLEN` reader - HW Flow Control enable"]
 pub type FLWCTRLEN_R = crate::BitReader;
 #[doc = "Field `FLWCTRLEN` writer - HW Flow Control enable"]
-pub type FLWCTRLEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLWCTRLEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLKPSC98` reader - Clock divide factor bit9 and bit8"]
 pub type CLKPSC98_R = crate::FieldReader;
 #[doc = "Field `CLKPSC98` writer - Clock divide factor bit9 and bit8"]
-pub type CLKPSC98_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CLKPSC98_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:7 - Clock divide factor"]
     #[inline(always)]
@@ -99,50 +99,50 @@ impl W {
     #[doc = "Bits 0:7 - Clock divide factor"]
     #[inline(always)]
     #[must_use]
-    pub fn clkpsc(&mut self) -> CLKPSC_W<CLKCTRL_SPEC, 0> {
-        CLKPSC_W::new(self)
+    pub fn clkpsc(&mut self) -> CLKPSC_W<CLKCTRL_SPEC> {
+        CLKPSC_W::new(self, 0)
     }
     #[doc = "Bit 8 - Clock enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn clken(&mut self) -> CLKEN_W<CLKCTRL_SPEC, 8> {
-        CLKEN_W::new(self)
+    pub fn clken(&mut self) -> CLKEN_W<CLKCTRL_SPEC> {
+        CLKEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Power saving configuration bit"]
     #[inline(always)]
     #[must_use]
-    pub fn pwrsvg(&mut self) -> PWRSVG_W<CLKCTRL_SPEC, 9> {
-        PWRSVG_W::new(self)
+    pub fn pwrsvg(&mut self) -> PWRSVG_W<CLKCTRL_SPEC> {
+        PWRSVG_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clock divider bypass enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn byps(&mut self) -> BYPS_W<CLKCTRL_SPEC, 10> {
-        BYPS_W::new(self)
+    pub fn byps(&mut self) -> BYPS_W<CLKCTRL_SPEC> {
+        BYPS_W::new(self, 10)
     }
     #[doc = "Bits 11:12 - Wide bus mode enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn buswidth(&mut self) -> BUSWIDTH_W<CLKCTRL_SPEC, 11> {
-        BUSWIDTH_W::new(self)
+    pub fn buswidth(&mut self) -> BUSWIDTH_W<CLKCTRL_SPEC> {
+        BUSWIDTH_W::new(self, 11)
     }
     #[doc = "Bit 13 - SDIO_CK dephasing selection bit"]
     #[inline(always)]
     #[must_use]
-    pub fn clkedg(&mut self) -> CLKEDG_W<CLKCTRL_SPEC, 13> {
-        CLKEDG_W::new(self)
+    pub fn clkedg(&mut self) -> CLKEDG_W<CLKCTRL_SPEC> {
+        CLKEDG_W::new(self, 13)
     }
     #[doc = "Bit 14 - HW Flow Control enable"]
     #[inline(always)]
     #[must_use]
-    pub fn flwctrlen(&mut self) -> FLWCTRLEN_W<CLKCTRL_SPEC, 14> {
-        FLWCTRLEN_W::new(self)
+    pub fn flwctrlen(&mut self) -> FLWCTRLEN_W<CLKCTRL_SPEC> {
+        FLWCTRLEN_W::new(self, 14)
     }
     #[doc = "Bits 15:16 - Clock divide factor bit9 and bit8"]
     #[inline(always)]
     #[must_use]
-    pub fn clkpsc98(&mut self) -> CLKPSC98_W<CLKCTRL_SPEC, 15> {
-        CLKPSC98_W::new(self)
+    pub fn clkpsc98(&mut self) -> CLKPSC98_W<CLKCTRL_SPEC> {
+        CLKPSC98_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

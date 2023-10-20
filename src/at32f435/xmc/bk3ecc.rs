@@ -5,7 +5,7 @@ pub type W = crate::W<BK3ECC_SPEC>;
 #[doc = "Field `ECC` reader - ECC result"]
 pub type ECC_R = crate::FieldReader<u32>;
 #[doc = "Field `ECC` writer - ECC result"]
-pub type ECC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type ECC_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - ECC result"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - ECC result"]
     #[inline(always)]
     #[must_use]
-    pub fn ecc(&mut self) -> ECC_W<BK3ECC_SPEC, 0> {
-        ECC_W::new(self)
+    pub fn ecc(&mut self) -> ECC_W<BK3ECC_SPEC> {
+        ECC_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

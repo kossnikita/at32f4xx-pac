@@ -5,7 +5,7 @@ pub type W = crate::W<G_FILTER_EN_SPEC>;
 #[doc = "Field `GFE` reader - Glitch filter enable"]
 pub type GFE_R = crate::BitReader;
 #[doc = "Field `GFE` writer - Glitch filter enable"]
-pub type GFE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GFE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Glitch filter enable"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 0 - Glitch filter enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gfe(&mut self) -> GFE_W<G_FILTER_EN_SPEC, 0> {
-        GFE_W::new(self)
+    pub fn gfe(&mut self) -> GFE_W<G_FILTER_EN_SPEC> {
+        GFE_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

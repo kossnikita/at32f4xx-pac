@@ -5,11 +5,11 @@ pub type W = crate::W<OADDR1_SPEC>;
 #[doc = "Field `ADDR1` reader - Own address 1"]
 pub type ADDR1_R = crate::FieldReader<u16>;
 #[doc = "Field `ADDR1` writer - Own address 1"]
-pub type ADDR1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type ADDR1_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `ADDR1MODE` reader - Address mode"]
 pub type ADDR1MODE_R = crate::BitReader;
 #[doc = "Field `ADDR1MODE` writer - Address mode"]
-pub type ADDR1MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADDR1MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9 - Own address 1"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:9 - Own address 1"]
     #[inline(always)]
     #[must_use]
-    pub fn addr1(&mut self) -> ADDR1_W<OADDR1_SPEC, 0> {
-        ADDR1_W::new(self)
+    pub fn addr1(&mut self) -> ADDR1_W<OADDR1_SPEC> {
+        ADDR1_W::new(self, 0)
     }
     #[doc = "Bit 15 - Address mode"]
     #[inline(always)]
     #[must_use]
-    pub fn addr1mode(&mut self) -> ADDR1MODE_W<OADDR1_SPEC, 15> {
-        ADDR1MODE_W::new(self)
+    pub fn addr1mode(&mut self) -> ADDR1MODE_W<OADDR1_SPEC> {
+        ADDR1MODE_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<EXINTC2_SPEC>;
 #[doc = "Field `EXINT4` reader - Configure EXINT4 source"]
 pub type EXINT4_R = crate::FieldReader;
 #[doc = "Field `EXINT4` writer - Configure EXINT4 source"]
-pub type EXINT4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXINT4_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXINT5` reader - Configure EXINT5 source"]
 pub type EXINT5_R = crate::FieldReader;
 #[doc = "Field `EXINT5` writer - Configure EXINT5 source"]
-pub type EXINT5_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXINT5_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXINT6` reader - Configure EXINT6 source"]
 pub type EXINT6_R = crate::FieldReader;
 #[doc = "Field `EXINT6` writer - Configure EXINT6 source"]
-pub type EXINT6_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXINT6_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXINT7` reader - Configure EXINT7 source"]
 pub type EXINT7_R = crate::FieldReader;
 #[doc = "Field `EXINT7` writer - Configure EXINT7 source"]
-pub type EXINT7_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXINT7_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - Configure EXINT4 source"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:3 - Configure EXINT4 source"]
     #[inline(always)]
     #[must_use]
-    pub fn exint4(&mut self) -> EXINT4_W<EXINTC2_SPEC, 0> {
-        EXINT4_W::new(self)
+    pub fn exint4(&mut self) -> EXINT4_W<EXINTC2_SPEC> {
+        EXINT4_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Configure EXINT5 source"]
     #[inline(always)]
     #[must_use]
-    pub fn exint5(&mut self) -> EXINT5_W<EXINTC2_SPEC, 4> {
-        EXINT5_W::new(self)
+    pub fn exint5(&mut self) -> EXINT5_W<EXINTC2_SPEC> {
+        EXINT5_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Configure EXINT6 source"]
     #[inline(always)]
     #[must_use]
-    pub fn exint6(&mut self) -> EXINT6_W<EXINTC2_SPEC, 8> {
-        EXINT6_W::new(self)
+    pub fn exint6(&mut self) -> EXINT6_W<EXINTC2_SPEC> {
+        EXINT6_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - Configure EXINT7 source"]
     #[inline(always)]
     #[must_use]
-    pub fn exint7(&mut self) -> EXINT7_W<EXINTC2_SPEC, 12> {
-        EXINT7_W::new(self)
+    pub fn exint7(&mut self) -> EXINT7_W<EXINTC2_SPEC> {
+        EXINT7_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

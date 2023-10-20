@@ -53,8 +53,8 @@ impl From<ADCENW_AW> for bool {
     }
 }
 #[doc = "Field `ADCEN` writer - A/D converter enable"]
-pub type ADCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ADCENW_AW>;
-impl<'a, REG, const O: u8> ADCEN_W<'a, REG, O>
+pub type ADCEN_W<'a, REG> = crate::BitWriter<'a, REG, ADCENW_AW>;
+impl<'a, REG> ADCEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,8 +120,8 @@ impl From<RPENW_AW> for bool {
     }
 }
 #[doc = "Field `RPEN` writer - Repeat mode enable"]
-pub type RPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RPENW_AW>;
-impl<'a, REG, const O: u8> RPEN_W<'a, REG, O>
+pub type RPEN_W<'a, REG> = crate::BitWriter<'a, REG, RPENW_AW>;
+impl<'a, REG> RPEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -185,8 +185,8 @@ impl From<ADCALW_AW> for bool {
     }
 }
 #[doc = "Field `ADCAL` writer - A/D Calibration"]
-pub type ADCAL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ADCALW_AW>;
-impl<'a, REG, const O: u8> ADCAL_W<'a, REG, O>
+pub type ADCAL_W<'a, REG> = crate::BitWriter<'a, REG, ADCALW_AW>;
+impl<'a, REG> ADCAL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -245,8 +245,8 @@ impl From<ADCALINITW_AW> for bool {
     }
 }
 #[doc = "Field `ADCALINIT` writer - Initialize A/D calibration"]
-pub type ADCALINIT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ADCALINITW_AW>;
-impl<'a, REG, const O: u8> ADCALINIT_W<'a, REG, O>
+pub type ADCALINIT_W<'a, REG> = crate::BitWriter<'a, REG, ADCALINITW_AW>;
+impl<'a, REG> ADCALINIT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -259,19 +259,19 @@ where
 #[doc = "Field `ADABRT` reader - ADC conversion abort"]
 pub type ADABRT_R = crate::BitReader;
 #[doc = "Field `ADABRT` writer - ADC conversion abort"]
-pub type ADABRT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADABRT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCDMAEN` reader - Ordinary channel DMA transfer enable for independent mode"]
 pub type OCDMAEN_R = crate::BitReader;
 #[doc = "Field `OCDMAEN` writer - Ordinary channel DMA transfer enable for independent mode"]
-pub type OCDMAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCDMAEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OCDRCEN` reader - Ordinary channel DMA request continuation enable for independent mode"]
 pub type OCDRCEN_R = crate::BitReader;
 #[doc = "Field `OCDRCEN` writer - Ordinary channel DMA request continuation enable for independent mode"]
-pub type OCDRCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCDRCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EOCSFEN` reader - Each ordinary channel conversion set OCCE flag enable"]
 pub type EOCSFEN_R = crate::BitReader;
 #[doc = "Field `EOCSFEN` writer - Each ordinary channel conversion set OCCE flag enable"]
-pub type EOCSFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EOCSFEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTALIGN` reader - Data alignment"]
 pub type DTALIGN_R = crate::BitReader<DTALIGN_A>;
 #[doc = "Data alignment\n\nValue on reset: 0"]
@@ -309,8 +309,8 @@ impl DTALIGN_R {
     }
 }
 #[doc = "Field `DTALIGN` writer - Data alignment"]
-pub type DTALIGN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DTALIGN_A>;
-impl<'a, REG, const O: u8> DTALIGN_W<'a, REG, O>
+pub type DTALIGN_W<'a, REG> = crate::BitWriter<'a, REG, DTALIGN_A>;
+impl<'a, REG> DTALIGN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -328,11 +328,11 @@ where
 #[doc = "Field `PCTESEL` reader - trigger event select for preempted channels conversion"]
 pub type PCTESEL_R = crate::FieldReader;
 #[doc = "Field `PCTESEL` writer - trigger event select for preempted channels conversion"]
-pub type PCTESEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PCTESEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PCETE` reader - Preempted channel external trigger edge select"]
 pub type PCETE_R = crate::FieldReader;
 #[doc = "Field `PCETE` writer - Preempted channel external trigger edge select"]
-pub type PCETE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PCETE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PCSWTRG` reader - Preempted channel software conversion trigger"]
 pub type PCSWTRG_R = crate::BitReader<PCSWTRG_A>;
 #[doc = "Preempted channel software conversion trigger\n\nValue on reset: 0"]
@@ -370,8 +370,8 @@ impl PCSWTRG_R {
     }
 }
 #[doc = "Field `PCSWTRG` writer - Preempted channel software conversion trigger"]
-pub type PCSWTRG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PCSWTRG_A>;
-impl<'a, REG, const O: u8> PCSWTRG_W<'a, REG, O>
+pub type PCSWTRG_W<'a, REG> = crate::BitWriter<'a, REG, PCSWTRG_A>;
+impl<'a, REG> PCSWTRG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -389,11 +389,11 @@ where
 #[doc = "Field `OCTESEL` reader - trigger event select for ordinary channels conversion"]
 pub type OCTESEL_R = crate::FieldReader;
 #[doc = "Field `OCTESEL` writer - trigger event select for ordinary channels conversion"]
-pub type OCTESEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type OCTESEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `OCETE` reader - Ordinary channel external trigger edge select"]
 pub type OCETE_R = crate::FieldReader;
 #[doc = "Field `OCETE` writer - Ordinary channel external trigger edge select"]
-pub type OCETE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type OCETE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `OCSWTRG` reader - Ordinary channel software conversion trigger"]
 pub use PCSWTRG_R as OCSWTRG_R;
 #[doc = "Field `OCSWTRG` writer - Ordinary channel software conversion trigger"]
@@ -505,92 +505,92 @@ impl W {
     #[doc = "Bit 0 - A/D converter enable"]
     #[inline(always)]
     #[must_use]
-    pub fn adcen(&mut self) -> ADCEN_W<CTRL2_SPEC, 0> {
-        ADCEN_W::new(self)
+    pub fn adcen(&mut self) -> ADCEN_W<CTRL2_SPEC> {
+        ADCEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Repeat mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rpen(&mut self) -> RPEN_W<CTRL2_SPEC, 1> {
-        RPEN_W::new(self)
+    pub fn rpen(&mut self) -> RPEN_W<CTRL2_SPEC> {
+        RPEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - A/D Calibration"]
     #[inline(always)]
     #[must_use]
-    pub fn adcal(&mut self) -> ADCAL_W<CTRL2_SPEC, 2> {
-        ADCAL_W::new(self)
+    pub fn adcal(&mut self) -> ADCAL_W<CTRL2_SPEC> {
+        ADCAL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Initialize A/D calibration"]
     #[inline(always)]
     #[must_use]
-    pub fn adcalinit(&mut self) -> ADCALINIT_W<CTRL2_SPEC, 3> {
-        ADCALINIT_W::new(self)
+    pub fn adcalinit(&mut self) -> ADCALINIT_W<CTRL2_SPEC> {
+        ADCALINIT_W::new(self, 3)
     }
     #[doc = "Bit 4 - ADC conversion abort"]
     #[inline(always)]
     #[must_use]
-    pub fn adabrt(&mut self) -> ADABRT_W<CTRL2_SPEC, 4> {
-        ADABRT_W::new(self)
+    pub fn adabrt(&mut self) -> ADABRT_W<CTRL2_SPEC> {
+        ADABRT_W::new(self, 4)
     }
     #[doc = "Bit 8 - Ordinary channel DMA transfer enable for independent mode"]
     #[inline(always)]
     #[must_use]
-    pub fn ocdmaen(&mut self) -> OCDMAEN_W<CTRL2_SPEC, 8> {
-        OCDMAEN_W::new(self)
+    pub fn ocdmaen(&mut self) -> OCDMAEN_W<CTRL2_SPEC> {
+        OCDMAEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Ordinary channel DMA request continuation enable for independent mode"]
     #[inline(always)]
     #[must_use]
-    pub fn ocdrcen(&mut self) -> OCDRCEN_W<CTRL2_SPEC, 9> {
-        OCDRCEN_W::new(self)
+    pub fn ocdrcen(&mut self) -> OCDRCEN_W<CTRL2_SPEC> {
+        OCDRCEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Each ordinary channel conversion set OCCE flag enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eocsfen(&mut self) -> EOCSFEN_W<CTRL2_SPEC, 10> {
-        EOCSFEN_W::new(self)
+    pub fn eocsfen(&mut self) -> EOCSFEN_W<CTRL2_SPEC> {
+        EOCSFEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Data alignment"]
     #[inline(always)]
     #[must_use]
-    pub fn dtalign(&mut self) -> DTALIGN_W<CTRL2_SPEC, 11> {
-        DTALIGN_W::new(self)
+    pub fn dtalign(&mut self) -> DTALIGN_W<CTRL2_SPEC> {
+        DTALIGN_W::new(self, 11)
     }
     #[doc = "Bits 16:19 - trigger event select for preempted channels conversion"]
     #[inline(always)]
     #[must_use]
-    pub fn pctesel(&mut self) -> PCTESEL_W<CTRL2_SPEC, 16> {
-        PCTESEL_W::new(self)
+    pub fn pctesel(&mut self) -> PCTESEL_W<CTRL2_SPEC> {
+        PCTESEL_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Preempted channel external trigger edge select"]
     #[inline(always)]
     #[must_use]
-    pub fn pcete(&mut self) -> PCETE_W<CTRL2_SPEC, 20> {
-        PCETE_W::new(self)
+    pub fn pcete(&mut self) -> PCETE_W<CTRL2_SPEC> {
+        PCETE_W::new(self, 20)
     }
     #[doc = "Bit 22 - Preempted channel software conversion trigger"]
     #[inline(always)]
     #[must_use]
-    pub fn pcswtrg(&mut self) -> PCSWTRG_W<CTRL2_SPEC, 22> {
-        PCSWTRG_W::new(self)
+    pub fn pcswtrg(&mut self) -> PCSWTRG_W<CTRL2_SPEC> {
+        PCSWTRG_W::new(self, 22)
     }
     #[doc = "Bits 24:27 - trigger event select for ordinary channels conversion"]
     #[inline(always)]
     #[must_use]
-    pub fn octesel(&mut self) -> OCTESEL_W<CTRL2_SPEC, 24> {
-        OCTESEL_W::new(self)
+    pub fn octesel(&mut self) -> OCTESEL_W<CTRL2_SPEC> {
+        OCTESEL_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - Ordinary channel external trigger edge select"]
     #[inline(always)]
     #[must_use]
-    pub fn ocete(&mut self) -> OCETE_W<CTRL2_SPEC, 28> {
-        OCETE_W::new(self)
+    pub fn ocete(&mut self) -> OCETE_W<CTRL2_SPEC> {
+        OCETE_W::new(self, 28)
     }
     #[doc = "Bit 30 - Ordinary channel software conversion trigger"]
     #[inline(always)]
     #[must_use]
-    pub fn ocswtrg(&mut self) -> OCSWTRG_W<CTRL2_SPEC, 30> {
-        OCSWTRG_W::new(self)
+    pub fn ocswtrg(&mut self) -> OCSWTRG_W<CTRL2_SPEC> {
+        OCSWTRG_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

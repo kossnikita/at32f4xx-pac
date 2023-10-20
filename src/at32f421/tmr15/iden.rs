@@ -53,8 +53,8 @@ impl From<OVFIENW_AW> for bool {
     }
 }
 #[doc = "Field `OVFIEN` writer - Overflow interrupt enable"]
-pub type OVFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OVFIENW_AW>;
-impl<'a, REG, const O: u8> OVFIEN_W<'a, REG, O>
+pub type OVFIEN_W<'a, REG> = crate::BitWriter<'a, REG, OVFIENW_AW>;
+impl<'a, REG> OVFIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,8 +120,8 @@ impl From<C1IENW_AW> for bool {
     }
 }
 #[doc = "Field `CIEN[1-2]` writer - Channel %s interrupt enable"]
-pub type CIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1IENW_AW>;
-impl<'a, REG, const O: u8> CIEN_W<'a, REG, O>
+pub type CIEN_W<'a, REG> = crate::BitWriter<'a, REG, C1IENW_AW>;
+impl<'a, REG> CIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -139,7 +139,7 @@ where
 #[doc = "Field `HALLIEN` reader - HALL interrupt enable"]
 pub type HALLIEN_R = crate::BitReader;
 #[doc = "Field `HALLIEN` writer - HALL interrupt enable"]
-pub type HALLIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HALLIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIEN` reader - Trigger interrupt enable"]
 pub type TIEN_R = crate::BitReader<TIENR_A>;
 #[doc = "Trigger interrupt enable\n\nValue on reset: 0"]
@@ -191,8 +191,8 @@ impl From<TIENW_AW> for bool {
     }
 }
 #[doc = "Field `TIEN` writer - Trigger interrupt enable"]
-pub type TIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TIENW_AW>;
-impl<'a, REG, const O: u8> TIEN_W<'a, REG, O>
+pub type TIEN_W<'a, REG> = crate::BitWriter<'a, REG, TIENW_AW>;
+impl<'a, REG> TIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -210,7 +210,7 @@ where
 #[doc = "Field `BRKIE` reader - Brake interrupt enable"]
 pub type BRKIE_R = crate::BitReader;
 #[doc = "Field `BRKIE` writer - Brake interrupt enable"]
-pub type BRKIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BRKIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVFDEN` reader - Overflow DMA request enable"]
 pub type OVFDEN_R = crate::BitReader<OVFDENR_A>;
 #[doc = "Overflow DMA request enable\n\nValue on reset: 0"]
@@ -262,8 +262,8 @@ impl From<OVFDENW_AW> for bool {
     }
 }
 #[doc = "Field `OVFDEN` writer - Overflow DMA request enable"]
-pub type OVFDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OVFDENW_AW>;
-impl<'a, REG, const O: u8> OVFDEN_W<'a, REG, O>
+pub type OVFDEN_W<'a, REG> = crate::BitWriter<'a, REG, OVFDENW_AW>;
+impl<'a, REG> OVFDEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -329,8 +329,8 @@ impl From<C1DENW_AW> for bool {
     }
 }
 #[doc = "Field `CDEN[1-2]` writer - Channel %s DMA request enable"]
-pub type CDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1DENW_AW>;
-impl<'a, REG, const O: u8> CDEN_W<'a, REG, O>
+pub type CDEN_W<'a, REG> = crate::BitWriter<'a, REG, C1DENW_AW>;
+impl<'a, REG> CDEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -348,11 +348,11 @@ where
 #[doc = "Field `HALLDE` reader - HALL DMA request enable"]
 pub type HALLDE_R = crate::BitReader;
 #[doc = "Field `HALLDE` writer - HALL DMA request enable"]
-pub type HALLDE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HALLDE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TDEN` reader - Trigger DMA request enable"]
 pub type TDEN_R = crate::BitReader;
 #[doc = "Field `TDEN` writer - Trigger DMA request enable"]
-pub type TDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
@@ -360,10 +360,11 @@ impl R {
         OVFIEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Channel [1-2]
-interrupt enable"]
+interrupt enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cien(&self, n: u8) -> CIEN_R {
-        CIEN_R::new(((self.bits >> (n - 1 + 1)) & 1) != 0)
+    pub fn cien(&self, n: u8) -> CIEN_R {
+        assert!(n < 2);
+        CIEN_R::new(((self.bits >> (n + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - Channel 1 interrupt enable"]
     #[inline(always)]
@@ -396,10 +397,11 @@ interrupt enable"]
         OVFDEN_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Channel [1-2]
-DMA request enable"]
+DMA request enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cden(&self, n: u8) -> CDEN_R {
-        CDEN_R::new(((self.bits >> (n - 1 + 9)) & 1) != 0)
+    pub fn cden(&self, n: u8) -> CDEN_R {
+        assert!(n < 2);
+        CDEN_R::new(((self.bits >> (n + 9)) & 1) != 0)
     }
     #[doc = "Bit 9 - Channel 1 DMA request enable"]
     #[inline(always)]
@@ -448,82 +450,84 @@ impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC, 0> {
-        OVFIEN_W::new(self)
+    pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC> {
+        OVFIEN_W::new(self, 0)
     }
     #[doc = "Channel [1-2]
 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cien<const O: u8>(&mut self) -> CIEN_W<IDEN_SPEC, O> {
-        CIEN_W::new(self)
+    pub fn cien(&mut self, n: u8) -> CIEN_W<IDEN_SPEC> {
+        assert!(n < 2);
+        CIEN_W::new(self, n + 1)
     }
     #[doc = "Bit 1 - Channel 1 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c1ien(&mut self) -> CIEN_W<IDEN_SPEC, 1> {
-        CIEN_W::new(self)
+    pub fn c1ien(&mut self) -> CIEN_W<IDEN_SPEC> {
+        CIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 2 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c2ien(&mut self) -> CIEN_W<IDEN_SPEC, 2> {
-        CIEN_W::new(self)
+    pub fn c2ien(&mut self) -> CIEN_W<IDEN_SPEC> {
+        CIEN_W::new(self, 2)
     }
     #[doc = "Bit 5 - HALL interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hallien(&mut self) -> HALLIEN_W<IDEN_SPEC, 5> {
-        HALLIEN_W::new(self)
+    pub fn hallien(&mut self) -> HALLIEN_W<IDEN_SPEC> {
+        HALLIEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Trigger interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tien(&mut self) -> TIEN_W<IDEN_SPEC, 6> {
-        TIEN_W::new(self)
+    pub fn tien(&mut self) -> TIEN_W<IDEN_SPEC> {
+        TIEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Brake interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn brkie(&mut self) -> BRKIE_W<IDEN_SPEC, 7> {
-        BRKIE_W::new(self)
+    pub fn brkie(&mut self) -> BRKIE_W<IDEN_SPEC> {
+        BRKIE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Overflow DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfden(&mut self) -> OVFDEN_W<IDEN_SPEC, 8> {
-        OVFDEN_W::new(self)
+    pub fn ovfden(&mut self) -> OVFDEN_W<IDEN_SPEC> {
+        OVFDEN_W::new(self, 8)
     }
     #[doc = "Channel [1-2]
 DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cden<const O: u8>(&mut self) -> CDEN_W<IDEN_SPEC, O> {
-        CDEN_W::new(self)
+    pub fn cden(&mut self, n: u8) -> CDEN_W<IDEN_SPEC> {
+        assert!(n < 2);
+        CDEN_W::new(self, n + 9)
     }
     #[doc = "Bit 9 - Channel 1 DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c1den(&mut self) -> CDEN_W<IDEN_SPEC, 9> {
-        CDEN_W::new(self)
+    pub fn c1den(&mut self) -> CDEN_W<IDEN_SPEC> {
+        CDEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Channel 2 DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c2den(&mut self) -> CDEN_W<IDEN_SPEC, 10> {
-        CDEN_W::new(self)
+    pub fn c2den(&mut self) -> CDEN_W<IDEN_SPEC> {
+        CDEN_W::new(self, 10)
     }
     #[doc = "Bit 13 - HALL DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hallde(&mut self) -> HALLDE_W<IDEN_SPEC, 13> {
-        HALLDE_W::new(self)
+    pub fn hallde(&mut self) -> HALLDE_W<IDEN_SPEC> {
+        HALLDE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Trigger DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tden(&mut self) -> TDEN_W<IDEN_SPEC, 14> {
-        TDEN_W::new(self)
+    pub fn tden(&mut self) -> TDEN_W<IDEN_SPEC> {
+        TDEN_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

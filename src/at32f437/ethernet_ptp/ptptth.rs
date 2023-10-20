@@ -5,7 +5,7 @@ pub type W = crate::W<PTPTTH_SPEC>;
 #[doc = "Field `TTSR` reader - Target time seconds register"]
 pub type TTSR_R = crate::FieldReader<u32>;
 #[doc = "Field `TTSR` writer - Target time seconds register"]
-pub type TTSR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type TTSR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Target time seconds register"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Target time seconds register"]
     #[inline(always)]
     #[must_use]
-    pub fn ttsr(&mut self) -> TTSR_W<PTPTTH_SPEC, 0> {
-        TTSR_W::new(self)
+    pub fn ttsr(&mut self) -> TTSR_W<PTPTTH_SPEC> {
+        TTSR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

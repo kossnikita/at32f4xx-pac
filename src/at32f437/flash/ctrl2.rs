@@ -5,35 +5,35 @@ pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `FPRGM` reader - Flash program"]
 pub type FPRGM_R = crate::BitReader;
 #[doc = "Field `FPRGM` writer - Flash program"]
-pub type FPRGM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FPRGM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SECERS` reader - Sector erase"]
 pub type SECERS_R = crate::BitReader;
 #[doc = "Field `SECERS` writer - Sector erase"]
-pub type SECERS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SECERS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BANKERS` reader - Bank erase"]
 pub type BANKERS_R = crate::BitReader;
 #[doc = "Field `BANKERS` writer - Bank erase"]
-pub type BANKERS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BANKERS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BLKERS` reader - Block erase"]
 pub type BLKERS_R = crate::BitReader;
 #[doc = "Field `BLKERS` writer - Block erase"]
-pub type BLKERS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BLKERS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERSTR` reader - Erasing start"]
 pub type ERSTR_R = crate::BitReader;
 #[doc = "Field `ERSTR` writer - Erasing start"]
-pub type ERSTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERSTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OPLK` reader - Operation lock"]
 pub type OPLK_R = crate::BitReader;
 #[doc = "Field `OPLK` writer - Operation lock"]
-pub type OPLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OPLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERRIE` reader - Error interrupt enable"]
 pub type ERRIE_R = crate::BitReader;
 #[doc = "Field `ERRIE` writer - Error interrupt enable"]
-pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ODFIE` reader - Operation done flag interrupt enable"]
 pub type ODFIE_R = crate::BitReader;
 #[doc = "Field `ODFIE` writer - Operation done flag interrupt enable"]
-pub type ODFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ODFIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]
@@ -99,50 +99,50 @@ impl W {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]
     #[must_use]
-    pub fn fprgm(&mut self) -> FPRGM_W<CTRL2_SPEC, 0> {
-        FPRGM_W::new(self)
+    pub fn fprgm(&mut self) -> FPRGM_W<CTRL2_SPEC> {
+        FPRGM_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sector erase"]
     #[inline(always)]
     #[must_use]
-    pub fn secers(&mut self) -> SECERS_W<CTRL2_SPEC, 1> {
-        SECERS_W::new(self)
+    pub fn secers(&mut self) -> SECERS_W<CTRL2_SPEC> {
+        SECERS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Bank erase"]
     #[inline(always)]
     #[must_use]
-    pub fn bankers(&mut self) -> BANKERS_W<CTRL2_SPEC, 2> {
-        BANKERS_W::new(self)
+    pub fn bankers(&mut self) -> BANKERS_W<CTRL2_SPEC> {
+        BANKERS_W::new(self, 2)
     }
     #[doc = "Bit 3 - Block erase"]
     #[inline(always)]
     #[must_use]
-    pub fn blkers(&mut self) -> BLKERS_W<CTRL2_SPEC, 3> {
-        BLKERS_W::new(self)
+    pub fn blkers(&mut self) -> BLKERS_W<CTRL2_SPEC> {
+        BLKERS_W::new(self, 3)
     }
     #[doc = "Bit 6 - Erasing start"]
     #[inline(always)]
     #[must_use]
-    pub fn erstr(&mut self) -> ERSTR_W<CTRL2_SPEC, 6> {
-        ERSTR_W::new(self)
+    pub fn erstr(&mut self) -> ERSTR_W<CTRL2_SPEC> {
+        ERSTR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Operation lock"]
     #[inline(always)]
     #[must_use]
-    pub fn oplk(&mut self) -> OPLK_W<CTRL2_SPEC, 7> {
-        OPLK_W::new(self)
+    pub fn oplk(&mut self) -> OPLK_W<CTRL2_SPEC> {
+        OPLK_W::new(self, 7)
     }
     #[doc = "Bit 10 - Error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTRL2_SPEC, 10> {
-        ERRIE_W::new(self)
+    pub fn errie(&mut self) -> ERRIE_W<CTRL2_SPEC> {
+        ERRIE_W::new(self, 10)
     }
     #[doc = "Bit 12 - Operation done flag interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn odfie(&mut self) -> ODFIE_W<CTRL2_SPEC, 12> {
-        ODFIE_W::new(self)
+    pub fn odfie(&mut self) -> ODFIE_W<CTRL2_SPEC> {
+        ODFIE_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

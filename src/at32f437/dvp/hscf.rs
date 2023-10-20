@@ -5,11 +5,11 @@ pub type W = crate::W<HSCF_SPEC>;
 #[doc = "Field `HSRSF` reader - Horizontal scaling resize source factor"]
 pub type HSRSF_R = crate::FieldReader<u16>;
 #[doc = "Field `HSRSF` writer - Horizontal scaling resize source factor"]
-pub type HSRSF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type HSRSF_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 #[doc = "Field `HSRTF` reader - Horizontal scaling resize target factor"]
 pub type HSRTF_R = crate::FieldReader<u16>;
 #[doc = "Field `HSRTF` writer - Horizontal scaling resize target factor"]
-pub type HSRTF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type HSRTF_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
     #[doc = "Bits 0:12 - Horizontal scaling resize source factor"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:12 - Horizontal scaling resize source factor"]
     #[inline(always)]
     #[must_use]
-    pub fn hsrsf(&mut self) -> HSRSF_W<HSCF_SPEC, 0> {
-        HSRSF_W::new(self)
+    pub fn hsrsf(&mut self) -> HSRSF_W<HSCF_SPEC> {
+        HSRSF_W::new(self, 0)
     }
     #[doc = "Bits 16:28 - Horizontal scaling resize target factor"]
     #[inline(always)]
     #[must_use]
-    pub fn hsrtf(&mut self) -> HSRTF_W<HSCF_SPEC, 16> {
-        HSRTF_W::new(self)
+    pub fn hsrtf(&mut self) -> HSRTF_W<HSCF_SPEC> {
+        HSRTF_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

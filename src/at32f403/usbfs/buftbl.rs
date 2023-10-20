@@ -5,7 +5,7 @@ pub type W = crate::W<BUFTBL_SPEC>;
 #[doc = "Field `BTADDR` reader - Endpoint buffer table start address"]
 pub type BTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `BTADDR` writer - Endpoint buffer table start address"]
-pub type BTADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type BTADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
     #[doc = "Bits 3:15 - Endpoint buffer table start address"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 3:15 - Endpoint buffer table start address"]
     #[inline(always)]
     #[must_use]
-    pub fn btaddr(&mut self) -> BTADDR_W<BUFTBL_SPEC, 3> {
-        BTADDR_W::new(self)
+    pub fn btaddr(&mut self) -> BTADDR_W<BUFTBL_SPEC> {
+        BTADDR_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

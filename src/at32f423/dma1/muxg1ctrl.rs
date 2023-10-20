@@ -5,23 +5,23 @@ pub type W = crate::W<MUXG1CTRL_SPEC>;
 #[doc = "Field `SIGSEL` reader - Signal select"]
 pub type SIGSEL_R = crate::FieldReader;
 #[doc = "Field `SIGSEL` writer - Signal select"]
-pub type SIGSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SIGSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `TRGOVIEN` reader - Trigger overrun interrupt enable"]
 pub type TRGOVIEN_R = crate::BitReader;
 #[doc = "Field `TRGOVIEN` writer - Trigger overrun interrupt enable"]
-pub type TRGOVIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRGOVIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GEN` reader - DMA request generator enable"]
 pub type GEN_R = crate::BitReader;
 #[doc = "Field `GEN` writer - DMA request generator enable"]
-pub type GEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPOL` reader - DMA request generator trigger polarity"]
 pub type GPOL_R = crate::FieldReader;
 #[doc = "Field `GPOL` writer - DMA request generator trigger polarity"]
-pub type GPOL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type GPOL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `GREQCNT` reader - Number of DMA requests to be generated"]
 pub type GREQCNT_R = crate::FieldReader;
 #[doc = "Field `GREQCNT` writer - Number of DMA requests to be generated"]
-pub type GREQCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type GREQCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - Signal select"]
     #[inline(always)]
@@ -69,32 +69,32 @@ impl W {
     #[doc = "Bits 0:4 - Signal select"]
     #[inline(always)]
     #[must_use]
-    pub fn sigsel(&mut self) -> SIGSEL_W<MUXG1CTRL_SPEC, 0> {
-        SIGSEL_W::new(self)
+    pub fn sigsel(&mut self) -> SIGSEL_W<MUXG1CTRL_SPEC> {
+        SIGSEL_W::new(self, 0)
     }
     #[doc = "Bit 8 - Trigger overrun interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn trgovien(&mut self) -> TRGOVIEN_W<MUXG1CTRL_SPEC, 8> {
-        TRGOVIEN_W::new(self)
+    pub fn trgovien(&mut self) -> TRGOVIEN_W<MUXG1CTRL_SPEC> {
+        TRGOVIEN_W::new(self, 8)
     }
     #[doc = "Bit 16 - DMA request generator enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gen(&mut self) -> GEN_W<MUXG1CTRL_SPEC, 16> {
-        GEN_W::new(self)
+    pub fn gen(&mut self) -> GEN_W<MUXG1CTRL_SPEC> {
+        GEN_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - DMA request generator trigger polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn gpol(&mut self) -> GPOL_W<MUXG1CTRL_SPEC, 17> {
-        GPOL_W::new(self)
+    pub fn gpol(&mut self) -> GPOL_W<MUXG1CTRL_SPEC> {
+        GPOL_W::new(self, 17)
     }
     #[doc = "Bits 19:23 - Number of DMA requests to be generated"]
     #[inline(always)]
     #[must_use]
-    pub fn greqcnt(&mut self) -> GREQCNT_W<MUXG1CTRL_SPEC, 19> {
-        GREQCNT_W::new(self)
+    pub fn greqcnt(&mut self) -> GREQCNT_W<MUXG1CTRL_SPEC> {
+        GREQCNT_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

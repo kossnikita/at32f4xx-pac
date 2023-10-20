@@ -5,19 +5,19 @@ pub type W = crate::W<BK4TMGCM_SPEC>;
 #[doc = "Field `CMST` reader - Regular memory setup time"]
 pub type CMST_R = crate::FieldReader;
 #[doc = "Field `CMST` writer - Regular memory setup time"]
-pub type CMST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CMST_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CMWT` reader - Regular memory wait time"]
 pub type CMWT_R = crate::FieldReader;
 #[doc = "Field `CMWT` writer - Regular memory wait time"]
-pub type CMWT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CMWT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CMHT` reader - Regular memory hold time"]
 pub type CMHT_R = crate::FieldReader;
 #[doc = "Field `CMHT` writer - Regular memory hold time"]
-pub type CMHT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CMHT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CMDHIZT` reader - Regular memory databus High resistance time"]
 pub type CMDHIZT_R = crate::FieldReader;
 #[doc = "Field `CMDHIZT` writer - Regular memory databus High resistance time"]
-pub type CMDHIZT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CMDHIZT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Regular memory setup time"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:7 - Regular memory setup time"]
     #[inline(always)]
     #[must_use]
-    pub fn cmst(&mut self) -> CMST_W<BK4TMGCM_SPEC, 0> {
-        CMST_W::new(self)
+    pub fn cmst(&mut self) -> CMST_W<BK4TMGCM_SPEC> {
+        CMST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Regular memory wait time"]
     #[inline(always)]
     #[must_use]
-    pub fn cmwt(&mut self) -> CMWT_W<BK4TMGCM_SPEC, 8> {
-        CMWT_W::new(self)
+    pub fn cmwt(&mut self) -> CMWT_W<BK4TMGCM_SPEC> {
+        CMWT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Regular memory hold time"]
     #[inline(always)]
     #[must_use]
-    pub fn cmht(&mut self) -> CMHT_W<BK4TMGCM_SPEC, 16> {
-        CMHT_W::new(self)
+    pub fn cmht(&mut self) -> CMHT_W<BK4TMGCM_SPEC> {
+        CMHT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Regular memory databus High resistance time"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdhizt(&mut self) -> CMDHIZT_W<BK4TMGCM_SPEC, 24> {
-        CMDHIZT_W::new(self)
+    pub fn cmdhizt(&mut self) -> CMDHIZT_W<BK4TMGCM_SPEC> {
+        CMDHIZT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

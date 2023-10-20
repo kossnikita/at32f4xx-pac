@@ -5,15 +5,15 @@ pub type W = crate::W<CLKCTRL_SPEC>;
 #[doc = "Field `SPEED` reader - I2C bus speed config"]
 pub type SPEED_R = crate::FieldReader<u16>;
 #[doc = "Field `SPEED` writer - I2C bus speed config"]
-pub type SPEED_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type SPEED_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `DUTYMODE` reader - Fast mode duty cycle"]
 pub type DUTYMODE_R = crate::BitReader;
 #[doc = "Field `DUTYMODE` writer - Fast mode duty cycle"]
-pub type DUTYMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUTYMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPEEDMODE` reader - Speed mode selection"]
 pub type SPEEDMODE_R = crate::BitReader;
 #[doc = "Field `SPEEDMODE` writer - Speed mode selection"]
-pub type SPEEDMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPEEDMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:11 - I2C bus speed config"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bits 0:11 - I2C bus speed config"]
     #[inline(always)]
     #[must_use]
-    pub fn speed(&mut self) -> SPEED_W<CLKCTRL_SPEC, 0> {
-        SPEED_W::new(self)
+    pub fn speed(&mut self) -> SPEED_W<CLKCTRL_SPEC> {
+        SPEED_W::new(self, 0)
     }
     #[doc = "Bit 14 - Fast mode duty cycle"]
     #[inline(always)]
     #[must_use]
-    pub fn dutymode(&mut self) -> DUTYMODE_W<CLKCTRL_SPEC, 14> {
-        DUTYMODE_W::new(self)
+    pub fn dutymode(&mut self) -> DUTYMODE_W<CLKCTRL_SPEC> {
+        DUTYMODE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Speed mode selection"]
     #[inline(always)]
     #[must_use]
-    pub fn speedmode(&mut self) -> SPEEDMODE_W<CLKCTRL_SPEC, 15> {
-        SPEEDMODE_W::new(self)
+    pub fn speedmode(&mut self) -> SPEEDMODE_W<CLKCTRL_SPEC> {
+        SPEEDMODE_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

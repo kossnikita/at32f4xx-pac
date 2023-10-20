@@ -5,19 +5,19 @@ pub type W = crate::W<DATE_SPEC>;
 #[doc = "Field `DU` reader - Date units"]
 pub type DU_R = crate::FieldReader;
 #[doc = "Field `DU` writer - Date units"]
-pub type DU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type DU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `DT` reader - Date tens"]
 pub type DT_R = crate::FieldReader;
 #[doc = "Field `DT` writer - Date tens"]
-pub type DT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
+pub type DT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
 #[doc = "Field `MU` reader - Month units"]
 pub type MU_R = crate::FieldReader;
 #[doc = "Field `MU` writer - Month units"]
-pub type MU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type MU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `MT` reader - Month tens"]
 pub type MT_R = crate::BitReader;
 #[doc = "Field `MT` writer - Month tens"]
-pub type MT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WK` reader - Week"]
 pub type WK_R = crate::FieldReader<WK_A>;
 #[doc = "Week\n\nValue on reset: 1"]
@@ -100,8 +100,8 @@ impl WK_R {
     }
 }
 #[doc = "Field `WK` writer - Week"]
-pub type WK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, WK_A>;
-impl<'a, REG, const O: u8> WK_W<'a, REG, O>
+pub type WK_W<'a, REG> = crate::FieldWriter<'a, REG, 3, WK_A>;
+impl<'a, REG> WK_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -145,11 +145,11 @@ where
 #[doc = "Field `YU` reader - Year units"]
 pub type YU_R = crate::FieldReader;
 #[doc = "Field `YU` writer - Year units"]
-pub type YU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type YU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `YT` reader - Year tens"]
 pub type YT_R = crate::FieldReader;
 #[doc = "Field `YT` writer - Year tens"]
-pub type YT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type YT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - Date units"]
     #[inline(always)]
@@ -209,44 +209,44 @@ impl W {
     #[doc = "Bits 0:3 - Date units"]
     #[inline(always)]
     #[must_use]
-    pub fn du(&mut self) -> DU_W<DATE_SPEC, 0> {
-        DU_W::new(self)
+    pub fn du(&mut self) -> DU_W<DATE_SPEC> {
+        DU_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Date tens"]
     #[inline(always)]
     #[must_use]
-    pub fn dt(&mut self) -> DT_W<DATE_SPEC, 4> {
-        DT_W::new(self)
+    pub fn dt(&mut self) -> DT_W<DATE_SPEC> {
+        DT_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Month units"]
     #[inline(always)]
     #[must_use]
-    pub fn mu(&mut self) -> MU_W<DATE_SPEC, 8> {
-        MU_W::new(self)
+    pub fn mu(&mut self) -> MU_W<DATE_SPEC> {
+        MU_W::new(self, 8)
     }
     #[doc = "Bit 12 - Month tens"]
     #[inline(always)]
     #[must_use]
-    pub fn mt(&mut self) -> MT_W<DATE_SPEC, 12> {
-        MT_W::new(self)
+    pub fn mt(&mut self) -> MT_W<DATE_SPEC> {
+        MT_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - Week"]
     #[inline(always)]
     #[must_use]
-    pub fn wk(&mut self) -> WK_W<DATE_SPEC, 13> {
-        WK_W::new(self)
+    pub fn wk(&mut self) -> WK_W<DATE_SPEC> {
+        WK_W::new(self, 13)
     }
     #[doc = "Bits 16:19 - Year units"]
     #[inline(always)]
     #[must_use]
-    pub fn yu(&mut self) -> YU_W<DATE_SPEC, 16> {
-        YU_W::new(self)
+    pub fn yu(&mut self) -> YU_W<DATE_SPEC> {
+        YU_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - Year tens"]
     #[inline(always)]
     #[must_use]
-    pub fn yt(&mut self) -> YT_W<DATE_SPEC, 20> {
-        YT_W::new(self)
+    pub fn yt(&mut self) -> YT_W<DATE_SPEC> {
+        YT_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

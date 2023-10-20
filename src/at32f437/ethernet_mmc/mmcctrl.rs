@@ -5,19 +5,19 @@ pub type W = crate::W<MMCCTRL_SPEC>;
 #[doc = "Field `RC` reader - Reset counter"]
 pub type RC_R = crate::BitReader;
 #[doc = "Field `RC` writer - Reset counter"]
-pub type RC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCR` reader - Stop counter rollover"]
 pub type SCR_R = crate::BitReader;
 #[doc = "Field `SCR` writer - Stop counter rollover"]
-pub type SCR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RR` reader - Reset on read"]
 pub type RR_R = crate::BitReader;
 #[doc = "Field `RR` writer - Reset on read"]
-pub type RR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FMC` reader - Freeze MMC counter"]
 pub type FMC_R = crate::BitReader;
 #[doc = "Field `FMC` writer - Freeze MMC counter"]
-pub type FMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FMC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Reset counter"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bit 0 - Reset counter"]
     #[inline(always)]
     #[must_use]
-    pub fn rc(&mut self) -> RC_W<MMCCTRL_SPEC, 0> {
-        RC_W::new(self)
+    pub fn rc(&mut self) -> RC_W<MMCCTRL_SPEC> {
+        RC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Stop counter rollover"]
     #[inline(always)]
     #[must_use]
-    pub fn scr(&mut self) -> SCR_W<MMCCTRL_SPEC, 1> {
-        SCR_W::new(self)
+    pub fn scr(&mut self) -> SCR_W<MMCCTRL_SPEC> {
+        SCR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reset on read"]
     #[inline(always)]
     #[must_use]
-    pub fn rr(&mut self) -> RR_W<MMCCTRL_SPEC, 2> {
-        RR_W::new(self)
+    pub fn rr(&mut self) -> RR_W<MMCCTRL_SPEC> {
+        RR_W::new(self, 2)
     }
     #[doc = "Bit 31 - Freeze MMC counter"]
     #[inline(always)]
     #[must_use]
-    pub fn fmc(&mut self) -> FMC_W<MMCCTRL_SPEC, 31> {
-        FMC_W::new(self)
+    pub fn fmc(&mut self) -> FMC_W<MMCCTRL_SPEC> {
+        FMC_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

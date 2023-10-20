@@ -5,15 +5,15 @@ pub type W = crate::W<MMCRIM_SPEC>;
 #[doc = "Field `RCEFCIM` reader - Received CRC error frame counter interrupt mask"]
 pub type RCEFCIM_R = crate::BitReader;
 #[doc = "Field `RCEFCIM` writer - Received CRC error frame counter interrupt mask"]
-pub type RCEFCIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RCEFCIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RAEFACIM` reader - Received alignment error frame alignment counter interrupt mask"]
 pub type RAEFACIM_R = crate::BitReader;
 #[doc = "Field `RAEFACIM` writer - Received alignment error frame alignment counter interrupt mask"]
-pub type RAEFACIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RAEFACIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RUGFCIM` reader - Received unicast good frame counter interrupt mask"]
 pub type RUGFCIM_R = crate::BitReader;
 #[doc = "Field `RUGFCIM` writer - Received unicast good frame counter interrupt mask"]
-pub type RUGFCIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RUGFCIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 5 - Received CRC error frame counter interrupt mask"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 5 - Received CRC error frame counter interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn rcefcim(&mut self) -> RCEFCIM_W<MMCRIM_SPEC, 5> {
-        RCEFCIM_W::new(self)
+    pub fn rcefcim(&mut self) -> RCEFCIM_W<MMCRIM_SPEC> {
+        RCEFCIM_W::new(self, 5)
     }
     #[doc = "Bit 6 - Received alignment error frame alignment counter interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn raefacim(&mut self) -> RAEFACIM_W<MMCRIM_SPEC, 6> {
-        RAEFACIM_W::new(self)
+    pub fn raefacim(&mut self) -> RAEFACIM_W<MMCRIM_SPEC> {
+        RAEFACIM_W::new(self, 6)
     }
     #[doc = "Bit 17 - Received unicast good frame counter interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn rugfcim(&mut self) -> RUGFCIM_W<MMCRIM_SPEC, 17> {
-        RUGFCIM_W::new(self)
+    pub fn rugfcim(&mut self) -> RUGFCIM_W<MMCRIM_SPEC> {
+        RUGFCIM_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

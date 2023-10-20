@@ -5,7 +5,7 @@ pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `VREXLPEN` reader - Voltage regulator extra low power mode enable"]
 pub type VREXLPEN_R = crate::BitReader;
 #[doc = "Field `VREXLPEN` writer - Voltage regulator extra low power mode enable"]
-pub type VREXLPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VREXLPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 5 - Voltage regulator extra low power mode enable"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 5 - Voltage regulator extra low power mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn vrexlpen(&mut self) -> VREXLPEN_W<CTRL2_SPEC, 5> {
-        VREXLPEN_W::new(self)
+    pub fn vrexlpen(&mut self) -> VREXLPEN_W<CTRL2_SPEC> {
+        VREXLPEN_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

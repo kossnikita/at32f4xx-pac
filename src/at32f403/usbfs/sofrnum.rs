@@ -5,23 +5,23 @@ pub type W = crate::W<SOFRNUM_SPEC>;
 #[doc = "Field `SOFNUM` reader - Start of frame number"]
 pub type SOFNUM_R = crate::FieldReader<u16>;
 #[doc = "Field `SOFNUM` writer - Start of frame number"]
-pub type SOFNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SOFNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `LSOFNUM` reader - Lost start of frame number"]
 pub type LSOFNUM_R = crate::FieldReader;
 #[doc = "Field `LSOFNUM` writer - Lost start of frame number"]
-pub type LSOFNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type LSOFNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CLCK` reader - Connect locked"]
 pub type CLCK_R = crate::BitReader;
 #[doc = "Field `CLCK` writer - Connect locked"]
-pub type CLCK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLCK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMSTS` reader - DM status"]
 pub type DMSTS_R = crate::BitReader;
 #[doc = "Field `DMSTS` writer - DM status"]
-pub type DMSTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMSTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DPSTS` reader - DP status"]
 pub type DPSTS_R = crate::BitReader;
 #[doc = "Field `DPSTS` writer - DP status"]
-pub type DPSTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DPSTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10 - Start of frame number"]
     #[inline(always)]
@@ -69,32 +69,32 @@ impl W {
     #[doc = "Bits 0:10 - Start of frame number"]
     #[inline(always)]
     #[must_use]
-    pub fn sofnum(&mut self) -> SOFNUM_W<SOFRNUM_SPEC, 0> {
-        SOFNUM_W::new(self)
+    pub fn sofnum(&mut self) -> SOFNUM_W<SOFRNUM_SPEC> {
+        SOFNUM_W::new(self, 0)
     }
     #[doc = "Bits 11:12 - Lost start of frame number"]
     #[inline(always)]
     #[must_use]
-    pub fn lsofnum(&mut self) -> LSOFNUM_W<SOFRNUM_SPEC, 11> {
-        LSOFNUM_W::new(self)
+    pub fn lsofnum(&mut self) -> LSOFNUM_W<SOFRNUM_SPEC> {
+        LSOFNUM_W::new(self, 11)
     }
     #[doc = "Bit 13 - Connect locked"]
     #[inline(always)]
     #[must_use]
-    pub fn clck(&mut self) -> CLCK_W<SOFRNUM_SPEC, 13> {
-        CLCK_W::new(self)
+    pub fn clck(&mut self) -> CLCK_W<SOFRNUM_SPEC> {
+        CLCK_W::new(self, 13)
     }
     #[doc = "Bit 14 - DM status"]
     #[inline(always)]
     #[must_use]
-    pub fn dmsts(&mut self) -> DMSTS_W<SOFRNUM_SPEC, 14> {
-        DMSTS_W::new(self)
+    pub fn dmsts(&mut self) -> DMSTS_W<SOFRNUM_SPEC> {
+        DMSTS_W::new(self, 14)
     }
     #[doc = "Bit 15 - DP status"]
     #[inline(always)]
     #[must_use]
-    pub fn dpsts(&mut self) -> DPSTS_W<SOFRNUM_SPEC, 15> {
-        DPSTS_W::new(self)
+    pub fn dpsts(&mut self) -> DPSTS_W<SOFRNUM_SPEC> {
+        DPSTS_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<PTPSSINC_SPEC>;
 #[doc = "Field `SSIV` reader - Sub-second increment value"]
 pub type SSIV_R = crate::FieldReader;
 #[doc = "Field `SSIV` writer - Sub-second increment value"]
-pub type SSIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SSIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Sub-second increment value"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:7 - Sub-second increment value"]
     #[inline(always)]
     #[must_use]
-    pub fn ssiv(&mut self) -> SSIV_W<PTPSSINC_SPEC, 0> {
-        SSIV_W::new(self)
+    pub fn ssiv(&mut self) -> SSIV_W<PTPSSINC_SPEC> {
+        SSIV_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

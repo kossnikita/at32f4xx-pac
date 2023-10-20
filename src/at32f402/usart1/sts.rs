@@ -231,8 +231,8 @@ impl From<RDBFW_AW> for bool {
     }
 }
 #[doc = "Field `RDBF` writer - Receive data buffer full"]
-pub type RDBF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, RDBFW_AW>;
-impl<'a, REG, const O: u8> RDBF_W<'a, REG, O>
+pub type RDBF_W<'a, REG> = crate::BitWriter0C<'a, REG, RDBFW_AW>;
+impl<'a, REG> RDBF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -291,8 +291,8 @@ impl From<TDCW_AW> for bool {
     }
 }
 #[doc = "Field `TDC` writer - Transmit data complete"]
-pub type TDC_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, TDCW_AW>;
-impl<'a, REG, const O: u8> TDC_W<'a, REG, O>
+pub type TDC_W<'a, REG> = crate::BitWriter0C<'a, REG, TDCW_AW>;
+impl<'a, REG> TDC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -387,8 +387,8 @@ impl From<BFFW_AW> for bool {
     }
 }
 #[doc = "Field `BFF` writer - Break frame flag"]
-pub type BFF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, BFFW_AW>;
-impl<'a, REG, const O: u8> BFF_W<'a, REG, O>
+pub type BFF_W<'a, REG> = crate::BitWriter0C<'a, REG, BFFW_AW>;
+impl<'a, REG> BFF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -447,8 +447,8 @@ impl From<CTSCFW_AW> for bool {
     }
 }
 #[doc = "Field `CTSCF` writer - CTS change flag"]
-pub type CTSCF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, CTSCFW_AW>;
-impl<'a, REG, const O: u8> CTSCF_W<'a, REG, O>
+pub type CTSCF_W<'a, REG> = crate::BitWriter0C<'a, REG, CTSCFW_AW>;
+impl<'a, REG> CTSCF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -461,11 +461,11 @@ where
 #[doc = "Field `RTODF` reader - Reiceiver time out detection flag"]
 pub type RTODF_R = crate::BitReader;
 #[doc = "Field `RTODF` writer - Reiceiver time out detection flag"]
-pub type RTODF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTODF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDF` reader - Character match detection flag"]
 pub type CMDF_R = crate::BitReader;
 #[doc = "Field `CMDF` writer - Character match detection flag"]
-pub type CMDF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Parity error"]
     #[inline(always)]
@@ -555,38 +555,38 @@ impl W {
     #[doc = "Bit 5 - Receive data buffer full"]
     #[inline(always)]
     #[must_use]
-    pub fn rdbf(&mut self) -> RDBF_W<STS_SPEC, 5> {
-        RDBF_W::new(self)
+    pub fn rdbf(&mut self) -> RDBF_W<STS_SPEC> {
+        RDBF_W::new(self, 5)
     }
     #[doc = "Bit 6 - Transmit data complete"]
     #[inline(always)]
     #[must_use]
-    pub fn tdc(&mut self) -> TDC_W<STS_SPEC, 6> {
-        TDC_W::new(self)
+    pub fn tdc(&mut self) -> TDC_W<STS_SPEC> {
+        TDC_W::new(self, 6)
     }
     #[doc = "Bit 8 - Break frame flag"]
     #[inline(always)]
     #[must_use]
-    pub fn bff(&mut self) -> BFF_W<STS_SPEC, 8> {
-        BFF_W::new(self)
+    pub fn bff(&mut self) -> BFF_W<STS_SPEC> {
+        BFF_W::new(self, 8)
     }
     #[doc = "Bit 9 - CTS change flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ctscf(&mut self) -> CTSCF_W<STS_SPEC, 9> {
-        CTSCF_W::new(self)
+    pub fn ctscf(&mut self) -> CTSCF_W<STS_SPEC> {
+        CTSCF_W::new(self, 9)
     }
     #[doc = "Bit 11 - Reiceiver time out detection flag"]
     #[inline(always)]
     #[must_use]
-    pub fn rtodf(&mut self) -> RTODF_W<STS_SPEC, 11> {
-        RTODF_W::new(self)
+    pub fn rtodf(&mut self) -> RTODF_W<STS_SPEC> {
+        RTODF_W::new(self, 11)
     }
     #[doc = "Bit 17 - Character match detection flag"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdf(&mut self) -> CMDF_W<STS_SPEC, 17> {
-        CMDF_W::new(self)
+    pub fn cmdf(&mut self) -> CMDF_W<STS_SPEC> {
+        CMDF_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

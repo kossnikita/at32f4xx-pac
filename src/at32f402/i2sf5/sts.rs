@@ -17,7 +17,7 @@ pub type BF_R = crate::BitReader;
 #[doc = "Field `CSPAS` reader - CS pulse abnormal setting fiag"]
 pub type CSPAS_R = crate::BitReader;
 #[doc = "Field `CSPAS` writer - CS pulse abnormal setting fiag"]
-pub type CSPAS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSPAS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Receive data buffer full"]
     #[inline(always)]
@@ -77,8 +77,8 @@ impl W {
     #[doc = "Bit 8 - CS pulse abnormal setting fiag"]
     #[inline(always)]
     #[must_use]
-    pub fn cspas(&mut self) -> CSPAS_W<STS_SPEC, 8> {
-        CSPAS_W::new(self)
+    pub fn cspas(&mut self) -> CSPAS_W<STS_SPEC> {
+        CSPAS_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

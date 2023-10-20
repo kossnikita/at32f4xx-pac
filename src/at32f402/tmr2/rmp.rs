@@ -5,7 +5,7 @@ pub type W = crate::W<RMP_SPEC>;
 #[doc = "Field `TMR2_IS1_IRMP` reader - TMR2 internal selection 3 remap"]
 pub type TMR2_IS1_IRMP_R = crate::FieldReader;
 #[doc = "Field `TMR2_IS1_IRMP` writer - TMR2 internal selection 3 remap"]
-pub type TMR2_IS1_IRMP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TMR2_IS1_IRMP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 10:11 - TMR2 internal selection 3 remap"]
     #[inline(always)]
@@ -32,8 +32,8 @@ impl W {
     #[doc = "Bits 10:11 - TMR2 internal selection 3 remap"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr2_is1_irmp(&mut self) -> TMR2_IS1_IRMP_W<RMP_SPEC, 10> {
-        TMR2_IS1_IRMP_W::new(self)
+    pub fn tmr2_is1_irmp(&mut self) -> TMR2_IS1_IRMP_W<RMP_SPEC> {
+        TMR2_IS1_IRMP_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -51,8 +51,8 @@ impl From<LINE0W_AW> for bool {
     }
 }
 #[doc = "Field `LINE[0-18]` writer - Line %s status bit"]
-pub type LINE_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, LINE0W_AW>;
-impl<'a, REG, const O: u8> LINE_W<'a, REG, O>
+pub type LINE_W<'a, REG> = crate::BitWriter1C<'a, REG, LINE0W_AW>;
+impl<'a, REG> LINE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -64,9 +64,10 @@ where
 }
 impl R {
     #[doc = "Line [0-18]
-status bit"]
+status bit\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn line(&self, n: u8) -> LINE_R {
+    pub fn line(&self, n: u8) -> LINE_R {
+        assert!(n < 19);
         LINE_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - Line 0 status bit"]
@@ -200,122 +201,123 @@ impl W {
 status bit"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn line<const O: u8>(&mut self) -> LINE_W<INTSTS_SPEC, O> {
-        LINE_W::new(self)
+    pub fn line(&mut self, n: u8) -> LINE_W<INTSTS_SPEC> {
+        assert!(n < 19);
+        LINE_W::new(self, n)
     }
     #[doc = "Bit 0 - Line 0 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line0(&mut self) -> LINE_W<INTSTS_SPEC, 0> {
-        LINE_W::new(self)
+    pub fn line0(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Line 1 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line1(&mut self) -> LINE_W<INTSTS_SPEC, 1> {
-        LINE_W::new(self)
+    pub fn line1(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Line 2 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line2(&mut self) -> LINE_W<INTSTS_SPEC, 2> {
-        LINE_W::new(self)
+    pub fn line2(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Line 3 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line3(&mut self) -> LINE_W<INTSTS_SPEC, 3> {
-        LINE_W::new(self)
+    pub fn line3(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Line 4 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line4(&mut self) -> LINE_W<INTSTS_SPEC, 4> {
-        LINE_W::new(self)
+    pub fn line4(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Line 5 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line5(&mut self) -> LINE_W<INTSTS_SPEC, 5> {
-        LINE_W::new(self)
+    pub fn line5(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Line 6 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line6(&mut self) -> LINE_W<INTSTS_SPEC, 6> {
-        LINE_W::new(self)
+    pub fn line6(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Line 7 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line7(&mut self) -> LINE_W<INTSTS_SPEC, 7> {
-        LINE_W::new(self)
+    pub fn line7(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Line 8 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line8(&mut self) -> LINE_W<INTSTS_SPEC, 8> {
-        LINE_W::new(self)
+    pub fn line8(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Line 9 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line9(&mut self) -> LINE_W<INTSTS_SPEC, 9> {
-        LINE_W::new(self)
+    pub fn line9(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Line 10 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line10(&mut self) -> LINE_W<INTSTS_SPEC, 10> {
-        LINE_W::new(self)
+    pub fn line10(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 10)
     }
     #[doc = "Bit 11 - Line 11 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line11(&mut self) -> LINE_W<INTSTS_SPEC, 11> {
-        LINE_W::new(self)
+    pub fn line11(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Line 12 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line12(&mut self) -> LINE_W<INTSTS_SPEC, 12> {
-        LINE_W::new(self)
+    pub fn line12(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Line 13 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line13(&mut self) -> LINE_W<INTSTS_SPEC, 13> {
-        LINE_W::new(self)
+    pub fn line13(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Line 14 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line14(&mut self) -> LINE_W<INTSTS_SPEC, 14> {
-        LINE_W::new(self)
+    pub fn line14(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Line 15 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line15(&mut self) -> LINE_W<INTSTS_SPEC, 15> {
-        LINE_W::new(self)
+    pub fn line15(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 15)
     }
     #[doc = "Bit 16 - Line 16 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line16(&mut self) -> LINE_W<INTSTS_SPEC, 16> {
-        LINE_W::new(self)
+    pub fn line16(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 16)
     }
     #[doc = "Bit 17 - Line 17 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line17(&mut self) -> LINE_W<INTSTS_SPEC, 17> {
-        LINE_W::new(self)
+    pub fn line17(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 17)
     }
     #[doc = "Bit 18 - Line 18 status bit"]
     #[inline(always)]
     #[must_use]
-    pub fn line18(&mut self) -> LINE_W<INTSTS_SPEC, 18> {
-        LINE_W::new(self)
+    pub fn line18(&mut self) -> LINE_W<INTSTS_SPEC> {
+        LINE_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<MUXGSTS_SPEC>;
 #[doc = "Field `TRGOVF1` reader - Trigger overrun interrupt flag"]
 pub type TRGOVF1_R = crate::BitReader;
 #[doc = "Field `TRGOVF1` writer - Trigger overrun interrupt flag"]
-pub type TRGOVF1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRGOVF1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRGOVF2` reader - Trigger overrun interrupt flag"]
 pub type TRGOVF2_R = crate::BitReader;
 #[doc = "Field `TRGOVF2` writer - Trigger overrun interrupt flag"]
-pub type TRGOVF2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRGOVF2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRGOVF3` reader - Trigger overrun interrupt flag"]
 pub type TRGOVF3_R = crate::BitReader;
 #[doc = "Field `TRGOVF3` writer - Trigger overrun interrupt flag"]
-pub type TRGOVF3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRGOVF3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRGOVF4` reader - Trigger overrun interrupt flag"]
 pub type TRGOVF4_R = crate::BitReader;
 #[doc = "Field `TRGOVF4` writer - Trigger overrun interrupt flag"]
-pub type TRGOVF4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TRGOVF4_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Trigger overrun interrupt flag"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bit 0 - Trigger overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn trgovf1(&mut self) -> TRGOVF1_W<MUXGSTS_SPEC, 0> {
-        TRGOVF1_W::new(self)
+    pub fn trgovf1(&mut self) -> TRGOVF1_W<MUXGSTS_SPEC> {
+        TRGOVF1_W::new(self, 0)
     }
     #[doc = "Bit 1 - Trigger overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn trgovf2(&mut self) -> TRGOVF2_W<MUXGSTS_SPEC, 1> {
-        TRGOVF2_W::new(self)
+    pub fn trgovf2(&mut self) -> TRGOVF2_W<MUXGSTS_SPEC> {
+        TRGOVF2_W::new(self, 1)
     }
     #[doc = "Bit 2 - Trigger overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn trgovf3(&mut self) -> TRGOVF3_W<MUXGSTS_SPEC, 2> {
-        TRGOVF3_W::new(self)
+    pub fn trgovf3(&mut self) -> TRGOVF3_W<MUXGSTS_SPEC> {
+        TRGOVF3_W::new(self, 2)
     }
     #[doc = "Bit 3 - Trigger overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn trgovf4(&mut self) -> TRGOVF4_W<MUXGSTS_SPEC, 3> {
-        TRGOVF4_W::new(self)
+    pub fn trgovf4(&mut self) -> TRGOVF4_W<MUXGSTS_SPEC> {
+        TRGOVF4_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

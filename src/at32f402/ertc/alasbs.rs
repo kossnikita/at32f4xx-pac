@@ -5,11 +5,11 @@ pub type W = crate::W<ALASBS_SPEC>;
 #[doc = "Field `SBS` reader - Sub-seconds value"]
 pub type SBS_R = crate::FieldReader<u16>;
 #[doc = "Field `SBS` writer - Sub-seconds value"]
-pub type SBS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
+pub type SBS_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 #[doc = "Field `SBSMSK` reader - Sub-second mask"]
 pub type SBSMSK_R = crate::FieldReader;
 #[doc = "Field `SBSMSK` writer - Sub-second mask"]
-pub type SBSMSK_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type SBSMSK_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:14 - Sub-seconds value"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:14 - Sub-seconds value"]
     #[inline(always)]
     #[must_use]
-    pub fn sbs(&mut self) -> SBS_W<ALASBS_SPEC, 0> {
-        SBS_W::new(self)
+    pub fn sbs(&mut self) -> SBS_W<ALASBS_SPEC> {
+        SBS_W::new(self, 0)
     }
     #[doc = "Bits 24:27 - Sub-second mask"]
     #[inline(always)]
     #[must_use]
-    pub fn sbsmsk(&mut self) -> SBSMSK_W<ALASBS_SPEC, 24> {
-        SBSMSK_W::new(self)
+    pub fn sbsmsk(&mut self) -> SBSMSK_W<ALASBS_SPEC> {
+        SBSMSK_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

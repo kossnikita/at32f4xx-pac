@@ -5,7 +5,7 @@ pub type W = crate::W<MISC1_SPEC>;
 #[doc = "Field `I2SFPCMCKSEL` reader - I2S PCM clock edge select"]
 pub type I2SFPCMCKSEL_R = crate::BitReader;
 #[doc = "Field `I2SFPCMCKSEL` writer - I2S PCM clock edge select"]
-pub type I2SFPCMCKSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2SFPCMCKSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - I2S PCM clock edge select"]
     #[inline(always)]
@@ -32,8 +32,8 @@ impl W {
     #[doc = "Bit 0 - I2S PCM clock edge select"]
     #[inline(always)]
     #[must_use]
-    pub fn i2sfpcmcksel(&mut self) -> I2SFPCMCKSEL_W<MISC1_SPEC, 0> {
-        I2SFPCMCKSEL_W::new(self)
+    pub fn i2sfpcmcksel(&mut self) -> I2SFPCMCKSEL_W<MISC1_SPEC> {
+        I2SFPCMCKSEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

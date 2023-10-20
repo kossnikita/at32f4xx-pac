@@ -92,8 +92,8 @@ impl DIV_R {
     }
 }
 #[doc = "Field `DIV` writer - Division divider"]
-pub type DIV_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, DIV_A>;
-impl<'a, REG, const O: u8> DIV_W<'a, REG, O>
+pub type DIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, DIV_A>;
+impl<'a, REG> DIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -162,8 +162,8 @@ impl W {
     #[doc = "Bits 0:2 - Division divider"]
     #[inline(always)]
     #[must_use]
-    pub fn div(&mut self) -> DIV_W<DIV_SPEC, 0> {
-        DIV_W::new(self)
+    pub fn div(&mut self) -> DIV_W<DIV_SPEC> {
+        DIV_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

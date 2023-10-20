@@ -5,19 +5,19 @@ pub type W = crate::W<AHBRST_SPEC>;
 #[doc = "Field `GPIOA` reader - IO port A reset"]
 pub type GPIOA_R = crate::BitReader;
 #[doc = "Field `GPIOA` writer - IO port A reset"]
-pub type GPIOA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOB` reader - IO port B reset"]
 pub type GPIOB_R = crate::BitReader;
 #[doc = "Field `GPIOB` writer - IO port B reset"]
-pub type GPIOB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOC` reader - IO port C reset"]
 pub type GPIOC_R = crate::BitReader;
 #[doc = "Field `GPIOC` writer - IO port C reset"]
-pub type GPIOC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOF` reader - IO port F reset"]
 pub type GPIOF_R = crate::BitReader;
 #[doc = "Field `GPIOF` writer - IO port F reset"]
-pub type GPIOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 17 - IO port A reset"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bit 17 - IO port A reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioa(&mut self) -> GPIOA_W<AHBRST_SPEC, 17> {
-        GPIOA_W::new(self)
+    pub fn gpioa(&mut self) -> GPIOA_W<AHBRST_SPEC> {
+        GPIOA_W::new(self, 17)
     }
     #[doc = "Bit 18 - IO port B reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiob(&mut self) -> GPIOB_W<AHBRST_SPEC, 18> {
-        GPIOB_W::new(self)
+    pub fn gpiob(&mut self) -> GPIOB_W<AHBRST_SPEC> {
+        GPIOB_W::new(self, 18)
     }
     #[doc = "Bit 19 - IO port C reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioc(&mut self) -> GPIOC_W<AHBRST_SPEC, 19> {
-        GPIOC_W::new(self)
+    pub fn gpioc(&mut self) -> GPIOC_W<AHBRST_SPEC> {
+        GPIOC_W::new(self, 19)
     }
     #[doc = "Bit 22 - IO port F reset"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiof(&mut self) -> GPIOF_W<AHBRST_SPEC, 22> {
-        GPIOF_W::new(self)
+    pub fn gpiof(&mut self) -> GPIOF_W<AHBRST_SPEC> {
+        GPIOF_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

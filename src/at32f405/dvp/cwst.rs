@@ -5,11 +5,11 @@ pub type W = crate::W<CWST_SPEC>;
 #[doc = "Field `CHSTR` reader - Cropping window horizontal start pixel"]
 pub type CHSTR_R = crate::FieldReader<u16>;
 #[doc = "Field `CHSTR` writer - Cropping window horizontal start pixel"]
-pub type CHSTR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type CHSTR_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 #[doc = "Field `CVSTR` reader - Cropping window vertical start line"]
 pub type CVSTR_R = crate::FieldReader<u16>;
 #[doc = "Field `CVSTR` writer - Cropping window vertical start line"]
-pub type CVSTR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type CVSTR_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
     #[doc = "Bits 0:13 - Cropping window horizontal start pixel"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:13 - Cropping window horizontal start pixel"]
     #[inline(always)]
     #[must_use]
-    pub fn chstr(&mut self) -> CHSTR_W<CWST_SPEC, 0> {
-        CHSTR_W::new(self)
+    pub fn chstr(&mut self) -> CHSTR_W<CWST_SPEC> {
+        CHSTR_W::new(self, 0)
     }
     #[doc = "Bits 16:28 - Cropping window vertical start line"]
     #[inline(always)]
     #[must_use]
-    pub fn cvstr(&mut self) -> CVSTR_W<CWST_SPEC, 16> {
-        CVSTR_W::new(self)
+    pub fn cvstr(&mut self) -> CVSTR_W<CWST_SPEC> {
+        CVSTR_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

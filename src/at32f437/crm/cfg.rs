@@ -52,8 +52,8 @@ impl SCLKSEL_R {
     }
 }
 #[doc = "Field `SCLKSEL` writer - System clock select"]
-pub type SCLKSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, SCLKSEL_A>;
-impl<'a, REG, const O: u8> SCLKSEL_W<'a, REG, O>
+pub type SCLKSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SCLKSEL_A>;
+impl<'a, REG> SCLKSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -221,8 +221,8 @@ impl AHBDIV_R {
     }
 }
 #[doc = "Field `AHBDIV` writer - AHB division"]
-pub type AHBDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, AHBDIV_A>;
-impl<'a, REG, const O: u8> AHBDIV_W<'a, REG, O>
+pub type AHBDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 4, AHBDIV_A>;
+impl<'a, REG> AHBDIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -339,8 +339,8 @@ impl APB1DIV_R {
     }
 }
 #[doc = "Field `APB1DIV` writer - APB1 division"]
-pub type APB1DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, APB1DIV_A>;
-impl<'a, REG, const O: u8> APB1DIV_W<'a, REG, O>
+pub type APB1DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 3, APB1DIV_A>;
+impl<'a, REG> APB1DIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -378,23 +378,23 @@ pub use APB1DIV_W as APB2DIV_W;
 #[doc = "Field `ERTCDIV` reader - HEXT division for ERTC clock"]
 pub type ERTCDIV_R = crate::FieldReader;
 #[doc = "Field `ERTCDIV` writer - HEXT division for ERTC clock"]
-pub type ERTCDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type ERTCDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CLKOUT1_SEL` reader - Clock output1 selection"]
 pub type CLKOUT1_SEL_R = crate::FieldReader;
 #[doc = "Field `CLKOUT1_SEL` writer - Clock output1 selection"]
-pub type CLKOUT1_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CLKOUT1_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CLKOUT1DIV1` reader - Clock output1 division1"]
 pub type CLKOUT1DIV1_R = crate::FieldReader;
 #[doc = "Field `CLKOUT1DIV1` writer - Clock output1 division1"]
-pub type CLKOUT1DIV1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CLKOUT1DIV1_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CLKOUT2DIV1` reader - Clock output2 division1"]
 pub type CLKOUT2DIV1_R = crate::FieldReader;
 #[doc = "Field `CLKOUT2DIV1` writer - Clock output2 division1"]
-pub type CLKOUT2DIV1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CLKOUT2DIV1_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CLKOUT2_SEL1` reader - Clock output2 selection1"]
 pub type CLKOUT2_SEL1_R = crate::FieldReader;
 #[doc = "Field `CLKOUT2_SEL1` writer - Clock output2 selection1"]
-pub type CLKOUT2_SEL1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CLKOUT2_SEL1_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - System clock select"]
     #[inline(always)]
@@ -484,56 +484,56 @@ impl W {
     #[doc = "Bits 0:1 - System clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn sclksel(&mut self) -> SCLKSEL_W<CFG_SPEC, 0> {
-        SCLKSEL_W::new(self)
+    pub fn sclksel(&mut self) -> SCLKSEL_W<CFG_SPEC> {
+        SCLKSEL_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - AHB division"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbdiv(&mut self) -> AHBDIV_W<CFG_SPEC, 4> {
-        AHBDIV_W::new(self)
+    pub fn ahbdiv(&mut self) -> AHBDIV_W<CFG_SPEC> {
+        AHBDIV_W::new(self, 4)
     }
     #[doc = "Bits 10:12 - APB1 division"]
     #[inline(always)]
     #[must_use]
-    pub fn apb1div(&mut self) -> APB1DIV_W<CFG_SPEC, 10> {
-        APB1DIV_W::new(self)
+    pub fn apb1div(&mut self) -> APB1DIV_W<CFG_SPEC> {
+        APB1DIV_W::new(self, 10)
     }
     #[doc = "Bits 13:15 - APB2 division"]
     #[inline(always)]
     #[must_use]
-    pub fn apb2div(&mut self) -> APB2DIV_W<CFG_SPEC, 13> {
-        APB2DIV_W::new(self)
+    pub fn apb2div(&mut self) -> APB2DIV_W<CFG_SPEC> {
+        APB2DIV_W::new(self, 13)
     }
     #[doc = "Bits 16:20 - HEXT division for ERTC clock"]
     #[inline(always)]
     #[must_use]
-    pub fn ertcdiv(&mut self) -> ERTCDIV_W<CFG_SPEC, 16> {
-        ERTCDIV_W::new(self)
+    pub fn ertcdiv(&mut self) -> ERTCDIV_W<CFG_SPEC> {
+        ERTCDIV_W::new(self, 16)
     }
     #[doc = "Bits 21:22 - Clock output1 selection"]
     #[inline(always)]
     #[must_use]
-    pub fn clkout1_sel(&mut self) -> CLKOUT1_SEL_W<CFG_SPEC, 21> {
-        CLKOUT1_SEL_W::new(self)
+    pub fn clkout1_sel(&mut self) -> CLKOUT1_SEL_W<CFG_SPEC> {
+        CLKOUT1_SEL_W::new(self, 21)
     }
     #[doc = "Bits 24:26 - Clock output1 division1"]
     #[inline(always)]
     #[must_use]
-    pub fn clkout1div1(&mut self) -> CLKOUT1DIV1_W<CFG_SPEC, 24> {
-        CLKOUT1DIV1_W::new(self)
+    pub fn clkout1div1(&mut self) -> CLKOUT1DIV1_W<CFG_SPEC> {
+        CLKOUT1DIV1_W::new(self, 24)
     }
     #[doc = "Bits 27:29 - Clock output2 division1"]
     #[inline(always)]
     #[must_use]
-    pub fn clkout2div1(&mut self) -> CLKOUT2DIV1_W<CFG_SPEC, 27> {
-        CLKOUT2DIV1_W::new(self)
+    pub fn clkout2div1(&mut self) -> CLKOUT2DIV1_W<CFG_SPEC> {
+        CLKOUT2DIV1_W::new(self, 27)
     }
     #[doc = "Bits 30:31 - Clock output2 selection1"]
     #[inline(always)]
     #[must_use]
-    pub fn clkout2_sel1(&mut self) -> CLKOUT2_SEL1_W<CFG_SPEC, 30> {
-        CLKOUT2_SEL1_W::new(self)
+    pub fn clkout2_sel1(&mut self) -> CLKOUT2_SEL1_W<CFG_SPEC> {
+        CLKOUT2_SEL1_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

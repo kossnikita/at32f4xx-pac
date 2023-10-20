@@ -5,15 +5,15 @@ pub type W = crate::W<MMCTIM_SPEC>;
 #[doc = "Field `TSCGFCIM` reader - Transmit single collision good frame counter interrupt mask"]
 pub type TSCGFCIM_R = crate::BitReader;
 #[doc = "Field `TSCGFCIM` writer - Transmit single collision good frame counter interrupt mask"]
-pub type TSCGFCIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSCGFCIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMCGFCIM` reader - Transmit multiple collision good frame counter interrupt mask"]
 pub type TMCGFCIM_R = crate::BitReader;
 #[doc = "Field `TMCGFCIM` writer - Transmit multiple collision good frame counter interrupt mask"]
-pub type TMCGFCIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMCGFCIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TGFCIM` reader - Transmitted good frame counter interrupt mask"]
 pub type TGFCIM_R = crate::BitReader;
 #[doc = "Field `TGFCIM` writer - Transmitted good frame counter interrupt mask"]
-pub type TGFCIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TGFCIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 14 - Transmit single collision good frame counter interrupt mask"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 14 - Transmit single collision good frame counter interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn tscgfcim(&mut self) -> TSCGFCIM_W<MMCTIM_SPEC, 14> {
-        TSCGFCIM_W::new(self)
+    pub fn tscgfcim(&mut self) -> TSCGFCIM_W<MMCTIM_SPEC> {
+        TSCGFCIM_W::new(self, 14)
     }
     #[doc = "Bit 15 - Transmit multiple collision good frame counter interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn tmcgfcim(&mut self) -> TMCGFCIM_W<MMCTIM_SPEC, 15> {
-        TMCGFCIM_W::new(self)
+    pub fn tmcgfcim(&mut self) -> TMCGFCIM_W<MMCTIM_SPEC> {
+        TMCGFCIM_W::new(self, 15)
     }
     #[doc = "Bit 21 - Transmitted good frame counter interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn tgfcim(&mut self) -> TGFCIM_W<MMCTIM_SPEC, 21> {
-        TGFCIM_W::new(self)
+    pub fn tgfcim(&mut self) -> TGFCIM_W<MMCTIM_SPEC> {
+        TGFCIM_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

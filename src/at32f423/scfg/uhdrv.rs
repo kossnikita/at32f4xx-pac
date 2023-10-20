@@ -5,19 +5,19 @@ pub type W = crate::W<UHDRV_SPEC>;
 #[doc = "Field `PB9_UH` reader - PB9 ultra high sourcing/sinking strength"]
 pub type PB9_UH_R = crate::BitReader;
 #[doc = "Field `PB9_UH` writer - PB9 ultra high sourcing/sinking strength"]
-pub type PB9_UH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PB9_UH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PB8_UH` reader - PB8 ultra high sourcing/sinking strength"]
 pub type PB8_UH_R = crate::BitReader;
 #[doc = "Field `PB8_UH` writer - PB8 ultra high sourcing/sinking strength"]
-pub type PB8_UH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PB8_UH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PD12_UH` reader - PD12 ultra high sourcing/sinking strength"]
 pub type PD12_UH_R = crate::BitReader;
 #[doc = "Field `PD12_UH` writer - PD12 ultra high sourcing/sinking strength"]
-pub type PD12_UH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PD12_UH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PD13_UH` reader - PD13 ultra high sourcing/sinking strength"]
 pub type PD13_UH_R = crate::BitReader;
 #[doc = "Field `PD13_UH` writer - PD13 ultra high sourcing/sinking strength"]
-pub type PD13_UH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PD13_UH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - PB9 ultra high sourcing/sinking strength"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bit 1 - PB9 ultra high sourcing/sinking strength"]
     #[inline(always)]
     #[must_use]
-    pub fn pb9_uh(&mut self) -> PB9_UH_W<UHDRV_SPEC, 1> {
-        PB9_UH_W::new(self)
+    pub fn pb9_uh(&mut self) -> PB9_UH_W<UHDRV_SPEC> {
+        PB9_UH_W::new(self, 1)
     }
     #[doc = "Bit 3 - PB8 ultra high sourcing/sinking strength"]
     #[inline(always)]
     #[must_use]
-    pub fn pb8_uh(&mut self) -> PB8_UH_W<UHDRV_SPEC, 3> {
-        PB8_UH_W::new(self)
+    pub fn pb8_uh(&mut self) -> PB8_UH_W<UHDRV_SPEC> {
+        PB8_UH_W::new(self, 3)
     }
     #[doc = "Bit 5 - PD12 ultra high sourcing/sinking strength"]
     #[inline(always)]
     #[must_use]
-    pub fn pd12_uh(&mut self) -> PD12_UH_W<UHDRV_SPEC, 5> {
-        PD12_UH_W::new(self)
+    pub fn pd12_uh(&mut self) -> PD12_UH_W<UHDRV_SPEC> {
+        PD12_UH_W::new(self, 5)
     }
     #[doc = "Bit 6 - PD13 ultra high sourcing/sinking strength"]
     #[inline(always)]
     #[must_use]
-    pub fn pd13_uh(&mut self) -> PD13_UH_W<UHDRV_SPEC, 6> {
-        PD13_UH_W::new(self)
+    pub fn pd13_uh(&mut self) -> PD13_UH_W<UHDRV_SPEC> {
+        PD13_UH_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

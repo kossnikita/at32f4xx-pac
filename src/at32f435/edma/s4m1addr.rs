@@ -5,7 +5,7 @@ pub type W = crate::W<S4M1ADDR_SPEC>;
 #[doc = "Field `M1ADDR` reader - Memory 1 address (used in case of Double buffer mode)"]
 pub type M1ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `M1ADDR` writer - Memory 1 address (used in case of Double buffer mode)"]
-pub type M1ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type M1ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Memory 1 address (used in case of Double buffer mode)"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Memory 1 address (used in case of Double buffer mode)"]
     #[inline(always)]
     #[must_use]
-    pub fn m1addr(&mut self) -> M1ADDR_W<S4M1ADDR_SPEC, 0> {
-        M1ADDR_W::new(self)
+    pub fn m1addr(&mut self) -> M1ADDR_W<S4M1ADDR_SPEC> {
+        M1ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

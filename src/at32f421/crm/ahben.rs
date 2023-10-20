@@ -5,35 +5,35 @@ pub type W = crate::W<AHBEN_SPEC>;
 #[doc = "Field `DMA` reader - DMA clock enable"]
 pub type DMA_R = crate::BitReader;
 #[doc = "Field `DMA` writer - DMA clock enable"]
-pub type DMA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRAM` reader - SRAM interface clock enable"]
 pub type SRAM_R = crate::BitReader;
 #[doc = "Field `SRAM` writer - SRAM interface clock enable"]
-pub type SRAM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLASH` reader - FLASH clock enable"]
 pub type FLASH_R = crate::BitReader;
 #[doc = "Field `FLASH` writer - FLASH clock enable"]
-pub type FLASH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLASH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRC` reader - CRC clock enable"]
 pub type CRC_R = crate::BitReader;
 #[doc = "Field `CRC` writer - CRC clock enable"]
-pub type CRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOA` reader - I/O port A clock enable"]
 pub type GPIOA_R = crate::BitReader;
 #[doc = "Field `GPIOA` writer - I/O port A clock enable"]
-pub type GPIOA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOB` reader - I/O port B clock enable"]
 pub type GPIOB_R = crate::BitReader;
 #[doc = "Field `GPIOB` writer - I/O port B clock enable"]
-pub type GPIOB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOC` reader - I/O port C clock enable"]
 pub type GPIOC_R = crate::BitReader;
 #[doc = "Field `GPIOC` writer - I/O port C clock enable"]
-pub type GPIOC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOF` reader - I/O port F clock enable"]
 pub type GPIOF_R = crate::BitReader;
 #[doc = "Field `GPIOF` writer - I/O port F clock enable"]
-pub type GPIOF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - DMA clock enable"]
     #[inline(always)]
@@ -99,50 +99,50 @@ impl W {
     #[doc = "Bit 0 - DMA clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dma(&mut self) -> DMA_W<AHBEN_SPEC, 0> {
-        DMA_W::new(self)
+    pub fn dma(&mut self) -> DMA_W<AHBEN_SPEC> {
+        DMA_W::new(self, 0)
     }
     #[doc = "Bit 2 - SRAM interface clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sram(&mut self) -> SRAM_W<AHBEN_SPEC, 2> {
-        SRAM_W::new(self)
+    pub fn sram(&mut self) -> SRAM_W<AHBEN_SPEC> {
+        SRAM_W::new(self, 2)
     }
     #[doc = "Bit 4 - FLASH clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn flash(&mut self) -> FLASH_W<AHBEN_SPEC, 4> {
-        FLASH_W::new(self)
+    pub fn flash(&mut self) -> FLASH_W<AHBEN_SPEC> {
+        FLASH_W::new(self, 4)
     }
     #[doc = "Bit 6 - CRC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn crc(&mut self) -> CRC_W<AHBEN_SPEC, 6> {
-        CRC_W::new(self)
+    pub fn crc(&mut self) -> CRC_W<AHBEN_SPEC> {
+        CRC_W::new(self, 6)
     }
     #[doc = "Bit 17 - I/O port A clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioa(&mut self) -> GPIOA_W<AHBEN_SPEC, 17> {
-        GPIOA_W::new(self)
+    pub fn gpioa(&mut self) -> GPIOA_W<AHBEN_SPEC> {
+        GPIOA_W::new(self, 17)
     }
     #[doc = "Bit 18 - I/O port B clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiob(&mut self) -> GPIOB_W<AHBEN_SPEC, 18> {
-        GPIOB_W::new(self)
+    pub fn gpiob(&mut self) -> GPIOB_W<AHBEN_SPEC> {
+        GPIOB_W::new(self, 18)
     }
     #[doc = "Bit 19 - I/O port C clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioc(&mut self) -> GPIOC_W<AHBEN_SPEC, 19> {
-        GPIOC_W::new(self)
+    pub fn gpioc(&mut self) -> GPIOC_W<AHBEN_SPEC> {
+        GPIOC_W::new(self, 19)
     }
     #[doc = "Bit 22 - I/O port F clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiof(&mut self) -> GPIOF_W<AHBEN_SPEC, 22> {
-        GPIOF_W::new(self)
+    pub fn gpiof(&mut self) -> GPIOF_W<AHBEN_SPEC> {
+        GPIOF_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

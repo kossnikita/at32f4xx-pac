@@ -5,7 +5,7 @@ pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `ID` reader - USART identification"]
 pub type ID_R = crate::FieldReader;
 #[doc = "Field `ID` writer - USART identification"]
-pub type ID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ID_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `BFBN` reader - Break frame bit num"]
 pub type BFBN_R = crate::BitReader<BFBN_A>;
 #[doc = "Break frame bit num\n\nValue on reset: 0"]
@@ -43,8 +43,8 @@ impl BFBN_R {
     }
 }
 #[doc = "Field `BFBN` writer - Break frame bit num"]
-pub type BFBN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, BFBN_A>;
-impl<'a, REG, const O: u8> BFBN_W<'a, REG, O>
+pub type BFBN_W<'a, REG> = crate::BitWriter<'a, REG, BFBN_A>;
+impl<'a, REG> BFBN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -110,8 +110,8 @@ impl From<BFIENW_AW> for bool {
     }
 }
 #[doc = "Field `BFIEN` writer - Break frame interrupt enable"]
-pub type BFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, BFIENW_AW>;
-impl<'a, REG, const O: u8> BFIEN_W<'a, REG, O>
+pub type BFIEN_W<'a, REG> = crate::BitWriter<'a, REG, BFIENW_AW>;
+impl<'a, REG> BFIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -177,8 +177,8 @@ impl From<LBCPW_AW> for bool {
     }
 }
 #[doc = "Field `LBCP` writer - Last bit clock pulse"]
-pub type LBCP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, LBCPW_AW>;
-impl<'a, REG, const O: u8> LBCP_W<'a, REG, O>
+pub type LBCP_W<'a, REG> = crate::BitWriter<'a, REG, LBCPW_AW>;
+impl<'a, REG> LBCP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -230,8 +230,8 @@ impl CLKPHA_R {
     }
 }
 #[doc = "Field `CLKPHA` writer - Clock phase"]
-pub type CLKPHA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CLKPHA_A>;
-impl<'a, REG, const O: u8> CLKPHA_W<'a, REG, O>
+pub type CLKPHA_W<'a, REG> = crate::BitWriter<'a, REG, CLKPHA_A>;
+impl<'a, REG> CLKPHA_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -283,8 +283,8 @@ impl CLKPOL_R {
     }
 }
 #[doc = "Field `CLKPOL` writer - Clock polarity"]
-pub type CLKPOL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CLKPOL_A>;
-impl<'a, REG, const O: u8> CLKPOL_W<'a, REG, O>
+pub type CLKPOL_W<'a, REG> = crate::BitWriter<'a, REG, CLKPOL_A>;
+impl<'a, REG> CLKPOL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -350,8 +350,8 @@ impl From<CLKENW_AW> for bool {
     }
 }
 #[doc = "Field `CLKEN` writer - Clock enable"]
-pub type CLKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CLKENW_AW>;
-impl<'a, REG, const O: u8> CLKEN_W<'a, REG, O>
+pub type CLKEN_W<'a, REG> = crate::BitWriter<'a, REG, CLKENW_AW>;
+impl<'a, REG> CLKEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -424,8 +424,8 @@ impl STOPBN_R {
     }
 }
 #[doc = "Field `STOPBN` writer - STOP bit num"]
-pub type STOPBN_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, STOPBN_A>;
-impl<'a, REG, const O: u8> STOPBN_W<'a, REG, O>
+pub type STOPBN_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, STOPBN_A>;
+impl<'a, REG> STOPBN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -502,8 +502,8 @@ impl From<LINENW_AW> for bool {
     }
 }
 #[doc = "Field `LINEN` writer - LIN mode enable"]
-pub type LINEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, LINENW_AW>;
-impl<'a, REG, const O: u8> LINEN_W<'a, REG, O>
+pub type LINEN_W<'a, REG> = crate::BitWriter<'a, REG, LINENW_AW>;
+impl<'a, REG> LINEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -589,56 +589,56 @@ impl W {
     #[doc = "Bits 0:3 - USART identification"]
     #[inline(always)]
     #[must_use]
-    pub fn id(&mut self) -> ID_W<CTRL2_SPEC, 0> {
-        ID_W::new(self)
+    pub fn id(&mut self) -> ID_W<CTRL2_SPEC> {
+        ID_W::new(self, 0)
     }
     #[doc = "Bit 5 - Break frame bit num"]
     #[inline(always)]
     #[must_use]
-    pub fn bfbn(&mut self) -> BFBN_W<CTRL2_SPEC, 5> {
-        BFBN_W::new(self)
+    pub fn bfbn(&mut self) -> BFBN_W<CTRL2_SPEC> {
+        BFBN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Break frame interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn bfien(&mut self) -> BFIEN_W<CTRL2_SPEC, 6> {
-        BFIEN_W::new(self)
+    pub fn bfien(&mut self) -> BFIEN_W<CTRL2_SPEC> {
+        BFIEN_W::new(self, 6)
     }
     #[doc = "Bit 8 - Last bit clock pulse"]
     #[inline(always)]
     #[must_use]
-    pub fn lbcp(&mut self) -> LBCP_W<CTRL2_SPEC, 8> {
-        LBCP_W::new(self)
+    pub fn lbcp(&mut self) -> LBCP_W<CTRL2_SPEC> {
+        LBCP_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clock phase"]
     #[inline(always)]
     #[must_use]
-    pub fn clkpha(&mut self) -> CLKPHA_W<CTRL2_SPEC, 9> {
-        CLKPHA_W::new(self)
+    pub fn clkpha(&mut self) -> CLKPHA_W<CTRL2_SPEC> {
+        CLKPHA_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clock polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn clkpol(&mut self) -> CLKPOL_W<CTRL2_SPEC, 10> {
-        CLKPOL_W::new(self)
+    pub fn clkpol(&mut self) -> CLKPOL_W<CTRL2_SPEC> {
+        CLKPOL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn clken(&mut self) -> CLKEN_W<CTRL2_SPEC, 11> {
-        CLKEN_W::new(self)
+    pub fn clken(&mut self) -> CLKEN_W<CTRL2_SPEC> {
+        CLKEN_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - STOP bit num"]
     #[inline(always)]
     #[must_use]
-    pub fn stopbn(&mut self) -> STOPBN_W<CTRL2_SPEC, 12> {
-        STOPBN_W::new(self)
+    pub fn stopbn(&mut self) -> STOPBN_W<CTRL2_SPEC> {
+        STOPBN_W::new(self, 12)
     }
     #[doc = "Bit 14 - LIN mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn linen(&mut self) -> LINEN_W<CTRL2_SPEC, 14> {
-        LINEN_W::new(self)
+    pub fn linen(&mut self) -> LINEN_W<CTRL2_SPEC> {
+        LINEN_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

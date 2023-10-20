@@ -60,9 +60,8 @@ impl TMR1_BK1_CMP_GMUX_R {
     }
 }
 #[doc = "Field `TMR1_BK1_CMP_GMUX` writer - TMR1 BK1 CMP muxing"]
-pub type TMR1_BK1_CMP_GMUX_W<'a, REG, const O: u8> =
-    crate::FieldWriterSafe<'a, REG, 2, O, TMR1_BK1_CMP_GMUX_A>;
-impl<'a, REG, const O: u8> TMR1_BK1_CMP_GMUX_W<'a, REG, O>
+pub type TMR1_BK1_CMP_GMUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR1_BK1_CMP_GMUX_A>;
+impl<'a, REG> TMR1_BK1_CMP_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -146,9 +145,8 @@ impl TMR1_CH1_CMP_GMUX_R {
     }
 }
 #[doc = "Field `TMR1_CH1_CMP_GMUX` writer - TMR1 CH1 CMP muxing"]
-pub type TMR1_CH1_CMP_GMUX_W<'a, REG, const O: u8> =
-    crate::FieldWriterSafe<'a, REG, 2, O, TMR1_CH1_CMP_GMUX_A>;
-impl<'a, REG, const O: u8> TMR1_CH1_CMP_GMUX_W<'a, REG, O>
+pub type TMR1_CH1_CMP_GMUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR1_CH1_CMP_GMUX_A>;
+impl<'a, REG> TMR1_CH1_CMP_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -232,9 +230,8 @@ impl TMR2_CH4_CMP_GMUX_R {
     }
 }
 #[doc = "Field `TMR2_CH4_CMP_GMUX` writer - TMR2 CH4 CMP muxing"]
-pub type TMR2_CH4_CMP_GMUX_W<'a, REG, const O: u8> =
-    crate::FieldWriterSafe<'a, REG, 2, O, TMR2_CH4_CMP_GMUX_A>;
-impl<'a, REG, const O: u8> TMR2_CH4_CMP_GMUX_W<'a, REG, O>
+pub type TMR2_CH4_CMP_GMUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR2_CH4_CMP_GMUX_A>;
+impl<'a, REG> TMR2_CH4_CMP_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -318,9 +315,8 @@ impl TMR3_CH1_CMP_GMUX_R {
     }
 }
 #[doc = "Field `TMR3_CH1_CMP_GMUX` writer - TMR3 CH1 CMP muxing"]
-pub type TMR3_CH1_CMP_GMUX_W<'a, REG, const O: u8> =
-    crate::FieldWriterSafe<'a, REG, 2, O, TMR3_CH1_CMP_GMUX_A>;
-impl<'a, REG, const O: u8> TMR3_CH1_CMP_GMUX_W<'a, REG, O>
+pub type TMR3_CH1_CMP_GMUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR3_CH1_CMP_GMUX_A>;
+impl<'a, REG> TMR3_CH1_CMP_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -399,26 +395,26 @@ impl W {
     #[doc = "Bits 0:1 - TMR1 BK1 CMP muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr1_bk1_cmp_gmux(&mut self) -> TMR1_BK1_CMP_GMUX_W<REMAP8_SPEC, 0> {
-        TMR1_BK1_CMP_GMUX_W::new(self)
+    pub fn tmr1_bk1_cmp_gmux(&mut self) -> TMR1_BK1_CMP_GMUX_W<REMAP8_SPEC> {
+        TMR1_BK1_CMP_GMUX_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - TMR1 CH1 CMP muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr1_ch1_cmp_gmux(&mut self) -> TMR1_CH1_CMP_GMUX_W<REMAP8_SPEC, 2> {
-        TMR1_CH1_CMP_GMUX_W::new(self)
+    pub fn tmr1_ch1_cmp_gmux(&mut self) -> TMR1_CH1_CMP_GMUX_W<REMAP8_SPEC> {
+        TMR1_CH1_CMP_GMUX_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - TMR2 CH4 CMP muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr2_ch4_cmp_gmux(&mut self) -> TMR2_CH4_CMP_GMUX_W<REMAP8_SPEC, 4> {
-        TMR2_CH4_CMP_GMUX_W::new(self)
+    pub fn tmr2_ch4_cmp_gmux(&mut self) -> TMR2_CH4_CMP_GMUX_W<REMAP8_SPEC> {
+        TMR2_CH4_CMP_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - TMR3 CH1 CMP muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr3_ch1_cmp_gmux(&mut self) -> TMR3_CH1_CMP_GMUX_W<REMAP8_SPEC, 6> {
-        TMR3_CH1_CMP_GMUX_W::new(self)
+    pub fn tmr3_ch1_cmp_gmux(&mut self) -> TMR3_CH1_CMP_GMUX_W<REMAP8_SPEC> {
+        TMR3_CH1_CMP_GMUX_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

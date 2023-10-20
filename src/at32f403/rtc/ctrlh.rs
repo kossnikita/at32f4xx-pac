@@ -5,15 +5,15 @@ pub type W = crate::W<CTRLH_SPEC>;
 #[doc = "Field `OVFIEN` reader - Overflow interrupt enable"]
 pub type OVFIEN_R = crate::BitReader;
 #[doc = "Field `OVFIEN` writer - Overflow interrupt enable"]
-pub type OVFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVFIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAIEN` reader - Time alarm interrupt enable"]
 pub type TAIEN_R = crate::BitReader;
 #[doc = "Field `TAIEN` writer - Time alarm interrupt enable"]
-pub type TAIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TAIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSIEN` reader - Time second interrupt enable"]
 pub type TSIEN_R = crate::BitReader;
 #[doc = "Field `TSIEN` writer - Time second interrupt enable"]
-pub type TSIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfien(&mut self) -> OVFIEN_W<CTRLH_SPEC, 0> {
-        OVFIEN_W::new(self)
+    pub fn ovfien(&mut self) -> OVFIEN_W<CTRLH_SPEC> {
+        OVFIEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Time alarm interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn taien(&mut self) -> TAIEN_W<CTRLH_SPEC, 1> {
-        TAIEN_W::new(self)
+    pub fn taien(&mut self) -> TAIEN_W<CTRLH_SPEC> {
+        TAIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Time second interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tsien(&mut self) -> TSIEN_W<CTRLH_SPEC, 2> {
-        TSIEN_W::new(self)
+    pub fn tsien(&mut self) -> TSIEN_W<CTRLH_SPEC> {
+        TSIEN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

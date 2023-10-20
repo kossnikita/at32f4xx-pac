@@ -5,27 +5,27 @@ pub type W = crate::W<PLLCFG_SPEC>;
 #[doc = "Field `PLL_MS` reader - PLL pre-division"]
 pub type PLL_MS_R = crate::FieldReader;
 #[doc = "Field `PLL_MS` writer - PLL pre-division"]
-pub type PLL_MS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PLL_MS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PLL_NS` reader - PLL frequency multiplication factor"]
 pub type PLL_NS_R = crate::FieldReader<u16>;
 #[doc = "Field `PLL_NS` writer - PLL frequency multiplication factor"]
-pub type PLL_NS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type PLL_NS_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `PLL_FP` reader - PLLP post-division"]
 pub type PLL_FP_R = crate::FieldReader;
 #[doc = "Field `PLL_FP` writer - PLLP post-division"]
-pub type PLL_FP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PLL_FP_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PLL_FU` reader - PLLU post-division"]
 pub type PLL_FU_R = crate::FieldReader;
 #[doc = "Field `PLL_FU` writer - PLLU post-division"]
-pub type PLL_FU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PLL_FU_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PLLU_EN` reader - PLLU enable"]
 pub type PLLU_EN_R = crate::BitReader;
 #[doc = "Field `PLLU_EN` writer - PLLU enable"]
-pub type PLLU_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLU_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLRCS` reader - PLL reference clock select"]
 pub type PLLRCS_R = crate::BitReader;
 #[doc = "Field `PLLRCS` writer - PLL reference clock select"]
-pub type PLLRCS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLRCS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - PLL pre-division"]
     #[inline(always)]
@@ -79,38 +79,38 @@ impl W {
     #[doc = "Bits 0:3 - PLL pre-division"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_ms(&mut self) -> PLL_MS_W<PLLCFG_SPEC, 0> {
-        PLL_MS_W::new(self)
+    pub fn pll_ms(&mut self) -> PLL_MS_W<PLLCFG_SPEC> {
+        PLL_MS_W::new(self, 0)
     }
     #[doc = "Bits 6:14 - PLL frequency multiplication factor"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_ns(&mut self) -> PLL_NS_W<PLLCFG_SPEC, 6> {
-        PLL_NS_W::new(self)
+    pub fn pll_ns(&mut self) -> PLL_NS_W<PLLCFG_SPEC> {
+        PLL_NS_W::new(self, 6)
     }
     #[doc = "Bits 16:19 - PLLP post-division"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_fp(&mut self) -> PLL_FP_W<PLLCFG_SPEC, 16> {
-        PLL_FP_W::new(self)
+    pub fn pll_fp(&mut self) -> PLL_FP_W<PLLCFG_SPEC> {
+        PLL_FP_W::new(self, 16)
     }
     #[doc = "Bits 20:22 - PLLU post-division"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_fu(&mut self) -> PLL_FU_W<PLLCFG_SPEC, 20> {
-        PLL_FU_W::new(self)
+    pub fn pll_fu(&mut self) -> PLL_FU_W<PLLCFG_SPEC> {
+        PLL_FU_W::new(self, 20)
     }
     #[doc = "Bit 29 - PLLU enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pllu_en(&mut self) -> PLLU_EN_W<PLLCFG_SPEC, 29> {
-        PLLU_EN_W::new(self)
+    pub fn pllu_en(&mut self) -> PLLU_EN_W<PLLCFG_SPEC> {
+        PLLU_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - PLL reference clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn pllrcs(&mut self) -> PLLRCS_W<PLLCFG_SPEC, 30> {
-        PLLRCS_W::new(self)
+    pub fn pllrcs(&mut self) -> PLLRCS_W<PLLCFG_SPEC> {
+        PLLRCS_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

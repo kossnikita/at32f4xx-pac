@@ -39,8 +39,8 @@ impl TSEDG_R {
     }
 }
 #[doc = "Field `TSEDG` writer - Timestamp trigger edge"]
-pub type TSEDG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TSEDG_A>;
-impl<'a, REG, const O: u8> TSEDG_W<'a, REG, O>
+pub type TSEDG_W<'a, REG> = crate::BitWriter<'a, REG, TSEDG_A>;
+impl<'a, REG> TSEDG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -106,8 +106,8 @@ impl From<RCDENW_AW> for bool {
     }
 }
 #[doc = "Field `RCDEN` writer - Reference clock detection enable"]
-pub type RCDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RCDENW_AW>;
-impl<'a, REG, const O: u8> RCDEN_W<'a, REG, O>
+pub type RCDEN_W<'a, REG> = crate::BitWriter<'a, REG, RCDENW_AW>;
+impl<'a, REG> RCDEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -173,8 +173,8 @@ impl From<DRENW_AW> for bool {
     }
 }
 #[doc = "Field `DREN` writer - Date/time register direct read enable"]
-pub type DREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DRENW_AW>;
-impl<'a, REG, const O: u8> DREN_W<'a, REG, O>
+pub type DREN_W<'a, REG> = crate::BitWriter<'a, REG, DRENW_AW>;
+impl<'a, REG> DREN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -226,8 +226,8 @@ impl HM_R {
     }
 }
 #[doc = "Field `HM` writer - Hour mode"]
-pub type HM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HM_A>;
-impl<'a, REG, const O: u8> HM_W<'a, REG, O>
+pub type HM_W<'a, REG> = crate::BitWriter<'a, REG, HM_A>;
+impl<'a, REG> HM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -293,8 +293,8 @@ impl From<ALAENW_AW> for bool {
     }
 }
 #[doc = "Field `ALAEN` writer - Alarm A enable"]
-pub type ALAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALAENW_AW>;
-impl<'a, REG, const O: u8> ALAEN_W<'a, REG, O>
+pub type ALAEN_W<'a, REG> = crate::BitWriter<'a, REG, ALAENW_AW>;
+impl<'a, REG> ALAEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -360,8 +360,8 @@ impl From<TSENW_AW> for bool {
     }
 }
 #[doc = "Field `TSEN` writer - Timestamp enable"]
-pub type TSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TSENW_AW>;
-impl<'a, REG, const O: u8> TSEN_W<'a, REG, O>
+pub type TSEN_W<'a, REG> = crate::BitWriter<'a, REG, TSENW_AW>;
+impl<'a, REG> TSEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -427,8 +427,8 @@ impl From<ALAIENW_AW> for bool {
     }
 }
 #[doc = "Field `ALAIEN` writer - Alarm A interrupt enable"]
-pub type ALAIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ALAIENW_AW>;
-impl<'a, REG, const O: u8> ALAIEN_W<'a, REG, O>
+pub type ALAIEN_W<'a, REG> = crate::BitWriter<'a, REG, ALAIENW_AW>;
+impl<'a, REG> ALAIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -494,8 +494,8 @@ impl From<TSIENW_AW> for bool {
     }
 }
 #[doc = "Field `TSIEN` writer - Timestamp interrupt enable"]
-pub type TSIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TSIENW_AW>;
-impl<'a, REG, const O: u8> TSIEN_W<'a, REG, O>
+pub type TSIEN_W<'a, REG> = crate::BitWriter<'a, REG, TSIENW_AW>;
+impl<'a, REG> TSIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -540,8 +540,8 @@ impl ADD1H_R {
     }
 }
 #[doc = "Field `ADD1H` writer - Add 1 hour"]
-pub type ADD1H_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, ADD1HW_A>;
-impl<'a, REG, const O: u8> ADD1H_W<'a, REG, O>
+pub type ADD1H_W<'a, REG> = crate::BitWriter1S<'a, REG, ADD1HW_A>;
+impl<'a, REG> ADD1H_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -581,8 +581,8 @@ impl DEC1H_R {
     }
 }
 #[doc = "Field `DEC1H` writer - Decrease 1 hour"]
-pub type DEC1H_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, DEC1HW_A>;
-impl<'a, REG, const O: u8> DEC1H_W<'a, REG, O>
+pub type DEC1H_W<'a, REG> = crate::BitWriter1S<'a, REG, DEC1HW_A>;
+impl<'a, REG> DEC1H_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -595,7 +595,7 @@ where
 #[doc = "Field `BPR` reader - Battery power domain data register"]
 pub type BPR_R = crate::BitReader;
 #[doc = "Field `BPR` writer - Battery power domain data register"]
-pub type BPR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BPR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CALOSEL` reader - Calibration output selection"]
 pub type CALOSEL_R = crate::BitReader<CALOSEL_A>;
 #[doc = "Calibration output selection\n\nValue on reset: 0"]
@@ -633,8 +633,8 @@ impl CALOSEL_R {
     }
 }
 #[doc = "Field `CALOSEL` writer - Calibration output selection"]
-pub type CALOSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CALOSEL_A>;
-impl<'a, REG, const O: u8> CALOSEL_W<'a, REG, O>
+pub type CALOSEL_W<'a, REG> = crate::BitWriter<'a, REG, CALOSEL_A>;
+impl<'a, REG> CALOSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -686,8 +686,8 @@ impl OUTP_R {
     }
 }
 #[doc = "Field `OUTP` writer - Output polarity"]
-pub type OUTP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OUTP_A>;
-impl<'a, REG, const O: u8> OUTP_W<'a, REG, O>
+pub type OUTP_W<'a, REG> = crate::BitWriter<'a, REG, OUTP_A>;
+impl<'a, REG> OUTP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -752,8 +752,8 @@ impl OUTSEL_R {
     }
 }
 #[doc = "Field `OUTSEL` writer - Output source selection"]
-pub type OUTSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, OUTSEL_A>;
-impl<'a, REG, const O: u8> OUTSEL_W<'a, REG, O>
+pub type OUTSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, OUTSEL_A>;
+impl<'a, REG> OUTSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -825,8 +825,8 @@ impl From<CALOENW_AW> for bool {
     }
 }
 #[doc = "Field `CALOEN` writer - Calibration output enable"]
-pub type CALOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CALOENW_AW>;
-impl<'a, REG, const O: u8> CALOEN_W<'a, REG, O>
+pub type CALOEN_W<'a, REG> = crate::BitWriter<'a, REG, CALOENW_AW>;
+impl<'a, REG> CALOEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -948,92 +948,92 @@ impl W {
     #[doc = "Bit 3 - Timestamp trigger edge"]
     #[inline(always)]
     #[must_use]
-    pub fn tsedg(&mut self) -> TSEDG_W<CTRL_SPEC, 3> {
-        TSEDG_W::new(self)
+    pub fn tsedg(&mut self) -> TSEDG_W<CTRL_SPEC> {
+        TSEDG_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reference clock detection enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rcden(&mut self) -> RCDEN_W<CTRL_SPEC, 4> {
-        RCDEN_W::new(self)
+    pub fn rcden(&mut self) -> RCDEN_W<CTRL_SPEC> {
+        RCDEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Date/time register direct read enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dren(&mut self) -> DREN_W<CTRL_SPEC, 5> {
-        DREN_W::new(self)
+    pub fn dren(&mut self) -> DREN_W<CTRL_SPEC> {
+        DREN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Hour mode"]
     #[inline(always)]
     #[must_use]
-    pub fn hm(&mut self) -> HM_W<CTRL_SPEC, 6> {
-        HM_W::new(self)
+    pub fn hm(&mut self) -> HM_W<CTRL_SPEC> {
+        HM_W::new(self, 6)
     }
     #[doc = "Bit 8 - Alarm A enable"]
     #[inline(always)]
     #[must_use]
-    pub fn alaen(&mut self) -> ALAEN_W<CTRL_SPEC, 8> {
-        ALAEN_W::new(self)
+    pub fn alaen(&mut self) -> ALAEN_W<CTRL_SPEC> {
+        ALAEN_W::new(self, 8)
     }
     #[doc = "Bit 11 - Timestamp enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tsen(&mut self) -> TSEN_W<CTRL_SPEC, 11> {
-        TSEN_W::new(self)
+    pub fn tsen(&mut self) -> TSEN_W<CTRL_SPEC> {
+        TSEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Alarm A interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn alaien(&mut self) -> ALAIEN_W<CTRL_SPEC, 12> {
-        ALAIEN_W::new(self)
+    pub fn alaien(&mut self) -> ALAIEN_W<CTRL_SPEC> {
+        ALAIEN_W::new(self, 12)
     }
     #[doc = "Bit 15 - Timestamp interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tsien(&mut self) -> TSIEN_W<CTRL_SPEC, 15> {
-        TSIEN_W::new(self)
+    pub fn tsien(&mut self) -> TSIEN_W<CTRL_SPEC> {
+        TSIEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Add 1 hour"]
     #[inline(always)]
     #[must_use]
-    pub fn add1h(&mut self) -> ADD1H_W<CTRL_SPEC, 16> {
-        ADD1H_W::new(self)
+    pub fn add1h(&mut self) -> ADD1H_W<CTRL_SPEC> {
+        ADD1H_W::new(self, 16)
     }
     #[doc = "Bit 17 - Decrease 1 hour"]
     #[inline(always)]
     #[must_use]
-    pub fn dec1h(&mut self) -> DEC1H_W<CTRL_SPEC, 17> {
-        DEC1H_W::new(self)
+    pub fn dec1h(&mut self) -> DEC1H_W<CTRL_SPEC> {
+        DEC1H_W::new(self, 17)
     }
     #[doc = "Bit 18 - Battery power domain data register"]
     #[inline(always)]
     #[must_use]
-    pub fn bpr(&mut self) -> BPR_W<CTRL_SPEC, 18> {
-        BPR_W::new(self)
+    pub fn bpr(&mut self) -> BPR_W<CTRL_SPEC> {
+        BPR_W::new(self, 18)
     }
     #[doc = "Bit 19 - Calibration output selection"]
     #[inline(always)]
     #[must_use]
-    pub fn calosel(&mut self) -> CALOSEL_W<CTRL_SPEC, 19> {
-        CALOSEL_W::new(self)
+    pub fn calosel(&mut self) -> CALOSEL_W<CTRL_SPEC> {
+        CALOSEL_W::new(self, 19)
     }
     #[doc = "Bit 20 - Output polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn outp(&mut self) -> OUTP_W<CTRL_SPEC, 20> {
-        OUTP_W::new(self)
+    pub fn outp(&mut self) -> OUTP_W<CTRL_SPEC> {
+        OUTP_W::new(self, 20)
     }
     #[doc = "Bits 21:22 - Output source selection"]
     #[inline(always)]
     #[must_use]
-    pub fn outsel(&mut self) -> OUTSEL_W<CTRL_SPEC, 21> {
-        OUTSEL_W::new(self)
+    pub fn outsel(&mut self) -> OUTSEL_W<CTRL_SPEC> {
+        OUTSEL_W::new(self, 21)
     }
     #[doc = "Bit 23 - Calibration output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn caloen(&mut self) -> CALOEN_W<CTRL_SPEC, 23> {
-        CALOEN_W::new(self)
+    pub fn caloen(&mut self) -> CALOEN_W<CTRL_SPEC> {
+        CALOEN_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

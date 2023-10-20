@@ -5,7 +5,7 @@ pub type W = crate::W<ACTR_SPEC>;
 #[doc = "Field `CSDLY` reader - CS delay"]
 pub type CSDLY_R = crate::FieldReader;
 #[doc = "Field `CSDLY` writer - CS delay"]
-pub type CSDLY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CSDLY_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - CS delay"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:3 - CS delay"]
     #[inline(always)]
     #[must_use]
-    pub fn csdly(&mut self) -> CSDLY_W<ACTR_SPEC, 0> {
-        CSDLY_W::new(self)
+    pub fn csdly(&mut self) -> CSDLY_W<ACTR_SPEC> {
+        CSDLY_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

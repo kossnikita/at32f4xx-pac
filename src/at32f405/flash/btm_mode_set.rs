@@ -1,7 +1,7 @@
 #[doc = "Register `BTM_MODE_SET` writer"]
 pub type W = crate::W<BTM_MODE_SET_SPEC>;
 #[doc = "Field `BTM_MODE_SET` writer - Boot memory mode setting"]
-pub type BTM_MODE_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type BTM_MODE_SET_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl core::fmt::Debug for crate::generic::Reg<BTM_MODE_SET_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -11,8 +11,8 @@ impl W {
     #[doc = "Bits 0:7 - Boot memory mode setting"]
     #[inline(always)]
     #[must_use]
-    pub fn btm_mode_set(&mut self) -> BTM_MODE_SET_W<BTM_MODE_SET_SPEC, 0> {
-        BTM_MODE_SET_W::new(self)
+    pub fn btm_mode_set(&mut self) -> BTM_MODE_SET_W<BTM_MODE_SET_SPEC> {
+        BTM_MODE_SET_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,12 +5,13 @@ pub type W = crate::W<OSQ2_SPEC>;
 #[doc = "Field `OSN[7-12]` reader - Number of %sth conversion in ordinary sequence"]
 pub type OSN_R = crate::FieldReader;
 #[doc = "Field `OSN[7-12]` writer - Number of %sth conversion in ordinary sequence"]
-pub type OSN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type OSN_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
-    #[doc = "Number of [7-12]th conversion in ordinary sequence"]
+    #[doc = "Number of [7-12]th conversion in ordinary sequence\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn osn(&self, n: u8) -> OSN_R {
-        OSN_R::new(((self.bits >> ((n - 7) * 5)) & 0x1f) as u8)
+    pub fn osn(&self, n: u8) -> OSN_R {
+        assert!(n < 6);
+        OSN_R::new(((self.bits >> (n * 5)) & 0x1f) as u8)
     }
     #[doc = "Bits 0:4 - Number of 7th conversion in ordinary sequence"]
     #[inline(always)]
@@ -64,44 +65,45 @@ impl W {
     #[doc = "Number of [7-12]th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn osn<const O: u8>(&mut self) -> OSN_W<OSQ2_SPEC, O> {
-        OSN_W::new(self)
+    pub fn osn(&mut self, n: u8) -> OSN_W<OSQ2_SPEC> {
+        assert!(n < 6);
+        OSN_W::new(self, n * 5)
     }
     #[doc = "Bits 0:4 - Number of 7th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn7(&mut self) -> OSN_W<OSQ2_SPEC, 0> {
-        OSN_W::new(self)
+    pub fn osn7(&mut self) -> OSN_W<OSQ2_SPEC> {
+        OSN_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Number of 8th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn8(&mut self) -> OSN_W<OSQ2_SPEC, 5> {
-        OSN_W::new(self)
+    pub fn osn8(&mut self) -> OSN_W<OSQ2_SPEC> {
+        OSN_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - Number of 9th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn9(&mut self) -> OSN_W<OSQ2_SPEC, 10> {
-        OSN_W::new(self)
+    pub fn osn9(&mut self) -> OSN_W<OSQ2_SPEC> {
+        OSN_W::new(self, 10)
     }
     #[doc = "Bits 15:19 - Number of 10th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn10(&mut self) -> OSN_W<OSQ2_SPEC, 15> {
-        OSN_W::new(self)
+    pub fn osn10(&mut self) -> OSN_W<OSQ2_SPEC> {
+        OSN_W::new(self, 15)
     }
     #[doc = "Bits 20:24 - Number of 11th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn11(&mut self) -> OSN_W<OSQ2_SPEC, 20> {
-        OSN_W::new(self)
+    pub fn osn11(&mut self) -> OSN_W<OSQ2_SPEC> {
+        OSN_W::new(self, 20)
     }
     #[doc = "Bits 25:29 - Number of 12th conversion in ordinary sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn osn12(&mut self) -> OSN_W<OSQ2_SPEC, 25> {
-        OSN_W::new(self)
+    pub fn osn12(&mut self) -> OSN_W<OSQ2_SPEC> {
+        OSN_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

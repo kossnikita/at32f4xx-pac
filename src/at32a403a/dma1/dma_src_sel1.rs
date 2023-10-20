@@ -5,19 +5,19 @@ pub type W = crate::W<DMA_SRC_SEL1_SPEC>;
 #[doc = "Field `CH5_SRC` reader - CH5 SRC select"]
 pub type CH5_SRC_R = crate::FieldReader;
 #[doc = "Field `CH5_SRC` writer - CH5 SRC select"]
-pub type CH5_SRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CH5_SRC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CH6_SRC` reader - CH6 SRC select"]
 pub type CH6_SRC_R = crate::FieldReader;
 #[doc = "Field `CH6_SRC` writer - CH6 SRC select"]
-pub type CH6_SRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CH6_SRC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CH7_SRC` reader - CH7 SRC select"]
 pub type CH7_SRC_R = crate::FieldReader;
 #[doc = "Field `CH7_SRC` writer - CH7 SRC select"]
-pub type CH7_SRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CH7_SRC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DMA_FLEX_EN` reader - DMA FLEX Enable"]
 pub type DMA_FLEX_EN_R = crate::BitReader;
 #[doc = "Field `DMA_FLEX_EN` writer - DMA FLEX Enable"]
-pub type DMA_FLEX_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA_FLEX_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - CH5 SRC select"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:7 - CH5 SRC select"]
     #[inline(always)]
     #[must_use]
-    pub fn ch5_src(&mut self) -> CH5_SRC_W<DMA_SRC_SEL1_SPEC, 0> {
-        CH5_SRC_W::new(self)
+    pub fn ch5_src(&mut self) -> CH5_SRC_W<DMA_SRC_SEL1_SPEC> {
+        CH5_SRC_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - CH6 SRC select"]
     #[inline(always)]
     #[must_use]
-    pub fn ch6_src(&mut self) -> CH6_SRC_W<DMA_SRC_SEL1_SPEC, 8> {
-        CH6_SRC_W::new(self)
+    pub fn ch6_src(&mut self) -> CH6_SRC_W<DMA_SRC_SEL1_SPEC> {
+        CH6_SRC_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - CH7 SRC select"]
     #[inline(always)]
     #[must_use]
-    pub fn ch7_src(&mut self) -> CH7_SRC_W<DMA_SRC_SEL1_SPEC, 16> {
-        CH7_SRC_W::new(self)
+    pub fn ch7_src(&mut self) -> CH7_SRC_W<DMA_SRC_SEL1_SPEC> {
+        CH7_SRC_W::new(self, 16)
     }
     #[doc = "Bit 24 - DMA FLEX Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dma_flex_en(&mut self) -> DMA_FLEX_EN_W<DMA_SRC_SEL1_SPEC, 24> {
-        DMA_FLEX_EN_W::new(self)
+    pub fn dma_flex_en(&mut self) -> DMA_FLEX_EN_W<DMA_SRC_SEL1_SPEC> {
+        DMA_FLEX_EN_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

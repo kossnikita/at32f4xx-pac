@@ -53,8 +53,8 @@ impl From<OVFIENW_AW> for bool {
     }
 }
 #[doc = "Field `OVFIEN` writer - Overflow interrupt enable"]
-pub type OVFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OVFIENW_AW>;
-impl<'a, REG, const O: u8> OVFIEN_W<'a, REG, O>
+pub type OVFIEN_W<'a, REG> = crate::BitWriter<'a, REG, OVFIENW_AW>;
+impl<'a, REG> OVFIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,8 +120,8 @@ impl From<C1IENW_AW> for bool {
     }
 }
 #[doc = "Field `CIEN[1-2]` writer - Channel %s interrupt enable"]
-pub type CIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1IENW_AW>;
-impl<'a, REG, const O: u8> CIEN_W<'a, REG, O>
+pub type CIEN_W<'a, REG> = crate::BitWriter<'a, REG, C1IENW_AW>;
+impl<'a, REG> CIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -139,7 +139,7 @@ where
 #[doc = "Field `TIEN` reader - Trigger interrupt enable"]
 pub type TIEN_R = crate::BitReader;
 #[doc = "Field `TIEN` writer - Trigger interrupt enable"]
-pub type TIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
@@ -147,10 +147,11 @@ impl R {
         OVFIEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Channel [1-2]
-interrupt enable"]
+interrupt enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cien(&self, n: u8) -> CIEN_R {
-        CIEN_R::new(((self.bits >> (n - 1 + 1)) & 1) != 0)
+    pub fn cien(&self, n: u8) -> CIEN_R {
+        assert!(n < 2);
+        CIEN_R::new(((self.bits >> (n + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - Channel 1 interrupt enable"]
     #[inline(always)]
@@ -187,33 +188,34 @@ impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC, 0> {
-        OVFIEN_W::new(self)
+    pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC> {
+        OVFIEN_W::new(self, 0)
     }
     #[doc = "Channel [1-2]
 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cien<const O: u8>(&mut self) -> CIEN_W<IDEN_SPEC, O> {
-        CIEN_W::new(self)
+    pub fn cien(&mut self, n: u8) -> CIEN_W<IDEN_SPEC> {
+        assert!(n < 2);
+        CIEN_W::new(self, n + 1)
     }
     #[doc = "Bit 1 - Channel 1 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c1ien(&mut self) -> CIEN_W<IDEN_SPEC, 1> {
-        CIEN_W::new(self)
+    pub fn c1ien(&mut self) -> CIEN_W<IDEN_SPEC> {
+        CIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 2 interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c2ien(&mut self) -> CIEN_W<IDEN_SPEC, 2> {
-        CIEN_W::new(self)
+    pub fn c2ien(&mut self) -> CIEN_W<IDEN_SPEC> {
+        CIEN_W::new(self, 2)
     }
     #[doc = "Bit 6 - Trigger interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tien(&mut self) -> TIEN_W<IDEN_SPEC, 6> {
-        TIEN_W::new(self)
+    pub fn tien(&mut self) -> TIEN_W<IDEN_SPEC> {
+        TIEN_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

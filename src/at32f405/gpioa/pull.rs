@@ -52,8 +52,8 @@ impl PULL_R {
     }
 }
 #[doc = "Field `PULL[0-15]` writer - GPIOx pin %s pull configuration"]
-pub type PULL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, PULL0_A>;
-impl<'a, REG, const O: u8> PULL_W<'a, REG, O>
+pub type PULL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PULL0_A>;
+impl<'a, REG> PULL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -76,9 +76,10 @@ where
 }
 impl R {
     #[doc = "GPIOx pin [0-15]
-pull configuration"]
+pull configuration\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn pull(&self, n: u8) -> PULL_R {
+    pub fn pull(&self, n: u8) -> PULL_R {
+        assert!(n < 16);
         PULL_R::new(((self.bits >> (n * 2)) & 3) as u8)
     }
     #[doc = "Bits 0:1 - GPIOx pin 0 pull configuration"]
@@ -194,104 +195,105 @@ impl W {
 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn pull<const O: u8>(&mut self) -> PULL_W<PULL_SPEC, O> {
-        PULL_W::new(self)
+    pub fn pull(&mut self, n: u8) -> PULL_W<PULL_SPEC> {
+        assert!(n < 16);
+        PULL_W::new(self, n * 2)
     }
     #[doc = "Bits 0:1 - GPIOx pin 0 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull0(&mut self) -> PULL_W<PULL_SPEC, 0> {
-        PULL_W::new(self)
+    pub fn pull0(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - GPIOx pin 1 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull1(&mut self) -> PULL_W<PULL_SPEC, 2> {
-        PULL_W::new(self)
+    pub fn pull1(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - GPIOx pin 2 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull2(&mut self) -> PULL_W<PULL_SPEC, 4> {
-        PULL_W::new(self)
+    pub fn pull2(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - GPIOx pin 3 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull3(&mut self) -> PULL_W<PULL_SPEC, 6> {
-        PULL_W::new(self)
+    pub fn pull3(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - GPIOx pin 4 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull4(&mut self) -> PULL_W<PULL_SPEC, 8> {
-        PULL_W::new(self)
+    pub fn pull4(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - GPIOx pin 5 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull5(&mut self) -> PULL_W<PULL_SPEC, 10> {
-        PULL_W::new(self)
+    pub fn pull5(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - GPIOx pin 6 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull6(&mut self) -> PULL_W<PULL_SPEC, 12> {
-        PULL_W::new(self)
+    pub fn pull6(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - GPIOx pin 7 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull7(&mut self) -> PULL_W<PULL_SPEC, 14> {
-        PULL_W::new(self)
+    pub fn pull7(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - GPIOx pin 8 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull8(&mut self) -> PULL_W<PULL_SPEC, 16> {
-        PULL_W::new(self)
+    pub fn pull8(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - GPIOx pin 9 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull9(&mut self) -> PULL_W<PULL_SPEC, 18> {
-        PULL_W::new(self)
+    pub fn pull9(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - GPIOx pin 10 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull10(&mut self) -> PULL_W<PULL_SPEC, 20> {
-        PULL_W::new(self)
+    pub fn pull10(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - GPIOx pin 11 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull11(&mut self) -> PULL_W<PULL_SPEC, 22> {
-        PULL_W::new(self)
+    pub fn pull11(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - GPIOx pin 12 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull12(&mut self) -> PULL_W<PULL_SPEC, 24> {
-        PULL_W::new(self)
+    pub fn pull12(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - GPIOx pin 13 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull13(&mut self) -> PULL_W<PULL_SPEC, 26> {
-        PULL_W::new(self)
+    pub fn pull13(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - GPIOx pin 14 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull14(&mut self) -> PULL_W<PULL_SPEC, 28> {
-        PULL_W::new(self)
+    pub fn pull14(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - GPIOx pin 15 pull configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn pull15(&mut self) -> PULL_W<PULL_SPEC, 30> {
-        PULL_W::new(self)
+    pub fn pull15(&mut self) -> PULL_W<PULL_SPEC> {
+        PULL_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,23 +5,23 @@ pub type W = crate::W<REMAP8_SPEC>;
 #[doc = "Field `MII_RMII_SEL_GMUX` reader - MII_RMII select muxing"]
 pub type MII_RMII_SEL_GMUX_R = crate::BitReader;
 #[doc = "Field `MII_RMII_SEL_GMUX` writer - MII_RMII select muxing"]
-pub type MII_RMII_SEL_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MII_RMII_SEL_GMUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PTP_PPS_GMUX` reader - PTP_PPS muxing"]
 pub type PTP_PPS_GMUX_R = crate::BitReader;
 #[doc = "Field `PTP_PPS_GMUX` writer - PTP_PPS muxing"]
-pub type PTP_PPS_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PTP_PPS_GMUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART6_GMUX` reader - USART6 muxing"]
 pub type USART6_GMUX_R = crate::FieldReader;
 #[doc = "Field `USART6_GMUX` writer - USART6 muxing"]
-pub type USART6_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type USART6_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `UART7_GMUX` reader - UART7 muxing"]
 pub type UART7_GMUX_R = crate::FieldReader;
 #[doc = "Field `UART7_GMUX` writer - UART7 muxing"]
-pub type UART7_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type UART7_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `UART8_GMUX` reader - UART8 muxing"]
 pub type UART8_GMUX_R = crate::FieldReader;
 #[doc = "Field `UART8_GMUX` writer - UART8 muxing"]
-pub type UART8_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type UART8_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bit 18 - MII_RMII select muxing"]
     #[inline(always)]
@@ -78,32 +78,32 @@ impl W {
     #[doc = "Bit 18 - MII_RMII select muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn mii_rmii_sel_gmux(&mut self) -> MII_RMII_SEL_GMUX_W<REMAP8_SPEC, 18> {
-        MII_RMII_SEL_GMUX_W::new(self)
+    pub fn mii_rmii_sel_gmux(&mut self) -> MII_RMII_SEL_GMUX_W<REMAP8_SPEC> {
+        MII_RMII_SEL_GMUX_W::new(self, 18)
     }
     #[doc = "Bit 19 - PTP_PPS muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn ptp_pps_gmux(&mut self) -> PTP_PPS_GMUX_W<REMAP8_SPEC, 19> {
-        PTP_PPS_GMUX_W::new(self)
+    pub fn ptp_pps_gmux(&mut self) -> PTP_PPS_GMUX_W<REMAP8_SPEC> {
+        PTP_PPS_GMUX_W::new(self, 19)
     }
     #[doc = "Bits 20:23 - USART6 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn usart6_gmux(&mut self) -> USART6_GMUX_W<REMAP8_SPEC, 20> {
-        USART6_GMUX_W::new(self)
+    pub fn usart6_gmux(&mut self) -> USART6_GMUX_W<REMAP8_SPEC> {
+        USART6_GMUX_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - UART7 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn uart7_gmux(&mut self) -> UART7_GMUX_W<REMAP8_SPEC, 24> {
-        UART7_GMUX_W::new(self)
+    pub fn uart7_gmux(&mut self) -> UART7_GMUX_W<REMAP8_SPEC> {
+        UART7_GMUX_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - UART8 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn uart8_gmux(&mut self) -> UART8_GMUX_W<REMAP8_SPEC, 28> {
-        UART8_GMUX_W::new(self)
+    pub fn uart8_gmux(&mut self) -> UART8_GMUX_W<REMAP8_SPEC> {
+        UART8_GMUX_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

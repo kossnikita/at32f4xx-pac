@@ -5,7 +5,7 @@ pub type W = crate::W<REV_SPEC>;
 #[doc = "Field `REVISION` reader - Revision number"]
 pub type REVISION_R = crate::FieldReader<u32>;
 #[doc = "Field `REVISION` writer - Revision number"]
-pub type REVISION_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 31, O, u32>;
+pub type REVISION_W<'a, REG> = crate::FieldWriter<'a, REG, 31, u32>;
 impl R {
     #[doc = "Bits 0:30 - Revision number"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:30 - Revision number"]
     #[inline(always)]
     #[must_use]
-    pub fn revision(&mut self) -> REVISION_W<REV_SPEC, 0> {
-        REVISION_W::new(self)
+    pub fn revision(&mut self) -> REVISION_W<REV_SPEC> {
+        REVISION_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

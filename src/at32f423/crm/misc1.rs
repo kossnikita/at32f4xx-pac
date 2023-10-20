@@ -5,31 +5,31 @@ pub type W = crate::W<MISC1_SPEC>;
 #[doc = "Field `HICKCAL_KEY` reader - HICKCAL write key value"]
 pub type HICKCAL_KEY_R = crate::FieldReader;
 #[doc = "Field `HICKCAL_KEY` writer - HICKCAL write key value"]
-pub type HICKCAL_KEY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HICKCAL_KEY_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `HICKDIV` reader - HICK 6 divider selection"]
 pub type HICKDIV_R = crate::BitReader;
 #[doc = "Field `HICKDIV` writer - HICK 6 divider selection"]
-pub type HICKDIV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICKDIV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HICK_TO_USB` reader - HICK to usb clock"]
 pub type HICK_TO_USB_R = crate::BitReader;
 #[doc = "Field `HICK_TO_USB` writer - HICK to usb clock"]
-pub type HICK_TO_USB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICK_TO_USB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HICK_TO_SCLK` reader - HICK to system clock"]
 pub type HICK_TO_SCLK_R = crate::BitReader;
 #[doc = "Field `HICK_TO_SCLK` writer - HICK to system clock"]
-pub type HICK_TO_SCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICK_TO_SCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLCLK_TO_ADC` reader - ADC clock source select"]
 pub type PLLCLK_TO_ADC_R = crate::BitReader;
 #[doc = "Field `PLLCLK_TO_ADC` writer - ADC clock source select"]
-pub type PLLCLK_TO_ADC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLCLK_TO_ADC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLKOUT_SEL2` reader - Clock output select2"]
 pub type CLKOUT_SEL2_R = crate::FieldReader;
 #[doc = "Field `CLKOUT_SEL2` writer - Clock output select2"]
-pub type CLKOUT_SEL2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CLKOUT_SEL2_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CLKOUTDIV2` reader - Clock output division2"]
 pub type CLKOUTDIV2_R = crate::FieldReader;
 #[doc = "Field `CLKOUTDIV2` writer - Clock output division2"]
-pub type CLKOUTDIV2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CLKOUTDIV2_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:7 - HICKCAL write key value"]
     #[inline(always)]
@@ -101,44 +101,44 @@ impl W {
     #[doc = "Bits 0:7 - HICKCAL write key value"]
     #[inline(always)]
     #[must_use]
-    pub fn hickcal_key(&mut self) -> HICKCAL_KEY_W<MISC1_SPEC, 0> {
-        HICKCAL_KEY_W::new(self)
+    pub fn hickcal_key(&mut self) -> HICKCAL_KEY_W<MISC1_SPEC> {
+        HICKCAL_KEY_W::new(self, 0)
     }
     #[doc = "Bit 12 - HICK 6 divider selection"]
     #[inline(always)]
     #[must_use]
-    pub fn hickdiv(&mut self) -> HICKDIV_W<MISC1_SPEC, 12> {
-        HICKDIV_W::new(self)
+    pub fn hickdiv(&mut self) -> HICKDIV_W<MISC1_SPEC> {
+        HICKDIV_W::new(self, 12)
     }
     #[doc = "Bit 13 - HICK to usb clock"]
     #[inline(always)]
     #[must_use]
-    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<MISC1_SPEC, 13> {
-        HICK_TO_USB_W::new(self)
+    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<MISC1_SPEC> {
+        HICK_TO_USB_W::new(self, 13)
     }
     #[doc = "Bit 14 - HICK to system clock"]
     #[inline(always)]
     #[must_use]
-    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<MISC1_SPEC, 14> {
-        HICK_TO_SCLK_W::new(self)
+    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<MISC1_SPEC> {
+        HICK_TO_SCLK_W::new(self, 14)
     }
     #[doc = "Bit 15 - ADC clock source select"]
     #[inline(always)]
     #[must_use]
-    pub fn pllclk_to_adc(&mut self) -> PLLCLK_TO_ADC_W<MISC1_SPEC, 15> {
-        PLLCLK_TO_ADC_W::new(self)
+    pub fn pllclk_to_adc(&mut self) -> PLLCLK_TO_ADC_W<MISC1_SPEC> {
+        PLLCLK_TO_ADC_W::new(self, 15)
     }
     #[doc = "Bits 16:19 - Clock output select2"]
     #[inline(always)]
     #[must_use]
-    pub fn clkout_sel2(&mut self) -> CLKOUT_SEL2_W<MISC1_SPEC, 16> {
-        CLKOUT_SEL2_W::new(self)
+    pub fn clkout_sel2(&mut self) -> CLKOUT_SEL2_W<MISC1_SPEC> {
+        CLKOUT_SEL2_W::new(self, 16)
     }
     #[doc = "Bits 28:31 - Clock output division2"]
     #[inline(always)]
     #[must_use]
-    pub fn clkoutdiv2(&mut self) -> CLKOUTDIV2_W<MISC1_SPEC, 28> {
-        CLKOUTDIV2_W::new(self)
+    pub fn clkoutdiv2(&mut self) -> CLKOUTDIV2_W<MISC1_SPEC> {
+        CLKOUTDIV2_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

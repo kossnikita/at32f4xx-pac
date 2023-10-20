@@ -5,19 +5,19 @@ pub type W = crate::W<BK2TMGSP_SPEC>;
 #[doc = "Field `SPST` reader - special memory setup time"]
 pub type SPST_R = crate::FieldReader;
 #[doc = "Field `SPST` writer - special memory setup time"]
-pub type SPST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SPST_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SPWT` reader - special memory wait time"]
 pub type SPWT_R = crate::FieldReader;
 #[doc = "Field `SPWT` writer - special memory wait time"]
-pub type SPWT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SPWT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SPHT` reader - special memory hold time"]
 pub type SPHT_R = crate::FieldReader;
 #[doc = "Field `SPHT` writer - special memory hold time"]
-pub type SPHT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SPHT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SPDHIZT` reader - special memory databus High resistance time"]
 pub type SPDHIZT_R = crate::FieldReader;
 #[doc = "Field `SPDHIZT` writer - special memory databus High resistance time"]
-pub type SPDHIZT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type SPDHIZT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - special memory setup time"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:7 - special memory setup time"]
     #[inline(always)]
     #[must_use]
-    pub fn spst(&mut self) -> SPST_W<BK2TMGSP_SPEC, 0> {
-        SPST_W::new(self)
+    pub fn spst(&mut self) -> SPST_W<BK2TMGSP_SPEC> {
+        SPST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - special memory wait time"]
     #[inline(always)]
     #[must_use]
-    pub fn spwt(&mut self) -> SPWT_W<BK2TMGSP_SPEC, 8> {
-        SPWT_W::new(self)
+    pub fn spwt(&mut self) -> SPWT_W<BK2TMGSP_SPEC> {
+        SPWT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - special memory hold time"]
     #[inline(always)]
     #[must_use]
-    pub fn spht(&mut self) -> SPHT_W<BK2TMGSP_SPEC, 16> {
-        SPHT_W::new(self)
+    pub fn spht(&mut self) -> SPHT_W<BK2TMGSP_SPEC> {
+        SPHT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - special memory databus High resistance time"]
     #[inline(always)]
     #[must_use]
-    pub fn spdhizt(&mut self) -> SPDHIZT_W<BK2TMGSP_SPEC, 24> {
-        SPDHIZT_W::new(self)
+    pub fn spdhizt(&mut self) -> SPDHIZT_W<BK2TMGSP_SPEC> {
+        SPDHIZT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

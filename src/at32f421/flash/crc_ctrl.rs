@@ -5,9 +5,9 @@ pub type W = crate::W<CRC_CTRL_SPEC>;
 #[doc = "Field `CRC_SN` reader - CRC sector numbler"]
 pub type CRC_SN_R = crate::FieldReader<u16>;
 #[doc = "Field `CRC_SN` writer - CRC sector numbler"]
-pub type CRC_SN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CRC_SN_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `CRC_STRT` writer - CRC start"]
-pub type CRC_STRT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRC_STRT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - CRC sector numbler"]
     #[inline(always)]
@@ -31,14 +31,14 @@ impl W {
     #[doc = "Bits 0:15 - CRC sector numbler"]
     #[inline(always)]
     #[must_use]
-    pub fn crc_sn(&mut self) -> CRC_SN_W<CRC_CTRL_SPEC, 0> {
-        CRC_SN_W::new(self)
+    pub fn crc_sn(&mut self) -> CRC_SN_W<CRC_CTRL_SPEC> {
+        CRC_SN_W::new(self, 0)
     }
     #[doc = "Bit 16 - CRC start"]
     #[inline(always)]
     #[must_use]
-    pub fn crc_strt(&mut self) -> CRC_STRT_W<CRC_CTRL_SPEC, 16> {
-        CRC_STRT_W::new(self)
+    pub fn crc_strt(&mut self) -> CRC_STRT_W<CRC_CTRL_SPEC> {
+        CRC_STRT_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

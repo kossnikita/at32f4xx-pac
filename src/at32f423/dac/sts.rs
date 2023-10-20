@@ -5,11 +5,11 @@ pub type W = crate::W<STS_SPEC>;
 #[doc = "Field `D1DMAUDRF` reader - DAC1 DMA underrun flag"]
 pub type D1DMAUDRF_R = crate::BitReader;
 #[doc = "Field `D1DMAUDRF` writer - DAC1 DMA underrun flag"]
-pub type D1DMAUDRF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D1DMAUDRF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D2DMAUDRF` reader - DAC2 DMA underrun flag"]
 pub type D2DMAUDRF_R = crate::BitReader;
 #[doc = "Field `D2DMAUDRF` writer - DAC2 DMA underrun flag"]
-pub type D2DMAUDRF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D2DMAUDRF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 13 - DAC1 DMA underrun flag"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bit 13 - DAC1 DMA underrun flag"]
     #[inline(always)]
     #[must_use]
-    pub fn d1dmaudrf(&mut self) -> D1DMAUDRF_W<STS_SPEC, 13> {
-        D1DMAUDRF_W::new(self)
+    pub fn d1dmaudrf(&mut self) -> D1DMAUDRF_W<STS_SPEC> {
+        D1DMAUDRF_W::new(self, 13)
     }
     #[doc = "Bit 29 - DAC2 DMA underrun flag"]
     #[inline(always)]
     #[must_use]
-    pub fn d2dmaudrf(&mut self) -> D2DMAUDRF_W<STS_SPEC, 29> {
-        D2DMAUDRF_W::new(self)
+    pub fn d2dmaudrf(&mut self) -> D2DMAUDRF_W<STS_SPEC> {
+        D2DMAUDRF_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

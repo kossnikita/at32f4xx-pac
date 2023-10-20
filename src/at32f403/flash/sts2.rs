@@ -7,15 +7,15 @@ pub type OBF_R = crate::BitReader;
 #[doc = "Field `PRGMERR` reader - program error"]
 pub type PRGMERR_R = crate::BitReader;
 #[doc = "Field `PRGMERR` writer - program error"]
-pub type PRGMERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PRGMERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPPERR` reader - Erase/program protection error"]
 pub type EPPERR_R = crate::BitReader;
 #[doc = "Field `EPPERR` writer - Erase/program protection error"]
-pub type EPPERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPPERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ODF` reader - Operate done flag"]
 pub type ODF_R = crate::BitReader;
 #[doc = "Field `ODF` writer - Operate done flag"]
-pub type ODF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ODF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Operate busy flag"]
     #[inline(always)]
@@ -57,20 +57,20 @@ impl W {
     #[doc = "Bit 2 - program error"]
     #[inline(always)]
     #[must_use]
-    pub fn prgmerr(&mut self) -> PRGMERR_W<STS2_SPEC, 2> {
-        PRGMERR_W::new(self)
+    pub fn prgmerr(&mut self) -> PRGMERR_W<STS2_SPEC> {
+        PRGMERR_W::new(self, 2)
     }
     #[doc = "Bit 4 - Erase/program protection error"]
     #[inline(always)]
     #[must_use]
-    pub fn epperr(&mut self) -> EPPERR_W<STS2_SPEC, 4> {
-        EPPERR_W::new(self)
+    pub fn epperr(&mut self) -> EPPERR_W<STS2_SPEC> {
+        EPPERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Operate done flag"]
     #[inline(always)]
     #[must_use]
-    pub fn odf(&mut self) -> ODF_W<STS2_SPEC, 5> {
-        ODF_W::new(self)
+    pub fn odf(&mut self) -> ODF_W<STS2_SPEC> {
+        ODF_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

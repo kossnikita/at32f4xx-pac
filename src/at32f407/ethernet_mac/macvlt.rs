@@ -5,11 +5,11 @@ pub type W = crate::W<MACVLT_SPEC>;
 #[doc = "Field `VTI` reader - VLAN tag identifier (for receive frames)"]
 pub type VTI_R = crate::FieldReader<u16>;
 #[doc = "Field `VTI` writer - VLAN tag identifier (for receive frames)"]
-pub type VTI_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type VTI_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `ETV` reader - Enable 12-bit VLAN tag comparison"]
 pub type ETV_R = crate::BitReader;
 #[doc = "Field `ETV` writer - Enable 12-bit VLAN tag comparison"]
-pub type ETV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - VLAN tag identifier (for receive frames)"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:15 - VLAN tag identifier (for receive frames)"]
     #[inline(always)]
     #[must_use]
-    pub fn vti(&mut self) -> VTI_W<MACVLT_SPEC, 0> {
-        VTI_W::new(self)
+    pub fn vti(&mut self) -> VTI_W<MACVLT_SPEC> {
+        VTI_W::new(self, 0)
     }
     #[doc = "Bit 16 - Enable 12-bit VLAN tag comparison"]
     #[inline(always)]
     #[must_use]
-    pub fn etv(&mut self) -> ETV_W<MACVLT_SPEC, 16> {
-        ETV_W::new(self)
+    pub fn etv(&mut self) -> ETV_W<MACVLT_SPEC> {
+        ETV_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

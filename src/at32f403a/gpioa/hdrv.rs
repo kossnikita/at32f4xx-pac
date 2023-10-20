@@ -39,8 +39,8 @@ impl HDRV_R {
     }
 }
 #[doc = "Field `HDRV[0-15]` writer - Port hdrv bit %s"]
-pub type HDRV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HDRV0_A>;
-impl<'a, REG, const O: u8> HDRV_W<'a, REG, O>
+pub type HDRV_W<'a, REG> = crate::BitWriter<'a, REG, HDRV0_A>;
+impl<'a, REG> HDRV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -56,9 +56,10 @@ where
     }
 }
 impl R {
-    #[doc = "Port hdrv bit [0-15]"]
+    #[doc = "Port hdrv bit [0-15]\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn hdrv(&self, n: u8) -> HDRV_R {
+    pub fn hdrv(&self, n: u8) -> HDRV_R {
+        assert!(n < 16);
         HDRV_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - Port hdrv bit 0"]
@@ -173,104 +174,105 @@ impl W {
     #[doc = "Port hdrv bit [0-15]"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn hdrv<const O: u8>(&mut self) -> HDRV_W<HDRV_SPEC, O> {
-        HDRV_W::new(self)
+    pub fn hdrv(&mut self, n: u8) -> HDRV_W<HDRV_SPEC> {
+        assert!(n < 16);
+        HDRV_W::new(self, n)
     }
     #[doc = "Bit 0 - Port hdrv bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv0(&mut self) -> HDRV_W<HDRV_SPEC, 0> {
-        HDRV_W::new(self)
+    pub fn hdrv0(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 0)
     }
     #[doc = "Bit 1 - Port hdrv bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv1(&mut self) -> HDRV_W<HDRV_SPEC, 1> {
-        HDRV_W::new(self)
+    pub fn hdrv1(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 1)
     }
     #[doc = "Bit 2 - Port hdrv bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv2(&mut self) -> HDRV_W<HDRV_SPEC, 2> {
-        HDRV_W::new(self)
+    pub fn hdrv2(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 2)
     }
     #[doc = "Bit 3 - Port hdrv bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv3(&mut self) -> HDRV_W<HDRV_SPEC, 3> {
-        HDRV_W::new(self)
+    pub fn hdrv3(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 3)
     }
     #[doc = "Bit 4 - Port hdrv bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv4(&mut self) -> HDRV_W<HDRV_SPEC, 4> {
-        HDRV_W::new(self)
+    pub fn hdrv4(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 4)
     }
     #[doc = "Bit 5 - Port hdrv bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv5(&mut self) -> HDRV_W<HDRV_SPEC, 5> {
-        HDRV_W::new(self)
+    pub fn hdrv5(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 5)
     }
     #[doc = "Bit 6 - Port hdrv bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv6(&mut self) -> HDRV_W<HDRV_SPEC, 6> {
-        HDRV_W::new(self)
+    pub fn hdrv6(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 6)
     }
     #[doc = "Bit 7 - Port hdrv bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv7(&mut self) -> HDRV_W<HDRV_SPEC, 7> {
-        HDRV_W::new(self)
+    pub fn hdrv7(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 7)
     }
     #[doc = "Bit 8 - Port hdrv bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv8(&mut self) -> HDRV_W<HDRV_SPEC, 8> {
-        HDRV_W::new(self)
+    pub fn hdrv8(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 8)
     }
     #[doc = "Bit 9 - Port hdrv bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv9(&mut self) -> HDRV_W<HDRV_SPEC, 9> {
-        HDRV_W::new(self)
+    pub fn hdrv9(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 9)
     }
     #[doc = "Bit 10 - Port hdrv bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv10(&mut self) -> HDRV_W<HDRV_SPEC, 10> {
-        HDRV_W::new(self)
+    pub fn hdrv10(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 10)
     }
     #[doc = "Bit 11 - Port hdrv bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv11(&mut self) -> HDRV_W<HDRV_SPEC, 11> {
-        HDRV_W::new(self)
+    pub fn hdrv11(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 11)
     }
     #[doc = "Bit 12 - Port hdrv bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv12(&mut self) -> HDRV_W<HDRV_SPEC, 12> {
-        HDRV_W::new(self)
+    pub fn hdrv12(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 12)
     }
     #[doc = "Bit 13 - Port hdrv bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv13(&mut self) -> HDRV_W<HDRV_SPEC, 13> {
-        HDRV_W::new(self)
+    pub fn hdrv13(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 13)
     }
     #[doc = "Bit 14 - Port hdrv bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv14(&mut self) -> HDRV_W<HDRV_SPEC, 14> {
-        HDRV_W::new(self)
+    pub fn hdrv14(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 14)
     }
     #[doc = "Bit 15 - Port hdrv bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv15(&mut self) -> HDRV_W<HDRV_SPEC, 15> {
-        HDRV_W::new(self)
+    pub fn hdrv15(&mut self) -> HDRV_W<HDRV_SPEC> {
+        HDRV_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

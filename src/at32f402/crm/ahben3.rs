@@ -5,7 +5,7 @@ pub type W = crate::W<AHBEN3_SPEC>;
 #[doc = "Field `QSPI1` reader - QSPI1 clock enable"]
 pub type QSPI1_R = crate::BitReader;
 #[doc = "Field `QSPI1` writer - QSPI1 clock enable"]
-pub type QSPI1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type QSPI1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - QSPI1 clock enable"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 1 - QSPI1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi1(&mut self) -> QSPI1_W<AHBEN3_SPEC, 1> {
-        QSPI1_W::new(self)
+    pub fn qspi1(&mut self) -> QSPI1_W<AHBEN3_SPEC> {
+        QSPI1_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,35 +5,35 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `CLKDIV` reader - SPI clock divider"]
 pub type CLKDIV_R = crate::FieldReader;
 #[doc = "Field `CLKDIV` writer - SPI clock divider"]
-pub type CLKDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CLKDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `SCKMODE` reader - Sckout mode"]
 pub type SCKMODE_R = crate::BitReader;
 #[doc = "Field `SCKMODE` writer - Sckout mode"]
-pub type SCKMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCKMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XIPIDLE` reader - XIP port idle status"]
 pub type XIPIDLE_R = crate::BitReader;
 #[doc = "Field `XIPIDLE` writer - XIP port idle status"]
-pub type XIPIDLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XIPIDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ABORT` reader - Abort instruction"]
 pub type ABORT_R = crate::BitReader;
 #[doc = "Field `ABORT` writer - Abort instruction"]
-pub type ABORT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ABORT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUSY` reader - Busy bit of spi status"]
 pub type BUSY_R = crate::FieldReader;
 #[doc = "Field `BUSY` writer - Busy bit of spi status"]
-pub type BUSY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type BUSY_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `XIPRCMDF` reader - XIP read command flush"]
 pub type XIPRCMDF_R = crate::BitReader;
 #[doc = "Field `XIPRCMDF` writer - XIP read command flush"]
-pub type XIPRCMDF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XIPRCMDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XIPSEL` reader - XIP port selection"]
 pub type XIPSEL_R = crate::BitReader;
 #[doc = "Field `XIPSEL` writer - XIP port selection"]
-pub type XIPSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XIPSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `KEYEN` reader - encryption key enable"]
 pub type KEYEN_R = crate::BitReader;
 #[doc = "Field `KEYEN` writer - encryption key enable"]
-pub type KEYEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type KEYEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - SPI clock divider"]
     #[inline(always)]
@@ -99,50 +99,50 @@ impl W {
     #[doc = "Bits 0:2 - SPI clock divider"]
     #[inline(always)]
     #[must_use]
-    pub fn clkdiv(&mut self) -> CLKDIV_W<CTRL_SPEC, 0> {
-        CLKDIV_W::new(self)
+    pub fn clkdiv(&mut self) -> CLKDIV_W<CTRL_SPEC> {
+        CLKDIV_W::new(self, 0)
     }
     #[doc = "Bit 4 - Sckout mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sckmode(&mut self) -> SCKMODE_W<CTRL_SPEC, 4> {
-        SCKMODE_W::new(self)
+    pub fn sckmode(&mut self) -> SCKMODE_W<CTRL_SPEC> {
+        SCKMODE_W::new(self, 4)
     }
     #[doc = "Bit 7 - XIP port idle status"]
     #[inline(always)]
     #[must_use]
-    pub fn xipidle(&mut self) -> XIPIDLE_W<CTRL_SPEC, 7> {
-        XIPIDLE_W::new(self)
+    pub fn xipidle(&mut self) -> XIPIDLE_W<CTRL_SPEC> {
+        XIPIDLE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Abort instruction"]
     #[inline(always)]
     #[must_use]
-    pub fn abort(&mut self) -> ABORT_W<CTRL_SPEC, 8> {
-        ABORT_W::new(self)
+    pub fn abort(&mut self) -> ABORT_W<CTRL_SPEC> {
+        ABORT_W::new(self, 8)
     }
     #[doc = "Bits 16:18 - Busy bit of spi status"]
     #[inline(always)]
     #[must_use]
-    pub fn busy(&mut self) -> BUSY_W<CTRL_SPEC, 16> {
-        BUSY_W::new(self)
+    pub fn busy(&mut self) -> BUSY_W<CTRL_SPEC> {
+        BUSY_W::new(self, 16)
     }
     #[doc = "Bit 19 - XIP read command flush"]
     #[inline(always)]
     #[must_use]
-    pub fn xiprcmdf(&mut self) -> XIPRCMDF_W<CTRL_SPEC, 19> {
-        XIPRCMDF_W::new(self)
+    pub fn xiprcmdf(&mut self) -> XIPRCMDF_W<CTRL_SPEC> {
+        XIPRCMDF_W::new(self, 19)
     }
     #[doc = "Bit 20 - XIP port selection"]
     #[inline(always)]
     #[must_use]
-    pub fn xipsel(&mut self) -> XIPSEL_W<CTRL_SPEC, 20> {
-        XIPSEL_W::new(self)
+    pub fn xipsel(&mut self) -> XIPSEL_W<CTRL_SPEC> {
+        XIPSEL_W::new(self, 20)
     }
     #[doc = "Bit 21 - encryption key enable"]
     #[inline(always)]
     #[must_use]
-    pub fn keyen(&mut self) -> KEYEN_W<CTRL_SPEC, 21> {
-        KEYEN_W::new(self)
+    pub fn keyen(&mut self) -> KEYEN_W<CTRL_SPEC> {
+        KEYEN_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

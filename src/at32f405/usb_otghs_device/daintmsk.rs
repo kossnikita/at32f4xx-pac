@@ -5,11 +5,11 @@ pub type W = crate::W<DAINTMSK_SPEC>;
 #[doc = "Field `INEPTMSK` reader - IN EP interrupt mask bits"]
 pub type INEPTMSK_R = crate::FieldReader<u16>;
 #[doc = "Field `INEPTMSK` writer - IN EP interrupt mask bits"]
-pub type INEPTMSK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type INEPTMSK_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `OUTEPTMSK` reader - OUT endpoint interrupt bits"]
 pub type OUTEPTMSK_R = crate::FieldReader<u16>;
 #[doc = "Field `OUTEPTMSK` writer - OUT endpoint interrupt bits"]
-pub type OUTEPTMSK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type OUTEPTMSK_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - IN EP interrupt mask bits"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:15 - IN EP interrupt mask bits"]
     #[inline(always)]
     #[must_use]
-    pub fn ineptmsk(&mut self) -> INEPTMSK_W<DAINTMSK_SPEC, 0> {
-        INEPTMSK_W::new(self)
+    pub fn ineptmsk(&mut self) -> INEPTMSK_W<DAINTMSK_SPEC> {
+        INEPTMSK_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - OUT endpoint interrupt bits"]
     #[inline(always)]
     #[must_use]
-    pub fn outeptmsk(&mut self) -> OUTEPTMSK_W<DAINTMSK_SPEC, 16> {
-        OUTEPTMSK_W::new(self)
+    pub fn outeptmsk(&mut self) -> OUTEPTMSK_W<DAINTMSK_SPEC> {
+        OUTEPTMSK_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

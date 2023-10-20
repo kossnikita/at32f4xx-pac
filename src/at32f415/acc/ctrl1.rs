@@ -53,8 +53,8 @@ impl From<CALONW_AW> for bool {
     }
 }
 #[doc = "Field `CALON` writer - Internal high-speed clock calibration ready"]
-pub type CALON_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CALONW_AW>;
-impl<'a, REG, const O: u8> CALON_W<'a, REG, O>
+pub type CALON_W<'a, REG> = crate::BitWriter<'a, REG, CALONW_AW>;
+impl<'a, REG> CALON_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -106,8 +106,8 @@ impl ENTRIM_R {
     }
 }
 #[doc = "Field `ENTRIM` writer - Enable trim"]
-pub type ENTRIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ENTRIM_A>;
-impl<'a, REG, const O: u8> ENTRIM_W<'a, REG, O>
+pub type ENTRIM_W<'a, REG> = crate::BitWriter<'a, REG, ENTRIM_A>;
+impl<'a, REG> ENTRIM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -173,8 +173,8 @@ impl From<EIENW_AW> for bool {
     }
 }
 #[doc = "Field `EIEN` writer - RSLOST error interrupt enable"]
-pub type EIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, EIENW_AW>;
-impl<'a, REG, const O: u8> EIEN_W<'a, REG, O>
+pub type EIEN_W<'a, REG> = crate::BitWriter<'a, REG, EIENW_AW>;
+impl<'a, REG> EIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -240,8 +240,8 @@ impl From<CALRDYIENW_AW> for bool {
     }
 }
 #[doc = "Field `CALRDYIEN` writer - CALRDY interrupt enable"]
-pub type CALRDYIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CALRDYIENW_AW>;
-impl<'a, REG, const O: u8> CALRDYIEN_W<'a, REG, O>
+pub type CALRDYIEN_W<'a, REG> = crate::BitWriter<'a, REG, CALRDYIENW_AW>;
+impl<'a, REG> CALRDYIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -259,7 +259,7 @@ where
 #[doc = "Field `STEP` reader - Calibrated step"]
 pub type STEP_R = crate::FieldReader;
 #[doc = "Field `STEP` writer - Calibrated step"]
-pub type STEP_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type STEP_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 impl R {
     #[doc = "Bit 0 - Internal high-speed clock calibration ready"]
     #[inline(always)]
@@ -307,32 +307,32 @@ impl W {
     #[doc = "Bit 0 - Internal high-speed clock calibration ready"]
     #[inline(always)]
     #[must_use]
-    pub fn calon(&mut self) -> CALON_W<CTRL1_SPEC, 0> {
-        CALON_W::new(self)
+    pub fn calon(&mut self) -> CALON_W<CTRL1_SPEC> {
+        CALON_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable trim"]
     #[inline(always)]
     #[must_use]
-    pub fn entrim(&mut self) -> ENTRIM_W<CTRL1_SPEC, 1> {
-        ENTRIM_W::new(self)
+    pub fn entrim(&mut self) -> ENTRIM_W<CTRL1_SPEC> {
+        ENTRIM_W::new(self, 1)
     }
     #[doc = "Bit 4 - RSLOST error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eien(&mut self) -> EIEN_W<CTRL1_SPEC, 4> {
-        EIEN_W::new(self)
+    pub fn eien(&mut self) -> EIEN_W<CTRL1_SPEC> {
+        EIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - CALRDY interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn calrdyien(&mut self) -> CALRDYIEN_W<CTRL1_SPEC, 5> {
-        CALRDYIEN_W::new(self)
+    pub fn calrdyien(&mut self) -> CALRDYIEN_W<CTRL1_SPEC> {
+        CALRDYIEN_W::new(self, 5)
     }
     #[doc = "Bits 8:11 - Calibrated step"]
     #[inline(always)]
     #[must_use]
-    pub fn step(&mut self) -> STEP_W<CTRL1_SPEC, 8> {
-        STEP_W::new(self)
+    pub fn step(&mut self) -> STEP_W<CTRL1_SPEC> {
+        STEP_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

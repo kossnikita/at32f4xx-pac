@@ -5,11 +5,11 @@ pub type W = crate::W<OTG_EXTCTRL_SPEC>;
 #[doc = "Field `USBDIV_RST` reader - USB divider reset"]
 pub type USBDIV_RST_R = crate::BitReader;
 #[doc = "Field `USBDIV_RST` writer - USB divider reset"]
-pub type USBDIV_RST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USBDIV_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP3_RMPEN` reader - OTGFS end-point 3 remap enable"]
 pub type EP3_RMPEN_R = crate::BitReader;
 #[doc = "Field `EP3_RMPEN` writer - OTGFS end-point 3 remap enable"]
-pub type EP3_RMPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EP3_RMPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - USB divider reset"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bit 30 - USB divider reset"]
     #[inline(always)]
     #[must_use]
-    pub fn usbdiv_rst(&mut self) -> USBDIV_RST_W<OTG_EXTCTRL_SPEC, 30> {
-        USBDIV_RST_W::new(self)
+    pub fn usbdiv_rst(&mut self) -> USBDIV_RST_W<OTG_EXTCTRL_SPEC> {
+        USBDIV_RST_W::new(self, 30)
     }
     #[doc = "Bit 31 - OTGFS end-point 3 remap enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ep3_rmpen(&mut self) -> EP3_RMPEN_W<OTG_EXTCTRL_SPEC, 31> {
-        EP3_RMPEN_W::new(self)
+    pub fn ep3_rmpen(&mut self) -> EP3_RMPEN_W<OTG_EXTCTRL_SPEC> {
+        EP3_RMPEN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

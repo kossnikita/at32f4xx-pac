@@ -68,8 +68,8 @@ impl EXINT_R {
     }
 }
 #[doc = "Field `EXINT[0-3]` writer - Select the input source for EXINT%s external interrupt"]
-pub type EXINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, EXINT0_A>;
-impl<'a, REG, const O: u8> EXINT_W<'a, REG, O>
+pub type EXINT_W<'a, REG> = crate::FieldWriter<'a, REG, 4, EXINT0_A>;
+impl<'a, REG> EXINT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -102,9 +102,10 @@ where
 }
 impl R {
     #[doc = "Select the input source for EXINT[0-3]
-external interrupt"]
+external interrupt\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn exint(&self, n: u8) -> EXINT_R {
+    pub fn exint(&self, n: u8) -> EXINT_R {
+        assert!(n < 4);
         EXINT_R::new(((self.bits >> (n * 4)) & 0x0f) as u8)
     }
     #[doc = "Bits 0:3 - Select the input source for EXINT0 external interrupt"]
@@ -148,32 +149,33 @@ impl W {
 external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn exint<const O: u8>(&mut self) -> EXINT_W<EXINTC1_SPEC, O> {
-        EXINT_W::new(self)
+    pub fn exint(&mut self, n: u8) -> EXINT_W<EXINTC1_SPEC> {
+        assert!(n < 4);
+        EXINT_W::new(self, n * 4)
     }
     #[doc = "Bits 0:3 - Select the input source for EXINT0 external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn exint0(&mut self) -> EXINT_W<EXINTC1_SPEC, 0> {
-        EXINT_W::new(self)
+    pub fn exint0(&mut self) -> EXINT_W<EXINTC1_SPEC> {
+        EXINT_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Select the input source for EXINT1 external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn exint1(&mut self) -> EXINT_W<EXINTC1_SPEC, 4> {
-        EXINT_W::new(self)
+    pub fn exint1(&mut self) -> EXINT_W<EXINTC1_SPEC> {
+        EXINT_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Select the input source for EXINT2 external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn exint2(&mut self) -> EXINT_W<EXINTC1_SPEC, 8> {
-        EXINT_W::new(self)
+    pub fn exint2(&mut self) -> EXINT_W<EXINTC1_SPEC> {
+        EXINT_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - Select the input source for EXINT3 external interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn exint3(&mut self) -> EXINT_W<EXINTC1_SPEC, 12> {
-        EXINT_W::new(self)
+    pub fn exint3(&mut self) -> EXINT_W<EXINTC1_SPEC> {
+        EXINT_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

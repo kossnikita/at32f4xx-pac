@@ -5,19 +5,19 @@ pub type W = crate::W<EXINTC1_SPEC>;
 #[doc = "Field `EXINT0` reader - EXINT 0 configuration bits"]
 pub type EXINT0_R = crate::FieldReader;
 #[doc = "Field `EXINT0` writer - EXINT 0 configuration bits"]
-pub type EXINT0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXINT0_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXINT1` reader - EXINT 1 configuration bits"]
 pub type EXINT1_R = crate::FieldReader;
 #[doc = "Field `EXINT1` writer - EXINT 1 configuration bits"]
-pub type EXINT1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXINT1_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXINT2` reader - EXINT 2 configuration bits"]
 pub type EXINT2_R = crate::FieldReader;
 #[doc = "Field `EXINT2` writer - EXINT 2 configuration bits"]
-pub type EXINT2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXINT2_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXINT3` reader - EXINT 3 configuration bits"]
 pub type EXINT3_R = crate::FieldReader;
 #[doc = "Field `EXINT3` writer - EXINT 3 configuration bits"]
-pub type EXINT3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXINT3_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - EXINT 0 configuration bits"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:3 - EXINT 0 configuration bits"]
     #[inline(always)]
     #[must_use]
-    pub fn exint0(&mut self) -> EXINT0_W<EXINTC1_SPEC, 0> {
-        EXINT0_W::new(self)
+    pub fn exint0(&mut self) -> EXINT0_W<EXINTC1_SPEC> {
+        EXINT0_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - EXINT 1 configuration bits"]
     #[inline(always)]
     #[must_use]
-    pub fn exint1(&mut self) -> EXINT1_W<EXINTC1_SPEC, 4> {
-        EXINT1_W::new(self)
+    pub fn exint1(&mut self) -> EXINT1_W<EXINTC1_SPEC> {
+        EXINT1_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - EXINT 2 configuration bits"]
     #[inline(always)]
     #[must_use]
-    pub fn exint2(&mut self) -> EXINT2_W<EXINTC1_SPEC, 8> {
-        EXINT2_W::new(self)
+    pub fn exint2(&mut self) -> EXINT2_W<EXINTC1_SPEC> {
+        EXINT2_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - EXINT 3 configuration bits"]
     #[inline(always)]
     #[must_use]
-    pub fn exint3(&mut self) -> EXINT3_W<EXINTC1_SPEC, 12> {
-        EXINT3_W::new(self)
+    pub fn exint3(&mut self) -> EXINT3_W<EXINTC1_SPEC> {
+        EXINT3_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -51,8 +51,8 @@ impl From<SRW_AW> for bool {
     }
 }
 #[doc = "Field `SR` writer - Transmit mailbox send request"]
-pub type SR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, SRW_AW>;
-impl<'a, REG, const O: u8> SR_W<'a, REG, O>
+pub type SR_W<'a, REG> = crate::BitWriter1S<'a, REG, SRW_AW>;
+impl<'a, REG> SR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -99,8 +99,8 @@ impl FRSEL_R {
     }
 }
 #[doc = "Field `FRSEL` writer - Transmit mailbox frame type select"]
-pub type FRSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, FRSEL_A>;
-impl<'a, REG, const O: u8> FRSEL_W<'a, REG, O>
+pub type FRSEL_W<'a, REG> = crate::BitWriter<'a, REG, FRSEL_A>;
+impl<'a, REG> FRSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -152,8 +152,8 @@ impl IDSEL_R {
     }
 }
 #[doc = "Field `IDSEL` writer - Transmit mailbox identifier type select"]
-pub type IDSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, IDSEL_A>;
-impl<'a, REG, const O: u8> IDSEL_W<'a, REG, O>
+pub type IDSEL_W<'a, REG> = crate::BitWriter<'a, REG, IDSEL_A>;
+impl<'a, REG> IDSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -171,11 +171,11 @@ where
 #[doc = "Field `EID` reader - Ttransmit mailbox extended identifier"]
 pub type EID_R = crate::FieldReader<u32>;
 #[doc = "Field `EID` writer - Ttransmit mailbox extended identifier"]
-pub type EID_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 18, O, u32>;
+pub type EID_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 18, u32>;
 #[doc = "Field `SID` reader - Transmit mailbox standard identifier or extended identifier high bytes"]
 pub type SID_R = crate::FieldReader<u16>;
 #[doc = "Field `SID` writer - Transmit mailbox standard identifier or extended identifier high bytes"]
-pub type SID_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 11, O, u16>;
+pub type SID_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 11, u16>;
 impl R {
     #[doc = "Bit 0 - Transmit mailbox send request"]
     #[inline(always)]
@@ -223,32 +223,32 @@ impl W {
     #[doc = "Bit 0 - Transmit mailbox send request"]
     #[inline(always)]
     #[must_use]
-    pub fn sr(&mut self) -> SR_W<TMI_SPEC, 0> {
-        SR_W::new(self)
+    pub fn sr(&mut self) -> SR_W<TMI_SPEC> {
+        SR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit mailbox frame type select"]
     #[inline(always)]
     #[must_use]
-    pub fn frsel(&mut self) -> FRSEL_W<TMI_SPEC, 1> {
-        FRSEL_W::new(self)
+    pub fn frsel(&mut self) -> FRSEL_W<TMI_SPEC> {
+        FRSEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transmit mailbox identifier type select"]
     #[inline(always)]
     #[must_use]
-    pub fn idsel(&mut self) -> IDSEL_W<TMI_SPEC, 2> {
-        IDSEL_W::new(self)
+    pub fn idsel(&mut self) -> IDSEL_W<TMI_SPEC> {
+        IDSEL_W::new(self, 2)
     }
     #[doc = "Bits 3:20 - Ttransmit mailbox extended identifier"]
     #[inline(always)]
     #[must_use]
-    pub fn eid(&mut self) -> EID_W<TMI_SPEC, 3> {
-        EID_W::new(self)
+    pub fn eid(&mut self) -> EID_W<TMI_SPEC> {
+        EID_W::new(self, 3)
     }
     #[doc = "Bits 21:31 - Transmit mailbox standard identifier or extended identifier high bytes"]
     #[inline(always)]
     #[must_use]
-    pub fn sid(&mut self) -> SID_W<TMI_SPEC, 21> {
-        SID_W::new(self)
+    pub fn sid(&mut self) -> SID_W<TMI_SPEC> {
+        SID_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

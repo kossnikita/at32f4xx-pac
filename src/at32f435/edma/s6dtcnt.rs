@@ -5,7 +5,7 @@ pub type W = crate::W<S6DTCNT_SPEC>;
 #[doc = "Field `CNT` reader - Number of data items to transfer"]
 pub type CNT_R = crate::FieldReader<u16>;
 #[doc = "Field `CNT` writer - Number of data items to transfer"]
-pub type CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Number of data items to transfer"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:15 - Number of data items to transfer"]
     #[inline(always)]
     #[must_use]
-    pub fn cnt(&mut self) -> CNT_W<S6DTCNT_SPEC, 0> {
-        CNT_W::new(self)
+    pub fn cnt(&mut self) -> CNT_W<S6DTCNT_SPEC> {
+        CNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

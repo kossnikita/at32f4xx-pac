@@ -92,8 +92,8 @@ impl PTOS_R {
     }
 }
 #[doc = "Field `PTOS` writer - Primary TMR output selection"]
-pub type PTOS_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, PTOS_A>;
-impl<'a, REG, const O: u8> PTOS_W<'a, REG, O>
+pub type PTOS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, PTOS_A>;
+impl<'a, REG> PTOS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -162,8 +162,8 @@ impl W {
     #[doc = "Bits 4:6 - Primary TMR output selection"]
     #[inline(always)]
     #[must_use]
-    pub fn ptos(&mut self) -> PTOS_W<CTRL2_SPEC, 4> {
-        PTOS_W::new(self)
+    pub fn ptos(&mut self) -> PTOS_W<CTRL2_SPEC> {
+        PTOS_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

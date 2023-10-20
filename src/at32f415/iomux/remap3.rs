@@ -44,8 +44,8 @@ impl TMR9_GMUX_R {
     }
 }
 #[doc = "Field `TMR9_GMUX` writer - TMR9 muxing"]
-pub type TMR9_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, TMR9_GMUX_A>;
-impl<'a, REG, const O: u8> TMR9_GMUX_W<'a, REG, O>
+pub type TMR9_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4, TMR9_GMUX_A>;
+impl<'a, REG> TMR9_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -103,8 +103,8 @@ impl TMR10_GMUX_R {
     }
 }
 #[doc = "Field `TMR10_GMUX` writer - TMR10 muxing"]
-pub type TMR10_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, TMR10_GMUX_A>;
-impl<'a, REG, const O: u8> TMR10_GMUX_W<'a, REG, O>
+pub type TMR10_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4, TMR10_GMUX_A>;
+impl<'a, REG> TMR10_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -162,8 +162,8 @@ impl TMR11_GMUX_R {
     }
 }
 #[doc = "Field `TMR11_GMUX` writer - TMR11 muxing"]
-pub type TMR11_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, TMR11_GMUX_A>;
-impl<'a, REG, const O: u8> TMR11_GMUX_W<'a, REG, O>
+pub type TMR11_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4, TMR11_GMUX_A>;
+impl<'a, REG> TMR11_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -214,20 +214,20 @@ impl W {
     #[doc = "Bits 0:3 - TMR9 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr9_gmux(&mut self) -> TMR9_GMUX_W<REMAP3_SPEC, 0> {
-        TMR9_GMUX_W::new(self)
+    pub fn tmr9_gmux(&mut self) -> TMR9_GMUX_W<REMAP3_SPEC> {
+        TMR9_GMUX_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - TMR10 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr10_gmux(&mut self) -> TMR10_GMUX_W<REMAP3_SPEC, 4> {
-        TMR10_GMUX_W::new(self)
+    pub fn tmr10_gmux(&mut self) -> TMR10_GMUX_W<REMAP3_SPEC> {
+        TMR10_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - TMR11 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr11_gmux(&mut self) -> TMR11_GMUX_W<REMAP3_SPEC, 8> {
-        TMR11_GMUX_W::new(self)
+    pub fn tmr11_gmux(&mut self) -> TMR11_GMUX_W<REMAP3_SPEC> {
+        TMR11_GMUX_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -1,15 +1,15 @@
 #[doc = "Register `ICLR` writer"]
 pub type W = crate::W<ICLR_SPEC>;
 #[doc = "Field `CFDIC` writer - Capture frame done interrupt clear"]
-pub type CFDIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CFDIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVRIC` writer - Data FIFO overrun interrupt clear"]
-pub type OVRIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVRIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ESEIC` writer - Embedded synchronization error interrupt clear"]
-pub type ESEIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ESEIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VSIC` writer - Vertical synchronization interrupt clear"]
-pub type VSIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VSIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSIC` writer - Horizontal synchronization interrupt clear"]
-pub type HSIC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl core::fmt::Debug for crate::generic::Reg<ICLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -19,32 +19,32 @@ impl W {
     #[doc = "Bit 0 - Capture frame done interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn cfdic(&mut self) -> CFDIC_W<ICLR_SPEC, 0> {
-        CFDIC_W::new(self)
+    pub fn cfdic(&mut self) -> CFDIC_W<ICLR_SPEC> {
+        CFDIC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Data FIFO overrun interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn ovric(&mut self) -> OVRIC_W<ICLR_SPEC, 1> {
-        OVRIC_W::new(self)
+    pub fn ovric(&mut self) -> OVRIC_W<ICLR_SPEC> {
+        OVRIC_W::new(self, 1)
     }
     #[doc = "Bit 2 - Embedded synchronization error interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn eseic(&mut self) -> ESEIC_W<ICLR_SPEC, 2> {
-        ESEIC_W::new(self)
+    pub fn eseic(&mut self) -> ESEIC_W<ICLR_SPEC> {
+        ESEIC_W::new(self, 2)
     }
     #[doc = "Bit 3 - Vertical synchronization interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn vsic(&mut self) -> VSIC_W<ICLR_SPEC, 3> {
-        VSIC_W::new(self)
+    pub fn vsic(&mut self) -> VSIC_W<ICLR_SPEC> {
+        VSIC_W::new(self, 3)
     }
     #[doc = "Bit 4 - Horizontal synchronization interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hsic(&mut self) -> HSIC_W<ICLR_SPEC, 4> {
-        HSIC_W::new(self)
+    pub fn hsic(&mut self) -> HSIC_W<ICLR_SPEC> {
+        HSIC_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

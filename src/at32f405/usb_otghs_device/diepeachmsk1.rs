@@ -5,43 +5,43 @@ pub type W = crate::W<DIEPEACHMSK1_SPEC>;
 #[doc = "Field `XFERCMSK` reader - Transfer completed interrupt mask"]
 pub type XFERCMSK_R = crate::BitReader;
 #[doc = "Field `XFERCMSK` writer - Transfer completed interrupt mask"]
-pub type XFERCMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XFERCMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPTDISMSK` reader - Endpoint disabled interrupt mask"]
 pub type EPTDISMSK_R = crate::BitReader;
 #[doc = "Field `EPTDISMSK` writer - Endpoint disabled interrupt mask"]
-pub type EPTDISMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPTDISMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHBERRMSK` reader - AHB Error mask"]
 pub type AHBERRMSK_R = crate::BitReader;
 #[doc = "Field `AHBERRMSK` writer - AHB Error mask"]
-pub type AHBERRMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBERRMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMEOUTMSK` reader - Timeout condition mask (Non-isochronous endpoints)"]
 pub type TIMEOUTMSK_R = crate::BitReader;
 #[doc = "Field `TIMEOUTMSK` writer - Timeout condition mask (Non-isochronous endpoints)"]
-pub type TIMEOUTMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMEOUTMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTKNTXFEMPMSK` reader - IN token received when TxFIFO empty mask"]
 pub type INTKNTXFEMPMSK_R = crate::BitReader;
 #[doc = "Field `INTKNTXFEMPMSK` writer - IN token received when TxFIFO empty mask"]
-pub type INTKNTXFEMPMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTKNTXFEMPMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTKNEPTMISMSK` reader - IN token received with EP mismatch mask"]
 pub type INTKNEPTMISMSK_R = crate::BitReader;
 #[doc = "Field `INTKNEPTMISMSK` writer - IN token received with EP mismatch mask"]
-pub type INTKNEPTMISMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTKNEPTMISMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPTNAKMSK` reader - IN endpoint NAK effective mask"]
 pub type INEPTNAKMSK_R = crate::BitReader;
 #[doc = "Field `INEPTNAKMSK` writer - IN endpoint NAK effective mask"]
-pub type INEPTNAKMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPTNAKMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFIFOUDRMSK` reader - FIFO underrun mask"]
 pub type TXFIFOUDRMSK_R = crate::BitReader;
 #[doc = "Field `TXFIFOUDRMSK` writer - FIFO underrun mask"]
-pub type TXFIFOUDRMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFIFOUDRMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BNAINMSK` reader - BNA interrupt mask"]
 pub type BNAINMSK_R = crate::BitReader;
 #[doc = "Field `BNAINMSK` writer - BNA interrupt mask"]
-pub type BNAINMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BNAINMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NAKMSK` reader - NAK interrupt mask"]
 pub type NAKMSK_R = crate::BitReader;
 #[doc = "Field `NAKMSK` writer - NAK interrupt mask"]
-pub type NAKMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NAKMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]
@@ -128,62 +128,62 @@ impl W {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn xfercmsk(&mut self) -> XFERCMSK_W<DIEPEACHMSK1_SPEC, 0> {
-        XFERCMSK_W::new(self)
+    pub fn xfercmsk(&mut self) -> XFERCMSK_W<DIEPEACHMSK1_SPEC> {
+        XFERCMSK_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn eptdismsk(&mut self) -> EPTDISMSK_W<DIEPEACHMSK1_SPEC, 1> {
-        EPTDISMSK_W::new(self)
+    pub fn eptdismsk(&mut self) -> EPTDISMSK_W<DIEPEACHMSK1_SPEC> {
+        EPTDISMSK_W::new(self, 1)
     }
     #[doc = "Bit 2 - AHB Error mask"]
     #[inline(always)]
     #[must_use]
-    pub fn ahberrmsk(&mut self) -> AHBERRMSK_W<DIEPEACHMSK1_SPEC, 2> {
-        AHBERRMSK_W::new(self)
+    pub fn ahberrmsk(&mut self) -> AHBERRMSK_W<DIEPEACHMSK1_SPEC> {
+        AHBERRMSK_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timeout condition mask (Non-isochronous endpoints)"]
     #[inline(always)]
     #[must_use]
-    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<DIEPEACHMSK1_SPEC, 3> {
-        TIMEOUTMSK_W::new(self)
+    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<DIEPEACHMSK1_SPEC> {
+        TIMEOUTMSK_W::new(self, 3)
     }
     #[doc = "Bit 4 - IN token received when TxFIFO empty mask"]
     #[inline(always)]
     #[must_use]
-    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<DIEPEACHMSK1_SPEC, 4> {
-        INTKNTXFEMPMSK_W::new(self)
+    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<DIEPEACHMSK1_SPEC> {
+        INTKNTXFEMPMSK_W::new(self, 4)
     }
     #[doc = "Bit 5 - IN token received with EP mismatch mask"]
     #[inline(always)]
     #[must_use]
-    pub fn intkneptmismsk(&mut self) -> INTKNEPTMISMSK_W<DIEPEACHMSK1_SPEC, 5> {
-        INTKNEPTMISMSK_W::new(self)
+    pub fn intkneptmismsk(&mut self) -> INTKNEPTMISMSK_W<DIEPEACHMSK1_SPEC> {
+        INTKNEPTMISMSK_W::new(self, 5)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective mask"]
     #[inline(always)]
     #[must_use]
-    pub fn ineptnakmsk(&mut self) -> INEPTNAKMSK_W<DIEPEACHMSK1_SPEC, 6> {
-        INEPTNAKMSK_W::new(self)
+    pub fn ineptnakmsk(&mut self) -> INEPTNAKMSK_W<DIEPEACHMSK1_SPEC> {
+        INEPTNAKMSK_W::new(self, 6)
     }
     #[doc = "Bit 8 - FIFO underrun mask"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifoudrmsk(&mut self) -> TXFIFOUDRMSK_W<DIEPEACHMSK1_SPEC, 8> {
-        TXFIFOUDRMSK_W::new(self)
+    pub fn txfifoudrmsk(&mut self) -> TXFIFOUDRMSK_W<DIEPEACHMSK1_SPEC> {
+        TXFIFOUDRMSK_W::new(self, 8)
     }
     #[doc = "Bit 9 - BNA interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn bnainmsk(&mut self) -> BNAINMSK_W<DIEPEACHMSK1_SPEC, 9> {
-        BNAINMSK_W::new(self)
+    pub fn bnainmsk(&mut self) -> BNAINMSK_W<DIEPEACHMSK1_SPEC> {
+        BNAINMSK_W::new(self, 9)
     }
     #[doc = "Bit 13 - NAK interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn nakmsk(&mut self) -> NAKMSK_W<DIEPEACHMSK1_SPEC, 13> {
-        NAKMSK_W::new(self)
+    pub fn nakmsk(&mut self) -> NAKMSK_W<DIEPEACHMSK1_SPEC> {
+        NAKMSK_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

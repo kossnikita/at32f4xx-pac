@@ -5,15 +5,15 @@ pub type W = crate::W<CFG2_SPEC>;
 #[doc = "Field `LOCKUP_LK` reader - CM4 LOCKUP bit enable"]
 pub type LOCKUP_LK_R = crate::BitReader;
 #[doc = "Field `LOCKUP_LK` writer - CM4 LOCKUP bit enable"]
-pub type LOCKUP_LK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LOCKUP_LK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PVM_LK` reader - PVM lock enable"]
 pub type PVM_LK_R = crate::BitReader;
 #[doc = "Field `PVM_LK` writer - PVM lock enable"]
-pub type PVM_LK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PVM_LK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2S_FD` reader - I2S full duplex configuration bit"]
 pub type I2S_FD_R = crate::FieldReader;
 #[doc = "Field `I2S_FD` writer - I2S full duplex configuration bit"]
-pub type I2S_FD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2S_FD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - CM4 LOCKUP bit enable"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 0 - CM4 LOCKUP bit enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lockup_lk(&mut self) -> LOCKUP_LK_W<CFG2_SPEC, 0> {
-        LOCKUP_LK_W::new(self)
+    pub fn lockup_lk(&mut self) -> LOCKUP_LK_W<CFG2_SPEC> {
+        LOCKUP_LK_W::new(self, 0)
     }
     #[doc = "Bit 2 - PVM lock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pvm_lk(&mut self) -> PVM_LK_W<CFG2_SPEC, 2> {
-        PVM_LK_W::new(self)
+    pub fn pvm_lk(&mut self) -> PVM_LK_W<CFG2_SPEC> {
+        PVM_LK_W::new(self, 2)
     }
     #[doc = "Bits 30:31 - I2S full duplex configuration bit"]
     #[inline(always)]
     #[must_use]
-    pub fn i2s_fd(&mut self) -> I2S_FD_W<CFG2_SPEC, 30> {
-        I2S_FD_W::new(self)
+    pub fn i2s_fd(&mut self) -> I2S_FD_W<CFG2_SPEC> {
+        I2S_FD_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

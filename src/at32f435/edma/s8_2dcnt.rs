@@ -5,11 +5,11 @@ pub type W = crate::W<S8_2DCNT_SPEC>;
 #[doc = "Field `XCONUT` reader - X dimension transfer count"]
 pub type XCONUT_R = crate::FieldReader<u16>;
 #[doc = "Field `XCONUT` writer - X dimension transfer count"]
-pub type XCONUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type XCONUT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `YCONUT` reader - Y dimension transfer count"]
 pub type YCONUT_R = crate::FieldReader<u16>;
 #[doc = "Field `YCONUT` writer - Y dimension transfer count"]
-pub type YCONUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type YCONUT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - X dimension transfer count"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:15 - X dimension transfer count"]
     #[inline(always)]
     #[must_use]
-    pub fn xconut(&mut self) -> XCONUT_W<S8_2DCNT_SPEC, 0> {
-        XCONUT_W::new(self)
+    pub fn xconut(&mut self) -> XCONUT_W<S8_2DCNT_SPEC> {
+        XCONUT_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Y dimension transfer count"]
     #[inline(always)]
     #[must_use]
-    pub fn yconut(&mut self) -> YCONUT_W<S8_2DCNT_SPEC, 16> {
-        YCONUT_W::new(self)
+    pub fn yconut(&mut self) -> YCONUT_W<S8_2DCNT_SPEC> {
+        YCONUT_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

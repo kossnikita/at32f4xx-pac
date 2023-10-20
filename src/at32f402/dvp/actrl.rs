@@ -5,47 +5,47 @@ pub type W = crate::W<ACTRL_SPEC>;
 #[doc = "Field `EISRE` reader - Enhanced image scaling resize enable"]
 pub type EISRE_R = crate::BitReader;
 #[doc = "Field `EISRE` writer - Enhanced image scaling resize enable"]
-pub type EISRE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EISRE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EFRCE` reader - Enhanced frame rate control enable"]
 pub type EFRCE_R = crate::BitReader;
 #[doc = "Field `EFRCE` writer - Enhanced frame rate control enable"]
-pub type EFRCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EFRCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MIBE` reader - Monochrome image binarization enable"]
 pub type MIBE_R = crate::BitReader;
 #[doc = "Field `MIBE` writer - Monochrome image binarization enable"]
-pub type MIBE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MIBE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCDES` reader - Basic pixel capture/drop extended selection"]
 pub type PCDES_R = crate::BitReader;
 #[doc = "Field `PCDES` writer - Basic pixel capture/drop extended selection"]
-pub type PCDES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCDES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EFDF` reader - Enhanced function data format"]
 pub type EFDF_R = crate::FieldReader;
 #[doc = "Field `EFDF` writer - Enhanced function data format"]
-pub type EFDF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type EFDF_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `EFDM` reader - Enhanced function data format management"]
 pub type EFDM_R = crate::BitReader;
 #[doc = "Field `EFDM` writer - Enhanced function data format management"]
-pub type EFDM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EFDM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IDUN` reader - Input data un-used number"]
 pub type IDUN_R = crate::FieldReader;
 #[doc = "Field `IDUN` writer - Input data un-used number"]
-pub type IDUN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type IDUN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `IDUS` reader - Input data un-used setting"]
 pub type IDUS_R = crate::BitReader;
 #[doc = "Field `IDUS` writer - Input data un-used setting"]
-pub type IDUS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IDUS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMABT` reader - DMA burst transfer configuration"]
 pub type DMABT_R = crate::BitReader;
 #[doc = "Field `DMABT` writer - DMA burst transfer configuration"]
-pub type DMABT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMABT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSEID` reader - Horizontal synchonization event and interrupt definition"]
 pub type HSEID_R = crate::BitReader;
 #[doc = "Field `HSEID` writer - Horizontal synchonization event and interrupt definition"]
-pub type HSEID_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSEID_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VSEID` reader - Vertical synchonization event and interrupt definition"]
 pub type VSEID_R = crate::BitReader;
 #[doc = "Field `VSEID` writer - Vertical synchonization event and interrupt definition"]
-pub type VSEID_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VSEID_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enhanced image scaling resize enable"]
     #[inline(always)]
@@ -129,68 +129,68 @@ impl W {
     #[doc = "Bit 0 - Enhanced image scaling resize enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eisre(&mut self) -> EISRE_W<ACTRL_SPEC, 0> {
-        EISRE_W::new(self)
+    pub fn eisre(&mut self) -> EISRE_W<ACTRL_SPEC> {
+        EISRE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enhanced frame rate control enable"]
     #[inline(always)]
     #[must_use]
-    pub fn efrce(&mut self) -> EFRCE_W<ACTRL_SPEC, 1> {
-        EFRCE_W::new(self)
+    pub fn efrce(&mut self) -> EFRCE_W<ACTRL_SPEC> {
+        EFRCE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Monochrome image binarization enable"]
     #[inline(always)]
     #[must_use]
-    pub fn mibe(&mut self) -> MIBE_W<ACTRL_SPEC, 2> {
-        MIBE_W::new(self)
+    pub fn mibe(&mut self) -> MIBE_W<ACTRL_SPEC> {
+        MIBE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Basic pixel capture/drop extended selection"]
     #[inline(always)]
     #[must_use]
-    pub fn pcdes(&mut self) -> PCDES_W<ACTRL_SPEC, 3> {
-        PCDES_W::new(self)
+    pub fn pcdes(&mut self) -> PCDES_W<ACTRL_SPEC> {
+        PCDES_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - Enhanced function data format"]
     #[inline(always)]
     #[must_use]
-    pub fn efdf(&mut self) -> EFDF_W<ACTRL_SPEC, 4> {
-        EFDF_W::new(self)
+    pub fn efdf(&mut self) -> EFDF_W<ACTRL_SPEC> {
+        EFDF_W::new(self, 4)
     }
     #[doc = "Bit 6 - Enhanced function data format management"]
     #[inline(always)]
     #[must_use]
-    pub fn efdm(&mut self) -> EFDM_W<ACTRL_SPEC, 6> {
-        EFDM_W::new(self)
+    pub fn efdm(&mut self) -> EFDM_W<ACTRL_SPEC> {
+        EFDM_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Input data un-used number"]
     #[inline(always)]
     #[must_use]
-    pub fn idun(&mut self) -> IDUN_W<ACTRL_SPEC, 8> {
-        IDUN_W::new(self)
+    pub fn idun(&mut self) -> IDUN_W<ACTRL_SPEC> {
+        IDUN_W::new(self, 8)
     }
     #[doc = "Bit 10 - Input data un-used setting"]
     #[inline(always)]
     #[must_use]
-    pub fn idus(&mut self) -> IDUS_W<ACTRL_SPEC, 10> {
-        IDUS_W::new(self)
+    pub fn idus(&mut self) -> IDUS_W<ACTRL_SPEC> {
+        IDUS_W::new(self, 10)
     }
     #[doc = "Bit 12 - DMA burst transfer configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn dmabt(&mut self) -> DMABT_W<ACTRL_SPEC, 12> {
-        DMABT_W::new(self)
+    pub fn dmabt(&mut self) -> DMABT_W<ACTRL_SPEC> {
+        DMABT_W::new(self, 12)
     }
     #[doc = "Bit 16 - Horizontal synchonization event and interrupt definition"]
     #[inline(always)]
     #[must_use]
-    pub fn hseid(&mut self) -> HSEID_W<ACTRL_SPEC, 16> {
-        HSEID_W::new(self)
+    pub fn hseid(&mut self) -> HSEID_W<ACTRL_SPEC> {
+        HSEID_W::new(self, 16)
     }
     #[doc = "Bit 17 - Vertical synchonization event and interrupt definition"]
     #[inline(always)]
     #[must_use]
-    pub fn vseid(&mut self) -> VSEID_W<ACTRL_SPEC, 17> {
-        VSEID_W::new(self)
+    pub fn vseid(&mut self) -> VSEID_W<ACTRL_SPEC> {
+        VSEID_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

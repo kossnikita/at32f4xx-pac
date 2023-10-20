@@ -5,11 +5,11 @@ pub type W = crate::W<DMACTRL_SPEC>;
 #[doc = "Field `ADDR` reader - DMA transfer address offset"]
 pub type ADDR_R = crate::FieldReader;
 #[doc = "Field `ADDR` writer - DMA transfer address offset"]
-pub type ADDR_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 5, O>;
+pub type ADDR_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 5>;
 #[doc = "Field `DTB` reader - DMA transfer bytes"]
 pub type DTB_R = crate::FieldReader;
 #[doc = "Field `DTB` writer - DMA transfer bytes"]
-pub type DTB_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 5, O>;
+pub type DTB_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - DMA transfer address offset"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:4 - DMA transfer address offset"]
     #[inline(always)]
     #[must_use]
-    pub fn addr(&mut self) -> ADDR_W<DMACTRL_SPEC, 0> {
-        ADDR_W::new(self)
+    pub fn addr(&mut self) -> ADDR_W<DMACTRL_SPEC> {
+        ADDR_W::new(self, 0)
     }
     #[doc = "Bits 8:12 - DMA transfer bytes"]
     #[inline(always)]
     #[must_use]
-    pub fn dtb(&mut self) -> DTB_W<DMACTRL_SPEC, 8> {
-        DTB_W::new(self)
+    pub fn dtb(&mut self) -> DTB_W<DMACTRL_SPEC> {
+        DTB_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

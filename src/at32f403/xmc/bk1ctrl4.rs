@@ -5,63 +5,63 @@ pub type W = crate::W<BK1CTRL4_SPEC>;
 #[doc = "Field `EN` reader - Memory bank enable"]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Memory bank enable"]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADMUXEN` reader - Address and data multiplexing enable"]
 pub type ADMUXEN_R = crate::BitReader;
 #[doc = "Field `ADMUXEN` writer - Address and data multiplexing enable"]
-pub type ADMUXEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADMUXEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEV` reader - Memory device type"]
 pub type DEV_R = crate::FieldReader;
 #[doc = "Field `DEV` writer - Memory device type"]
-pub type DEV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DEV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `EXTMDBW` reader - External memory data bus width"]
 pub type EXTMDBW_R = crate::FieldReader;
 #[doc = "Field `EXTMDBW` writer - External memory data bus width"]
-pub type EXTMDBW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type EXTMDBW_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `NOREN` reader - Nor flash access enable"]
 pub type NOREN_R = crate::BitReader;
 #[doc = "Field `NOREN` writer - Nor flash access enable"]
-pub type NOREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NOREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCBEN` reader - Synchronous burst enable"]
 pub type SYNCBEN_R = crate::BitReader;
 #[doc = "Field `SYNCBEN` writer - Synchronous burst enable"]
-pub type SYNCBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCBEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NWPOL` reader - NWAIT polarity"]
 pub type NWPOL_R = crate::BitReader;
 #[doc = "Field `NWPOL` writer - NWAIT polarity"]
-pub type NWPOL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NWPOL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WRAPEN` reader - Wrapped enable"]
 pub type WRAPEN_R = crate::BitReader;
 #[doc = "Field `WRAPEN` writer - Wrapped enable"]
-pub type WRAPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WRAPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NWTCFG` reader - Wait timing configuration"]
 pub type NWTCFG_R = crate::BitReader;
 #[doc = "Field `NWTCFG` writer - Wait timing configuration"]
-pub type NWTCFG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NWTCFG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WEN` reader - Write enable"]
 pub type WEN_R = crate::BitReader;
 #[doc = "Field `WEN` writer - Write enable"]
-pub type WEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NWSEN` reader - NWAIT in synchronous transfer enable"]
 pub type NWSEN_R = crate::BitReader;
 #[doc = "Field `NWSEN` writer - NWAIT in synchronous transfer enable"]
-pub type NWSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NWSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RWTD` reader - Read-write timing different"]
 pub type RWTD_R = crate::BitReader;
 #[doc = "Field `RWTD` writer - Read-write timing different"]
-pub type RWTD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RWTD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NWASEN` reader - NWAIT in asynchronous transfer enable"]
 pub type NWASEN_R = crate::BitReader;
 #[doc = "Field `NWASEN` writer - NWAIT in asynchronous transfer enable"]
-pub type NWASEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NWASEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRPGS` reader - CRAM page size"]
 pub type CRPGS_R = crate::FieldReader;
 #[doc = "Field `CRPGS` writer - CRAM page size"]
-pub type CRPGS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CRPGS_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `MWMC` reader - Memory write mode control"]
 pub type MWMC_R = crate::BitReader;
 #[doc = "Field `MWMC` writer - Memory write mode control"]
-pub type MWMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MWMC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Memory bank enable"]
     #[inline(always)]
@@ -169,92 +169,92 @@ impl W {
     #[doc = "Bit 0 - Memory bank enable"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<BK1CTRL4_SPEC, 0> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<BK1CTRL4_SPEC> {
+        EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Address and data multiplexing enable"]
     #[inline(always)]
     #[must_use]
-    pub fn admuxen(&mut self) -> ADMUXEN_W<BK1CTRL4_SPEC, 1> {
-        ADMUXEN_W::new(self)
+    pub fn admuxen(&mut self) -> ADMUXEN_W<BK1CTRL4_SPEC> {
+        ADMUXEN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Memory device type"]
     #[inline(always)]
     #[must_use]
-    pub fn dev(&mut self) -> DEV_W<BK1CTRL4_SPEC, 2> {
-        DEV_W::new(self)
+    pub fn dev(&mut self) -> DEV_W<BK1CTRL4_SPEC> {
+        DEV_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - External memory data bus width"]
     #[inline(always)]
     #[must_use]
-    pub fn extmdbw(&mut self) -> EXTMDBW_W<BK1CTRL4_SPEC, 4> {
-        EXTMDBW_W::new(self)
+    pub fn extmdbw(&mut self) -> EXTMDBW_W<BK1CTRL4_SPEC> {
+        EXTMDBW_W::new(self, 4)
     }
     #[doc = "Bit 6 - Nor flash access enable"]
     #[inline(always)]
     #[must_use]
-    pub fn noren(&mut self) -> NOREN_W<BK1CTRL4_SPEC, 6> {
-        NOREN_W::new(self)
+    pub fn noren(&mut self) -> NOREN_W<BK1CTRL4_SPEC> {
+        NOREN_W::new(self, 6)
     }
     #[doc = "Bit 8 - Synchronous burst enable"]
     #[inline(always)]
     #[must_use]
-    pub fn syncben(&mut self) -> SYNCBEN_W<BK1CTRL4_SPEC, 8> {
-        SYNCBEN_W::new(self)
+    pub fn syncben(&mut self) -> SYNCBEN_W<BK1CTRL4_SPEC> {
+        SYNCBEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - NWAIT polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn nwpol(&mut self) -> NWPOL_W<BK1CTRL4_SPEC, 9> {
-        NWPOL_W::new(self)
+    pub fn nwpol(&mut self) -> NWPOL_W<BK1CTRL4_SPEC> {
+        NWPOL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Wrapped enable"]
     #[inline(always)]
     #[must_use]
-    pub fn wrapen(&mut self) -> WRAPEN_W<BK1CTRL4_SPEC, 10> {
-        WRAPEN_W::new(self)
+    pub fn wrapen(&mut self) -> WRAPEN_W<BK1CTRL4_SPEC> {
+        WRAPEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Wait timing configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn nwtcfg(&mut self) -> NWTCFG_W<BK1CTRL4_SPEC, 11> {
-        NWTCFG_W::new(self)
+    pub fn nwtcfg(&mut self) -> NWTCFG_W<BK1CTRL4_SPEC> {
+        NWTCFG_W::new(self, 11)
     }
     #[doc = "Bit 12 - Write enable"]
     #[inline(always)]
     #[must_use]
-    pub fn wen(&mut self) -> WEN_W<BK1CTRL4_SPEC, 12> {
-        WEN_W::new(self)
+    pub fn wen(&mut self) -> WEN_W<BK1CTRL4_SPEC> {
+        WEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - NWAIT in synchronous transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nwsen(&mut self) -> NWSEN_W<BK1CTRL4_SPEC, 13> {
-        NWSEN_W::new(self)
+    pub fn nwsen(&mut self) -> NWSEN_W<BK1CTRL4_SPEC> {
+        NWSEN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Read-write timing different"]
     #[inline(always)]
     #[must_use]
-    pub fn rwtd(&mut self) -> RWTD_W<BK1CTRL4_SPEC, 14> {
-        RWTD_W::new(self)
+    pub fn rwtd(&mut self) -> RWTD_W<BK1CTRL4_SPEC> {
+        RWTD_W::new(self, 14)
     }
     #[doc = "Bit 15 - NWAIT in asynchronous transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nwasen(&mut self) -> NWASEN_W<BK1CTRL4_SPEC, 15> {
-        NWASEN_W::new(self)
+    pub fn nwasen(&mut self) -> NWASEN_W<BK1CTRL4_SPEC> {
+        NWASEN_W::new(self, 15)
     }
     #[doc = "Bits 16:18 - CRAM page size"]
     #[inline(always)]
     #[must_use]
-    pub fn crpgs(&mut self) -> CRPGS_W<BK1CTRL4_SPEC, 16> {
-        CRPGS_W::new(self)
+    pub fn crpgs(&mut self) -> CRPGS_W<BK1CTRL4_SPEC> {
+        CRPGS_W::new(self, 16)
     }
     #[doc = "Bit 19 - Memory write mode control"]
     #[inline(always)]
     #[must_use]
-    pub fn mwmc(&mut self) -> MWMC_W<BK1CTRL4_SPEC, 19> {
-        MWMC_W::new(self)
+    pub fn mwmc(&mut self) -> MWMC_W<BK1CTRL4_SPEC> {
+        MWMC_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

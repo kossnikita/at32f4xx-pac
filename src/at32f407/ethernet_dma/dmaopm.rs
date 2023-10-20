@@ -5,51 +5,51 @@ pub type W = crate::W<DMAOPM_SPEC>;
 #[doc = "Field `SSR` reader - Start or stop receive"]
 pub type SSR_R = crate::BitReader;
 #[doc = "Field `SSR` writer - Start or stop receive"]
-pub type SSR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SSR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OSF` reader - Operate on second frame"]
 pub type OSF_R = crate::BitReader;
 #[doc = "Field `OSF` writer - Operate on second frame"]
-pub type OSF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OSF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTC` reader - Receive threshold control"]
 pub type RTC_R = crate::FieldReader;
 #[doc = "Field `RTC` writer - Receive threshold control"]
-pub type RTC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RTC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FUGF` reader - Forward undersized good frames"]
 pub type FUGF_R = crate::BitReader;
 #[doc = "Field `FUGF` writer - Forward undersized good frames"]
-pub type FUGF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FUGF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEF` reader - Forward error frames"]
 pub type FEF_R = crate::BitReader;
 #[doc = "Field `FEF` writer - Forward error frames"]
-pub type FEF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SSTC` reader - Start of stop transmission command"]
 pub type SSTC_R = crate::BitReader;
 #[doc = "Field `SSTC` writer - Start of stop transmission command"]
-pub type SSTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SSTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TTC` reader - Transmit threshold control"]
 pub type TTC_R = crate::FieldReader;
 #[doc = "Field `TTC` writer - Transmit threshold control"]
-pub type TTC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TTC_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `FTF` reader - Flush transmit FIFO"]
 pub type FTF_R = crate::BitReader;
 #[doc = "Field `FTF` writer - Flush transmit FIFO"]
-pub type FTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSF` reader - Transmit store and forward"]
 pub type TSF_R = crate::BitReader;
 #[doc = "Field `TSF` writer - Transmit store and forward"]
-pub type TSF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DFRF` reader - Disable flushing of received frames"]
 pub type DFRF_R = crate::BitReader;
 #[doc = "Field `DFRF` writer - Disable flushing of received frames"]
-pub type DFRF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DFRF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSF` reader - Receive store and forward"]
 pub type RSF_R = crate::BitReader;
 #[doc = "Field `RSF` writer - Receive store and forward"]
-pub type RSF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DT` reader - Disable dropping of TCP/IP checksum error frames"]
 pub type DT_R = crate::BitReader;
 #[doc = "Field `DT` writer - Disable dropping of TCP/IP checksum error frames"]
-pub type DT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Start or stop receive"]
     #[inline(always)]
@@ -139,74 +139,74 @@ impl W {
     #[doc = "Bit 1 - Start or stop receive"]
     #[inline(always)]
     #[must_use]
-    pub fn ssr(&mut self) -> SSR_W<DMAOPM_SPEC, 1> {
-        SSR_W::new(self)
+    pub fn ssr(&mut self) -> SSR_W<DMAOPM_SPEC> {
+        SSR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Operate on second frame"]
     #[inline(always)]
     #[must_use]
-    pub fn osf(&mut self) -> OSF_W<DMAOPM_SPEC, 2> {
-        OSF_W::new(self)
+    pub fn osf(&mut self) -> OSF_W<DMAOPM_SPEC> {
+        OSF_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - Receive threshold control"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc(&mut self) -> RTC_W<DMAOPM_SPEC, 3> {
-        RTC_W::new(self)
+    pub fn rtc(&mut self) -> RTC_W<DMAOPM_SPEC> {
+        RTC_W::new(self, 3)
     }
     #[doc = "Bit 6 - Forward undersized good frames"]
     #[inline(always)]
     #[must_use]
-    pub fn fugf(&mut self) -> FUGF_W<DMAOPM_SPEC, 6> {
-        FUGF_W::new(self)
+    pub fn fugf(&mut self) -> FUGF_W<DMAOPM_SPEC> {
+        FUGF_W::new(self, 6)
     }
     #[doc = "Bit 7 - Forward error frames"]
     #[inline(always)]
     #[must_use]
-    pub fn fef(&mut self) -> FEF_W<DMAOPM_SPEC, 7> {
-        FEF_W::new(self)
+    pub fn fef(&mut self) -> FEF_W<DMAOPM_SPEC> {
+        FEF_W::new(self, 7)
     }
     #[doc = "Bit 13 - Start of stop transmission command"]
     #[inline(always)]
     #[must_use]
-    pub fn sstc(&mut self) -> SSTC_W<DMAOPM_SPEC, 13> {
-        SSTC_W::new(self)
+    pub fn sstc(&mut self) -> SSTC_W<DMAOPM_SPEC> {
+        SSTC_W::new(self, 13)
     }
     #[doc = "Bits 14:16 - Transmit threshold control"]
     #[inline(always)]
     #[must_use]
-    pub fn ttc(&mut self) -> TTC_W<DMAOPM_SPEC, 14> {
-        TTC_W::new(self)
+    pub fn ttc(&mut self) -> TTC_W<DMAOPM_SPEC> {
+        TTC_W::new(self, 14)
     }
     #[doc = "Bit 20 - Flush transmit FIFO"]
     #[inline(always)]
     #[must_use]
-    pub fn ftf(&mut self) -> FTF_W<DMAOPM_SPEC, 20> {
-        FTF_W::new(self)
+    pub fn ftf(&mut self) -> FTF_W<DMAOPM_SPEC> {
+        FTF_W::new(self, 20)
     }
     #[doc = "Bit 21 - Transmit store and forward"]
     #[inline(always)]
     #[must_use]
-    pub fn tsf(&mut self) -> TSF_W<DMAOPM_SPEC, 21> {
-        TSF_W::new(self)
+    pub fn tsf(&mut self) -> TSF_W<DMAOPM_SPEC> {
+        TSF_W::new(self, 21)
     }
     #[doc = "Bit 24 - Disable flushing of received frames"]
     #[inline(always)]
     #[must_use]
-    pub fn dfrf(&mut self) -> DFRF_W<DMAOPM_SPEC, 24> {
-        DFRF_W::new(self)
+    pub fn dfrf(&mut self) -> DFRF_W<DMAOPM_SPEC> {
+        DFRF_W::new(self, 24)
     }
     #[doc = "Bit 25 - Receive store and forward"]
     #[inline(always)]
     #[must_use]
-    pub fn rsf(&mut self) -> RSF_W<DMAOPM_SPEC, 25> {
-        RSF_W::new(self)
+    pub fn rsf(&mut self) -> RSF_W<DMAOPM_SPEC> {
+        RSF_W::new(self, 25)
     }
     #[doc = "Bit 26 - Disable dropping of TCP/IP checksum error frames"]
     #[inline(always)]
     #[must_use]
-    pub fn dt(&mut self) -> DT_W<DMAOPM_SPEC, 26> {
-        DT_W::new(self)
+    pub fn dt(&mut self) -> DT_W<DMAOPM_SPEC> {
+        DT_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,31 +5,31 @@ pub type W = crate::W<TM1_SPEC>;
 #[doc = "Field `TMRD` reader - Mode register program to active delay"]
 pub type TMRD_R = crate::FieldReader;
 #[doc = "Field `TMRD` writer - Mode register program to active delay"]
-pub type TMRD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TMRD_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TXSR` reader - Exit Self-refresh to active delay"]
 pub type TXSR_R = crate::FieldReader;
 #[doc = "Field `TXSR` writer - Exit Self-refresh to active delay"]
-pub type TXSR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TXSR_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TRAS` reader - Self refresh time"]
 pub type TRAS_R = crate::FieldReader;
 #[doc = "Field `TRAS` writer - Self refresh time"]
-pub type TRAS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TRAS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TRC` reader - Refresh to active delay"]
 pub type TRC_R = crate::FieldReader;
 #[doc = "Field `TRC` writer - Refresh to active delay"]
-pub type TRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TRC_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TWR` reader - Write Recovery delay"]
 pub type TWR_R = crate::FieldReader;
 #[doc = "Field `TWR` writer - Write Recovery delay"]
-pub type TWR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TWR_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TRP` reader - Precharge to active delay"]
 pub type TRP_R = crate::FieldReader;
 #[doc = "Field `TRP` writer - Precharge to active delay"]
-pub type TRP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TRP_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TRCD` reader - Row active to Read/Write delay"]
 pub type TRCD_R = crate::FieldReader;
 #[doc = "Field `TRCD` writer - Row active to Read/Write delay"]
-pub type TRCD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TRCD_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - Mode register program to active delay"]
     #[inline(always)]
@@ -89,44 +89,44 @@ impl W {
     #[doc = "Bits 0:3 - Mode register program to active delay"]
     #[inline(always)]
     #[must_use]
-    pub fn tmrd(&mut self) -> TMRD_W<TM1_SPEC, 0> {
-        TMRD_W::new(self)
+    pub fn tmrd(&mut self) -> TMRD_W<TM1_SPEC> {
+        TMRD_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Exit Self-refresh to active delay"]
     #[inline(always)]
     #[must_use]
-    pub fn txsr(&mut self) -> TXSR_W<TM1_SPEC, 4> {
-        TXSR_W::new(self)
+    pub fn txsr(&mut self) -> TXSR_W<TM1_SPEC> {
+        TXSR_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Self refresh time"]
     #[inline(always)]
     #[must_use]
-    pub fn tras(&mut self) -> TRAS_W<TM1_SPEC, 8> {
-        TRAS_W::new(self)
+    pub fn tras(&mut self) -> TRAS_W<TM1_SPEC> {
+        TRAS_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - Refresh to active delay"]
     #[inline(always)]
     #[must_use]
-    pub fn trc(&mut self) -> TRC_W<TM1_SPEC, 12> {
-        TRC_W::new(self)
+    pub fn trc(&mut self) -> TRC_W<TM1_SPEC> {
+        TRC_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - Write Recovery delay"]
     #[inline(always)]
     #[must_use]
-    pub fn twr(&mut self) -> TWR_W<TM1_SPEC, 16> {
-        TWR_W::new(self)
+    pub fn twr(&mut self) -> TWR_W<TM1_SPEC> {
+        TWR_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - Precharge to active delay"]
     #[inline(always)]
     #[must_use]
-    pub fn trp(&mut self) -> TRP_W<TM1_SPEC, 20> {
-        TRP_W::new(self)
+    pub fn trp(&mut self) -> TRP_W<TM1_SPEC> {
+        TRP_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - Row active to Read/Write delay"]
     #[inline(always)]
     #[must_use]
-    pub fn trcd(&mut self) -> TRCD_W<TM1_SPEC, 24> {
-        TRCD_W::new(self)
+    pub fn trcd(&mut self) -> TRCD_W<TM1_SPEC> {
+        TRCD_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

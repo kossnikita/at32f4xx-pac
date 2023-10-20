@@ -5,15 +5,15 @@ pub type W = crate::W<MISC1_SPEC>;
 #[doc = "Field `HICKCAL_KEY` reader - HICKCAL write key value"]
 pub type HICKCAL_KEY_R = crate::FieldReader;
 #[doc = "Field `HICKCAL_KEY` writer - HICKCAL write key value"]
-pub type HICKCAL_KEY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type HICKCAL_KEY_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CLKOUT_SEL3` reader - Clock output bit3"]
 pub type CLKOUT_SEL3_R = crate::BitReader;
 #[doc = "Field `CLKOUT_SEL3` writer - Clock output bit3"]
-pub type CLKOUT_SEL3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLKOUT_SEL3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBBUFS` reader - USB buffer size selection"]
 pub type USBBUFS_R = crate::BitReader;
 #[doc = "Field `USBBUFS` writer - USB buffer size selection"]
-pub type USBBUFS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USBBUFS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - HICKCAL write key value"]
     #[inline(always)]
@@ -52,20 +52,20 @@ impl W {
     #[doc = "Bits 0:7 - HICKCAL write key value"]
     #[inline(always)]
     #[must_use]
-    pub fn hickcal_key(&mut self) -> HICKCAL_KEY_W<MISC1_SPEC, 0> {
-        HICKCAL_KEY_W::new(self)
+    pub fn hickcal_key(&mut self) -> HICKCAL_KEY_W<MISC1_SPEC> {
+        HICKCAL_KEY_W::new(self, 0)
     }
     #[doc = "Bit 16 - Clock output bit3"]
     #[inline(always)]
     #[must_use]
-    pub fn clkout_sel3(&mut self) -> CLKOUT_SEL3_W<MISC1_SPEC, 16> {
-        CLKOUT_SEL3_W::new(self)
+    pub fn clkout_sel3(&mut self) -> CLKOUT_SEL3_W<MISC1_SPEC> {
+        CLKOUT_SEL3_W::new(self, 16)
     }
     #[doc = "Bit 24 - USB buffer size selection"]
     #[inline(always)]
     #[must_use]
-    pub fn usbbufs(&mut self) -> USBBUFS_W<MISC1_SPEC, 24> {
-        USBBUFS_W::new(self)
+    pub fn usbbufs(&mut self) -> USBBUFS_W<MISC1_SPEC> {
+        USBBUFS_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

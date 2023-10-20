@@ -53,8 +53,8 @@ impl From<CBCTRLW_AW> for bool {
     }
 }
 #[doc = "Field `CBCTRL` writer - Channel buffer control"]
-pub type CBCTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CBCTRLW_AW>;
-impl<'a, REG, const O: u8> CBCTRL_W<'a, REG, O>
+pub type CBCTRL_W<'a, REG> = crate::BitWriter<'a, REG, CBCTRLW_AW>;
+impl<'a, REG> CBCTRL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -106,8 +106,8 @@ impl CCFS_R {
     }
 }
 #[doc = "Field `CCFS` writer - Channel control bit fresh select"]
-pub type CCFS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CCFS_A>;
-impl<'a, REG, const O: u8> CCFS_W<'a, REG, O>
+pub type CCFS_W<'a, REG> = crate::BitWriter<'a, REG, CCFS_A>;
+impl<'a, REG> CCFS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -159,8 +159,8 @@ impl DRS_R {
     }
 }
 #[doc = "Field `DRS` writer - DMA request source"]
-pub type DRS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DRS_A>;
-impl<'a, REG, const O: u8> DRS_W<'a, REG, O>
+pub type DRS_W<'a, REG> = crate::BitWriter<'a, REG, DRS_A>;
+impl<'a, REG> DRS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -265,8 +265,8 @@ impl PTOS_R {
     }
 }
 #[doc = "Field `PTOS` writer - Primary TMR output selection"]
-pub type PTOS_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, PTOS_A>;
-impl<'a, REG, const O: u8> PTOS_W<'a, REG, O>
+pub type PTOS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, PTOS_A>;
+impl<'a, REG> PTOS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -349,8 +349,8 @@ impl C1INSEL_R {
     }
 }
 #[doc = "Field `C1INSEL` writer - C1IN selection"]
-pub type C1INSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1INSEL_A>;
-impl<'a, REG, const O: u8> C1INSEL_W<'a, REG, O>
+pub type C1INSEL_W<'a, REG> = crate::BitWriter<'a, REG, C1INSEL_A>;
+impl<'a, REG> C1INSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -402,8 +402,8 @@ impl CIOS_R {
     }
 }
 #[doc = "Field `CIOS[1-4]` writer - Channel %s idle output state"]
-pub type CIOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1IOS_A>;
-impl<'a, REG, const O: u8> CIOS_W<'a, REG, O>
+pub type CIOS_W<'a, REG> = crate::BitWriter<'a, REG, C1IOS_A>;
+impl<'a, REG> CIOS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -455,8 +455,8 @@ impl CCIOS_R {
     }
 }
 #[doc = "Field `CCIOS[1-3]` writer - Channel %s complementary idle output state"]
-pub type CCIOS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1CIOS_A>;
-impl<'a, REG, const O: u8> CCIOS_W<'a, REG, O>
+pub type CCIOS_W<'a, REG> = crate::BitWriter<'a, REG, C1CIOS_A>;
+impl<'a, REG> CCIOS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -498,10 +498,11 @@ impl R {
         C1INSEL_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Channel [1-4]
-idle output state"]
+idle output state\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cios(&self, n: u8) -> CIOS_R {
-        CIOS_R::new(((self.bits >> ((n - 1) * 2 + 8)) & 1) != 0)
+    pub fn cios(&self, n: u8) -> CIOS_R {
+        assert!(n < 4);
+        CIOS_R::new(((self.bits >> (n * 2 + 8)) & 1) != 0)
     }
     #[doc = "Bit 8 - Channel 1 idle output state"]
     #[inline(always)]
@@ -524,10 +525,11 @@ idle output state"]
         CIOS_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Channel [1-3]
-complementary idle output state"]
+complementary idle output state\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn ccios(&self, n: u8) -> CCIOS_R {
-        CCIOS_R::new(((self.bits >> ((n - 1) * 2 + 9)) & 1) != 0)
+    pub fn ccios(&self, n: u8) -> CCIOS_R {
+        assert!(n < 3);
+        CCIOS_R::new(((self.bits >> (n * 2 + 9)) & 1) != 0)
     }
     #[doc = "Bit 9 - Channel 1 complementary idle output state"]
     #[inline(always)]
@@ -572,88 +574,90 @@ impl W {
     #[doc = "Bit 0 - Channel buffer control"]
     #[inline(always)]
     #[must_use]
-    pub fn cbctrl(&mut self) -> CBCTRL_W<CTRL2_SPEC, 0> {
-        CBCTRL_W::new(self)
+    pub fn cbctrl(&mut self) -> CBCTRL_W<CTRL2_SPEC> {
+        CBCTRL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Channel control bit fresh select"]
     #[inline(always)]
     #[must_use]
-    pub fn ccfs(&mut self) -> CCFS_W<CTRL2_SPEC, 2> {
-        CCFS_W::new(self)
+    pub fn ccfs(&mut self) -> CCFS_W<CTRL2_SPEC> {
+        CCFS_W::new(self, 2)
     }
     #[doc = "Bit 3 - DMA request source"]
     #[inline(always)]
     #[must_use]
-    pub fn drs(&mut self) -> DRS_W<CTRL2_SPEC, 3> {
-        DRS_W::new(self)
+    pub fn drs(&mut self) -> DRS_W<CTRL2_SPEC> {
+        DRS_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - Primary TMR output selection"]
     #[inline(always)]
     #[must_use]
-    pub fn ptos(&mut self) -> PTOS_W<CTRL2_SPEC, 4> {
-        PTOS_W::new(self)
+    pub fn ptos(&mut self) -> PTOS_W<CTRL2_SPEC> {
+        PTOS_W::new(self, 4)
     }
     #[doc = "Bit 7 - C1IN selection"]
     #[inline(always)]
     #[must_use]
-    pub fn c1insel(&mut self) -> C1INSEL_W<CTRL2_SPEC, 7> {
-        C1INSEL_W::new(self)
+    pub fn c1insel(&mut self) -> C1INSEL_W<CTRL2_SPEC> {
+        C1INSEL_W::new(self, 7)
     }
     #[doc = "Channel [1-4]
 idle output state"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cios<const O: u8>(&mut self) -> CIOS_W<CTRL2_SPEC, O> {
-        CIOS_W::new(self)
+    pub fn cios(&mut self, n: u8) -> CIOS_W<CTRL2_SPEC> {
+        assert!(n < 4);
+        CIOS_W::new(self, n * 2 + 8)
     }
     #[doc = "Bit 8 - Channel 1 idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c1ios(&mut self) -> CIOS_W<CTRL2_SPEC, 8> {
-        CIOS_W::new(self)
+    pub fn c1ios(&mut self) -> CIOS_W<CTRL2_SPEC> {
+        CIOS_W::new(self, 8)
     }
     #[doc = "Bit 10 - Channel 2 idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c2ios(&mut self) -> CIOS_W<CTRL2_SPEC, 10> {
-        CIOS_W::new(self)
+    pub fn c2ios(&mut self) -> CIOS_W<CTRL2_SPEC> {
+        CIOS_W::new(self, 10)
     }
     #[doc = "Bit 12 - Channel 3 idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c3ios(&mut self) -> CIOS_W<CTRL2_SPEC, 12> {
-        CIOS_W::new(self)
+    pub fn c3ios(&mut self) -> CIOS_W<CTRL2_SPEC> {
+        CIOS_W::new(self, 12)
     }
     #[doc = "Bit 14 - Channel 4 idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c4ios(&mut self) -> CIOS_W<CTRL2_SPEC, 14> {
-        CIOS_W::new(self)
+    pub fn c4ios(&mut self) -> CIOS_W<CTRL2_SPEC> {
+        CIOS_W::new(self, 14)
     }
     #[doc = "Channel [1-3]
 complementary idle output state"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ccios<const O: u8>(&mut self) -> CCIOS_W<CTRL2_SPEC, O> {
-        CCIOS_W::new(self)
+    pub fn ccios(&mut self, n: u8) -> CCIOS_W<CTRL2_SPEC> {
+        assert!(n < 3);
+        CCIOS_W::new(self, n * 2 + 9)
     }
     #[doc = "Bit 9 - Channel 1 complementary idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c1cios(&mut self) -> CCIOS_W<CTRL2_SPEC, 9> {
-        CCIOS_W::new(self)
+    pub fn c1cios(&mut self) -> CCIOS_W<CTRL2_SPEC> {
+        CCIOS_W::new(self, 9)
     }
     #[doc = "Bit 11 - Channel 2 complementary idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c2cios(&mut self) -> CCIOS_W<CTRL2_SPEC, 11> {
-        CCIOS_W::new(self)
+    pub fn c2cios(&mut self) -> CCIOS_W<CTRL2_SPEC> {
+        CCIOS_W::new(self, 11)
     }
     #[doc = "Bit 13 - Channel 3 complementary idle output state"]
     #[inline(always)]
     #[must_use]
-    pub fn c3cios(&mut self) -> CCIOS_W<CTRL2_SPEC, 13> {
-        CCIOS_W::new(self)
+    pub fn c3cios(&mut self) -> CCIOS_W<CTRL2_SPEC> {
+        CCIOS_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

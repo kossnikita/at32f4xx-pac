@@ -5,11 +5,11 @@ pub type W = crate::W<VSCF_SPEC>;
 #[doc = "Field `VSRSF` reader - Vertical scaling resize source factor"]
 pub type VSRSF_R = crate::FieldReader<u16>;
 #[doc = "Field `VSRSF` writer - Vertical scaling resize source factor"]
-pub type VSRSF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type VSRSF_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 #[doc = "Field `VSRTF` reader - Vertical scaling resize target factor"]
 pub type VSRTF_R = crate::FieldReader<u16>;
 #[doc = "Field `VSRTF` writer - Vertical scaling resize target factor"]
-pub type VSRTF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type VSRTF_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
     #[doc = "Bits 0:12 - Vertical scaling resize source factor"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:12 - Vertical scaling resize source factor"]
     #[inline(always)]
     #[must_use]
-    pub fn vsrsf(&mut self) -> VSRSF_W<VSCF_SPEC, 0> {
-        VSRSF_W::new(self)
+    pub fn vsrsf(&mut self) -> VSRSF_W<VSCF_SPEC> {
+        VSRSF_W::new(self, 0)
     }
     #[doc = "Bits 16:28 - Vertical scaling resize target factor"]
     #[inline(always)]
     #[must_use]
-    pub fn vsrtf(&mut self) -> VSRTF_W<VSCF_SPEC, 16> {
-        VSRTF_W::new(self)
+    pub fn vsrtf(&mut self) -> VSRTF_W<VSCF_SPEC> {
+        VSRTF_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

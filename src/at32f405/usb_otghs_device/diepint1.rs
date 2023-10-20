@@ -5,45 +5,45 @@ pub type W = crate::W<DIEPINT1_SPEC>;
 #[doc = "Field `XFERC` reader - Transfer completed interrupt"]
 pub type XFERC_R = crate::BitReader;
 #[doc = "Field `XFERC` writer - Transfer completed interrupt"]
-pub type XFERC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XFERC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPTDISD` reader - Endpoint disabled interrupt"]
 pub type EPTDISD_R = crate::BitReader;
 #[doc = "Field `EPTDISD` writer - Endpoint disabled interrupt"]
-pub type EPTDISD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPTDISD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AHBERR` reader - AHB Error interrupt"]
 pub type AHBERR_R = crate::BitReader;
 #[doc = "Field `AHBERR` writer - AHB Error interrupt"]
-pub type AHBERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AHBERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMEOUT` reader - Timeout condition"]
 pub type TIMEOUT_R = crate::BitReader;
 #[doc = "Field `TIMEOUT` writer - Timeout condition"]
-pub type TIMEOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTKNTXFEMP` reader - IN token received when TxFIFO is empty"]
 pub type INTKNTXFEMP_R = crate::BitReader;
 #[doc = "Field `INTKNTXFEMP` writer - IN token received when TxFIFO is empty"]
-pub type INTKNTXFEMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTKNTXFEMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPTNAK` reader - IN endpoint NAK effective"]
 pub type INEPTNAK_R = crate::BitReader;
 #[doc = "Field `INEPTNAK` writer - IN endpoint NAK effective"]
-pub type INEPTNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPTNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFEMP` reader - Transmit FIFO empty"]
 pub type TXFEMP_R = crate::BitReader;
 #[doc = "Field `TXFIFOUNDRN` reader - Fifo Underrun"]
 pub type TXFIFOUNDRN_R = crate::BitReader;
 #[doc = "Field `TXFIFOUNDRN` writer - Fifo Underrun"]
-pub type TXFIFOUNDRN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFIFOUNDRN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PKTDRPSTS` reader - Packet Drop Status"]
 pub type PKTDRPSTS_R = crate::BitReader;
 #[doc = "Field `PKTDRPSTS` writer - Packet Drop Status"]
-pub type PKTDRPSTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PKTDRPSTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NAKINTPT` reader - NAK interrupt"]
 pub type NAKINTPT_R = crate::BitReader;
 #[doc = "Field `NAKINTPT` writer - NAK interrupt"]
-pub type NAKINTPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NAKINTPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NYETINTPT` reader - NYET interrupt"]
 pub type NYETINTPT_R = crate::BitReader;
 #[doc = "Field `NYETINTPT` writer - NYET interrupt"]
-pub type NYETINTPT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NYETINTPT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
@@ -127,62 +127,62 @@ impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn xferc(&mut self) -> XFERC_W<DIEPINT1_SPEC, 0> {
-        XFERC_W::new(self)
+    pub fn xferc(&mut self) -> XFERC_W<DIEPINT1_SPEC> {
+        XFERC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn eptdisd(&mut self) -> EPTDISD_W<DIEPINT1_SPEC, 1> {
-        EPTDISD_W::new(self)
+    pub fn eptdisd(&mut self) -> EPTDISD_W<DIEPINT1_SPEC> {
+        EPTDISD_W::new(self, 1)
     }
     #[doc = "Bit 2 - AHB Error interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ahberr(&mut self) -> AHBERR_W<DIEPINT1_SPEC, 2> {
-        AHBERR_W::new(self)
+    pub fn ahberr(&mut self) -> AHBERR_W<DIEPINT1_SPEC> {
+        AHBERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timeout condition"]
     #[inline(always)]
     #[must_use]
-    pub fn timeout(&mut self) -> TIMEOUT_W<DIEPINT1_SPEC, 3> {
-        TIMEOUT_W::new(self)
+    pub fn timeout(&mut self) -> TIMEOUT_W<DIEPINT1_SPEC> {
+        TIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - IN token received when TxFIFO is empty"]
     #[inline(always)]
     #[must_use]
-    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<DIEPINT1_SPEC, 4> {
-        INTKNTXFEMP_W::new(self)
+    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<DIEPINT1_SPEC> {
+        INTKNTXFEMP_W::new(self, 4)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective"]
     #[inline(always)]
     #[must_use]
-    pub fn ineptnak(&mut self) -> INEPTNAK_W<DIEPINT1_SPEC, 6> {
-        INEPTNAK_W::new(self)
+    pub fn ineptnak(&mut self) -> INEPTNAK_W<DIEPINT1_SPEC> {
+        INEPTNAK_W::new(self, 6)
     }
     #[doc = "Bit 8 - Fifo Underrun"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifoundrn(&mut self) -> TXFIFOUNDRN_W<DIEPINT1_SPEC, 8> {
-        TXFIFOUNDRN_W::new(self)
+    pub fn txfifoundrn(&mut self) -> TXFIFOUNDRN_W<DIEPINT1_SPEC> {
+        TXFIFOUNDRN_W::new(self, 8)
     }
     #[doc = "Bit 11 - Packet Drop Status"]
     #[inline(always)]
     #[must_use]
-    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<DIEPINT1_SPEC, 11> {
-        PKTDRPSTS_W::new(self)
+    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<DIEPINT1_SPEC> {
+        PKTDRPSTS_W::new(self, 11)
     }
     #[doc = "Bit 13 - NAK interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nakintpt(&mut self) -> NAKINTPT_W<DIEPINT1_SPEC, 13> {
-        NAKINTPT_W::new(self)
+    pub fn nakintpt(&mut self) -> NAKINTPT_W<DIEPINT1_SPEC> {
+        NAKINTPT_W::new(self, 13)
     }
     #[doc = "Bit 14 - NYET interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nyetintpt(&mut self) -> NYETINTPT_W<DIEPINT1_SPEC, 14> {
-        NYETINTPT_W::new(self)
+    pub fn nyetintpt(&mut self) -> NYETINTPT_W<DIEPINT1_SPEC> {
+        NYETINTPT_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -3,15 +3,15 @@ pub type R = crate::R<RCNT_SPEC>;
 #[doc = "Register `RCNT` writer"]
 pub type W = crate::W<RCNT_SPEC>;
 #[doc = "Field `ERRC` writer - error flag clear"]
-pub type ERRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RC` reader - Refresh Count"]
 pub type RC_R = crate::FieldReader<u16>;
 #[doc = "Field `RC` writer - Refresh Count"]
-pub type RC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type RC_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 #[doc = "Field `ERIEN` reader - error Interrupt Enable"]
 pub type ERIEN_R = crate::BitReader;
 #[doc = "Field `ERIEN` writer - error Interrupt Enable"]
-pub type ERIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 1:13 - Refresh Count"]
     #[inline(always)]
@@ -41,20 +41,20 @@ impl W {
     #[doc = "Bit 0 - error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn errc(&mut self) -> ERRC_W<RCNT_SPEC, 0> {
-        ERRC_W::new(self)
+    pub fn errc(&mut self) -> ERRC_W<RCNT_SPEC> {
+        ERRC_W::new(self, 0)
     }
     #[doc = "Bits 1:13 - Refresh Count"]
     #[inline(always)]
     #[must_use]
-    pub fn rc(&mut self) -> RC_W<RCNT_SPEC, 1> {
-        RC_W::new(self)
+    pub fn rc(&mut self) -> RC_W<RCNT_SPEC> {
+        RC_W::new(self, 1)
     }
     #[doc = "Bit 14 - error Interrupt Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn erien(&mut self) -> ERIEN_W<RCNT_SPEC, 14> {
-        ERIEN_W::new(self)
+    pub fn erien(&mut self) -> ERIEN_W<RCNT_SPEC> {
+        ERIEN_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

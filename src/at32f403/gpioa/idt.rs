@@ -37,9 +37,10 @@ impl IDT_R {
     }
 }
 impl R {
-    #[doc = "Port input data"]
+    #[doc = "Port input data\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn idt(&self, n: u8) -> IDT_R {
+    pub fn idt(&self, n: u8) -> IDT_R {
+        assert!(n < 16);
         IDT_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - Port input data"]

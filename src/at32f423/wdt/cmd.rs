@@ -21,8 +21,8 @@ impl crate::FieldSpec for CMD_AW {
     type Ux = u16;
 }
 #[doc = "Field `CMD` writer - Command register"]
-pub type CMD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, CMD_AW>;
-impl<'a, REG, const O: u8> CMD_W<'a, REG, O>
+pub type CMD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, CMD_AW>;
+impl<'a, REG> CMD_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u16>,
@@ -52,8 +52,8 @@ impl W {
     #[doc = "Bits 0:15 - Command register"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd(&mut self) -> CMD_W<CMD_SPEC, 0> {
-        CMD_W::new(self)
+    pub fn cmd(&mut self) -> CMD_W<CMD_SPEC> {
+        CMD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

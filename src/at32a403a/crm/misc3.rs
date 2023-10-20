@@ -5,19 +5,19 @@ pub type W = crate::W<MISC3_SPEC>;
 #[doc = "Field `AUTO_STEP_EN` reader - AUTO_STEP_EN"]
 pub type AUTO_STEP_EN_R = crate::FieldReader;
 #[doc = "Field `AUTO_STEP_EN` writer - AUTO_STEP_EN"]
-pub type AUTO_STEP_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type AUTO_STEP_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `HICK_TO_USB` reader - HICK to usb clock"]
 pub type HICK_TO_USB_R = crate::BitReader;
 #[doc = "Field `HICK_TO_USB` writer - HICK to usb clock"]
-pub type HICK_TO_USB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICK_TO_USB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HICK_TO_SCLK` reader - HICK to system clock"]
 pub type HICK_TO_SCLK_R = crate::BitReader;
 #[doc = "Field `HICK_TO_SCLK` writer - HICK to system clock"]
-pub type HICK_TO_SCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICK_TO_SCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEXTDIV` reader - HEXT division"]
 pub type HEXTDIV_R = crate::FieldReader;
 #[doc = "Field `HEXTDIV` writer - HEXT division"]
-pub type HEXTDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type HEXTDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
@@ -65,26 +65,26 @@ impl W {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
     #[must_use]
-    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<MISC3_SPEC, 4> {
-        AUTO_STEP_EN_W::new(self)
+    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<MISC3_SPEC> {
+        AUTO_STEP_EN_W::new(self, 4)
     }
     #[doc = "Bit 8 - HICK to usb clock"]
     #[inline(always)]
     #[must_use]
-    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<MISC3_SPEC, 8> {
-        HICK_TO_USB_W::new(self)
+    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<MISC3_SPEC> {
+        HICK_TO_USB_W::new(self, 8)
     }
     #[doc = "Bit 9 - HICK to system clock"]
     #[inline(always)]
     #[must_use]
-    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<MISC3_SPEC, 9> {
-        HICK_TO_SCLK_W::new(self)
+    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<MISC3_SPEC> {
+        HICK_TO_SCLK_W::new(self, 9)
     }
     #[doc = "Bits 12:13 - HEXT division"]
     #[inline(always)]
     #[must_use]
-    pub fn hextdiv(&mut self) -> HEXTDIV_W<MISC3_SPEC, 12> {
-        HEXTDIV_W::new(self)
+    pub fn hextdiv(&mut self) -> HEXTDIV_W<MISC3_SPEC> {
+        HEXTDIV_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<AHBRST_SPEC>;
 #[doc = "Field `OTGFS1` reader - OTGFS1 reset"]
 pub type OTGFS1_R = crate::BitReader;
 #[doc = "Field `OTGFS1` writer - OTGFS1 reset"]
-pub type OTGFS1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OTGFS1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 12 - OTGFS1 reset"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 12 - OTGFS1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn otgfs1(&mut self) -> OTGFS1_W<AHBRST_SPEC, 12> {
-        OTGFS1_W::new(self)
+    pub fn otgfs1(&mut self) -> OTGFS1_W<AHBRST_SPEC> {
+        OTGFS1_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

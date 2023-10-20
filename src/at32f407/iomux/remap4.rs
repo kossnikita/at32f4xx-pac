@@ -5,27 +5,27 @@ pub type W = crate::W<REMAP4_SPEC>;
 #[doc = "Field `TMR1_GMUX` reader - TMR1 muxing"]
 pub type TMR1_GMUX_R = crate::FieldReader;
 #[doc = "Field `TMR1_GMUX` writer - TMR1 muxing"]
-pub type TMR1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TMR1_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TMR2_GMUX` reader - TMR2 muxing"]
 pub type TMR2_GMUX_R = crate::FieldReader;
 #[doc = "Field `TMR2_GMUX` writer - TMR2 muxing"]
-pub type TMR2_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TMR2_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TMR2ITR1_GMUX` reader - TMR2 internal trigger 1 muxing"]
 pub type TMR2ITR1_GMUX_R = crate::FieldReader;
 #[doc = "Field `TMR2ITR1_GMUX` writer - TMR2 internal trigger 1 muxing"]
-pub type TMR2ITR1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TMR2ITR1_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TMR3_GMUX` reader - TMR3 muxing"]
 pub type TMR3_GMUX_R = crate::FieldReader;
 #[doc = "Field `TMR3_GMUX` writer - TMR3 muxing"]
-pub type TMR3_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TMR3_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TMR4_GMUX` reader - TMR4 muxing"]
 pub type TMR4_GMUX_R = crate::FieldReader;
 #[doc = "Field `TMR4_GMUX` writer - TMR4 muxing"]
-pub type TMR4_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TMR4_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TMR5CH4_GMUX` reader - TMR5 channel4 internal muxing"]
 pub type TMR5CH4_GMUX_R = crate::BitReader;
 #[doc = "Field `TMR5CH4_GMUX` writer - TMR5 channel4 internal muxing"]
-pub type TMR5CH4_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR5CH4_GMUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - TMR1 muxing"]
     #[inline(always)]
@@ -85,38 +85,38 @@ impl W {
     #[doc = "Bits 0:3 - TMR1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr1_gmux(&mut self) -> TMR1_GMUX_W<REMAP4_SPEC, 0> {
-        TMR1_GMUX_W::new(self)
+    pub fn tmr1_gmux(&mut self) -> TMR1_GMUX_W<REMAP4_SPEC> {
+        TMR1_GMUX_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - TMR2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr2_gmux(&mut self) -> TMR2_GMUX_W<REMAP4_SPEC, 4> {
-        TMR2_GMUX_W::new(self)
+    pub fn tmr2_gmux(&mut self) -> TMR2_GMUX_W<REMAP4_SPEC> {
+        TMR2_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - TMR2 internal trigger 1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr2itr1_gmux(&mut self) -> TMR2ITR1_GMUX_W<REMAP4_SPEC, 6> {
-        TMR2ITR1_GMUX_W::new(self)
+    pub fn tmr2itr1_gmux(&mut self) -> TMR2ITR1_GMUX_W<REMAP4_SPEC> {
+        TMR2ITR1_GMUX_W::new(self, 6)
     }
     #[doc = "Bits 8:11 - TMR3 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr3_gmux(&mut self) -> TMR3_GMUX_W<REMAP4_SPEC, 8> {
-        TMR3_GMUX_W::new(self)
+    pub fn tmr3_gmux(&mut self) -> TMR3_GMUX_W<REMAP4_SPEC> {
+        TMR3_GMUX_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - TMR4 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr4_gmux(&mut self) -> TMR4_GMUX_W<REMAP4_SPEC, 12> {
-        TMR4_GMUX_W::new(self)
+    pub fn tmr4_gmux(&mut self) -> TMR4_GMUX_W<REMAP4_SPEC> {
+        TMR4_GMUX_W::new(self, 12)
     }
     #[doc = "Bit 19 - TMR5 channel4 internal muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr5ch4_gmux(&mut self) -> TMR5CH4_GMUX_W<REMAP4_SPEC, 19> {
-        TMR5CH4_GMUX_W::new(self)
+    pub fn tmr5ch4_gmux(&mut self) -> TMR5CH4_GMUX_W<REMAP4_SPEC> {
+        TMR5CH4_GMUX_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

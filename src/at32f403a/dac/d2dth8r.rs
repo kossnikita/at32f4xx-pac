@@ -5,7 +5,7 @@ pub type W = crate::W<D2DTH8R_SPEC>;
 #[doc = "Field `D2DT8R` reader - DAC2 8-bit right-aligned data"]
 pub type D2DT8R_R = crate::FieldReader;
 #[doc = "Field `D2DT8R` writer - DAC2 8-bit right-aligned data"]
-pub type D2DT8R_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type D2DT8R_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - DAC2 8-bit right-aligned data"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:7 - DAC2 8-bit right-aligned data"]
     #[inline(always)]
     #[must_use]
-    pub fn d2dt8r(&mut self) -> D2DT8R_W<D2DTH8R_SPEC, 0> {
-        D2DT8R_W::new(self)
+    pub fn d2dt8r(&mut self) -> D2DT8R_W<D2DTH8R_SPEC> {
+        D2DT8R_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<PICLKS_SPEC>;
 #[doc = "Field `USART1SEL` reader - USART1 clock select"]
 pub type USART1SEL_R = crate::FieldReader;
 #[doc = "Field `USART1SEL` writer - USART1 clock select"]
-pub type USART1SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type USART1SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `USART2SEL` reader - USART2 clock select"]
 pub type USART2SEL_R = crate::FieldReader;
 #[doc = "Field `USART2SEL` writer - USART2 clock select"]
-pub type USART2SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type USART2SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `USART3SEL` reader - USART3 clock select"]
 pub type USART3SEL_R = crate::FieldReader;
 #[doc = "Field `USART3SEL` writer - USART3 clock select"]
-pub type USART3SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type USART3SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2C1SEL` reader - I2C1 clock select"]
 pub type I2C1SEL_R = crate::FieldReader;
 #[doc = "Field `I2C1SEL` writer - I2C1 clock select"]
-pub type I2C1SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2C1SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - USART1 clock select"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:1 - USART1 clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn usart1sel(&mut self) -> USART1SEL_W<PICLKS_SPEC, 0> {
-        USART1SEL_W::new(self)
+    pub fn usart1sel(&mut self) -> USART1SEL_W<PICLKS_SPEC> {
+        USART1SEL_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - USART2 clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn usart2sel(&mut self) -> USART2SEL_W<PICLKS_SPEC, 2> {
-        USART2SEL_W::new(self)
+    pub fn usart2sel(&mut self) -> USART2SEL_W<PICLKS_SPEC> {
+        USART2SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - USART3 clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn usart3sel(&mut self) -> USART3SEL_W<PICLKS_SPEC, 4> {
-        USART3SEL_W::new(self)
+    pub fn usart3sel(&mut self) -> USART3SEL_W<PICLKS_SPEC> {
+        USART3SEL_W::new(self, 4)
     }
     #[doc = "Bits 12:13 - I2C1 clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c1sel(&mut self) -> I2C1SEL_W<PICLKS_SPEC, 12> {
-        I2C1SEL_W::new(self)
+    pub fn i2c1sel(&mut self) -> I2C1SEL_W<PICLKS_SPEC> {
+        I2C1SEL_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

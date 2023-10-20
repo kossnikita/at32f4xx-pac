@@ -5,11 +5,11 @@ pub type W = crate::W<CCAL_SPEC>;
 #[doc = "Field `CALVAL` reader - Calibration value"]
 pub type CALVAL_R = crate::FieldReader;
 #[doc = "Field `CALVAL` writer - Calibration value"]
-pub type CALVAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type CALVAL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CALDIR` reader - Calibration direction"]
 pub type CALDIR_R = crate::BitReader;
 #[doc = "Field `CALDIR` writer - Calibration direction"]
-pub type CALDIR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CALDIR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - Calibration value"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:4 - Calibration value"]
     #[inline(always)]
     #[must_use]
-    pub fn calval(&mut self) -> CALVAL_W<CCAL_SPEC, 0> {
-        CALVAL_W::new(self)
+    pub fn calval(&mut self) -> CALVAL_W<CCAL_SPEC> {
+        CALVAL_W::new(self, 0)
     }
     #[doc = "Bit 7 - Calibration direction"]
     #[inline(always)]
     #[must_use]
-    pub fn caldir(&mut self) -> CALDIR_W<CCAL_SPEC, 7> {
-        CALDIR_W::new(self)
+    pub fn caldir(&mut self) -> CALDIR_W<CCAL_SPEC> {
+        CALDIR_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

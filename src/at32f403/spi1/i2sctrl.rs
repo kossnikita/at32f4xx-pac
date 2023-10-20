@@ -5,35 +5,35 @@ pub type W = crate::W<I2SCTRL_SPEC>;
 #[doc = "Field `I2SCBN` reader - I2S channel bit num"]
 pub type I2SCBN_R = crate::BitReader;
 #[doc = "Field `I2SCBN` writer - I2S channel bit num"]
-pub type I2SCBN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2SCBN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2SDBN` reader - I2S data bit num"]
 pub type I2SDBN_R = crate::FieldReader;
 #[doc = "Field `I2SDBN` writer - I2S data bit num"]
-pub type I2SDBN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type I2SDBN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2SCLKPOL` reader - I2S clock polarity"]
 pub type I2SCLKPOL_R = crate::BitReader;
 #[doc = "Field `I2SCLKPOL` writer - I2S clock polarity"]
-pub type I2SCLKPOL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2SCLKPOL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STDSEL` reader - I2S standard select"]
 pub type STDSEL_R = crate::FieldReader;
 #[doc = "Field `STDSEL` writer - I2S standard select"]
-pub type STDSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type STDSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PCMFSSEL` reader - PCM frame synchronization select"]
 pub type PCMFSSEL_R = crate::BitReader;
 #[doc = "Field `PCMFSSEL` writer - PCM frame synchronization select"]
-pub type PCMFSSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCMFSSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OPERSEL` reader - I2S operation select"]
 pub type OPERSEL_R = crate::FieldReader;
 #[doc = "Field `OPERSEL` writer - I2S operation select"]
-pub type OPERSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type OPERSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `I2SEN` reader - I2S Enable"]
 pub type I2SEN_R = crate::BitReader;
 #[doc = "Field `I2SEN` writer - I2S Enable"]
-pub type I2SEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2SEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2SMSEL` reader - I2S mode select"]
 pub type I2SMSEL_R = crate::BitReader;
 #[doc = "Field `I2SMSEL` writer - I2S mode select"]
-pub type I2SMSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2SMSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - I2S channel bit num"]
     #[inline(always)]
@@ -99,50 +99,50 @@ impl W {
     #[doc = "Bit 0 - I2S channel bit num"]
     #[inline(always)]
     #[must_use]
-    pub fn i2scbn(&mut self) -> I2SCBN_W<I2SCTRL_SPEC, 0> {
-        I2SCBN_W::new(self)
+    pub fn i2scbn(&mut self) -> I2SCBN_W<I2SCTRL_SPEC> {
+        I2SCBN_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - I2S data bit num"]
     #[inline(always)]
     #[must_use]
-    pub fn i2sdbn(&mut self) -> I2SDBN_W<I2SCTRL_SPEC, 1> {
-        I2SDBN_W::new(self)
+    pub fn i2sdbn(&mut self) -> I2SDBN_W<I2SCTRL_SPEC> {
+        I2SDBN_W::new(self, 1)
     }
     #[doc = "Bit 3 - I2S clock polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn i2sclkpol(&mut self) -> I2SCLKPOL_W<I2SCTRL_SPEC, 3> {
-        I2SCLKPOL_W::new(self)
+    pub fn i2sclkpol(&mut self) -> I2SCLKPOL_W<I2SCTRL_SPEC> {
+        I2SCLKPOL_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - I2S standard select"]
     #[inline(always)]
     #[must_use]
-    pub fn stdsel(&mut self) -> STDSEL_W<I2SCTRL_SPEC, 4> {
-        STDSEL_W::new(self)
+    pub fn stdsel(&mut self) -> STDSEL_W<I2SCTRL_SPEC> {
+        STDSEL_W::new(self, 4)
     }
     #[doc = "Bit 7 - PCM frame synchronization select"]
     #[inline(always)]
     #[must_use]
-    pub fn pcmfssel(&mut self) -> PCMFSSEL_W<I2SCTRL_SPEC, 7> {
-        PCMFSSEL_W::new(self)
+    pub fn pcmfssel(&mut self) -> PCMFSSEL_W<I2SCTRL_SPEC> {
+        PCMFSSEL_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - I2S operation select"]
     #[inline(always)]
     #[must_use]
-    pub fn opersel(&mut self) -> OPERSEL_W<I2SCTRL_SPEC, 8> {
-        OPERSEL_W::new(self)
+    pub fn opersel(&mut self) -> OPERSEL_W<I2SCTRL_SPEC> {
+        OPERSEL_W::new(self, 8)
     }
     #[doc = "Bit 10 - I2S Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn i2sen(&mut self) -> I2SEN_W<I2SCTRL_SPEC, 10> {
-        I2SEN_W::new(self)
+    pub fn i2sen(&mut self) -> I2SEN_W<I2SCTRL_SPEC> {
+        I2SEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - I2S mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn i2smsel(&mut self) -> I2SMSEL_W<I2SCTRL_SPEC, 11> {
-        I2SMSEL_W::new(self)
+    pub fn i2smsel(&mut self) -> I2SMSEL_W<I2SCTRL_SPEC> {
+        I2SMSEL_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<TMC_SPEC>;
 #[doc = "Field `DTBL` reader - Transmit mailbox data byte length"]
 pub type DTBL_R = crate::FieldReader;
 #[doc = "Field `DTBL` writer - Transmit mailbox data byte length"]
-pub type DTBL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type DTBL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `TSTEN` reader - Transmit mailbox time stamp transmit enable"]
 pub type TSTEN_R = crate::BitReader<TSTENR_A>;
 #[doc = "Transmit mailbox time stamp transmit enable\n\nValue on reset: 0"]
@@ -57,8 +57,8 @@ impl From<TSTENW_AW> for bool {
     }
 }
 #[doc = "Field `TSTEN` writer - Transmit mailbox time stamp transmit enable"]
-pub type TSTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TSTENW_AW>;
-impl<'a, REG, const O: u8> TSTEN_W<'a, REG, O>
+pub type TSTEN_W<'a, REG> = crate::BitWriter<'a, REG, TSTENW_AW>;
+impl<'a, REG> TSTEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -76,7 +76,7 @@ where
 #[doc = "Field `TS` reader - Transmit mailbox time stamp"]
 pub type TS_R = crate::FieldReader<u16>;
 #[doc = "Field `TS` writer - Transmit mailbox time stamp"]
-pub type TS_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 16, O, u16>;
+pub type TS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:3 - Transmit mailbox data byte length"]
     #[inline(always)]
@@ -112,20 +112,20 @@ impl W {
     #[doc = "Bits 0:3 - Transmit mailbox data byte length"]
     #[inline(always)]
     #[must_use]
-    pub fn dtbl(&mut self) -> DTBL_W<TMC_SPEC, 0> {
-        DTBL_W::new(self)
+    pub fn dtbl(&mut self) -> DTBL_W<TMC_SPEC> {
+        DTBL_W::new(self, 0)
     }
     #[doc = "Bit 8 - Transmit mailbox time stamp transmit enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tsten(&mut self) -> TSTEN_W<TMC_SPEC, 8> {
-        TSTEN_W::new(self)
+    pub fn tsten(&mut self) -> TSTEN_W<TMC_SPEC> {
+        TSTEN_W::new(self, 8)
     }
     #[doc = "Bits 16:31 - Transmit mailbox time stamp"]
     #[inline(always)]
     #[must_use]
-    pub fn ts(&mut self) -> TS_W<TMC_SPEC, 16> {
-        TS_W::new(self)
+    pub fn ts(&mut self) -> TS_W<TMC_SPEC> {
+        TS_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

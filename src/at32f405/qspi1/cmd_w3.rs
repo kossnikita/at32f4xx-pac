@@ -5,27 +5,27 @@ pub type W = crate::W<CMD_W3_SPEC>;
 #[doc = "Field `WEN` reader - Write data enable"]
 pub type WEN_R = crate::BitReader;
 #[doc = "Field `WEN` writer - Write data enable"]
-pub type WEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSTSEN` reader - Read spi status enable"]
 pub type RSTSEN_R = crate::BitReader;
 #[doc = "Field `RSTSEN` writer - Read spi status enable"]
-pub type RSTSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSTSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSTSC` reader - Read spi status configure"]
 pub type RSTSC_R = crate::BitReader;
 #[doc = "Field `RSTSC` writer - Read spi status configure"]
-pub type RSTSC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSTSC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OPMODE` reader - SPI operate mode"]
 pub type OPMODE_R = crate::FieldReader;
 #[doc = "Field `OPMODE` writer - SPI operate mode"]
-pub type OPMODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type OPMODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PEMOPC` reader - Performance enhance mode operate code"]
 pub type PEMOPC_R = crate::FieldReader;
 #[doc = "Field `PEMOPC` writer - Performance enhance mode operate code"]
-pub type PEMOPC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type PEMOPC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `INSC` reader - Instruction code"]
 pub type INSC_R = crate::FieldReader;
 #[doc = "Field `INSC` writer - Instruction code"]
-pub type INSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type INSC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 1 - Write data enable"]
     #[inline(always)]
@@ -79,38 +79,38 @@ impl W {
     #[doc = "Bit 1 - Write data enable"]
     #[inline(always)]
     #[must_use]
-    pub fn wen(&mut self) -> WEN_W<CMD_W3_SPEC, 1> {
-        WEN_W::new(self)
+    pub fn wen(&mut self) -> WEN_W<CMD_W3_SPEC> {
+        WEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Read spi status enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rstsen(&mut self) -> RSTSEN_W<CMD_W3_SPEC, 2> {
-        RSTSEN_W::new(self)
+    pub fn rstsen(&mut self) -> RSTSEN_W<CMD_W3_SPEC> {
+        RSTSEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Read spi status configure"]
     #[inline(always)]
     #[must_use]
-    pub fn rstsc(&mut self) -> RSTSC_W<CMD_W3_SPEC, 3> {
-        RSTSC_W::new(self)
+    pub fn rstsc(&mut self) -> RSTSC_W<CMD_W3_SPEC> {
+        RSTSC_W::new(self, 3)
     }
     #[doc = "Bits 5:7 - SPI operate mode"]
     #[inline(always)]
     #[must_use]
-    pub fn opmode(&mut self) -> OPMODE_W<CMD_W3_SPEC, 5> {
-        OPMODE_W::new(self)
+    pub fn opmode(&mut self) -> OPMODE_W<CMD_W3_SPEC> {
+        OPMODE_W::new(self, 5)
     }
     #[doc = "Bits 16:23 - Performance enhance mode operate code"]
     #[inline(always)]
     #[must_use]
-    pub fn pemopc(&mut self) -> PEMOPC_W<CMD_W3_SPEC, 16> {
-        PEMOPC_W::new(self)
+    pub fn pemopc(&mut self) -> PEMOPC_W<CMD_W3_SPEC> {
+        PEMOPC_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Instruction code"]
     #[inline(always)]
     #[must_use]
-    pub fn insc(&mut self) -> INSC_W<CMD_W3_SPEC, 24> {
-        INSC_W::new(self)
+    pub fn insc(&mut self) -> INSC_W<CMD_W3_SPEC> {
+        INSC_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

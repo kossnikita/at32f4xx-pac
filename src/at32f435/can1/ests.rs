@@ -200,8 +200,8 @@ impl ETR_R {
     }
 }
 #[doc = "Field `ETR` writer - Error type record"]
-pub type ETR_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, ETR_A>;
-impl<'a, REG, const O: u8> ETR_W<'a, REG, O>
+pub type ETR_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, ETR_A>;
+impl<'a, REG> ETR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -304,8 +304,8 @@ impl W {
     #[doc = "Bits 4:6 - Error type record"]
     #[inline(always)]
     #[must_use]
-    pub fn etr(&mut self) -> ETR_W<ESTS_SPEC, 4> {
-        ETR_W::new(self)
+    pub fn etr(&mut self) -> ETR_W<ESTS_SPEC> {
+        ETR_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

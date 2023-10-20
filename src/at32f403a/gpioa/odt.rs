@@ -53,8 +53,8 @@ impl From<ODT0W_AW> for bool {
     }
 }
 #[doc = "Field `ODT[0-15]` writer - Port output data"]
-pub type ODT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ODT0W_AW>;
-impl<'a, REG, const O: u8> ODT_W<'a, REG, O>
+pub type ODT_W<'a, REG> = crate::BitWriter<'a, REG, ODT0W_AW>;
+impl<'a, REG> ODT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -70,9 +70,10 @@ where
     }
 }
 impl R {
-    #[doc = "Port output data"]
+    #[doc = "Port output data\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn odt(&self, n: u8) -> ODT_R {
+    pub fn odt(&self, n: u8) -> ODT_R {
+        assert!(n < 16);
         ODT_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - Port output data"]
@@ -187,104 +188,105 @@ impl W {
     #[doc = "Port output data"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn odt<const O: u8>(&mut self) -> ODT_W<ODT_SPEC, O> {
-        ODT_W::new(self)
+    pub fn odt(&mut self, n: u8) -> ODT_W<ODT_SPEC> {
+        assert!(n < 16);
+        ODT_W::new(self, n)
     }
     #[doc = "Bit 0 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt0(&mut self) -> ODT_W<ODT_SPEC, 0> {
-        ODT_W::new(self)
+    pub fn odt0(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt1(&mut self) -> ODT_W<ODT_SPEC, 1> {
-        ODT_W::new(self)
+    pub fn odt1(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt2(&mut self) -> ODT_W<ODT_SPEC, 2> {
-        ODT_W::new(self)
+    pub fn odt2(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt3(&mut self) -> ODT_W<ODT_SPEC, 3> {
-        ODT_W::new(self)
+    pub fn odt3(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt4(&mut self) -> ODT_W<ODT_SPEC, 4> {
-        ODT_W::new(self)
+    pub fn odt4(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 4)
     }
     #[doc = "Bit 5 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt5(&mut self) -> ODT_W<ODT_SPEC, 5> {
-        ODT_W::new(self)
+    pub fn odt5(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 5)
     }
     #[doc = "Bit 6 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt6(&mut self) -> ODT_W<ODT_SPEC, 6> {
-        ODT_W::new(self)
+    pub fn odt6(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt7(&mut self) -> ODT_W<ODT_SPEC, 7> {
-        ODT_W::new(self)
+    pub fn odt7(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt8(&mut self) -> ODT_W<ODT_SPEC, 8> {
-        ODT_W::new(self)
+    pub fn odt8(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt9(&mut self) -> ODT_W<ODT_SPEC, 9> {
-        ODT_W::new(self)
+    pub fn odt9(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt10(&mut self) -> ODT_W<ODT_SPEC, 10> {
-        ODT_W::new(self)
+    pub fn odt10(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 10)
     }
     #[doc = "Bit 11 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt11(&mut self) -> ODT_W<ODT_SPEC, 11> {
-        ODT_W::new(self)
+    pub fn odt11(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 11)
     }
     #[doc = "Bit 12 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt12(&mut self) -> ODT_W<ODT_SPEC, 12> {
-        ODT_W::new(self)
+    pub fn odt12(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 12)
     }
     #[doc = "Bit 13 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt13(&mut self) -> ODT_W<ODT_SPEC, 13> {
-        ODT_W::new(self)
+    pub fn odt13(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 13)
     }
     #[doc = "Bit 14 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt14(&mut self) -> ODT_W<ODT_SPEC, 14> {
-        ODT_W::new(self)
+    pub fn odt14(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 14)
     }
     #[doc = "Bit 15 - Port output data"]
     #[inline(always)]
     #[must_use]
-    pub fn odt15(&mut self) -> ODT_W<ODT_SPEC, 15> {
-        ODT_W::new(self)
+    pub fn odt15(&mut self) -> ODT_W<ODT_SPEC> {
+        ODT_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

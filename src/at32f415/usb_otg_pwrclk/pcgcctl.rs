@@ -5,7 +5,7 @@ pub type W = crate::W<PCGCCTL_SPEC>;
 #[doc = "Field `STOPPCLK` reader - Stop PHY clock"]
 pub type STOPPCLK_R = crate::BitReader;
 #[doc = "Field `STOPPCLK` writer - Stop PHY clock"]
-pub type STOPPCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STOPPCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SUSPENDM` reader - PHY Suspended"]
 pub type SUSPENDM_R = crate::BitReader;
 impl R {
@@ -37,8 +37,8 @@ impl W {
     #[doc = "Bit 0 - Stop PHY clock"]
     #[inline(always)]
     #[must_use]
-    pub fn stoppclk(&mut self) -> STOPPCLK_W<PCGCCTL_SPEC, 0> {
-        STOPPCLK_W::new(self)
+    pub fn stoppclk(&mut self) -> STOPPCLK_W<PCGCCTL_SPEC> {
+        STOPPCLK_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

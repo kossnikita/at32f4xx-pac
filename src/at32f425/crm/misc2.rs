@@ -5,11 +5,11 @@ pub type W = crate::W<MISC2_SPEC>;
 #[doc = "Field `HICK_TO_USB` reader - HICK_TO_USB"]
 pub type HICK_TO_USB_R = crate::BitReader;
 #[doc = "Field `HICK_TO_USB` writer - HICK_TO_USB"]
-pub type HICK_TO_USB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICK_TO_USB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HICK_TO_SCLK` reader - HICK to system clock"]
 pub type HICK_TO_SCLK_R = crate::BitReader;
 #[doc = "Field `HICK_TO_SCLK` writer - HICK to system clock"]
-pub type HICK_TO_SCLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICK_TO_SCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 8 - HICK_TO_USB"]
     #[inline(always)]
@@ -42,14 +42,14 @@ impl W {
     #[doc = "Bit 8 - HICK_TO_USB"]
     #[inline(always)]
     #[must_use]
-    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<MISC2_SPEC, 8> {
-        HICK_TO_USB_W::new(self)
+    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<MISC2_SPEC> {
+        HICK_TO_USB_W::new(self, 8)
     }
     #[doc = "Bit 9 - HICK to system clock"]
     #[inline(always)]
     #[must_use]
-    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<MISC2_SPEC, 9> {
-        HICK_TO_SCLK_W::new(self)
+    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<MISC2_SPEC> {
+        HICK_TO_SCLK_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

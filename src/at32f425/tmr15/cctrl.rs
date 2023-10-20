@@ -53,8 +53,8 @@ impl From<C1ENW_AW> for bool {
     }
 }
 #[doc = "Field `CEN[1-2]` writer - Channel %s enable"]
-pub type CEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1ENW_AW>;
-impl<'a, REG, const O: u8> CEN_W<'a, REG, O>
+pub type CEN_W<'a, REG> = crate::BitWriter<'a, REG, C1ENW_AW>;
+impl<'a, REG> CEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -106,8 +106,8 @@ impl CP_R {
     }
 }
 #[doc = "Field `CP[1-2]` writer - Channel %s polarity"]
-pub type CP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1P_A>;
-impl<'a, REG, const O: u8> CP_W<'a, REG, O>
+pub type CP_W<'a, REG> = crate::BitWriter<'a, REG, C1P_A>;
+impl<'a, REG> CP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -125,17 +125,18 @@ where
 #[doc = "Field `C1CEN` reader - Channel 1 complementary enable"]
 pub type C1CEN_R = crate::BitReader;
 #[doc = "Field `C1CEN` writer - Channel 1 complementary enable"]
-pub type C1CEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type C1CEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CCP[1-1]` reader - Channel %s complementary polarity"]
 pub use CP_R as CCP_R;
 #[doc = "Field `CCP[1-1]` writer - Channel %s complementary polarity"]
 pub use CP_W as CCP_W;
 impl R {
     #[doc = "Channel [1-2]
-enable"]
+enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cen(&self, n: u8) -> CEN_R {
-        CEN_R::new(((self.bits >> ((n - 1) * 4)) & 1) != 0)
+    pub fn cen(&self, n: u8) -> CEN_R {
+        assert!(n < 2);
+        CEN_R::new(((self.bits >> (n * 4)) & 1) != 0)
     }
     #[doc = "Bit 0 - Channel 1 enable"]
     #[inline(always)]
@@ -148,10 +149,11 @@ enable"]
         CEN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Channel [1-2]
-polarity"]
+polarity\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cp(&self, n: u8) -> CP_R {
-        CP_R::new(((self.bits >> ((n - 1) * 4 + 1)) & 1) != 0)
+    pub fn cp(&self, n: u8) -> CP_R {
+        assert!(n < 2);
+        CP_R::new(((self.bits >> (n * 4 + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - Channel 1 polarity"]
     #[inline(always)]
@@ -169,10 +171,11 @@ polarity"]
         C1CEN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Channel [1-1]
-complementary polarity"]
+complementary polarity\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn ccp(&self, n: u8) -> CCP_R {
-        CCP_R::new(((self.bits >> ((n - 1) * 0 + 3)) & 1) != 0)
+    pub fn ccp(&self, n: u8) -> CCP_R {
+        assert!(n < 1);
+        CCP_R::new(((self.bits >> (n * 0 + 3)) & 1) != 0)
     }
     #[doc = "Bit 3 - Channel 1 complementary polarity"]
     #[inline(always)]
@@ -202,58 +205,61 @@ impl W {
 enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cen<const O: u8>(&mut self) -> CEN_W<CCTRL_SPEC, O> {
-        CEN_W::new(self)
+    pub fn cen(&mut self, n: u8) -> CEN_W<CCTRL_SPEC> {
+        assert!(n < 2);
+        CEN_W::new(self, n * 4)
     }
     #[doc = "Bit 0 - Channel 1 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c1en(&mut self) -> CEN_W<CCTRL_SPEC, 0> {
-        CEN_W::new(self)
+    pub fn c1en(&mut self) -> CEN_W<CCTRL_SPEC> {
+        CEN_W::new(self, 0)
     }
     #[doc = "Bit 4 - Channel 2 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c2en(&mut self) -> CEN_W<CCTRL_SPEC, 4> {
-        CEN_W::new(self)
+    pub fn c2en(&mut self) -> CEN_W<CCTRL_SPEC> {
+        CEN_W::new(self, 4)
     }
     #[doc = "Channel [1-2]
 polarity"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cp<const O: u8>(&mut self) -> CP_W<CCTRL_SPEC, O> {
-        CP_W::new(self)
+    pub fn cp(&mut self, n: u8) -> CP_W<CCTRL_SPEC> {
+        assert!(n < 2);
+        CP_W::new(self, n * 4 + 1)
     }
     #[doc = "Bit 1 - Channel 1 polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn c1p(&mut self) -> CP_W<CCTRL_SPEC, 1> {
-        CP_W::new(self)
+    pub fn c1p(&mut self) -> CP_W<CCTRL_SPEC> {
+        CP_W::new(self, 1)
     }
     #[doc = "Bit 5 - Channel 2 polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn c2p(&mut self) -> CP_W<CCTRL_SPEC, 5> {
-        CP_W::new(self)
+    pub fn c2p(&mut self) -> CP_W<CCTRL_SPEC> {
+        CP_W::new(self, 5)
     }
     #[doc = "Bit 2 - Channel 1 complementary enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c1cen(&mut self) -> C1CEN_W<CCTRL_SPEC, 2> {
-        C1CEN_W::new(self)
+    pub fn c1cen(&mut self) -> C1CEN_W<CCTRL_SPEC> {
+        C1CEN_W::new(self, 2)
     }
     #[doc = "Channel [1-1]
 complementary polarity"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn ccp<const O: u8>(&mut self) -> CCP_W<CCTRL_SPEC, O> {
-        CCP_W::new(self)
+    pub fn ccp(&mut self, n: u8) -> CCP_W<CCTRL_SPEC> {
+        assert!(n < 1);
+        CCP_W::new(self, n * 0 + 3)
     }
     #[doc = "Bit 3 - Channel 1 complementary polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn c1cp(&mut self) -> CCP_W<CCTRL_SPEC, 3> {
-        CCP_W::new(self)
+    pub fn c1cp(&mut self) -> CCP_W<CCTRL_SPEC> {
+        CCP_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

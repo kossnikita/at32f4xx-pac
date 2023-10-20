@@ -5,7 +5,7 @@ pub type W = crate::W<EVTOUT_SPEC>;
 #[doc = "Field `SELPIN` reader - Select pin"]
 pub type SELPIN_R = crate::FieldReader;
 #[doc = "Field `SELPIN` writer - Select pin"]
-pub type SELPIN_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type SELPIN_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `SELPORT` reader - Select port"]
 pub type SELPORT_R = crate::FieldReader<SELPORT_A>;
 #[doc = "Select port\n\nValue on reset: 0"]
@@ -72,8 +72,8 @@ impl SELPORT_R {
     }
 }
 #[doc = "Field `SELPORT` writer - Select port"]
-pub type SELPORT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, SELPORT_A>;
-impl<'a, REG, const O: u8> SELPORT_W<'a, REG, O>
+pub type SELPORT_W<'a, REG> = crate::FieldWriter<'a, REG, 3, SELPORT_A>;
+impl<'a, REG> SELPORT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -141,8 +141,8 @@ impl EVOEN_R {
     }
 }
 #[doc = "Field `EVOEN` writer - Event output enable"]
-pub type EVOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, EVOEN_A>;
-impl<'a, REG, const O: u8> EVOEN_W<'a, REG, O>
+pub type EVOEN_W<'a, REG> = crate::BitWriter<'a, REG, EVOEN_A>;
+impl<'a, REG> EVOEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -192,20 +192,20 @@ impl W {
     #[doc = "Bits 0:3 - Select pin"]
     #[inline(always)]
     #[must_use]
-    pub fn selpin(&mut self) -> SELPIN_W<EVTOUT_SPEC, 0> {
-        SELPIN_W::new(self)
+    pub fn selpin(&mut self) -> SELPIN_W<EVTOUT_SPEC> {
+        SELPIN_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Select port"]
     #[inline(always)]
     #[must_use]
-    pub fn selport(&mut self) -> SELPORT_W<EVTOUT_SPEC, 4> {
-        SELPORT_W::new(self)
+    pub fn selport(&mut self) -> SELPORT_W<EVTOUT_SPEC> {
+        SELPORT_W::new(self, 4)
     }
     #[doc = "Bit 7 - Event output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evoen(&mut self) -> EVOEN_W<EVTOUT_SPEC, 7> {
-        EVOEN_W::new(self)
+    pub fn evoen(&mut self) -> EVOEN_W<EVTOUT_SPEC> {
+        EVOEN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,31 +5,31 @@ pub type W = crate::W<MUXSYNCCLR_SPEC>;
 #[doc = "Field `SYNCOVFC1` reader - Clear synchronizaton overrun interrupt flag"]
 pub type SYNCOVFC1_R = crate::BitReader;
 #[doc = "Field `SYNCOVFC1` writer - Clear synchronizaton overrun interrupt flag"]
-pub type SYNCOVFC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCOVFC1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCOVFC2` reader - Clear synchronizaton overrun interrupt flag"]
 pub type SYNCOVFC2_R = crate::BitReader;
 #[doc = "Field `SYNCOVFC2` writer - Clear synchronizaton overrun interrupt flag"]
-pub type SYNCOVFC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCOVFC2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCOVFC3` reader - Clear synchronizaton overrun interrupt flag"]
 pub type SYNCOVFC3_R = crate::BitReader;
 #[doc = "Field `SYNCOVFC3` writer - Clear synchronizaton overrun interrupt flag"]
-pub type SYNCOVFC3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCOVFC3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCOVFC4` reader - Clear synchronizaton overrun interrupt flag"]
 pub type SYNCOVFC4_R = crate::BitReader;
 #[doc = "Field `SYNCOVFC4` writer - Clear synchronizaton overrun interrupt flag"]
-pub type SYNCOVFC4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCOVFC4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCOVFC5` reader - Clear synchronizaton overrun interrupt flag"]
 pub type SYNCOVFC5_R = crate::BitReader;
 #[doc = "Field `SYNCOVFC5` writer - Clear synchronizaton overrun interrupt flag"]
-pub type SYNCOVFC5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCOVFC5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCOVFC6` reader - Clear synchronizaton overrun interrupt flag"]
 pub type SYNCOVFC6_R = crate::BitReader;
 #[doc = "Field `SYNCOVFC6` writer - Clear synchronizaton overrun interrupt flag"]
-pub type SYNCOVFC6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCOVFC6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCOVFC7` reader - Clear synchronizaton overrun interrupt flag"]
 pub type SYNCOVFC7_R = crate::BitReader;
 #[doc = "Field `SYNCOVFC7` writer - Clear synchronizaton overrun interrupt flag"]
-pub type SYNCOVFC7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCOVFC7_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
@@ -89,44 +89,44 @@ impl W {
     #[doc = "Bit 0 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn syncovfc1(&mut self) -> SYNCOVFC1_W<MUXSYNCCLR_SPEC, 0> {
-        SYNCOVFC1_W::new(self)
+    pub fn syncovfc1(&mut self) -> SYNCOVFC1_W<MUXSYNCCLR_SPEC> {
+        SYNCOVFC1_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn syncovfc2(&mut self) -> SYNCOVFC2_W<MUXSYNCCLR_SPEC, 1> {
-        SYNCOVFC2_W::new(self)
+    pub fn syncovfc2(&mut self) -> SYNCOVFC2_W<MUXSYNCCLR_SPEC> {
+        SYNCOVFC2_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn syncovfc3(&mut self) -> SYNCOVFC3_W<MUXSYNCCLR_SPEC, 2> {
-        SYNCOVFC3_W::new(self)
+    pub fn syncovfc3(&mut self) -> SYNCOVFC3_W<MUXSYNCCLR_SPEC> {
+        SYNCOVFC3_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn syncovfc4(&mut self) -> SYNCOVFC4_W<MUXSYNCCLR_SPEC, 3> {
-        SYNCOVFC4_W::new(self)
+    pub fn syncovfc4(&mut self) -> SYNCOVFC4_W<MUXSYNCCLR_SPEC> {
+        SYNCOVFC4_W::new(self, 3)
     }
     #[doc = "Bit 4 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn syncovfc5(&mut self) -> SYNCOVFC5_W<MUXSYNCCLR_SPEC, 4> {
-        SYNCOVFC5_W::new(self)
+    pub fn syncovfc5(&mut self) -> SYNCOVFC5_W<MUXSYNCCLR_SPEC> {
+        SYNCOVFC5_W::new(self, 4)
     }
     #[doc = "Bit 5 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn syncovfc6(&mut self) -> SYNCOVFC6_W<MUXSYNCCLR_SPEC, 5> {
-        SYNCOVFC6_W::new(self)
+    pub fn syncovfc6(&mut self) -> SYNCOVFC6_W<MUXSYNCCLR_SPEC> {
+        SYNCOVFC6_W::new(self, 5)
     }
     #[doc = "Bit 6 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn syncovfc7(&mut self) -> SYNCOVFC7_W<MUXSYNCCLR_SPEC, 6> {
-        SYNCOVFC7_W::new(self)
+    pub fn syncovfc7(&mut self) -> SYNCOVFC7_W<MUXSYNCCLR_SPEC> {
+        SYNCOVFC7_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

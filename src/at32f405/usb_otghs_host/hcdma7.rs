@@ -5,7 +5,7 @@ pub type W = crate::W<HCDMA7_SPEC>;
 #[doc = "Field `DMAADDR` reader - DMA Address"]
 pub type DMAADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DMAADDR` writer - DMA Address"]
-pub type DMAADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type DMAADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - DMA Address"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - DMA Address"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaaddr(&mut self) -> DMAADDR_W<HCDMA7_SPEC, 0> {
-        DMAADDR_W::new(self)
+    pub fn dmaaddr(&mut self) -> DMAADDR_W<HCDMA7_SPEC> {
+        DMAADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

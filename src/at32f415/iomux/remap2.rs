@@ -21,8 +21,8 @@ impl crate::FieldSpec for CMP_MUX_AW {
     type Ux = u8;
 }
 #[doc = "Field `CMP_MUX` writer - CMP internal muxing"]
-pub type CMP_MUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, CMP_MUX_AW>;
-impl<'a, REG, const O: u8> CMP_MUX_W<'a, REG, O>
+pub type CMP_MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2, CMP_MUX_AW>;
+impl<'a, REG> CMP_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -52,8 +52,8 @@ impl W {
     #[doc = "Bits 26:27 - CMP internal muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn cmp_mux(&mut self) -> CMP_MUX_W<REMAP2_SPEC, 26> {
-        CMP_MUX_W::new(self)
+    pub fn cmp_mux(&mut self) -> CMP_MUX_W<REMAP2_SPEC> {
+        CMP_MUX_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

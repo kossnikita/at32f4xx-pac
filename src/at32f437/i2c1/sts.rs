@@ -5,11 +5,11 @@ pub type W = crate::W<STS_SPEC>;
 #[doc = "Field `TDBE` reader - Transmit data buffer empty flag"]
 pub type TDBE_R = crate::BitReader;
 #[doc = "Field `TDBE` writer - Transmit data buffer empty flag"]
-pub type TDBE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TDBE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TDIS` reader - Send interrupt status"]
 pub type TDIS_R = crate::BitReader;
 #[doc = "Field `TDIS` writer - Send interrupt status"]
-pub type TDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TDIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RDBF` reader - Receive data buffer full flag"]
 pub type RDBF_R = crate::BitReader;
 #[doc = "Field `ADDRF` reader - 0~7 bit address match flag"]
@@ -159,14 +159,14 @@ impl W {
     #[doc = "Bit 0 - Transmit data buffer empty flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tdbe(&mut self) -> TDBE_W<STS_SPEC, 0> {
-        TDBE_W::new(self)
+    pub fn tdbe(&mut self) -> TDBE_W<STS_SPEC> {
+        TDBE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Send interrupt status"]
     #[inline(always)]
     #[must_use]
-    pub fn tdis(&mut self) -> TDIS_W<STS_SPEC, 1> {
-        TDIS_W::new(self)
+    pub fn tdis(&mut self) -> TDIS_W<STS_SPEC> {
+        TDIS_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

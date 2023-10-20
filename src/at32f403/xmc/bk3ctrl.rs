@@ -5,35 +5,35 @@ pub type W = crate::W<BK3CTRL_SPEC>;
 #[doc = "Field `NWEN` reader - Wait feature enable"]
 pub type NWEN_R = crate::BitReader;
 #[doc = "Field `NWEN` writer - Wait feature enable"]
-pub type NWEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NWEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EN` reader - Memory bank enable"]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Memory bank enable"]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEV` reader - Memory device type"]
 pub type DEV_R = crate::BitReader;
 #[doc = "Field `DEV` writer - Memory device type"]
-pub type DEV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DEV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXTMDBW` reader - External memory data bus width"]
 pub type EXTMDBW_R = crate::FieldReader;
 #[doc = "Field `EXTMDBW` writer - External memory data bus width"]
-pub type EXTMDBW_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type EXTMDBW_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ECCEN` reader - ECC enable"]
 pub type ECCEN_R = crate::BitReader;
 #[doc = "Field `ECCEN` writer - ECC enable"]
-pub type ECCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ECCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TCR` reader - CLE to RE delay"]
 pub type TCR_R = crate::FieldReader;
 #[doc = "Field `TCR` writer - CLE to RE delay"]
-pub type TCR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TCR_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TAR` reader - ALE to RE delay"]
 pub type TAR_R = crate::FieldReader;
 #[doc = "Field `TAR` writer - ALE to RE delay"]
-pub type TAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TAR_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `ECCPGS` reader - ECC page size"]
 pub type ECCPGS_R = crate::FieldReader;
 #[doc = "Field `ECCPGS` writer - ECC page size"]
-pub type ECCPGS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ECCPGS_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bit 1 - Wait feature enable"]
     #[inline(always)]
@@ -99,50 +99,50 @@ impl W {
     #[doc = "Bit 1 - Wait feature enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nwen(&mut self) -> NWEN_W<BK3CTRL_SPEC, 1> {
-        NWEN_W::new(self)
+    pub fn nwen(&mut self) -> NWEN_W<BK3CTRL_SPEC> {
+        NWEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Memory bank enable"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<BK3CTRL_SPEC, 2> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<BK3CTRL_SPEC> {
+        EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Memory device type"]
     #[inline(always)]
     #[must_use]
-    pub fn dev(&mut self) -> DEV_W<BK3CTRL_SPEC, 3> {
-        DEV_W::new(self)
+    pub fn dev(&mut self) -> DEV_W<BK3CTRL_SPEC> {
+        DEV_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - External memory data bus width"]
     #[inline(always)]
     #[must_use]
-    pub fn extmdbw(&mut self) -> EXTMDBW_W<BK3CTRL_SPEC, 4> {
-        EXTMDBW_W::new(self)
+    pub fn extmdbw(&mut self) -> EXTMDBW_W<BK3CTRL_SPEC> {
+        EXTMDBW_W::new(self, 4)
     }
     #[doc = "Bit 6 - ECC enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eccen(&mut self) -> ECCEN_W<BK3CTRL_SPEC, 6> {
-        ECCEN_W::new(self)
+    pub fn eccen(&mut self) -> ECCEN_W<BK3CTRL_SPEC> {
+        ECCEN_W::new(self, 6)
     }
     #[doc = "Bits 9:12 - CLE to RE delay"]
     #[inline(always)]
     #[must_use]
-    pub fn tcr(&mut self) -> TCR_W<BK3CTRL_SPEC, 9> {
-        TCR_W::new(self)
+    pub fn tcr(&mut self) -> TCR_W<BK3CTRL_SPEC> {
+        TCR_W::new(self, 9)
     }
     #[doc = "Bits 13:16 - ALE to RE delay"]
     #[inline(always)]
     #[must_use]
-    pub fn tar(&mut self) -> TAR_W<BK3CTRL_SPEC, 13> {
-        TAR_W::new(self)
+    pub fn tar(&mut self) -> TAR_W<BK3CTRL_SPEC> {
+        TAR_W::new(self, 13)
     }
     #[doc = "Bits 17:19 - ECC page size"]
     #[inline(always)]
     #[must_use]
-    pub fn eccpgs(&mut self) -> ECCPGS_W<BK3CTRL_SPEC, 17> {
-        ECCPGS_W::new(self)
+    pub fn eccpgs(&mut self) -> ECCPGS_W<BK3CTRL_SPEC> {
+        ECCPGS_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

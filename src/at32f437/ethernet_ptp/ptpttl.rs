@@ -5,7 +5,7 @@ pub type W = crate::W<PTPTTL_SPEC>;
 #[doc = "Field `TTLR` reader - Target timestamp low register"]
 pub type TTLR_R = crate::FieldReader<u32>;
 #[doc = "Field `TTLR` writer - Target timestamp low register"]
-pub type TTLR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type TTLR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Target timestamp low register"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Target timestamp low register"]
     #[inline(always)]
     #[must_use]
-    pub fn ttlr(&mut self) -> TTLR_W<PTPTTL_SPEC, 0> {
-        TTLR_W::new(self)
+    pub fn ttlr(&mut self) -> TTLR_W<PTPTTL_SPEC> {
+        TTLR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

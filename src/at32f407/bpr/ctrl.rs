@@ -53,8 +53,8 @@ impl From<TPENW_AW> for bool {
     }
 }
 #[doc = "Field `TPEN` writer - Tamper pin enable"]
-pub type TPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TPENW_AW>;
-impl<'a, REG, const O: u8> TPEN_W<'a, REG, O>
+pub type TPEN_W<'a, REG> = crate::BitWriter<'a, REG, TPENW_AW>;
+impl<'a, REG> TPEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -106,8 +106,8 @@ impl TPP_R {
     }
 }
 #[doc = "Field `TPP` writer - TAMPER pin polarity"]
-pub type TPP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TPP_A>;
-impl<'a, REG, const O: u8> TPP_W<'a, REG, O>
+pub type TPP_W<'a, REG> = crate::BitWriter<'a, REG, TPP_A>;
+impl<'a, REG> TPP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -151,14 +151,14 @@ impl W {
     #[doc = "Bit 0 - Tamper pin enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tpen(&mut self) -> TPEN_W<CTRL_SPEC, 0> {
-        TPEN_W::new(self)
+    pub fn tpen(&mut self) -> TPEN_W<CTRL_SPEC> {
+        TPEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - TAMPER pin polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn tpp(&mut self) -> TPP_W<CTRL_SPEC, 1> {
-        TPP_W::new(self)
+    pub fn tpp(&mut self) -> TPP_W<CTRL_SPEC> {
+        TPP_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

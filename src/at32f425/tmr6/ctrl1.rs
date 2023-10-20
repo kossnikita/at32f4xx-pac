@@ -53,8 +53,8 @@ impl From<TMRENW_AW> for bool {
     }
 }
 #[doc = "Field `TMREN` writer - TMR enable"]
-pub type TMREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TMRENW_AW>;
-impl<'a, REG, const O: u8> TMREN_W<'a, REG, O>
+pub type TMREN_W<'a, REG> = crate::BitWriter<'a, REG, TMRENW_AW>;
+impl<'a, REG> TMREN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,8 +120,8 @@ impl From<OVFENW_AW> for bool {
     }
 }
 #[doc = "Field `OVFEN` writer - Overflow event enable"]
-pub type OVFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OVFENW_AW>;
-impl<'a, REG, const O: u8> OVFEN_W<'a, REG, O>
+pub type OVFEN_W<'a, REG> = crate::BitWriter<'a, REG, OVFENW_AW>;
+impl<'a, REG> OVFEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -173,8 +173,8 @@ impl OVFS_R {
     }
 }
 #[doc = "Field `OVFS` writer - Overflow event source"]
-pub type OVFS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OVFS_A>;
-impl<'a, REG, const O: u8> OVFS_W<'a, REG, O>
+pub type OVFS_W<'a, REG> = crate::BitWriter<'a, REG, OVFS_A>;
+impl<'a, REG> OVFS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -226,8 +226,8 @@ impl OCMEN_R {
     }
 }
 #[doc = "Field `OCMEN` writer - One cycle mode enable"]
-pub type OCMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OCMEN_A>;
-impl<'a, REG, const O: u8> OCMEN_W<'a, REG, O>
+pub type OCMEN_W<'a, REG> = crate::BitWriter<'a, REG, OCMEN_A>;
+impl<'a, REG> OCMEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -293,8 +293,8 @@ impl From<PRBENW_AW> for bool {
     }
 }
 #[doc = "Field `PRBEN` writer - Period buffer enable"]
-pub type PRBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PRBENW_AW>;
-impl<'a, REG, const O: u8> PRBEN_W<'a, REG, O>
+pub type PRBEN_W<'a, REG> = crate::BitWriter<'a, REG, PRBENW_AW>;
+impl<'a, REG> PRBEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -356,32 +356,32 @@ impl W {
     #[doc = "Bit 0 - TMR enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tmren(&mut self) -> TMREN_W<CTRL1_SPEC, 0> {
-        TMREN_W::new(self)
+    pub fn tmren(&mut self) -> TMREN_W<CTRL1_SPEC> {
+        TMREN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Overflow event enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfen(&mut self) -> OVFEN_W<CTRL1_SPEC, 1> {
-        OVFEN_W::new(self)
+    pub fn ovfen(&mut self) -> OVFEN_W<CTRL1_SPEC> {
+        OVFEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Overflow event source"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfs(&mut self) -> OVFS_W<CTRL1_SPEC, 2> {
-        OVFS_W::new(self)
+    pub fn ovfs(&mut self) -> OVFS_W<CTRL1_SPEC> {
+        OVFS_W::new(self, 2)
     }
     #[doc = "Bit 3 - One cycle mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ocmen(&mut self) -> OCMEN_W<CTRL1_SPEC, 3> {
-        OCMEN_W::new(self)
+    pub fn ocmen(&mut self) -> OCMEN_W<CTRL1_SPEC> {
+        OCMEN_W::new(self, 3)
     }
     #[doc = "Bit 7 - Period buffer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn prben(&mut self) -> PRBEN_W<CTRL1_SPEC, 7> {
-        PRBEN_W::new(self)
+    pub fn prben(&mut self) -> PRBEN_W<CTRL1_SPEC> {
+        PRBEN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

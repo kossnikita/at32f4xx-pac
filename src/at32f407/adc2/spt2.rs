@@ -5,11 +5,12 @@ pub type W = crate::W<SPT2_SPEC>;
 #[doc = "Field `CSPT[0-9]` reader - Selection sample time of channel ADC_IN%s"]
 pub type CSPT_R = crate::FieldReader;
 #[doc = "Field `CSPT[0-9]` writer - Selection sample time of channel ADC_IN%s"]
-pub type CSPT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type CSPT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 impl R {
-    #[doc = "Selection sample time of channel ADC_IN[0-9]"]
+    #[doc = "Selection sample time of channel ADC_IN[0-9]\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cspt(&self, n: u8) -> CSPT_R {
+    pub fn cspt(&self, n: u8) -> CSPT_R {
+        assert!(n < 10);
         CSPT_R::new(((self.bits >> (n * 3)) & 7) as u8)
     }
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN0"]
@@ -88,68 +89,69 @@ impl W {
     #[doc = "Selection sample time of channel ADC_IN[0-9]"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cspt<const O: u8>(&mut self) -> CSPT_W<SPT2_SPEC, O> {
-        CSPT_W::new(self)
+    pub fn cspt(&mut self, n: u8) -> CSPT_W<SPT2_SPEC> {
+        assert!(n < 10);
+        CSPT_W::new(self, n * 3)
     }
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN0"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt0(&mut self) -> CSPT_W<SPT2_SPEC, 0> {
-        CSPT_W::new(self)
+    pub fn cspt0(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Selection sample time of channel ADC_IN1"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt1(&mut self) -> CSPT_W<SPT2_SPEC, 3> {
-        CSPT_W::new(self)
+    pub fn cspt1(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - Selection sample time of channel ADC_IN2"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt2(&mut self) -> CSPT_W<SPT2_SPEC, 6> {
-        CSPT_W::new(self)
+    pub fn cspt2(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - Selection sample time of channel ADC_IN3"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt3(&mut self) -> CSPT_W<SPT2_SPEC, 9> {
-        CSPT_W::new(self)
+    pub fn cspt3(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - Selection sample time of channel ADC_IN4"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt4(&mut self) -> CSPT_W<SPT2_SPEC, 12> {
-        CSPT_W::new(self)
+    pub fn cspt4(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 12)
     }
     #[doc = "Bits 15:17 - Selection sample time of channel ADC_IN5"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt5(&mut self) -> CSPT_W<SPT2_SPEC, 15> {
-        CSPT_W::new(self)
+    pub fn cspt5(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - Selection sample time of channel ADC_IN6"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt6(&mut self) -> CSPT_W<SPT2_SPEC, 18> {
-        CSPT_W::new(self)
+    pub fn cspt6(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - Selection sample time of channel ADC_IN7"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt7(&mut self) -> CSPT_W<SPT2_SPEC, 21> {
-        CSPT_W::new(self)
+    pub fn cspt7(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 21)
     }
     #[doc = "Bits 24:26 - Selection sample time of channel ADC_IN8"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt8(&mut self) -> CSPT_W<SPT2_SPEC, 24> {
-        CSPT_W::new(self)
+    pub fn cspt8(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 24)
     }
     #[doc = "Bits 27:29 - Selection sample time of channel ADC_IN9"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt9(&mut self) -> CSPT_W<SPT2_SPEC, 27> {
-        CSPT_W::new(self)
+    pub fn cspt9(&mut self) -> CSPT_W<SPT2_SPEC> {
+        CSPT_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

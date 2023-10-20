@@ -39,8 +39,8 @@ impl CLKPHA_R {
     }
 }
 #[doc = "Field `CLKPHA` writer - Clock phase"]
-pub type CLKPHA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CLKPHA_A>;
-impl<'a, REG, const O: u8> CLKPHA_W<'a, REG, O>
+pub type CLKPHA_W<'a, REG> = crate::BitWriter<'a, REG, CLKPHA_A>;
+impl<'a, REG> CLKPHA_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -92,8 +92,8 @@ impl CLKPOL_R {
     }
 }
 #[doc = "Field `CLKPOL` writer - Clock polarity"]
-pub type CLKPOL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CLKPOL_A>;
-impl<'a, REG, const O: u8> CLKPOL_W<'a, REG, O>
+pub type CLKPOL_W<'a, REG> = crate::BitWriter<'a, REG, CLKPOL_A>;
+impl<'a, REG> CLKPOL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -145,8 +145,8 @@ impl MSTEN_R {
     }
 }
 #[doc = "Field `MSTEN` writer - Master enable"]
-pub type MSTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MSTEN_A>;
-impl<'a, REG, const O: u8> MSTEN_W<'a, REG, O>
+pub type MSTEN_W<'a, REG> = crate::BitWriter<'a, REG, MSTEN_A>;
+impl<'a, REG> MSTEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -164,7 +164,7 @@ where
 #[doc = "Field `MDIV2_0` reader - Master clock frequency division bit2-0"]
 pub type MDIV2_0_R = crate::FieldReader;
 #[doc = "Field `MDIV2_0` writer - Master clock frequency division bit2-0"]
-pub type MDIV2_0_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type MDIV2_0_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 #[doc = "Field `SPIEN` reader - SPI enable"]
 pub type SPIEN_R = crate::BitReader<SPIENR_A>;
 #[doc = "SPI enable\n\nValue on reset: 0"]
@@ -216,8 +216,8 @@ impl From<SPIENW_AW> for bool {
     }
 }
 #[doc = "Field `SPIEN` writer - SPI enable"]
-pub type SPIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SPIENW_AW>;
-impl<'a, REG, const O: u8> SPIEN_W<'a, REG, O>
+pub type SPIEN_W<'a, REG> = crate::BitWriter<'a, REG, SPIENW_AW>;
+impl<'a, REG> SPIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -269,8 +269,8 @@ impl LTF_R {
     }
 }
 #[doc = "Field `LTF` writer - LSB transmit first"]
-pub type LTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, LTF_A>;
-impl<'a, REG, const O: u8> LTF_W<'a, REG, O>
+pub type LTF_W<'a, REG> = crate::BitWriter<'a, REG, LTF_A>;
+impl<'a, REG> LTF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -322,8 +322,8 @@ impl SWCSIL_R {
     }
 }
 #[doc = "Field `SWCSIL` writer - Software CS internal level"]
-pub type SWCSIL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWCSIL_A>;
-impl<'a, REG, const O: u8> SWCSIL_W<'a, REG, O>
+pub type SWCSIL_W<'a, REG> = crate::BitWriter<'a, REG, SWCSIL_A>;
+impl<'a, REG> SWCSIL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -389,8 +389,8 @@ impl From<SWCSENW_AW> for bool {
     }
 }
 #[doc = "Field `SWCSEN` writer - Software CS enable"]
-pub type SWCSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SWCSENW_AW>;
-impl<'a, REG, const O: u8> SWCSEN_W<'a, REG, O>
+pub type SWCSEN_W<'a, REG> = crate::BitWriter<'a, REG, SWCSENW_AW>;
+impl<'a, REG> SWCSEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -442,8 +442,8 @@ impl ORA_R {
     }
 }
 #[doc = "Field `ORA` writer - Only receive active"]
-pub type ORA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ORA_A>;
-impl<'a, REG, const O: u8> ORA_W<'a, REG, O>
+pub type ORA_W<'a, REG> = crate::BitWriter<'a, REG, ORA_A>;
+impl<'a, REG> ORA_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -495,8 +495,8 @@ impl FBN_R {
     }
 }
 #[doc = "Field `FBN` writer - frame bit num"]
-pub type FBN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, FBN_A>;
-impl<'a, REG, const O: u8> FBN_W<'a, REG, O>
+pub type FBN_W<'a, REG> = crate::BitWriter<'a, REG, FBN_A>;
+impl<'a, REG> FBN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -548,8 +548,8 @@ impl NTC_R {
     }
 }
 #[doc = "Field `NTC` writer - Next transmission CRC"]
-pub type NTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, NTC_A>;
-impl<'a, REG, const O: u8> NTC_W<'a, REG, O>
+pub type NTC_W<'a, REG> = crate::BitWriter<'a, REG, NTC_A>;
+impl<'a, REG> NTC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -615,8 +615,8 @@ impl From<CCENW_AW> for bool {
     }
 }
 #[doc = "Field `CCEN` writer - CRC calculation enable"]
-pub type CCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CCENW_AW>;
-impl<'a, REG, const O: u8> CCEN_W<'a, REG, O>
+pub type CCEN_W<'a, REG> = crate::BitWriter<'a, REG, CCENW_AW>;
+impl<'a, REG> CCEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -668,8 +668,8 @@ impl SLBTD_R {
     }
 }
 #[doc = "Field `SLBTD` writer - Single line bidirectional half-duplex transmission direction"]
-pub type SLBTD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SLBTD_A>;
-impl<'a, REG, const O: u8> SLBTD_W<'a, REG, O>
+pub type SLBTD_W<'a, REG> = crate::BitWriter<'a, REG, SLBTD_A>;
+impl<'a, REG> SLBTD_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -735,8 +735,8 @@ impl From<SLBENW_AW> for bool {
     }
 }
 #[doc = "Field `SLBEN` writer - Single line bidirectional half-duplex enable"]
-pub type SLBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SLBENW_AW>;
-impl<'a, REG, const O: u8> SLBEN_W<'a, REG, O>
+pub type SLBEN_W<'a, REG> = crate::BitWriter<'a, REG, SLBENW_AW>;
+impl<'a, REG> SLBEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -852,86 +852,86 @@ impl W {
     #[doc = "Bit 0 - Clock phase"]
     #[inline(always)]
     #[must_use]
-    pub fn clkpha(&mut self) -> CLKPHA_W<CTRL1_SPEC, 0> {
-        CLKPHA_W::new(self)
+    pub fn clkpha(&mut self) -> CLKPHA_W<CTRL1_SPEC> {
+        CLKPHA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clock polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn clkpol(&mut self) -> CLKPOL_W<CTRL1_SPEC, 1> {
-        CLKPOL_W::new(self)
+    pub fn clkpol(&mut self) -> CLKPOL_W<CTRL1_SPEC> {
+        CLKPOL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Master enable"]
     #[inline(always)]
     #[must_use]
-    pub fn msten(&mut self) -> MSTEN_W<CTRL1_SPEC, 2> {
-        MSTEN_W::new(self)
+    pub fn msten(&mut self) -> MSTEN_W<CTRL1_SPEC> {
+        MSTEN_W::new(self, 2)
     }
     #[doc = "Bits 3:5 - Master clock frequency division bit2-0"]
     #[inline(always)]
     #[must_use]
-    pub fn mdiv2_0(&mut self) -> MDIV2_0_W<CTRL1_SPEC, 3> {
-        MDIV2_0_W::new(self)
+    pub fn mdiv2_0(&mut self) -> MDIV2_0_W<CTRL1_SPEC> {
+        MDIV2_0_W::new(self, 3)
     }
     #[doc = "Bit 6 - SPI enable"]
     #[inline(always)]
     #[must_use]
-    pub fn spien(&mut self) -> SPIEN_W<CTRL1_SPEC, 6> {
-        SPIEN_W::new(self)
+    pub fn spien(&mut self) -> SPIEN_W<CTRL1_SPEC> {
+        SPIEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - LSB transmit first"]
     #[inline(always)]
     #[must_use]
-    pub fn ltf(&mut self) -> LTF_W<CTRL1_SPEC, 7> {
-        LTF_W::new(self)
+    pub fn ltf(&mut self) -> LTF_W<CTRL1_SPEC> {
+        LTF_W::new(self, 7)
     }
     #[doc = "Bit 8 - Software CS internal level"]
     #[inline(always)]
     #[must_use]
-    pub fn swcsil(&mut self) -> SWCSIL_W<CTRL1_SPEC, 8> {
-        SWCSIL_W::new(self)
+    pub fn swcsil(&mut self) -> SWCSIL_W<CTRL1_SPEC> {
+        SWCSIL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Software CS enable"]
     #[inline(always)]
     #[must_use]
-    pub fn swcsen(&mut self) -> SWCSEN_W<CTRL1_SPEC, 9> {
-        SWCSEN_W::new(self)
+    pub fn swcsen(&mut self) -> SWCSEN_W<CTRL1_SPEC> {
+        SWCSEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Only receive active"]
     #[inline(always)]
     #[must_use]
-    pub fn ora(&mut self) -> ORA_W<CTRL1_SPEC, 10> {
-        ORA_W::new(self)
+    pub fn ora(&mut self) -> ORA_W<CTRL1_SPEC> {
+        ORA_W::new(self, 10)
     }
     #[doc = "Bit 11 - frame bit num"]
     #[inline(always)]
     #[must_use]
-    pub fn fbn(&mut self) -> FBN_W<CTRL1_SPEC, 11> {
-        FBN_W::new(self)
+    pub fn fbn(&mut self) -> FBN_W<CTRL1_SPEC> {
+        FBN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Next transmission CRC"]
     #[inline(always)]
     #[must_use]
-    pub fn ntc(&mut self) -> NTC_W<CTRL1_SPEC, 12> {
-        NTC_W::new(self)
+    pub fn ntc(&mut self) -> NTC_W<CTRL1_SPEC> {
+        NTC_W::new(self, 12)
     }
     #[doc = "Bit 13 - CRC calculation enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ccen(&mut self) -> CCEN_W<CTRL1_SPEC, 13> {
-        CCEN_W::new(self)
+    pub fn ccen(&mut self) -> CCEN_W<CTRL1_SPEC> {
+        CCEN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Single line bidirectional half-duplex transmission direction"]
     #[inline(always)]
     #[must_use]
-    pub fn slbtd(&mut self) -> SLBTD_W<CTRL1_SPEC, 14> {
-        SLBTD_W::new(self)
+    pub fn slbtd(&mut self) -> SLBTD_W<CTRL1_SPEC> {
+        SLBTD_W::new(self, 14)
     }
     #[doc = "Bit 15 - Single line bidirectional half-duplex enable"]
     #[inline(always)]
     #[must_use]
-    pub fn slben(&mut self) -> SLBEN_W<CTRL1_SPEC, 15> {
-        SLBEN_W::new(self)
+    pub fn slben(&mut self) -> SLBEN_W<CTRL1_SPEC> {
+        SLBEN_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -39,8 +39,8 @@ impl SEL_R {
     }
 }
 #[doc = "Field `SEL[0-13]` writer - Filter mode select"]
-pub type SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SEL0_A>;
-impl<'a, REG, const O: u8> SEL_W<'a, REG, O>
+pub type SEL_W<'a, REG> = crate::BitWriter<'a, REG, SEL0_A>;
+impl<'a, REG> SEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -56,9 +56,10 @@ where
     }
 }
 impl R {
-    #[doc = "Filter mode select"]
+    #[doc = "Filter mode select\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn sel(&self, n: u8) -> SEL_R {
+    pub fn sel(&self, n: u8) -> SEL_R {
+        assert!(n < 14);
         SEL_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - Filter mode select"]
@@ -161,92 +162,93 @@ impl W {
     #[doc = "Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn sel<const O: u8>(&mut self) -> SEL_W<FMCFG_SPEC, O> {
-        SEL_W::new(self)
+    pub fn sel(&mut self, n: u8) -> SEL_W<FMCFG_SPEC> {
+        assert!(n < 14);
+        SEL_W::new(self, n)
     }
     #[doc = "Bit 0 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel0(&mut self) -> SEL_W<FMCFG_SPEC, 0> {
-        SEL_W::new(self)
+    pub fn sel0(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel1(&mut self) -> SEL_W<FMCFG_SPEC, 1> {
-        SEL_W::new(self)
+    pub fn sel1(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel2(&mut self) -> SEL_W<FMCFG_SPEC, 2> {
-        SEL_W::new(self)
+    pub fn sel2(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel3(&mut self) -> SEL_W<FMCFG_SPEC, 3> {
-        SEL_W::new(self)
+    pub fn sel3(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel4(&mut self) -> SEL_W<FMCFG_SPEC, 4> {
-        SEL_W::new(self)
+    pub fn sel4(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 4)
     }
     #[doc = "Bit 5 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel5(&mut self) -> SEL_W<FMCFG_SPEC, 5> {
-        SEL_W::new(self)
+    pub fn sel5(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 5)
     }
     #[doc = "Bit 6 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel6(&mut self) -> SEL_W<FMCFG_SPEC, 6> {
-        SEL_W::new(self)
+    pub fn sel6(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel7(&mut self) -> SEL_W<FMCFG_SPEC, 7> {
-        SEL_W::new(self)
+    pub fn sel7(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel8(&mut self) -> SEL_W<FMCFG_SPEC, 8> {
-        SEL_W::new(self)
+    pub fn sel8(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel9(&mut self) -> SEL_W<FMCFG_SPEC, 9> {
-        SEL_W::new(self)
+    pub fn sel9(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel10(&mut self) -> SEL_W<FMCFG_SPEC, 10> {
-        SEL_W::new(self)
+    pub fn sel10(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel11(&mut self) -> SEL_W<FMCFG_SPEC, 11> {
-        SEL_W::new(self)
+    pub fn sel11(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 11)
     }
     #[doc = "Bit 12 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel12(&mut self) -> SEL_W<FMCFG_SPEC, 12> {
-        SEL_W::new(self)
+    pub fn sel12(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 12)
     }
     #[doc = "Bit 13 - Filter mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel13(&mut self) -> SEL_W<FMCFG_SPEC, 13> {
-        SEL_W::new(self)
+    pub fn sel13(&mut self) -> SEL_W<FMCFG_SPEC> {
+        SEL_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

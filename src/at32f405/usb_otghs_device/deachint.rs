@@ -5,11 +5,11 @@ pub type W = crate::W<DEACHINT_SPEC>;
 #[doc = "Field `ECHINEPINT` reader - Each IN Endpoint Interrupt bits"]
 pub type ECHINEPINT_R = crate::FieldReader<u16>;
 #[doc = "Field `ECHINEPINT` writer - Each IN Endpoint Interrupt bits"]
-pub type ECHINEPINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type ECHINEPINT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `ECHOUTEPINT` reader - Each OUT Endpoint Interrupt bits"]
 pub type ECHOUTEPINT_R = crate::FieldReader<u16>;
 #[doc = "Field `ECHOUTEPINT` writer - Each OUT Endpoint Interrupt bits"]
-pub type ECHOUTEPINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type ECHOUTEPINT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Each IN Endpoint Interrupt bits"]
     #[inline(always)]
@@ -42,14 +42,14 @@ impl W {
     #[doc = "Bits 0:15 - Each IN Endpoint Interrupt bits"]
     #[inline(always)]
     #[must_use]
-    pub fn echinepint(&mut self) -> ECHINEPINT_W<DEACHINT_SPEC, 0> {
-        ECHINEPINT_W::new(self)
+    pub fn echinepint(&mut self) -> ECHINEPINT_W<DEACHINT_SPEC> {
+        ECHINEPINT_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Each OUT Endpoint Interrupt bits"]
     #[inline(always)]
     #[must_use]
-    pub fn echoutepint(&mut self) -> ECHOUTEPINT_W<DEACHINT_SPEC, 16> {
-        ECHOUTEPINT_W::new(self)
+    pub fn echoutepint(&mut self) -> ECHOUTEPINT_W<DEACHINT_SPEC> {
+        ECHOUTEPINT_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

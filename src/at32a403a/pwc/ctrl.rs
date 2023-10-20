@@ -5,31 +5,31 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `VRSEL` reader - Voltage regulator state select when deepsleep mode"]
 pub type VRSEL_R = crate::BitReader;
 #[doc = "Field `VRSEL` writer - Voltage regulator state select when deepsleep mode"]
-pub type VRSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VRSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPSEL` reader - Low power mode select when Cortex-M4F sleepdeep"]
 pub type LPSEL_R = crate::BitReader;
 #[doc = "Field `LPSEL` writer - Low power mode select when Cortex-M4F sleepdeep"]
-pub type LPSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPSEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLSWEF` reader - Clear SWEF flag"]
 pub type CLSWEF_R = crate::BitReader;
 #[doc = "Field `CLSWEF` writer - Clear SWEF flag"]
-pub type CLSWEF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLSWEF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLSEF` reader - Clear SEF flag"]
 pub type CLSEF_R = crate::BitReader;
 #[doc = "Field `CLSEF` writer - Clear SEF flag"]
-pub type CLSEF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLSEF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PVMEN` reader - Power voltage monitoring enable"]
 pub type PVMEN_R = crate::BitReader;
 #[doc = "Field `PVMEN` writer - Power voltage monitoring enable"]
-pub type PVMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PVMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PVMSEL` reader - Power voltage monitoring boundary select"]
 pub type PVMSEL_R = crate::FieldReader;
 #[doc = "Field `PVMSEL` writer - Power voltage monitoring boundary select"]
-pub type PVMSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PVMSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `BPWEN` reader - Battery powered domain write enable"]
 pub type BPWEN_R = crate::BitReader;
 #[doc = "Field `BPWEN` writer - Battery powered domain write enable"]
-pub type BPWEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BPWEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Voltage regulator state select when deepsleep mode"]
     #[inline(always)]
@@ -89,44 +89,44 @@ impl W {
     #[doc = "Bit 0 - Voltage regulator state select when deepsleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn vrsel(&mut self) -> VRSEL_W<CTRL_SPEC, 0> {
-        VRSEL_W::new(self)
+    pub fn vrsel(&mut self) -> VRSEL_W<CTRL_SPEC> {
+        VRSEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Low power mode select when Cortex-M4F sleepdeep"]
     #[inline(always)]
     #[must_use]
-    pub fn lpsel(&mut self) -> LPSEL_W<CTRL_SPEC, 1> {
-        LPSEL_W::new(self)
+    pub fn lpsel(&mut self) -> LPSEL_W<CTRL_SPEC> {
+        LPSEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clear SWEF flag"]
     #[inline(always)]
     #[must_use]
-    pub fn clswef(&mut self) -> CLSWEF_W<CTRL_SPEC, 2> {
-        CLSWEF_W::new(self)
+    pub fn clswef(&mut self) -> CLSWEF_W<CTRL_SPEC> {
+        CLSWEF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clear SEF flag"]
     #[inline(always)]
     #[must_use]
-    pub fn clsef(&mut self) -> CLSEF_W<CTRL_SPEC, 3> {
-        CLSEF_W::new(self)
+    pub fn clsef(&mut self) -> CLSEF_W<CTRL_SPEC> {
+        CLSEF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Power voltage monitoring enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pvmen(&mut self) -> PVMEN_W<CTRL_SPEC, 4> {
-        PVMEN_W::new(self)
+    pub fn pvmen(&mut self) -> PVMEN_W<CTRL_SPEC> {
+        PVMEN_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - Power voltage monitoring boundary select"]
     #[inline(always)]
     #[must_use]
-    pub fn pvmsel(&mut self) -> PVMSEL_W<CTRL_SPEC, 5> {
-        PVMSEL_W::new(self)
+    pub fn pvmsel(&mut self) -> PVMSEL_W<CTRL_SPEC> {
+        PVMSEL_W::new(self, 5)
     }
     #[doc = "Bit 8 - Battery powered domain write enable"]
     #[inline(always)]
     #[must_use]
-    pub fn bpwen(&mut self) -> BPWEN_W<CTRL_SPEC, 8> {
-        BPWEN_W::new(self)
+    pub fn bpwen(&mut self) -> BPWEN_W<CTRL_SPEC> {
+        BPWEN_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

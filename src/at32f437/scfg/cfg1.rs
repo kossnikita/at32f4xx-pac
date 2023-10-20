@@ -5,19 +5,19 @@ pub type W = crate::W<CFG1_SPEC>;
 #[doc = "Field `MEM_MAP_SEL` reader - Memory address mapping selection bits"]
 pub type MEM_MAP_SEL_R = crate::FieldReader;
 #[doc = "Field `MEM_MAP_SEL` writer - Memory address mapping selection bits"]
-pub type MEM_MAP_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type MEM_MAP_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `IR_POL` reader - IR output polarity selection"]
 pub type IR_POL_R = crate::BitReader;
 #[doc = "Field `IR_POL` writer - IR output polarity selection"]
-pub type IR_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IR_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IR_SRC_SEL` reader - IR signal source selection"]
 pub type IR_SRC_SEL_R = crate::FieldReader;
 #[doc = "Field `IR_SRC_SEL` writer - IR signal source selection"]
-pub type IR_SRC_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type IR_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SWAP_XMC` reader - XMC address mapping swap"]
 pub type SWAP_XMC_R = crate::FieldReader;
 #[doc = "Field `SWAP_XMC` writer - XMC address mapping swap"]
-pub type SWAP_XMC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SWAP_XMC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:2 - Memory address mapping selection bits"]
     #[inline(always)]
@@ -62,26 +62,26 @@ impl W {
     #[doc = "Bits 0:2 - Memory address mapping selection bits"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_map_sel(&mut self) -> MEM_MAP_SEL_W<CFG1_SPEC, 0> {
-        MEM_MAP_SEL_W::new(self)
+    pub fn mem_map_sel(&mut self) -> MEM_MAP_SEL_W<CFG1_SPEC> {
+        MEM_MAP_SEL_W::new(self, 0)
     }
     #[doc = "Bit 5 - IR output polarity selection"]
     #[inline(always)]
     #[must_use]
-    pub fn ir_pol(&mut self) -> IR_POL_W<CFG1_SPEC, 5> {
-        IR_POL_W::new(self)
+    pub fn ir_pol(&mut self) -> IR_POL_W<CFG1_SPEC> {
+        IR_POL_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - IR signal source selection"]
     #[inline(always)]
     #[must_use]
-    pub fn ir_src_sel(&mut self) -> IR_SRC_SEL_W<CFG1_SPEC, 6> {
-        IR_SRC_SEL_W::new(self)
+    pub fn ir_src_sel(&mut self) -> IR_SRC_SEL_W<CFG1_SPEC> {
+        IR_SRC_SEL_W::new(self, 6)
     }
     #[doc = "Bits 10:11 - XMC address mapping swap"]
     #[inline(always)]
     #[must_use]
-    pub fn swap_xmc(&mut self) -> SWAP_XMC_W<CFG1_SPEC, 10> {
-        SWAP_XMC_W::new(self)
+    pub fn swap_xmc(&mut self) -> SWAP_XMC_W<CFG1_SPEC> {
+        SWAP_XMC_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

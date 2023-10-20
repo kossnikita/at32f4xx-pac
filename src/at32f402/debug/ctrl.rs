@@ -53,8 +53,8 @@ impl From<SLEEP_DEBUGW_AW> for bool {
     }
 }
 #[doc = "Field `SLEEP_DEBUG` writer - Debug Sleep mode control bit"]
-pub type SLEEP_DEBUG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SLEEP_DEBUGW_AW>;
-impl<'a, REG, const O: u8> SLEEP_DEBUG_W<'a, REG, O>
+pub type SLEEP_DEBUG_W<'a, REG> = crate::BitWriter<'a, REG, SLEEP_DEBUGW_AW>;
+impl<'a, REG> SLEEP_DEBUG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,9 +120,8 @@ impl From<DEEPSLEEP_DEBUGW_AW> for bool {
     }
 }
 #[doc = "Field `DEEPSLEEP_DEBUG` writer - Debug Deepsleep mode control bit"]
-pub type DEEPSLEEP_DEBUG_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O, DEEPSLEEP_DEBUGW_AW>;
-impl<'a, REG, const O: u8> DEEPSLEEP_DEBUG_W<'a, REG, O>
+pub type DEEPSLEEP_DEBUG_W<'a, REG> = crate::BitWriter<'a, REG, DEEPSLEEP_DEBUGW_AW>;
+impl<'a, REG> DEEPSLEEP_DEBUG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -188,8 +187,8 @@ impl From<STANDBY_DEBUGW_AW> for bool {
     }
 }
 #[doc = "Field `STANDBY_DEBUG` writer - Debug Standby mode control bit"]
-pub type STANDBY_DEBUG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, STANDBY_DEBUGW_AW>;
-impl<'a, REG, const O: u8> STANDBY_DEBUG_W<'a, REG, O>
+pub type STANDBY_DEBUG_W<'a, REG> = crate::BitWriter<'a, REG, STANDBY_DEBUGW_AW>;
+impl<'a, REG> STANDBY_DEBUG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -245,20 +244,20 @@ impl W {
     #[doc = "Bit 0 - Debug Sleep mode control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_debug(&mut self) -> SLEEP_DEBUG_W<CTRL_SPEC, 0> {
-        SLEEP_DEBUG_W::new(self)
+    pub fn sleep_debug(&mut self) -> SLEEP_DEBUG_W<CTRL_SPEC> {
+        SLEEP_DEBUG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Debug Deepsleep mode control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn deepsleep_debug(&mut self) -> DEEPSLEEP_DEBUG_W<CTRL_SPEC, 1> {
-        DEEPSLEEP_DEBUG_W::new(self)
+    pub fn deepsleep_debug(&mut self) -> DEEPSLEEP_DEBUG_W<CTRL_SPEC> {
+        DEEPSLEEP_DEBUG_W::new(self, 1)
     }
     #[doc = "Bit 2 - Debug Standby mode control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn standby_debug(&mut self) -> STANDBY_DEBUG_W<CTRL_SPEC, 2> {
-        STANDBY_DEBUG_W::new(self)
+    pub fn standby_debug(&mut self) -> STANDBY_DEBUG_W<CTRL_SPEC> {
+        STANDBY_DEBUG_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<POWER_SPEC>;
 #[doc = "Field `PWRCTRL` reader - PWRCTRL"]
 pub type PWRCTRL_R = crate::FieldReader;
 #[doc = "Field `PWRCTRL` writer - PWRCTRL"]
-pub type PWRCTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PWRCTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - PWRCTRL"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:1 - PWRCTRL"]
     #[inline(always)]
     #[must_use]
-    pub fn pwrctrl(&mut self) -> PWRCTRL_W<POWER_SPEC, 0> {
-        PWRCTRL_W::new(self)
+    pub fn pwrctrl(&mut self) -> PWRCTRL_W<POWER_SPEC> {
+        PWRCTRL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

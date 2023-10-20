@@ -5,15 +5,15 @@ pub type W = crate::W<GAHBCFG_SPEC>;
 #[doc = "Field `GLBINTMSK` reader - Global interrupt mask"]
 pub type GLBINTMSK_R = crate::BitReader;
 #[doc = "Field `GLBINTMSK` writer - Global interrupt mask"]
-pub type GLBINTMSK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GLBINTMSK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NPTXFEMPLVL` reader - Non-Periodic TxFIFO empty level"]
 pub type NPTXFEMPLVL_R = crate::BitReader;
 #[doc = "Field `NPTXFEMPLVL` writer - Non-Periodic TxFIFO empty level"]
-pub type NPTXFEMPLVL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NPTXFEMPLVL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PTXFEMPLVL` reader - Periodic TxFIFO empty level"]
 pub type PTXFEMPLVL_R = crate::BitReader;
 #[doc = "Field `PTXFEMPLVL` writer - Periodic TxFIFO empty level"]
-pub type PTXFEMPLVL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PTXFEMPLVL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Global interrupt mask"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 0 - Global interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn glbintmsk(&mut self) -> GLBINTMSK_W<GAHBCFG_SPEC, 0> {
-        GLBINTMSK_W::new(self)
+    pub fn glbintmsk(&mut self) -> GLBINTMSK_W<GAHBCFG_SPEC> {
+        GLBINTMSK_W::new(self, 0)
     }
     #[doc = "Bit 7 - Non-Periodic TxFIFO empty level"]
     #[inline(always)]
     #[must_use]
-    pub fn nptxfemplvl(&mut self) -> NPTXFEMPLVL_W<GAHBCFG_SPEC, 7> {
-        NPTXFEMPLVL_W::new(self)
+    pub fn nptxfemplvl(&mut self) -> NPTXFEMPLVL_W<GAHBCFG_SPEC> {
+        NPTXFEMPLVL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Periodic TxFIFO empty level"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfemplvl(&mut self) -> PTXFEMPLVL_W<GAHBCFG_SPEC, 8> {
-        PTXFEMPLVL_W::new(self)
+    pub fn ptxfemplvl(&mut self) -> PTXFEMPLVL_W<GAHBCFG_SPEC> {
+        PTXFEMPLVL_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

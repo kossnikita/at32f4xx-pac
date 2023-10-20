@@ -5,15 +5,15 @@ pub type W = crate::W<MMCTI_SPEC>;
 #[doc = "Field `TSCGFCI` reader - Transmit single collision good frame counter interrupt"]
 pub type TSCGFCI_R = crate::BitReader;
 #[doc = "Field `TSCGFCI` writer - Transmit single collision good frame counter interrupt"]
-pub type TSCGFCI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSCGFCI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TGFMSC` reader - Transmit good frames more single collision"]
 pub type TGFMSC_R = crate::BitReader;
 #[doc = "Field `TGFMSC` writer - Transmit good frames more single collision"]
-pub type TGFMSC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TGFMSC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TGF` reader - Transmitted good frames"]
 pub type TGF_R = crate::BitReader;
 #[doc = "Field `TGF` writer - Transmitted good frames"]
-pub type TGF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TGF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 14 - Transmit single collision good frame counter interrupt"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 14 - Transmit single collision good frame counter interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn tscgfci(&mut self) -> TSCGFCI_W<MMCTI_SPEC, 14> {
-        TSCGFCI_W::new(self)
+    pub fn tscgfci(&mut self) -> TSCGFCI_W<MMCTI_SPEC> {
+        TSCGFCI_W::new(self, 14)
     }
     #[doc = "Bit 15 - Transmit good frames more single collision"]
     #[inline(always)]
     #[must_use]
-    pub fn tgfmsc(&mut self) -> TGFMSC_W<MMCTI_SPEC, 15> {
-        TGFMSC_W::new(self)
+    pub fn tgfmsc(&mut self) -> TGFMSC_W<MMCTI_SPEC> {
+        TGFMSC_W::new(self, 15)
     }
     #[doc = "Bit 21 - Transmitted good frames"]
     #[inline(always)]
     #[must_use]
-    pub fn tgf(&mut self) -> TGF_W<MMCTI_SPEC, 21> {
-        TGF_W::new(self)
+    pub fn tgf(&mut self) -> TGF_W<MMCTI_SPEC> {
+        TGF_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

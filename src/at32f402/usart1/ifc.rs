@@ -5,11 +5,11 @@ pub type W = crate::W<IFC_SPEC>;
 #[doc = "Field `RTODFC` reader - Receiver time out detection flag clear"]
 pub type RTODFC_R = crate::BitReader;
 #[doc = "Field `RTODFC` writer - Receiver time out detection flag clear"]
-pub type RTODFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTODFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDFC` reader - Character match detection flag clear"]
 pub type CMDFC_R = crate::BitReader;
 #[doc = "Field `CMDFC` writer - Character match detection flag clear"]
-pub type CMDFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 11 - Receiver time out detection flag clear"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bit 11 - Receiver time out detection flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rtodfc(&mut self) -> RTODFC_W<IFC_SPEC, 11> {
-        RTODFC_W::new(self)
+    pub fn rtodfc(&mut self) -> RTODFC_W<IFC_SPEC> {
+        RTODFC_W::new(self, 11)
     }
     #[doc = "Bit 17 - Character match detection flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdfc(&mut self) -> CMDFC_W<IFC_SPEC, 17> {
-        CMDFC_W::new(self)
+    pub fn cmdfc(&mut self) -> CMDFC_W<IFC_SPEC> {
+        CMDFC_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

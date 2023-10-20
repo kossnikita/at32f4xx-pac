@@ -5,19 +5,19 @@ pub type W = crate::W<SUR_SPEC>;
 #[doc = "Field `FMSU` reader - Frame start unmask"]
 pub type FMSU_R = crate::FieldReader;
 #[doc = "Field `FMSU` writer - Frame start unmask"]
-pub type FMSU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type FMSU_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `LNSU` reader - Line start unmask"]
 pub type LNSU_R = crate::FieldReader;
 #[doc = "Field `LNSU` writer - Line start unmask"]
-pub type LNSU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LNSU_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `LNEU` reader - Line end unmask"]
 pub type LNEU_R = crate::FieldReader;
 #[doc = "Field `LNEU` writer - Line end unmask"]
-pub type LNEU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LNEU_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `FMEU` reader - Frame end unmask"]
 pub type FMEU_R = crate::FieldReader;
 #[doc = "Field `FMEU` writer - Frame end unmask"]
-pub type FMEU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type FMEU_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Frame start unmask"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:7 - Frame start unmask"]
     #[inline(always)]
     #[must_use]
-    pub fn fmsu(&mut self) -> FMSU_W<SUR_SPEC, 0> {
-        FMSU_W::new(self)
+    pub fn fmsu(&mut self) -> FMSU_W<SUR_SPEC> {
+        FMSU_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Line start unmask"]
     #[inline(always)]
     #[must_use]
-    pub fn lnsu(&mut self) -> LNSU_W<SUR_SPEC, 8> {
-        LNSU_W::new(self)
+    pub fn lnsu(&mut self) -> LNSU_W<SUR_SPEC> {
+        LNSU_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Line end unmask"]
     #[inline(always)]
     #[must_use]
-    pub fn lneu(&mut self) -> LNEU_W<SUR_SPEC, 16> {
-        LNEU_W::new(self)
+    pub fn lneu(&mut self) -> LNEU_W<SUR_SPEC> {
+        LNEU_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Frame end unmask"]
     #[inline(always)]
     #[must_use]
-    pub fn fmeu(&mut self) -> FMEU_W<SUR_SPEC, 24> {
-        FMEU_W::new(self)
+    pub fn fmeu(&mut self) -> FMEU_W<SUR_SPEC> {
+        FMEU_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

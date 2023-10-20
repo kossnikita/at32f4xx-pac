@@ -39,8 +39,8 @@ impl DRS_R {
     }
 }
 #[doc = "Field `DRS` writer - DMA request source"]
-pub type DRS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DRS_A>;
-impl<'a, REG, const O: u8> DRS_W<'a, REG, O>
+pub type DRS_W<'a, REG> = crate::BitWriter<'a, REG, DRS_A>;
+impl<'a, REG> DRS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -145,8 +145,8 @@ impl PTOS_R {
     }
 }
 #[doc = "Field `PTOS` writer - Primary TMR output selection"]
-pub type PTOS_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, PTOS_A>;
-impl<'a, REG, const O: u8> PTOS_W<'a, REG, O>
+pub type PTOS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, PTOS_A>;
+impl<'a, REG> PTOS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -229,8 +229,8 @@ impl C1INSEL_R {
     }
 }
 #[doc = "Field `C1INSEL` writer - C1IN selection"]
-pub type C1INSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1INSEL_A>;
-impl<'a, REG, const O: u8> C1INSEL_W<'a, REG, O>
+pub type C1INSEL_W<'a, REG> = crate::BitWriter<'a, REG, C1INSEL_A>;
+impl<'a, REG> C1INSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -280,20 +280,20 @@ impl W {
     #[doc = "Bit 3 - DMA request source"]
     #[inline(always)]
     #[must_use]
-    pub fn drs(&mut self) -> DRS_W<CTRL2_SPEC, 3> {
-        DRS_W::new(self)
+    pub fn drs(&mut self) -> DRS_W<CTRL2_SPEC> {
+        DRS_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - Primary TMR output selection"]
     #[inline(always)]
     #[must_use]
-    pub fn ptos(&mut self) -> PTOS_W<CTRL2_SPEC, 4> {
-        PTOS_W::new(self)
+    pub fn ptos(&mut self) -> PTOS_W<CTRL2_SPEC> {
+        PTOS_W::new(self, 4)
     }
     #[doc = "Bit 7 - C1IN selection"]
     #[inline(always)]
     #[must_use]
-    pub fn c1insel(&mut self) -> C1INSEL_W<CTRL2_SPEC, 7> {
-        C1INSEL_W::new(self)
+    pub fn c1insel(&mut self) -> C1INSEL_W<CTRL2_SPEC> {
+        C1INSEL_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

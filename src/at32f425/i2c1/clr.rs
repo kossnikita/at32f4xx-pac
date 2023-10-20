@@ -1,23 +1,23 @@
 #[doc = "Register `CLR` writer"]
 pub type W = crate::W<CLR_SPEC>;
 #[doc = "Field `ADDRC` writer - Clear 0~7 bit address match flag"]
-pub type ADDRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADDRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACKFAILC` writer - Clear acknowledge failure flag"]
-pub type ACKFAILC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACKFAILC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STOPC` writer - Clear stop condition generation complete flag"]
-pub type STOPC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STOPC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUSERRC` writer - Clear bus error flag"]
-pub type BUSERRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUSERRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARLOSTC` writer - Clear arbitration lost flag"]
-pub type ARLOSTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARLOSTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUFC` writer - Clear overload / underload flag"]
-pub type OUFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PECERRC` writer - Clear PEC receive error flag"]
-pub type PECERRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PECERRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMOUTC` writer - Clear SMBus timeout flag"]
-pub type TMOUTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMOUTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALERTC` writer - Clear SMBus alert flag"]
-pub type ALERTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ALERTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl core::fmt::Debug for crate::generic::Reg<CLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -27,56 +27,56 @@ impl W {
     #[doc = "Bit 3 - Clear 0~7 bit address match flag"]
     #[inline(always)]
     #[must_use]
-    pub fn addrc(&mut self) -> ADDRC_W<CLR_SPEC, 3> {
-        ADDRC_W::new(self)
+    pub fn addrc(&mut self) -> ADDRC_W<CLR_SPEC> {
+        ADDRC_W::new(self, 3)
     }
     #[doc = "Bit 4 - Clear acknowledge failure flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ackfailc(&mut self) -> ACKFAILC_W<CLR_SPEC, 4> {
-        ACKFAILC_W::new(self)
+    pub fn ackfailc(&mut self) -> ACKFAILC_W<CLR_SPEC> {
+        ACKFAILC_W::new(self, 4)
     }
     #[doc = "Bit 5 - Clear stop condition generation complete flag"]
     #[inline(always)]
     #[must_use]
-    pub fn stopc(&mut self) -> STOPC_W<CLR_SPEC, 5> {
-        STOPC_W::new(self)
+    pub fn stopc(&mut self) -> STOPC_W<CLR_SPEC> {
+        STOPC_W::new(self, 5)
     }
     #[doc = "Bit 8 - Clear bus error flag"]
     #[inline(always)]
     #[must_use]
-    pub fn buserrc(&mut self) -> BUSERRC_W<CLR_SPEC, 8> {
-        BUSERRC_W::new(self)
+    pub fn buserrc(&mut self) -> BUSERRC_W<CLR_SPEC> {
+        BUSERRC_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clear arbitration lost flag"]
     #[inline(always)]
     #[must_use]
-    pub fn arlostc(&mut self) -> ARLOSTC_W<CLR_SPEC, 9> {
-        ARLOSTC_W::new(self)
+    pub fn arlostc(&mut self) -> ARLOSTC_W<CLR_SPEC> {
+        ARLOSTC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear overload / underload flag"]
     #[inline(always)]
     #[must_use]
-    pub fn oufc(&mut self) -> OUFC_W<CLR_SPEC, 10> {
-        OUFC_W::new(self)
+    pub fn oufc(&mut self) -> OUFC_W<CLR_SPEC> {
+        OUFC_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clear PEC receive error flag"]
     #[inline(always)]
     #[must_use]
-    pub fn pecerrc(&mut self) -> PECERRC_W<CLR_SPEC, 11> {
-        PECERRC_W::new(self)
+    pub fn pecerrc(&mut self) -> PECERRC_W<CLR_SPEC> {
+        PECERRC_W::new(self, 11)
     }
     #[doc = "Bit 12 - Clear SMBus timeout flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tmoutc(&mut self) -> TMOUTC_W<CLR_SPEC, 12> {
-        TMOUTC_W::new(self)
+    pub fn tmoutc(&mut self) -> TMOUTC_W<CLR_SPEC> {
+        TMOUTC_W::new(self, 12)
     }
     #[doc = "Bit 13 - Clear SMBus alert flag"]
     #[inline(always)]
     #[must_use]
-    pub fn alertc(&mut self) -> ALERTC_W<CLR_SPEC, 13> {
-        ALERTC_W::new(self)
+    pub fn alertc(&mut self) -> ALERTC_W<CLR_SPEC> {
+        ALERTC_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

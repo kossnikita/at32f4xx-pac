@@ -1,9 +1,9 @@
 #[doc = "Register `SLIB_SET_RANGE1` writer"]
 pub type W = crate::W<SLIB_SET_RANGE1_SPEC>;
 #[doc = "Field `SLIB_ISS_SET` writer - sLib instruction start sector setting"]
-pub type SLIB_ISS_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type SLIB_ISS_SET_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `SET_SLIB_STRT` writer - sLib start setting"]
-pub type SET_SLIB_STRT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SET_SLIB_STRT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl core::fmt::Debug for crate::generic::Reg<SLIB_SET_RANGE1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -13,14 +13,14 @@ impl W {
     #[doc = "Bits 0:15 - sLib instruction start sector setting"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_iss_set(&mut self) -> SLIB_ISS_SET_W<SLIB_SET_RANGE1_SPEC, 0> {
-        SLIB_ISS_SET_W::new(self)
+    pub fn slib_iss_set(&mut self) -> SLIB_ISS_SET_W<SLIB_SET_RANGE1_SPEC> {
+        SLIB_ISS_SET_W::new(self, 0)
     }
     #[doc = "Bit 31 - sLib start setting"]
     #[inline(always)]
     #[must_use]
-    pub fn set_slib_strt(&mut self) -> SET_SLIB_STRT_W<SLIB_SET_RANGE1_SPEC, 31> {
-        SET_SLIB_STRT_W::new(self)
+    pub fn set_slib_strt(&mut self) -> SET_SLIB_STRT_W<SLIB_SET_RANGE1_SPEC> {
+        SET_SLIB_STRT_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

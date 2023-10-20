@@ -5,7 +5,7 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `CNT` reader - Decrement counter"]
 pub type CNT_R = crate::FieldReader;
 #[doc = "Field `CNT` writer - Decrement counter"]
-pub type CNT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 7, O>;
+pub type CNT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
 #[doc = "Field `WWDTEN` reader - Window watchdog enable"]
 pub type WWDTEN_R = crate::BitReader<WWDTENR_A>;
 #[doc = "Window watchdog enable\n\nValue on reset: 0"]
@@ -55,8 +55,8 @@ impl From<WWDTENW_AW> for bool {
     }
 }
 #[doc = "Field `WWDTEN` writer - Window watchdog enable"]
-pub type WWDTEN_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, WWDTENW_AW>;
-impl<'a, REG, const O: u8> WWDTEN_W<'a, REG, O>
+pub type WWDTEN_W<'a, REG> = crate::BitWriter1S<'a, REG, WWDTENW_AW>;
+impl<'a, REG> WWDTEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -95,14 +95,14 @@ impl W {
     #[doc = "Bits 0:6 - Decrement counter"]
     #[inline(always)]
     #[must_use]
-    pub fn cnt(&mut self) -> CNT_W<CTRL_SPEC, 0> {
-        CNT_W::new(self)
+    pub fn cnt(&mut self) -> CNT_W<CTRL_SPEC> {
+        CNT_W::new(self, 0)
     }
     #[doc = "Bit 7 - Window watchdog enable"]
     #[inline(always)]
     #[must_use]
-    pub fn wwdten(&mut self) -> WWDTEN_W<CTRL_SPEC, 7> {
-        WWDTEN_W::new(self)
+    pub fn wwdten(&mut self) -> WWDTEN_W<CTRL_SPEC> {
+        WWDTEN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

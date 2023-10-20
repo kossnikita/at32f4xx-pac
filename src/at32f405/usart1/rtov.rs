@@ -5,7 +5,7 @@ pub type W = crate::W<RTOV_SPEC>;
 #[doc = "Field `RTOV` reader - Receiver time out value"]
 pub type RTOV_R = crate::FieldReader<u32>;
 #[doc = "Field `RTOV` writer - Receiver time out value"]
-pub type RTOV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 24, O, u32>;
+pub type RTOV_W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
 impl R {
     #[doc = "Bits 0:23 - Receiver time out value"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:23 - Receiver time out value"]
     #[inline(always)]
     #[must_use]
-    pub fn rtov(&mut self) -> RTOV_W<RTOV_SPEC, 0> {
-        RTOV_W::new(self)
+    pub fn rtov(&mut self) -> RTOV_W<RTOV_SPEC> {
+        RTOV_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

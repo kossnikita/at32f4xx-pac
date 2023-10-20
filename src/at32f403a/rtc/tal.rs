@@ -1,7 +1,7 @@
 #[doc = "Register `TAL` writer"]
 pub type W = crate::W<TAL_SPEC>;
 #[doc = "Field `TA` writer - RTC alarm register low"]
-pub type TA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type TA_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl core::fmt::Debug for crate::generic::Reg<TAL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -11,8 +11,8 @@ impl W {
     #[doc = "Bits 0:15 - RTC alarm register low"]
     #[inline(always)]
     #[must_use]
-    pub fn ta(&mut self) -> TA_W<TAL_SPEC, 0> {
-        TA_W::new(self)
+    pub fn ta(&mut self) -> TA_W<TAL_SPEC> {
+        TA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

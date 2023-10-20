@@ -5,47 +5,47 @@ pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `SADDR` reader - Slave address"]
 pub type SADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `SADDR` writer - Slave address"]
-pub type SADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type SADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `DIR` reader - Master data transmission direction"]
 pub type DIR_R = crate::BitReader;
 #[doc = "Field `DIR` writer - Master data transmission direction"]
-pub type DIR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DIR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADDR10` reader - Host send 10-bit address mode enable"]
 pub type ADDR10_R = crate::BitReader;
 #[doc = "Field `ADDR10` writer - Host send 10-bit address mode enable"]
-pub type ADDR10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADDR10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `READH10` reader - 10-bit address header read enable"]
 pub type READH10_R = crate::BitReader;
 #[doc = "Field `READH10` writer - 10-bit address header read enable"]
-pub type READH10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type READH10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GENSTART` reader - Generate start condition"]
 pub type GENSTART_R = crate::BitReader;
 #[doc = "Field `GENSTART` writer - Generate start condition"]
-pub type GENSTART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GENSTART_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GENSTOP` reader - Generate stop condition"]
 pub type GENSTOP_R = crate::BitReader;
 #[doc = "Field `GENSTOP` writer - Generate stop condition"]
-pub type GENSTOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GENSTOP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NACKEN` reader - Not acknowledge enable"]
 pub type NACKEN_R = crate::BitReader;
 #[doc = "Field `NACKEN` writer - Not acknowledge enable"]
-pub type NACKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NACKEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNT` reader - Transmit data counter"]
 pub type CNT_R = crate::FieldReader;
 #[doc = "Field `CNT` writer - Transmit data counter"]
-pub type CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RLDEN` reader - Send data reload mode enable"]
 pub type RLDEN_R = crate::BitReader;
 #[doc = "Field `RLDEN` writer - Send data reload mode enable"]
-pub type RLDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RLDEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ASTOPEN` reader - Automatically send stop condition enable"]
 pub type ASTOPEN_R = crate::BitReader;
 #[doc = "Field `ASTOPEN` writer - Automatically send stop condition enable"]
-pub type ASTOPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ASTOPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PECTEN` reader - Request PEC transmission enable"]
 pub type PECTEN_R = crate::BitReader;
 #[doc = "Field `PECTEN` writer - Request PEC transmission enable"]
-pub type PECTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PECTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:9 - Slave address"]
     #[inline(always)]
@@ -129,68 +129,68 @@ impl W {
     #[doc = "Bits 0:9 - Slave address"]
     #[inline(always)]
     #[must_use]
-    pub fn saddr(&mut self) -> SADDR_W<CTRL2_SPEC, 0> {
-        SADDR_W::new(self)
+    pub fn saddr(&mut self) -> SADDR_W<CTRL2_SPEC> {
+        SADDR_W::new(self, 0)
     }
     #[doc = "Bit 10 - Master data transmission direction"]
     #[inline(always)]
     #[must_use]
-    pub fn dir(&mut self) -> DIR_W<CTRL2_SPEC, 10> {
-        DIR_W::new(self)
+    pub fn dir(&mut self) -> DIR_W<CTRL2_SPEC> {
+        DIR_W::new(self, 10)
     }
     #[doc = "Bit 11 - Host send 10-bit address mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn addr10(&mut self) -> ADDR10_W<CTRL2_SPEC, 11> {
-        ADDR10_W::new(self)
+    pub fn addr10(&mut self) -> ADDR10_W<CTRL2_SPEC> {
+        ADDR10_W::new(self, 11)
     }
     #[doc = "Bit 12 - 10-bit address header read enable"]
     #[inline(always)]
     #[must_use]
-    pub fn readh10(&mut self) -> READH10_W<CTRL2_SPEC, 12> {
-        READH10_W::new(self)
+    pub fn readh10(&mut self) -> READH10_W<CTRL2_SPEC> {
+        READH10_W::new(self, 12)
     }
     #[doc = "Bit 13 - Generate start condition"]
     #[inline(always)]
     #[must_use]
-    pub fn genstart(&mut self) -> GENSTART_W<CTRL2_SPEC, 13> {
-        GENSTART_W::new(self)
+    pub fn genstart(&mut self) -> GENSTART_W<CTRL2_SPEC> {
+        GENSTART_W::new(self, 13)
     }
     #[doc = "Bit 14 - Generate stop condition"]
     #[inline(always)]
     #[must_use]
-    pub fn genstop(&mut self) -> GENSTOP_W<CTRL2_SPEC, 14> {
-        GENSTOP_W::new(self)
+    pub fn genstop(&mut self) -> GENSTOP_W<CTRL2_SPEC> {
+        GENSTOP_W::new(self, 14)
     }
     #[doc = "Bit 15 - Not acknowledge enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nacken(&mut self) -> NACKEN_W<CTRL2_SPEC, 15> {
-        NACKEN_W::new(self)
+    pub fn nacken(&mut self) -> NACKEN_W<CTRL2_SPEC> {
+        NACKEN_W::new(self, 15)
     }
     #[doc = "Bits 16:23 - Transmit data counter"]
     #[inline(always)]
     #[must_use]
-    pub fn cnt(&mut self) -> CNT_W<CTRL2_SPEC, 16> {
-        CNT_W::new(self)
+    pub fn cnt(&mut self) -> CNT_W<CTRL2_SPEC> {
+        CNT_W::new(self, 16)
     }
     #[doc = "Bit 24 - Send data reload mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rlden(&mut self) -> RLDEN_W<CTRL2_SPEC, 24> {
-        RLDEN_W::new(self)
+    pub fn rlden(&mut self) -> RLDEN_W<CTRL2_SPEC> {
+        RLDEN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Automatically send stop condition enable"]
     #[inline(always)]
     #[must_use]
-    pub fn astopen(&mut self) -> ASTOPEN_W<CTRL2_SPEC, 25> {
-        ASTOPEN_W::new(self)
+    pub fn astopen(&mut self) -> ASTOPEN_W<CTRL2_SPEC> {
+        ASTOPEN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Request PEC transmission enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pecten(&mut self) -> PECTEN_W<CTRL2_SPEC, 26> {
-        PECTEN_W::new(self)
+    pub fn pecten(&mut self) -> PECTEN_W<CTRL2_SPEC> {
+        PECTEN_W::new(self, 26)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

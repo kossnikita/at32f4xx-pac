@@ -5,7 +5,7 @@ pub type W = crate::W<DIVCNTH_SPEC>;
 #[doc = "Field `DIVCNT` reader - RTC divider register high"]
 pub type DIVCNT_R = crate::FieldReader;
 #[doc = "Field `DIVCNT` writer - RTC divider register high"]
-pub type DIVCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DIVCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - RTC divider register high"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:3 - RTC divider register high"]
     #[inline(always)]
     #[must_use]
-    pub fn divcnt(&mut self) -> DIVCNT_W<DIVCNTH_SPEC, 0> {
-        DIVCNT_W::new(self)
+    pub fn divcnt(&mut self) -> DIVCNT_W<DIVCNTH_SPEC> {
+        DIVCNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

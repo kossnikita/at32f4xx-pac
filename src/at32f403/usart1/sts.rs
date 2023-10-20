@@ -15,21 +15,21 @@ pub type IDLEF_R = crate::BitReader;
 #[doc = "Field `RDBF` reader - Receive data buffer full"]
 pub type RDBF_R = crate::BitReader;
 #[doc = "Field `RDBF` writer - Receive data buffer full"]
-pub type RDBF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RDBF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TDC` reader - Transmit data complete"]
 pub type TDC_R = crate::BitReader;
 #[doc = "Field `TDC` writer - Transmit data complete"]
-pub type TDC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TDC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TDBE` reader - Transmit data buffer empty"]
 pub type TDBE_R = crate::BitReader;
 #[doc = "Field `BFF` reader - Break frame flag"]
 pub type BFF_R = crate::BitReader;
 #[doc = "Field `BFF` writer - Break frame flag"]
-pub type BFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTSCF` reader - CTS change flag"]
 pub type CTSCF_R = crate::BitReader;
 #[doc = "Field `CTSCF` writer - CTS change flag"]
-pub type CTSCF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTSCF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Parity error"]
     #[inline(always)]
@@ -107,26 +107,26 @@ impl W {
     #[doc = "Bit 5 - Receive data buffer full"]
     #[inline(always)]
     #[must_use]
-    pub fn rdbf(&mut self) -> RDBF_W<STS_SPEC, 5> {
-        RDBF_W::new(self)
+    pub fn rdbf(&mut self) -> RDBF_W<STS_SPEC> {
+        RDBF_W::new(self, 5)
     }
     #[doc = "Bit 6 - Transmit data complete"]
     #[inline(always)]
     #[must_use]
-    pub fn tdc(&mut self) -> TDC_W<STS_SPEC, 6> {
-        TDC_W::new(self)
+    pub fn tdc(&mut self) -> TDC_W<STS_SPEC> {
+        TDC_W::new(self, 6)
     }
     #[doc = "Bit 8 - Break frame flag"]
     #[inline(always)]
     #[must_use]
-    pub fn bff(&mut self) -> BFF_W<STS_SPEC, 8> {
-        BFF_W::new(self)
+    pub fn bff(&mut self) -> BFF_W<STS_SPEC> {
+        BFF_W::new(self, 8)
     }
     #[doc = "Bit 9 - CTS change flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ctscf(&mut self) -> CTSCF_W<STS_SPEC, 9> {
-        CTSCF_W::new(self)
+    pub fn ctscf(&mut self) -> CTSCF_W<STS_SPEC> {
+        CTSCF_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

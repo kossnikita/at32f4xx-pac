@@ -1,7 +1,7 @@
 #[doc = "Register `CRC_ADDR` writer"]
 pub type W = crate::W<CRC_ADDR_SPEC>;
 #[doc = "Field `CRC_ADDR` writer - CRC address"]
-pub type CRC_ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type CRC_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl core::fmt::Debug for crate::generic::Reg<CRC_ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -11,8 +11,8 @@ impl W {
     #[doc = "Bits 0:31 - CRC address"]
     #[inline(always)]
     #[must_use]
-    pub fn crc_addr(&mut self) -> CRC_ADDR_W<CRC_ADDR_SPEC, 0> {
-        CRC_ADDR_W::new(self)
+    pub fn crc_addr(&mut self) -> CRC_ADDR_W<CRC_ADDR_SPEC> {
+        CRC_ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

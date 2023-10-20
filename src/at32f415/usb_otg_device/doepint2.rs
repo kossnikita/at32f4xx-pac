@@ -5,23 +5,23 @@ pub type W = crate::W<DOEPINT2_SPEC>;
 #[doc = "Field `XFERC` reader - Transfer completed interrupt"]
 pub type XFERC_R = crate::BitReader;
 #[doc = "Field `XFERC` writer - Transfer completed interrupt"]
-pub type XFERC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XFERC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPTDISD` reader - Endpoint disabled interrupt"]
 pub type EPTDISD_R = crate::BitReader;
 #[doc = "Field `EPTDISD` writer - Endpoint disabled interrupt"]
-pub type EPTDISD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPTDISD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SETUP` reader - SETUP phase done"]
 pub type SETUP_R = crate::BitReader;
 #[doc = "Field `SETUP` writer - SETUP phase done"]
-pub type SETUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SETUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTTEPD` reader - OUT token received when endpoint disabled"]
 pub type OUTTEPD_R = crate::BitReader;
 #[doc = "Field `OUTTEPD` writer - OUT token received when endpoint disabled"]
-pub type OUTTEPD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTTEPD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `B2BSTUP` reader - Back-to-back SETUP packets received"]
 pub type B2BSTUP_R = crate::BitReader;
 #[doc = "Field `B2BSTUP` writer - Back-to-back SETUP packets received"]
-pub type B2BSTUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type B2BSTUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
@@ -69,32 +69,32 @@ impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn xferc(&mut self) -> XFERC_W<DOEPINT2_SPEC, 0> {
-        XFERC_W::new(self)
+    pub fn xferc(&mut self) -> XFERC_W<DOEPINT2_SPEC> {
+        XFERC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn eptdisd(&mut self) -> EPTDISD_W<DOEPINT2_SPEC, 1> {
-        EPTDISD_W::new(self)
+    pub fn eptdisd(&mut self) -> EPTDISD_W<DOEPINT2_SPEC> {
+        EPTDISD_W::new(self, 1)
     }
     #[doc = "Bit 3 - SETUP phase done"]
     #[inline(always)]
     #[must_use]
-    pub fn setup(&mut self) -> SETUP_W<DOEPINT2_SPEC, 3> {
-        SETUP_W::new(self)
+    pub fn setup(&mut self) -> SETUP_W<DOEPINT2_SPEC> {
+        SETUP_W::new(self, 3)
     }
     #[doc = "Bit 4 - OUT token received when endpoint disabled"]
     #[inline(always)]
     #[must_use]
-    pub fn outtepd(&mut self) -> OUTTEPD_W<DOEPINT2_SPEC, 4> {
-        OUTTEPD_W::new(self)
+    pub fn outtepd(&mut self) -> OUTTEPD_W<DOEPINT2_SPEC> {
+        OUTTEPD_W::new(self, 4)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets received"]
     #[inline(always)]
     #[must_use]
-    pub fn b2bstup(&mut self) -> B2BSTUP_W<DOEPINT2_SPEC, 6> {
-        B2BSTUP_W::new(self)
+    pub fn b2bstup(&mut self) -> B2BSTUP_W<DOEPINT2_SPEC> {
+        B2BSTUP_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<FRF_SPEC>;
 #[doc = "Field `EFRCSF` reader - Enhanced frame rate contorl source factor"]
 pub type EFRCSF_R = crate::FieldReader;
 #[doc = "Field `EFRCSF` writer - Enhanced frame rate contorl source factor"]
-pub type EFRCSF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type EFRCSF_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `EFRCTF` reader - Enhanced frame rate control target factor"]
 pub type EFRCTF_R = crate::FieldReader;
 #[doc = "Field `EFRCTF` writer - Enhanced frame rate control target factor"]
-pub type EFRCTF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type EFRCTF_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:4 - Enhanced frame rate contorl source factor"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:4 - Enhanced frame rate contorl source factor"]
     #[inline(always)]
     #[must_use]
-    pub fn efrcsf(&mut self) -> EFRCSF_W<FRF_SPEC, 0> {
-        EFRCSF_W::new(self)
+    pub fn efrcsf(&mut self) -> EFRCSF_W<FRF_SPEC> {
+        EFRCSF_W::new(self, 0)
     }
     #[doc = "Bits 8:12 - Enhanced frame rate control target factor"]
     #[inline(always)]
     #[must_use]
-    pub fn efrctf(&mut self) -> EFRCTF_W<FRF_SPEC, 8> {
-        EFRCTF_W::new(self)
+    pub fn efrctf(&mut self) -> EFRCTF_W<FRF_SPEC> {
+        EFRCTF_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

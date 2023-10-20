@@ -39,8 +39,8 @@ impl FCS_R {
     }
 }
 #[doc = "Field `FCS` writer - Filters configure switch"]
-pub type FCS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, FCS_A>;
-impl<'a, REG, const O: u8> FCS_W<'a, REG, O>
+pub type FCS_W<'a, REG> = crate::BitWriter<'a, REG, FCS_A>;
+impl<'a, REG> FCS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -78,8 +78,8 @@ impl W {
     #[doc = "Bit 0 - Filters configure switch"]
     #[inline(always)]
     #[must_use]
-    pub fn fcs(&mut self) -> FCS_W<FCTRL_SPEC, 0> {
-        FCS_W::new(self)
+    pub fn fcs(&mut self) -> FCS_W<FCTRL_SPEC> {
+        FCS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

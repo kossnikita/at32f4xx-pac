@@ -5,12 +5,13 @@ pub type W = crate::W<TMDTH_SPEC>;
 #[doc = "Field `TMDT[4-7]` reader - Transmit mailbox data byte 4"]
 pub type TMDT_R = crate::FieldReader;
 #[doc = "Field `TMDT[4-7]` writer - Transmit mailbox data byte 4"]
-pub type TMDT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 8, O>;
+pub type TMDT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
 impl R {
-    #[doc = "Transmit mailbox data byte 4"]
+    #[doc = "Transmit mailbox data byte 4\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn tmdt(&self, n: u8) -> TMDT_R {
-        TMDT_R::new(((self.bits >> ((n - 4) * 8)) & 0xff) as u8)
+    pub fn tmdt(&self, n: u8) -> TMDT_R {
+        assert!(n < 4);
+        TMDT_R::new(((self.bits >> (n * 8)) & 0xff) as u8)
     }
     #[doc = "Bits 0:7 - Transmit mailbox data byte 4"]
     #[inline(always)]
@@ -52,32 +53,33 @@ impl W {
     #[doc = "Transmit mailbox data byte 4"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn tmdt<const O: u8>(&mut self) -> TMDT_W<TMDTH_SPEC, O> {
-        TMDT_W::new(self)
+    pub fn tmdt(&mut self, n: u8) -> TMDT_W<TMDTH_SPEC> {
+        assert!(n < 4);
+        TMDT_W::new(self, n * 8)
     }
     #[doc = "Bits 0:7 - Transmit mailbox data byte 4"]
     #[inline(always)]
     #[must_use]
-    pub fn tmdt4(&mut self) -> TMDT_W<TMDTH_SPEC, 0> {
-        TMDT_W::new(self)
+    pub fn tmdt4(&mut self) -> TMDT_W<TMDTH_SPEC> {
+        TMDT_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Transmit mailbox data byte 4"]
     #[inline(always)]
     #[must_use]
-    pub fn tmdt5(&mut self) -> TMDT_W<TMDTH_SPEC, 8> {
-        TMDT_W::new(self)
+    pub fn tmdt5(&mut self) -> TMDT_W<TMDTH_SPEC> {
+        TMDT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Transmit mailbox data byte 4"]
     #[inline(always)]
     #[must_use]
-    pub fn tmdt6(&mut self) -> TMDT_W<TMDTH_SPEC, 16> {
-        TMDT_W::new(self)
+    pub fn tmdt6(&mut self) -> TMDT_W<TMDTH_SPEC> {
+        TMDT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Transmit mailbox data byte 4"]
     #[inline(always)]
     #[must_use]
-    pub fn tmdt7(&mut self) -> TMDT_W<TMDTH_SPEC, 24> {
-        TMDT_W::new(self)
+    pub fn tmdt7(&mut self) -> TMDT_W<TMDTH_SPEC> {
+        TMDT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,19 +5,19 @@ pub type W = crate::W<BK4TMGIO_SPEC>;
 #[doc = "Field `IOST` reader - STP"]
 pub type IOST_R = crate::FieldReader;
 #[doc = "Field `IOST` writer - STP"]
-pub type IOST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type IOST_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `IOWT` reader - OP"]
 pub type IOWT_R = crate::FieldReader;
 #[doc = "Field `IOWT` writer - OP"]
-pub type IOWT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type IOWT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `IOHT` reader - HLD"]
 pub type IOHT_R = crate::FieldReader;
 #[doc = "Field `IOHT` writer - HLD"]
-pub type IOHT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type IOHT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `IODHIZT` reader - WRSTP"]
 pub type IODHIZT_R = crate::FieldReader;
 #[doc = "Field `IODHIZT` writer - WRSTP"]
-pub type IODHIZT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type IODHIZT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - STP"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:7 - STP"]
     #[inline(always)]
     #[must_use]
-    pub fn iost(&mut self) -> IOST_W<BK4TMGIO_SPEC, 0> {
-        IOST_W::new(self)
+    pub fn iost(&mut self) -> IOST_W<BK4TMGIO_SPEC> {
+        IOST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - OP"]
     #[inline(always)]
     #[must_use]
-    pub fn iowt(&mut self) -> IOWT_W<BK4TMGIO_SPEC, 8> {
-        IOWT_W::new(self)
+    pub fn iowt(&mut self) -> IOWT_W<BK4TMGIO_SPEC> {
+        IOWT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - HLD"]
     #[inline(always)]
     #[must_use]
-    pub fn ioht(&mut self) -> IOHT_W<BK4TMGIO_SPEC, 16> {
-        IOHT_W::new(self)
+    pub fn ioht(&mut self) -> IOHT_W<BK4TMGIO_SPEC> {
+        IOHT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - WRSTP"]
     #[inline(always)]
     #[must_use]
-    pub fn iodhizt(&mut self) -> IODHIZT_W<BK4TMGIO_SPEC, 24> {
-        IODHIZT_W::new(self)
+    pub fn iodhizt(&mut self) -> IODHIZT_W<BK4TMGIO_SPEC> {
+        IODHIZT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

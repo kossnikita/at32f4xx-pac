@@ -1,7 +1,7 @@
 #[doc = "Register `UNLOCK2` writer"]
 pub type W = crate::W<UNLOCK2_SPEC>;
 #[doc = "Field `UKVAL` writer - Unlock key value"]
-pub type UKVAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type UKVAL_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl core::fmt::Debug for crate::generic::Reg<UNLOCK2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -11,8 +11,8 @@ impl W {
     #[doc = "Bits 0:31 - Unlock key value"]
     #[inline(always)]
     #[must_use]
-    pub fn ukval(&mut self) -> UKVAL_W<UNLOCK2_SPEC, 0> {
-        UKVAL_W::new(self)
+    pub fn ukval(&mut self) -> UKVAL_W<UNLOCK2_SPEC> {
+        UKVAL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

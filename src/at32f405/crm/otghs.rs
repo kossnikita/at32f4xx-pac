@@ -5,7 +5,7 @@ pub type W = crate::W<OTGHS_SPEC>;
 #[doc = "Field `USBHS_PHY12_SEL` reader - USBHS phy12 select value"]
 pub type USBHS_PHY12_SEL_R = crate::FieldReader;
 #[doc = "Field `USBHS_PHY12_SEL` writer - USBHS phy12 select value"]
-pub type USBHS_PHY12_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type USBHS_PHY12_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 3:4 - USBHS phy12 select value"]
     #[inline(always)]
@@ -32,8 +32,8 @@ impl W {
     #[doc = "Bits 3:4 - USBHS phy12 select value"]
     #[inline(always)]
     #[must_use]
-    pub fn usbhs_phy12_sel(&mut self) -> USBHS_PHY12_SEL_W<OTGHS_SPEC, 3> {
-        USBHS_PHY12_SEL_W::new(self)
+    pub fn usbhs_phy12_sel(&mut self) -> USBHS_PHY12_SEL_W<OTGHS_SPEC> {
+        USBHS_PHY12_SEL_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<BK4CTRL_SPEC>;
 #[doc = "Field `NWEN` reader - Wait feature enable"]
 pub type NWEN_R = crate::BitReader;
 #[doc = "Field `NWEN` writer - Wait feature enable"]
-pub type NWEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NWEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EN` reader - Memory bank enable"]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Memory bank enable"]
-pub type EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - Wait feature enable"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bit 1 - Wait feature enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nwen(&mut self) -> NWEN_W<BK4CTRL_SPEC, 1> {
-        NWEN_W::new(self)
+    pub fn nwen(&mut self) -> NWEN_W<BK4CTRL_SPEC> {
+        NWEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Memory bank enable"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<BK4CTRL_SPEC, 2> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<BK4CTRL_SPEC> {
+        EN_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

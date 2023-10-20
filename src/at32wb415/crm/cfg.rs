@@ -52,8 +52,8 @@ impl SCLKSEL_R {
     }
 }
 #[doc = "Field `SCLKSEL` writer - System clock select"]
-pub type SCLKSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, SCLKSEL_A>;
-impl<'a, REG, const O: u8> SCLKSEL_W<'a, REG, O>
+pub type SCLKSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SCLKSEL_A>;
+impl<'a, REG> SCLKSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -221,8 +221,8 @@ impl AHBDIV_R {
     }
 }
 #[doc = "Field `AHBDIV` writer - AHB division"]
-pub type AHBDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, AHBDIV_A>;
-impl<'a, REG, const O: u8> AHBDIV_W<'a, REG, O>
+pub type AHBDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 4, AHBDIV_A>;
+impl<'a, REG> AHBDIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -339,8 +339,8 @@ impl APB1DIV_R {
     }
 }
 #[doc = "Field `APB1DIV` writer - APB1 division"]
-pub type APB1DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, APB1DIV_A>;
-impl<'a, REG, const O: u8> APB1DIV_W<'a, REG, O>
+pub type APB1DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 3, APB1DIV_A>;
+impl<'a, REG> APB1DIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -378,39 +378,39 @@ pub use APB1DIV_W as APB2DIV_W;
 #[doc = "Field `ADCDIV1_0` reader - ADC division bit1 and bit0"]
 pub type ADCDIV1_0_R = crate::FieldReader;
 #[doc = "Field `ADCDIV1_0` writer - ADC division bit1 and bit0"]
-pub type ADCDIV1_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ADCDIV1_0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PLLRCS` reader - PLL reference clock select"]
 pub type PLLRCS_R = crate::BitReader;
 #[doc = "Field `PLLRCS` writer - PLL reference clock select"]
-pub type PLLRCS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLRCS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLHEXTDIV` reader - HEXT division selection for PLL entry clock"]
 pub type PLLHEXTDIV_R = crate::BitReader;
 #[doc = "Field `PLLHEXTDIV` writer - HEXT division selection for PLL entry clock"]
-pub type PLLHEXTDIV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLHEXTDIV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLMULT3_0` reader - PLL Multiplication Factor bit3 to bit0"]
 pub type PLLMULT3_0_R = crate::FieldReader;
 #[doc = "Field `PLLMULT3_0` writer - PLL Multiplication Factor bit3 to bit0"]
-pub type PLLMULT3_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PLLMULT3_0_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `USBDIV1_0` reader - USB division bit1 and bit0"]
 pub type USBDIV1_0_R = crate::FieldReader;
 #[doc = "Field `USBDIV1_0` writer - USB division bit1 and bit0"]
-pub type USBDIV1_0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type USBDIV1_0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CLKOUT_SEL` reader - Clock output selection bit2 to bit0"]
 pub type CLKOUT_SEL_R = crate::FieldReader;
 #[doc = "Field `CLKOUT_SEL` writer - Clock output selection bit2 to bit0"]
-pub type CLKOUT_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CLKOUT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `USBDIV2` reader - USB division bit2"]
 pub type USBDIV2_R = crate::BitReader;
 #[doc = "Field `USBDIV2` writer - USB division bit2"]
-pub type USBDIV2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USBDIV2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADCDIV2` reader - ADC division bit2"]
 pub type ADCDIV2_R = crate::BitReader;
 #[doc = "Field `ADCDIV2` writer - ADC division bit2"]
-pub type ADCDIV2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADCDIV2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLMULT5_4` reader - PLL Multiplication Factor bit5 and bit4"]
 pub type PLLMULT5_4_R = crate::FieldReader;
 #[doc = "Field `PLLMULT5_4` writer - PLL Multiplication Factor bit5 and bit4"]
-pub type PLLMULT5_4_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PLLMULT5_4_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - System clock select"]
     #[inline(always)]
@@ -512,80 +512,80 @@ impl W {
     #[doc = "Bits 0:1 - System clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn sclksel(&mut self) -> SCLKSEL_W<CFG_SPEC, 0> {
-        SCLKSEL_W::new(self)
+    pub fn sclksel(&mut self) -> SCLKSEL_W<CFG_SPEC> {
+        SCLKSEL_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - AHB division"]
     #[inline(always)]
     #[must_use]
-    pub fn ahbdiv(&mut self) -> AHBDIV_W<CFG_SPEC, 4> {
-        AHBDIV_W::new(self)
+    pub fn ahbdiv(&mut self) -> AHBDIV_W<CFG_SPEC> {
+        AHBDIV_W::new(self, 4)
     }
     #[doc = "Bits 8:10 - APB1 division"]
     #[inline(always)]
     #[must_use]
-    pub fn apb1div(&mut self) -> APB1DIV_W<CFG_SPEC, 8> {
-        APB1DIV_W::new(self)
+    pub fn apb1div(&mut self) -> APB1DIV_W<CFG_SPEC> {
+        APB1DIV_W::new(self, 8)
     }
     #[doc = "Bits 11:13 - APB2 division"]
     #[inline(always)]
     #[must_use]
-    pub fn apb2div(&mut self) -> APB2DIV_W<CFG_SPEC, 11> {
-        APB2DIV_W::new(self)
+    pub fn apb2div(&mut self) -> APB2DIV_W<CFG_SPEC> {
+        APB2DIV_W::new(self, 11)
     }
     #[doc = "Bits 14:15 - ADC division bit1 and bit0"]
     #[inline(always)]
     #[must_use]
-    pub fn adcdiv1_0(&mut self) -> ADCDIV1_0_W<CFG_SPEC, 14> {
-        ADCDIV1_0_W::new(self)
+    pub fn adcdiv1_0(&mut self) -> ADCDIV1_0_W<CFG_SPEC> {
+        ADCDIV1_0_W::new(self, 14)
     }
     #[doc = "Bit 16 - PLL reference clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn pllrcs(&mut self) -> PLLRCS_W<CFG_SPEC, 16> {
-        PLLRCS_W::new(self)
+    pub fn pllrcs(&mut self) -> PLLRCS_W<CFG_SPEC> {
+        PLLRCS_W::new(self, 16)
     }
     #[doc = "Bit 17 - HEXT division selection for PLL entry clock"]
     #[inline(always)]
     #[must_use]
-    pub fn pllhextdiv(&mut self) -> PLLHEXTDIV_W<CFG_SPEC, 17> {
-        PLLHEXTDIV_W::new(self)
+    pub fn pllhextdiv(&mut self) -> PLLHEXTDIV_W<CFG_SPEC> {
+        PLLHEXTDIV_W::new(self, 17)
     }
     #[doc = "Bits 18:21 - PLL Multiplication Factor bit3 to bit0"]
     #[inline(always)]
     #[must_use]
-    pub fn pllmult3_0(&mut self) -> PLLMULT3_0_W<CFG_SPEC, 18> {
-        PLLMULT3_0_W::new(self)
+    pub fn pllmult3_0(&mut self) -> PLLMULT3_0_W<CFG_SPEC> {
+        PLLMULT3_0_W::new(self, 18)
     }
     #[doc = "Bits 22:23 - USB division bit1 and bit0"]
     #[inline(always)]
     #[must_use]
-    pub fn usbdiv1_0(&mut self) -> USBDIV1_0_W<CFG_SPEC, 22> {
-        USBDIV1_0_W::new(self)
+    pub fn usbdiv1_0(&mut self) -> USBDIV1_0_W<CFG_SPEC> {
+        USBDIV1_0_W::new(self, 22)
     }
     #[doc = "Bits 24:26 - Clock output selection bit2 to bit0"]
     #[inline(always)]
     #[must_use]
-    pub fn clkout_sel(&mut self) -> CLKOUT_SEL_W<CFG_SPEC, 24> {
-        CLKOUT_SEL_W::new(self)
+    pub fn clkout_sel(&mut self) -> CLKOUT_SEL_W<CFG_SPEC> {
+        CLKOUT_SEL_W::new(self, 24)
     }
     #[doc = "Bit 27 - USB division bit2"]
     #[inline(always)]
     #[must_use]
-    pub fn usbdiv2(&mut self) -> USBDIV2_W<CFG_SPEC, 27> {
-        USBDIV2_W::new(self)
+    pub fn usbdiv2(&mut self) -> USBDIV2_W<CFG_SPEC> {
+        USBDIV2_W::new(self, 27)
     }
     #[doc = "Bit 28 - ADC division bit2"]
     #[inline(always)]
     #[must_use]
-    pub fn adcdiv2(&mut self) -> ADCDIV2_W<CFG_SPEC, 28> {
-        ADCDIV2_W::new(self)
+    pub fn adcdiv2(&mut self) -> ADCDIV2_W<CFG_SPEC> {
+        ADCDIV2_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - PLL Multiplication Factor bit5 and bit4"]
     #[inline(always)]
     #[must_use]
-    pub fn pllmult5_4(&mut self) -> PLLMULT5_4_W<CFG_SPEC, 29> {
-        PLLMULT5_4_W::new(self)
+    pub fn pllmult5_4(&mut self) -> PLLMULT5_4_W<CFG_SPEC> {
+        PLLMULT5_4_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

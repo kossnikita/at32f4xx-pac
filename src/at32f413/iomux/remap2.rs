@@ -5,7 +5,7 @@ pub type W = crate::W<REMAP2_SPEC>;
 #[doc = "Field `EXT_SPIM_EN_MUX` reader - SPIM enable"]
 pub type EXT_SPIM_EN_MUX_R = crate::BitReader;
 #[doc = "Field `EXT_SPIM_EN_MUX` writer - SPIM enable"]
-pub type EXT_SPIM_EN_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_SPIM_EN_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 21 - SPIM enable"]
     #[inline(always)]
@@ -32,8 +32,8 @@ impl W {
     #[doc = "Bit 21 - SPIM enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_spim_en_mux(&mut self) -> EXT_SPIM_EN_MUX_W<REMAP2_SPEC, 21> {
-        EXT_SPIM_EN_MUX_W::new(self)
+    pub fn ext_spim_en_mux(&mut self) -> EXT_SPIM_EN_MUX_W<REMAP2_SPEC> {
+        EXT_SPIM_EN_MUX_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

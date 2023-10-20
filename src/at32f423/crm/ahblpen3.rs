@@ -5,7 +5,7 @@ pub type W = crate::W<AHBLPEN3_SPEC>;
 #[doc = "Field `XMCLP` reader - XMC clock enable during sleep mode"]
 pub type XMCLP_R = crate::BitReader;
 #[doc = "Field `XMCLP` writer - XMC clock enable during sleep mode"]
-pub type XMCLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XMCLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - XMC clock enable during sleep mode"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 0 - XMC clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn xmclp(&mut self) -> XMCLP_W<AHBLPEN3_SPEC, 0> {
-        XMCLP_W::new(self)
+    pub fn xmclp(&mut self) -> XMCLP_W<AHBLPEN3_SPEC> {
+        XMCLP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

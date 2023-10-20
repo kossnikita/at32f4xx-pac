@@ -5,11 +5,11 @@ pub type W = crate::W<CCTRL_SPEC>;
 #[doc = "Field `ADCDIV` reader - ADC division"]
 pub type ADCDIV_R = crate::FieldReader;
 #[doc = "Field `ADCDIV` writer - ADC division"]
-pub type ADCDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ADCDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `ITSRVEN` reader - Internal temperature sensor and VINTRV enable"]
 pub type ITSRVEN_R = crate::BitReader;
 #[doc = "Field `ITSRVEN` writer - Internal temperature sensor and VINTRV enable"]
-pub type ITSRVEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ITSRVEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 16:19 - ADC division"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 16:19 - ADC division"]
     #[inline(always)]
     #[must_use]
-    pub fn adcdiv(&mut self) -> ADCDIV_W<CCTRL_SPEC, 16> {
-        ADCDIV_W::new(self)
+    pub fn adcdiv(&mut self) -> ADCDIV_W<CCTRL_SPEC> {
+        ADCDIV_W::new(self, 16)
     }
     #[doc = "Bit 23 - Internal temperature sensor and VINTRV enable"]
     #[inline(always)]
     #[must_use]
-    pub fn itsrven(&mut self) -> ITSRVEN_W<CCTRL_SPEC, 23> {
-        ITSRVEN_W::new(self)
+    pub fn itsrven(&mut self) -> ITSRVEN_W<CCTRL_SPEC> {
+        ITSRVEN_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

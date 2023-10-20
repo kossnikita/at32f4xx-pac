@@ -5,47 +5,47 @@ pub type W = crate::W<REMAP2_SPEC>;
 #[doc = "Field `TMR15_MUX` reader - TMR15 muxing"]
 pub type TMR15_MUX_R = crate::BitReader;
 #[doc = "Field `TMR15_MUX` writer - TMR15 muxing"]
-pub type TMR15_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR15_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR9_MUX` reader - TMR9 muxing"]
 pub type TMR9_MUX_R = crate::BitReader;
 #[doc = "Field `TMR9_MUX` writer - TMR9 muxing"]
-pub type TMR9_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR9_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR10_MUX` reader - TMR10 muxing"]
 pub type TMR10_MUX_R = crate::BitReader;
 #[doc = "Field `TMR10_MUX` writer - TMR10 muxing"]
-pub type TMR10_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR10_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR11_MUX` reader - TMR11 muxing"]
 pub type TMR11_MUX_R = crate::BitReader;
 #[doc = "Field `TMR11_MUX` writer - TMR11 muxing"]
-pub type TMR11_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR11_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR13_MUX` reader - TMR13 muxing"]
 pub type TMR13_MUX_R = crate::BitReader;
 #[doc = "Field `TMR13_MUX` writer - TMR13 muxing"]
-pub type TMR13_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR13_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR14_MUX` reader - TMR14 muxing"]
 pub type TMR14_MUX_R = crate::BitReader;
 #[doc = "Field `TMR14_MUX` writer - TMR14 muxing"]
-pub type TMR14_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR14_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XMC_NADV_MUX` reader - NADV connect/disconnect"]
 pub type XMC_NADV_MUX_R = crate::BitReader;
 #[doc = "Field `XMC_NADV_MUX` writer - NADV connect/disconnect"]
-pub type XMC_NADV_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XMC_NADV_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI4_MUX` reader - SPI4 muxing"]
 pub type SPI4_MUX_R = crate::BitReader;
 #[doc = "Field `SPI4_MUX` writer - SPI4 muxing"]
-pub type SPI4_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI4_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C3_MUX` reader - I2C3 muxing"]
 pub type I2C3_MUX_R = crate::BitReader;
 #[doc = "Field `I2C3_MUX` writer - I2C3 muxing"]
-pub type I2C3_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C3_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO2_MUX` reader - SDIO2 muxing"]
 pub type SDIO2_MUX_R = crate::FieldReader;
 #[doc = "Field `SDIO2_MUX` writer - SDIO2 muxing"]
-pub type SDIO2_MUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SDIO2_MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `EXT_SPIM_EN_MUX` reader - SPIM enable muxing"]
 pub type EXT_SPIM_EN_MUX_R = crate::BitReader;
 #[doc = "Field `EXT_SPIM_EN_MUX` writer - SPIM enable muxing"]
-pub type EXT_SPIM_EN_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_SPIM_EN_MUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - TMR15 muxing"]
     #[inline(always)]
@@ -135,68 +135,68 @@ impl W {
     #[doc = "Bit 0 - TMR15 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr15_mux(&mut self) -> TMR15_MUX_W<REMAP2_SPEC, 0> {
-        TMR15_MUX_W::new(self)
+    pub fn tmr15_mux(&mut self) -> TMR15_MUX_W<REMAP2_SPEC> {
+        TMR15_MUX_W::new(self, 0)
     }
     #[doc = "Bit 5 - TMR9 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr9_mux(&mut self) -> TMR9_MUX_W<REMAP2_SPEC, 5> {
-        TMR9_MUX_W::new(self)
+    pub fn tmr9_mux(&mut self) -> TMR9_MUX_W<REMAP2_SPEC> {
+        TMR9_MUX_W::new(self, 5)
     }
     #[doc = "Bit 6 - TMR10 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr10_mux(&mut self) -> TMR10_MUX_W<REMAP2_SPEC, 6> {
-        TMR10_MUX_W::new(self)
+    pub fn tmr10_mux(&mut self) -> TMR10_MUX_W<REMAP2_SPEC> {
+        TMR10_MUX_W::new(self, 6)
     }
     #[doc = "Bit 7 - TMR11 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr11_mux(&mut self) -> TMR11_MUX_W<REMAP2_SPEC, 7> {
-        TMR11_MUX_W::new(self)
+    pub fn tmr11_mux(&mut self) -> TMR11_MUX_W<REMAP2_SPEC> {
+        TMR11_MUX_W::new(self, 7)
     }
     #[doc = "Bit 8 - TMR13 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr13_mux(&mut self) -> TMR13_MUX_W<REMAP2_SPEC, 8> {
-        TMR13_MUX_W::new(self)
+    pub fn tmr13_mux(&mut self) -> TMR13_MUX_W<REMAP2_SPEC> {
+        TMR13_MUX_W::new(self, 8)
     }
     #[doc = "Bit 9 - TMR14 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr14_mux(&mut self) -> TMR14_MUX_W<REMAP2_SPEC, 9> {
-        TMR14_MUX_W::new(self)
+    pub fn tmr14_mux(&mut self) -> TMR14_MUX_W<REMAP2_SPEC> {
+        TMR14_MUX_W::new(self, 9)
     }
     #[doc = "Bit 10 - NADV connect/disconnect"]
     #[inline(always)]
     #[must_use]
-    pub fn xmc_nadv_mux(&mut self) -> XMC_NADV_MUX_W<REMAP2_SPEC, 10> {
-        XMC_NADV_MUX_W::new(self)
+    pub fn xmc_nadv_mux(&mut self) -> XMC_NADV_MUX_W<REMAP2_SPEC> {
+        XMC_NADV_MUX_W::new(self, 10)
     }
     #[doc = "Bit 17 - SPI4 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn spi4_mux(&mut self) -> SPI4_MUX_W<REMAP2_SPEC, 17> {
-        SPI4_MUX_W::new(self)
+    pub fn spi4_mux(&mut self) -> SPI4_MUX_W<REMAP2_SPEC> {
+        SPI4_MUX_W::new(self, 17)
     }
     #[doc = "Bit 18 - I2C3 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c3_mux(&mut self) -> I2C3_MUX_W<REMAP2_SPEC, 18> {
-        I2C3_MUX_W::new(self)
+    pub fn i2c3_mux(&mut self) -> I2C3_MUX_W<REMAP2_SPEC> {
+        I2C3_MUX_W::new(self, 18)
     }
     #[doc = "Bits 19:20 - SDIO2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio2_mux(&mut self) -> SDIO2_MUX_W<REMAP2_SPEC, 19> {
-        SDIO2_MUX_W::new(self)
+    pub fn sdio2_mux(&mut self) -> SDIO2_MUX_W<REMAP2_SPEC> {
+        SDIO2_MUX_W::new(self, 19)
     }
     #[doc = "Bit 21 - SPIM enable muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_spim_en_mux(&mut self) -> EXT_SPIM_EN_MUX_W<REMAP2_SPEC, 21> {
-        EXT_SPIM_EN_MUX_W::new(self)
+    pub fn ext_spim_en_mux(&mut self) -> EXT_SPIM_EN_MUX_W<REMAP2_SPEC> {
+        EXT_SPIM_EN_MUX_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

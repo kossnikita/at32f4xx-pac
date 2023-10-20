@@ -5,7 +5,7 @@ pub type W = crate::W<REMAP3_SPEC>;
 #[doc = "Field `TMR9_GMUX` reader - TMR9 muxing"]
 pub type TMR9_GMUX_R = crate::FieldReader;
 #[doc = "Field `TMR9_GMUX` writer - TMR9 muxing"]
-pub type TMR9_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type TMR9_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - TMR9 muxing"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:3 - TMR9 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr9_gmux(&mut self) -> TMR9_GMUX_W<REMAP3_SPEC, 0> {
-        TMR9_GMUX_W::new(self)
+    pub fn tmr9_gmux(&mut self) -> TMR9_GMUX_W<REMAP3_SPEC> {
+        TMR9_GMUX_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

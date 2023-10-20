@@ -5,23 +5,23 @@ pub type W = crate::W<CTRLL_SPEC>;
 #[doc = "Field `TSF` reader - Time second flag"]
 pub type TSF_R = crate::BitReader;
 #[doc = "Field `TSF` writer - Time second flag"]
-pub type TSF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TAF` reader - Time alarm flag"]
 pub type TAF_R = crate::BitReader;
 #[doc = "Field `TAF` writer - Time alarm flag"]
-pub type TAF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TAF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVFF` reader - Overflow Flag"]
 pub type OVFF_R = crate::BitReader;
 #[doc = "Field `OVFF` writer - Overflow Flag"]
-pub type OVFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UPDF` reader - RTC update finish"]
 pub type UPDF_R = crate::BitReader;
 #[doc = "Field `UPDF` writer - RTC update finish"]
-pub type UPDF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UPDF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CFGEN` reader - RTC configuration enable"]
 pub type CFGEN_R = crate::BitReader;
 #[doc = "Field `CFGEN` writer - RTC configuration enable"]
-pub type CFGEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CFGEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CFGF` reader - RTC configuration finish"]
 pub type CFGF_R = crate::BitReader;
 impl R {
@@ -77,32 +77,32 @@ impl W {
     #[doc = "Bit 0 - Time second flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tsf(&mut self) -> TSF_W<CTRLL_SPEC, 0> {
-        TSF_W::new(self)
+    pub fn tsf(&mut self) -> TSF_W<CTRLL_SPEC> {
+        TSF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Time alarm flag"]
     #[inline(always)]
     #[must_use]
-    pub fn taf(&mut self) -> TAF_W<CTRLL_SPEC, 1> {
-        TAF_W::new(self)
+    pub fn taf(&mut self) -> TAF_W<CTRLL_SPEC> {
+        TAF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Overflow Flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ovff(&mut self) -> OVFF_W<CTRLL_SPEC, 2> {
-        OVFF_W::new(self)
+    pub fn ovff(&mut self) -> OVFF_W<CTRLL_SPEC> {
+        OVFF_W::new(self, 2)
     }
     #[doc = "Bit 3 - RTC update finish"]
     #[inline(always)]
     #[must_use]
-    pub fn updf(&mut self) -> UPDF_W<CTRLL_SPEC, 3> {
-        UPDF_W::new(self)
+    pub fn updf(&mut self) -> UPDF_W<CTRLL_SPEC> {
+        UPDF_W::new(self, 3)
     }
     #[doc = "Bit 4 - RTC configuration enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cfgen(&mut self) -> CFGEN_W<CTRLL_SPEC, 4> {
-        CFGEN_W::new(self)
+    pub fn cfgen(&mut self) -> CFGEN_W<CTRLL_SPEC> {
+        CFGEN_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

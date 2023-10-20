@@ -53,8 +53,8 @@ impl From<CHENW_AW> for bool {
     }
 }
 #[doc = "Field `CHEN` writer - Channel enable"]
-pub type CHEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CHENW_AW>;
-impl<'a, REG, const O: u8> CHEN_W<'a, REG, O>
+pub type CHEN_W<'a, REG> = crate::BitWriter<'a, REG, CHENW_AW>;
+impl<'a, REG> CHEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,8 +120,8 @@ impl From<FDTIENW_AW> for bool {
     }
 }
 #[doc = "Field `FDTIEN` writer - Full data transfer interrupt enable"]
-pub type FDTIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, FDTIENW_AW>;
-impl<'a, REG, const O: u8> FDTIEN_W<'a, REG, O>
+pub type FDTIEN_W<'a, REG> = crate::BitWriter<'a, REG, FDTIENW_AW>;
+impl<'a, REG> FDTIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -187,8 +187,8 @@ impl From<HDTIENW_AW> for bool {
     }
 }
 #[doc = "Field `HDTIEN` writer - Half data transfer interrupt enable"]
-pub type HDTIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HDTIENW_AW>;
-impl<'a, REG, const O: u8> HDTIEN_W<'a, REG, O>
+pub type HDTIEN_W<'a, REG> = crate::BitWriter<'a, REG, HDTIENW_AW>;
+impl<'a, REG> HDTIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -254,8 +254,8 @@ impl From<DTERRIENW_AW> for bool {
     }
 }
 #[doc = "Field `DTERRIEN` writer - Data transfer error interrupt enable"]
-pub type DTERRIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DTERRIENW_AW>;
-impl<'a, REG, const O: u8> DTERRIEN_W<'a, REG, O>
+pub type DTERRIEN_W<'a, REG> = crate::BitWriter<'a, REG, DTERRIENW_AW>;
+impl<'a, REG> DTERRIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -307,8 +307,8 @@ impl DTD_R {
     }
 }
 #[doc = "Field `DTD` writer - Data transfer direction"]
-pub type DTD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DTD_A>;
-impl<'a, REG, const O: u8> DTD_W<'a, REG, O>
+pub type DTD_W<'a, REG> = crate::BitWriter<'a, REG, DTD_A>;
+impl<'a, REG> DTD_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -374,8 +374,8 @@ impl From<LMW_AW> for bool {
     }
 }
 #[doc = "Field `LM` writer - Loop mode"]
-pub type LM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, LMW_AW>;
-impl<'a, REG, const O: u8> LM_W<'a, REG, O>
+pub type LM_W<'a, REG> = crate::BitWriter<'a, REG, LMW_AW>;
+impl<'a, REG> LM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -441,8 +441,8 @@ impl From<PINCMW_AW> for bool {
     }
 }
 #[doc = "Field `PINCM` writer - Peripheral address increment mode"]
-pub type PINCM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PINCMW_AW>;
-impl<'a, REG, const O: u8> PINCM_W<'a, REG, O>
+pub type PINCM_W<'a, REG> = crate::BitWriter<'a, REG, PINCMW_AW>;
+impl<'a, REG> PINCM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -508,8 +508,8 @@ impl From<MINCMW_AW> for bool {
     }
 }
 #[doc = "Field `MINCM` writer - Memory address increment mode"]
-pub type MINCM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MINCMW_AW>;
-impl<'a, REG, const O: u8> MINCM_W<'a, REG, O>
+pub type MINCM_W<'a, REG> = crate::BitWriter<'a, REG, MINCMW_AW>;
+impl<'a, REG> MINCM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -574,8 +574,8 @@ impl PWIDTH_R {
     }
 }
 #[doc = "Field `PWIDTH` writer - Peripheral data bit width"]
-pub type PWIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, PWIDTH_A>;
-impl<'a, REG, const O: u8> PWIDTH_W<'a, REG, O>
+pub type PWIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PWIDTH_A>;
+impl<'a, REG> PWIDTH_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -646,8 +646,8 @@ impl MWIDTH_R {
     }
 }
 #[doc = "Field `MWIDTH` writer - Memory data bit width"]
-pub type MWIDTH_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, MWIDTH_A>;
-impl<'a, REG, const O: u8> MWIDTH_W<'a, REG, O>
+pub type MWIDTH_W<'a, REG> = crate::FieldWriter<'a, REG, 2, MWIDTH_A>;
+impl<'a, REG> MWIDTH_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -726,8 +726,8 @@ impl CHPL_R {
     }
 }
 #[doc = "Field `CHPL` writer - Channel Priority level"]
-pub type CHPL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, CHPL_A>;
-impl<'a, REG, const O: u8> CHPL_W<'a, REG, O>
+pub type CHPL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, CHPL_A>;
+impl<'a, REG> CHPL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -804,8 +804,8 @@ impl From<M2MW_AW> for bool {
     }
 }
 #[doc = "Field `M2M` writer - Memory to memory mode"]
-pub type M2M_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, M2MW_AW>;
-impl<'a, REG, const O: u8> M2M_W<'a, REG, O>
+pub type M2M_W<'a, REG> = crate::BitWriter<'a, REG, M2MW_AW>;
+impl<'a, REG> M2M_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -909,74 +909,74 @@ impl W {
     #[doc = "Bit 0 - Channel enable"]
     #[inline(always)]
     #[must_use]
-    pub fn chen(&mut self) -> CHEN_W<CTRL_SPEC, 0> {
-        CHEN_W::new(self)
+    pub fn chen(&mut self) -> CHEN_W<CTRL_SPEC> {
+        CHEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Full data transfer interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn fdtien(&mut self) -> FDTIEN_W<CTRL_SPEC, 1> {
-        FDTIEN_W::new(self)
+    pub fn fdtien(&mut self) -> FDTIEN_W<CTRL_SPEC> {
+        FDTIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Half data transfer interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hdtien(&mut self) -> HDTIEN_W<CTRL_SPEC, 2> {
-        HDTIEN_W::new(self)
+    pub fn hdtien(&mut self) -> HDTIEN_W<CTRL_SPEC> {
+        HDTIEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Data transfer error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dterrien(&mut self) -> DTERRIEN_W<CTRL_SPEC, 3> {
-        DTERRIEN_W::new(self)
+    pub fn dterrien(&mut self) -> DTERRIEN_W<CTRL_SPEC> {
+        DTERRIEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Data transfer direction"]
     #[inline(always)]
     #[must_use]
-    pub fn dtd(&mut self) -> DTD_W<CTRL_SPEC, 4> {
-        DTD_W::new(self)
+    pub fn dtd(&mut self) -> DTD_W<CTRL_SPEC> {
+        DTD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Loop mode"]
     #[inline(always)]
     #[must_use]
-    pub fn lm(&mut self) -> LM_W<CTRL_SPEC, 5> {
-        LM_W::new(self)
+    pub fn lm(&mut self) -> LM_W<CTRL_SPEC> {
+        LM_W::new(self, 5)
     }
     #[doc = "Bit 6 - Peripheral address increment mode"]
     #[inline(always)]
     #[must_use]
-    pub fn pincm(&mut self) -> PINCM_W<CTRL_SPEC, 6> {
-        PINCM_W::new(self)
+    pub fn pincm(&mut self) -> PINCM_W<CTRL_SPEC> {
+        PINCM_W::new(self, 6)
     }
     #[doc = "Bit 7 - Memory address increment mode"]
     #[inline(always)]
     #[must_use]
-    pub fn mincm(&mut self) -> MINCM_W<CTRL_SPEC, 7> {
-        MINCM_W::new(self)
+    pub fn mincm(&mut self) -> MINCM_W<CTRL_SPEC> {
+        MINCM_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - Peripheral data bit width"]
     #[inline(always)]
     #[must_use]
-    pub fn pwidth(&mut self) -> PWIDTH_W<CTRL_SPEC, 8> {
-        PWIDTH_W::new(self)
+    pub fn pwidth(&mut self) -> PWIDTH_W<CTRL_SPEC> {
+        PWIDTH_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Memory data bit width"]
     #[inline(always)]
     #[must_use]
-    pub fn mwidth(&mut self) -> MWIDTH_W<CTRL_SPEC, 10> {
-        MWIDTH_W::new(self)
+    pub fn mwidth(&mut self) -> MWIDTH_W<CTRL_SPEC> {
+        MWIDTH_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Channel Priority level"]
     #[inline(always)]
     #[must_use]
-    pub fn chpl(&mut self) -> CHPL_W<CTRL_SPEC, 12> {
-        CHPL_W::new(self)
+    pub fn chpl(&mut self) -> CHPL_W<CTRL_SPEC> {
+        CHPL_W::new(self, 12)
     }
     #[doc = "Bit 14 - Memory to memory mode"]
     #[inline(always)]
     #[must_use]
-    pub fn m2m(&mut self) -> M2M_W<CTRL_SPEC, 14> {
-        M2M_W::new(self)
+    pub fn m2m(&mut self) -> M2M_W<CTRL_SPEC> {
+        M2M_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

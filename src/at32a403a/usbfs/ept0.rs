@@ -5,43 +5,43 @@ pub type W = crate::W<EPT0_SPEC>;
 #[doc = "Field `EPTADDR` reader - Endpoint address"]
 pub type EPTADDR_R = crate::FieldReader;
 #[doc = "Field `EPTADDR` writer - Endpoint address"]
-pub type EPTADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EPTADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TXSTS` reader - Tx status"]
 pub type TXSTS_R = crate::FieldReader;
 #[doc = "Field `TXSTS` writer - Tx status"]
-pub type TXSTS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TXSTS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TXDTS` reader - Tx data toggle synchronization"]
 pub type TXDTS_R = crate::BitReader;
 #[doc = "Field `TXDTS` writer - Tx data toggle synchronization"]
-pub type TXDTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXDTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXTC` reader - Tx transaction completed"]
 pub type TXTC_R = crate::BitReader;
 #[doc = "Field `TXTC` writer - Tx transaction completed"]
-pub type TXTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXF` reader - Endpoint extend function"]
 pub type EXF_R = crate::BitReader;
 #[doc = "Field `EXF` writer - Endpoint extend function"]
-pub type EXF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_TYPE` reader - Transfer type"]
 pub type TRANS_TYPE_R = crate::FieldReader;
 #[doc = "Field `TRANS_TYPE` writer - Transfer type"]
-pub type TRANS_TYPE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TRANS_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `SETUPTC` reader - Setup transaction completed"]
 pub type SETUPTC_R = crate::BitReader;
 #[doc = "Field `SETUPTC` writer - Setup transaction completed"]
-pub type SETUPTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SETUPTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXSTS` reader - Rx Status"]
 pub type RXSTS_R = crate::FieldReader;
 #[doc = "Field `RXSTS` writer - Rx Status"]
-pub type RXSTS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RXSTS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RXDTS` reader - Rx data toggle synchronization"]
 pub type RXDTS_R = crate::BitReader;
 #[doc = "Field `RXDTS` writer - Rx data toggle synchronization"]
-pub type RXDTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXDTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXTC` reader - Rx transaction completed"]
 pub type RXTC_R = crate::BitReader;
 #[doc = "Field `RXTC` writer - Rx transaction completed"]
-pub type RXTC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:3 - Endpoint address"]
     #[inline(always)]
@@ -119,62 +119,62 @@ impl W {
     #[doc = "Bits 0:3 - Endpoint address"]
     #[inline(always)]
     #[must_use]
-    pub fn eptaddr(&mut self) -> EPTADDR_W<EPT0_SPEC, 0> {
-        EPTADDR_W::new(self)
+    pub fn eptaddr(&mut self) -> EPTADDR_W<EPT0_SPEC> {
+        EPTADDR_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Tx status"]
     #[inline(always)]
     #[must_use]
-    pub fn txsts(&mut self) -> TXSTS_W<EPT0_SPEC, 4> {
-        TXSTS_W::new(self)
+    pub fn txsts(&mut self) -> TXSTS_W<EPT0_SPEC> {
+        TXSTS_W::new(self, 4)
     }
     #[doc = "Bit 6 - Tx data toggle synchronization"]
     #[inline(always)]
     #[must_use]
-    pub fn txdts(&mut self) -> TXDTS_W<EPT0_SPEC, 6> {
-        TXDTS_W::new(self)
+    pub fn txdts(&mut self) -> TXDTS_W<EPT0_SPEC> {
+        TXDTS_W::new(self, 6)
     }
     #[doc = "Bit 7 - Tx transaction completed"]
     #[inline(always)]
     #[must_use]
-    pub fn txtc(&mut self) -> TXTC_W<EPT0_SPEC, 7> {
-        TXTC_W::new(self)
+    pub fn txtc(&mut self) -> TXTC_W<EPT0_SPEC> {
+        TXTC_W::new(self, 7)
     }
     #[doc = "Bit 8 - Endpoint extend function"]
     #[inline(always)]
     #[must_use]
-    pub fn exf(&mut self) -> EXF_W<EPT0_SPEC, 8> {
-        EXF_W::new(self)
+    pub fn exf(&mut self) -> EXF_W<EPT0_SPEC> {
+        EXF_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - Transfer type"]
     #[inline(always)]
     #[must_use]
-    pub fn trans_type(&mut self) -> TRANS_TYPE_W<EPT0_SPEC, 9> {
-        TRANS_TYPE_W::new(self)
+    pub fn trans_type(&mut self) -> TRANS_TYPE_W<EPT0_SPEC> {
+        TRANS_TYPE_W::new(self, 9)
     }
     #[doc = "Bit 11 - Setup transaction completed"]
     #[inline(always)]
     #[must_use]
-    pub fn setuptc(&mut self) -> SETUPTC_W<EPT0_SPEC, 11> {
-        SETUPTC_W::new(self)
+    pub fn setuptc(&mut self) -> SETUPTC_W<EPT0_SPEC> {
+        SETUPTC_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Rx Status"]
     #[inline(always)]
     #[must_use]
-    pub fn rxsts(&mut self) -> RXSTS_W<EPT0_SPEC, 12> {
-        RXSTS_W::new(self)
+    pub fn rxsts(&mut self) -> RXSTS_W<EPT0_SPEC> {
+        RXSTS_W::new(self, 12)
     }
     #[doc = "Bit 14 - Rx data toggle synchronization"]
     #[inline(always)]
     #[must_use]
-    pub fn rxdts(&mut self) -> RXDTS_W<EPT0_SPEC, 14> {
-        RXDTS_W::new(self)
+    pub fn rxdts(&mut self) -> RXDTS_W<EPT0_SPEC> {
+        RXDTS_W::new(self, 14)
     }
     #[doc = "Bit 15 - Rx transaction completed"]
     #[inline(always)]
     #[must_use]
-    pub fn rxtc(&mut self) -> RXTC_W<EPT0_SPEC, 15> {
-        RXTC_W::new(self)
+    pub fn rxtc(&mut self) -> RXTC_W<EPT0_SPEC> {
+        RXTC_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

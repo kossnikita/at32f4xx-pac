@@ -13,8 +13,8 @@ impl From<IOSB0W_AW> for bool {
     }
 }
 #[doc = "Field `IOSB[0-15]` writer - Set bit %s"]
-pub type IOSB_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, IOSB0W_AW>;
-impl<'a, REG, const O: u8> IOSB_W<'a, REG, O>
+pub type IOSB_W<'a, REG> = crate::BitWriter1S<'a, REG, IOSB0W_AW>;
+impl<'a, REG> IOSB_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -37,8 +37,8 @@ impl From<IOCB0W_AW> for bool {
     }
 }
 #[doc = "Field `IOCB[0-15]` writer - Clear bit %s"]
-pub type IOCB_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, IOCB0W_AW>;
-impl<'a, REG, const O: u8> IOCB_W<'a, REG, O>
+pub type IOCB_W<'a, REG> = crate::BitWriter1C<'a, REG, IOCB0W_AW>;
+impl<'a, REG> IOCB_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -57,206 +57,208 @@ impl W {
     #[doc = "Set bit [0-15]"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn iosb<const O: u8>(&mut self) -> IOSB_W<SCR_SPEC, O> {
-        IOSB_W::new(self)
+    pub fn iosb(&mut self, n: u8) -> IOSB_W<SCR_SPEC> {
+        assert!(n < 16);
+        IOSB_W::new(self, n)
     }
     #[doc = "Bit 0 - Set bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb0(&mut self) -> IOSB_W<SCR_SPEC, 0> {
-        IOSB_W::new(self)
+    pub fn iosb0(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb1(&mut self) -> IOSB_W<SCR_SPEC, 1> {
-        IOSB_W::new(self)
+    pub fn iosb1(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb2(&mut self) -> IOSB_W<SCR_SPEC, 2> {
-        IOSB_W::new(self)
+    pub fn iosb2(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb3(&mut self) -> IOSB_W<SCR_SPEC, 3> {
-        IOSB_W::new(self)
+    pub fn iosb3(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb4(&mut self) -> IOSB_W<SCR_SPEC, 4> {
-        IOSB_W::new(self)
+    pub fn iosb4(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb5(&mut self) -> IOSB_W<SCR_SPEC, 5> {
-        IOSB_W::new(self)
+    pub fn iosb5(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb6(&mut self) -> IOSB_W<SCR_SPEC, 6> {
-        IOSB_W::new(self)
+    pub fn iosb6(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb7(&mut self) -> IOSB_W<SCR_SPEC, 7> {
-        IOSB_W::new(self)
+    pub fn iosb7(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb8(&mut self) -> IOSB_W<SCR_SPEC, 8> {
-        IOSB_W::new(self)
+    pub fn iosb8(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb9(&mut self) -> IOSB_W<SCR_SPEC, 9> {
-        IOSB_W::new(self)
+    pub fn iosb9(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb10(&mut self) -> IOSB_W<SCR_SPEC, 10> {
-        IOSB_W::new(self)
+    pub fn iosb10(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb11(&mut self) -> IOSB_W<SCR_SPEC, 11> {
-        IOSB_W::new(self)
+    pub fn iosb11(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb12(&mut self) -> IOSB_W<SCR_SPEC, 12> {
-        IOSB_W::new(self)
+    pub fn iosb12(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb13(&mut self) -> IOSB_W<SCR_SPEC, 13> {
-        IOSB_W::new(self)
+    pub fn iosb13(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb14(&mut self) -> IOSB_W<SCR_SPEC, 14> {
-        IOSB_W::new(self)
+    pub fn iosb14(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn iosb15(&mut self) -> IOSB_W<SCR_SPEC, 15> {
-        IOSB_W::new(self)
+    pub fn iosb15(&mut self) -> IOSB_W<SCR_SPEC> {
+        IOSB_W::new(self, 15)
     }
     #[doc = "Clear bit [0-15]"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn iocb<const O: u8>(&mut self) -> IOCB_W<SCR_SPEC, O> {
-        IOCB_W::new(self)
+    pub fn iocb(&mut self, n: u8) -> IOCB_W<SCR_SPEC> {
+        assert!(n < 16);
+        IOCB_W::new(self, n + 16)
     }
     #[doc = "Bit 16 - Clear bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb0(&mut self) -> IOCB_W<SCR_SPEC, 16> {
-        IOCB_W::new(self)
+    pub fn iocb0(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 16)
     }
     #[doc = "Bit 17 - Clear bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb1(&mut self) -> IOCB_W<SCR_SPEC, 17> {
-        IOCB_W::new(self)
+    pub fn iocb1(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 17)
     }
     #[doc = "Bit 18 - Clear bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb2(&mut self) -> IOCB_W<SCR_SPEC, 18> {
-        IOCB_W::new(self)
+    pub fn iocb2(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 18)
     }
     #[doc = "Bit 19 - Clear bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb3(&mut self) -> IOCB_W<SCR_SPEC, 19> {
-        IOCB_W::new(self)
+    pub fn iocb3(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 19)
     }
     #[doc = "Bit 20 - Clear bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb4(&mut self) -> IOCB_W<SCR_SPEC, 20> {
-        IOCB_W::new(self)
+    pub fn iocb4(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 20)
     }
     #[doc = "Bit 21 - Clear bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb5(&mut self) -> IOCB_W<SCR_SPEC, 21> {
-        IOCB_W::new(self)
+    pub fn iocb5(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 21)
     }
     #[doc = "Bit 22 - Clear bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb6(&mut self) -> IOCB_W<SCR_SPEC, 22> {
-        IOCB_W::new(self)
+    pub fn iocb6(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 22)
     }
     #[doc = "Bit 23 - Clear bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb7(&mut self) -> IOCB_W<SCR_SPEC, 23> {
-        IOCB_W::new(self)
+    pub fn iocb7(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 23)
     }
     #[doc = "Bit 24 - Clear bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb8(&mut self) -> IOCB_W<SCR_SPEC, 24> {
-        IOCB_W::new(self)
+    pub fn iocb8(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 24)
     }
     #[doc = "Bit 25 - Clear bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb9(&mut self) -> IOCB_W<SCR_SPEC, 25> {
-        IOCB_W::new(self)
+    pub fn iocb9(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 25)
     }
     #[doc = "Bit 26 - Clear bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb10(&mut self) -> IOCB_W<SCR_SPEC, 26> {
-        IOCB_W::new(self)
+    pub fn iocb10(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 26)
     }
     #[doc = "Bit 27 - Clear bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb11(&mut self) -> IOCB_W<SCR_SPEC, 27> {
-        IOCB_W::new(self)
+    pub fn iocb11(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 27)
     }
     #[doc = "Bit 28 - Clear bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb12(&mut self) -> IOCB_W<SCR_SPEC, 28> {
-        IOCB_W::new(self)
+    pub fn iocb12(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 28)
     }
     #[doc = "Bit 29 - Clear bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb13(&mut self) -> IOCB_W<SCR_SPEC, 29> {
-        IOCB_W::new(self)
+    pub fn iocb13(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 29)
     }
     #[doc = "Bit 30 - Clear bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb14(&mut self) -> IOCB_W<SCR_SPEC, 30> {
-        IOCB_W::new(self)
+    pub fn iocb14(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 30)
     }
     #[doc = "Bit 31 - Clear bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn iocb15(&mut self) -> IOCB_W<SCR_SPEC, 31> {
-        IOCB_W::new(self)
+    pub fn iocb15(&mut self) -> IOCB_W<SCR_SPEC> {
+        IOCB_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

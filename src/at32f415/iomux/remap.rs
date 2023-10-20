@@ -5,7 +5,7 @@ pub type W = crate::W<REMAP_SPEC>;
 #[doc = "Field `SPI1_MUX0` reader - SPI1 muxing bit0"]
 pub type SPI1_MUX0_R = crate::BitReader;
 #[doc = "Field `SPI1_MUX0` writer - SPI1 muxing bit0"]
-pub type SPI1_MUX0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI1_MUX0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C1_MUX` reader - I2C1 muxing"]
 pub type I2C1_MUX_R = crate::BitReader<I2C1_MUX_A>;
 #[doc = "I2C1 muxing\n\nValue on reset: 0"]
@@ -43,8 +43,8 @@ impl I2C1_MUX_R {
     }
 }
 #[doc = "Field `I2C1_MUX` writer - I2C1 muxing"]
-pub type I2C1_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, I2C1_MUX_A>;
-impl<'a, REG, const O: u8> I2C1_MUX_W<'a, REG, O>
+pub type I2C1_MUX_W<'a, REG> = crate::BitWriter<'a, REG, I2C1_MUX_A>;
+impl<'a, REG> I2C1_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -96,8 +96,8 @@ impl USART1_MUX_R {
     }
 }
 #[doc = "Field `USART1_MUX` writer - USART1 muxing"]
-pub type USART1_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, USART1_MUX_A>;
-impl<'a, REG, const O: u8> USART1_MUX_W<'a, REG, O>
+pub type USART1_MUX_W<'a, REG> = crate::BitWriter<'a, REG, USART1_MUX_A>;
+impl<'a, REG> USART1_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -162,8 +162,8 @@ impl USART3_MUX_R {
     }
 }
 #[doc = "Field `USART3_MUX` writer - USART3 muxing"]
-pub type USART3_MUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, USART3_MUX_A>;
-impl<'a, REG, const O: u8> USART3_MUX_W<'a, REG, O>
+pub type USART3_MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2, USART3_MUX_A>;
+impl<'a, REG> USART3_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -226,8 +226,8 @@ impl TMR1_MUX_R {
     }
 }
 #[doc = "Field `TMR1_MUX` writer - TMR1 muxing"]
-pub type TMR1_MUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, TMR1_MUX_A>;
-impl<'a, REG, const O: u8> TMR1_MUX_W<'a, REG, O>
+pub type TMR1_MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2, TMR1_MUX_A>;
+impl<'a, REG> TMR1_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -301,8 +301,8 @@ impl TMR2_MUX_R {
     }
 }
 #[doc = "Field `TMR2_MUX` writer - TMR2 muxing"]
-pub type TMR2_MUX_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, TMR2_MUX_A>;
-impl<'a, REG, const O: u8> TMR2_MUX_W<'a, REG, O>
+pub type TMR2_MUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR2_MUX_A>;
+impl<'a, REG> TMR2_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -378,8 +378,8 @@ impl TMR3_MUX_R {
     }
 }
 #[doc = "Field `TMR3_MUX` writer - TMR3 muxing"]
-pub type TMR3_MUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, TMR3_MUX_A>;
-impl<'a, REG, const O: u8> TMR3_MUX_W<'a, REG, O>
+pub type TMR3_MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2, TMR3_MUX_A>;
+impl<'a, REG> TMR3_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -442,8 +442,8 @@ impl CAN_MUX_R {
     }
 }
 #[doc = "Field `CAN_MUX` writer - CAN1 muxing"]
-pub type CAN_MUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, CAN_MUX_A>;
-impl<'a, REG, const O: u8> CAN_MUX_W<'a, REG, O>
+pub type CAN_MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2, CAN_MUX_A>;
+impl<'a, REG> CAN_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -496,8 +496,8 @@ impl PD01_MUX_R {
     }
 }
 #[doc = "Field `PD01_MUX` writer - PD0/PD1 muxing on OSCIN/OSCOUT"]
-pub type PD01_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PD01_MUX_A>;
-impl<'a, REG, const O: u8> PD01_MUX_W<'a, REG, O>
+pub type PD01_MUX_W<'a, REG> = crate::BitWriter<'a, REG, PD01_MUX_A>;
+impl<'a, REG> PD01_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -549,8 +549,8 @@ impl TMR5CH4_MUX_R {
     }
 }
 #[doc = "Field `TMR5CH4_MUX` writer - TMR5 channel4 internal muxing"]
-pub type TMR5CH4_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TMR5CH4_MUX_A>;
-impl<'a, REG, const O: u8> TMR5CH4_MUX_W<'a, REG, O>
+pub type TMR5CH4_MUX_W<'a, REG> = crate::BitWriter<'a, REG, TMR5CH4_MUX_A>;
+impl<'a, REG> TMR5CH4_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -602,8 +602,8 @@ impl ADC1_ETP_MUX_R {
     }
 }
 #[doc = "Field `ADC1_ETP_MUX` writer - ADC1 external trigger preempted conversion muxing"]
-pub type ADC1_ETP_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ADC1_ETP_MUX_A>;
-impl<'a, REG, const O: u8> ADC1_ETP_MUX_W<'a, REG, O>
+pub type ADC1_ETP_MUX_W<'a, REG> = crate::BitWriter<'a, REG, ADC1_ETP_MUX_A>;
+impl<'a, REG> ADC1_ETP_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -655,8 +655,8 @@ impl ADC1_ETO_MUX_R {
     }
 }
 #[doc = "Field `ADC1_ETO_MUX` writer - ADC1 external trigger ordinary conversion muxing"]
-pub type ADC1_ETO_MUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ADC1_ETO_MUX_A>;
-impl<'a, REG, const O: u8> ADC1_ETO_MUX_W<'a, REG, O>
+pub type ADC1_ETO_MUX_W<'a, REG> = crate::BitWriter<'a, REG, ADC1_ETO_MUX_A>;
+impl<'a, REG> ADC1_ETO_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -729,8 +729,8 @@ impl SWJTAG_MUX_R {
     }
 }
 #[doc = "Field `SWJTAG_MUX` writer - SWD JTAG muxing"]
-pub type SWJTAG_MUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O, SWJTAG_MUX_A>;
-impl<'a, REG, const O: u8> SWJTAG_MUX_W<'a, REG, O>
+pub type SWJTAG_MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 3, SWJTAG_MUX_A>;
+impl<'a, REG> SWJTAG_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -793,8 +793,8 @@ impl SPI1_MUX1_R {
     }
 }
 #[doc = "Field `SPI1_MUX1` writer - SPI1 muxing bit1"]
-pub type SPI1_MUX1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SPI1_MUX1_A>;
-impl<'a, REG, const O: u8> SPI1_MUX1_W<'a, REG, O>
+pub type SPI1_MUX1_W<'a, REG> = crate::BitWriter<'a, REG, SPI1_MUX1_A>;
+impl<'a, REG> SPI1_MUX1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -916,86 +916,86 @@ impl W {
     #[doc = "Bit 0 - SPI1 muxing bit0"]
     #[inline(always)]
     #[must_use]
-    pub fn spi1_mux0(&mut self) -> SPI1_MUX0_W<REMAP_SPEC, 0> {
-        SPI1_MUX0_W::new(self)
+    pub fn spi1_mux0(&mut self) -> SPI1_MUX0_W<REMAP_SPEC> {
+        SPI1_MUX0_W::new(self, 0)
     }
     #[doc = "Bit 1 - I2C1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c1_mux(&mut self) -> I2C1_MUX_W<REMAP_SPEC, 1> {
-        I2C1_MUX_W::new(self)
+    pub fn i2c1_mux(&mut self) -> I2C1_MUX_W<REMAP_SPEC> {
+        I2C1_MUX_W::new(self, 1)
     }
     #[doc = "Bit 2 - USART1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn usart1_mux(&mut self) -> USART1_MUX_W<REMAP_SPEC, 2> {
-        USART1_MUX_W::new(self)
+    pub fn usart1_mux(&mut self) -> USART1_MUX_W<REMAP_SPEC> {
+        USART1_MUX_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - USART3 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn usart3_mux(&mut self) -> USART3_MUX_W<REMAP_SPEC, 4> {
-        USART3_MUX_W::new(self)
+    pub fn usart3_mux(&mut self) -> USART3_MUX_W<REMAP_SPEC> {
+        USART3_MUX_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - TMR1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr1_mux(&mut self) -> TMR1_MUX_W<REMAP_SPEC, 6> {
-        TMR1_MUX_W::new(self)
+    pub fn tmr1_mux(&mut self) -> TMR1_MUX_W<REMAP_SPEC> {
+        TMR1_MUX_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - TMR2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr2_mux(&mut self) -> TMR2_MUX_W<REMAP_SPEC, 8> {
-        TMR2_MUX_W::new(self)
+    pub fn tmr2_mux(&mut self) -> TMR2_MUX_W<REMAP_SPEC> {
+        TMR2_MUX_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - TMR3 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr3_mux(&mut self) -> TMR3_MUX_W<REMAP_SPEC, 10> {
-        TMR3_MUX_W::new(self)
+    pub fn tmr3_mux(&mut self) -> TMR3_MUX_W<REMAP_SPEC> {
+        TMR3_MUX_W::new(self, 10)
     }
     #[doc = "Bits 13:14 - CAN1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn can_mux(&mut self) -> CAN_MUX_W<REMAP_SPEC, 13> {
-        CAN_MUX_W::new(self)
+    pub fn can_mux(&mut self) -> CAN_MUX_W<REMAP_SPEC> {
+        CAN_MUX_W::new(self, 13)
     }
     #[doc = "Bit 15 - PD0/PD1 muxing on OSCIN/OSCOUT"]
     #[inline(always)]
     #[must_use]
-    pub fn pd01_mux(&mut self) -> PD01_MUX_W<REMAP_SPEC, 15> {
-        PD01_MUX_W::new(self)
+    pub fn pd01_mux(&mut self) -> PD01_MUX_W<REMAP_SPEC> {
+        PD01_MUX_W::new(self, 15)
     }
     #[doc = "Bit 16 - TMR5 channel4 internal muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr5ch4_mux(&mut self) -> TMR5CH4_MUX_W<REMAP_SPEC, 16> {
-        TMR5CH4_MUX_W::new(self)
+    pub fn tmr5ch4_mux(&mut self) -> TMR5CH4_MUX_W<REMAP_SPEC> {
+        TMR5CH4_MUX_W::new(self, 16)
     }
     #[doc = "Bit 17 - ADC1 external trigger preempted conversion muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_etp_mux(&mut self) -> ADC1_ETP_MUX_W<REMAP_SPEC, 17> {
-        ADC1_ETP_MUX_W::new(self)
+    pub fn adc1_etp_mux(&mut self) -> ADC1_ETP_MUX_W<REMAP_SPEC> {
+        ADC1_ETP_MUX_W::new(self, 17)
     }
     #[doc = "Bit 18 - ADC1 external trigger ordinary conversion muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_eto_mux(&mut self) -> ADC1_ETO_MUX_W<REMAP_SPEC, 18> {
-        ADC1_ETO_MUX_W::new(self)
+    pub fn adc1_eto_mux(&mut self) -> ADC1_ETO_MUX_W<REMAP_SPEC> {
+        ADC1_ETO_MUX_W::new(self, 18)
     }
     #[doc = "Bits 24:26 - SWD JTAG muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn swjtag_mux(&mut self) -> SWJTAG_MUX_W<REMAP_SPEC, 24> {
-        SWJTAG_MUX_W::new(self)
+    pub fn swjtag_mux(&mut self) -> SWJTAG_MUX_W<REMAP_SPEC> {
+        SWJTAG_MUX_W::new(self, 24)
     }
     #[doc = "Bit 31 - SPI1 muxing bit1"]
     #[inline(always)]
     #[must_use]
-    pub fn spi1_mux1(&mut self) -> SPI1_MUX1_W<REMAP_SPEC, 31> {
-        SPI1_MUX1_W::new(self)
+    pub fn spi1_mux1(&mut self) -> SPI1_MUX1_W<REMAP_SPEC> {
+        SPI1_MUX1_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

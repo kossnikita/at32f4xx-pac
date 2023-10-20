@@ -5,19 +5,19 @@ pub type W = crate::W<EXTIC4_SPEC>;
 #[doc = "Field `EXTINT12` reader - EXTINT 12 configuration bits"]
 pub type EXTINT12_R = crate::FieldReader;
 #[doc = "Field `EXTINT12` writer - EXTINT 12 configuration bits"]
-pub type EXTINT12_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXTINT12_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXTINT13` reader - EXTINT 13 configuration bits"]
 pub type EXTINT13_R = crate::FieldReader;
 #[doc = "Field `EXTINT13` writer - EXTINT 13 configuration bits"]
-pub type EXTINT13_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXTINT13_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXTINT14` reader - EXTINT 14 configuration bits"]
 pub type EXTINT14_R = crate::FieldReader;
 #[doc = "Field `EXTINT14` writer - EXTINT 14 configuration bits"]
-pub type EXTINT14_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXTINT14_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `EXTINT15` reader - EXTINT 15 configuration bits"]
 pub type EXTINT15_R = crate::FieldReader;
 #[doc = "Field `EXTINT15` writer - EXTINT 15 configuration bits"]
-pub type EXTINT15_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type EXTINT15_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - EXTINT 12 configuration bits"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:3 - EXTINT 12 configuration bits"]
     #[inline(always)]
     #[must_use]
-    pub fn extint12(&mut self) -> EXTINT12_W<EXTIC4_SPEC, 0> {
-        EXTINT12_W::new(self)
+    pub fn extint12(&mut self) -> EXTINT12_W<EXTIC4_SPEC> {
+        EXTINT12_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - EXTINT 13 configuration bits"]
     #[inline(always)]
     #[must_use]
-    pub fn extint13(&mut self) -> EXTINT13_W<EXTIC4_SPEC, 4> {
-        EXTINT13_W::new(self)
+    pub fn extint13(&mut self) -> EXTINT13_W<EXTIC4_SPEC> {
+        EXTINT13_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - EXTINT 14 configuration bits"]
     #[inline(always)]
     #[must_use]
-    pub fn extint14(&mut self) -> EXTINT14_W<EXTIC4_SPEC, 8> {
-        EXTINT14_W::new(self)
+    pub fn extint14(&mut self) -> EXTINT14_W<EXTIC4_SPEC> {
+        EXTINT14_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - EXTINT 15 configuration bits"]
     #[inline(always)]
     #[must_use]
-    pub fn extint15(&mut self) -> EXTINT15_W<EXTIC4_SPEC, 12> {
-        EXTINT15_W::new(self)
+    pub fn extint15(&mut self) -> EXTINT15_W<EXTIC4_SPEC> {
+        EXTINT15_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

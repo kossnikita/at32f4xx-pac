@@ -5,7 +5,7 @@ pub type W = crate::W<CFG2_SPEC>;
 #[doc = "Field `MII_RMII_SEL` reader - MII or RMII selection bits"]
 pub type MII_RMII_SEL_R = crate::BitReader;
 #[doc = "Field `MII_RMII_SEL` writer - MII or RMII selection bits"]
-pub type MII_RMII_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MII_RMII_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 23 - MII or RMII selection bits"]
     #[inline(always)]
@@ -32,8 +32,8 @@ impl W {
     #[doc = "Bit 23 - MII or RMII selection bits"]
     #[inline(always)]
     #[must_use]
-    pub fn mii_rmii_sel(&mut self) -> MII_RMII_SEL_W<CFG2_SPEC, 23> {
-        MII_RMII_SEL_W::new(self)
+    pub fn mii_rmii_sel(&mut self) -> MII_RMII_SEL_W<CFG2_SPEC> {
+        MII_RMII_SEL_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

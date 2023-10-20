@@ -5,31 +5,31 @@ pub type W = crate::W<MUXS6CTRL_SPEC>;
 #[doc = "Field `REQSEL` reader - DMA request select"]
 pub type REQSEL_R = crate::FieldReader;
 #[doc = "Field `REQSEL` writer - DMA request select"]
-pub type REQSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type REQSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `SYNCOVIEN` reader - Synchronization overrun interrupt enable"]
 pub type SYNCOVIEN_R = crate::BitReader;
 #[doc = "Field `SYNCOVIEN` writer - Synchronization overrun interrupt enable"]
-pub type SYNCOVIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCOVIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EVTGEN` reader - Event generation enable"]
 pub type EVTGEN_R = crate::BitReader;
 #[doc = "Field `EVTGEN` writer - Event generation enable"]
-pub type EVTGEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EVTGEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCEN` reader - Synchroniztion enable"]
 pub type SYNCEN_R = crate::BitReader;
 #[doc = "Field `SYNCEN` writer - Synchroniztion enable"]
-pub type SYNCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SYNCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SYNCPOL` reader - Synchronization polarity"]
 pub type SYNCPOL_R = crate::FieldReader;
 #[doc = "Field `SYNCPOL` writer - Synchronization polarity"]
-pub type SYNCPOL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SYNCPOL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `REQCNT` reader - Number of DMA requests"]
 pub type REQCNT_R = crate::FieldReader;
 #[doc = "Field `REQCNT` writer - Number of DMA requests"]
-pub type REQCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type REQCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `SYNCSEL` reader - Synchronization select"]
 pub type SYNCSEL_R = crate::FieldReader;
 #[doc = "Field `SYNCSEL` writer - Synchronization select"]
-pub type SYNCSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type SYNCSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
     #[doc = "Bits 0:6 - DMA request select"]
     #[inline(always)]
@@ -89,44 +89,44 @@ impl W {
     #[doc = "Bits 0:6 - DMA request select"]
     #[inline(always)]
     #[must_use]
-    pub fn reqsel(&mut self) -> REQSEL_W<MUXS6CTRL_SPEC, 0> {
-        REQSEL_W::new(self)
+    pub fn reqsel(&mut self) -> REQSEL_W<MUXS6CTRL_SPEC> {
+        REQSEL_W::new(self, 0)
     }
     #[doc = "Bit 8 - Synchronization overrun interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn syncovien(&mut self) -> SYNCOVIEN_W<MUXS6CTRL_SPEC, 8> {
-        SYNCOVIEN_W::new(self)
+    pub fn syncovien(&mut self) -> SYNCOVIEN_W<MUXS6CTRL_SPEC> {
+        SYNCOVIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Event generation enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evtgen(&mut self) -> EVTGEN_W<MUXS6CTRL_SPEC, 9> {
-        EVTGEN_W::new(self)
+    pub fn evtgen(&mut self) -> EVTGEN_W<MUXS6CTRL_SPEC> {
+        EVTGEN_W::new(self, 9)
     }
     #[doc = "Bit 16 - Synchroniztion enable"]
     #[inline(always)]
     #[must_use]
-    pub fn syncen(&mut self) -> SYNCEN_W<MUXS6CTRL_SPEC, 16> {
-        SYNCEN_W::new(self)
+    pub fn syncen(&mut self) -> SYNCEN_W<MUXS6CTRL_SPEC> {
+        SYNCEN_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - Synchronization polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn syncpol(&mut self) -> SYNCPOL_W<MUXS6CTRL_SPEC, 17> {
-        SYNCPOL_W::new(self)
+    pub fn syncpol(&mut self) -> SYNCPOL_W<MUXS6CTRL_SPEC> {
+        SYNCPOL_W::new(self, 17)
     }
     #[doc = "Bits 19:23 - Number of DMA requests"]
     #[inline(always)]
     #[must_use]
-    pub fn reqcnt(&mut self) -> REQCNT_W<MUXS6CTRL_SPEC, 19> {
-        REQCNT_W::new(self)
+    pub fn reqcnt(&mut self) -> REQCNT_W<MUXS6CTRL_SPEC> {
+        REQCNT_W::new(self, 19)
     }
     #[doc = "Bits 24:28 - Synchronization select"]
     #[inline(always)]
     #[must_use]
-    pub fn syncsel(&mut self) -> SYNCSEL_W<MUXS6CTRL_SPEC, 24> {
-        SYNCSEL_W::new(self)
+    pub fn syncsel(&mut self) -> SYNCSEL_W<MUXS6CTRL_SPEC> {
+        SYNCSEL_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

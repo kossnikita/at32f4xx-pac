@@ -5,15 +5,15 @@ pub type W = crate::W<UHDRV_SPEC>;
 #[doc = "Field `PB3_UH` reader - PB3 ultra high sourcing/sinking strength"]
 pub type PB3_UH_R = crate::BitReader;
 #[doc = "Field `PB3_UH` writer - PB3 ultra high sourcing/sinking strength"]
-pub type PB3_UH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PB3_UH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PB9_UH` reader - PB9 ultra high sourcing/sinking strength"]
 pub type PB9_UH_R = crate::BitReader;
 #[doc = "Field `PB9_UH` writer - PB9 ultra high sourcing/sinking strength"]
-pub type PB9_UH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PB9_UH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PB10_UH` reader - PB10 ultra high sourcing/sinking strength"]
 pub type PB10_UH_R = crate::BitReader;
 #[doc = "Field `PB10_UH` writer - PB10 ultra high sourcing/sinking strength"]
-pub type PB10_UH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PB10_UH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - PB3 ultra high sourcing/sinking strength"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 0 - PB3 ultra high sourcing/sinking strength"]
     #[inline(always)]
     #[must_use]
-    pub fn pb3_uh(&mut self) -> PB3_UH_W<UHDRV_SPEC, 0> {
-        PB3_UH_W::new(self)
+    pub fn pb3_uh(&mut self) -> PB3_UH_W<UHDRV_SPEC> {
+        PB3_UH_W::new(self, 0)
     }
     #[doc = "Bit 1 - PB9 ultra high sourcing/sinking strength"]
     #[inline(always)]
     #[must_use]
-    pub fn pb9_uh(&mut self) -> PB9_UH_W<UHDRV_SPEC, 1> {
-        PB9_UH_W::new(self)
+    pub fn pb9_uh(&mut self) -> PB9_UH_W<UHDRV_SPEC> {
+        PB9_UH_W::new(self, 1)
     }
     #[doc = "Bit 2 - PB10 ultra high sourcing/sinking strength"]
     #[inline(always)]
     #[must_use]
-    pub fn pb10_uh(&mut self) -> PB10_UH_W<UHDRV_SPEC, 2> {
-        PB10_UH_W::new(self)
+    pub fn pb10_uh(&mut self) -> PB10_UH_W<UHDRV_SPEC> {
+        PB10_UH_W::new(self, 2)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<CFG_SPEC>;
 #[doc = "Field `WIN` reader - Window value"]
 pub type WIN_R = crate::FieldReader;
 #[doc = "Field `WIN` writer - Window value"]
-pub type WIN_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 7, O>;
+pub type WIN_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
 #[doc = "Field `DIV` reader - Clock division value"]
 pub type DIV_R = crate::FieldReader<DIV_A>;
 #[doc = "Clock division value\n\nValue on reset: 0"]
@@ -64,8 +64,8 @@ impl DIV_R {
     }
 }
 #[doc = "Field `DIV` writer - Clock division value"]
-pub type DIV_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, DIV_A>;
-impl<'a, REG, const O: u8> DIV_W<'a, REG, O>
+pub type DIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, DIV_A>;
+impl<'a, REG> DIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -142,8 +142,8 @@ impl From<RLDIENW_AW> for bool {
     }
 }
 #[doc = "Field `RLDIEN` writer - Reload counter interrupt"]
-pub type RLDIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RLDIENW_AW>;
-impl<'a, REG, const O: u8> RLDIEN_W<'a, REG, O>
+pub type RLDIEN_W<'a, REG> = crate::BitWriter<'a, REG, RLDIENW_AW>;
+impl<'a, REG> RLDIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -193,20 +193,20 @@ impl W {
     #[doc = "Bits 0:6 - Window value"]
     #[inline(always)]
     #[must_use]
-    pub fn win(&mut self) -> WIN_W<CFG_SPEC, 0> {
-        WIN_W::new(self)
+    pub fn win(&mut self) -> WIN_W<CFG_SPEC> {
+        WIN_W::new(self, 0)
     }
     #[doc = "Bits 7:8 - Clock division value"]
     #[inline(always)]
     #[must_use]
-    pub fn div(&mut self) -> DIV_W<CFG_SPEC, 7> {
-        DIV_W::new(self)
+    pub fn div(&mut self) -> DIV_W<CFG_SPEC> {
+        DIV_W::new(self, 7)
     }
     #[doc = "Bit 9 - Reload counter interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn rldien(&mut self) -> RLDIEN_W<CFG_SPEC, 9> {
-        RLDIEN_W::new(self)
+    pub fn rldien(&mut self) -> RLDIEN_W<CFG_SPEC> {
+        RLDIEN_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

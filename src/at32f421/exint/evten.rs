@@ -53,8 +53,8 @@ impl From<EVTEN0W_AW> for bool {
     }
 }
 #[doc = "Field `EVTEN[0-17]` writer - Event enable or disable on line %s"]
-pub type EVTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, EVTEN0W_AW>;
-impl<'a, REG, const O: u8> EVTEN_W<'a, REG, O>
+pub type EVTEN_W<'a, REG> = crate::BitWriter<'a, REG, EVTEN0W_AW>;
+impl<'a, REG> EVTEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -78,9 +78,10 @@ pub use EVTEN_W as EVTEN19_W;
 #[doc = "Field `EVTEN21` writer - Event enable or disable on line 21"]
 pub use EVTEN_W as EVTEN21_W;
 impl R {
-    #[doc = "Event enable or disable on line [0-17]"]
+    #[doc = "Event enable or disable on line [0-17]\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn evten(&self, n: u8) -> EVTEN_R {
+    pub fn evten(&self, n: u8) -> EVTEN_R {
+        assert!(n < 18);
         EVTEN_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - Event enable or disable on line 0"]
@@ -219,128 +220,129 @@ impl W {
     #[doc = "Event enable or disable on line [0-17]"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn evten<const O: u8>(&mut self) -> EVTEN_W<EVTEN_SPEC, O> {
-        EVTEN_W::new(self)
+    pub fn evten(&mut self, n: u8) -> EVTEN_W<EVTEN_SPEC> {
+        assert!(n < 18);
+        EVTEN_W::new(self, n)
     }
     #[doc = "Bit 0 - Event enable or disable on line 0"]
     #[inline(always)]
     #[must_use]
-    pub fn evten0(&mut self) -> EVTEN_W<EVTEN_SPEC, 0> {
-        EVTEN_W::new(self)
+    pub fn evten0(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Event enable or disable on line 1"]
     #[inline(always)]
     #[must_use]
-    pub fn evten1(&mut self) -> EVTEN_W<EVTEN_SPEC, 1> {
-        EVTEN_W::new(self)
+    pub fn evten1(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Event enable or disable on line 2"]
     #[inline(always)]
     #[must_use]
-    pub fn evten2(&mut self) -> EVTEN_W<EVTEN_SPEC, 2> {
-        EVTEN_W::new(self)
+    pub fn evten2(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Event enable or disable on line 3"]
     #[inline(always)]
     #[must_use]
-    pub fn evten3(&mut self) -> EVTEN_W<EVTEN_SPEC, 3> {
-        EVTEN_W::new(self)
+    pub fn evten3(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Event enable or disable on line 4"]
     #[inline(always)]
     #[must_use]
-    pub fn evten4(&mut self) -> EVTEN_W<EVTEN_SPEC, 4> {
-        EVTEN_W::new(self)
+    pub fn evten4(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Event enable or disable on line 5"]
     #[inline(always)]
     #[must_use]
-    pub fn evten5(&mut self) -> EVTEN_W<EVTEN_SPEC, 5> {
-        EVTEN_W::new(self)
+    pub fn evten5(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Event enable or disable on line 6"]
     #[inline(always)]
     #[must_use]
-    pub fn evten6(&mut self) -> EVTEN_W<EVTEN_SPEC, 6> {
-        EVTEN_W::new(self)
+    pub fn evten6(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Event enable or disable on line 7"]
     #[inline(always)]
     #[must_use]
-    pub fn evten7(&mut self) -> EVTEN_W<EVTEN_SPEC, 7> {
-        EVTEN_W::new(self)
+    pub fn evten7(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Event enable or disable on line 8"]
     #[inline(always)]
     #[must_use]
-    pub fn evten8(&mut self) -> EVTEN_W<EVTEN_SPEC, 8> {
-        EVTEN_W::new(self)
+    pub fn evten8(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Event enable or disable on line 9"]
     #[inline(always)]
     #[must_use]
-    pub fn evten9(&mut self) -> EVTEN_W<EVTEN_SPEC, 9> {
-        EVTEN_W::new(self)
+    pub fn evten9(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Event enable or disable on line 10"]
     #[inline(always)]
     #[must_use]
-    pub fn evten10(&mut self) -> EVTEN_W<EVTEN_SPEC, 10> {
-        EVTEN_W::new(self)
+    pub fn evten10(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Event enable or disable on line 11"]
     #[inline(always)]
     #[must_use]
-    pub fn evten11(&mut self) -> EVTEN_W<EVTEN_SPEC, 11> {
-        EVTEN_W::new(self)
+    pub fn evten11(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Event enable or disable on line 12"]
     #[inline(always)]
     #[must_use]
-    pub fn evten12(&mut self) -> EVTEN_W<EVTEN_SPEC, 12> {
-        EVTEN_W::new(self)
+    pub fn evten12(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Event enable or disable on line 13"]
     #[inline(always)]
     #[must_use]
-    pub fn evten13(&mut self) -> EVTEN_W<EVTEN_SPEC, 13> {
-        EVTEN_W::new(self)
+    pub fn evten13(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Event enable or disable on line 14"]
     #[inline(always)]
     #[must_use]
-    pub fn evten14(&mut self) -> EVTEN_W<EVTEN_SPEC, 14> {
-        EVTEN_W::new(self)
+    pub fn evten14(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Event enable or disable on line 15"]
     #[inline(always)]
     #[must_use]
-    pub fn evten15(&mut self) -> EVTEN_W<EVTEN_SPEC, 15> {
-        EVTEN_W::new(self)
+    pub fn evten15(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Event enable or disable on line 16"]
     #[inline(always)]
     #[must_use]
-    pub fn evten16(&mut self) -> EVTEN_W<EVTEN_SPEC, 16> {
-        EVTEN_W::new(self)
+    pub fn evten16(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Event enable or disable on line 17"]
     #[inline(always)]
     #[must_use]
-    pub fn evten17(&mut self) -> EVTEN_W<EVTEN_SPEC, 17> {
-        EVTEN_W::new(self)
+    pub fn evten17(&mut self) -> EVTEN_W<EVTEN_SPEC> {
+        EVTEN_W::new(self, 17)
     }
     #[doc = "Bit 19 - Event enable or disable on line 19"]
     #[inline(always)]
     #[must_use]
-    pub fn evten19(&mut self) -> EVTEN19_W<EVTEN_SPEC, 19> {
-        EVTEN19_W::new(self)
+    pub fn evten19(&mut self) -> EVTEN19_W<EVTEN_SPEC> {
+        EVTEN19_W::new(self, 19)
     }
     #[doc = "Bit 21 - Event enable or disable on line 21"]
     #[inline(always)]
     #[must_use]
-    pub fn evten21(&mut self) -> EVTEN21_W<EVTEN_SPEC, 21> {
-        EVTEN21_W::new(self)
+    pub fn evten21(&mut self) -> EVTEN21_W<EVTEN_SPEC> {
+        EVTEN21_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

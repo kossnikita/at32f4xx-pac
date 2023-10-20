@@ -19,31 +19,31 @@ pub type TDBE_R = crate::BitReader;
 #[doc = "Field `BUSERR` reader - Bus error"]
 pub type BUSERR_R = crate::BitReader;
 #[doc = "Field `BUSERR` writer - Bus error"]
-pub type BUSERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BUSERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARLOST` reader - Arbitration lost (master mode)"]
 pub type ARLOST_R = crate::BitReader;
 #[doc = "Field `ARLOST` writer - Arbitration lost (master mode)"]
-pub type ARLOST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARLOST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACKFAIL` reader - Acknowledge failure"]
 pub type ACKFAIL_R = crate::BitReader;
 #[doc = "Field `ACKFAIL` writer - Acknowledge failure"]
-pub type ACKFAIL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACKFAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUF` reader - Overflow or underflow"]
 pub type OUF_R = crate::BitReader;
 #[doc = "Field `OUF` writer - Overflow or underflow"]
-pub type OUF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PECERR` reader - PEC receive error"]
 pub type PECERR_R = crate::BitReader;
 #[doc = "Field `PECERR` writer - PEC receive error"]
-pub type PECERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PECERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMOUT` reader - Timeout error"]
 pub type TMOUT_R = crate::BitReader;
 #[doc = "Field `TMOUT` writer - Timeout error"]
-pub type TMOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALERTF` reader - SMBus alert"]
 pub type ALERTF_R = crate::BitReader;
 #[doc = "Field `ALERTF` writer - SMBus alert"]
-pub type ALERTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ALERTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Start bit (Master mode)"]
     #[inline(always)]
@@ -145,44 +145,44 @@ impl W {
     #[doc = "Bit 8 - Bus error"]
     #[inline(always)]
     #[must_use]
-    pub fn buserr(&mut self) -> BUSERR_W<STS1_SPEC, 8> {
-        BUSERR_W::new(self)
+    pub fn buserr(&mut self) -> BUSERR_W<STS1_SPEC> {
+        BUSERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Arbitration lost (master mode)"]
     #[inline(always)]
     #[must_use]
-    pub fn arlost(&mut self) -> ARLOST_W<STS1_SPEC, 9> {
-        ARLOST_W::new(self)
+    pub fn arlost(&mut self) -> ARLOST_W<STS1_SPEC> {
+        ARLOST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Acknowledge failure"]
     #[inline(always)]
     #[must_use]
-    pub fn ackfail(&mut self) -> ACKFAIL_W<STS1_SPEC, 10> {
-        ACKFAIL_W::new(self)
+    pub fn ackfail(&mut self) -> ACKFAIL_W<STS1_SPEC> {
+        ACKFAIL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Overflow or underflow"]
     #[inline(always)]
     #[must_use]
-    pub fn ouf(&mut self) -> OUF_W<STS1_SPEC, 11> {
-        OUF_W::new(self)
+    pub fn ouf(&mut self) -> OUF_W<STS1_SPEC> {
+        OUF_W::new(self, 11)
     }
     #[doc = "Bit 12 - PEC receive error"]
     #[inline(always)]
     #[must_use]
-    pub fn pecerr(&mut self) -> PECERR_W<STS1_SPEC, 12> {
-        PECERR_W::new(self)
+    pub fn pecerr(&mut self) -> PECERR_W<STS1_SPEC> {
+        PECERR_W::new(self, 12)
     }
     #[doc = "Bit 14 - Timeout error"]
     #[inline(always)]
     #[must_use]
-    pub fn tmout(&mut self) -> TMOUT_W<STS1_SPEC, 14> {
-        TMOUT_W::new(self)
+    pub fn tmout(&mut self) -> TMOUT_W<STS1_SPEC> {
+        TMOUT_W::new(self, 14)
     }
     #[doc = "Bit 15 - SMBus alert"]
     #[inline(always)]
     #[must_use]
-    pub fn alertf(&mut self) -> ALERTF_W<STS1_SPEC, 15> {
-        ALERTF_W::new(self)
+    pub fn alertf(&mut self) -> ALERTF_W<STS1_SPEC> {
+        ALERTF_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

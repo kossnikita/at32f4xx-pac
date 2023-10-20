@@ -5,19 +5,19 @@ pub type W = crate::W<BTMG_SPEC>;
 #[doc = "Field `BRDIV` reader - Baud rate division"]
 pub type BRDIV_R = crate::FieldReader<u16>;
 #[doc = "Field `BRDIV` writer - Baud rate division"]
-pub type BRDIV_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 12, O, u16>;
+pub type BRDIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 12, u16>;
 #[doc = "Field `BTS1` reader - Bit time segment 1"]
 pub type BTS1_R = crate::FieldReader;
 #[doc = "Field `BTS1` writer - Bit time segment 1"]
-pub type BTS1_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type BTS1_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `BTS2` reader - Bit time segment 2"]
 pub type BTS2_R = crate::FieldReader;
 #[doc = "Field `BTS2` writer - Bit time segment 2"]
-pub type BTS2_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type BTS2_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 #[doc = "Field `RSAW` reader - Resynchronization adjust width"]
 pub type RSAW_R = crate::FieldReader;
 #[doc = "Field `RSAW` writer - Resynchronization adjust width"]
-pub type RSAW_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
+pub type RSAW_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
 #[doc = "Field `LBEN` reader - Loop back mode"]
 pub type LBEN_R = crate::BitReader<LBENR_A>;
 #[doc = "Loop back mode\n\nValue on reset: 0"]
@@ -69,8 +69,8 @@ impl From<LBENW_AW> for bool {
     }
 }
 #[doc = "Field `LBEN` writer - Loop back mode"]
-pub type LBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, LBENW_AW>;
-impl<'a, REG, const O: u8> LBEN_W<'a, REG, O>
+pub type LBEN_W<'a, REG> = crate::BitWriter<'a, REG, LBENW_AW>;
+impl<'a, REG> LBEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -136,8 +136,8 @@ impl From<LOENW_AW> for bool {
     }
 }
 #[doc = "Field `LOEN` writer - Listen-Only mode"]
-pub type LOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, LOENW_AW>;
-impl<'a, REG, const O: u8> LOEN_W<'a, REG, O>
+pub type LOEN_W<'a, REG> = crate::BitWriter<'a, REG, LOENW_AW>;
+impl<'a, REG> LOEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -205,38 +205,38 @@ impl W {
     #[doc = "Bits 0:11 - Baud rate division"]
     #[inline(always)]
     #[must_use]
-    pub fn brdiv(&mut self) -> BRDIV_W<BTMG_SPEC, 0> {
-        BRDIV_W::new(self)
+    pub fn brdiv(&mut self) -> BRDIV_W<BTMG_SPEC> {
+        BRDIV_W::new(self, 0)
     }
     #[doc = "Bits 16:19 - Bit time segment 1"]
     #[inline(always)]
     #[must_use]
-    pub fn bts1(&mut self) -> BTS1_W<BTMG_SPEC, 16> {
-        BTS1_W::new(self)
+    pub fn bts1(&mut self) -> BTS1_W<BTMG_SPEC> {
+        BTS1_W::new(self, 16)
     }
     #[doc = "Bits 20:22 - Bit time segment 2"]
     #[inline(always)]
     #[must_use]
-    pub fn bts2(&mut self) -> BTS2_W<BTMG_SPEC, 20> {
-        BTS2_W::new(self)
+    pub fn bts2(&mut self) -> BTS2_W<BTMG_SPEC> {
+        BTS2_W::new(self, 20)
     }
     #[doc = "Bits 24:25 - Resynchronization adjust width"]
     #[inline(always)]
     #[must_use]
-    pub fn rsaw(&mut self) -> RSAW_W<BTMG_SPEC, 24> {
-        RSAW_W::new(self)
+    pub fn rsaw(&mut self) -> RSAW_W<BTMG_SPEC> {
+        RSAW_W::new(self, 24)
     }
     #[doc = "Bit 30 - Loop back mode"]
     #[inline(always)]
     #[must_use]
-    pub fn lben(&mut self) -> LBEN_W<BTMG_SPEC, 30> {
-        LBEN_W::new(self)
+    pub fn lben(&mut self) -> LBEN_W<BTMG_SPEC> {
+        LBEN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Listen-Only mode"]
     #[inline(always)]
     #[must_use]
-    pub fn loen(&mut self) -> LOEN_W<BTMG_SPEC, 31> {
-        LOEN_W::new(self)
+    pub fn loen(&mut self) -> LOEN_W<BTMG_SPEC> {
+        LOEN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

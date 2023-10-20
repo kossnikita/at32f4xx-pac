@@ -5,11 +5,11 @@ pub type W = crate::W<MACIMR_SPEC>;
 #[doc = "Field `PIM` reader - PMT interrupt mask"]
 pub type PIM_R = crate::BitReader;
 #[doc = "Field `PIM` writer - PMT interrupt mask"]
-pub type PIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIM` reader - Timestamp interrupt mask"]
 pub type TIM_R = crate::BitReader;
 #[doc = "Field `TIM` writer - Timestamp interrupt mask"]
-pub type TIM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 3 - PMT interrupt mask"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bit 3 - PMT interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn pim(&mut self) -> PIM_W<MACIMR_SPEC, 3> {
-        PIM_W::new(self)
+    pub fn pim(&mut self) -> PIM_W<MACIMR_SPEC> {
+        PIM_W::new(self, 3)
     }
     #[doc = "Bit 9 - Timestamp interrupt mask"]
     #[inline(always)]
     #[must_use]
-    pub fn tim(&mut self) -> TIM_W<MACIMR_SPEC, 9> {
-        TIM_W::new(self)
+    pub fn tim(&mut self) -> TIM_W<MACIMR_SPEC> {
+        TIM_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

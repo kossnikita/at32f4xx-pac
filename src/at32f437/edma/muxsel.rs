@@ -5,7 +5,7 @@ pub type W = crate::W<MUXSEL_SPEC>;
 #[doc = "Field `TBL_SEL` reader - Multiplexer Table Select"]
 pub type TBL_SEL_R = crate::BitReader;
 #[doc = "Field `TBL_SEL` writer - Multiplexer Table Select"]
-pub type TBL_SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TBL_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Multiplexer Table Select"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 0 - Multiplexer Table Select"]
     #[inline(always)]
     #[must_use]
-    pub fn tbl_sel(&mut self) -> TBL_SEL_W<MUXSEL_SPEC, 0> {
-        TBL_SEL_W::new(self)
+    pub fn tbl_sel(&mut self) -> TBL_SEL_W<MUXSEL_SPEC> {
+        TBL_SEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

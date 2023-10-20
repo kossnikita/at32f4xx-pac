@@ -5,23 +5,23 @@ pub type W = crate::W<PLL_SPEC>;
 #[doc = "Field `PLL_FR` reader - PLL_FR"]
 pub type PLL_FR_R = crate::FieldReader;
 #[doc = "Field `PLL_FR` writer - PLL_FR"]
-pub type PLL_FR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PLL_FR_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PLL_MS` reader - PLL_MS"]
 pub type PLL_MS_R = crate::FieldReader;
 #[doc = "Field `PLL_MS` writer - PLL_MS"]
-pub type PLL_MS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type PLL_MS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `PLL_NS` reader - PLL_NS"]
 pub type PLL_NS_R = crate::FieldReader<u16>;
 #[doc = "Field `PLL_NS` writer - PLL_NS"]
-pub type PLL_NS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type PLL_NS_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `PLL_FREF` reader - PLL entry clock reference frequency"]
 pub type PLL_FREF_R = crate::FieldReader;
 #[doc = "Field `PLL_FREF` writer - PLL entry clock reference frequency"]
-pub type PLL_FREF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type PLL_FREF_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PLLCFGEN` reader - PLL config enable"]
 pub type PLLCFGEN_R = crate::BitReader;
 #[doc = "Field `PLLCFGEN` writer - PLL config enable"]
-pub type PLLCFGEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLCFGEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - PLL_FR"]
     #[inline(always)]
@@ -69,32 +69,32 @@ impl W {
     #[doc = "Bits 0:2 - PLL_FR"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_fr(&mut self) -> PLL_FR_W<PLL_SPEC, 0> {
-        PLL_FR_W::new(self)
+    pub fn pll_fr(&mut self) -> PLL_FR_W<PLL_SPEC> {
+        PLL_FR_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - PLL_MS"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_ms(&mut self) -> PLL_MS_W<PLL_SPEC, 4> {
-        PLL_MS_W::new(self)
+    pub fn pll_ms(&mut self) -> PLL_MS_W<PLL_SPEC> {
+        PLL_MS_W::new(self, 4)
     }
     #[doc = "Bits 8:16 - PLL_NS"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_ns(&mut self) -> PLL_NS_W<PLL_SPEC, 8> {
-        PLL_NS_W::new(self)
+    pub fn pll_ns(&mut self) -> PLL_NS_W<PLL_SPEC> {
+        PLL_NS_W::new(self, 8)
     }
     #[doc = "Bits 24:26 - PLL entry clock reference frequency"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_fref(&mut self) -> PLL_FREF_W<PLL_SPEC, 24> {
-        PLL_FREF_W::new(self)
+    pub fn pll_fref(&mut self) -> PLL_FREF_W<PLL_SPEC> {
+        PLL_FREF_W::new(self, 24)
     }
     #[doc = "Bit 31 - PLL config enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pllcfgen(&mut self) -> PLLCFGEN_W<PLL_SPEC, 31> {
-        PLLCFGEN_W::new(self)
+    pub fn pllcfgen(&mut self) -> PLLCFGEN_W<PLL_SPEC> {
+        PLLCFGEN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

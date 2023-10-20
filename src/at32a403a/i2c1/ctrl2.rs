@@ -5,27 +5,27 @@ pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `CLKFREQ` reader - Input clock frequency"]
 pub type CLKFREQ_R = crate::FieldReader;
 #[doc = "Field `CLKFREQ` writer - Input clock frequency"]
-pub type CLKFREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CLKFREQ_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ERRIEN` reader - Error interrupt enable"]
 pub type ERRIEN_R = crate::BitReader;
 #[doc = "Field `ERRIEN` writer - Error interrupt enable"]
-pub type ERRIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EVTIEN` reader - Event interrupt enable"]
 pub type EVTIEN_R = crate::BitReader;
 #[doc = "Field `EVTIEN` writer - Event interrupt enable"]
-pub type EVTIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EVTIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATAIEN` reader - Data transmission interrupt enable"]
 pub type DATAIEN_R = crate::BitReader;
 #[doc = "Field `DATAIEN` writer - Data transmission interrupt enable"]
-pub type DATAIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DATAIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMAEN` reader - DMA transfer enable"]
 pub type DMAEN_R = crate::BitReader;
 #[doc = "Field `DMAEN` writer - DMA transfer enable"]
-pub type DMAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMAEND` reader - DMA transfer end indication"]
 pub type DMAEND_R = crate::BitReader;
 #[doc = "Field `DMAEND` writer - DMA transfer end indication"]
-pub type DMAEND_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAEND_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:7 - Input clock frequency"]
     #[inline(always)]
@@ -79,38 +79,38 @@ impl W {
     #[doc = "Bits 0:7 - Input clock frequency"]
     #[inline(always)]
     #[must_use]
-    pub fn clkfreq(&mut self) -> CLKFREQ_W<CTRL2_SPEC, 0> {
-        CLKFREQ_W::new(self)
+    pub fn clkfreq(&mut self) -> CLKFREQ_W<CTRL2_SPEC> {
+        CLKFREQ_W::new(self, 0)
     }
     #[doc = "Bit 8 - Error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errien(&mut self) -> ERRIEN_W<CTRL2_SPEC, 8> {
-        ERRIEN_W::new(self)
+    pub fn errien(&mut self) -> ERRIEN_W<CTRL2_SPEC> {
+        ERRIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Event interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn evtien(&mut self) -> EVTIEN_W<CTRL2_SPEC, 9> {
-        EVTIEN_W::new(self)
+    pub fn evtien(&mut self) -> EVTIEN_W<CTRL2_SPEC> {
+        EVTIEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data transmission interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dataien(&mut self) -> DATAIEN_W<CTRL2_SPEC, 10> {
-        DATAIEN_W::new(self)
+    pub fn dataien(&mut self) -> DATAIEN_W<CTRL2_SPEC> {
+        DATAIEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - DMA transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaen(&mut self) -> DMAEN_W<CTRL2_SPEC, 11> {
-        DMAEN_W::new(self)
+    pub fn dmaen(&mut self) -> DMAEN_W<CTRL2_SPEC> {
+        DMAEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - DMA transfer end indication"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaend(&mut self) -> DMAEND_W<CTRL2_SPEC, 12> {
-        DMAEND_W::new(self)
+    pub fn dmaend(&mut self) -> DMAEND_W<CTRL2_SPEC> {
+        DMAEND_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

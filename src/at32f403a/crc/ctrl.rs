@@ -32,8 +32,8 @@ impl RST_R {
     }
 }
 #[doc = "Field `RST` writer - Reset bit"]
-pub type RST_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, RSTW_A>;
-impl<'a, REG, const O: u8> RST_W<'a, REG, O>
+pub type RST_W<'a, REG> = crate::BitWriter1S<'a, REG, RSTW_A>;
+impl<'a, REG> RST_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -101,8 +101,8 @@ impl POLY_SIZE_R {
     }
 }
 #[doc = "Field `POLY_SIZE` writer - Polynomial size"]
-pub type POLY_SIZE_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, POLY_SIZE_A>;
-impl<'a, REG, const O: u8> POLY_SIZE_W<'a, REG, O>
+pub type POLY_SIZE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, POLY_SIZE_A>;
+impl<'a, REG> POLY_SIZE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -186,8 +186,8 @@ impl REVID_R {
     }
 }
 #[doc = "Field `REVID` writer - Reverse input data"]
-pub type REVID_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, REVID_A>;
-impl<'a, REG, const O: u8> REVID_W<'a, REG, O>
+pub type REVID_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, REVID_A>;
+impl<'a, REG> REVID_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -290,20 +290,20 @@ impl W {
     #[doc = "Bit 0 - Reset bit"]
     #[inline(always)]
     #[must_use]
-    pub fn rst(&mut self) -> RST_W<CTRL_SPEC, 0> {
-        RST_W::new(self)
+    pub fn rst(&mut self) -> RST_W<CTRL_SPEC> {
+        RST_W::new(self, 0)
     }
     #[doc = "Bits 3:4 - Polynomial size"]
     #[inline(always)]
     #[must_use]
-    pub fn poly_size(&mut self) -> POLY_SIZE_W<CTRL_SPEC, 3> {
-        POLY_SIZE_W::new(self)
+    pub fn poly_size(&mut self) -> POLY_SIZE_W<CTRL_SPEC> {
+        POLY_SIZE_W::new(self, 3)
     }
     #[doc = "Bits 5:6 - Reverse input data"]
     #[inline(always)]
     #[must_use]
-    pub fn revid(&mut self) -> REVID_W<CTRL_SPEC, 5> {
-        REVID_W::new(self)
+    pub fn revid(&mut self) -> REVID_W<CTRL_SPEC> {
+        REVID_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<GNPTXFSIZ_SPEC>;
 #[doc = "Field `NPTXFSTADDR` reader - Non-periodic Transmit RAM Start address"]
 pub type NPTXFSTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `NPTXFSTADDR` writer - Non-periodic Transmit RAM Start address"]
-pub type NPTXFSTADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type NPTXFSTADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `NPTXFDEP` reader - Non-periodic TxFIFO depth"]
 pub type NPTXFDEP_R = crate::FieldReader<u16>;
 #[doc = "Field `NPTXFDEP` writer - Non-periodic TxFIFO depth"]
-pub type NPTXFDEP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type NPTXFDEP_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Non-periodic Transmit RAM Start address"]
     #[inline(always)]
@@ -42,14 +42,14 @@ impl W {
     #[doc = "Bits 0:15 - Non-periodic Transmit RAM Start address"]
     #[inline(always)]
     #[must_use]
-    pub fn nptxfstaddr(&mut self) -> NPTXFSTADDR_W<GNPTXFSIZ_SPEC, 0> {
-        NPTXFSTADDR_W::new(self)
+    pub fn nptxfstaddr(&mut self) -> NPTXFSTADDR_W<GNPTXFSIZ_SPEC> {
+        NPTXFSTADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Non-periodic TxFIFO depth"]
     #[inline(always)]
     #[must_use]
-    pub fn nptxfdep(&mut self) -> NPTXFDEP_W<GNPTXFSIZ_SPEC, 16> {
-        NPTXFDEP_W::new(self)
+    pub fn nptxfdep(&mut self) -> NPTXFDEP_W<GNPTXFSIZ_SPEC> {
+        NPTXFDEP_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

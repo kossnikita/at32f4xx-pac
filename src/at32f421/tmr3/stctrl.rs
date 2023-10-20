@@ -92,8 +92,8 @@ impl SMSEL_R {
     }
 }
 #[doc = "Field `SMSEL` writer - Subordinate TMR mode selection"]
-pub type SMSEL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, SMSEL_A>;
-impl<'a, REG, const O: u8> SMSEL_W<'a, REG, O>
+pub type SMSEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, SMSEL_A>;
+impl<'a, REG> SMSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -229,8 +229,8 @@ impl STIS_R {
     }
 }
 #[doc = "Field `STIS` writer - Subordinate TMR input selection"]
-pub type STIS_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, STIS_A>;
-impl<'a, REG, const O: u8> STIS_W<'a, REG, O>
+pub type STIS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, STIS_A>;
+impl<'a, REG> STIS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -327,8 +327,8 @@ impl From<STSW_AW> for bool {
     }
 }
 #[doc = "Field `STS` writer - Subordinate TMR synchronization"]
-pub type STS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, STSW_AW>;
-impl<'a, REG, const O: u8> STS_W<'a, REG, O>
+pub type STS_W<'a, REG> = crate::BitWriter<'a, REG, STSW_AW>;
+impl<'a, REG> STS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -497,8 +497,8 @@ impl ESF_R {
     }
 }
 #[doc = "Field `ESF` writer - External signal filter"]
-pub type ESF_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O, ESF_A>;
-impl<'a, REG, const O: u8> ESF_W<'a, REG, O>
+pub type ESF_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, ESF_A>;
+impl<'a, REG> ESF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -642,8 +642,8 @@ impl ESDIV_R {
     }
 }
 #[doc = "Field `ESDIV` writer - External signal divider"]
-pub type ESDIV_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, ESDIV_A>;
-impl<'a, REG, const O: u8> ESDIV_W<'a, REG, O>
+pub type ESDIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, ESDIV_A>;
+impl<'a, REG> ESDIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -720,8 +720,8 @@ impl From<ECMBENW_AW> for bool {
     }
 }
 #[doc = "Field `ECMBEN` writer - External clock mode B enable"]
-pub type ECMBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ECMBENW_AW>;
-impl<'a, REG, const O: u8> ECMBEN_W<'a, REG, O>
+pub type ECMBEN_W<'a, REG> = crate::BitWriter<'a, REG, ECMBENW_AW>;
+impl<'a, REG> ECMBEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -773,8 +773,8 @@ impl ESP_R {
     }
 }
 #[doc = "Field `ESP` writer - External signal polarity"]
-pub type ESP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ESP_A>;
-impl<'a, REG, const O: u8> ESP_W<'a, REG, O>
+pub type ESP_W<'a, REG> = crate::BitWriter<'a, REG, ESP_A>;
+impl<'a, REG> ESP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -848,44 +848,44 @@ impl W {
     #[doc = "Bits 0:2 - Subordinate TMR mode selection"]
     #[inline(always)]
     #[must_use]
-    pub fn smsel(&mut self) -> SMSEL_W<STCTRL_SPEC, 0> {
-        SMSEL_W::new(self)
+    pub fn smsel(&mut self) -> SMSEL_W<STCTRL_SPEC> {
+        SMSEL_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Subordinate TMR input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn stis(&mut self) -> STIS_W<STCTRL_SPEC, 4> {
-        STIS_W::new(self)
+    pub fn stis(&mut self) -> STIS_W<STCTRL_SPEC> {
+        STIS_W::new(self, 4)
     }
     #[doc = "Bit 7 - Subordinate TMR synchronization"]
     #[inline(always)]
     #[must_use]
-    pub fn sts(&mut self) -> STS_W<STCTRL_SPEC, 7> {
-        STS_W::new(self)
+    pub fn sts(&mut self) -> STS_W<STCTRL_SPEC> {
+        STS_W::new(self, 7)
     }
     #[doc = "Bits 8:11 - External signal filter"]
     #[inline(always)]
     #[must_use]
-    pub fn esf(&mut self) -> ESF_W<STCTRL_SPEC, 8> {
-        ESF_W::new(self)
+    pub fn esf(&mut self) -> ESF_W<STCTRL_SPEC> {
+        ESF_W::new(self, 8)
     }
     #[doc = "Bits 12:13 - External signal divider"]
     #[inline(always)]
     #[must_use]
-    pub fn esdiv(&mut self) -> ESDIV_W<STCTRL_SPEC, 12> {
-        ESDIV_W::new(self)
+    pub fn esdiv(&mut self) -> ESDIV_W<STCTRL_SPEC> {
+        ESDIV_W::new(self, 12)
     }
     #[doc = "Bit 14 - External clock mode B enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ecmben(&mut self) -> ECMBEN_W<STCTRL_SPEC, 14> {
-        ECMBEN_W::new(self)
+    pub fn ecmben(&mut self) -> ECMBEN_W<STCTRL_SPEC> {
+        ECMBEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - External signal polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn esp(&mut self) -> ESP_W<STCTRL_SPEC, 15> {
-        ESP_W::new(self)
+    pub fn esp(&mut self) -> ESP_W<STCTRL_SPEC> {
+        ESP_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

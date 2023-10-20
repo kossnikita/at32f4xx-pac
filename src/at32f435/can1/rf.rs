@@ -53,8 +53,8 @@ impl From<FFW_AW> for bool {
     }
 }
 #[doc = "Field `FF` writer - Receive FIFO full flag"]
-pub type FF_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, FFW_AW>;
-impl<'a, REG, const O: u8> FF_W<'a, REG, O>
+pub type FF_W<'a, REG> = crate::BitWriter1C<'a, REG, FFW_AW>;
+impl<'a, REG> FF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -113,8 +113,8 @@ impl From<OFW_AW> for bool {
     }
 }
 #[doc = "Field `OF` writer - Receive FIFO overflow flag"]
-pub type OF_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, OFW_AW>;
-impl<'a, REG, const O: u8> OF_W<'a, REG, O>
+pub type OF_W<'a, REG> = crate::BitWriter1C<'a, REG, OFW_AW>;
+impl<'a, REG> OF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -173,8 +173,8 @@ impl From<RW_AW> for bool {
     }
 }
 #[doc = "Field `R` writer - Receive FIFO release"]
-pub type R_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, RW_AW>;
-impl<'a, REG, const O: u8> R_W<'a, REG, O>
+pub type R_W<'a, REG> = crate::BitWriter1S<'a, REG, RW_AW>;
+impl<'a, REG> R_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -225,20 +225,20 @@ impl W {
     #[doc = "Bit 3 - Receive FIFO full flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ff(&mut self) -> FF_W<RF_SPEC, 3> {
-        FF_W::new(self)
+    pub fn ff(&mut self) -> FF_W<RF_SPEC> {
+        FF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Receive FIFO overflow flag"]
     #[inline(always)]
     #[must_use]
-    pub fn of(&mut self) -> OF_W<RF_SPEC, 4> {
-        OF_W::new(self)
+    pub fn of(&mut self) -> OF_W<RF_SPEC> {
+        OF_W::new(self, 4)
     }
     #[doc = "Bit 5 - Receive FIFO release"]
     #[inline(always)]
     #[must_use]
-    pub fn r(&mut self) -> R_W<RF_SPEC, 5> {
-        R_W::new(self)
+    pub fn r(&mut self) -> R_W<RF_SPEC> {
+        R_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

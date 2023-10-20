@@ -5,31 +5,31 @@ pub type W = crate::W<CTRL3_SPEC>;
 #[doc = "Field `FPRGM` reader - Flash program"]
 pub type FPRGM_R = crate::BitReader;
 #[doc = "Field `FPRGM` writer - Flash program"]
-pub type FPRGM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FPRGM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SECERS` reader - Sector erase"]
 pub type SECERS_R = crate::BitReader;
 #[doc = "Field `SECERS` writer - Sector erase"]
-pub type SECERS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SECERS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHPERS` reader - Chip erase"]
 pub type CHPERS_R = crate::BitReader;
 #[doc = "Field `CHPERS` writer - Chip erase"]
-pub type CHPERS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHPERS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERSTR` reader - Erasing start"]
 pub type ERSTR_R = crate::BitReader;
 #[doc = "Field `ERSTR` writer - Erasing start"]
-pub type ERSTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERSTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OPLK` reader - Operation lock"]
 pub type OPLK_R = crate::BitReader;
 #[doc = "Field `OPLK` writer - Operation lock"]
-pub type OPLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OPLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERRIE` reader - Error interrupt enable"]
 pub type ERRIE_R = crate::BitReader;
 #[doc = "Field `ERRIE` writer - Error interrupt enable"]
-pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ODFIE` reader - Operation done flag interrupt enable"]
 pub type ODFIE_R = crate::BitReader;
 #[doc = "Field `ODFIE` writer - Operation done flag interrupt enable"]
-pub type ODFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ODFIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]
@@ -89,44 +89,44 @@ impl W {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]
     #[must_use]
-    pub fn fprgm(&mut self) -> FPRGM_W<CTRL3_SPEC, 0> {
-        FPRGM_W::new(self)
+    pub fn fprgm(&mut self) -> FPRGM_W<CTRL3_SPEC> {
+        FPRGM_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sector erase"]
     #[inline(always)]
     #[must_use]
-    pub fn secers(&mut self) -> SECERS_W<CTRL3_SPEC, 1> {
-        SECERS_W::new(self)
+    pub fn secers(&mut self) -> SECERS_W<CTRL3_SPEC> {
+        SECERS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Chip erase"]
     #[inline(always)]
     #[must_use]
-    pub fn chpers(&mut self) -> CHPERS_W<CTRL3_SPEC, 2> {
-        CHPERS_W::new(self)
+    pub fn chpers(&mut self) -> CHPERS_W<CTRL3_SPEC> {
+        CHPERS_W::new(self, 2)
     }
     #[doc = "Bit 6 - Erasing start"]
     #[inline(always)]
     #[must_use]
-    pub fn erstr(&mut self) -> ERSTR_W<CTRL3_SPEC, 6> {
-        ERSTR_W::new(self)
+    pub fn erstr(&mut self) -> ERSTR_W<CTRL3_SPEC> {
+        ERSTR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Operation lock"]
     #[inline(always)]
     #[must_use]
-    pub fn oplk(&mut self) -> OPLK_W<CTRL3_SPEC, 7> {
-        OPLK_W::new(self)
+    pub fn oplk(&mut self) -> OPLK_W<CTRL3_SPEC> {
+        OPLK_W::new(self, 7)
     }
     #[doc = "Bit 10 - Error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTRL3_SPEC, 10> {
-        ERRIE_W::new(self)
+    pub fn errie(&mut self) -> ERRIE_W<CTRL3_SPEC> {
+        ERRIE_W::new(self, 10)
     }
     #[doc = "Bit 12 - Operation done flag interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn odfie(&mut self) -> ODFIE_W<CTRL3_SPEC, 12> {
-        ODFIE_W::new(self)
+    pub fn odfie(&mut self) -> ODFIE_W<CTRL3_SPEC> {
+        ODFIE_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

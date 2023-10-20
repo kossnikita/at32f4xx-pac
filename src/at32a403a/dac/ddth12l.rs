@@ -5,11 +5,11 @@ pub type W = crate::W<DDTH12L_SPEC>;
 #[doc = "Field `DD1DT12L` reader - DAC1 12-bit left-aligned data"]
 pub type DD1DT12L_R = crate::FieldReader<u16>;
 #[doc = "Field `DD1DT12L` writer - DAC1 12-bit left-aligned data"]
-pub type DD1DT12L_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type DD1DT12L_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 #[doc = "Field `DD2DT12L` reader - DAC2 12-bit right-aligned data"]
 pub type DD2DT12L_R = crate::FieldReader<u16>;
 #[doc = "Field `DD2DT12L` writer - DAC2 12-bit right-aligned data"]
-pub type DD2DT12L_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type DD2DT12L_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 4:15 - DAC1 12-bit left-aligned data"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 4:15 - DAC1 12-bit left-aligned data"]
     #[inline(always)]
     #[must_use]
-    pub fn dd1dt12l(&mut self) -> DD1DT12L_W<DDTH12L_SPEC, 4> {
-        DD1DT12L_W::new(self)
+    pub fn dd1dt12l(&mut self) -> DD1DT12L_W<DDTH12L_SPEC> {
+        DD1DT12L_W::new(self, 4)
     }
     #[doc = "Bits 20:31 - DAC2 12-bit right-aligned data"]
     #[inline(always)]
     #[must_use]
-    pub fn dd2dt12l(&mut self) -> DD2DT12L_W<DDTH12L_SPEC, 20> {
-        DD2DT12L_W::new(self)
+    pub fn dd2dt12l(&mut self) -> DD2DT12L_W<DDTH12L_SPEC> {
+        DD2DT12L_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<LOW_PULSE_SPEC>;
 #[doc = "Field `L_PULSE_CNT` reader - Low pulse Count"]
 pub type L_PULSE_CNT_R = crate::FieldReader;
 #[doc = "Field `L_PULSE_CNT` writer - Low pulse Count"]
-pub type L_PULSE_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type L_PULSE_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - Low pulse Count"]
     #[inline(always)]
@@ -32,8 +32,8 @@ impl W {
     #[doc = "Bits 0:5 - Low pulse Count"]
     #[inline(always)]
     #[must_use]
-    pub fn l_pulse_cnt(&mut self) -> L_PULSE_CNT_W<LOW_PULSE_SPEC, 0> {
-        L_PULSE_CNT_W::new(self)
+    pub fn l_pulse_cnt(&mut self) -> L_PULSE_CNT_W<LOW_PULSE_SPEC> {
+        L_PULSE_CNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

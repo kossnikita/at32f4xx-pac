@@ -5,7 +5,7 @@ pub type W = crate::W<D2DTH12R_SPEC>;
 #[doc = "Field `D2DT12R` reader - DAC2 12-bit right-aligned data"]
 pub type D2DT12R_R = crate::FieldReader<u16>;
 #[doc = "Field `D2DT12R` writer - DAC2 12-bit right-aligned data"]
-pub type D2DT12R_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 12, O, u16>;
+pub type D2DT12R_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
     #[doc = "Bits 0:11 - DAC2 12-bit right-aligned data"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:11 - DAC2 12-bit right-aligned data"]
     #[inline(always)]
     #[must_use]
-    pub fn d2dt12r(&mut self) -> D2DT12R_W<D2DTH12R_SPEC, 0> {
-        D2DT12R_W::new(self)
+    pub fn d2dt12r(&mut self) -> D2DT12R_W<D2DTH12R_SPEC> {
+        D2DT12R_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

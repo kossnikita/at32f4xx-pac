@@ -5,7 +5,7 @@ pub type W = crate::W<INTMAP_SPEC>;
 #[doc = "Field `USB_INT_MAP` reader - USBDEV interrupt remap"]
 pub type USB_INT_MAP_R = crate::BitReader;
 #[doc = "Field `USB_INT_MAP` writer - USBDEV interrupt remap"]
-pub type USB_INT_MAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_INT_MAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - USBDEV interrupt remap"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 0 - USBDEV interrupt remap"]
     #[inline(always)]
     #[must_use]
-    pub fn usb_int_map(&mut self) -> USB_INT_MAP_W<INTMAP_SPEC, 0> {
-        USB_INT_MAP_W::new(self)
+    pub fn usb_int_map(&mut self) -> USB_INT_MAP_W<INTMAP_SPEC> {
+        USB_INT_MAP_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

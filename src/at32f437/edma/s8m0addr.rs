@@ -5,7 +5,7 @@ pub type W = crate::W<S8M0ADDR_SPEC>;
 #[doc = "Field `M0ADDR` reader - Memory 0 address"]
 pub type M0ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `M0ADDR` writer - Memory 0 address"]
-pub type M0ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type M0ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Memory 0 address"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Memory 0 address"]
     #[inline(always)]
     #[must_use]
-    pub fn m0addr(&mut self) -> M0ADDR_W<S8M0ADDR_SPEC, 0> {
-        M0ADDR_W::new(self)
+    pub fn m0addr(&mut self) -> M0ADDR_W<S8M0ADDR_SPEC> {
+        M0ADDR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

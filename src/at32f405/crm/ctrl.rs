@@ -53,8 +53,8 @@ impl From<HICKENW_AW> for bool {
     }
 }
 #[doc = "Field `HICKEN` writer - High speed internal clock enable"]
-pub type HICKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HICKENW_AW>;
-impl<'a, REG, const O: u8> HICKEN_W<'a, REG, O>
+pub type HICKEN_W<'a, REG> = crate::BitWriter<'a, REG, HICKENW_AW>;
+impl<'a, REG> HICKEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -108,7 +108,7 @@ impl HICKSTBL_R {
 #[doc = "Field `HICKTRIM` reader - High speed internal clock trimming"]
 pub type HICKTRIM_R = crate::FieldReader;
 #[doc = "Field `HICKTRIM` writer - High speed internal clock trimming"]
-pub type HICKTRIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type HICKTRIM_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `HICKCAL` reader - High speed internal clock calibration"]
 pub type HICKCAL_R = crate::FieldReader;
 #[doc = "Field `HEXTEN` reader - High speed exernal crystal enable"]
@@ -162,8 +162,8 @@ impl From<HEXTENW_AW> for bool {
     }
 }
 #[doc = "Field `HEXTEN` writer - High speed exernal crystal enable"]
-pub type HEXTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HEXTENW_AW>;
-impl<'a, REG, const O: u8> HEXTEN_W<'a, REG, O>
+pub type HEXTEN_W<'a, REG> = crate::BitWriter<'a, REG, HEXTENW_AW>;
+impl<'a, REG> HEXTEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -265,8 +265,8 @@ impl From<HEXTBYPSW_AW> for bool {
     }
 }
 #[doc = "Field `HEXTBYPS` writer - High speed exernal crystal bypass"]
-pub type HEXTBYPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, HEXTBYPSW_AW>;
-impl<'a, REG, const O: u8> HEXTBYPS_W<'a, REG, O>
+pub type HEXTBYPS_W<'a, REG> = crate::BitWriter<'a, REG, HEXTBYPSW_AW>;
+impl<'a, REG> HEXTBYPS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -332,8 +332,8 @@ impl From<CFDENW_AW> for bool {
     }
 }
 #[doc = "Field `CFDEN` writer - Clock failure detection enable"]
-pub type CFDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CFDENW_AW>;
-impl<'a, REG, const O: u8> CFDEN_W<'a, REG, O>
+pub type CFDEN_W<'a, REG> = crate::BitWriter<'a, REG, CFDENW_AW>;
+impl<'a, REG> CFDEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -399,8 +399,8 @@ impl From<PLLENW_AW> for bool {
     }
 }
 #[doc = "Field `PLLEN` writer - PLL enable"]
-pub type PLLEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PLLENW_AW>;
-impl<'a, REG, const O: u8> PLLEN_W<'a, REG, O>
+pub type PLLEN_W<'a, REG> = crate::BitWriter<'a, REG, PLLENW_AW>;
+impl<'a, REG> PLLEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -536,38 +536,38 @@ impl W {
     #[doc = "Bit 0 - High speed internal clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hicken(&mut self) -> HICKEN_W<CTRL_SPEC, 0> {
-        HICKEN_W::new(self)
+    pub fn hicken(&mut self) -> HICKEN_W<CTRL_SPEC> {
+        HICKEN_W::new(self, 0)
     }
     #[doc = "Bits 2:7 - High speed internal clock trimming"]
     #[inline(always)]
     #[must_use]
-    pub fn hicktrim(&mut self) -> HICKTRIM_W<CTRL_SPEC, 2> {
-        HICKTRIM_W::new(self)
+    pub fn hicktrim(&mut self) -> HICKTRIM_W<CTRL_SPEC> {
+        HICKTRIM_W::new(self, 2)
     }
     #[doc = "Bit 16 - High speed exernal crystal enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hexten(&mut self) -> HEXTEN_W<CTRL_SPEC, 16> {
-        HEXTEN_W::new(self)
+    pub fn hexten(&mut self) -> HEXTEN_W<CTRL_SPEC> {
+        HEXTEN_W::new(self, 16)
     }
     #[doc = "Bit 18 - High speed exernal crystal bypass"]
     #[inline(always)]
     #[must_use]
-    pub fn hextbyps(&mut self) -> HEXTBYPS_W<CTRL_SPEC, 18> {
-        HEXTBYPS_W::new(self)
+    pub fn hextbyps(&mut self) -> HEXTBYPS_W<CTRL_SPEC> {
+        HEXTBYPS_W::new(self, 18)
     }
     #[doc = "Bit 19 - Clock failure detection enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cfden(&mut self) -> CFDEN_W<CTRL_SPEC, 19> {
-        CFDEN_W::new(self)
+    pub fn cfden(&mut self) -> CFDEN_W<CTRL_SPEC> {
+        CFDEN_W::new(self, 19)
     }
     #[doc = "Bit 24 - PLL enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pllen(&mut self) -> PLLEN_W<CTRL_SPEC, 24> {
-        PLLEN_W::new(self)
+    pub fn pllen(&mut self) -> PLLEN_W<CTRL_SPEC> {
+        PLLEN_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

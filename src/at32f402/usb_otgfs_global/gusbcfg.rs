@@ -5,23 +5,23 @@ pub type W = crate::W<GUSBCFG_SPEC>;
 #[doc = "Field `TOUTCAL` reader - FS timeout calibration"]
 pub type TOUTCAL_R = crate::FieldReader;
 #[doc = "Field `TOUTCAL` writer - FS timeout calibration"]
-pub type TOUTCAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TOUTCAL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `USBTRDTIM` reader - USB turnaround time"]
 pub type USBTRDTIM_R = crate::FieldReader;
 #[doc = "Field `USBTRDTIM` writer - USB turnaround time"]
-pub type USBTRDTIM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type USBTRDTIM_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `FHSTMODE` reader - Force host mode"]
 pub type FHSTMODE_R = crate::BitReader;
 #[doc = "Field `FHSTMODE` writer - Force host mode"]
-pub type FHSTMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FHSTMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDEVMODE` reader - Force device mode"]
 pub type FDEVMODE_R = crate::BitReader;
 #[doc = "Field `FDEVMODE` writer - Force device mode"]
-pub type FDEVMODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDEVMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COTXPKT` reader - Corrupt Tx packet"]
 pub type COTXPKT_R = crate::BitReader;
 #[doc = "Field `COTXPKT` writer - Corrupt Tx packet"]
-pub type COTXPKT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type COTXPKT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - FS timeout calibration"]
     #[inline(always)]
@@ -69,32 +69,32 @@ impl W {
     #[doc = "Bits 0:2 - FS timeout calibration"]
     #[inline(always)]
     #[must_use]
-    pub fn toutcal(&mut self) -> TOUTCAL_W<GUSBCFG_SPEC, 0> {
-        TOUTCAL_W::new(self)
+    pub fn toutcal(&mut self) -> TOUTCAL_W<GUSBCFG_SPEC> {
+        TOUTCAL_W::new(self, 0)
     }
     #[doc = "Bits 10:13 - USB turnaround time"]
     #[inline(always)]
     #[must_use]
-    pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<GUSBCFG_SPEC, 10> {
-        USBTRDTIM_W::new(self)
+    pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<GUSBCFG_SPEC> {
+        USBTRDTIM_W::new(self, 10)
     }
     #[doc = "Bit 29 - Force host mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fhstmode(&mut self) -> FHSTMODE_W<GUSBCFG_SPEC, 29> {
-        FHSTMODE_W::new(self)
+    pub fn fhstmode(&mut self) -> FHSTMODE_W<GUSBCFG_SPEC> {
+        FHSTMODE_W::new(self, 29)
     }
     #[doc = "Bit 30 - Force device mode"]
     #[inline(always)]
     #[must_use]
-    pub fn fdevmode(&mut self) -> FDEVMODE_W<GUSBCFG_SPEC, 30> {
-        FDEVMODE_W::new(self)
+    pub fn fdevmode(&mut self) -> FDEVMODE_W<GUSBCFG_SPEC> {
+        FDEVMODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Corrupt Tx packet"]
     #[inline(always)]
     #[must_use]
-    pub fn cotxpkt(&mut self) -> COTXPKT_W<GUSBCFG_SPEC, 31> {
-        COTXPKT_W::new(self)
+    pub fn cotxpkt(&mut self) -> COTXPKT_W<GUSBCFG_SPEC> {
+        COTXPKT_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

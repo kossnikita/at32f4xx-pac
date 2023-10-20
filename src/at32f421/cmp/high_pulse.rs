@@ -5,7 +5,7 @@ pub type W = crate::W<HIGH_PULSE_SPEC>;
 #[doc = "Field `H_PULSE_CNT` reader - High pulse Count"]
 pub type H_PULSE_CNT_R = crate::FieldReader;
 #[doc = "Field `H_PULSE_CNT` writer - High pulse Count"]
-pub type H_PULSE_CNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type H_PULSE_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - High pulse Count"]
     #[inline(always)]
@@ -32,8 +32,8 @@ impl W {
     #[doc = "Bits 0:5 - High pulse Count"]
     #[inline(always)]
     #[must_use]
-    pub fn h_pulse_cnt(&mut self) -> H_PULSE_CNT_W<HIGH_PULSE_SPEC, 0> {
-        H_PULSE_CNT_W::new(self)
+    pub fn h_pulse_cnt(&mut self) -> H_PULSE_CNT_W<HIGH_PULSE_SPEC> {
+        H_PULSE_CNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

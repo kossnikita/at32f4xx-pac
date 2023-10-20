@@ -5,63 +5,63 @@ pub type W = crate::W<DMAIE_SPEC>;
 #[doc = "Field `TIE` reader - Transmit interrupt enable"]
 pub type TIE_R = crate::BitReader;
 #[doc = "Field `TIE` writer - Transmit interrupt enable"]
-pub type TIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TSE` reader - Transmit stopped enable"]
 pub type TSE_R = crate::BitReader;
 #[doc = "Field `TSE` writer - Transmit stopped enable"]
-pub type TSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TUE` reader - Transmit buffer unavailable enable"]
 pub type TUE_R = crate::BitReader;
 #[doc = "Field `TUE` writer - Transmit buffer unavailable enable"]
-pub type TUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TJE` reader - Transmit jabber timeout enable"]
 pub type TJE_R = crate::BitReader;
 #[doc = "Field `TJE` writer - Transmit jabber timeout enable"]
-pub type TJE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TJE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVE` reader - Overflow interrupt enable"]
 pub type OVE_R = crate::BitReader;
 #[doc = "Field `OVE` writer - Overflow interrupt enable"]
-pub type OVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UNE` reader - Underflow interrupt enable"]
 pub type UNE_R = crate::BitReader;
 #[doc = "Field `UNE` writer - Underflow interrupt enable"]
-pub type UNE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UNE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RIE` reader - Receive interrupt enable"]
 pub type RIE_R = crate::BitReader;
 #[doc = "Field `RIE` writer - Receive interrupt enable"]
-pub type RIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RBUE` reader - Receive buffer unavailable enable"]
 pub type RBUE_R = crate::BitReader;
 #[doc = "Field `RBUE` writer - Receive buffer unavailable enable"]
-pub type RBUE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RBUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RSE` reader - Receive stopped enable"]
 pub type RSE_R = crate::BitReader;
 #[doc = "Field `RSE` writer - Receive stopped enable"]
-pub type RSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RWTE` reader - receive watchdog timeout enable"]
 pub type RWTE_R = crate::BitReader;
 #[doc = "Field `RWTE` writer - receive watchdog timeout enable"]
-pub type RWTE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RWTE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EIE` reader - Early transmit interrupt enable"]
 pub type EIE_R = crate::BitReader;
 #[doc = "Field `EIE` writer - Early transmit interrupt enable"]
-pub type EIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FBEE` reader - Fatal bus error enable"]
 pub type FBEE_R = crate::BitReader;
 #[doc = "Field `FBEE` writer - Fatal bus error enable"]
-pub type FBEE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FBEE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERE` reader - Early receive interrupt enable"]
 pub type ERE_R = crate::BitReader;
 #[doc = "Field `ERE` writer - Early receive interrupt enable"]
-pub type ERE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AIE` reader - Abnormal interrupt enable"]
 pub type AIE_R = crate::BitReader;
 #[doc = "Field `AIE` writer - Abnormal interrupt enable"]
-pub type AIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NIE` reader - Normal interrupt enable"]
 pub type NIE_R = crate::BitReader;
 #[doc = "Field `NIE` writer - Normal interrupt enable"]
-pub type NIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transmit interrupt enable"]
     #[inline(always)]
@@ -169,92 +169,92 @@ impl W {
     #[doc = "Bit 0 - Transmit interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tie(&mut self) -> TIE_W<DMAIE_SPEC, 0> {
-        TIE_W::new(self)
+    pub fn tie(&mut self) -> TIE_W<DMAIE_SPEC> {
+        TIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit stopped enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tse(&mut self) -> TSE_W<DMAIE_SPEC, 1> {
-        TSE_W::new(self)
+    pub fn tse(&mut self) -> TSE_W<DMAIE_SPEC> {
+        TSE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transmit buffer unavailable enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tue(&mut self) -> TUE_W<DMAIE_SPEC, 2> {
-        TUE_W::new(self)
+    pub fn tue(&mut self) -> TUE_W<DMAIE_SPEC> {
+        TUE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transmit jabber timeout enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tje(&mut self) -> TJE_W<DMAIE_SPEC, 3> {
-        TJE_W::new(self)
+    pub fn tje(&mut self) -> TJE_W<DMAIE_SPEC> {
+        TJE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Overflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ove(&mut self) -> OVE_W<DMAIE_SPEC, 4> {
-        OVE_W::new(self)
+    pub fn ove(&mut self) -> OVE_W<DMAIE_SPEC> {
+        OVE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Underflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn une(&mut self) -> UNE_W<DMAIE_SPEC, 5> {
-        UNE_W::new(self)
+    pub fn une(&mut self) -> UNE_W<DMAIE_SPEC> {
+        UNE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Receive interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rie(&mut self) -> RIE_W<DMAIE_SPEC, 6> {
-        RIE_W::new(self)
+    pub fn rie(&mut self) -> RIE_W<DMAIE_SPEC> {
+        RIE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Receive buffer unavailable enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rbue(&mut self) -> RBUE_W<DMAIE_SPEC, 7> {
-        RBUE_W::new(self)
+    pub fn rbue(&mut self) -> RBUE_W<DMAIE_SPEC> {
+        RBUE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Receive stopped enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rse(&mut self) -> RSE_W<DMAIE_SPEC, 8> {
-        RSE_W::new(self)
+    pub fn rse(&mut self) -> RSE_W<DMAIE_SPEC> {
+        RSE_W::new(self, 8)
     }
     #[doc = "Bit 9 - receive watchdog timeout enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rwte(&mut self) -> RWTE_W<DMAIE_SPEC, 9> {
-        RWTE_W::new(self)
+    pub fn rwte(&mut self) -> RWTE_W<DMAIE_SPEC> {
+        RWTE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Early transmit interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eie(&mut self) -> EIE_W<DMAIE_SPEC, 10> {
-        EIE_W::new(self)
+    pub fn eie(&mut self) -> EIE_W<DMAIE_SPEC> {
+        EIE_W::new(self, 10)
     }
     #[doc = "Bit 13 - Fatal bus error enable"]
     #[inline(always)]
     #[must_use]
-    pub fn fbee(&mut self) -> FBEE_W<DMAIE_SPEC, 13> {
-        FBEE_W::new(self)
+    pub fn fbee(&mut self) -> FBEE_W<DMAIE_SPEC> {
+        FBEE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Early receive interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ere(&mut self) -> ERE_W<DMAIE_SPEC, 14> {
-        ERE_W::new(self)
+    pub fn ere(&mut self) -> ERE_W<DMAIE_SPEC> {
+        ERE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Abnormal interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn aie(&mut self) -> AIE_W<DMAIE_SPEC, 15> {
-        AIE_W::new(self)
+    pub fn aie(&mut self) -> AIE_W<DMAIE_SPEC> {
+        AIE_W::new(self, 15)
     }
     #[doc = "Bit 16 - Normal interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn nie(&mut self) -> NIE_W<DMAIE_SPEC, 16> {
-        NIE_W::new(self)
+    pub fn nie(&mut self) -> NIE_W<DMAIE_SPEC> {
+        NIE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<CWSZ_SPEC>;
 #[doc = "Field `CHNUM` reader - Cropping window horizontal pixel number"]
 pub type CHNUM_R = crate::FieldReader<u16>;
 #[doc = "Field `CHNUM` writer - Cropping window horizontal pixel number"]
-pub type CHNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type CHNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 #[doc = "Field `CVNUM` reader - Cropping window vertical line number"]
 pub type CVNUM_R = crate::FieldReader<u16>;
 #[doc = "Field `CVNUM` writer - Cropping window vertical line number"]
-pub type CVNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 14, O, u16>;
+pub type CVNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
 impl R {
     #[doc = "Bits 0:13 - Cropping window horizontal pixel number"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:13 - Cropping window horizontal pixel number"]
     #[inline(always)]
     #[must_use]
-    pub fn chnum(&mut self) -> CHNUM_W<CWSZ_SPEC, 0> {
-        CHNUM_W::new(self)
+    pub fn chnum(&mut self) -> CHNUM_W<CWSZ_SPEC> {
+        CHNUM_W::new(self, 0)
     }
     #[doc = "Bits 16:29 - Cropping window vertical line number"]
     #[inline(always)]
     #[must_use]
-    pub fn cvnum(&mut self) -> CVNUM_W<CWSZ_SPEC, 16> {
-        CVNUM_W::new(self)
+    pub fn cvnum(&mut self) -> CVNUM_W<CWSZ_SPEC> {
+        CVNUM_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

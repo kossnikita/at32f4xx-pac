@@ -5,43 +5,43 @@ pub type W = crate::W<APB2EN_SPEC>;
 #[doc = "Field `TMR1` reader - Timer1 clock enable"]
 pub type TMR1_R = crate::BitReader;
 #[doc = "Field `TMR1` writer - Timer1 clock enable"]
-pub type TMR1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART1` reader - USART1 clock enable"]
 pub type USART1_R = crate::BitReader;
 #[doc = "Field `USART1` writer - USART1 clock enable"]
-pub type USART1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USART1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART6` reader - USART6 clock enable"]
 pub type USART6_R = crate::BitReader;
 #[doc = "Field `USART6` writer - USART6 clock enable"]
-pub type USART6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USART6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC` reader - ADC clock enable"]
 pub type ADC_R = crate::BitReader;
 #[doc = "Field `ADC` writer - ADC clock enable"]
-pub type ADC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI1` reader - SPI1 clock enable"]
 pub type SPI1_R = crate::BitReader;
 #[doc = "Field `SPI1` writer - SPI1 clock enable"]
-pub type SPI1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCFG` reader - SCFG clock enable"]
 pub type SCFG_R = crate::BitReader;
 #[doc = "Field `SCFG` writer - SCFG clock enable"]
-pub type SCFG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCFG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR9` reader - Timer9 clock enable"]
 pub type TMR9_R = crate::BitReader;
 #[doc = "Field `TMR9` writer - Timer9 clock enable"]
-pub type TMR9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR9_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR10` reader - Timer10 clock enable"]
 pub type TMR10_R = crate::BitReader;
 #[doc = "Field `TMR10` writer - Timer10 clock enable"]
-pub type TMR10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR11` reader - Timer11 clock enable"]
 pub type TMR11_R = crate::BitReader;
 #[doc = "Field `TMR11` writer - Timer11 clock enable"]
-pub type TMR11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR11_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACC` reader - ACC clock enable"]
 pub type ACC_R = crate::BitReader;
 #[doc = "Field `ACC` writer - ACC clock enable"]
-pub type ACC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Timer1 clock enable"]
     #[inline(always)]
@@ -119,62 +119,62 @@ impl W {
     #[doc = "Bit 0 - Timer1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr1(&mut self) -> TMR1_W<APB2EN_SPEC, 0> {
-        TMR1_W::new(self)
+    pub fn tmr1(&mut self) -> TMR1_W<APB2EN_SPEC> {
+        TMR1_W::new(self, 0)
     }
     #[doc = "Bit 4 - USART1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn usart1(&mut self) -> USART1_W<APB2EN_SPEC, 4> {
-        USART1_W::new(self)
+    pub fn usart1(&mut self) -> USART1_W<APB2EN_SPEC> {
+        USART1_W::new(self, 4)
     }
     #[doc = "Bit 5 - USART6 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn usart6(&mut self) -> USART6_W<APB2EN_SPEC, 5> {
-        USART6_W::new(self)
+    pub fn usart6(&mut self) -> USART6_W<APB2EN_SPEC> {
+        USART6_W::new(self, 5)
     }
     #[doc = "Bit 8 - ADC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn adc(&mut self) -> ADC_W<APB2EN_SPEC, 8> {
-        ADC_W::new(self)
+    pub fn adc(&mut self) -> ADC_W<APB2EN_SPEC> {
+        ADC_W::new(self, 8)
     }
     #[doc = "Bit 12 - SPI1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn spi1(&mut self) -> SPI1_W<APB2EN_SPEC, 12> {
-        SPI1_W::new(self)
+    pub fn spi1(&mut self) -> SPI1_W<APB2EN_SPEC> {
+        SPI1_W::new(self, 12)
     }
     #[doc = "Bit 14 - SCFG clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn scfg(&mut self) -> SCFG_W<APB2EN_SPEC, 14> {
-        SCFG_W::new(self)
+    pub fn scfg(&mut self) -> SCFG_W<APB2EN_SPEC> {
+        SCFG_W::new(self, 14)
     }
     #[doc = "Bit 16 - Timer9 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr9(&mut self) -> TMR9_W<APB2EN_SPEC, 16> {
-        TMR9_W::new(self)
+    pub fn tmr9(&mut self) -> TMR9_W<APB2EN_SPEC> {
+        TMR9_W::new(self, 16)
     }
     #[doc = "Bit 17 - Timer10 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr10(&mut self) -> TMR10_W<APB2EN_SPEC, 17> {
-        TMR10_W::new(self)
+    pub fn tmr10(&mut self) -> TMR10_W<APB2EN_SPEC> {
+        TMR10_W::new(self, 17)
     }
     #[doc = "Bit 18 - Timer11 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr11(&mut self) -> TMR11_W<APB2EN_SPEC, 18> {
-        TMR11_W::new(self)
+    pub fn tmr11(&mut self) -> TMR11_W<APB2EN_SPEC> {
+        TMR11_W::new(self, 18)
     }
     #[doc = "Bit 29 - ACC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn acc(&mut self) -> ACC_W<APB2EN_SPEC, 29> {
-        ACC_W::new(self)
+    pub fn acc(&mut self) -> ACC_W<APB2EN_SPEC> {
+        ACC_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

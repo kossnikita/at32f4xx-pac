@@ -5,7 +5,7 @@ pub type W = crate::W<CALVAL_SPEC>;
 #[doc = "Field `CALVAL` reader - A/D Calibration value"]
 pub type CALVAL_R = crate::FieldReader;
 #[doc = "Field `CALVAL` writer - A/D Calibration value"]
-pub type CALVAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type CALVAL_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:6 - A/D Calibration value"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:6 - A/D Calibration value"]
     #[inline(always)]
     #[must_use]
-    pub fn calval(&mut self) -> CALVAL_W<CALVAL_SPEC, 0> {
-        CALVAL_W::new(self)
+    pub fn calval(&mut self) -> CALVAL_W<CALVAL_SPEC> {
+        CALVAL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

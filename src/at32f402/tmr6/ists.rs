@@ -51,8 +51,8 @@ impl From<OVFIFW_AW> for bool {
     }
 }
 #[doc = "Field `OVFIF` writer - Overflow interrupt flag"]
-pub type OVFIF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, OVFIFW_AW>;
-impl<'a, REG, const O: u8> OVFIF_W<'a, REG, O>
+pub type OVFIF_W<'a, REG> = crate::BitWriter0C<'a, REG, OVFIFW_AW>;
+impl<'a, REG> OVFIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -85,8 +85,8 @@ impl W {
     #[doc = "Bit 0 - Overflow interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfif(&mut self) -> OVFIF_W<ISTS_SPEC, 0> {
-        OVFIF_W::new(self)
+    pub fn ovfif(&mut self) -> OVFIF_W<ISTS_SPEC> {
+        OVFIF_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

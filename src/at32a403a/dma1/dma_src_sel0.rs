@@ -5,19 +5,19 @@ pub type W = crate::W<DMA_SRC_SEL0_SPEC>;
 #[doc = "Field `CH1_SRC` reader - CH1 SRC select"]
 pub type CH1_SRC_R = crate::FieldReader;
 #[doc = "Field `CH1_SRC` writer - CH1 SRC select"]
-pub type CH1_SRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CH1_SRC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CH2_SRC` reader - CH2 SRC select"]
 pub type CH2_SRC_R = crate::FieldReader;
 #[doc = "Field `CH2_SRC` writer - CH2 SRC select"]
-pub type CH2_SRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CH2_SRC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CH3_SRC` reader - CH3 SRC select"]
 pub type CH3_SRC_R = crate::FieldReader;
 #[doc = "Field `CH3_SRC` writer - CH3 SRC select"]
-pub type CH3_SRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CH3_SRC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `CH4_SRC` reader - CH4 SRC select"]
 pub type CH4_SRC_R = crate::FieldReader;
 #[doc = "Field `CH4_SRC` writer - CH4 SRC select"]
-pub type CH4_SRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type CH4_SRC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - CH1 SRC select"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:7 - CH1 SRC select"]
     #[inline(always)]
     #[must_use]
-    pub fn ch1_src(&mut self) -> CH1_SRC_W<DMA_SRC_SEL0_SPEC, 0> {
-        CH1_SRC_W::new(self)
+    pub fn ch1_src(&mut self) -> CH1_SRC_W<DMA_SRC_SEL0_SPEC> {
+        CH1_SRC_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - CH2 SRC select"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2_src(&mut self) -> CH2_SRC_W<DMA_SRC_SEL0_SPEC, 8> {
-        CH2_SRC_W::new(self)
+    pub fn ch2_src(&mut self) -> CH2_SRC_W<DMA_SRC_SEL0_SPEC> {
+        CH2_SRC_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - CH3 SRC select"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3_src(&mut self) -> CH3_SRC_W<DMA_SRC_SEL0_SPEC, 16> {
-        CH3_SRC_W::new(self)
+    pub fn ch3_src(&mut self) -> CH3_SRC_W<DMA_SRC_SEL0_SPEC> {
+        CH3_SRC_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - CH4 SRC select"]
     #[inline(always)]
     #[must_use]
-    pub fn ch4_src(&mut self) -> CH4_SRC_W<DMA_SRC_SEL0_SPEC, 24> {
-        CH4_SRC_W::new(self)
+    pub fn ch4_src(&mut self) -> CH4_SRC_W<DMA_SRC_SEL0_SPEC> {
+        CH4_SRC_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

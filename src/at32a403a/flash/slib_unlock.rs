@@ -1,7 +1,7 @@
 #[doc = "Register `SLIB_UNLOCK` writer"]
 pub type W = crate::W<SLIB_UNLOCK_SPEC>;
 #[doc = "Field `SLIB_UKVAL` writer - sLib unlock key value"]
-pub type SLIB_UKVAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SLIB_UKVAL_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl core::fmt::Debug for crate::generic::Reg<SLIB_UNLOCK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -11,8 +11,8 @@ impl W {
     #[doc = "Bits 0:31 - sLib unlock key value"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_ukval(&mut self) -> SLIB_UKVAL_W<SLIB_UNLOCK_SPEC, 0> {
-        SLIB_UKVAL_W::new(self)
+    pub fn slib_ukval(&mut self) -> SLIB_UKVAL_W<SLIB_UNLOCK_SPEC> {
+        SLIB_UKVAL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

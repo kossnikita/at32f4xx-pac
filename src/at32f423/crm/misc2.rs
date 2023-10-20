@@ -5,19 +5,19 @@ pub type W = crate::W<MISC2_SPEC>;
 #[doc = "Field `AUTO_STEP_EN` reader - AUTO_STEP_EN"]
 pub type AUTO_STEP_EN_R = crate::FieldReader;
 #[doc = "Field `AUTO_STEP_EN` writer - AUTO_STEP_EN"]
-pub type AUTO_STEP_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type AUTO_STEP_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `USBDIV` reader - USB division"]
 pub type USBDIV_R = crate::FieldReader;
 #[doc = "Field `USBDIV` writer - USB division"]
-pub type USBDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type USBDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `HICK_TO_SCLK_DIV` reader - HICK as system clock frequency division"]
 pub type HICK_TO_SCLK_DIV_R = crate::FieldReader;
 #[doc = "Field `HICK_TO_SCLK_DIV` writer - HICK as system clock frequency division"]
-pub type HICK_TO_SCLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type HICK_TO_SCLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `HEXT_TO_SCLK_DIV` reader - HEXT as system clock frequency division"]
 pub type HEXT_TO_SCLK_DIV_R = crate::FieldReader;
 #[doc = "Field `HEXT_TO_SCLK_DIV` writer - HEXT as system clock frequency division"]
-pub type HEXT_TO_SCLK_DIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type HEXT_TO_SCLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
@@ -68,26 +68,26 @@ impl W {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
     #[must_use]
-    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<MISC2_SPEC, 4> {
-        AUTO_STEP_EN_W::new(self)
+    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<MISC2_SPEC> {
+        AUTO_STEP_EN_W::new(self, 4)
     }
     #[doc = "Bits 12:15 - USB division"]
     #[inline(always)]
     #[must_use]
-    pub fn usbdiv(&mut self) -> USBDIV_W<MISC2_SPEC, 12> {
-        USBDIV_W::new(self)
+    pub fn usbdiv(&mut self) -> USBDIV_W<MISC2_SPEC> {
+        USBDIV_W::new(self, 12)
     }
     #[doc = "Bits 16:18 - HICK as system clock frequency division"]
     #[inline(always)]
     #[must_use]
-    pub fn hick_to_sclk_div(&mut self) -> HICK_TO_SCLK_DIV_W<MISC2_SPEC, 16> {
-        HICK_TO_SCLK_DIV_W::new(self)
+    pub fn hick_to_sclk_div(&mut self) -> HICK_TO_SCLK_DIV_W<MISC2_SPEC> {
+        HICK_TO_SCLK_DIV_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - HEXT as system clock frequency division"]
     #[inline(always)]
     #[must_use]
-    pub fn hext_to_sclk_div(&mut self) -> HEXT_TO_SCLK_DIV_W<MISC2_SPEC, 19> {
-        HEXT_TO_SCLK_DIV_W::new(self)
+    pub fn hext_to_sclk_div(&mut self) -> HEXT_TO_SCLK_DIV_W<MISC2_SPEC> {
+        HEXT_TO_SCLK_DIV_W::new(self, 19)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

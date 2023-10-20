@@ -5,11 +5,11 @@ pub type W = crate::W<EXT4_SPEC>;
 #[doc = "Field `BUSLATW2W` reader - BUSLATW2W"]
 pub type BUSLATW2W_R = crate::FieldReader;
 #[doc = "Field `BUSLATW2W` writer - BUSLATW2W"]
-pub type BUSLATW2W_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type BUSLATW2W_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `BUSLATR2R` reader - BUSLATR2R"]
 pub type BUSLATR2R_R = crate::FieldReader;
 #[doc = "Field `BUSLATR2R` writer - BUSLATR2R"]
-pub type BUSLATR2R_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type BUSLATR2R_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - BUSLATW2W"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:7 - BUSLATW2W"]
     #[inline(always)]
     #[must_use]
-    pub fn buslatw2w(&mut self) -> BUSLATW2W_W<EXT4_SPEC, 0> {
-        BUSLATW2W_W::new(self)
+    pub fn buslatw2w(&mut self) -> BUSLATW2W_W<EXT4_SPEC> {
+        BUSLATW2W_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - BUSLATR2R"]
     #[inline(always)]
     #[must_use]
-    pub fn buslatr2r(&mut self) -> BUSLATR2R_W<EXT4_SPEC, 8> {
-        BUSLATR2R_W::new(self)
+    pub fn buslatr2r(&mut self) -> BUSLATR2R_W<EXT4_SPEC> {
+        BUSLATR2R_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

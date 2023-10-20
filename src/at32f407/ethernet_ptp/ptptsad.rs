@@ -5,7 +5,7 @@ pub type W = crate::W<PTPTSAD_SPEC>;
 #[doc = "Field `TAR` reader - Timestamp addend register"]
 pub type TAR_R = crate::FieldReader<u32>;
 #[doc = "Field `TAR` writer - Timestamp addend register"]
-pub type TAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type TAR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Timestamp addend register"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Timestamp addend register"]
     #[inline(always)]
     #[must_use]
-    pub fn tar(&mut self) -> TAR_W<PTPTSAD_SPEC, 0> {
-        TAR_W::new(self)
+    pub fn tar(&mut self) -> TAR_W<PTPTSAD_SPEC> {
+        TAR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,27 +5,27 @@ pub type W = crate::W<CMDCTRL_SPEC>;
 #[doc = "Field `CMDIDX` reader - CMDIDX"]
 pub type CMDIDX_R = crate::FieldReader;
 #[doc = "Field `CMDIDX` writer - CMDIDX"]
-pub type CMDIDX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type CMDIDX_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `RSPWT` reader - Wait for response"]
 pub type RSPWT_R = crate::FieldReader;
 #[doc = "Field `RSPWT` writer - Wait for response"]
-pub type RSPWT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RSPWT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `INTWT` reader - CCSM wait for interrupt"]
 pub type INTWT_R = crate::BitReader;
 #[doc = "Field `INTWT` writer - CCSM wait for interrupt"]
-pub type INTWT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTWT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PNDWT` reader - CCSM wait for end of transfer"]
 pub type PNDWT_R = crate::BitReader;
 #[doc = "Field `PNDWT` writer - CCSM wait for end of transfer"]
-pub type PNDWT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PNDWT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CCSMEN` reader - Command channel state machine"]
 pub type CCSMEN_R = crate::BitReader;
 #[doc = "Field `CCSMEN` writer - Command channel state machine"]
-pub type CCSMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CCSMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IOSUSP` reader - SD I/O suspend command"]
 pub type IOSUSP_R = crate::BitReader;
 #[doc = "Field `IOSUSP` writer - SD I/O suspend command"]
-pub type IOSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IOSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - CMDIDX"]
     #[inline(always)]
@@ -79,38 +79,38 @@ impl W {
     #[doc = "Bits 0:5 - CMDIDX"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdidx(&mut self) -> CMDIDX_W<CMDCTRL_SPEC, 0> {
-        CMDIDX_W::new(self)
+    pub fn cmdidx(&mut self) -> CMDIDX_W<CMDCTRL_SPEC> {
+        CMDIDX_W::new(self, 0)
     }
     #[doc = "Bits 6:7 - Wait for response"]
     #[inline(always)]
     #[must_use]
-    pub fn rspwt(&mut self) -> RSPWT_W<CMDCTRL_SPEC, 6> {
-        RSPWT_W::new(self)
+    pub fn rspwt(&mut self) -> RSPWT_W<CMDCTRL_SPEC> {
+        RSPWT_W::new(self, 6)
     }
     #[doc = "Bit 8 - CCSM wait for interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn intwt(&mut self) -> INTWT_W<CMDCTRL_SPEC, 8> {
-        INTWT_W::new(self)
+    pub fn intwt(&mut self) -> INTWT_W<CMDCTRL_SPEC> {
+        INTWT_W::new(self, 8)
     }
     #[doc = "Bit 9 - CCSM wait for end of transfer"]
     #[inline(always)]
     #[must_use]
-    pub fn pndwt(&mut self) -> PNDWT_W<CMDCTRL_SPEC, 9> {
-        PNDWT_W::new(self)
+    pub fn pndwt(&mut self) -> PNDWT_W<CMDCTRL_SPEC> {
+        PNDWT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Command channel state machine"]
     #[inline(always)]
     #[must_use]
-    pub fn ccsmen(&mut self) -> CCSMEN_W<CMDCTRL_SPEC, 10> {
-        CCSMEN_W::new(self)
+    pub fn ccsmen(&mut self) -> CCSMEN_W<CMDCTRL_SPEC> {
+        CCSMEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - SD I/O suspend command"]
     #[inline(always)]
     #[must_use]
-    pub fn iosusp(&mut self) -> IOSUSP_W<CMDCTRL_SPEC, 11> {
-        IOSUSP_W::new(self)
+    pub fn iosusp(&mut self) -> IOSUSP_W<CMDCTRL_SPEC> {
+        IOSUSP_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,63 +5,63 @@ pub type W = crate::W<DMASTS_SPEC>;
 #[doc = "Field `TI` reader - Transmit interrupt"]
 pub type TI_R = crate::BitReader;
 #[doc = "Field `TI` writer - Transmit interrupt"]
-pub type TI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TPS` reader - Transmit process stopped"]
 pub type TPS_R = crate::BitReader;
 #[doc = "Field `TPS` writer - Transmit process stopped"]
-pub type TPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TBU` reader - Transmit buffer unavailable"]
 pub type TBU_R = crate::BitReader;
 #[doc = "Field `TBU` writer - Transmit buffer unavailable"]
-pub type TBU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TBU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TJT` reader - Transmit jabber timeout"]
 pub type TJT_R = crate::BitReader;
 #[doc = "Field `TJT` writer - Transmit jabber timeout"]
-pub type TJT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TJT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVF` reader - Receive overflow"]
 pub type OVF_R = crate::BitReader;
 #[doc = "Field `OVF` writer - Receive overflow"]
-pub type OVF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UNF` reader - Transmit underflow"]
 pub type UNF_R = crate::BitReader;
 #[doc = "Field `UNF` writer - Transmit underflow"]
-pub type UNF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UNF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RI` reader - Receive interrupt"]
 pub type RI_R = crate::BitReader;
 #[doc = "Field `RI` writer - Receive interrupt"]
-pub type RI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RBU` reader - Receive buffer unavailable"]
 pub type RBU_R = crate::BitReader;
 #[doc = "Field `RBU` writer - Receive buffer unavailable"]
-pub type RBU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RBU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RPS` reader - Receive process stopped"]
 pub type RPS_R = crate::BitReader;
 #[doc = "Field `RPS` writer - Receive process stopped"]
-pub type RPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RWT` reader - Receive watchdog timeout"]
 pub type RWT_R = crate::BitReader;
 #[doc = "Field `RWT` writer - Receive watchdog timeout"]
-pub type RWT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RWT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETI` reader - Early transmit interrupt"]
 pub type ETI_R = crate::BitReader;
 #[doc = "Field `ETI` writer - Early transmit interrupt"]
-pub type ETI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FBEI` reader - Fatal bus error interrupt"]
 pub type FBEI_R = crate::BitReader;
 #[doc = "Field `FBEI` writer - Fatal bus error interrupt"]
-pub type FBEI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FBEI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERI` reader - Early receive interrupt"]
 pub type ERI_R = crate::BitReader;
 #[doc = "Field `ERI` writer - Early receive interrupt"]
-pub type ERI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AIS` reader - Abnormal interrupt summary"]
 pub type AIS_R = crate::BitReader;
 #[doc = "Field `AIS` writer - Abnormal interrupt summary"]
-pub type AIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NIS` reader - Normal interrupt summary"]
 pub type NIS_R = crate::BitReader;
 #[doc = "Field `NIS` writer - Normal interrupt summary"]
-pub type NIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RS` reader - Receive process state"]
 pub type RS_R = crate::FieldReader;
 #[doc = "Field `TS` reader - Transmit process state"]
@@ -217,92 +217,92 @@ impl W {
     #[doc = "Bit 0 - Transmit interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ti(&mut self) -> TI_W<DMASTS_SPEC, 0> {
-        TI_W::new(self)
+    pub fn ti(&mut self) -> TI_W<DMASTS_SPEC> {
+        TI_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit process stopped"]
     #[inline(always)]
     #[must_use]
-    pub fn tps(&mut self) -> TPS_W<DMASTS_SPEC, 1> {
-        TPS_W::new(self)
+    pub fn tps(&mut self) -> TPS_W<DMASTS_SPEC> {
+        TPS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transmit buffer unavailable"]
     #[inline(always)]
     #[must_use]
-    pub fn tbu(&mut self) -> TBU_W<DMASTS_SPEC, 2> {
-        TBU_W::new(self)
+    pub fn tbu(&mut self) -> TBU_W<DMASTS_SPEC> {
+        TBU_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transmit jabber timeout"]
     #[inline(always)]
     #[must_use]
-    pub fn tjt(&mut self) -> TJT_W<DMASTS_SPEC, 3> {
-        TJT_W::new(self)
+    pub fn tjt(&mut self) -> TJT_W<DMASTS_SPEC> {
+        TJT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Receive overflow"]
     #[inline(always)]
     #[must_use]
-    pub fn ovf(&mut self) -> OVF_W<DMASTS_SPEC, 4> {
-        OVF_W::new(self)
+    pub fn ovf(&mut self) -> OVF_W<DMASTS_SPEC> {
+        OVF_W::new(self, 4)
     }
     #[doc = "Bit 5 - Transmit underflow"]
     #[inline(always)]
     #[must_use]
-    pub fn unf(&mut self) -> UNF_W<DMASTS_SPEC, 5> {
-        UNF_W::new(self)
+    pub fn unf(&mut self) -> UNF_W<DMASTS_SPEC> {
+        UNF_W::new(self, 5)
     }
     #[doc = "Bit 6 - Receive interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ri(&mut self) -> RI_W<DMASTS_SPEC, 6> {
-        RI_W::new(self)
+    pub fn ri(&mut self) -> RI_W<DMASTS_SPEC> {
+        RI_W::new(self, 6)
     }
     #[doc = "Bit 7 - Receive buffer unavailable"]
     #[inline(always)]
     #[must_use]
-    pub fn rbu(&mut self) -> RBU_W<DMASTS_SPEC, 7> {
-        RBU_W::new(self)
+    pub fn rbu(&mut self) -> RBU_W<DMASTS_SPEC> {
+        RBU_W::new(self, 7)
     }
     #[doc = "Bit 8 - Receive process stopped"]
     #[inline(always)]
     #[must_use]
-    pub fn rps(&mut self) -> RPS_W<DMASTS_SPEC, 8> {
-        RPS_W::new(self)
+    pub fn rps(&mut self) -> RPS_W<DMASTS_SPEC> {
+        RPS_W::new(self, 8)
     }
     #[doc = "Bit 9 - Receive watchdog timeout"]
     #[inline(always)]
     #[must_use]
-    pub fn rwt(&mut self) -> RWT_W<DMASTS_SPEC, 9> {
-        RWT_W::new(self)
+    pub fn rwt(&mut self) -> RWT_W<DMASTS_SPEC> {
+        RWT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Early transmit interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn eti(&mut self) -> ETI_W<DMASTS_SPEC, 10> {
-        ETI_W::new(self)
+    pub fn eti(&mut self) -> ETI_W<DMASTS_SPEC> {
+        ETI_W::new(self, 10)
     }
     #[doc = "Bit 13 - Fatal bus error interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn fbei(&mut self) -> FBEI_W<DMASTS_SPEC, 13> {
-        FBEI_W::new(self)
+    pub fn fbei(&mut self) -> FBEI_W<DMASTS_SPEC> {
+        FBEI_W::new(self, 13)
     }
     #[doc = "Bit 14 - Early receive interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn eri(&mut self) -> ERI_W<DMASTS_SPEC, 14> {
-        ERI_W::new(self)
+    pub fn eri(&mut self) -> ERI_W<DMASTS_SPEC> {
+        ERI_W::new(self, 14)
     }
     #[doc = "Bit 15 - Abnormal interrupt summary"]
     #[inline(always)]
     #[must_use]
-    pub fn ais(&mut self) -> AIS_W<DMASTS_SPEC, 15> {
-        AIS_W::new(self)
+    pub fn ais(&mut self) -> AIS_W<DMASTS_SPEC> {
+        AIS_W::new(self, 15)
     }
     #[doc = "Bit 16 - Normal interrupt summary"]
     #[inline(always)]
     #[must_use]
-    pub fn nis(&mut self) -> NIS_W<DMASTS_SPEC, 16> {
-        NIS_W::new(self)
+    pub fn nis(&mut self) -> NIS_W<DMASTS_SPEC> {
+        NIS_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<RTCCAL_SPEC>;
 #[doc = "Field `CALVAL` reader - Calibration value"]
 pub type CALVAL_R = crate::FieldReader;
 #[doc = "Field `CALVAL` writer - Calibration value"]
-pub type CALVAL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 7, O>;
+pub type CALVAL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
 #[doc = "Field `CALOUT` reader - Calibration Clock Output"]
 pub type CALOUT_R = crate::BitReader<CALOUTR_A>;
 #[doc = "Calibration Clock Output\n\nValue on reset: 0"]
@@ -55,8 +55,8 @@ impl From<CALOUTW_AW> for bool {
     }
 }
 #[doc = "Field `CALOUT` writer - Calibration Clock Output"]
-pub type CALOUT_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, CALOUTW_AW>;
-impl<'a, REG, const O: u8> CALOUT_W<'a, REG, O>
+pub type CALOUT_W<'a, REG> = crate::BitWriter1S<'a, REG, CALOUTW_AW>;
+impl<'a, REG> CALOUT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -115,8 +115,8 @@ impl From<OUTENW_AW> for bool {
     }
 }
 #[doc = "Field `OUTEN` writer - Output enable"]
-pub type OUTEN_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, OUTENW_AW>;
-impl<'a, REG, const O: u8> OUTEN_W<'a, REG, O>
+pub type OUTEN_W<'a, REG> = crate::BitWriter1S<'a, REG, OUTENW_AW>;
+impl<'a, REG> OUTEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -175,8 +175,8 @@ impl From<OUTSELW_AW> for bool {
     }
 }
 #[doc = "Field `OUTSEL` writer - Output selection"]
-pub type OUTSEL_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, OUTSELW_AW>;
-impl<'a, REG, const O: u8> OUTSEL_W<'a, REG, O>
+pub type OUTSEL_W<'a, REG> = crate::BitWriter1S<'a, REG, OUTSELW_AW>;
+impl<'a, REG> OUTSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -227,26 +227,26 @@ impl W {
     #[doc = "Bits 0:6 - Calibration value"]
     #[inline(always)]
     #[must_use]
-    pub fn calval(&mut self) -> CALVAL_W<RTCCAL_SPEC, 0> {
-        CALVAL_W::new(self)
+    pub fn calval(&mut self) -> CALVAL_W<RTCCAL_SPEC> {
+        CALVAL_W::new(self, 0)
     }
     #[doc = "Bit 7 - Calibration Clock Output"]
     #[inline(always)]
     #[must_use]
-    pub fn calout(&mut self) -> CALOUT_W<RTCCAL_SPEC, 7> {
-        CALOUT_W::new(self)
+    pub fn calout(&mut self) -> CALOUT_W<RTCCAL_SPEC> {
+        CALOUT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn outen(&mut self) -> OUTEN_W<RTCCAL_SPEC, 8> {
-        OUTEN_W::new(self)
+    pub fn outen(&mut self) -> OUTEN_W<RTCCAL_SPEC> {
+        OUTEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Output selection"]
     #[inline(always)]
     #[must_use]
-    pub fn outsel(&mut self) -> OUTSEL_W<RTCCAL_SPEC, 9> {
-        OUTSEL_W::new(self)
+    pub fn outsel(&mut self) -> OUTSEL_W<RTCCAL_SPEC> {
+        OUTSEL_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

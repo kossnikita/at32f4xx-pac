@@ -5,31 +5,31 @@ pub type W = crate::W<REMAP5_SPEC>;
 #[doc = "Field `USART5_GMUX` reader - USART5 muxing"]
 pub type USART5_GMUX_R = crate::FieldReader;
 #[doc = "Field `USART5_GMUX` writer - USART5 muxing"]
-pub type USART5_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type USART5_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `I2C1_GMUX` reader - I2C1 muxing"]
 pub type I2C1_GMUX_R = crate::FieldReader;
 #[doc = "Field `I2C1_GMUX` writer - I2C1 muxing"]
-pub type I2C1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type I2C1_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `I2C3_GMUX` reader - I2C3 muxing"]
 pub type I2C3_GMUX_R = crate::FieldReader;
 #[doc = "Field `I2C3_GMUX` writer - I2C3 muxing"]
-pub type I2C3_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type I2C3_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SPI1_GMUX` reader - SPI1 muxing"]
 pub type SPI1_GMUX_R = crate::FieldReader;
 #[doc = "Field `SPI1_GMUX` writer - SPI1 muxing"]
-pub type SPI1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SPI1_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SPI2_GMUX` reader - SPI2 muxing"]
 pub type SPI2_GMUX_R = crate::FieldReader;
 #[doc = "Field `SPI2_GMUX` writer - SPI2 muxing"]
-pub type SPI2_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SPI2_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SPI3_GMUX` reader - SPI3 muxing"]
 pub type SPI3_GMUX_R = crate::FieldReader;
 #[doc = "Field `SPI3_GMUX` writer - SPI3 muxing"]
-pub type SPI3_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SPI3_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SPI4_GMUX` reader - SPI4 muxing"]
 pub type SPI4_GMUX_R = crate::FieldReader;
 #[doc = "Field `SPI4_GMUX` writer - SPI4 muxing"]
-pub type SPI4_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SPI4_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - USART5 muxing"]
     #[inline(always)]
@@ -92,44 +92,44 @@ impl W {
     #[doc = "Bits 0:3 - USART5 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn usart5_gmux(&mut self) -> USART5_GMUX_W<REMAP5_SPEC, 0> {
-        USART5_GMUX_W::new(self)
+    pub fn usart5_gmux(&mut self) -> USART5_GMUX_W<REMAP5_SPEC> {
+        USART5_GMUX_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - I2C1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c1_gmux(&mut self) -> I2C1_GMUX_W<REMAP5_SPEC, 4> {
-        I2C1_GMUX_W::new(self)
+    pub fn i2c1_gmux(&mut self) -> I2C1_GMUX_W<REMAP5_SPEC> {
+        I2C1_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 12:15 - I2C3 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c3_gmux(&mut self) -> I2C3_GMUX_W<REMAP5_SPEC, 12> {
-        I2C3_GMUX_W::new(self)
+    pub fn i2c3_gmux(&mut self) -> I2C3_GMUX_W<REMAP5_SPEC> {
+        I2C3_GMUX_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - SPI1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn spi1_gmux(&mut self) -> SPI1_GMUX_W<REMAP5_SPEC, 16> {
-        SPI1_GMUX_W::new(self)
+    pub fn spi1_gmux(&mut self) -> SPI1_GMUX_W<REMAP5_SPEC> {
+        SPI1_GMUX_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - SPI2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_gmux(&mut self) -> SPI2_GMUX_W<REMAP5_SPEC, 20> {
-        SPI2_GMUX_W::new(self)
+    pub fn spi2_gmux(&mut self) -> SPI2_GMUX_W<REMAP5_SPEC> {
+        SPI2_GMUX_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - SPI3 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn spi3_gmux(&mut self) -> SPI3_GMUX_W<REMAP5_SPEC, 24> {
-        SPI3_GMUX_W::new(self)
+    pub fn spi3_gmux(&mut self) -> SPI3_GMUX_W<REMAP5_SPEC> {
+        SPI3_GMUX_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - SPI4 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn spi4_gmux(&mut self) -> SPI4_GMUX_W<REMAP5_SPEC, 28> {
-        SPI4_GMUX_W::new(self)
+    pub fn spi4_gmux(&mut self) -> SPI4_GMUX_W<REMAP5_SPEC> {
+        SPI4_GMUX_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

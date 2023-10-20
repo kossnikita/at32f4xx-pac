@@ -53,8 +53,8 @@ impl From<SLEEP_DEBUGW_AW> for bool {
     }
 }
 #[doc = "Field `SLEEP_DEBUG` writer - Debug Sleep mode control bit"]
-pub type SLEEP_DEBUG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SLEEP_DEBUGW_AW>;
-impl<'a, REG, const O: u8> SLEEP_DEBUG_W<'a, REG, O>
+pub type SLEEP_DEBUG_W<'a, REG> = crate::BitWriter<'a, REG, SLEEP_DEBUGW_AW>;
+impl<'a, REG> SLEEP_DEBUG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,9 +120,8 @@ impl From<DEEPSLEEP_DEBUGW_AW> for bool {
     }
 }
 #[doc = "Field `DEEPSLEEP_DEBUG` writer - Debug Deepsleep mode control bit"]
-pub type DEEPSLEEP_DEBUG_W<'a, REG, const O: u8> =
-    crate::BitWriter<'a, REG, O, DEEPSLEEP_DEBUGW_AW>;
-impl<'a, REG, const O: u8> DEEPSLEEP_DEBUG_W<'a, REG, O>
+pub type DEEPSLEEP_DEBUG_W<'a, REG> = crate::BitWriter<'a, REG, DEEPSLEEP_DEBUGW_AW>;
+impl<'a, REG> DEEPSLEEP_DEBUG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -188,8 +187,8 @@ impl From<STANDBY_DEBUGW_AW> for bool {
     }
 }
 #[doc = "Field `STANDBY_DEBUG` writer - Debug Standby mode control bit"]
-pub type STANDBY_DEBUG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, STANDBY_DEBUGW_AW>;
-impl<'a, REG, const O: u8> STANDBY_DEBUG_W<'a, REG, O>
+pub type STANDBY_DEBUG_W<'a, REG> = crate::BitWriter<'a, REG, STANDBY_DEBUGW_AW>;
+impl<'a, REG> STANDBY_DEBUG_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -207,7 +206,7 @@ where
 #[doc = "Field `CAN_PAUSE` reader - CAN_PAUSE"]
 pub type CAN_PAUSE_R = crate::BitReader;
 #[doc = "Field `CAN_PAUSE` writer - CAN_PAUSE"]
-pub type CAN_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAN_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDT_PAUSE` reader - WDT_PAUSE"]
 pub type WDT_PAUSE_R = crate::BitReader<WDT_PAUSE_A>;
 #[doc = "WDT_PAUSE\n\nValue on reset: 0"]
@@ -245,8 +244,8 @@ impl WDT_PAUSE_R {
     }
 }
 #[doc = "Field `WDT_PAUSE` writer - WDT_PAUSE"]
-pub type WDT_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, WDT_PAUSE_A>;
-impl<'a, REG, const O: u8> WDT_PAUSE_W<'a, REG, O>
+pub type WDT_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG, WDT_PAUSE_A>;
+impl<'a, REG> WDT_PAUSE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -298,8 +297,8 @@ impl WWDT_PAUSE_R {
     }
 }
 #[doc = "Field `WWDT_PAUSE` writer - WWDT_PAUSE"]
-pub type WWDT_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, WWDT_PAUSE_A>;
-impl<'a, REG, const O: u8> WWDT_PAUSE_W<'a, REG, O>
+pub type WWDT_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG, WWDT_PAUSE_A>;
+impl<'a, REG> WWDT_PAUSE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -351,8 +350,8 @@ impl TMR1_PAUSE_R {
     }
 }
 #[doc = "Field `TMR1_PAUSE` writer - Timer pause control bit"]
-pub type TMR1_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TMR1_PAUSE_A>;
-impl<'a, REG, const O: u8> TMR1_PAUSE_W<'a, REG, O>
+pub type TMR1_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG, TMR1_PAUSE_A>;
+impl<'a, REG> TMR1_PAUSE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -378,15 +377,15 @@ pub use TMR1_PAUSE_W as TMR3_PAUSE_W;
 #[doc = "Field `ERTC_PAUSE` reader - ERTC_PAUSE"]
 pub type ERTC_PAUSE_R = crate::BitReader;
 #[doc = "Field `ERTC_PAUSE` writer - ERTC_PAUSE"]
-pub type ERTC_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERTC_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C1_SMBUS_TIMEOUT` reader - I2C1_SMBUS_TIMEOUT"]
 pub type I2C1_SMBUS_TIMEOUT_R = crate::BitReader;
 #[doc = "Field `I2C1_SMBUS_TIMEOUT` writer - I2C1_SMBUS_TIMEOUT"]
-pub type I2C1_SMBUS_TIMEOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C1_SMBUS_TIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C2_SMBUS_TIMEOUT` reader - I2C2_SMBUS_TIMEOUT"]
 pub type I2C2_SMBUS_TIMEOUT_R = crate::BitReader;
 #[doc = "Field `I2C2_SMBUS_TIMEOUT` writer - I2C2_SMBUS_TIMEOUT"]
-pub type I2C2_SMBUS_TIMEOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C2_SMBUS_TIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR6_PAUSE` reader - Timer pause control bit"]
 pub use TMR1_PAUSE_R as TMR6_PAUSE_R;
 #[doc = "Field `TMR7_PAUSE` reader - Timer pause control bit"]
@@ -398,7 +397,7 @@ pub use TMR1_PAUSE_W as TMR7_PAUSE_W;
 #[doc = "Field `ERTC_512_PAUSE` reader - ERTC_512_PAUSE"]
 pub type ERTC_512_PAUSE_R = crate::BitReader;
 #[doc = "Field `ERTC_512_PAUSE` writer - ERTC_512_PAUSE"]
-pub type ERTC_512_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERTC_512_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR15_PAUSE` reader - Timer pause control bit"]
 pub use TMR1_PAUSE_R as TMR15_PAUSE_R;
 #[doc = "Field `TMR16_PAUSE` reader - Timer pause control bit"]
@@ -571,122 +570,122 @@ impl W {
     #[doc = "Bit 0 - Debug Sleep mode control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn sleep_debug(&mut self) -> SLEEP_DEBUG_W<CTRL_SPEC, 0> {
-        SLEEP_DEBUG_W::new(self)
+    pub fn sleep_debug(&mut self) -> SLEEP_DEBUG_W<CTRL_SPEC> {
+        SLEEP_DEBUG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Debug Deepsleep mode control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn deepsleep_debug(&mut self) -> DEEPSLEEP_DEBUG_W<CTRL_SPEC, 1> {
-        DEEPSLEEP_DEBUG_W::new(self)
+    pub fn deepsleep_debug(&mut self) -> DEEPSLEEP_DEBUG_W<CTRL_SPEC> {
+        DEEPSLEEP_DEBUG_W::new(self, 1)
     }
     #[doc = "Bit 2 - Debug Standby mode control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn standby_debug(&mut self) -> STANDBY_DEBUG_W<CTRL_SPEC, 2> {
-        STANDBY_DEBUG_W::new(self)
+    pub fn standby_debug(&mut self) -> STANDBY_DEBUG_W<CTRL_SPEC> {
+        STANDBY_DEBUG_W::new(self, 2)
     }
     #[doc = "Bit 3 - CAN_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn can_pause(&mut self) -> CAN_PAUSE_W<CTRL_SPEC, 3> {
-        CAN_PAUSE_W::new(self)
+    pub fn can_pause(&mut self) -> CAN_PAUSE_W<CTRL_SPEC> {
+        CAN_PAUSE_W::new(self, 3)
     }
     #[doc = "Bit 8 - WDT_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn wdt_pause(&mut self) -> WDT_PAUSE_W<CTRL_SPEC, 8> {
-        WDT_PAUSE_W::new(self)
+    pub fn wdt_pause(&mut self) -> WDT_PAUSE_W<CTRL_SPEC> {
+        WDT_PAUSE_W::new(self, 8)
     }
     #[doc = "Bit 9 - WWDT_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn wwdt_pause(&mut self) -> WWDT_PAUSE_W<CTRL_SPEC, 9> {
-        WWDT_PAUSE_W::new(self)
+    pub fn wwdt_pause(&mut self) -> WWDT_PAUSE_W<CTRL_SPEC> {
+        WWDT_PAUSE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr1_pause(&mut self) -> TMR1_PAUSE_W<CTRL_SPEC, 10> {
-        TMR1_PAUSE_W::new(self)
+    pub fn tmr1_pause(&mut self) -> TMR1_PAUSE_W<CTRL_SPEC> {
+        TMR1_PAUSE_W::new(self, 10)
     }
     #[doc = "Bit 11 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr2_pause(&mut self) -> TMR2_PAUSE_W<CTRL_SPEC, 11> {
-        TMR2_PAUSE_W::new(self)
+    pub fn tmr2_pause(&mut self) -> TMR2_PAUSE_W<CTRL_SPEC> {
+        TMR2_PAUSE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr3_pause(&mut self) -> TMR3_PAUSE_W<CTRL_SPEC, 12> {
-        TMR3_PAUSE_W::new(self)
+    pub fn tmr3_pause(&mut self) -> TMR3_PAUSE_W<CTRL_SPEC> {
+        TMR3_PAUSE_W::new(self, 12)
     }
     #[doc = "Bit 14 - ERTC_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn ertc_pause(&mut self) -> ERTC_PAUSE_W<CTRL_SPEC, 14> {
-        ERTC_PAUSE_W::new(self)
+    pub fn ertc_pause(&mut self) -> ERTC_PAUSE_W<CTRL_SPEC> {
+        ERTC_PAUSE_W::new(self, 14)
     }
     #[doc = "Bit 15 - I2C1_SMBUS_TIMEOUT"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c1_smbus_timeout(&mut self) -> I2C1_SMBUS_TIMEOUT_W<CTRL_SPEC, 15> {
-        I2C1_SMBUS_TIMEOUT_W::new(self)
+    pub fn i2c1_smbus_timeout(&mut self) -> I2C1_SMBUS_TIMEOUT_W<CTRL_SPEC> {
+        I2C1_SMBUS_TIMEOUT_W::new(self, 15)
     }
     #[doc = "Bit 16 - I2C2_SMBUS_TIMEOUT"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c2_smbus_timeout(&mut self) -> I2C2_SMBUS_TIMEOUT_W<CTRL_SPEC, 16> {
-        I2C2_SMBUS_TIMEOUT_W::new(self)
+    pub fn i2c2_smbus_timeout(&mut self) -> I2C2_SMBUS_TIMEOUT_W<CTRL_SPEC> {
+        I2C2_SMBUS_TIMEOUT_W::new(self, 16)
     }
     #[doc = "Bit 19 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr6_pause(&mut self) -> TMR6_PAUSE_W<CTRL_SPEC, 19> {
-        TMR6_PAUSE_W::new(self)
+    pub fn tmr6_pause(&mut self) -> TMR6_PAUSE_W<CTRL_SPEC> {
+        TMR6_PAUSE_W::new(self, 19)
     }
     #[doc = "Bit 20 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr7_pause(&mut self) -> TMR7_PAUSE_W<CTRL_SPEC, 20> {
-        TMR7_PAUSE_W::new(self)
+    pub fn tmr7_pause(&mut self) -> TMR7_PAUSE_W<CTRL_SPEC> {
+        TMR7_PAUSE_W::new(self, 20)
     }
     #[doc = "Bit 21 - ERTC_512_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn ertc_512_pause(&mut self) -> ERTC_512_PAUSE_W<CTRL_SPEC, 21> {
-        ERTC_512_PAUSE_W::new(self)
+    pub fn ertc_512_pause(&mut self) -> ERTC_512_PAUSE_W<CTRL_SPEC> {
+        ERTC_512_PAUSE_W::new(self, 21)
     }
     #[doc = "Bit 22 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr15_pause(&mut self) -> TMR15_PAUSE_W<CTRL_SPEC, 22> {
-        TMR15_PAUSE_W::new(self)
+    pub fn tmr15_pause(&mut self) -> TMR15_PAUSE_W<CTRL_SPEC> {
+        TMR15_PAUSE_W::new(self, 22)
     }
     #[doc = "Bit 23 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr16_pause(&mut self) -> TMR16_PAUSE_W<CTRL_SPEC, 23> {
-        TMR16_PAUSE_W::new(self)
+    pub fn tmr16_pause(&mut self) -> TMR16_PAUSE_W<CTRL_SPEC> {
+        TMR16_PAUSE_W::new(self, 23)
     }
     #[doc = "Bit 24 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr17_pause(&mut self) -> TMR17_PAUSE_W<CTRL_SPEC, 24> {
-        TMR17_PAUSE_W::new(self)
+    pub fn tmr17_pause(&mut self) -> TMR17_PAUSE_W<CTRL_SPEC> {
+        TMR17_PAUSE_W::new(self, 24)
     }
     #[doc = "Bit 26 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr13_pause(&mut self) -> TMR13_PAUSE_W<CTRL_SPEC, 26> {
-        TMR13_PAUSE_W::new(self)
+    pub fn tmr13_pause(&mut self) -> TMR13_PAUSE_W<CTRL_SPEC> {
+        TMR13_PAUSE_W::new(self, 26)
     }
     #[doc = "Bit 27 - Timer pause control bit"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr14_pause(&mut self) -> TMR14_PAUSE_W<CTRL_SPEC, 27> {
-        TMR14_PAUSE_W::new(self)
+    pub fn tmr14_pause(&mut self) -> TMR14_PAUSE_W<CTRL_SPEC> {
+        TMR14_PAUSE_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

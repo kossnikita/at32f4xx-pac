@@ -5,19 +5,19 @@ pub type W = crate::W<XIP_CMD_W0_SPEC>;
 #[doc = "Field `XIPR_DUM2` reader - XIP read second dummy cycle"]
 pub type XIPR_DUM2_R = crate::FieldReader;
 #[doc = "Field `XIPR_DUM2` writer - XIP read second dummy cycle"]
-pub type XIPR_DUM2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type XIPR_DUM2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `XIPR_OPMODE` reader - XIP read operate mode"]
 pub type XIPR_OPMODE_R = crate::FieldReader;
 #[doc = "Field `XIPR_OPMODE` writer - XIP read operate mode"]
-pub type XIPR_OPMODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type XIPR_OPMODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `XIPR_ADRLEN` reader - XIP read address length"]
 pub type XIPR_ADRLEN_R = crate::BitReader;
 #[doc = "Field `XIPR_ADRLEN` writer - XIP read address length"]
-pub type XIPR_ADRLEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XIPR_ADRLEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XIPR_INSC` reader - XIP read instruction code"]
 pub type XIPR_INSC_R = crate::FieldReader;
 #[doc = "Field `XIPR_INSC` writer - XIP read instruction code"]
-pub type XIPR_INSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type XIPR_INSC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - XIP read second dummy cycle"]
     #[inline(always)]
@@ -62,26 +62,26 @@ impl W {
     #[doc = "Bits 0:7 - XIP read second dummy cycle"]
     #[inline(always)]
     #[must_use]
-    pub fn xipr_dum2(&mut self) -> XIPR_DUM2_W<XIP_CMD_W0_SPEC, 0> {
-        XIPR_DUM2_W::new(self)
+    pub fn xipr_dum2(&mut self) -> XIPR_DUM2_W<XIP_CMD_W0_SPEC> {
+        XIPR_DUM2_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - XIP read operate mode"]
     #[inline(always)]
     #[must_use]
-    pub fn xipr_opmode(&mut self) -> XIPR_OPMODE_W<XIP_CMD_W0_SPEC, 8> {
-        XIPR_OPMODE_W::new(self)
+    pub fn xipr_opmode(&mut self) -> XIPR_OPMODE_W<XIP_CMD_W0_SPEC> {
+        XIPR_OPMODE_W::new(self, 8)
     }
     #[doc = "Bit 11 - XIP read address length"]
     #[inline(always)]
     #[must_use]
-    pub fn xipr_adrlen(&mut self) -> XIPR_ADRLEN_W<XIP_CMD_W0_SPEC, 11> {
-        XIPR_ADRLEN_W::new(self)
+    pub fn xipr_adrlen(&mut self) -> XIPR_ADRLEN_W<XIP_CMD_W0_SPEC> {
+        XIPR_ADRLEN_W::new(self, 11)
     }
     #[doc = "Bits 12:19 - XIP read instruction code"]
     #[inline(always)]
     #[must_use]
-    pub fn xipr_insc(&mut self) -> XIPR_INSC_W<XIP_CMD_W0_SPEC, 12> {
-        XIPR_INSC_W::new(self)
+    pub fn xipr_insc(&mut self) -> XIPR_INSC_W<XIP_CMD_W0_SPEC> {
+        XIPR_INSC_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

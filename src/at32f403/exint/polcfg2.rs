@@ -5,79 +5,79 @@ pub type W = crate::W<POLCFG2_SPEC>;
 #[doc = "Field `FP0` reader - Falling polarity event configuration bit of line 0"]
 pub type FP0_R = crate::BitReader;
 #[doc = "Field `FP0` writer - Falling polarity event configuration bit of line 0"]
-pub type FP0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP1` reader - Falling polarity event configuration bit of line 1"]
 pub type FP1_R = crate::BitReader;
 #[doc = "Field `FP1` writer - Falling polarity event configuration bit of line 1"]
-pub type FP1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP2` reader - Falling polarity event configuration bit of line 2"]
 pub type FP2_R = crate::BitReader;
 #[doc = "Field `FP2` writer - Falling polarity event configuration bit of line 2"]
-pub type FP2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP3` reader - Falling polarity event configuration bit of line 3"]
 pub type FP3_R = crate::BitReader;
 #[doc = "Field `FP3` writer - Falling polarity event configuration bit of line 3"]
-pub type FP3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP4` reader - Falling polarity event configuration bit of line 4"]
 pub type FP4_R = crate::BitReader;
 #[doc = "Field `FP4` writer - Falling polarity event configuration bit of line 4"]
-pub type FP4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP5` reader - Falling polarity event configuration bit of line 5"]
 pub type FP5_R = crate::BitReader;
 #[doc = "Field `FP5` writer - Falling polarity event configuration bit of line 5"]
-pub type FP5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP6` reader - Falling polarity event configuration bit of line 6"]
 pub type FP6_R = crate::BitReader;
 #[doc = "Field `FP6` writer - Falling polarity event configuration bit of line 6"]
-pub type FP6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP7` reader - Falling polarity event configuration bit of line 7"]
 pub type FP7_R = crate::BitReader;
 #[doc = "Field `FP7` writer - Falling polarity event configuration bit of line 7"]
-pub type FP7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP8` reader - Falling polarity event configuration bit of line 8"]
 pub type FP8_R = crate::BitReader;
 #[doc = "Field `FP8` writer - Falling polarity event configuration bit of line 8"]
-pub type FP8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP8_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP9` reader - Falling polarity event configuration bit of line 9"]
 pub type FP9_R = crate::BitReader;
 #[doc = "Field `FP9` writer - Falling polarity event configuration bit of line 9"]
-pub type FP9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP9_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP10` reader - Falling polarity event configuration bit of line 10"]
 pub type FP10_R = crate::BitReader;
 #[doc = "Field `FP10` writer - Falling polarity event configuration bit of line 10"]
-pub type FP10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP11` reader - Falling polarity event configuration bit of line 11"]
 pub type FP11_R = crate::BitReader;
 #[doc = "Field `FP11` writer - Falling polarity event configuration bit of line 11"]
-pub type FP11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP11_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP12` reader - Falling polarity event configuration bit of line 12"]
 pub type FP12_R = crate::BitReader;
 #[doc = "Field `FP12` writer - Falling polarity event configuration bit of line 12"]
-pub type FP12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP12_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP13` reader - Falling polarity event configuration bit of line 13"]
 pub type FP13_R = crate::BitReader;
 #[doc = "Field `FP13` writer - Falling polarity event configuration bit of line 13"]
-pub type FP13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP13_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP14` reader - Falling polarity event configuration bit of line 14"]
 pub type FP14_R = crate::BitReader;
 #[doc = "Field `FP14` writer - Falling polarity event configuration bit of line 14"]
-pub type FP14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP14_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP15` reader - Falling polarity event configuration bit of line 15"]
 pub type FP15_R = crate::BitReader;
 #[doc = "Field `FP15` writer - Falling polarity event configuration bit of line 15"]
-pub type FP15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP15_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP16` reader - Falling polarity event configuration bit of line 16"]
 pub type FP16_R = crate::BitReader;
 #[doc = "Field `FP16` writer - Falling polarity event configuration bit of line 16"]
-pub type FP16_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP16_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP17` reader - Falling polarity event configuration bit of line 17"]
 pub type FP17_R = crate::BitReader;
 #[doc = "Field `FP17` writer - Falling polarity event configuration bit of line 17"]
-pub type FP17_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP17_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FP18` reader - Falling polarity event configuration bit of line 18"]
 pub type FP18_R = crate::BitReader;
 #[doc = "Field `FP18` writer - Falling polarity event configuration bit of line 18"]
-pub type FP18_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FP18_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Falling polarity event configuration bit of line 0"]
     #[inline(always)]
@@ -209,116 +209,116 @@ impl W {
     #[doc = "Bit 0 - Falling polarity event configuration bit of line 0"]
     #[inline(always)]
     #[must_use]
-    pub fn fp0(&mut self) -> FP0_W<POLCFG2_SPEC, 0> {
-        FP0_W::new(self)
+    pub fn fp0(&mut self) -> FP0_W<POLCFG2_SPEC> {
+        FP0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Falling polarity event configuration bit of line 1"]
     #[inline(always)]
     #[must_use]
-    pub fn fp1(&mut self) -> FP1_W<POLCFG2_SPEC, 1> {
-        FP1_W::new(self)
+    pub fn fp1(&mut self) -> FP1_W<POLCFG2_SPEC> {
+        FP1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Falling polarity event configuration bit of line 2"]
     #[inline(always)]
     #[must_use]
-    pub fn fp2(&mut self) -> FP2_W<POLCFG2_SPEC, 2> {
-        FP2_W::new(self)
+    pub fn fp2(&mut self) -> FP2_W<POLCFG2_SPEC> {
+        FP2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Falling polarity event configuration bit of line 3"]
     #[inline(always)]
     #[must_use]
-    pub fn fp3(&mut self) -> FP3_W<POLCFG2_SPEC, 3> {
-        FP3_W::new(self)
+    pub fn fp3(&mut self) -> FP3_W<POLCFG2_SPEC> {
+        FP3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Falling polarity event configuration bit of line 4"]
     #[inline(always)]
     #[must_use]
-    pub fn fp4(&mut self) -> FP4_W<POLCFG2_SPEC, 4> {
-        FP4_W::new(self)
+    pub fn fp4(&mut self) -> FP4_W<POLCFG2_SPEC> {
+        FP4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Falling polarity event configuration bit of line 5"]
     #[inline(always)]
     #[must_use]
-    pub fn fp5(&mut self) -> FP5_W<POLCFG2_SPEC, 5> {
-        FP5_W::new(self)
+    pub fn fp5(&mut self) -> FP5_W<POLCFG2_SPEC> {
+        FP5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Falling polarity event configuration bit of line 6"]
     #[inline(always)]
     #[must_use]
-    pub fn fp6(&mut self) -> FP6_W<POLCFG2_SPEC, 6> {
-        FP6_W::new(self)
+    pub fn fp6(&mut self) -> FP6_W<POLCFG2_SPEC> {
+        FP6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Falling polarity event configuration bit of line 7"]
     #[inline(always)]
     #[must_use]
-    pub fn fp7(&mut self) -> FP7_W<POLCFG2_SPEC, 7> {
-        FP7_W::new(self)
+    pub fn fp7(&mut self) -> FP7_W<POLCFG2_SPEC> {
+        FP7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Falling polarity event configuration bit of line 8"]
     #[inline(always)]
     #[must_use]
-    pub fn fp8(&mut self) -> FP8_W<POLCFG2_SPEC, 8> {
-        FP8_W::new(self)
+    pub fn fp8(&mut self) -> FP8_W<POLCFG2_SPEC> {
+        FP8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Falling polarity event configuration bit of line 9"]
     #[inline(always)]
     #[must_use]
-    pub fn fp9(&mut self) -> FP9_W<POLCFG2_SPEC, 9> {
-        FP9_W::new(self)
+    pub fn fp9(&mut self) -> FP9_W<POLCFG2_SPEC> {
+        FP9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Falling polarity event configuration bit of line 10"]
     #[inline(always)]
     #[must_use]
-    pub fn fp10(&mut self) -> FP10_W<POLCFG2_SPEC, 10> {
-        FP10_W::new(self)
+    pub fn fp10(&mut self) -> FP10_W<POLCFG2_SPEC> {
+        FP10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Falling polarity event configuration bit of line 11"]
     #[inline(always)]
     #[must_use]
-    pub fn fp11(&mut self) -> FP11_W<POLCFG2_SPEC, 11> {
-        FP11_W::new(self)
+    pub fn fp11(&mut self) -> FP11_W<POLCFG2_SPEC> {
+        FP11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Falling polarity event configuration bit of line 12"]
     #[inline(always)]
     #[must_use]
-    pub fn fp12(&mut self) -> FP12_W<POLCFG2_SPEC, 12> {
-        FP12_W::new(self)
+    pub fn fp12(&mut self) -> FP12_W<POLCFG2_SPEC> {
+        FP12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Falling polarity event configuration bit of line 13"]
     #[inline(always)]
     #[must_use]
-    pub fn fp13(&mut self) -> FP13_W<POLCFG2_SPEC, 13> {
-        FP13_W::new(self)
+    pub fn fp13(&mut self) -> FP13_W<POLCFG2_SPEC> {
+        FP13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Falling polarity event configuration bit of line 14"]
     #[inline(always)]
     #[must_use]
-    pub fn fp14(&mut self) -> FP14_W<POLCFG2_SPEC, 14> {
-        FP14_W::new(self)
+    pub fn fp14(&mut self) -> FP14_W<POLCFG2_SPEC> {
+        FP14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Falling polarity event configuration bit of line 15"]
     #[inline(always)]
     #[must_use]
-    pub fn fp15(&mut self) -> FP15_W<POLCFG2_SPEC, 15> {
-        FP15_W::new(self)
+    pub fn fp15(&mut self) -> FP15_W<POLCFG2_SPEC> {
+        FP15_W::new(self, 15)
     }
     #[doc = "Bit 16 - Falling polarity event configuration bit of line 16"]
     #[inline(always)]
     #[must_use]
-    pub fn fp16(&mut self) -> FP16_W<POLCFG2_SPEC, 16> {
-        FP16_W::new(self)
+    pub fn fp16(&mut self) -> FP16_W<POLCFG2_SPEC> {
+        FP16_W::new(self, 16)
     }
     #[doc = "Bit 17 - Falling polarity event configuration bit of line 17"]
     #[inline(always)]
     #[must_use]
-    pub fn fp17(&mut self) -> FP17_W<POLCFG2_SPEC, 17> {
-        FP17_W::new(self)
+    pub fn fp17(&mut self) -> FP17_W<POLCFG2_SPEC> {
+        FP17_W::new(self, 17)
     }
     #[doc = "Bit 18 - Falling polarity event configuration bit of line 18"]
     #[inline(always)]
     #[must_use]
-    pub fn fp18(&mut self) -> FP18_W<POLCFG2_SPEC, 18> {
-        FP18_W::new(self)
+    pub fn fp18(&mut self) -> FP18_W<POLCFG2_SPEC> {
+        FP18_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

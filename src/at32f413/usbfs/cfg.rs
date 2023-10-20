@@ -5,7 +5,7 @@ pub type W = crate::W<CFG_SPEC>;
 #[doc = "Field `SOFOUTEN` reader - SOF output enable"]
 pub type SOFOUTEN_R = crate::BitReader;
 #[doc = "Field `SOFOUTEN` writer - SOF output enable"]
-pub type SOFOUTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOFOUTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SOF output enable"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 0 - SOF output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sofouten(&mut self) -> SOFOUTEN_W<CFG_SPEC, 0> {
-        SOFOUTEN_W::new(self)
+    pub fn sofouten(&mut self) -> SOFOUTEN_W<CFG_SPEC> {
+        SOFOUTEN_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

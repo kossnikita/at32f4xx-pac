@@ -5,7 +5,7 @@ pub type W = crate::W<DOEPCTL3_SPEC>;
 #[doc = "Field `MPS` reader - Maximum packet size"]
 pub type MPS_R = crate::FieldReader<u16>;
 #[doc = "Field `MPS` writer - Maximum packet size"]
-pub type MPS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type MPS_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `USBACEPT` reader - USB active endpoint"]
 pub type USBACEPT_R = crate::BitReader;
 #[doc = "Field `DPID` reader - Endpoint data PID"]
@@ -17,23 +17,23 @@ pub type EPTYPE_R = crate::FieldReader;
 #[doc = "Field `SNP` reader - Snoop mode"]
 pub type SNP_R = crate::BitReader;
 #[doc = "Field `SNP` writer - Snoop mode"]
-pub type SNP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SNP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STALL` reader - STALL handshake"]
 pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - STALL handshake"]
-pub type STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CNAK` writer - Clear NAK"]
-pub type CNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SNAK` writer - Set NAK"]
-pub type SNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPTDIS` reader - Endpoint disable"]
 pub type EPTDIS_R = crate::BitReader;
 #[doc = "Field `EPTDIS` writer - Endpoint disable"]
-pub type EPTDIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPTDIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPTENA` reader - Endpoint enable"]
 pub type EPTENA_R = crate::BitReader;
 #[doc = "Field `EPTENA` writer - Endpoint enable"]
-pub type EPTENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPTENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
@@ -105,44 +105,44 @@ impl W {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
     #[must_use]
-    pub fn mps(&mut self) -> MPS_W<DOEPCTL3_SPEC, 0> {
-        MPS_W::new(self)
+    pub fn mps(&mut self) -> MPS_W<DOEPCTL3_SPEC> {
+        MPS_W::new(self, 0)
     }
     #[doc = "Bit 20 - Snoop mode"]
     #[inline(always)]
     #[must_use]
-    pub fn snp(&mut self) -> SNP_W<DOEPCTL3_SPEC, 20> {
-        SNP_W::new(self)
+    pub fn snp(&mut self) -> SNP_W<DOEPCTL3_SPEC> {
+        SNP_W::new(self, 20)
     }
     #[doc = "Bit 21 - STALL handshake"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<DOEPCTL3_SPEC, 21> {
-        STALL_W::new(self)
+    pub fn stall(&mut self) -> STALL_W<DOEPCTL3_SPEC> {
+        STALL_W::new(self, 21)
     }
     #[doc = "Bit 26 - Clear NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn cnak(&mut self) -> CNAK_W<DOEPCTL3_SPEC, 26> {
-        CNAK_W::new(self)
+    pub fn cnak(&mut self) -> CNAK_W<DOEPCTL3_SPEC> {
+        CNAK_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set NAK"]
     #[inline(always)]
     #[must_use]
-    pub fn snak(&mut self) -> SNAK_W<DOEPCTL3_SPEC, 27> {
-        SNAK_W::new(self)
+    pub fn snak(&mut self) -> SNAK_W<DOEPCTL3_SPEC> {
+        SNAK_W::new(self, 27)
     }
     #[doc = "Bit 30 - Endpoint disable"]
     #[inline(always)]
     #[must_use]
-    pub fn eptdis(&mut self) -> EPTDIS_W<DOEPCTL3_SPEC, 30> {
-        EPTDIS_W::new(self)
+    pub fn eptdis(&mut self) -> EPTDIS_W<DOEPCTL3_SPEC> {
+        EPTDIS_W::new(self, 30)
     }
     #[doc = "Bit 31 - Endpoint enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eptena(&mut self) -> EPTENA_W<DOEPCTL3_SPEC, 31> {
-        EPTENA_W::new(self)
+    pub fn eptena(&mut self) -> EPTENA_W<DOEPCTL3_SPEC> {
+        EPTENA_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

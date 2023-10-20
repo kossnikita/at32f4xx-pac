@@ -60,8 +60,8 @@ impl IOMC_R {
     }
 }
 #[doc = "Field `IOMC[8-15]` writer - Port n.8 mode configurate bits"]
-pub type IOMC_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, IOMC8_A>;
-impl<'a, REG, const O: u8> IOMC_W<'a, REG, O>
+pub type IOMC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, IOMC8_A>;
+impl<'a, REG> IOMC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -145,8 +145,8 @@ impl IOFC_R {
     }
 }
 #[doc = "Field `IOFC[8-15]` writer - Port n.8 function configurate bits"]
-pub type IOFC_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, IOFC8_A>;
-impl<'a, REG, const O: u8> IOFC_W<'a, REG, O>
+pub type IOFC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, IOFC8_A>;
+impl<'a, REG> IOFC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -173,10 +173,11 @@ where
     }
 }
 impl R {
-    #[doc = "Port n.8 mode configurate bits"]
+    #[doc = "Port n.8 mode configurate bits\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn iomc(&self, n: u8) -> IOMC_R {
-        IOMC_R::new(((self.bits >> ((n - 8) * 4)) & 3) as u8)
+    pub fn iomc(&self, n: u8) -> IOMC_R {
+        assert!(n < 8);
+        IOMC_R::new(((self.bits >> (n * 4)) & 3) as u8)
     }
     #[doc = "Bits 0:1 - Port n.8 mode configurate bits"]
     #[inline(always)]
@@ -218,10 +219,11 @@ impl R {
     pub fn iomc15(&self) -> IOMC_R {
         IOMC_R::new(((self.bits >> 28) & 3) as u8)
     }
-    #[doc = "Port n.8 function configurate bits"]
+    #[doc = "Port n.8 function configurate bits\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn iofc(&self, n: u8) -> IOFC_R {
-        IOFC_R::new(((self.bits >> ((n - 8) * 4 + 2)) & 3) as u8)
+    pub fn iofc(&self, n: u8) -> IOFC_R {
+        assert!(n < 8);
+        IOFC_R::new(((self.bits >> (n * 4 + 2)) & 3) as u8)
     }
     #[doc = "Bits 2:3 - Port n.8 function configurate bits"]
     #[inline(always)]
@@ -295,110 +297,112 @@ impl W {
     #[doc = "Port n.8 mode configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn iomc<const O: u8>(&mut self) -> IOMC_W<CFGHR_SPEC, O> {
-        IOMC_W::new(self)
+    pub fn iomc(&mut self, n: u8) -> IOMC_W<CFGHR_SPEC> {
+        assert!(n < 8);
+        IOMC_W::new(self, n * 4)
     }
     #[doc = "Bits 0:1 - Port n.8 mode configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iomc8(&mut self) -> IOMC_W<CFGHR_SPEC, 0> {
-        IOMC_W::new(self)
+    pub fn iomc8(&mut self) -> IOMC_W<CFGHR_SPEC> {
+        IOMC_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Port n.8 mode configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iomc9(&mut self) -> IOMC_W<CFGHR_SPEC, 4> {
-        IOMC_W::new(self)
+    pub fn iomc9(&mut self) -> IOMC_W<CFGHR_SPEC> {
+        IOMC_W::new(self, 4)
     }
     #[doc = "Bits 8:9 - Port n.8 mode configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iomc10(&mut self) -> IOMC_W<CFGHR_SPEC, 8> {
-        IOMC_W::new(self)
+    pub fn iomc10(&mut self) -> IOMC_W<CFGHR_SPEC> {
+        IOMC_W::new(self, 8)
     }
     #[doc = "Bits 12:13 - Port n.8 mode configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iomc11(&mut self) -> IOMC_W<CFGHR_SPEC, 12> {
-        IOMC_W::new(self)
+    pub fn iomc11(&mut self) -> IOMC_W<CFGHR_SPEC> {
+        IOMC_W::new(self, 12)
     }
     #[doc = "Bits 16:17 - Port n.8 mode configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iomc12(&mut self) -> IOMC_W<CFGHR_SPEC, 16> {
-        IOMC_W::new(self)
+    pub fn iomc12(&mut self) -> IOMC_W<CFGHR_SPEC> {
+        IOMC_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Port n.8 mode configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iomc13(&mut self) -> IOMC_W<CFGHR_SPEC, 20> {
-        IOMC_W::new(self)
+    pub fn iomc13(&mut self) -> IOMC_W<CFGHR_SPEC> {
+        IOMC_W::new(self, 20)
     }
     #[doc = "Bits 24:25 - Port n.8 mode configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iomc14(&mut self) -> IOMC_W<CFGHR_SPEC, 24> {
-        IOMC_W::new(self)
+    pub fn iomc14(&mut self) -> IOMC_W<CFGHR_SPEC> {
+        IOMC_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - Port n.8 mode configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iomc15(&mut self) -> IOMC_W<CFGHR_SPEC, 28> {
-        IOMC_W::new(self)
+    pub fn iomc15(&mut self) -> IOMC_W<CFGHR_SPEC> {
+        IOMC_W::new(self, 28)
     }
     #[doc = "Port n.8 function configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn iofc<const O: u8>(&mut self) -> IOFC_W<CFGHR_SPEC, O> {
-        IOFC_W::new(self)
+    pub fn iofc(&mut self, n: u8) -> IOFC_W<CFGHR_SPEC> {
+        assert!(n < 8);
+        IOFC_W::new(self, n * 4 + 2)
     }
     #[doc = "Bits 2:3 - Port n.8 function configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iofc8(&mut self) -> IOFC_W<CFGHR_SPEC, 2> {
-        IOFC_W::new(self)
+    pub fn iofc8(&mut self) -> IOFC_W<CFGHR_SPEC> {
+        IOFC_W::new(self, 2)
     }
     #[doc = "Bits 6:7 - Port n.8 function configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iofc9(&mut self) -> IOFC_W<CFGHR_SPEC, 6> {
-        IOFC_W::new(self)
+    pub fn iofc9(&mut self) -> IOFC_W<CFGHR_SPEC> {
+        IOFC_W::new(self, 6)
     }
     #[doc = "Bits 10:11 - Port n.8 function configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iofc10(&mut self) -> IOFC_W<CFGHR_SPEC, 10> {
-        IOFC_W::new(self)
+    pub fn iofc10(&mut self) -> IOFC_W<CFGHR_SPEC> {
+        IOFC_W::new(self, 10)
     }
     #[doc = "Bits 14:15 - Port n.8 function configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iofc11(&mut self) -> IOFC_W<CFGHR_SPEC, 14> {
-        IOFC_W::new(self)
+    pub fn iofc11(&mut self) -> IOFC_W<CFGHR_SPEC> {
+        IOFC_W::new(self, 14)
     }
     #[doc = "Bits 18:19 - Port n.8 function configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iofc12(&mut self) -> IOFC_W<CFGHR_SPEC, 18> {
-        IOFC_W::new(self)
+    pub fn iofc12(&mut self) -> IOFC_W<CFGHR_SPEC> {
+        IOFC_W::new(self, 18)
     }
     #[doc = "Bits 22:23 - Port n.8 function configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iofc13(&mut self) -> IOFC_W<CFGHR_SPEC, 22> {
-        IOFC_W::new(self)
+    pub fn iofc13(&mut self) -> IOFC_W<CFGHR_SPEC> {
+        IOFC_W::new(self, 22)
     }
     #[doc = "Bits 26:27 - Port n.8 function configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iofc14(&mut self) -> IOFC_W<CFGHR_SPEC, 26> {
-        IOFC_W::new(self)
+    pub fn iofc14(&mut self) -> IOFC_W<CFGHR_SPEC> {
+        IOFC_W::new(self, 26)
     }
     #[doc = "Bits 30:31 - Port n.8 function configurate bits"]
     #[inline(always)]
     #[must_use]
-    pub fn iofc15(&mut self) -> IOFC_W<CFGHR_SPEC, 30> {
-        IOFC_W::new(self)
+    pub fn iofc15(&mut self) -> IOFC_W<CFGHR_SPEC> {
+        IOFC_W::new(self, 30)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

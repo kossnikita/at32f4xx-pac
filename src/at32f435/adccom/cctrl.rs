@@ -5,35 +5,35 @@ pub type W = crate::W<CCTRL_SPEC>;
 #[doc = "Field `MSSEL` reader - Master slave mode select"]
 pub type MSSEL_R = crate::FieldReader;
 #[doc = "Field `MSSEL` writer - Master slave mode select"]
-pub type MSSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type MSSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `ASISEL` reader - Adjacent ADC sampling interval select for ordinary shifting mode"]
 pub type ASISEL_R = crate::FieldReader;
 #[doc = "Field `ASISEL` writer - Adjacent ADC sampling interval select for ordinary shifting mode"]
-pub type ASISEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ASISEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `MSDRCEN` reader - Ordinary channel DMA request continuation enable for master slave mode"]
 pub type MSDRCEN_R = crate::BitReader;
 #[doc = "Field `MSDRCEN` writer - Ordinary channel DMA request continuation enable for master slave mode"]
-pub type MSDRCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MSDRCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MSDMASEL_L` reader - Low bit of ordinary channel DMA transfer mode select for master slave mode"]
 pub type MSDMASEL_L_R = crate::FieldReader;
 #[doc = "Field `MSDMASEL_L` writer - Low bit of ordinary channel DMA transfer mode select for master slave mode"]
-pub type MSDMASEL_L_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MSDMASEL_L_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ADCDIV` reader - ADC division"]
 pub type ADCDIV_R = crate::FieldReader;
 #[doc = "Field `ADCDIV` writer - ADC division"]
-pub type ADCDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ADCDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `VBATEN` reader - VBAT enable"]
 pub type VBATEN_R = crate::BitReader;
 #[doc = "Field `VBATEN` writer - VBAT enable"]
-pub type VBATEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VBATEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ITSRVEN` reader - Internal temperature sensor and VINTRV enable"]
 pub type ITSRVEN_R = crate::BitReader;
 #[doc = "Field `ITSRVEN` writer - Internal temperature sensor and VINTRV enable"]
-pub type ITSRVEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ITSRVEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MSDMASEL_H` reader - High bit of ordinary channel DMA transfer mode select for master slave mode"]
 pub type MSDMASEL_H_R = crate::BitReader;
 #[doc = "Field `MSDMASEL_H` writer - High bit of ordinary channel DMA transfer mode select for master slave mode"]
-pub type MSDMASEL_H_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type MSDMASEL_H_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:4 - Master slave mode select"]
     #[inline(always)]
@@ -99,50 +99,50 @@ impl W {
     #[doc = "Bits 0:4 - Master slave mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn mssel(&mut self) -> MSSEL_W<CCTRL_SPEC, 0> {
-        MSSEL_W::new(self)
+    pub fn mssel(&mut self) -> MSSEL_W<CCTRL_SPEC> {
+        MSSEL_W::new(self, 0)
     }
     #[doc = "Bits 8:11 - Adjacent ADC sampling interval select for ordinary shifting mode"]
     #[inline(always)]
     #[must_use]
-    pub fn asisel(&mut self) -> ASISEL_W<CCTRL_SPEC, 8> {
-        ASISEL_W::new(self)
+    pub fn asisel(&mut self) -> ASISEL_W<CCTRL_SPEC> {
+        ASISEL_W::new(self, 8)
     }
     #[doc = "Bit 13 - Ordinary channel DMA request continuation enable for master slave mode"]
     #[inline(always)]
     #[must_use]
-    pub fn msdrcen(&mut self) -> MSDRCEN_W<CCTRL_SPEC, 13> {
-        MSDRCEN_W::new(self)
+    pub fn msdrcen(&mut self) -> MSDRCEN_W<CCTRL_SPEC> {
+        MSDRCEN_W::new(self, 13)
     }
     #[doc = "Bits 14:15 - Low bit of ordinary channel DMA transfer mode select for master slave mode"]
     #[inline(always)]
     #[must_use]
-    pub fn msdmasel_l(&mut self) -> MSDMASEL_L_W<CCTRL_SPEC, 14> {
-        MSDMASEL_L_W::new(self)
+    pub fn msdmasel_l(&mut self) -> MSDMASEL_L_W<CCTRL_SPEC> {
+        MSDMASEL_L_W::new(self, 14)
     }
     #[doc = "Bits 16:19 - ADC division"]
     #[inline(always)]
     #[must_use]
-    pub fn adcdiv(&mut self) -> ADCDIV_W<CCTRL_SPEC, 16> {
-        ADCDIV_W::new(self)
+    pub fn adcdiv(&mut self) -> ADCDIV_W<CCTRL_SPEC> {
+        ADCDIV_W::new(self, 16)
     }
     #[doc = "Bit 22 - VBAT enable"]
     #[inline(always)]
     #[must_use]
-    pub fn vbaten(&mut self) -> VBATEN_W<CCTRL_SPEC, 22> {
-        VBATEN_W::new(self)
+    pub fn vbaten(&mut self) -> VBATEN_W<CCTRL_SPEC> {
+        VBATEN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Internal temperature sensor and VINTRV enable"]
     #[inline(always)]
     #[must_use]
-    pub fn itsrven(&mut self) -> ITSRVEN_W<CCTRL_SPEC, 23> {
-        ITSRVEN_W::new(self)
+    pub fn itsrven(&mut self) -> ITSRVEN_W<CCTRL_SPEC> {
+        ITSRVEN_W::new(self, 23)
     }
     #[doc = "Bit 28 - High bit of ordinary channel DMA transfer mode select for master slave mode"]
     #[inline(always)]
     #[must_use]
-    pub fn msdmasel_h(&mut self) -> MSDMASEL_H_W<CCTRL_SPEC, 28> {
-        MSDMASEL_H_W::new(self)
+    pub fn msdmasel_h(&mut self) -> MSDMASEL_H_W<CCTRL_SPEC> {
+        MSDMASEL_H_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

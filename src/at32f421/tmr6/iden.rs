@@ -53,8 +53,8 @@ impl From<OVFIENW_AW> for bool {
     }
 }
 #[doc = "Field `OVFIEN` writer - Overflow interrupt enable"]
-pub type OVFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OVFIENW_AW>;
-impl<'a, REG, const O: u8> OVFIEN_W<'a, REG, O>
+pub type OVFIEN_W<'a, REG> = crate::BitWriter<'a, REG, OVFIENW_AW>;
+impl<'a, REG> OVFIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,8 +120,8 @@ impl From<OVFDENW_AW> for bool {
     }
 }
 #[doc = "Field `OVFDEN` writer - Overflow DMA request enable"]
-pub type OVFDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OVFDENW_AW>;
-impl<'a, REG, const O: u8> OVFDEN_W<'a, REG, O>
+pub type OVFDEN_W<'a, REG> = crate::BitWriter<'a, REG, OVFDENW_AW>;
+impl<'a, REG> OVFDEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -165,14 +165,14 @@ impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC, 0> {
-        OVFIEN_W::new(self)
+    pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC> {
+        OVFIEN_W::new(self, 0)
     }
     #[doc = "Bit 8 - Overflow DMA request enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfden(&mut self) -> OVFDEN_W<IDEN_SPEC, 8> {
-        OVFDEN_W::new(self)
+    pub fn ovfden(&mut self) -> OVFDEN_W<IDEN_SPEC> {
+        OVFDEN_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

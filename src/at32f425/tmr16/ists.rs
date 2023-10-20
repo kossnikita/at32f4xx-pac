@@ -51,8 +51,8 @@ impl From<OVFIFW_AW> for bool {
     }
 }
 #[doc = "Field `OVFIF` writer - Overflow interrupt flag"]
-pub type OVFIF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, OVFIFW_AW>;
-impl<'a, REG, const O: u8> OVFIF_W<'a, REG, O>
+pub type OVFIF_W<'a, REG> = crate::BitWriter0C<'a, REG, OVFIFW_AW>;
+impl<'a, REG> OVFIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -111,8 +111,8 @@ impl From<C1IFW_AW> for bool {
     }
 }
 #[doc = "Field `CIF[1,4]` writer - Channel %s interrupt flag"]
-pub type CIF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, C1IFW_AW>;
-impl<'a, REG, const O: u8> CIF_W<'a, REG, O>
+pub type CIF_W<'a, REG> = crate::BitWriter0C<'a, REG, C1IFW_AW>;
+impl<'a, REG> CIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -171,8 +171,8 @@ impl From<HALLIFW_AW> for bool {
     }
 }
 #[doc = "Field `HALLIF` writer - HALL interrupt flag"]
-pub type HALLIF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, HALLIFW_AW>;
-impl<'a, REG, const O: u8> HALLIF_W<'a, REG, O>
+pub type HALLIF_W<'a, REG> = crate::BitWriter0C<'a, REG, HALLIFW_AW>;
+impl<'a, REG> HALLIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -231,8 +231,8 @@ impl From<BRKIFW_AW> for bool {
     }
 }
 #[doc = "Field `BRKIF` writer - Brake interrupt flag"]
-pub type BRKIF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, BRKIFW_AW>;
-impl<'a, REG, const O: u8> BRKIF_W<'a, REG, O>
+pub type BRKIF_W<'a, REG> = crate::BitWriter0C<'a, REG, BRKIFW_AW>;
+impl<'a, REG> BRKIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -291,8 +291,8 @@ impl From<C1RFW_AW> for bool {
     }
 }
 #[doc = "Field `CRF[1-1]` writer - Channel %s recapture flag"]
-pub type CRF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, C1RFW_AW>;
-impl<'a, REG, const O: u8> CRF_W<'a, REG, O>
+pub type CRF_W<'a, REG> = crate::BitWriter0C<'a, REG, C1RFW_AW>;
+impl<'a, REG> CRF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -307,6 +307,13 @@ impl R {
     #[inline(always)]
     pub fn ovfif(&self) -> OVFIF_R {
         OVFIF_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Channel [1,4]
+interrupt flag\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[inline(always)]
+    pub fn cif(&self, n: u8) -> CIF_R {
+        assert!(n < 2);
+        CIF_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - Channel 1 interrupt flag"]
     #[inline(always)]
@@ -329,10 +336,11 @@ impl R {
         BRKIF_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Channel [1-1]
-recapture flag"]
+recapture flag\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn crf(&self, n: u8) -> CRF_R {
-        CRF_R::new(((self.bits >> ((n - 1) * 0 + 9)) & 1) != 0)
+    pub fn crf(&self, n: u8) -> CRF_R {
+        assert!(n < 1);
+        CRF_R::new(((self.bits >> (n * 0 + 9)) & 1) != 0)
     }
     #[doc = "Bit 9 - Channel 1 recapture flag"]
     #[inline(always)]
@@ -361,52 +369,54 @@ impl W {
     #[doc = "Bit 0 - Overflow interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfif(&mut self) -> OVFIF_W<ISTS_SPEC, 0> {
-        OVFIF_W::new(self)
+    pub fn ovfif(&mut self) -> OVFIF_W<ISTS_SPEC> {
+        OVFIF_W::new(self, 0)
     }
     #[doc = "Channel [1,4]
 interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cif<const O: u8>(&mut self) -> CIF_W<ISTS_SPEC, O> {
-        CIF_W::new(self)
+    pub fn cif(&mut self, n: u8) -> CIF_W<ISTS_SPEC> {
+        assert!(n < 2);
+        CIF_W::new(self, n * 3 + 1)
     }
     #[doc = "Bit 1 - Channel 1 interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn c1if(&mut self) -> CIF_W<ISTS_SPEC, 1> {
-        CIF_W::new(self)
+    pub fn c1if(&mut self) -> CIF_W<ISTS_SPEC> {
+        CIF_W::new(self, 1)
     }
     #[doc = "Bit 4 - Channel 4 interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn c4if(&mut self) -> CIF_W<ISTS_SPEC, 4> {
-        CIF_W::new(self)
+    pub fn c4if(&mut self) -> CIF_W<ISTS_SPEC> {
+        CIF_W::new(self, 4)
     }
     #[doc = "Bit 5 - HALL interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn hallif(&mut self) -> HALLIF_W<ISTS_SPEC, 5> {
-        HALLIF_W::new(self)
+    pub fn hallif(&mut self) -> HALLIF_W<ISTS_SPEC> {
+        HALLIF_W::new(self, 5)
     }
     #[doc = "Bit 7 - Brake interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn brkif(&mut self) -> BRKIF_W<ISTS_SPEC, 7> {
-        BRKIF_W::new(self)
+    pub fn brkif(&mut self) -> BRKIF_W<ISTS_SPEC> {
+        BRKIF_W::new(self, 7)
     }
     #[doc = "Channel [1-1]
 recapture flag"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn crf<const O: u8>(&mut self) -> CRF_W<ISTS_SPEC, O> {
-        CRF_W::new(self)
+    pub fn crf(&mut self, n: u8) -> CRF_W<ISTS_SPEC> {
+        assert!(n < 1);
+        CRF_W::new(self, n * 0 + 9)
     }
     #[doc = "Bit 9 - Channel 1 recapture flag"]
     #[inline(always)]
     #[must_use]
-    pub fn c1rf(&mut self) -> CRF_W<ISTS_SPEC, 9> {
-        CRF_W::new(self)
+    pub fn c1rf(&mut self) -> CRF_W<ISTS_SPEC> {
+        CRF_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

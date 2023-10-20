@@ -5,7 +5,7 @@ pub type W = crate::W<CMD_W0_SPEC>;
 #[doc = "Field `SPIADR` reader - SPI flash address"]
 pub type SPIADR_R = crate::FieldReader<u32>;
 #[doc = "Field `SPIADR` writer - SPI flash address"]
-pub type SPIADR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SPIADR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - SPI flash address"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - SPI flash address"]
     #[inline(always)]
     #[must_use]
-    pub fn spiadr(&mut self) -> SPIADR_W<CMD_W0_SPEC, 0> {
-        SPIADR_W::new(self)
+    pub fn spiadr(&mut self) -> SPIADR_W<CMD_W0_SPEC> {
+        SPIADR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

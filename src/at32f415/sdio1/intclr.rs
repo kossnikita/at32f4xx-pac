@@ -5,51 +5,51 @@ pub type W = crate::W<INTCLR_SPEC>;
 #[doc = "Field `CMDFAIL` reader - CCRCFAILC"]
 pub type CMDFAIL_R = crate::BitReader;
 #[doc = "Field `CMDFAIL` writer - CCRCFAILC"]
-pub type CMDFAIL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDFAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTFAIL` reader - DCRCFAILC"]
 pub type DTFAIL_R = crate::BitReader;
 #[doc = "Field `DTFAIL` writer - DCRCFAILC"]
-pub type DTFAIL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTFAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDTIMEOUT` reader - CTIMEOUTC"]
 pub type CMDTIMEOUT_R = crate::BitReader;
 #[doc = "Field `CMDTIMEOUT` writer - CTIMEOUTC"]
-pub type CMDTIMEOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDTIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTTIMEOUT` reader - DTIMEOUTC"]
 pub type DTTIMEOUT_R = crate::BitReader;
 #[doc = "Field `DTTIMEOUT` writer - DTIMEOUTC"]
-pub type DTTIMEOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTTIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXERRU` reader - TXUNDERRC"]
 pub type TXERRU_R = crate::BitReader;
 #[doc = "Field `TXERRU` writer - TXUNDERRC"]
-pub type TXERRU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXERRU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXERRU` reader - RXOVERRC"]
 pub type RXERRU_R = crate::BitReader;
 #[doc = "Field `RXERRU` writer - RXOVERRC"]
-pub type RXERRU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXERRU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDRSPCMPL` reader - CMDRENDC"]
 pub type CMDRSPCMPL_R = crate::BitReader;
 #[doc = "Field `CMDRSPCMPL` writer - CMDRENDC"]
-pub type CMDRSPCMPL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDRSPCMPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDCMPL` reader - CMDSENTC"]
 pub type CMDCMPL_R = crate::BitReader;
 #[doc = "Field `CMDCMPL` writer - CMDSENTC"]
-pub type CMDCMPL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDCMPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTCMPL` reader - DATAENDC"]
 pub type DTCMPL_R = crate::BitReader;
 #[doc = "Field `DTCMPL` writer - DATAENDC"]
-pub type DTCMPL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTCMPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SBITERR` reader - STBITERRC"]
 pub type SBITERR_R = crate::BitReader;
 #[doc = "Field `SBITERR` writer - STBITERRC"]
-pub type SBITERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SBITERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTBLKCMPL` reader - DBCKENDC"]
 pub type DTBLKCMPL_R = crate::BitReader;
 #[doc = "Field `DTBLKCMPL` writer - DBCKENDC"]
-pub type DTBLKCMPL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTBLKCMPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIOIF` reader - SDIOITC"]
 pub type SDIOIF_R = crate::BitReader;
 #[doc = "Field `SDIOIF` writer - SDIOITC"]
-pub type SDIOIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIOIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - CCRCFAILC"]
     #[inline(always)]
@@ -139,74 +139,74 @@ impl W {
     #[doc = "Bit 0 - CCRCFAILC"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdfail(&mut self) -> CMDFAIL_W<INTCLR_SPEC, 0> {
-        CMDFAIL_W::new(self)
+    pub fn cmdfail(&mut self) -> CMDFAIL_W<INTCLR_SPEC> {
+        CMDFAIL_W::new(self, 0)
     }
     #[doc = "Bit 1 - DCRCFAILC"]
     #[inline(always)]
     #[must_use]
-    pub fn dtfail(&mut self) -> DTFAIL_W<INTCLR_SPEC, 1> {
-        DTFAIL_W::new(self)
+    pub fn dtfail(&mut self) -> DTFAIL_W<INTCLR_SPEC> {
+        DTFAIL_W::new(self, 1)
     }
     #[doc = "Bit 2 - CTIMEOUTC"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdtimeout(&mut self) -> CMDTIMEOUT_W<INTCLR_SPEC, 2> {
-        CMDTIMEOUT_W::new(self)
+    pub fn cmdtimeout(&mut self) -> CMDTIMEOUT_W<INTCLR_SPEC> {
+        CMDTIMEOUT_W::new(self, 2)
     }
     #[doc = "Bit 3 - DTIMEOUTC"]
     #[inline(always)]
     #[must_use]
-    pub fn dttimeout(&mut self) -> DTTIMEOUT_W<INTCLR_SPEC, 3> {
-        DTTIMEOUT_W::new(self)
+    pub fn dttimeout(&mut self) -> DTTIMEOUT_W<INTCLR_SPEC> {
+        DTTIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - TXUNDERRC"]
     #[inline(always)]
     #[must_use]
-    pub fn txerru(&mut self) -> TXERRU_W<INTCLR_SPEC, 4> {
-        TXERRU_W::new(self)
+    pub fn txerru(&mut self) -> TXERRU_W<INTCLR_SPEC> {
+        TXERRU_W::new(self, 4)
     }
     #[doc = "Bit 5 - RXOVERRC"]
     #[inline(always)]
     #[must_use]
-    pub fn rxerru(&mut self) -> RXERRU_W<INTCLR_SPEC, 5> {
-        RXERRU_W::new(self)
+    pub fn rxerru(&mut self) -> RXERRU_W<INTCLR_SPEC> {
+        RXERRU_W::new(self, 5)
     }
     #[doc = "Bit 6 - CMDRENDC"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdrspcmpl(&mut self) -> CMDRSPCMPL_W<INTCLR_SPEC, 6> {
-        CMDRSPCMPL_W::new(self)
+    pub fn cmdrspcmpl(&mut self) -> CMDRSPCMPL_W<INTCLR_SPEC> {
+        CMDRSPCMPL_W::new(self, 6)
     }
     #[doc = "Bit 7 - CMDSENTC"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdcmpl(&mut self) -> CMDCMPL_W<INTCLR_SPEC, 7> {
-        CMDCMPL_W::new(self)
+    pub fn cmdcmpl(&mut self) -> CMDCMPL_W<INTCLR_SPEC> {
+        CMDCMPL_W::new(self, 7)
     }
     #[doc = "Bit 8 - DATAENDC"]
     #[inline(always)]
     #[must_use]
-    pub fn dtcmpl(&mut self) -> DTCMPL_W<INTCLR_SPEC, 8> {
-        DTCMPL_W::new(self)
+    pub fn dtcmpl(&mut self) -> DTCMPL_W<INTCLR_SPEC> {
+        DTCMPL_W::new(self, 8)
     }
     #[doc = "Bit 9 - STBITERRC"]
     #[inline(always)]
     #[must_use]
-    pub fn sbiterr(&mut self) -> SBITERR_W<INTCLR_SPEC, 9> {
-        SBITERR_W::new(self)
+    pub fn sbiterr(&mut self) -> SBITERR_W<INTCLR_SPEC> {
+        SBITERR_W::new(self, 9)
     }
     #[doc = "Bit 10 - DBCKENDC"]
     #[inline(always)]
     #[must_use]
-    pub fn dtblkcmpl(&mut self) -> DTBLKCMPL_W<INTCLR_SPEC, 10> {
-        DTBLKCMPL_W::new(self)
+    pub fn dtblkcmpl(&mut self) -> DTBLKCMPL_W<INTCLR_SPEC> {
+        DTBLKCMPL_W::new(self, 10)
     }
     #[doc = "Bit 22 - SDIOITC"]
     #[inline(always)]
     #[must_use]
-    pub fn sdioif(&mut self) -> SDIOIF_W<INTCLR_SPEC, 22> {
-        SDIOIF_W::new(self)
+    pub fn sdioif(&mut self) -> SDIOIF_W<INTCLR_SPEC> {
+        SDIOIF_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

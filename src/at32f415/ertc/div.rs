@@ -5,11 +5,11 @@ pub type W = crate::W<DIV_SPEC>;
 #[doc = "Field `DIVB` reader - Divider B"]
 pub type DIVB_R = crate::FieldReader<u16>;
 #[doc = "Field `DIVB` writer - Divider B"]
-pub type DIVB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 15, O, u16>;
+pub type DIVB_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 #[doc = "Field `DIVA` reader - Divider A"]
 pub type DIVA_R = crate::FieldReader;
 #[doc = "Field `DIVA` writer - Divider A"]
-pub type DIVA_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 7, O>;
+pub type DIVA_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
 impl R {
     #[doc = "Bits 0:14 - Divider B"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:14 - Divider B"]
     #[inline(always)]
     #[must_use]
-    pub fn divb(&mut self) -> DIVB_W<DIV_SPEC, 0> {
-        DIVB_W::new(self)
+    pub fn divb(&mut self) -> DIVB_W<DIV_SPEC> {
+        DIVB_W::new(self, 0)
     }
     #[doc = "Bits 16:22 - Divider A"]
     #[inline(always)]
     #[must_use]
-    pub fn diva(&mut self) -> DIVA_W<DIV_SPEC, 16> {
-        DIVA_W::new(self)
+    pub fn diva(&mut self) -> DIVA_W<DIV_SPEC> {
+        DIVA_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

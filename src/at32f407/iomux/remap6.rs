@@ -5,31 +5,31 @@ pub type W = crate::W<REMAP6_SPEC>;
 #[doc = "Field `CAN1_GMUX` reader - CAN1 muxing"]
 pub type CAN1_GMUX_R = crate::FieldReader;
 #[doc = "Field `CAN1_GMUX` writer - CAN1 muxing"]
-pub type CAN1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CAN1_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CAN2_GMUX` reader - CAN2 muxing"]
 pub type CAN2_GMUX_R = crate::FieldReader;
 #[doc = "Field `CAN2_GMUX` writer - CAN2 muxing"]
-pub type CAN2_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CAN2_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `SDIO2_GMUX` reader - SDIO2 muxing"]
 pub type SDIO2_GMUX_R = crate::FieldReader;
 #[doc = "Field `SDIO2_GMUX` writer - SDIO2 muxing"]
-pub type SDIO2_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type SDIO2_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `USART1_GMUX` reader - USART1 muxing"]
 pub type USART1_GMUX_R = crate::FieldReader;
 #[doc = "Field `USART1_GMUX` writer - USART1 muxing"]
-pub type USART1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type USART1_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `USART2_GMUX` reader - USART2 muxing"]
 pub type USART2_GMUX_R = crate::FieldReader;
 #[doc = "Field `USART2_GMUX` writer - USART2 muxing"]
-pub type USART2_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type USART2_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `USART3_GMUX` reader - USART3 muxing"]
 pub type USART3_GMUX_R = crate::FieldReader;
 #[doc = "Field `USART3_GMUX` writer - USART3 muxing"]
-pub type USART3_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type USART3_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `UART4_GMUX` reader - UART4 muxing"]
 pub type UART4_GMUX_R = crate::FieldReader;
 #[doc = "Field `UART4_GMUX` writer - UART4 muxing"]
-pub type UART4_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type UART4_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - CAN1 muxing"]
     #[inline(always)]
@@ -98,44 +98,44 @@ impl W {
     #[doc = "Bits 0:3 - CAN1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn can1_gmux(&mut self) -> CAN1_GMUX_W<REMAP6_SPEC, 0> {
-        CAN1_GMUX_W::new(self)
+    pub fn can1_gmux(&mut self) -> CAN1_GMUX_W<REMAP6_SPEC> {
+        CAN1_GMUX_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - CAN2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn can2_gmux(&mut self) -> CAN2_GMUX_W<REMAP6_SPEC, 4> {
-        CAN2_GMUX_W::new(self)
+    pub fn can2_gmux(&mut self) -> CAN2_GMUX_W<REMAP6_SPEC> {
+        CAN2_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 12:15 - SDIO2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio2_gmux(&mut self) -> SDIO2_GMUX_W<REMAP6_SPEC, 12> {
-        SDIO2_GMUX_W::new(self)
+    pub fn sdio2_gmux(&mut self) -> SDIO2_GMUX_W<REMAP6_SPEC> {
+        SDIO2_GMUX_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - USART1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn usart1_gmux(&mut self) -> USART1_GMUX_W<REMAP6_SPEC, 16> {
-        USART1_GMUX_W::new(self)
+    pub fn usart1_gmux(&mut self) -> USART1_GMUX_W<REMAP6_SPEC> {
+        USART1_GMUX_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - USART2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn usart2_gmux(&mut self) -> USART2_GMUX_W<REMAP6_SPEC, 20> {
-        USART2_GMUX_W::new(self)
+    pub fn usart2_gmux(&mut self) -> USART2_GMUX_W<REMAP6_SPEC> {
+        USART2_GMUX_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - USART3 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn usart3_gmux(&mut self) -> USART3_GMUX_W<REMAP6_SPEC, 24> {
-        USART3_GMUX_W::new(self)
+    pub fn usart3_gmux(&mut self) -> USART3_GMUX_W<REMAP6_SPEC> {
+        USART3_GMUX_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - UART4 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn uart4_gmux(&mut self) -> UART4_GMUX_W<REMAP6_SPEC, 28> {
-        UART4_GMUX_W::new(self)
+    pub fn uart4_gmux(&mut self) -> UART4_GMUX_W<REMAP6_SPEC> {
+        UART4_GMUX_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,15 +5,15 @@ pub type W = crate::W<MISC2_SPEC>;
 #[doc = "Field `AUTO_STEP_EN` reader - AUTO_STEP_EN"]
 pub type AUTO_STEP_EN_R = crate::FieldReader;
 #[doc = "Field `AUTO_STEP_EN` writer - AUTO_STEP_EN"]
-pub type AUTO_STEP_EN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type AUTO_STEP_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CLK_TO_TMR` reader - Clock output internal connect to timer10"]
 pub type CLK_TO_TMR_R = crate::BitReader;
 #[doc = "Field `CLK_TO_TMR` writer - Clock output internal connect to timer10"]
-pub type CLK_TO_TMR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_TO_TMR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USBDIV` reader - USB division"]
 pub type USBDIV_R = crate::FieldReader;
 #[doc = "Field `USBDIV` writer - USB division"]
-pub type USBDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type USBDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
@@ -52,20 +52,20 @@ impl W {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
     #[must_use]
-    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<MISC2_SPEC, 4> {
-        AUTO_STEP_EN_W::new(self)
+    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<MISC2_SPEC> {
+        AUTO_STEP_EN_W::new(self, 4)
     }
     #[doc = "Bit 8 - Clock output internal connect to timer10"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_to_tmr(&mut self) -> CLK_TO_TMR_W<MISC2_SPEC, 8> {
-        CLK_TO_TMR_W::new(self)
+    pub fn clk_to_tmr(&mut self) -> CLK_TO_TMR_W<MISC2_SPEC> {
+        CLK_TO_TMR_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - USB division"]
     #[inline(always)]
     #[must_use]
-    pub fn usbdiv(&mut self) -> USBDIV_W<MISC2_SPEC, 12> {
-        USBDIV_W::new(self)
+    pub fn usbdiv(&mut self) -> USBDIV_W<MISC2_SPEC> {
+        USBDIV_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

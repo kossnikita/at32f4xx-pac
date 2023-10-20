@@ -5,35 +5,35 @@ pub type W = crate::W<REMAP7_SPEC>;
 #[doc = "Field `EXT_SPIM_GMUX` reader - SPIM muxing"]
 pub type EXT_SPIM_GMUX_R = crate::FieldReader;
 #[doc = "Field `EXT_SPIM_GMUX` writer - SPIM muxing"]
-pub type EXT_SPIM_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type EXT_SPIM_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `EXT_SPIM_GEN` reader - SPIM enable"]
 pub type EXT_SPIM_GEN_R = crate::BitReader;
 #[doc = "Field `EXT_SPIM_GEN` writer - SPIM enable"]
-pub type EXT_SPIM_GEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EXT_SPIM_GEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_ETP_GMUX` reader - ADC1 external trigger preempted conversion muxing"]
 pub type ADC1_ETP_GMUX_R = crate::BitReader;
 #[doc = "Field `ADC1_ETP_GMUX` writer - ADC1 external trigger preempted conversion muxing"]
-pub type ADC1_ETP_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_ETP_GMUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC1_ETO_GMUX` reader - ADC1 external trigger ordinary conversion muxing"]
 pub type ADC1_ETO_GMUX_R = crate::BitReader;
 #[doc = "Field `ADC1_ETO_GMUX` writer - ADC1 external trigger ordinary conversion muxing"]
-pub type ADC1_ETO_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC1_ETO_GMUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_ETP_GMUX` reader - ADC2 external trigger preempted conversion muxing"]
 pub type ADC2_ETP_GMUX_R = crate::BitReader;
 #[doc = "Field `ADC2_ETP_GMUX` writer - ADC2 external trigger preempted conversion muxing"]
-pub type ADC2_ETP_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_ETP_GMUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_ETO_GMUX` reader - ADC2 external trigger ordinary conversion muxing"]
 pub type ADC2_ETO_GMUX_R = crate::BitReader;
 #[doc = "Field `ADC2_ETO_GMUX` writer - ADC2 external trigger ordinary conversion muxing"]
-pub type ADC2_ETO_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC2_ETO_GMUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWJTAG_GMUX` reader - Serial wire JTAG muxing"]
 pub type SWJTAG_GMUX_R = crate::FieldReader;
 #[doc = "Field `SWJTAG_GMUX` writer - Serial wire JTAG muxing"]
-pub type SWJTAG_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type SWJTAG_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `PD01_GMUX` reader - PortD0/PortD1 mappingon OSC_IN/OSC_OUT"]
 pub type PD01_GMUX_R = crate::BitReader;
 #[doc = "Field `PD01_GMUX` writer - PortD0/PortD1 mappingon OSC_IN/OSC_OUT"]
-pub type PD01_GMUX_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PD01_GMUX_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - SPIM muxing"]
     #[inline(always)]
@@ -120,50 +120,50 @@ impl W {
     #[doc = "Bits 0:2 - SPIM muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_spim_gmux(&mut self) -> EXT_SPIM_GMUX_W<REMAP7_SPEC, 0> {
-        EXT_SPIM_GMUX_W::new(self)
+    pub fn ext_spim_gmux(&mut self) -> EXT_SPIM_GMUX_W<REMAP7_SPEC> {
+        EXT_SPIM_GMUX_W::new(self, 0)
     }
     #[doc = "Bit 3 - SPIM enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ext_spim_gen(&mut self) -> EXT_SPIM_GEN_W<REMAP7_SPEC, 3> {
-        EXT_SPIM_GEN_W::new(self)
+    pub fn ext_spim_gen(&mut self) -> EXT_SPIM_GEN_W<REMAP7_SPEC> {
+        EXT_SPIM_GEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - ADC1 external trigger preempted conversion muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_etp_gmux(&mut self) -> ADC1_ETP_GMUX_W<REMAP7_SPEC, 4> {
-        ADC1_ETP_GMUX_W::new(self)
+    pub fn adc1_etp_gmux(&mut self) -> ADC1_ETP_GMUX_W<REMAP7_SPEC> {
+        ADC1_ETP_GMUX_W::new(self, 4)
     }
     #[doc = "Bit 5 - ADC1 external trigger ordinary conversion muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn adc1_eto_gmux(&mut self) -> ADC1_ETO_GMUX_W<REMAP7_SPEC, 5> {
-        ADC1_ETO_GMUX_W::new(self)
+    pub fn adc1_eto_gmux(&mut self) -> ADC1_ETO_GMUX_W<REMAP7_SPEC> {
+        ADC1_ETO_GMUX_W::new(self, 5)
     }
     #[doc = "Bit 8 - ADC2 external trigger preempted conversion muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_etp_gmux(&mut self) -> ADC2_ETP_GMUX_W<REMAP7_SPEC, 8> {
-        ADC2_ETP_GMUX_W::new(self)
+    pub fn adc2_etp_gmux(&mut self) -> ADC2_ETP_GMUX_W<REMAP7_SPEC> {
+        ADC2_ETP_GMUX_W::new(self, 8)
     }
     #[doc = "Bit 9 - ADC2 external trigger ordinary conversion muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn adc2_eto_gmux(&mut self) -> ADC2_ETO_GMUX_W<REMAP7_SPEC, 9> {
-        ADC2_ETO_GMUX_W::new(self)
+    pub fn adc2_eto_gmux(&mut self) -> ADC2_ETO_GMUX_W<REMAP7_SPEC> {
+        ADC2_ETO_GMUX_W::new(self, 9)
     }
     #[doc = "Bits 16:18 - Serial wire JTAG muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn swjtag_gmux(&mut self) -> SWJTAG_GMUX_W<REMAP7_SPEC, 16> {
-        SWJTAG_GMUX_W::new(self)
+    pub fn swjtag_gmux(&mut self) -> SWJTAG_GMUX_W<REMAP7_SPEC> {
+        SWJTAG_GMUX_W::new(self, 16)
     }
     #[doc = "Bit 20 - PortD0/PortD1 mappingon OSC_IN/OSC_OUT"]
     #[inline(always)]
     #[must_use]
-    pub fn pd01_gmux(&mut self) -> PD01_GMUX_W<REMAP7_SPEC, 20> {
-        PD01_GMUX_W::new(self)
+    pub fn pd01_gmux(&mut self) -> PD01_GMUX_W<REMAP7_SPEC> {
+        PD01_GMUX_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

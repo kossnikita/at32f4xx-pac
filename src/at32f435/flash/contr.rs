@@ -5,7 +5,7 @@ pub type W = crate::W<CONTR_SPEC>;
 #[doc = "Field `FCONTR_EN` reader - Flash continue read enable"]
 pub type FCONTR_EN_R = crate::BitReader;
 #[doc = "Field `FCONTR_EN` writer - Flash continue read enable"]
-pub type FCONTR_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCONTR_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 31 - Flash continue read enable"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 31 - Flash continue read enable"]
     #[inline(always)]
     #[must_use]
-    pub fn fcontr_en(&mut self) -> FCONTR_EN_W<CONTR_SPEC, 31> {
-        FCONTR_EN_W::new(self)
+    pub fn fcontr_en(&mut self) -> FCONTR_EN_W<CONTR_SPEC> {
+        FCONTR_EN_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

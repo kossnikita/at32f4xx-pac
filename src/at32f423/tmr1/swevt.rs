@@ -13,8 +13,8 @@ impl From<OVFSWTRW_AW> for bool {
     }
 }
 #[doc = "Field `OVFSWTR` writer - Overflow event triggered by software"]
-pub type OVFSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, OVFSWTRW_AW>;
-impl<'a, REG, const O: u8> OVFSWTR_W<'a, REG, O>
+pub type OVFSWTR_W<'a, REG> = crate::BitWriter1S<'a, REG, OVFSWTRW_AW>;
+impl<'a, REG> OVFSWTR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -37,8 +37,8 @@ impl From<C1SWTRW_AW> for bool {
     }
 }
 #[doc = "Field `CSWTR[1-4]` writer - Channel %s event triggered by software"]
-pub type CSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, C1SWTRW_AW>;
-impl<'a, REG, const O: u8> CSWTR_W<'a, REG, O>
+pub type CSWTR_W<'a, REG> = crate::BitWriter1S<'a, REG, C1SWTRW_AW>;
+impl<'a, REG> CSWTR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -61,8 +61,8 @@ impl From<HALLSWTRW_AW> for bool {
     }
 }
 #[doc = "Field `HALLSWTR` writer - HALL event triggered by software"]
-pub type HALLSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, HALLSWTRW_AW>;
-impl<'a, REG, const O: u8> HALLSWTR_W<'a, REG, O>
+pub type HALLSWTR_W<'a, REG> = crate::BitWriter1S<'a, REG, HALLSWTRW_AW>;
+impl<'a, REG> HALLSWTR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -85,8 +85,8 @@ impl From<TRGSWTRW_AW> for bool {
     }
 }
 #[doc = "Field `TRGSWTR` writer - Trigger event triggered by software"]
-pub type TRGSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, TRGSWTRW_AW>;
-impl<'a, REG, const O: u8> TRGSWTR_W<'a, REG, O>
+pub type TRGSWTR_W<'a, REG> = crate::BitWriter1S<'a, REG, TRGSWTRW_AW>;
+impl<'a, REG> TRGSWTR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -109,8 +109,8 @@ impl From<BRKSWTRW_AW> for bool {
     }
 }
 #[doc = "Field `BRKSWTR` writer - Brake event triggered by software"]
-pub type BRKSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, BRKSWTRW_AW>;
-impl<'a, REG, const O: u8> BRKSWTR_W<'a, REG, O>
+pub type BRKSWTR_W<'a, REG> = crate::BitWriter1S<'a, REG, BRKSWTRW_AW>;
+impl<'a, REG> BRKSWTR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -129,57 +129,58 @@ impl W {
     #[doc = "Bit 0 - Overflow event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfswtr(&mut self) -> OVFSWTR_W<SWEVT_SPEC, 0> {
-        OVFSWTR_W::new(self)
+    pub fn ovfswtr(&mut self) -> OVFSWTR_W<SWEVT_SPEC> {
+        OVFSWTR_W::new(self, 0)
     }
     #[doc = "Channel [1-4]
 event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cswtr<const O: u8>(&mut self) -> CSWTR_W<SWEVT_SPEC, O> {
-        CSWTR_W::new(self)
+    pub fn cswtr(&mut self, n: u8) -> CSWTR_W<SWEVT_SPEC> {
+        assert!(n < 4);
+        CSWTR_W::new(self, n + 1)
     }
     #[doc = "Bit 1 - Channel 1 event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn c1swtr(&mut self) -> CSWTR_W<SWEVT_SPEC, 1> {
-        CSWTR_W::new(self)
+    pub fn c1swtr(&mut self) -> CSWTR_W<SWEVT_SPEC> {
+        CSWTR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 2 event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn c2swtr(&mut self) -> CSWTR_W<SWEVT_SPEC, 2> {
-        CSWTR_W::new(self)
+    pub fn c2swtr(&mut self) -> CSWTR_W<SWEVT_SPEC> {
+        CSWTR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Channel 3 event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn c3swtr(&mut self) -> CSWTR_W<SWEVT_SPEC, 3> {
-        CSWTR_W::new(self)
+    pub fn c3swtr(&mut self) -> CSWTR_W<SWEVT_SPEC> {
+        CSWTR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Channel 4 event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn c4swtr(&mut self) -> CSWTR_W<SWEVT_SPEC, 4> {
-        CSWTR_W::new(self)
+    pub fn c4swtr(&mut self) -> CSWTR_W<SWEVT_SPEC> {
+        CSWTR_W::new(self, 4)
     }
     #[doc = "Bit 5 - HALL event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn hallswtr(&mut self) -> HALLSWTR_W<SWEVT_SPEC, 5> {
-        HALLSWTR_W::new(self)
+    pub fn hallswtr(&mut self) -> HALLSWTR_W<SWEVT_SPEC> {
+        HALLSWTR_W::new(self, 5)
     }
     #[doc = "Bit 6 - Trigger event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn trgswtr(&mut self) -> TRGSWTR_W<SWEVT_SPEC, 6> {
-        TRGSWTR_W::new(self)
+    pub fn trgswtr(&mut self) -> TRGSWTR_W<SWEVT_SPEC> {
+        TRGSWTR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Brake event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn brkswtr(&mut self) -> BRKSWTR_W<SWEVT_SPEC, 7> {
-        BRKSWTR_W::new(self)
+    pub fn brkswtr(&mut self) -> BRKSWTR_W<SWEVT_SPEC> {
+        BRKSWTR_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

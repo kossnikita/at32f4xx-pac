@@ -1,11 +1,11 @@
 #[doc = "Register `SLIB_SET_RANGE` writer"]
 pub type W = crate::W<SLIB_SET_RANGE_SPEC>;
 #[doc = "Field `SLIB_SS_SET` writer - sLib start sector setting"]
-pub type SLIB_SS_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SLIB_SS_SET_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SLIB_DSS_SET` writer - sLib data start sector setting"]
-pub type SLIB_DSS_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SLIB_DSS_SET_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SLIB_ES_SET` writer - sLib end sector setting"]
-pub type SLIB_ES_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type SLIB_ES_SET_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl core::fmt::Debug for crate::generic::Reg<SLIB_SET_RANGE_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -15,20 +15,20 @@ impl W {
     #[doc = "Bits 0:10 - sLib start sector setting"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_ss_set(&mut self) -> SLIB_SS_SET_W<SLIB_SET_RANGE_SPEC, 0> {
-        SLIB_SS_SET_W::new(self)
+    pub fn slib_ss_set(&mut self) -> SLIB_SS_SET_W<SLIB_SET_RANGE_SPEC> {
+        SLIB_SS_SET_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - sLib data start sector setting"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_dss_set(&mut self) -> SLIB_DSS_SET_W<SLIB_SET_RANGE_SPEC, 11> {
-        SLIB_DSS_SET_W::new(self)
+    pub fn slib_dss_set(&mut self) -> SLIB_DSS_SET_W<SLIB_SET_RANGE_SPEC> {
+        SLIB_DSS_SET_W::new(self, 11)
     }
     #[doc = "Bits 22:31 - sLib end sector setting"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_es_set(&mut self) -> SLIB_ES_SET_W<SLIB_SET_RANGE_SPEC, 22> {
-        SLIB_ES_SET_W::new(self)
+    pub fn slib_es_set(&mut self) -> SLIB_ES_SET_W<SLIB_SET_RANGE_SPEC> {
+        SLIB_ES_SET_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

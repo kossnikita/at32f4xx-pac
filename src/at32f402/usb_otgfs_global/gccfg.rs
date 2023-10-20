@@ -5,19 +5,19 @@ pub type W = crate::W<GCCFG_SPEC>;
 #[doc = "Field `PWRDOWN` reader - Power down"]
 pub type PWRDOWN_R = crate::BitReader;
 #[doc = "Field `PWRDOWN` writer - Power down"]
-pub type PWRDOWN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWRDOWN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LP_MODE` reader - Low power mode"]
 pub type LP_MODE_R = crate::BitReader;
 #[doc = "Field `LP_MODE` writer - Low power mode"]
-pub type LP_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LP_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SOFOUTEN` reader - SOF output enable"]
 pub type SOFOUTEN_R = crate::BitReader;
 #[doc = "Field `SOFOUTEN` writer - SOF output enable"]
-pub type SOFOUTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SOFOUTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VBUSIG` reader - VBUS Ignored"]
 pub type VBUSIG_R = crate::BitReader;
 #[doc = "Field `VBUSIG` writer - VBUS Ignored"]
-pub type VBUSIG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VBUSIG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 16 - Power down"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bit 16 - Power down"]
     #[inline(always)]
     #[must_use]
-    pub fn pwrdown(&mut self) -> PWRDOWN_W<GCCFG_SPEC, 16> {
-        PWRDOWN_W::new(self)
+    pub fn pwrdown(&mut self) -> PWRDOWN_W<GCCFG_SPEC> {
+        PWRDOWN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Low power mode"]
     #[inline(always)]
     #[must_use]
-    pub fn lp_mode(&mut self) -> LP_MODE_W<GCCFG_SPEC, 17> {
-        LP_MODE_W::new(self)
+    pub fn lp_mode(&mut self) -> LP_MODE_W<GCCFG_SPEC> {
+        LP_MODE_W::new(self, 17)
     }
     #[doc = "Bit 20 - SOF output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sofouten(&mut self) -> SOFOUTEN_W<GCCFG_SPEC, 20> {
-        SOFOUTEN_W::new(self)
+    pub fn sofouten(&mut self) -> SOFOUTEN_W<GCCFG_SPEC> {
+        SOFOUTEN_W::new(self, 20)
     }
     #[doc = "Bit 21 - VBUS Ignored"]
     #[inline(always)]
     #[must_use]
-    pub fn vbusig(&mut self) -> VBUSIG_W<GCCFG_SPEC, 21> {
-        VBUSIG_W::new(self)
+    pub fn vbusig(&mut self) -> VBUSIG_W<GCCFG_SPEC> {
+        VBUSIG_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,63 +5,63 @@ pub type W = crate::W<MACCTRL_SPEC>;
 #[doc = "Field `RE` reader - Receiver enable"]
 pub type RE_R = crate::BitReader;
 #[doc = "Field `RE` writer - Receiver enable"]
-pub type RE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TE` reader - Transmitter enable"]
 pub type TE_R = crate::BitReader;
 #[doc = "Field `TE` writer - Transmitter enable"]
-pub type TE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DC` reader - Deferral check"]
 pub type DC_R = crate::BitReader;
 #[doc = "Field `DC` writer - Deferral check"]
-pub type DC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BL` reader - Back-off limit"]
 pub type BL_R = crate::FieldReader;
 #[doc = "Field `BL` writer - Back-off limit"]
-pub type BL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ACS` reader - Automatic pad/CRC stripping"]
 pub type ACS_R = crate::BitReader;
 #[doc = "Field `ACS` writer - Automatic pad/CRC stripping"]
-pub type ACS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DR` reader - Disable retry"]
 pub type DR_R = crate::BitReader;
 #[doc = "Field `DR` writer - Disable retry"]
-pub type DR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IPC` reader - IPv4 checksum offload"]
 pub type IPC_R = crate::BitReader;
 #[doc = "Field `IPC` writer - IPv4 checksum offload"]
-pub type IPC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IPC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DM` reader - Duplex mode"]
 pub type DM_R = crate::BitReader;
 #[doc = "Field `DM` writer - Duplex mode"]
-pub type DM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LM` reader - Loopback mode"]
 pub type LM_R = crate::BitReader;
 #[doc = "Field `LM` writer - Loopback mode"]
-pub type LM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DRO` reader - Disable receive own"]
 pub type DRO_R = crate::BitReader;
 #[doc = "Field `DRO` writer - Disable receive own"]
-pub type DRO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DRO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FES` reader - Fast EMAC speed"]
 pub type FES_R = crate::BitReader;
 #[doc = "Field `FES` writer - Fast EMAC speed"]
-pub type FES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DCS` reader - Disable carrier sense"]
 pub type DCS_R = crate::BitReader;
 #[doc = "Field `DCS` writer - Disable carrier sense"]
-pub type DCS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DCS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IFG` reader - Interframe gap"]
 pub type IFG_R = crate::FieldReader;
 #[doc = "Field `IFG` writer - Interframe gap"]
-pub type IFG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type IFG_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `JD` reader - Jabber disable"]
 pub type JD_R = crate::BitReader;
 #[doc = "Field `JD` writer - Jabber disable"]
-pub type JD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type JD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WD` reader - Watchdog disable"]
 pub type WD_R = crate::BitReader;
 #[doc = "Field `WD` writer - Watchdog disable"]
-pub type WD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - Receiver enable"]
     #[inline(always)]
@@ -169,92 +169,92 @@ impl W {
     #[doc = "Bit 2 - Receiver enable"]
     #[inline(always)]
     #[must_use]
-    pub fn re(&mut self) -> RE_W<MACCTRL_SPEC, 2> {
-        RE_W::new(self)
+    pub fn re(&mut self) -> RE_W<MACCTRL_SPEC> {
+        RE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transmitter enable"]
     #[inline(always)]
     #[must_use]
-    pub fn te(&mut self) -> TE_W<MACCTRL_SPEC, 3> {
-        TE_W::new(self)
+    pub fn te(&mut self) -> TE_W<MACCTRL_SPEC> {
+        TE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Deferral check"]
     #[inline(always)]
     #[must_use]
-    pub fn dc(&mut self) -> DC_W<MACCTRL_SPEC, 4> {
-        DC_W::new(self)
+    pub fn dc(&mut self) -> DC_W<MACCTRL_SPEC> {
+        DC_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Back-off limit"]
     #[inline(always)]
     #[must_use]
-    pub fn bl(&mut self) -> BL_W<MACCTRL_SPEC, 5> {
-        BL_W::new(self)
+    pub fn bl(&mut self) -> BL_W<MACCTRL_SPEC> {
+        BL_W::new(self, 5)
     }
     #[doc = "Bit 7 - Automatic pad/CRC stripping"]
     #[inline(always)]
     #[must_use]
-    pub fn acs(&mut self) -> ACS_W<MACCTRL_SPEC, 7> {
-        ACS_W::new(self)
+    pub fn acs(&mut self) -> ACS_W<MACCTRL_SPEC> {
+        ACS_W::new(self, 7)
     }
     #[doc = "Bit 9 - Disable retry"]
     #[inline(always)]
     #[must_use]
-    pub fn dr(&mut self) -> DR_W<MACCTRL_SPEC, 9> {
-        DR_W::new(self)
+    pub fn dr(&mut self) -> DR_W<MACCTRL_SPEC> {
+        DR_W::new(self, 9)
     }
     #[doc = "Bit 10 - IPv4 checksum offload"]
     #[inline(always)]
     #[must_use]
-    pub fn ipc(&mut self) -> IPC_W<MACCTRL_SPEC, 10> {
-        IPC_W::new(self)
+    pub fn ipc(&mut self) -> IPC_W<MACCTRL_SPEC> {
+        IPC_W::new(self, 10)
     }
     #[doc = "Bit 11 - Duplex mode"]
     #[inline(always)]
     #[must_use]
-    pub fn dm(&mut self) -> DM_W<MACCTRL_SPEC, 11> {
-        DM_W::new(self)
+    pub fn dm(&mut self) -> DM_W<MACCTRL_SPEC> {
+        DM_W::new(self, 11)
     }
     #[doc = "Bit 12 - Loopback mode"]
     #[inline(always)]
     #[must_use]
-    pub fn lm(&mut self) -> LM_W<MACCTRL_SPEC, 12> {
-        LM_W::new(self)
+    pub fn lm(&mut self) -> LM_W<MACCTRL_SPEC> {
+        LM_W::new(self, 12)
     }
     #[doc = "Bit 13 - Disable receive own"]
     #[inline(always)]
     #[must_use]
-    pub fn dro(&mut self) -> DRO_W<MACCTRL_SPEC, 13> {
-        DRO_W::new(self)
+    pub fn dro(&mut self) -> DRO_W<MACCTRL_SPEC> {
+        DRO_W::new(self, 13)
     }
     #[doc = "Bit 14 - Fast EMAC speed"]
     #[inline(always)]
     #[must_use]
-    pub fn fes(&mut self) -> FES_W<MACCTRL_SPEC, 14> {
-        FES_W::new(self)
+    pub fn fes(&mut self) -> FES_W<MACCTRL_SPEC> {
+        FES_W::new(self, 14)
     }
     #[doc = "Bit 16 - Disable carrier sense"]
     #[inline(always)]
     #[must_use]
-    pub fn dcs(&mut self) -> DCS_W<MACCTRL_SPEC, 16> {
-        DCS_W::new(self)
+    pub fn dcs(&mut self) -> DCS_W<MACCTRL_SPEC> {
+        DCS_W::new(self, 16)
     }
     #[doc = "Bits 17:19 - Interframe gap"]
     #[inline(always)]
     #[must_use]
-    pub fn ifg(&mut self) -> IFG_W<MACCTRL_SPEC, 17> {
-        IFG_W::new(self)
+    pub fn ifg(&mut self) -> IFG_W<MACCTRL_SPEC> {
+        IFG_W::new(self, 17)
     }
     #[doc = "Bit 22 - Jabber disable"]
     #[inline(always)]
     #[must_use]
-    pub fn jd(&mut self) -> JD_W<MACCTRL_SPEC, 22> {
-        JD_W::new(self)
+    pub fn jd(&mut self) -> JD_W<MACCTRL_SPEC> {
+        JD_W::new(self, 22)
     }
     #[doc = "Bit 23 - Watchdog disable"]
     #[inline(always)]
     #[must_use]
-    pub fn wd(&mut self) -> WD_W<MACCTRL_SPEC, 23> {
-        WD_W::new(self)
+    pub fn wd(&mut self) -> WD_W<MACCTRL_SPEC> {
+        WD_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

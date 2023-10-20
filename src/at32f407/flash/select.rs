@@ -1,7 +1,7 @@
 #[doc = "Register `SELECT` writer"]
 pub type W = crate::W<SELECT_SPEC>;
 #[doc = "Field `SELECT` writer - spim type selection"]
-pub type SELECT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SELECT_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl core::fmt::Debug for crate::generic::Reg<SELECT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -11,8 +11,8 @@ impl W {
     #[doc = "Bits 0:31 - spim type selection"]
     #[inline(always)]
     #[must_use]
-    pub fn select(&mut self) -> SELECT_W<SELECT_SPEC, 0> {
-        SELECT_W::new(self)
+    pub fn select(&mut self) -> SELECT_W<SELECT_SPEC> {
+        SELECT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<MACA1L_SPEC>;
 #[doc = "Field `MA1L` reader - MAC address1 low"]
 pub type MA1L_R = crate::FieldReader<u32>;
 #[doc = "Field `MA1L` writer - MAC address1 low"]
-pub type MA1L_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type MA1L_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - MAC address1 low"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - MAC address1 low"]
     #[inline(always)]
     #[must_use]
-    pub fn ma1l(&mut self) -> MA1L_W<MACA1L_SPEC, 0> {
-        MA1L_W::new(self)
+    pub fn ma1l(&mut self) -> MA1L_W<MACA1L_SPEC> {
+        MA1L_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

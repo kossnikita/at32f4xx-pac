@@ -5,17 +5,17 @@ pub type W = crate::W<S7FCTRL_SPEC>;
 #[doc = "Field `FTHSEL` reader - FIFO threshold selection"]
 pub type FTHSEL_R = crate::FieldReader;
 #[doc = "Field `FTHSEL` writer - FIFO threshold selection"]
-pub type FTHSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FTHSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FEN` reader - FIFO mode enable"]
 pub type FEN_R = crate::BitReader;
 #[doc = "Field `FEN` writer - FIFO mode enable"]
-pub type FEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FSTS` reader - FIFO status"]
 pub type FSTS_R = crate::FieldReader;
 #[doc = "Field `FERRIEN` reader - FIFO error interrupt enable"]
 pub type FERRIEN_R = crate::BitReader;
 #[doc = "Field `FERRIEN` writer - FIFO error interrupt enable"]
-pub type FERRIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FERRIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - FIFO threshold selection"]
     #[inline(always)]
@@ -57,20 +57,20 @@ impl W {
     #[doc = "Bits 0:1 - FIFO threshold selection"]
     #[inline(always)]
     #[must_use]
-    pub fn fthsel(&mut self) -> FTHSEL_W<S7FCTRL_SPEC, 0> {
-        FTHSEL_W::new(self)
+    pub fn fthsel(&mut self) -> FTHSEL_W<S7FCTRL_SPEC> {
+        FTHSEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - FIFO mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn fen(&mut self) -> FEN_W<S7FCTRL_SPEC, 2> {
-        FEN_W::new(self)
+    pub fn fen(&mut self) -> FEN_W<S7FCTRL_SPEC> {
+        FEN_W::new(self, 2)
     }
     #[doc = "Bit 7 - FIFO error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ferrien(&mut self) -> FERRIEN_W<S7FCTRL_SPEC, 7> {
-        FERRIEN_W::new(self)
+    pub fn ferrien(&mut self) -> FERRIEN_W<S7FCTRL_SPEC> {
+        FERRIEN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<DIVR_SPEC>;
 #[doc = "Field `FDIV` reader - Flash divider"]
 pub type FDIV_R = crate::FieldReader;
 #[doc = "Field `FDIV` writer - Flash divider"]
-pub type FDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FDIV_STS` reader - Flash divider status"]
 pub type FDIV_STS_R = crate::FieldReader;
 impl R {
@@ -37,8 +37,8 @@ impl W {
     #[doc = "Bits 0:1 - Flash divider"]
     #[inline(always)]
     #[must_use]
-    pub fn fdiv(&mut self) -> FDIV_W<DIVR_SPEC, 0> {
-        FDIV_W::new(self)
+    pub fn fdiv(&mut self) -> FDIV_W<DIVR_SPEC> {
+        FDIV_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,37 +5,37 @@ pub type W = crate::W<CTRLSTS_SPEC>;
 #[doc = "Field `LICKEN` reader - Low speed internal clock enable"]
 pub type LICKEN_R = crate::BitReader;
 #[doc = "Field `LICKEN` writer - Low speed internal clock enable"]
-pub type LICKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LICKEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LICKSTBL` reader - Low speed internal clock ready"]
 pub type LICKSTBL_R = crate::BitReader;
 #[doc = "Field `RSTFC` reader - Reset reset flag"]
 pub type RSTFC_R = crate::BitReader;
 #[doc = "Field `RSTFC` writer - Reset reset flag"]
-pub type RSTFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RSTFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NRSTF` reader - PIN reset flag"]
 pub type NRSTF_R = crate::BitReader;
 #[doc = "Field `NRSTF` writer - PIN reset flag"]
-pub type NRSTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NRSTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PORRSTF` reader - POR/LVR reset flag"]
 pub type PORRSTF_R = crate::BitReader;
 #[doc = "Field `PORRSTF` writer - POR/LVR reset flag"]
-pub type PORRSTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PORRSTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWRSTF` reader - Software reset flag"]
 pub type SWRSTF_R = crate::BitReader;
 #[doc = "Field `SWRSTF` writer - Software reset flag"]
-pub type SWRSTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SWRSTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WDTRSTF` reader - Watchdog timer reset flag"]
 pub type WDTRSTF_R = crate::BitReader;
 #[doc = "Field `WDTRSTF` writer - Watchdog timer reset flag"]
-pub type WDTRSTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WDTRSTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WWDTRSTF` reader - Window watchdog timer reset flag"]
 pub type WWDTRSTF_R = crate::BitReader;
 #[doc = "Field `WWDTRSTF` writer - Window watchdog timer reset flag"]
-pub type WWDTRSTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WWDTRSTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPRSTF` reader - Low-power reset flag"]
 pub type LPRSTF_R = crate::BitReader;
 #[doc = "Field `LPRSTF` writer - Low-power reset flag"]
-pub type LPRSTF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPRSTF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Low speed internal clock enable"]
     #[inline(always)]
@@ -107,50 +107,50 @@ impl W {
     #[doc = "Bit 0 - Low speed internal clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn licken(&mut self) -> LICKEN_W<CTRLSTS_SPEC, 0> {
-        LICKEN_W::new(self)
+    pub fn licken(&mut self) -> LICKEN_W<CTRLSTS_SPEC> {
+        LICKEN_W::new(self, 0)
     }
     #[doc = "Bit 24 - Reset reset flag"]
     #[inline(always)]
     #[must_use]
-    pub fn rstfc(&mut self) -> RSTFC_W<CTRLSTS_SPEC, 24> {
-        RSTFC_W::new(self)
+    pub fn rstfc(&mut self) -> RSTFC_W<CTRLSTS_SPEC> {
+        RSTFC_W::new(self, 24)
     }
     #[doc = "Bit 26 - PIN reset flag"]
     #[inline(always)]
     #[must_use]
-    pub fn nrstf(&mut self) -> NRSTF_W<CTRLSTS_SPEC, 26> {
-        NRSTF_W::new(self)
+    pub fn nrstf(&mut self) -> NRSTF_W<CTRLSTS_SPEC> {
+        NRSTF_W::new(self, 26)
     }
     #[doc = "Bit 27 - POR/LVR reset flag"]
     #[inline(always)]
     #[must_use]
-    pub fn porrstf(&mut self) -> PORRSTF_W<CTRLSTS_SPEC, 27> {
-        PORRSTF_W::new(self)
+    pub fn porrstf(&mut self) -> PORRSTF_W<CTRLSTS_SPEC> {
+        PORRSTF_W::new(self, 27)
     }
     #[doc = "Bit 28 - Software reset flag"]
     #[inline(always)]
     #[must_use]
-    pub fn swrstf(&mut self) -> SWRSTF_W<CTRLSTS_SPEC, 28> {
-        SWRSTF_W::new(self)
+    pub fn swrstf(&mut self) -> SWRSTF_W<CTRLSTS_SPEC> {
+        SWRSTF_W::new(self, 28)
     }
     #[doc = "Bit 29 - Watchdog timer reset flag"]
     #[inline(always)]
     #[must_use]
-    pub fn wdtrstf(&mut self) -> WDTRSTF_W<CTRLSTS_SPEC, 29> {
-        WDTRSTF_W::new(self)
+    pub fn wdtrstf(&mut self) -> WDTRSTF_W<CTRLSTS_SPEC> {
+        WDTRSTF_W::new(self, 29)
     }
     #[doc = "Bit 30 - Window watchdog timer reset flag"]
     #[inline(always)]
     #[must_use]
-    pub fn wwdtrstf(&mut self) -> WWDTRSTF_W<CTRLSTS_SPEC, 30> {
-        WWDTRSTF_W::new(self)
+    pub fn wwdtrstf(&mut self) -> WWDTRSTF_W<CTRLSTS_SPEC> {
+        WWDTRSTF_W::new(self, 30)
     }
     #[doc = "Bit 31 - Low-power reset flag"]
     #[inline(always)]
     #[must_use]
-    pub fn lprstf(&mut self) -> LPRSTF_W<CTRLSTS_SPEC, 31> {
-        LPRSTF_W::new(self)
+    pub fn lprstf(&mut self) -> LPRSTF_W<CTRLSTS_SPEC> {
+        LPRSTF_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

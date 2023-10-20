@@ -5,25 +5,25 @@ pub type W = crate::W<BPDC_SPEC>;
 #[doc = "Field `LEXTEN` reader - Low speed external crystal enable"]
 pub type LEXTEN_R = crate::BitReader;
 #[doc = "Field `LEXTEN` writer - Low speed external crystal enable"]
-pub type LEXTEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEXTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEXTSTBL` reader - Low speed external crystal ready"]
 pub type LEXTSTBL_R = crate::BitReader;
 #[doc = "Field `LEXTBYPS` reader - Low speed external crystal bypass"]
 pub type LEXTBYPS_R = crate::BitReader;
 #[doc = "Field `LEXTBYPS` writer - Low speed external crystal bypass"]
-pub type LEXTBYPS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEXTBYPS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTCSEL` reader - RTC clock selection"]
 pub type RTCSEL_R = crate::FieldReader;
 #[doc = "Field `RTCSEL` writer - RTC clock selection"]
-pub type RTCSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RTCSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RTCEN` reader - RTC clock enable"]
 pub type RTCEN_R = crate::BitReader;
 #[doc = "Field `RTCEN` writer - RTC clock enable"]
-pub type RTCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTCEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BPDRST` reader - Battery powered domain software reset"]
 pub type BPDRST_R = crate::BitReader;
 #[doc = "Field `BPDRST` writer - Battery powered domain software reset"]
-pub type BPDRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BPDRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Low speed external crystal enable"]
     #[inline(always)]
@@ -77,32 +77,32 @@ impl W {
     #[doc = "Bit 0 - Low speed external crystal enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lexten(&mut self) -> LEXTEN_W<BPDC_SPEC, 0> {
-        LEXTEN_W::new(self)
+    pub fn lexten(&mut self) -> LEXTEN_W<BPDC_SPEC> {
+        LEXTEN_W::new(self, 0)
     }
     #[doc = "Bit 2 - Low speed external crystal bypass"]
     #[inline(always)]
     #[must_use]
-    pub fn lextbyps(&mut self) -> LEXTBYPS_W<BPDC_SPEC, 2> {
-        LEXTBYPS_W::new(self)
+    pub fn lextbyps(&mut self) -> LEXTBYPS_W<BPDC_SPEC> {
+        LEXTBYPS_W::new(self, 2)
     }
     #[doc = "Bits 8:9 - RTC clock selection"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcsel(&mut self) -> RTCSEL_W<BPDC_SPEC, 8> {
-        RTCSEL_W::new(self)
+    pub fn rtcsel(&mut self) -> RTCSEL_W<BPDC_SPEC> {
+        RTCSEL_W::new(self, 8)
     }
     #[doc = "Bit 15 - RTC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rtcen(&mut self) -> RTCEN_W<BPDC_SPEC, 15> {
-        RTCEN_W::new(self)
+    pub fn rtcen(&mut self) -> RTCEN_W<BPDC_SPEC> {
+        RTCEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Battery powered domain software reset"]
     #[inline(always)]
     #[must_use]
-    pub fn bpdrst(&mut self) -> BPDRST_W<BPDC_SPEC, 16> {
-        BPDRST_W::new(self)
+    pub fn bpdrst(&mut self) -> BPDRST_W<BPDC_SPEC> {
+        BPDRST_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

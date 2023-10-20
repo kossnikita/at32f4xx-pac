@@ -5,15 +5,15 @@ pub type W = crate::W<OADDR2_SPEC>;
 #[doc = "Field `ADDR2` reader - Own address 2"]
 pub type ADDR2_R = crate::FieldReader;
 #[doc = "Field `ADDR2` writer - Own address 2"]
-pub type ADDR2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type ADDR2_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `ADDR2MASK` reader - Own address 2-bit mask"]
 pub type ADDR2MASK_R = crate::FieldReader;
 #[doc = "Field `ADDR2MASK` writer - Own address 2-bit mask"]
-pub type ADDR2MASK_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type ADDR2MASK_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `ADDR2EN` reader - Own address 2 enable"]
 pub type ADDR2EN_R = crate::BitReader;
 #[doc = "Field `ADDR2EN` writer - Own address 2 enable"]
-pub type ADDR2EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADDR2EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 1:7 - Own address 2"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bits 1:7 - Own address 2"]
     #[inline(always)]
     #[must_use]
-    pub fn addr2(&mut self) -> ADDR2_W<OADDR2_SPEC, 1> {
-        ADDR2_W::new(self)
+    pub fn addr2(&mut self) -> ADDR2_W<OADDR2_SPEC> {
+        ADDR2_W::new(self, 1)
     }
     #[doc = "Bits 8:10 - Own address 2-bit mask"]
     #[inline(always)]
     #[must_use]
-    pub fn addr2mask(&mut self) -> ADDR2MASK_W<OADDR2_SPEC, 8> {
-        ADDR2MASK_W::new(self)
+    pub fn addr2mask(&mut self) -> ADDR2MASK_W<OADDR2_SPEC> {
+        ADDR2MASK_W::new(self, 8)
     }
     #[doc = "Bit 15 - Own address 2 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn addr2en(&mut self) -> ADDR2EN_W<OADDR2_SPEC, 15> {
-        ADDR2EN_W::new(self)
+    pub fn addr2en(&mut self) -> ADDR2EN_W<OADDR2_SPEC> {
+        ADDR2EN_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

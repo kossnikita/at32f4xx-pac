@@ -5,115 +5,115 @@ pub type W = crate::W<CLR_SPEC>;
 #[doc = "Field `GFC1` reader - Channel 1 Global flag clear"]
 pub type GFC1_R = crate::BitReader;
 #[doc = "Field `GFC1` writer - Channel 1 Global flag clear"]
-pub type GFC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GFC1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDTFC1` reader - Channel 1 full data transfer flag clear"]
 pub type FDTFC1_R = crate::BitReader;
 #[doc = "Field `FDTFC1` writer - Channel 1 full data transfer flag clear"]
-pub type FDTFC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDTFC1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDTFC1` reader - Channel 1 half data transfer flag clear"]
 pub type HDTFC1_R = crate::BitReader;
 #[doc = "Field `HDTFC1` writer - Channel 1 half data transfer flag clear"]
-pub type HDTFC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDTFC1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTERRFC1` reader - Channel 1 data transfer error flag clear"]
 pub type DTERRFC1_R = crate::BitReader;
 #[doc = "Field `DTERRFC1` writer - Channel 1 data transfer error flag clear"]
-pub type DTERRFC1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTERRFC1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GFC2` reader - Channel 2 Global flag clear"]
 pub type GFC2_R = crate::BitReader;
 #[doc = "Field `GFC2` writer - Channel 2 Global flag clear"]
-pub type GFC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GFC2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDTFC2` reader - Channel 2 full data transfer flag clear"]
 pub type FDTFC2_R = crate::BitReader;
 #[doc = "Field `FDTFC2` writer - Channel 2 full data transfer flag clear"]
-pub type FDTFC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDTFC2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDTFC2` reader - Channel 2 half data transfer flag clear"]
 pub type HDTFC2_R = crate::BitReader;
 #[doc = "Field `HDTFC2` writer - Channel 2 half data transfer flag clear"]
-pub type HDTFC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDTFC2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTERRFC2` reader - Channel 2 data transfer error flag clear"]
 pub type DTERRFC2_R = crate::BitReader;
 #[doc = "Field `DTERRFC2` writer - Channel 2 data transfer error flag clear"]
-pub type DTERRFC2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTERRFC2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GFC3` reader - Channel 3 Global flag clear"]
 pub type GFC3_R = crate::BitReader;
 #[doc = "Field `GFC3` writer - Channel 3 Global flag clear"]
-pub type GFC3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GFC3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDTFC3` reader - Channel 3 full data transfer flag clear"]
 pub type FDTFC3_R = crate::BitReader;
 #[doc = "Field `FDTFC3` writer - Channel 3 full data transfer flag clear"]
-pub type FDTFC3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDTFC3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDTFC3` reader - Channel 3 half data transfer flag clear"]
 pub type HDTFC3_R = crate::BitReader;
 #[doc = "Field `HDTFC3` writer - Channel 3 half data transfer flag clear"]
-pub type HDTFC3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDTFC3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTERRFC3` reader - Channel 3 data transfer error flag clear"]
 pub type DTERRFC3_R = crate::BitReader;
 #[doc = "Field `DTERRFC3` writer - Channel 3 data transfer error flag clear"]
-pub type DTERRFC3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTERRFC3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GFC4` reader - Channel 4 Global flag clear"]
 pub type GFC4_R = crate::BitReader;
 #[doc = "Field `GFC4` writer - Channel 4 Global flag clear"]
-pub type GFC4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GFC4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDTFC4` reader - Channel 4 full data transfer flag clear"]
 pub type FDTFC4_R = crate::BitReader;
 #[doc = "Field `FDTFC4` writer - Channel 4 full data transfer flag clear"]
-pub type FDTFC4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDTFC4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDTFC4` reader - Channel 4 half data transfer flag clear"]
 pub type HDTFC4_R = crate::BitReader;
 #[doc = "Field `HDTFC4` writer - Channel 4 half data transfer flag clear"]
-pub type HDTFC4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDTFC4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTERRFC4` reader - Channel 4 data transfer error flag clear"]
 pub type DTERRFC4_R = crate::BitReader;
 #[doc = "Field `DTERRFC4` writer - Channel 4 data transfer error flag clear"]
-pub type DTERRFC4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTERRFC4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GFC5` reader - Channel 5 Global flag clear"]
 pub type GFC5_R = crate::BitReader;
 #[doc = "Field `GFC5` writer - Channel 5 Global flag clear"]
-pub type GFC5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GFC5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDTFC5` reader - Channel 5 full data transfer flag clear"]
 pub type FDTFC5_R = crate::BitReader;
 #[doc = "Field `FDTFC5` writer - Channel 5 full data transfer flag clear"]
-pub type FDTFC5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDTFC5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDTFC5` reader - Channel 5 half data transfer flag clear"]
 pub type HDTFC5_R = crate::BitReader;
 #[doc = "Field `HDTFC5` writer - Channel 5 half data transfer flag clear"]
-pub type HDTFC5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDTFC5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTERRFC5` reader - Channel 5 data transfer error flag clear"]
 pub type DTERRFC5_R = crate::BitReader;
 #[doc = "Field `DTERRFC5` writer - Channel 5 data transfer error flag clear"]
-pub type DTERRFC5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTERRFC5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GFC6` reader - Channel 6 Global flag clear"]
 pub type GFC6_R = crate::BitReader;
 #[doc = "Field `GFC6` writer - Channel 6 Global flag clear"]
-pub type GFC6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GFC6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDTFC6` reader - Channel 6 full data transfer flag clear"]
 pub type FDTFC6_R = crate::BitReader;
 #[doc = "Field `FDTFC6` writer - Channel 6 full data transfer flag clear"]
-pub type FDTFC6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDTFC6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDTFC6` reader - Channel 6 half data transfer flag clear"]
 pub type HDTFC6_R = crate::BitReader;
 #[doc = "Field `HDTFC6` writer - Channel 6 half data transfer flag clear"]
-pub type HDTFC6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDTFC6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTERRFC6` reader - Channel 6 data transfer error flag clear"]
 pub type DTERRFC6_R = crate::BitReader;
 #[doc = "Field `DTERRFC6` writer - Channel 6 data transfer error flag clear"]
-pub type DTERRFC6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTERRFC6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GFC7` reader - Channel 7 Global flag clear"]
 pub type GFC7_R = crate::BitReader;
 #[doc = "Field `GFC7` writer - Channel 7 Global flag clear"]
-pub type GFC7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GFC7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FDTFC7` reader - Channel 7 full data transfer flag clear"]
 pub type FDTFC7_R = crate::BitReader;
 #[doc = "Field `FDTFC7` writer - Channel 7 full data transfer flag clear"]
-pub type FDTFC7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FDTFC7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDTFC7` reader - Channel 7 half data transfer flag clear"]
 pub type HDTFC7_R = crate::BitReader;
 #[doc = "Field `HDTFC7` writer - Channel 7 half data transfer flag clear"]
-pub type HDTFC7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDTFC7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTERRFC7` reader - Channel 7 data transfer error flag clear"]
 pub type DTERRFC7_R = crate::BitReader;
 #[doc = "Field `DTERRFC7` writer - Channel 7 data transfer error flag clear"]
-pub type DTERRFC7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTERRFC7_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Channel 1 Global flag clear"]
     #[inline(always)]
@@ -299,170 +299,170 @@ impl W {
     #[doc = "Bit 0 - Channel 1 Global flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn gfc1(&mut self) -> GFC1_W<CLR_SPEC, 0> {
-        GFC1_W::new(self)
+    pub fn gfc1(&mut self) -> GFC1_W<CLR_SPEC> {
+        GFC1_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel 1 full data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn fdtfc1(&mut self) -> FDTFC1_W<CLR_SPEC, 1> {
-        FDTFC1_W::new(self)
+    pub fn fdtfc1(&mut self) -> FDTFC1_W<CLR_SPEC> {
+        FDTFC1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 1 half data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdtfc1(&mut self) -> HDTFC1_W<CLR_SPEC, 2> {
-        HDTFC1_W::new(self)
+    pub fn hdtfc1(&mut self) -> HDTFC1_W<CLR_SPEC> {
+        HDTFC1_W::new(self, 2)
     }
     #[doc = "Bit 3 - Channel 1 data transfer error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dterrfc1(&mut self) -> DTERRFC1_W<CLR_SPEC, 3> {
-        DTERRFC1_W::new(self)
+    pub fn dterrfc1(&mut self) -> DTERRFC1_W<CLR_SPEC> {
+        DTERRFC1_W::new(self, 3)
     }
     #[doc = "Bit 4 - Channel 2 Global flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn gfc2(&mut self) -> GFC2_W<CLR_SPEC, 4> {
-        GFC2_W::new(self)
+    pub fn gfc2(&mut self) -> GFC2_W<CLR_SPEC> {
+        GFC2_W::new(self, 4)
     }
     #[doc = "Bit 5 - Channel 2 full data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn fdtfc2(&mut self) -> FDTFC2_W<CLR_SPEC, 5> {
-        FDTFC2_W::new(self)
+    pub fn fdtfc2(&mut self) -> FDTFC2_W<CLR_SPEC> {
+        FDTFC2_W::new(self, 5)
     }
     #[doc = "Bit 6 - Channel 2 half data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdtfc2(&mut self) -> HDTFC2_W<CLR_SPEC, 6> {
-        HDTFC2_W::new(self)
+    pub fn hdtfc2(&mut self) -> HDTFC2_W<CLR_SPEC> {
+        HDTFC2_W::new(self, 6)
     }
     #[doc = "Bit 7 - Channel 2 data transfer error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dterrfc2(&mut self) -> DTERRFC2_W<CLR_SPEC, 7> {
-        DTERRFC2_W::new(self)
+    pub fn dterrfc2(&mut self) -> DTERRFC2_W<CLR_SPEC> {
+        DTERRFC2_W::new(self, 7)
     }
     #[doc = "Bit 8 - Channel 3 Global flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn gfc3(&mut self) -> GFC3_W<CLR_SPEC, 8> {
-        GFC3_W::new(self)
+    pub fn gfc3(&mut self) -> GFC3_W<CLR_SPEC> {
+        GFC3_W::new(self, 8)
     }
     #[doc = "Bit 9 - Channel 3 full data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn fdtfc3(&mut self) -> FDTFC3_W<CLR_SPEC, 9> {
-        FDTFC3_W::new(self)
+    pub fn fdtfc3(&mut self) -> FDTFC3_W<CLR_SPEC> {
+        FDTFC3_W::new(self, 9)
     }
     #[doc = "Bit 10 - Channel 3 half data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdtfc3(&mut self) -> HDTFC3_W<CLR_SPEC, 10> {
-        HDTFC3_W::new(self)
+    pub fn hdtfc3(&mut self) -> HDTFC3_W<CLR_SPEC> {
+        HDTFC3_W::new(self, 10)
     }
     #[doc = "Bit 11 - Channel 3 data transfer error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dterrfc3(&mut self) -> DTERRFC3_W<CLR_SPEC, 11> {
-        DTERRFC3_W::new(self)
+    pub fn dterrfc3(&mut self) -> DTERRFC3_W<CLR_SPEC> {
+        DTERRFC3_W::new(self, 11)
     }
     #[doc = "Bit 12 - Channel 4 Global flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn gfc4(&mut self) -> GFC4_W<CLR_SPEC, 12> {
-        GFC4_W::new(self)
+    pub fn gfc4(&mut self) -> GFC4_W<CLR_SPEC> {
+        GFC4_W::new(self, 12)
     }
     #[doc = "Bit 13 - Channel 4 full data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn fdtfc4(&mut self) -> FDTFC4_W<CLR_SPEC, 13> {
-        FDTFC4_W::new(self)
+    pub fn fdtfc4(&mut self) -> FDTFC4_W<CLR_SPEC> {
+        FDTFC4_W::new(self, 13)
     }
     #[doc = "Bit 14 - Channel 4 half data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdtfc4(&mut self) -> HDTFC4_W<CLR_SPEC, 14> {
-        HDTFC4_W::new(self)
+    pub fn hdtfc4(&mut self) -> HDTFC4_W<CLR_SPEC> {
+        HDTFC4_W::new(self, 14)
     }
     #[doc = "Bit 15 - Channel 4 data transfer error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dterrfc4(&mut self) -> DTERRFC4_W<CLR_SPEC, 15> {
-        DTERRFC4_W::new(self)
+    pub fn dterrfc4(&mut self) -> DTERRFC4_W<CLR_SPEC> {
+        DTERRFC4_W::new(self, 15)
     }
     #[doc = "Bit 16 - Channel 5 Global flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn gfc5(&mut self) -> GFC5_W<CLR_SPEC, 16> {
-        GFC5_W::new(self)
+    pub fn gfc5(&mut self) -> GFC5_W<CLR_SPEC> {
+        GFC5_W::new(self, 16)
     }
     #[doc = "Bit 17 - Channel 5 full data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn fdtfc5(&mut self) -> FDTFC5_W<CLR_SPEC, 17> {
-        FDTFC5_W::new(self)
+    pub fn fdtfc5(&mut self) -> FDTFC5_W<CLR_SPEC> {
+        FDTFC5_W::new(self, 17)
     }
     #[doc = "Bit 18 - Channel 5 half data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdtfc5(&mut self) -> HDTFC5_W<CLR_SPEC, 18> {
-        HDTFC5_W::new(self)
+    pub fn hdtfc5(&mut self) -> HDTFC5_W<CLR_SPEC> {
+        HDTFC5_W::new(self, 18)
     }
     #[doc = "Bit 19 - Channel 5 data transfer error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dterrfc5(&mut self) -> DTERRFC5_W<CLR_SPEC, 19> {
-        DTERRFC5_W::new(self)
+    pub fn dterrfc5(&mut self) -> DTERRFC5_W<CLR_SPEC> {
+        DTERRFC5_W::new(self, 19)
     }
     #[doc = "Bit 20 - Channel 6 Global flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn gfc6(&mut self) -> GFC6_W<CLR_SPEC, 20> {
-        GFC6_W::new(self)
+    pub fn gfc6(&mut self) -> GFC6_W<CLR_SPEC> {
+        GFC6_W::new(self, 20)
     }
     #[doc = "Bit 21 - Channel 6 full data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn fdtfc6(&mut self) -> FDTFC6_W<CLR_SPEC, 21> {
-        FDTFC6_W::new(self)
+    pub fn fdtfc6(&mut self) -> FDTFC6_W<CLR_SPEC> {
+        FDTFC6_W::new(self, 21)
     }
     #[doc = "Bit 22 - Channel 6 half data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdtfc6(&mut self) -> HDTFC6_W<CLR_SPEC, 22> {
-        HDTFC6_W::new(self)
+    pub fn hdtfc6(&mut self) -> HDTFC6_W<CLR_SPEC> {
+        HDTFC6_W::new(self, 22)
     }
     #[doc = "Bit 23 - Channel 6 data transfer error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dterrfc6(&mut self) -> DTERRFC6_W<CLR_SPEC, 23> {
-        DTERRFC6_W::new(self)
+    pub fn dterrfc6(&mut self) -> DTERRFC6_W<CLR_SPEC> {
+        DTERRFC6_W::new(self, 23)
     }
     #[doc = "Bit 24 - Channel 7 Global flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn gfc7(&mut self) -> GFC7_W<CLR_SPEC, 24> {
-        GFC7_W::new(self)
+    pub fn gfc7(&mut self) -> GFC7_W<CLR_SPEC> {
+        GFC7_W::new(self, 24)
     }
     #[doc = "Bit 25 - Channel 7 full data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn fdtfc7(&mut self) -> FDTFC7_W<CLR_SPEC, 25> {
-        FDTFC7_W::new(self)
+    pub fn fdtfc7(&mut self) -> FDTFC7_W<CLR_SPEC> {
+        FDTFC7_W::new(self, 25)
     }
     #[doc = "Bit 26 - Channel 7 half data transfer flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hdtfc7(&mut self) -> HDTFC7_W<CLR_SPEC, 26> {
-        HDTFC7_W::new(self)
+    pub fn hdtfc7(&mut self) -> HDTFC7_W<CLR_SPEC> {
+        HDTFC7_W::new(self, 26)
     }
     #[doc = "Bit 27 - Channel 7 data transfer error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dterrfc7(&mut self) -> DTERRFC7_W<CLR_SPEC, 27> {
-        DTERRFC7_W::new(self)
+    pub fn dterrfc7(&mut self) -> DTERRFC7_W<CLR_SPEC> {
+        DTERRFC7_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

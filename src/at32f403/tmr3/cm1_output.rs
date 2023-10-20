@@ -60,8 +60,8 @@ impl C1C_R {
     }
 }
 #[doc = "Field `C1C` writer - Channel 1 configure"]
-pub type C1C_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, C1C_A>;
-impl<'a, REG, const O: u8> C1C_W<'a, REG, O>
+pub type C1C_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C1C_A>;
+impl<'a, REG> C1C_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -124,8 +124,8 @@ impl COIEN_R {
     }
 }
 #[doc = "Field `COIEN[1-2]` writer - Channel %s output immediately enable"]
-pub type COIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1OIEN_A>;
-impl<'a, REG, const O: u8> COIEN_W<'a, REG, O>
+pub type COIEN_W<'a, REG> = crate::BitWriter<'a, REG, C1OIEN_A>;
+impl<'a, REG> COIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -191,8 +191,8 @@ impl From<C1OBENW_AW> for bool {
     }
 }
 #[doc = "Field `COBEN[1-2]` writer - Channel %s output buffer enable"]
-pub type COBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1OBENW_AW>;
-impl<'a, REG, const O: u8> COBEN_W<'a, REG, O>
+pub type COBEN_W<'a, REG> = crate::BitWriter<'a, REG, C1OBENW_AW>;
+impl<'a, REG> COBEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -210,7 +210,7 @@ where
 #[doc = "Field `COCTRL[1-2]` reader - Channel %s output control"]
 pub type COCTRL_R = crate::FieldReader;
 #[doc = "Field `COCTRL[1-2]` writer - Channel %s output control"]
-pub type COCTRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type COCTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `COSEN[1-2]` reader - Channel %s output switch enable"]
 pub type COSEN_R = crate::BitReader<C1OSENR_A>;
 #[doc = "Channel %s output switch enable\n\nValue on reset: 0"]
@@ -262,8 +262,8 @@ impl From<C1OSENW_AW> for bool {
     }
 }
 #[doc = "Field `COSEN[1-2]` writer - Channel %s output switch enable"]
-pub type COSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C1OSENW_AW>;
-impl<'a, REG, const O: u8> COSEN_W<'a, REG, O>
+pub type COSEN_W<'a, REG> = crate::BitWriter<'a, REG, C1OSENW_AW>;
+impl<'a, REG> COSEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -336,8 +336,8 @@ impl C2C_R {
     }
 }
 #[doc = "Field `C2C` writer - Channel 2 configure"]
-pub type C2C_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, C2C_A>;
-impl<'a, REG, const O: u8> C2C_W<'a, REG, O>
+pub type C2C_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C2C_A>;
+impl<'a, REG> C2C_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -370,10 +370,11 @@ impl R {
         C1C_R::new((self.bits & 3) as u8)
     }
     #[doc = "Channel [1-2]
-output immediately enable"]
+output immediately enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn coien(&self, n: u8) -> COIEN_R {
-        COIEN_R::new(((self.bits >> ((n - 1) * 8 + 2)) & 1) != 0)
+    pub fn coien(&self, n: u8) -> COIEN_R {
+        assert!(n < 2);
+        COIEN_R::new(((self.bits >> (n * 8 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - Channel 1 output immediately enable"]
     #[inline(always)]
@@ -386,10 +387,11 @@ output immediately enable"]
         COIEN_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Channel [1-2]
-output buffer enable"]
+output buffer enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn coben(&self, n: u8) -> COBEN_R {
-        COBEN_R::new(((self.bits >> ((n - 1) * 8 + 3)) & 1) != 0)
+    pub fn coben(&self, n: u8) -> COBEN_R {
+        assert!(n < 2);
+        COBEN_R::new(((self.bits >> (n * 8 + 3)) & 1) != 0)
     }
     #[doc = "Bit 3 - Channel 1 output buffer enable"]
     #[inline(always)]
@@ -402,10 +404,11 @@ output buffer enable"]
         COBEN_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Channel [1-2]
-output control"]
+output control\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn coctrl(&self, n: u8) -> COCTRL_R {
-        COCTRL_R::new(((self.bits >> ((n - 1) * 8 + 4)) & 7) as u8)
+    pub fn coctrl(&self, n: u8) -> COCTRL_R {
+        assert!(n < 2);
+        COCTRL_R::new(((self.bits >> (n * 8 + 4)) & 7) as u8)
     }
     #[doc = "Bits 4:6 - Channel 1 output control"]
     #[inline(always)]
@@ -418,10 +421,11 @@ output control"]
         COCTRL_R::new(((self.bits >> 12) & 7) as u8)
     }
     #[doc = "Channel [1-2]
-output switch enable"]
+output switch enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cosen(&self, n: u8) -> COSEN_R {
-        COSEN_R::new(((self.bits >> ((n - 1) * 8 + 7)) & 1) != 0)
+    pub fn cosen(&self, n: u8) -> COSEN_R {
+        assert!(n < 2);
+        COSEN_R::new(((self.bits >> (n * 8 + 7)) & 1) != 0)
     }
     #[doc = "Bit 7 - Channel 1 output switch enable"]
     #[inline(always)]
@@ -464,90 +468,94 @@ impl W {
     #[doc = "Bits 0:1 - Channel 1 configure"]
     #[inline(always)]
     #[must_use]
-    pub fn c1c(&mut self) -> C1C_W<CM1_OUTPUT_SPEC, 0> {
-        C1C_W::new(self)
+    pub fn c1c(&mut self) -> C1C_W<CM1_OUTPUT_SPEC> {
+        C1C_W::new(self, 0)
     }
     #[doc = "Channel [1-2]
 output immediately enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn coien<const O: u8>(&mut self) -> COIEN_W<CM1_OUTPUT_SPEC, O> {
-        COIEN_W::new(self)
+    pub fn coien(&mut self, n: u8) -> COIEN_W<CM1_OUTPUT_SPEC> {
+        assert!(n < 2);
+        COIEN_W::new(self, n * 8 + 2)
     }
     #[doc = "Bit 2 - Channel 1 output immediately enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c1oien(&mut self) -> COIEN_W<CM1_OUTPUT_SPEC, 2> {
-        COIEN_W::new(self)
+    pub fn c1oien(&mut self) -> COIEN_W<CM1_OUTPUT_SPEC> {
+        COIEN_W::new(self, 2)
     }
     #[doc = "Bit 10 - Channel 2 output immediately enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c2oien(&mut self) -> COIEN_W<CM1_OUTPUT_SPEC, 10> {
-        COIEN_W::new(self)
+    pub fn c2oien(&mut self) -> COIEN_W<CM1_OUTPUT_SPEC> {
+        COIEN_W::new(self, 10)
     }
     #[doc = "Channel [1-2]
 output buffer enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn coben<const O: u8>(&mut self) -> COBEN_W<CM1_OUTPUT_SPEC, O> {
-        COBEN_W::new(self)
+    pub fn coben(&mut self, n: u8) -> COBEN_W<CM1_OUTPUT_SPEC> {
+        assert!(n < 2);
+        COBEN_W::new(self, n * 8 + 3)
     }
     #[doc = "Bit 3 - Channel 1 output buffer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c1oben(&mut self) -> COBEN_W<CM1_OUTPUT_SPEC, 3> {
-        COBEN_W::new(self)
+    pub fn c1oben(&mut self) -> COBEN_W<CM1_OUTPUT_SPEC> {
+        COBEN_W::new(self, 3)
     }
     #[doc = "Bit 11 - Channel 2 output buffer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c2oben(&mut self) -> COBEN_W<CM1_OUTPUT_SPEC, 11> {
-        COBEN_W::new(self)
+    pub fn c2oben(&mut self) -> COBEN_W<CM1_OUTPUT_SPEC> {
+        COBEN_W::new(self, 11)
     }
     #[doc = "Channel [1-2]
 output control"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn coctrl<const O: u8>(&mut self) -> COCTRL_W<CM1_OUTPUT_SPEC, O> {
-        COCTRL_W::new(self)
+    pub fn coctrl(&mut self, n: u8) -> COCTRL_W<CM1_OUTPUT_SPEC> {
+        assert!(n < 2);
+        COCTRL_W::new(self, n * 8 + 4)
     }
     #[doc = "Bits 4:6 - Channel 1 output control"]
     #[inline(always)]
     #[must_use]
-    pub fn c1octrl(&mut self) -> COCTRL_W<CM1_OUTPUT_SPEC, 4> {
-        COCTRL_W::new(self)
+    pub fn c1octrl(&mut self) -> COCTRL_W<CM1_OUTPUT_SPEC> {
+        COCTRL_W::new(self, 4)
     }
     #[doc = "Bits 12:14 - Channel 2 output control"]
     #[inline(always)]
     #[must_use]
-    pub fn c2octrl(&mut self) -> COCTRL_W<CM1_OUTPUT_SPEC, 12> {
-        COCTRL_W::new(self)
+    pub fn c2octrl(&mut self) -> COCTRL_W<CM1_OUTPUT_SPEC> {
+        COCTRL_W::new(self, 12)
     }
     #[doc = "Channel [1-2]
 output switch enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cosen<const O: u8>(&mut self) -> COSEN_W<CM1_OUTPUT_SPEC, O> {
-        COSEN_W::new(self)
+    pub fn cosen(&mut self, n: u8) -> COSEN_W<CM1_OUTPUT_SPEC> {
+        assert!(n < 2);
+        COSEN_W::new(self, n * 8 + 7)
     }
     #[doc = "Bit 7 - Channel 1 output switch enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c1osen(&mut self) -> COSEN_W<CM1_OUTPUT_SPEC, 7> {
-        COSEN_W::new(self)
+    pub fn c1osen(&mut self) -> COSEN_W<CM1_OUTPUT_SPEC> {
+        COSEN_W::new(self, 7)
     }
     #[doc = "Bit 15 - Channel 2 output switch enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c2osen(&mut self) -> COSEN_W<CM1_OUTPUT_SPEC, 15> {
-        COSEN_W::new(self)
+    pub fn c2osen(&mut self) -> COSEN_W<CM1_OUTPUT_SPEC> {
+        COSEN_W::new(self, 15)
     }
     #[doc = "Bits 8:9 - Channel 2 configure"]
     #[inline(always)]
     #[must_use]
-    pub fn c2c(&mut self) -> C2C_W<CM1_OUTPUT_SPEC, 8> {
-        C2C_W::new(self)
+    pub fn c2c(&mut self) -> C2C_W<CM1_OUTPUT_SPEC> {
+        C2C_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

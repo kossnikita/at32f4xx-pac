@@ -5,7 +5,7 @@ pub type W = crate::W<DMARDLADDR_SPEC>;
 #[doc = "Field `SRL` reader - Start of receive list"]
 pub type SRL_R = crate::FieldReader<u32>;
 #[doc = "Field `SRL` writer - Start of receive list"]
-pub type SRL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SRL_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Start of receive list"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Start of receive list"]
     #[inline(always)]
     #[must_use]
-    pub fn srl(&mut self) -> SRL_W<DMARDLADDR_SPEC, 0> {
-        SRL_W::new(self)
+    pub fn srl(&mut self) -> SRL_W<DMARDLADDR_SPEC> {
+        SRL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

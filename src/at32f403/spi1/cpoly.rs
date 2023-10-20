@@ -5,7 +5,7 @@ pub type W = crate::W<CPOLY_SPEC>;
 #[doc = "Field `CPOLY` reader - CRC polynomial"]
 pub type CPOLY_R = crate::FieldReader<u16>;
 #[doc = "Field `CPOLY` writer - CRC polynomial"]
-pub type CPOLY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type CPOLY_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - CRC polynomial"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:15 - CRC polynomial"]
     #[inline(always)]
     #[must_use]
-    pub fn cpoly(&mut self) -> CPOLY_W<CPOLY_SPEC, 0> {
-        CPOLY_W::new(self)
+    pub fn cpoly(&mut self) -> CPOLY_W<CPOLY_SPEC> {
+        CPOLY_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

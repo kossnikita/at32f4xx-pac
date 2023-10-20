@@ -5,83 +5,83 @@ pub type W = crate::W<AHBLPEN1_SPEC>;
 #[doc = "Field `GPIOALP` reader - IO A clock enable during sleep mode"]
 pub type GPIOALP_R = crate::BitReader;
 #[doc = "Field `GPIOALP` writer - IO A clock enable during sleep mode"]
-pub type GPIOALP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOALP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOBLP` reader - IO B clock enable during sleep mode"]
 pub type GPIOBLP_R = crate::BitReader;
 #[doc = "Field `GPIOBLP` writer - IO B clock enable during sleep mode"]
-pub type GPIOBLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOBLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOCLP` reader - IO C clock enable during sleep mode"]
 pub type GPIOCLP_R = crate::BitReader;
 #[doc = "Field `GPIOCLP` writer - IO C clock enable during sleep mode"]
-pub type GPIOCLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOCLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIODLP` reader - IO D clock enable during sleep mode"]
 pub type GPIODLP_R = crate::BitReader;
 #[doc = "Field `GPIODLP` writer - IO D clock enable during sleep mode"]
-pub type GPIODLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIODLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOELP` reader - IO E clock enable during sleep mode"]
 pub type GPIOELP_R = crate::BitReader;
 #[doc = "Field `GPIOELP` writer - IO E clock enable during sleep mode"]
-pub type GPIOELP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOELP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOFLP` reader - IO F clock enable during sleep mode"]
 pub type GPIOFLP_R = crate::BitReader;
 #[doc = "Field `GPIOFLP` writer - IO F clock enable during sleep mode"]
-pub type GPIOFLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOFLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOGLP` reader - IO G clock enable during sleep mode"]
 pub type GPIOGLP_R = crate::BitReader;
 #[doc = "Field `GPIOGLP` writer - IO G clock enable during sleep mode"]
-pub type GPIOGLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOGLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GPIOHLP` reader - IO H clock enable during sleep mode"]
 pub type GPIOHLP_R = crate::BitReader;
 #[doc = "Field `GPIOHLP` writer - IO H clock enable during sleep mode"]
-pub type GPIOHLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GPIOHLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRCLP` reader - CRC clock enable during sleep mode"]
 pub type CRCLP_R = crate::BitReader;
 #[doc = "Field `CRCLP` writer - CRC clock enable during sleep mode"]
-pub type CRCLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRCLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLASHLP` reader - Flash clock enable during sleep mode"]
 pub type FLASHLP_R = crate::BitReader;
 #[doc = "Field `FLASHLP` writer - Flash clock enable during sleep mode"]
-pub type FLASHLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLASHLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRAM1LP` reader - SRAM1 clock enable during sleep mode"]
 pub type SRAM1LP_R = crate::BitReader;
 #[doc = "Field `SRAM1LP` writer - SRAM1 clock enable during sleep mode"]
-pub type SRAM1LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRAM1LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRAM2LP` reader - SRAM2 clock enable during sleep mode"]
 pub type SRAM2LP_R = crate::BitReader;
 #[doc = "Field `SRAM2LP` writer - SRAM2 clock enable during sleep mode"]
-pub type SRAM2LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRAM2LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EDMALP` reader - EDMA clock enable during sleep mode"]
 pub type EDMALP_R = crate::BitReader;
 #[doc = "Field `EDMALP` writer - EDMA clock enable during sleep mode"]
-pub type EDMALP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EDMALP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA1LP` reader - DMA1 clock enable during sleep mode"]
 pub type DMA1LP_R = crate::BitReader;
 #[doc = "Field `DMA1LP` writer - DMA1 clock enable during sleep mode"]
-pub type DMA1LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA1LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA2LP` reader - DMA2 clock enable during sleep mode"]
 pub type DMA2LP_R = crate::BitReader;
 #[doc = "Field `DMA2LP` writer - DMA2 clock enable during sleep mode"]
-pub type DMA2LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA2LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EMACLP` reader - EMAC clock enable during sleep mode"]
 pub type EMACLP_R = crate::BitReader;
 #[doc = "Field `EMACLP` writer - EMAC clock enable during sleep mode"]
-pub type EMACLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EMACLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EMACTXLP` reader - EMAC Tx clock enable during sleep mode"]
 pub type EMACTXLP_R = crate::BitReader;
 #[doc = "Field `EMACTXLP` writer - EMAC Tx clock enable during sleep mode"]
-pub type EMACTXLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EMACTXLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EMACRXLP` reader - EMAC Rx clock enable during sleep mode"]
 pub type EMACRXLP_R = crate::BitReader;
 #[doc = "Field `EMACRXLP` writer - EMAC Rx clock enable during sleep mode"]
-pub type EMACRXLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EMACRXLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EMACPTPLP` reader - EMAC PTP clock enable during sleep mode"]
 pub type EMACPTPLP_R = crate::BitReader;
 #[doc = "Field `EMACPTPLP` writer - EMAC PTP clock enable during sleep mode"]
-pub type EMACPTPLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EMACPTPLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OTGFS2LP` reader - OTGFS2 clock enable during sleep mode"]
 pub type OTGFS2LP_R = crate::BitReader;
 #[doc = "Field `OTGFS2LP` writer - OTGFS2 clock enable during sleep mode"]
-pub type OTGFS2LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OTGFS2LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - IO A clock enable during sleep mode"]
     #[inline(always)]
@@ -219,122 +219,122 @@ impl W {
     #[doc = "Bit 0 - IO A clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioalp(&mut self) -> GPIOALP_W<AHBLPEN1_SPEC, 0> {
-        GPIOALP_W::new(self)
+    pub fn gpioalp(&mut self) -> GPIOALP_W<AHBLPEN1_SPEC> {
+        GPIOALP_W::new(self, 0)
     }
     #[doc = "Bit 1 - IO B clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioblp(&mut self) -> GPIOBLP_W<AHBLPEN1_SPEC, 1> {
-        GPIOBLP_W::new(self)
+    pub fn gpioblp(&mut self) -> GPIOBLP_W<AHBLPEN1_SPEC> {
+        GPIOBLP_W::new(self, 1)
     }
     #[doc = "Bit 2 - IO C clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioclp(&mut self) -> GPIOCLP_W<AHBLPEN1_SPEC, 2> {
-        GPIOCLP_W::new(self)
+    pub fn gpioclp(&mut self) -> GPIOCLP_W<AHBLPEN1_SPEC> {
+        GPIOCLP_W::new(self, 2)
     }
     #[doc = "Bit 3 - IO D clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiodlp(&mut self) -> GPIODLP_W<AHBLPEN1_SPEC, 3> {
-        GPIODLP_W::new(self)
+    pub fn gpiodlp(&mut self) -> GPIODLP_W<AHBLPEN1_SPEC> {
+        GPIODLP_W::new(self, 3)
     }
     #[doc = "Bit 4 - IO E clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioelp(&mut self) -> GPIOELP_W<AHBLPEN1_SPEC, 4> {
-        GPIOELP_W::new(self)
+    pub fn gpioelp(&mut self) -> GPIOELP_W<AHBLPEN1_SPEC> {
+        GPIOELP_W::new(self, 4)
     }
     #[doc = "Bit 5 - IO F clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioflp(&mut self) -> GPIOFLP_W<AHBLPEN1_SPEC, 5> {
-        GPIOFLP_W::new(self)
+    pub fn gpioflp(&mut self) -> GPIOFLP_W<AHBLPEN1_SPEC> {
+        GPIOFLP_W::new(self, 5)
     }
     #[doc = "Bit 6 - IO G clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn gpioglp(&mut self) -> GPIOGLP_W<AHBLPEN1_SPEC, 6> {
-        GPIOGLP_W::new(self)
+    pub fn gpioglp(&mut self) -> GPIOGLP_W<AHBLPEN1_SPEC> {
+        GPIOGLP_W::new(self, 6)
     }
     #[doc = "Bit 7 - IO H clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn gpiohlp(&mut self) -> GPIOHLP_W<AHBLPEN1_SPEC, 7> {
-        GPIOHLP_W::new(self)
+    pub fn gpiohlp(&mut self) -> GPIOHLP_W<AHBLPEN1_SPEC> {
+        GPIOHLP_W::new(self, 7)
     }
     #[doc = "Bit 12 - CRC clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn crclp(&mut self) -> CRCLP_W<AHBLPEN1_SPEC, 12> {
-        CRCLP_W::new(self)
+    pub fn crclp(&mut self) -> CRCLP_W<AHBLPEN1_SPEC> {
+        CRCLP_W::new(self, 12)
     }
     #[doc = "Bit 15 - Flash clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn flashlp(&mut self) -> FLASHLP_W<AHBLPEN1_SPEC, 15> {
-        FLASHLP_W::new(self)
+    pub fn flashlp(&mut self) -> FLASHLP_W<AHBLPEN1_SPEC> {
+        FLASHLP_W::new(self, 15)
     }
     #[doc = "Bit 16 - SRAM1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sram1lp(&mut self) -> SRAM1LP_W<AHBLPEN1_SPEC, 16> {
-        SRAM1LP_W::new(self)
+    pub fn sram1lp(&mut self) -> SRAM1LP_W<AHBLPEN1_SPEC> {
+        SRAM1LP_W::new(self, 16)
     }
     #[doc = "Bit 17 - SRAM2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sram2lp(&mut self) -> SRAM2LP_W<AHBLPEN1_SPEC, 17> {
-        SRAM2LP_W::new(self)
+    pub fn sram2lp(&mut self) -> SRAM2LP_W<AHBLPEN1_SPEC> {
+        SRAM2LP_W::new(self, 17)
     }
     #[doc = "Bit 21 - EDMA clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn edmalp(&mut self) -> EDMALP_W<AHBLPEN1_SPEC, 21> {
-        EDMALP_W::new(self)
+    pub fn edmalp(&mut self) -> EDMALP_W<AHBLPEN1_SPEC> {
+        EDMALP_W::new(self, 21)
     }
     #[doc = "Bit 22 - DMA1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn dma1lp(&mut self) -> DMA1LP_W<AHBLPEN1_SPEC, 22> {
-        DMA1LP_W::new(self)
+    pub fn dma1lp(&mut self) -> DMA1LP_W<AHBLPEN1_SPEC> {
+        DMA1LP_W::new(self, 22)
     }
     #[doc = "Bit 24 - DMA2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn dma2lp(&mut self) -> DMA2LP_W<AHBLPEN1_SPEC, 24> {
-        DMA2LP_W::new(self)
+    pub fn dma2lp(&mut self) -> DMA2LP_W<AHBLPEN1_SPEC> {
+        DMA2LP_W::new(self, 24)
     }
     #[doc = "Bit 25 - EMAC clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn emaclp(&mut self) -> EMACLP_W<AHBLPEN1_SPEC, 25> {
-        EMACLP_W::new(self)
+    pub fn emaclp(&mut self) -> EMACLP_W<AHBLPEN1_SPEC> {
+        EMACLP_W::new(self, 25)
     }
     #[doc = "Bit 26 - EMAC Tx clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn emactxlp(&mut self) -> EMACTXLP_W<AHBLPEN1_SPEC, 26> {
-        EMACTXLP_W::new(self)
+    pub fn emactxlp(&mut self) -> EMACTXLP_W<AHBLPEN1_SPEC> {
+        EMACTXLP_W::new(self, 26)
     }
     #[doc = "Bit 27 - EMAC Rx clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn emacrxlp(&mut self) -> EMACRXLP_W<AHBLPEN1_SPEC, 27> {
-        EMACRXLP_W::new(self)
+    pub fn emacrxlp(&mut self) -> EMACRXLP_W<AHBLPEN1_SPEC> {
+        EMACRXLP_W::new(self, 27)
     }
     #[doc = "Bit 28 - EMAC PTP clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn emacptplp(&mut self) -> EMACPTPLP_W<AHBLPEN1_SPEC, 28> {
-        EMACPTPLP_W::new(self)
+    pub fn emacptplp(&mut self) -> EMACPTPLP_W<AHBLPEN1_SPEC> {
+        EMACPTPLP_W::new(self, 28)
     }
     #[doc = "Bit 29 - OTGFS2 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn otgfs2lp(&mut self) -> OTGFS2LP_W<AHBLPEN1_SPEC, 29> {
-        OTGFS2LP_W::new(self)
+    pub fn otgfs2lp(&mut self) -> OTGFS2LP_W<AHBLPEN1_SPEC> {
+        OTGFS2LP_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

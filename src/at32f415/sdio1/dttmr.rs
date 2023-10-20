@@ -5,7 +5,7 @@ pub type W = crate::W<DTTMR_SPEC>;
 #[doc = "Field `TIMEOUT` reader - Data timeout period"]
 pub type TIMEOUT_R = crate::FieldReader<u32>;
 #[doc = "Field `TIMEOUT` writer - Data timeout period"]
-pub type TIMEOUT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Data timeout period"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Data timeout period"]
     #[inline(always)]
     #[must_use]
-    pub fn timeout(&mut self) -> TIMEOUT_W<DTTMR_SPEC, 0> {
-        TIMEOUT_W::new(self)
+    pub fn timeout(&mut self) -> TIMEOUT_W<DTTMR_SPEC> {
+        TIMEOUT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

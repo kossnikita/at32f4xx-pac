@@ -5,15 +5,15 @@ pub type W = crate::W<AHBLPEN2_SPEC>;
 #[doc = "Field `DVPLP` reader - DVP clock enable during sleep mode"]
 pub type DVPLP_R = crate::BitReader;
 #[doc = "Field `DVPLP` writer - DVP clock enable during sleep mode"]
-pub type DVPLP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DVPLP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OTGFS1LP` reader - OTGFS1 clock enable during sleep mode"]
 pub type OTGFS1LP_R = crate::BitReader;
 #[doc = "Field `OTGFS1LP` writer - OTGFS1 clock enable during sleep mode"]
-pub type OTGFS1LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OTGFS1LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO1LP` reader - SDIO1 clock enable during sleep mode"]
 pub type SDIO1LP_R = crate::BitReader;
 #[doc = "Field `SDIO1LP` writer - SDIO1 clock enable during sleep mode"]
-pub type SDIO1LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO1LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - DVP clock enable during sleep mode"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 0 - DVP clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn dvplp(&mut self) -> DVPLP_W<AHBLPEN2_SPEC, 0> {
-        DVPLP_W::new(self)
+    pub fn dvplp(&mut self) -> DVPLP_W<AHBLPEN2_SPEC> {
+        DVPLP_W::new(self, 0)
     }
     #[doc = "Bit 7 - OTGFS1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn otgfs1lp(&mut self) -> OTGFS1LP_W<AHBLPEN2_SPEC, 7> {
-        OTGFS1LP_W::new(self)
+    pub fn otgfs1lp(&mut self) -> OTGFS1LP_W<AHBLPEN2_SPEC> {
+        OTGFS1LP_W::new(self, 7)
     }
     #[doc = "Bit 15 - SDIO1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio1lp(&mut self) -> SDIO1LP_W<AHBLPEN2_SPEC, 15> {
-        SDIO1LP_W::new(self)
+    pub fn sdio1lp(&mut self) -> SDIO1LP_W<AHBLPEN2_SPEC> {
+        SDIO1LP_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

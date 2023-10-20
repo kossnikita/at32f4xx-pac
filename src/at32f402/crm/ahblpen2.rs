@@ -5,7 +5,7 @@ pub type W = crate::W<AHBLPEN2_SPEC>;
 #[doc = "Field `OTGFS1LP` reader - OTGFS1 clock enable during sleep mode"]
 pub type OTGFS1LP_R = crate::BitReader;
 #[doc = "Field `OTGFS1LP` writer - OTGFS1 clock enable during sleep mode"]
-pub type OTGFS1LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OTGFS1LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 7 - OTGFS1 clock enable during sleep mode"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 7 - OTGFS1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn otgfs1lp(&mut self) -> OTGFS1LP_W<AHBLPEN2_SPEC, 7> {
-        OTGFS1LP_W::new(self)
+    pub fn otgfs1lp(&mut self) -> OTGFS1LP_W<AHBLPEN2_SPEC> {
+        OTGFS1LP_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

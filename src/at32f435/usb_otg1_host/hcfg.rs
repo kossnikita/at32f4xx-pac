@@ -5,7 +5,7 @@ pub type W = crate::W<HCFG_SPEC>;
 #[doc = "Field `FSLSPCLKSEL` reader - FS/LS PHY clock select"]
 pub type FSLSPCLKSEL_R = crate::FieldReader;
 #[doc = "Field `FSLSPCLKSEL` writer - FS/LS PHY clock select"]
-pub type FSLSPCLKSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type FSLSPCLKSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FSLSSUPP` reader - FS- and LS-only support"]
 pub type FSLSSUPP_R = crate::BitReader;
 impl R {
@@ -40,8 +40,8 @@ impl W {
     #[doc = "Bits 0:1 - FS/LS PHY clock select"]
     #[inline(always)]
     #[must_use]
-    pub fn fslspclksel(&mut self) -> FSLSPCLKSEL_W<HCFG_SPEC, 0> {
-        FSLSPCLKSEL_W::new(self)
+    pub fn fslspclksel(&mut self) -> FSLSPCLKSEL_W<HCFG_SPEC> {
+        FSLSPCLKSEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

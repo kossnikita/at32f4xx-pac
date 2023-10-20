@@ -5,19 +5,19 @@ pub type W = crate::W<CTRL2_SPEC>;
 #[doc = "Field `DMAEN` reader - DMA handshake enable"]
 pub type DMAEN_R = crate::BitReader;
 #[doc = "Field `DMAEN` writer - DMA handshake enable"]
-pub type DMAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDIE` reader - Command complete interrupt enable"]
 pub type CMDIE_R = crate::BitReader;
 #[doc = "Field `CMDIE` writer - Command complete interrupt enable"]
-pub type CMDIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFIFOTHOD` reader - TxFIFO thod"]
 pub type TXFIFOTHOD_R = crate::FieldReader;
 #[doc = "Field `TXFIFOTHOD` writer - TxFIFO thod"]
-pub type TXFIFOTHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TXFIFOTHOD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RXFIFOTHOD` reader - RxFIFO thod"]
 pub type RXFIFOTHOD_R = crate::FieldReader;
 #[doc = "Field `RXFIFOTHOD` writer - RxFIFO thod"]
-pub type RXFIFOTHOD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RXFIFOTHOD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - DMA handshake enable"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bit 0 - DMA handshake enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaen(&mut self) -> DMAEN_W<CTRL2_SPEC, 0> {
-        DMAEN_W::new(self)
+    pub fn dmaen(&mut self) -> DMAEN_W<CTRL2_SPEC> {
+        DMAEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Command complete interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdie(&mut self) -> CMDIE_W<CTRL2_SPEC, 1> {
-        CMDIE_W::new(self)
+    pub fn cmdie(&mut self) -> CMDIE_W<CTRL2_SPEC> {
+        CMDIE_W::new(self, 1)
     }
     #[doc = "Bits 8:9 - TxFIFO thod"]
     #[inline(always)]
     #[must_use]
-    pub fn txfifothod(&mut self) -> TXFIFOTHOD_W<CTRL2_SPEC, 8> {
-        TXFIFOTHOD_W::new(self)
+    pub fn txfifothod(&mut self) -> TXFIFOTHOD_W<CTRL2_SPEC> {
+        TXFIFOTHOD_W::new(self, 8)
     }
     #[doc = "Bits 12:13 - RxFIFO thod"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfifothod(&mut self) -> RXFIFOTHOD_W<CTRL2_SPEC, 12> {
-        RXFIFOTHOD_W::new(self)
+    pub fn rxfifothod(&mut self) -> RXFIFOTHOD_W<CTRL2_SPEC> {
+        RXFIFOTHOD_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

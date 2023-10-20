@@ -53,8 +53,8 @@ impl From<TCIENW_AW> for bool {
     }
 }
 #[doc = "Field `TCIEN` writer - Transmission complete interrupt enable"]
-pub type TCIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TCIENW_AW>;
-impl<'a, REG, const O: u8> TCIEN_W<'a, REG, O>
+pub type TCIEN_W<'a, REG> = crate::BitWriter<'a, REG, TCIENW_AW>;
+impl<'a, REG> TCIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,8 +120,8 @@ impl From<RF0MIENW_AW> for bool {
     }
 }
 #[doc = "Field `RFMIEN[0-1]` writer - FIFO %s receive message interrupt enable"]
-pub type RFMIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RF0MIENW_AW>;
-impl<'a, REG, const O: u8> RFMIEN_W<'a, REG, O>
+pub type RFMIEN_W<'a, REG> = crate::BitWriter<'a, REG, RF0MIENW_AW>;
+impl<'a, REG> RFMIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -187,8 +187,8 @@ impl From<RF0FIENW_AW> for bool {
     }
 }
 #[doc = "Field `RFFIEN[0-1]` writer - Receive FIFO %s full interrupt enable"]
-pub type RFFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RF0FIENW_AW>;
-impl<'a, REG, const O: u8> RFFIEN_W<'a, REG, O>
+pub type RFFIEN_W<'a, REG> = crate::BitWriter<'a, REG, RF0FIENW_AW>;
+impl<'a, REG> RFFIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -254,8 +254,8 @@ impl From<RF0OIENW_AW> for bool {
     }
 }
 #[doc = "Field `RFOIEN[0-1]` writer - Receive FIFO %s overflow interrupt enable"]
-pub type RFOIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RF0OIENW_AW>;
-impl<'a, REG, const O: u8> RFOIEN_W<'a, REG, O>
+pub type RFOIEN_W<'a, REG> = crate::BitWriter<'a, REG, RF0OIENW_AW>;
+impl<'a, REG> RFOIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -321,8 +321,8 @@ impl From<EAIENW_AW> for bool {
     }
 }
 #[doc = "Field `EAIEN` writer - Error active interrupt enable"]
-pub type EAIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, EAIENW_AW>;
-impl<'a, REG, const O: u8> EAIEN_W<'a, REG, O>
+pub type EAIEN_W<'a, REG> = crate::BitWriter<'a, REG, EAIENW_AW>;
+impl<'a, REG> EAIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -388,8 +388,8 @@ impl From<EPIENW_AW> for bool {
     }
 }
 #[doc = "Field `EPIEN` writer - Error passive interrupt enable"]
-pub type EPIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, EPIENW_AW>;
-impl<'a, REG, const O: u8> EPIEN_W<'a, REG, O>
+pub type EPIEN_W<'a, REG> = crate::BitWriter<'a, REG, EPIENW_AW>;
+impl<'a, REG> EPIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -455,8 +455,8 @@ impl From<BOIENW_AW> for bool {
     }
 }
 #[doc = "Field `BOIEN` writer - Bus-off interrupt enable"]
-pub type BOIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, BOIENW_AW>;
-impl<'a, REG, const O: u8> BOIEN_W<'a, REG, O>
+pub type BOIEN_W<'a, REG> = crate::BitWriter<'a, REG, BOIENW_AW>;
+impl<'a, REG> BOIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -522,8 +522,8 @@ impl From<ETRIENW_AW> for bool {
     }
 }
 #[doc = "Field `ETRIEN` writer - Error type record interrupt enable"]
-pub type ETRIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ETRIENW_AW>;
-impl<'a, REG, const O: u8> ETRIEN_W<'a, REG, O>
+pub type ETRIEN_W<'a, REG> = crate::BitWriter<'a, REG, ETRIENW_AW>;
+impl<'a, REG> ETRIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -589,8 +589,8 @@ impl From<EOIENW_AW> for bool {
     }
 }
 #[doc = "Field `EOIEN` writer - Error occur interrupt enable"]
-pub type EOIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, EOIENW_AW>;
-impl<'a, REG, const O: u8> EOIEN_W<'a, REG, O>
+pub type EOIEN_W<'a, REG> = crate::BitWriter<'a, REG, EOIENW_AW>;
+impl<'a, REG> EOIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -656,8 +656,8 @@ impl From<QDZIENW_AW> for bool {
     }
 }
 #[doc = "Field `QDZIEN` writer - Quit doze mode interrupt enable"]
-pub type QDZIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, QDZIENW_AW>;
-impl<'a, REG, const O: u8> QDZIEN_W<'a, REG, O>
+pub type QDZIEN_W<'a, REG> = crate::BitWriter<'a, REG, QDZIENW_AW>;
+impl<'a, REG> QDZIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -723,8 +723,8 @@ impl From<EDZIENW_AW> for bool {
     }
 }
 #[doc = "Field `EDZIEN` writer - Enter doze mode interrupt enable"]
-pub type EDZIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, EDZIENW_AW>;
-impl<'a, REG, const O: u8> EDZIEN_W<'a, REG, O>
+pub type EDZIEN_W<'a, REG> = crate::BitWriter<'a, REG, EDZIENW_AW>;
+impl<'a, REG> EDZIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -746,9 +746,10 @@ impl R {
         TCIEN_R::new((self.bits & 1) != 0)
     }
     #[doc = "FIFO [0-1]
-receive message interrupt enable"]
+receive message interrupt enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn rfmien(&self, n: u8) -> RFMIEN_R {
+    pub fn rfmien(&self, n: u8) -> RFMIEN_R {
+        assert!(n < 2);
         RFMIEN_R::new(((self.bits >> (n * 3 + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - FIFO 0 receive message interrupt enable"]
@@ -762,9 +763,10 @@ receive message interrupt enable"]
         RFMIEN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Receive FIFO [0-1]
-full interrupt enable"]
+full interrupt enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn rffien(&self, n: u8) -> RFFIEN_R {
+    pub fn rffien(&self, n: u8) -> RFFIEN_R {
+        assert!(n < 2);
         RFFIEN_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - Receive FIFO 0 full interrupt enable"]
@@ -778,9 +780,10 @@ full interrupt enable"]
         RFFIEN_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Receive FIFO [0-1]
-overflow interrupt enable"]
+overflow interrupt enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn rfoien(&self, n: u8) -> RFOIEN_R {
+    pub fn rfoien(&self, n: u8) -> RFOIEN_R {
+        assert!(n < 2);
         RFOIEN_R::new(((self.bits >> (n * 3 + 3)) & 1) != 0)
     }
     #[doc = "Bit 3 - Receive FIFO 0 overflow interrupt enable"]
@@ -858,107 +861,110 @@ impl W {
     #[doc = "Bit 0 - Transmission complete interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tcien(&mut self) -> TCIEN_W<INTEN_SPEC, 0> {
-        TCIEN_W::new(self)
+    pub fn tcien(&mut self) -> TCIEN_W<INTEN_SPEC> {
+        TCIEN_W::new(self, 0)
     }
     #[doc = "FIFO [0-1]
 receive message interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn rfmien<const O: u8>(&mut self) -> RFMIEN_W<INTEN_SPEC, O> {
-        RFMIEN_W::new(self)
+    pub fn rfmien(&mut self, n: u8) -> RFMIEN_W<INTEN_SPEC> {
+        assert!(n < 2);
+        RFMIEN_W::new(self, n * 3 + 1)
     }
     #[doc = "Bit 1 - FIFO 0 receive message interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rf0mien(&mut self) -> RFMIEN_W<INTEN_SPEC, 1> {
-        RFMIEN_W::new(self)
+    pub fn rf0mien(&mut self) -> RFMIEN_W<INTEN_SPEC> {
+        RFMIEN_W::new(self, 1)
     }
     #[doc = "Bit 4 - FIFO 1 receive message interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rf1mien(&mut self) -> RFMIEN_W<INTEN_SPEC, 4> {
-        RFMIEN_W::new(self)
+    pub fn rf1mien(&mut self) -> RFMIEN_W<INTEN_SPEC> {
+        RFMIEN_W::new(self, 4)
     }
     #[doc = "Receive FIFO [0-1]
 full interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn rffien<const O: u8>(&mut self) -> RFFIEN_W<INTEN_SPEC, O> {
-        RFFIEN_W::new(self)
+    pub fn rffien(&mut self, n: u8) -> RFFIEN_W<INTEN_SPEC> {
+        assert!(n < 2);
+        RFFIEN_W::new(self, n * 3 + 2)
     }
     #[doc = "Bit 2 - Receive FIFO 0 full interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rf0fien(&mut self) -> RFFIEN_W<INTEN_SPEC, 2> {
-        RFFIEN_W::new(self)
+    pub fn rf0fien(&mut self) -> RFFIEN_W<INTEN_SPEC> {
+        RFFIEN_W::new(self, 2)
     }
     #[doc = "Bit 5 - Receive FIFO 1 full interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rf1fien(&mut self) -> RFFIEN_W<INTEN_SPEC, 5> {
-        RFFIEN_W::new(self)
+    pub fn rf1fien(&mut self) -> RFFIEN_W<INTEN_SPEC> {
+        RFFIEN_W::new(self, 5)
     }
     #[doc = "Receive FIFO [0-1]
 overflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn rfoien<const O: u8>(&mut self) -> RFOIEN_W<INTEN_SPEC, O> {
-        RFOIEN_W::new(self)
+    pub fn rfoien(&mut self, n: u8) -> RFOIEN_W<INTEN_SPEC> {
+        assert!(n < 2);
+        RFOIEN_W::new(self, n * 3 + 3)
     }
     #[doc = "Bit 3 - Receive FIFO 0 overflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rf0oien(&mut self) -> RFOIEN_W<INTEN_SPEC, 3> {
-        RFOIEN_W::new(self)
+    pub fn rf0oien(&mut self) -> RFOIEN_W<INTEN_SPEC> {
+        RFOIEN_W::new(self, 3)
     }
     #[doc = "Bit 6 - Receive FIFO 1 overflow interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rf1oien(&mut self) -> RFOIEN_W<INTEN_SPEC, 6> {
-        RFOIEN_W::new(self)
+    pub fn rf1oien(&mut self) -> RFOIEN_W<INTEN_SPEC> {
+        RFOIEN_W::new(self, 6)
     }
     #[doc = "Bit 8 - Error active interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eaien(&mut self) -> EAIEN_W<INTEN_SPEC, 8> {
-        EAIEN_W::new(self)
+    pub fn eaien(&mut self) -> EAIEN_W<INTEN_SPEC> {
+        EAIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Error passive interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn epien(&mut self) -> EPIEN_W<INTEN_SPEC, 9> {
-        EPIEN_W::new(self)
+    pub fn epien(&mut self) -> EPIEN_W<INTEN_SPEC> {
+        EPIEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Bus-off interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn boien(&mut self) -> BOIEN_W<INTEN_SPEC, 10> {
-        BOIEN_W::new(self)
+    pub fn boien(&mut self) -> BOIEN_W<INTEN_SPEC> {
+        BOIEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Error type record interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn etrien(&mut self) -> ETRIEN_W<INTEN_SPEC, 11> {
-        ETRIEN_W::new(self)
+    pub fn etrien(&mut self) -> ETRIEN_W<INTEN_SPEC> {
+        ETRIEN_W::new(self, 11)
     }
     #[doc = "Bit 15 - Error occur interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eoien(&mut self) -> EOIEN_W<INTEN_SPEC, 15> {
-        EOIEN_W::new(self)
+    pub fn eoien(&mut self) -> EOIEN_W<INTEN_SPEC> {
+        EOIEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Quit doze mode interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn qdzien(&mut self) -> QDZIEN_W<INTEN_SPEC, 16> {
-        QDZIEN_W::new(self)
+    pub fn qdzien(&mut self) -> QDZIEN_W<INTEN_SPEC> {
+        QDZIEN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Enter doze mode interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn edzien(&mut self) -> EDZIEN_W<INTEN_SPEC, 17> {
-        EDZIEN_W::new(self)
+    pub fn edzien(&mut self) -> EDZIEN_W<INTEN_SPEC> {
+        EDZIEN_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

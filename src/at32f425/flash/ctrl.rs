@@ -5,47 +5,47 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `FPRGM` reader - Flash program"]
 pub type FPRGM_R = crate::BitReader;
 #[doc = "Field `FPRGM` writer - Flash program"]
-pub type FPRGM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FPRGM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SECERS` reader - Sector erase"]
 pub type SECERS_R = crate::BitReader;
 #[doc = "Field `SECERS` writer - Sector erase"]
-pub type SECERS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SECERS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BANKERS` reader - Bank erase"]
 pub type BANKERS_R = crate::BitReader;
 #[doc = "Field `BANKERS` writer - Bank erase"]
-pub type BANKERS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BANKERS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USDPRGM` reader - User system data program"]
 pub type USDPRGM_R = crate::BitReader;
 #[doc = "Field `USDPRGM` writer - User system data program"]
-pub type USDPRGM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USDPRGM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USDERS` reader - User system data erase"]
 pub type USDERS_R = crate::BitReader;
 #[doc = "Field `USDERS` writer - User system data erase"]
-pub type USDERS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USDERS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERSTR` reader - Erasing start"]
 pub type ERSTR_R = crate::BitReader;
 #[doc = "Field `ERSTR` writer - Erasing start"]
-pub type ERSTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERSTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OPLK` reader - Operation lock"]
 pub type OPLK_R = crate::BitReader;
 #[doc = "Field `OPLK` writer - Operation lock"]
-pub type OPLK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OPLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USDULKS` reader - User system data unlock success"]
 pub type USDULKS_R = crate::BitReader;
 #[doc = "Field `USDULKS` writer - User system data unlock success"]
-pub type USDULKS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USDULKS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERRIE` reader - Error interrupt enable"]
 pub type ERRIE_R = crate::BitReader;
 #[doc = "Field `ERRIE` writer - Error interrupt enable"]
-pub type ERRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ODFIE` reader - Operation done flag interrupt enable"]
 pub type ODFIE_R = crate::BitReader;
 #[doc = "Field `ODFIE` writer - Operation done flag interrupt enable"]
-pub type ODFIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ODFIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LPMEN` reader - Low power mode enable"]
 pub type LPMEN_R = crate::BitReader;
 #[doc = "Field `LPMEN` writer - Low power mode enable"]
-pub type LPMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LPMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]
@@ -129,68 +129,68 @@ impl W {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]
     #[must_use]
-    pub fn fprgm(&mut self) -> FPRGM_W<CTRL_SPEC, 0> {
-        FPRGM_W::new(self)
+    pub fn fprgm(&mut self) -> FPRGM_W<CTRL_SPEC> {
+        FPRGM_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sector erase"]
     #[inline(always)]
     #[must_use]
-    pub fn secers(&mut self) -> SECERS_W<CTRL_SPEC, 1> {
-        SECERS_W::new(self)
+    pub fn secers(&mut self) -> SECERS_W<CTRL_SPEC> {
+        SECERS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Bank erase"]
     #[inline(always)]
     #[must_use]
-    pub fn bankers(&mut self) -> BANKERS_W<CTRL_SPEC, 2> {
-        BANKERS_W::new(self)
+    pub fn bankers(&mut self) -> BANKERS_W<CTRL_SPEC> {
+        BANKERS_W::new(self, 2)
     }
     #[doc = "Bit 4 - User system data program"]
     #[inline(always)]
     #[must_use]
-    pub fn usdprgm(&mut self) -> USDPRGM_W<CTRL_SPEC, 4> {
-        USDPRGM_W::new(self)
+    pub fn usdprgm(&mut self) -> USDPRGM_W<CTRL_SPEC> {
+        USDPRGM_W::new(self, 4)
     }
     #[doc = "Bit 5 - User system data erase"]
     #[inline(always)]
     #[must_use]
-    pub fn usders(&mut self) -> USDERS_W<CTRL_SPEC, 5> {
-        USDERS_W::new(self)
+    pub fn usders(&mut self) -> USDERS_W<CTRL_SPEC> {
+        USDERS_W::new(self, 5)
     }
     #[doc = "Bit 6 - Erasing start"]
     #[inline(always)]
     #[must_use]
-    pub fn erstr(&mut self) -> ERSTR_W<CTRL_SPEC, 6> {
-        ERSTR_W::new(self)
+    pub fn erstr(&mut self) -> ERSTR_W<CTRL_SPEC> {
+        ERSTR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Operation lock"]
     #[inline(always)]
     #[must_use]
-    pub fn oplk(&mut self) -> OPLK_W<CTRL_SPEC, 7> {
-        OPLK_W::new(self)
+    pub fn oplk(&mut self) -> OPLK_W<CTRL_SPEC> {
+        OPLK_W::new(self, 7)
     }
     #[doc = "Bit 9 - User system data unlock success"]
     #[inline(always)]
     #[must_use]
-    pub fn usdulks(&mut self) -> USDULKS_W<CTRL_SPEC, 9> {
-        USDULKS_W::new(self)
+    pub fn usdulks(&mut self) -> USDULKS_W<CTRL_SPEC> {
+        USDULKS_W::new(self, 9)
     }
     #[doc = "Bit 10 - Error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTRL_SPEC, 10> {
-        ERRIE_W::new(self)
+    pub fn errie(&mut self) -> ERRIE_W<CTRL_SPEC> {
+        ERRIE_W::new(self, 10)
     }
     #[doc = "Bit 12 - Operation done flag interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn odfie(&mut self) -> ODFIE_W<CTRL_SPEC, 12> {
-        ODFIE_W::new(self)
+    pub fn odfie(&mut self) -> ODFIE_W<CTRL_SPEC> {
+        ODFIE_W::new(self, 12)
     }
     #[doc = "Bit 17 - Low power mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lpmen(&mut self) -> LPMEN_W<CTRL_SPEC, 17> {
-        LPMEN_W::new(self)
+    pub fn lpmen(&mut self) -> LPMEN_W<CTRL_SPEC> {
+        LPMEN_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

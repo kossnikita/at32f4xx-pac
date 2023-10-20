@@ -5,7 +5,7 @@ pub type W = crate::W<DT_SPEC>;
 #[doc = "Field `DT` reader - Data value"]
 pub type DT_R = crate::FieldReader<u16>;
 #[doc = "Field `DT` writer - Data value"]
-pub type DT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type DT_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 impl R {
     #[doc = "Bits 0:8 - Data value"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:8 - Data value"]
     #[inline(always)]
     #[must_use]
-    pub fn dt(&mut self) -> DT_W<DT_SPEC, 0> {
-        DT_W::new(self)
+    pub fn dt(&mut self) -> DT_W<DT_SPEC> {
+        DT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

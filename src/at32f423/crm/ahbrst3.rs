@@ -5,7 +5,7 @@ pub type W = crate::W<AHBRST3_SPEC>;
 #[doc = "Field `XMC` reader - XMC reset"]
 pub type XMC_R = crate::BitReader;
 #[doc = "Field `XMC` writer - XMC reset"]
-pub type XMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XMC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - XMC reset"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 0 - XMC reset"]
     #[inline(always)]
     #[must_use]
-    pub fn xmc(&mut self) -> XMC_W<AHBRST3_SPEC, 0> {
-        XMC_W::new(self)
+    pub fn xmc(&mut self) -> XMC_W<AHBRST3_SPEC> {
+        XMC_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

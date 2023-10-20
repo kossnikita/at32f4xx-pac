@@ -5,103 +5,103 @@ pub type W = crate::W<APB1RST_SPEC>;
 #[doc = "Field `TMR2` reader - Timer 2 reset"]
 pub type TMR2_R = crate::BitReader;
 #[doc = "Field `TMR2` writer - Timer 2 reset"]
-pub type TMR2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR3` reader - Timer 3 reset"]
 pub type TMR3_R = crate::BitReader;
 #[doc = "Field `TMR3` writer - Timer 3 reset"]
-pub type TMR3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR4` reader - Timer 4 reset"]
 pub type TMR4_R = crate::BitReader;
 #[doc = "Field `TMR4` writer - Timer 4 reset"]
-pub type TMR4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR5` reader - Timer 5 reset"]
 pub type TMR5_R = crate::BitReader;
 #[doc = "Field `TMR5` writer - Timer 5 reset"]
-pub type TMR5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR6` reader - Timer 6 reset"]
 pub type TMR6_R = crate::BitReader;
 #[doc = "Field `TMR6` writer - Timer 6 reset"]
-pub type TMR6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR7` reader - Timer 7 reset"]
 pub type TMR7_R = crate::BitReader;
 #[doc = "Field `TMR7` writer - Timer 7 reset"]
-pub type TMR7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR12` reader - Timer 12 reset"]
 pub type TMR12_R = crate::BitReader;
 #[doc = "Field `TMR12` writer - Timer 12 reset"]
-pub type TMR12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR12_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR13` reader - Timer 13 reset"]
 pub type TMR13_R = crate::BitReader;
 #[doc = "Field `TMR13` writer - Timer 13 reset"]
-pub type TMR13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR13_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR14` reader - Timer 14 reset"]
 pub type TMR14_R = crate::BitReader;
 #[doc = "Field `TMR14` writer - Timer 14 reset"]
-pub type TMR14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR14_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WWDT` reader - Window watchdog timer reset"]
 pub type WWDT_R = crate::BitReader;
 #[doc = "Field `WWDT` writer - Window watchdog timer reset"]
-pub type WWDT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WWDT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI2` reader - SPI2 reset"]
 pub type SPI2_R = crate::BitReader;
 #[doc = "Field `SPI2` writer - SPI2 reset"]
-pub type SPI2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI3` reader - SPI3 reset"]
 pub type SPI3_R = crate::BitReader;
 #[doc = "Field `SPI3` writer - SPI3 reset"]
-pub type SPI3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI4` reader - SPI4 reset"]
 pub type SPI4_R = crate::BitReader;
 #[doc = "Field `SPI4` writer - SPI4 reset"]
-pub type SPI4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SPI4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART2` reader - USART 2 reset"]
 pub type USART2_R = crate::BitReader;
 #[doc = "Field `USART2` writer - USART 2 reset"]
-pub type USART2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USART2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART3` reader - USART 3 reset"]
 pub type USART3_R = crate::BitReader;
 #[doc = "Field `USART3` writer - USART 3 reset"]
-pub type USART3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USART3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART4` reader - UART 4 reset"]
 pub type UART4_R = crate::BitReader;
 #[doc = "Field `UART4` writer - UART 4 reset"]
-pub type UART4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART5` reader - UART 5 reset"]
 pub type UART5_R = crate::BitReader;
 #[doc = "Field `UART5` writer - UART 5 reset"]
-pub type UART5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type UART5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C1` reader - I2C1 reset"]
 pub type I2C1_R = crate::BitReader;
 #[doc = "Field `I2C1` writer - I2C1 reset"]
-pub type I2C1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C2` reader - I2C2 reset"]
 pub type I2C2_R = crate::BitReader;
 #[doc = "Field `I2C2` writer - I2C2 reset"]
-pub type I2C2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USB` reader - USB reset"]
 pub type USB_R = crate::BitReader;
 #[doc = "Field `USB` writer - USB reset"]
-pub type USB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAN1` reader - CAN1 reset"]
 pub type CAN1_R = crate::BitReader;
 #[doc = "Field `CAN1` writer - CAN1 reset"]
-pub type CAN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAN1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `I2C3` reader - I2C3 reset"]
 pub type I2C3_R = crate::BitReader;
 #[doc = "Field `I2C3` writer - I2C3 reset"]
-pub type I2C3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type I2C3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BPR` reader - Battery powered domain register reset"]
 pub type BPR_R = crate::BitReader;
 #[doc = "Field `BPR` writer - Battery powered domain register reset"]
-pub type BPR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BPR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWC` reader - Power controller reset"]
 pub type PWC_R = crate::BitReader;
 #[doc = "Field `PWC` writer - Power controller reset"]
-pub type PWC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PWC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DAC` reader - DAC reset"]
 pub type DAC_R = crate::BitReader;
 #[doc = "Field `DAC` writer - DAC reset"]
-pub type DAC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DAC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Timer 2 reset"]
     #[inline(always)]
@@ -269,152 +269,152 @@ impl W {
     #[doc = "Bit 0 - Timer 2 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr2(&mut self) -> TMR2_W<APB1RST_SPEC, 0> {
-        TMR2_W::new(self)
+    pub fn tmr2(&mut self) -> TMR2_W<APB1RST_SPEC> {
+        TMR2_W::new(self, 0)
     }
     #[doc = "Bit 1 - Timer 3 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr3(&mut self) -> TMR3_W<APB1RST_SPEC, 1> {
-        TMR3_W::new(self)
+    pub fn tmr3(&mut self) -> TMR3_W<APB1RST_SPEC> {
+        TMR3_W::new(self, 1)
     }
     #[doc = "Bit 2 - Timer 4 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr4(&mut self) -> TMR4_W<APB1RST_SPEC, 2> {
-        TMR4_W::new(self)
+    pub fn tmr4(&mut self) -> TMR4_W<APB1RST_SPEC> {
+        TMR4_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timer 5 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr5(&mut self) -> TMR5_W<APB1RST_SPEC, 3> {
-        TMR5_W::new(self)
+    pub fn tmr5(&mut self) -> TMR5_W<APB1RST_SPEC> {
+        TMR5_W::new(self, 3)
     }
     #[doc = "Bit 4 - Timer 6 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr6(&mut self) -> TMR6_W<APB1RST_SPEC, 4> {
-        TMR6_W::new(self)
+    pub fn tmr6(&mut self) -> TMR6_W<APB1RST_SPEC> {
+        TMR6_W::new(self, 4)
     }
     #[doc = "Bit 5 - Timer 7 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr7(&mut self) -> TMR7_W<APB1RST_SPEC, 5> {
-        TMR7_W::new(self)
+    pub fn tmr7(&mut self) -> TMR7_W<APB1RST_SPEC> {
+        TMR7_W::new(self, 5)
     }
     #[doc = "Bit 6 - Timer 12 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr12(&mut self) -> TMR12_W<APB1RST_SPEC, 6> {
-        TMR12_W::new(self)
+    pub fn tmr12(&mut self) -> TMR12_W<APB1RST_SPEC> {
+        TMR12_W::new(self, 6)
     }
     #[doc = "Bit 7 - Timer 13 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr13(&mut self) -> TMR13_W<APB1RST_SPEC, 7> {
-        TMR13_W::new(self)
+    pub fn tmr13(&mut self) -> TMR13_W<APB1RST_SPEC> {
+        TMR13_W::new(self, 7)
     }
     #[doc = "Bit 8 - Timer 14 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr14(&mut self) -> TMR14_W<APB1RST_SPEC, 8> {
-        TMR14_W::new(self)
+    pub fn tmr14(&mut self) -> TMR14_W<APB1RST_SPEC> {
+        TMR14_W::new(self, 8)
     }
     #[doc = "Bit 11 - Window watchdog timer reset"]
     #[inline(always)]
     #[must_use]
-    pub fn wwdt(&mut self) -> WWDT_W<APB1RST_SPEC, 11> {
-        WWDT_W::new(self)
+    pub fn wwdt(&mut self) -> WWDT_W<APB1RST_SPEC> {
+        WWDT_W::new(self, 11)
     }
     #[doc = "Bit 14 - SPI2 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2(&mut self) -> SPI2_W<APB1RST_SPEC, 14> {
-        SPI2_W::new(self)
+    pub fn spi2(&mut self) -> SPI2_W<APB1RST_SPEC> {
+        SPI2_W::new(self, 14)
     }
     #[doc = "Bit 15 - SPI3 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn spi3(&mut self) -> SPI3_W<APB1RST_SPEC, 15> {
-        SPI3_W::new(self)
+    pub fn spi3(&mut self) -> SPI3_W<APB1RST_SPEC> {
+        SPI3_W::new(self, 15)
     }
     #[doc = "Bit 16 - SPI4 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn spi4(&mut self) -> SPI4_W<APB1RST_SPEC, 16> {
-        SPI4_W::new(self)
+    pub fn spi4(&mut self) -> SPI4_W<APB1RST_SPEC> {
+        SPI4_W::new(self, 16)
     }
     #[doc = "Bit 17 - USART 2 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn usart2(&mut self) -> USART2_W<APB1RST_SPEC, 17> {
-        USART2_W::new(self)
+    pub fn usart2(&mut self) -> USART2_W<APB1RST_SPEC> {
+        USART2_W::new(self, 17)
     }
     #[doc = "Bit 18 - USART 3 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn usart3(&mut self) -> USART3_W<APB1RST_SPEC, 18> {
-        USART3_W::new(self)
+    pub fn usart3(&mut self) -> USART3_W<APB1RST_SPEC> {
+        USART3_W::new(self, 18)
     }
     #[doc = "Bit 19 - UART 4 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn uart4(&mut self) -> UART4_W<APB1RST_SPEC, 19> {
-        UART4_W::new(self)
+    pub fn uart4(&mut self) -> UART4_W<APB1RST_SPEC> {
+        UART4_W::new(self, 19)
     }
     #[doc = "Bit 20 - UART 5 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn uart5(&mut self) -> UART5_W<APB1RST_SPEC, 20> {
-        UART5_W::new(self)
+    pub fn uart5(&mut self) -> UART5_W<APB1RST_SPEC> {
+        UART5_W::new(self, 20)
     }
     #[doc = "Bit 21 - I2C1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c1(&mut self) -> I2C1_W<APB1RST_SPEC, 21> {
-        I2C1_W::new(self)
+    pub fn i2c1(&mut self) -> I2C1_W<APB1RST_SPEC> {
+        I2C1_W::new(self, 21)
     }
     #[doc = "Bit 22 - I2C2 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c2(&mut self) -> I2C2_W<APB1RST_SPEC, 22> {
-        I2C2_W::new(self)
+    pub fn i2c2(&mut self) -> I2C2_W<APB1RST_SPEC> {
+        I2C2_W::new(self, 22)
     }
     #[doc = "Bit 23 - USB reset"]
     #[inline(always)]
     #[must_use]
-    pub fn usb(&mut self) -> USB_W<APB1RST_SPEC, 23> {
-        USB_W::new(self)
+    pub fn usb(&mut self) -> USB_W<APB1RST_SPEC> {
+        USB_W::new(self, 23)
     }
     #[doc = "Bit 25 - CAN1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn can1(&mut self) -> CAN1_W<APB1RST_SPEC, 25> {
-        CAN1_W::new(self)
+    pub fn can1(&mut self) -> CAN1_W<APB1RST_SPEC> {
+        CAN1_W::new(self, 25)
     }
     #[doc = "Bit 26 - I2C3 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c3(&mut self) -> I2C3_W<APB1RST_SPEC, 26> {
-        I2C3_W::new(self)
+    pub fn i2c3(&mut self) -> I2C3_W<APB1RST_SPEC> {
+        I2C3_W::new(self, 26)
     }
     #[doc = "Bit 27 - Battery powered domain register reset"]
     #[inline(always)]
     #[must_use]
-    pub fn bpr(&mut self) -> BPR_W<APB1RST_SPEC, 27> {
-        BPR_W::new(self)
+    pub fn bpr(&mut self) -> BPR_W<APB1RST_SPEC> {
+        BPR_W::new(self, 27)
     }
     #[doc = "Bit 28 - Power controller reset"]
     #[inline(always)]
     #[must_use]
-    pub fn pwc(&mut self) -> PWC_W<APB1RST_SPEC, 28> {
-        PWC_W::new(self)
+    pub fn pwc(&mut self) -> PWC_W<APB1RST_SPEC> {
+        PWC_W::new(self, 28)
     }
     #[doc = "Bit 29 - DAC reset"]
     #[inline(always)]
     #[must_use]
-    pub fn dac(&mut self) -> DAC_W<APB1RST_SPEC, 29> {
-        DAC_W::new(self)
+    pub fn dac(&mut self) -> DAC_W<APB1RST_SPEC> {
+        DAC_W::new(self, 29)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

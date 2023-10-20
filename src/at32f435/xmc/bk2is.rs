@@ -5,27 +5,27 @@ pub type W = crate::W<BK2IS_SPEC>;
 #[doc = "Field `RES` reader - Rising edge capture status"]
 pub type RES_R = crate::BitReader;
 #[doc = "Field `RES` writer - Rising edge capture status"]
-pub type RES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HLS` reader - High-level status"]
 pub type HLS_R = crate::BitReader;
 #[doc = "Field `HLS` writer - High-level status"]
-pub type HLS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HLS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FES` reader - Falling edge status"]
 pub type FES_R = crate::BitReader;
 #[doc = "Field `FES` writer - Falling edge status"]
-pub type FES_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FES_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `REIEN` reader - Rising edge interrupt enable"]
 pub type REIEN_R = crate::BitReader;
 #[doc = "Field `REIEN` writer - Rising edge interrupt enable"]
-pub type REIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type REIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HLIEN` reader - High-level interrupt enable"]
 pub type HLIEN_R = crate::BitReader;
 #[doc = "Field `HLIEN` writer - High-level interrupt enable"]
-pub type HLIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HLIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FEIEN` reader - Falling edge interrupt enable"]
 pub type FEIEN_R = crate::BitReader;
 #[doc = "Field `FEIEN` writer - Falling edge interrupt enable"]
-pub type FEIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FEIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FIFOE` reader - FIFO empty"]
 pub type FIFOE_R = crate::BitReader;
 impl R {
@@ -87,38 +87,38 @@ impl W {
     #[doc = "Bit 0 - Rising edge capture status"]
     #[inline(always)]
     #[must_use]
-    pub fn res(&mut self) -> RES_W<BK2IS_SPEC, 0> {
-        RES_W::new(self)
+    pub fn res(&mut self) -> RES_W<BK2IS_SPEC> {
+        RES_W::new(self, 0)
     }
     #[doc = "Bit 1 - High-level status"]
     #[inline(always)]
     #[must_use]
-    pub fn hls(&mut self) -> HLS_W<BK2IS_SPEC, 1> {
-        HLS_W::new(self)
+    pub fn hls(&mut self) -> HLS_W<BK2IS_SPEC> {
+        HLS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Falling edge status"]
     #[inline(always)]
     #[must_use]
-    pub fn fes(&mut self) -> FES_W<BK2IS_SPEC, 2> {
-        FES_W::new(self)
+    pub fn fes(&mut self) -> FES_W<BK2IS_SPEC> {
+        FES_W::new(self, 2)
     }
     #[doc = "Bit 3 - Rising edge interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn reien(&mut self) -> REIEN_W<BK2IS_SPEC, 3> {
-        REIEN_W::new(self)
+    pub fn reien(&mut self) -> REIEN_W<BK2IS_SPEC> {
+        REIEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - High-level interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hlien(&mut self) -> HLIEN_W<BK2IS_SPEC, 4> {
-        HLIEN_W::new(self)
+    pub fn hlien(&mut self) -> HLIEN_W<BK2IS_SPEC> {
+        HLIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Falling edge interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn feien(&mut self) -> FEIEN_W<BK2IS_SPEC, 5> {
-        FEIEN_W::new(self)
+    pub fn feien(&mut self) -> FEIEN_W<BK2IS_SPEC> {
+        FEIEN_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

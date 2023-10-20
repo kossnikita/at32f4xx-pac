@@ -5,15 +5,15 @@ pub type W = crate::W<SLIB_STS1_SPEC>;
 #[doc = "Field `SLIB_SS` reader - sLib start sector"]
 pub type SLIB_SS_R = crate::FieldReader<u16>;
 #[doc = "Field `SLIB_SS` writer - sLib start sector"]
-pub type SLIB_SS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SLIB_SS_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SLIB_INST_SS` reader - sLib instruction start sector"]
 pub type SLIB_INST_SS_R = crate::FieldReader<u16>;
 #[doc = "Field `SLIB_INST_SS` writer - sLib instruction start sector"]
-pub type SLIB_INST_SS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 11, O, u16>;
+pub type SLIB_INST_SS_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 #[doc = "Field `SLIB_ES` reader - sLib end sector"]
 pub type SLIB_ES_R = crate::FieldReader<u16>;
 #[doc = "Field `SLIB_ES` writer - sLib end sector"]
-pub type SLIB_ES_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type SLIB_ES_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
     #[doc = "Bits 0:10 - sLib start sector"]
     #[inline(always)]
@@ -52,20 +52,20 @@ impl W {
     #[doc = "Bits 0:10 - sLib start sector"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_ss(&mut self) -> SLIB_SS_W<SLIB_STS1_SPEC, 0> {
-        SLIB_SS_W::new(self)
+    pub fn slib_ss(&mut self) -> SLIB_SS_W<SLIB_STS1_SPEC> {
+        SLIB_SS_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - sLib instruction start sector"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_inst_ss(&mut self) -> SLIB_INST_SS_W<SLIB_STS1_SPEC, 11> {
-        SLIB_INST_SS_W::new(self)
+    pub fn slib_inst_ss(&mut self) -> SLIB_INST_SS_W<SLIB_STS1_SPEC> {
+        SLIB_INST_SS_W::new(self, 11)
     }
     #[doc = "Bits 22:31 - sLib end sector"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_es(&mut self) -> SLIB_ES_W<SLIB_STS1_SPEC, 22> {
-        SLIB_ES_W::new(self)
+    pub fn slib_es(&mut self) -> SLIB_ES_W<SLIB_STS1_SPEC> {
+        SLIB_ES_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

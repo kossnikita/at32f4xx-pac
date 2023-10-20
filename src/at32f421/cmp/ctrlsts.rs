@@ -5,53 +5,53 @@ pub type W = crate::W<CTRLSTS_SPEC>;
 #[doc = "Field `CMPEN` reader - Comparator enable bit"]
 pub type CMPEN_R = crate::BitReader;
 #[doc = "Field `CMPEN` writer - Comparator enable bit"]
-pub type CMPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMPEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPIS` reader - Comparator input shift"]
 pub type CMPIS_R = crate::BitReader;
 #[doc = "Field `CMPIS` writer - Comparator input shift"]
-pub type CMPIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMPIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPSSEL` reader - Comparator speed selection"]
 pub type CMPSSEL_R = crate::FieldReader;
 #[doc = "Field `CMPSSEL` writer - Comparator speed selection"]
-pub type CMPSSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CMPSSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CMPINVSEL` reader - Comparator inverting selection"]
 pub type CMPINVSEL_R = crate::FieldReader;
 #[doc = "Field `CMPINVSEL` writer - Comparator inverting selection"]
-pub type CMPINVSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CMPINVSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CMPNINVSEL` reader - Comparator non-inverting input selection"]
 pub type CMPNINVSEL_R = crate::FieldReader;
 #[doc = "Field `CMPNINVSEL` writer - Comparator non-inverting input selection"]
-pub type CMPNINVSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CMPNINVSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CMPTAG` reader - Comparator output target"]
 pub type CMPTAG_R = crate::FieldReader;
 #[doc = "Field `CMPTAG` writer - Comparator output target"]
-pub type CMPTAG_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CMPTAG_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `CMPP` reader - Comparator polarity"]
 pub type CMPP_R = crate::BitReader;
 #[doc = "Field `CMPP` writer - Comparator polarity"]
-pub type CMPP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMPP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPHYST` reader - Comparator hysteresis"]
 pub type CMPHYST_R = crate::FieldReader;
 #[doc = "Field `CMPHYST` writer - Comparator hysteresis"]
-pub type CMPHYST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CMPHYST_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `CMPBLANKING` reader - Comparator blanking"]
 pub type CMPBLANKING_R = crate::FieldReader;
 #[doc = "Field `CMPBLANKING` writer - Comparator blanking"]
-pub type CMPBLANKING_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CMPBLANKING_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `BRGEN` reader - Comparator brgen"]
 pub type BRGEN_R = crate::BitReader;
 #[doc = "Field `BRGEN` writer - Comparator brgen"]
-pub type BRGEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BRGEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCALEN` reader - Comparator scalen"]
 pub type SCALEN_R = crate::BitReader;
 #[doc = "Field `SCALEN` writer - Comparator scalen"]
-pub type SCALEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCALEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMPVALUE` reader - Comparator output value"]
 pub type CMPVALUE_R = crate::BitReader;
 #[doc = "Field `CMPWP` reader - Comparator write protect"]
 pub type CMPWP_R = crate::BitReader;
 #[doc = "Field `CMPWP` writer - Comparator write protect"]
-pub type CMPWP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMPWP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Comparator enable bit"]
     #[inline(always)]
@@ -150,74 +150,74 @@ impl W {
     #[doc = "Bit 0 - Comparator enable bit"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpen(&mut self) -> CMPEN_W<CTRLSTS_SPEC, 0> {
-        CMPEN_W::new(self)
+    pub fn cmpen(&mut self) -> CMPEN_W<CTRLSTS_SPEC> {
+        CMPEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Comparator input shift"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpis(&mut self) -> CMPIS_W<CTRLSTS_SPEC, 1> {
-        CMPIS_W::new(self)
+    pub fn cmpis(&mut self) -> CMPIS_W<CTRLSTS_SPEC> {
+        CMPIS_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Comparator speed selection"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpssel(&mut self) -> CMPSSEL_W<CTRLSTS_SPEC, 2> {
-        CMPSSEL_W::new(self)
+    pub fn cmpssel(&mut self) -> CMPSSEL_W<CTRLSTS_SPEC> {
+        CMPSSEL_W::new(self, 2)
     }
     #[doc = "Bits 4:6 - Comparator inverting selection"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpinvsel(&mut self) -> CMPINVSEL_W<CTRLSTS_SPEC, 4> {
-        CMPINVSEL_W::new(self)
+    pub fn cmpinvsel(&mut self) -> CMPINVSEL_W<CTRLSTS_SPEC> {
+        CMPINVSEL_W::new(self, 4)
     }
     #[doc = "Bits 7:8 - Comparator non-inverting input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpninvsel(&mut self) -> CMPNINVSEL_W<CTRLSTS_SPEC, 7> {
-        CMPNINVSEL_W::new(self)
+    pub fn cmpninvsel(&mut self) -> CMPNINVSEL_W<CTRLSTS_SPEC> {
+        CMPNINVSEL_W::new(self, 7)
     }
     #[doc = "Bits 10:12 - Comparator output target"]
     #[inline(always)]
     #[must_use]
-    pub fn cmptag(&mut self) -> CMPTAG_W<CTRLSTS_SPEC, 10> {
-        CMPTAG_W::new(self)
+    pub fn cmptag(&mut self) -> CMPTAG_W<CTRLSTS_SPEC> {
+        CMPTAG_W::new(self, 10)
     }
     #[doc = "Bit 15 - Comparator polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpp(&mut self) -> CMPP_W<CTRLSTS_SPEC, 15> {
-        CMPP_W::new(self)
+    pub fn cmpp(&mut self) -> CMPP_W<CTRLSTS_SPEC> {
+        CMPP_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - Comparator hysteresis"]
     #[inline(always)]
     #[must_use]
-    pub fn cmphyst(&mut self) -> CMPHYST_W<CTRLSTS_SPEC, 16> {
-        CMPHYST_W::new(self)
+    pub fn cmphyst(&mut self) -> CMPHYST_W<CTRLSTS_SPEC> {
+        CMPHYST_W::new(self, 16)
     }
     #[doc = "Bits 18:20 - Comparator blanking"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpblanking(&mut self) -> CMPBLANKING_W<CTRLSTS_SPEC, 18> {
-        CMPBLANKING_W::new(self)
+    pub fn cmpblanking(&mut self) -> CMPBLANKING_W<CTRLSTS_SPEC> {
+        CMPBLANKING_W::new(self, 18)
     }
     #[doc = "Bit 22 - Comparator brgen"]
     #[inline(always)]
     #[must_use]
-    pub fn brgen(&mut self) -> BRGEN_W<CTRLSTS_SPEC, 22> {
-        BRGEN_W::new(self)
+    pub fn brgen(&mut self) -> BRGEN_W<CTRLSTS_SPEC> {
+        BRGEN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Comparator scalen"]
     #[inline(always)]
     #[must_use]
-    pub fn scalen(&mut self) -> SCALEN_W<CTRLSTS_SPEC, 23> {
-        SCALEN_W::new(self)
+    pub fn scalen(&mut self) -> SCALEN_W<CTRLSTS_SPEC> {
+        SCALEN_W::new(self, 23)
     }
     #[doc = "Bit 31 - Comparator write protect"]
     #[inline(always)]
     #[must_use]
-    pub fn cmpwp(&mut self) -> CMPWP_W<CTRLSTS_SPEC, 31> {
-        CMPWP_W::new(self)
+    pub fn cmpwp(&mut self) -> CMPWP_W<CTRLSTS_SPEC> {
+        CMPWP_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

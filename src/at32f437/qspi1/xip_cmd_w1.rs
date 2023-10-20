@@ -5,19 +5,19 @@ pub type W = crate::W<XIP_CMD_W1_SPEC>;
 #[doc = "Field `XIPW_DUM2` reader - XIP write second dummy cycle"]
 pub type XIPW_DUM2_R = crate::FieldReader;
 #[doc = "Field `XIPW_DUM2` writer - XIP write second dummy cycle"]
-pub type XIPW_DUM2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type XIPW_DUM2_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `XIPW_OPMODE` reader - XIP write operate mode"]
 pub type XIPW_OPMODE_R = crate::FieldReader;
 #[doc = "Field `XIPW_OPMODE` writer - XIP write operate mode"]
-pub type XIPW_OPMODE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type XIPW_OPMODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `XIPW_ADRLEN` reader - XIP write address length"]
 pub type XIPW_ADRLEN_R = crate::BitReader;
 #[doc = "Field `XIPW_ADRLEN` writer - XIP write address length"]
-pub type XIPW_ADRLEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XIPW_ADRLEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XIPW_INSC` reader - XIP write instruction code"]
 pub type XIPW_INSC_R = crate::FieldReader;
 #[doc = "Field `XIPW_INSC` writer - XIP write instruction code"]
-pub type XIPW_INSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type XIPW_INSC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - XIP write second dummy cycle"]
     #[inline(always)]
@@ -62,26 +62,26 @@ impl W {
     #[doc = "Bits 0:7 - XIP write second dummy cycle"]
     #[inline(always)]
     #[must_use]
-    pub fn xipw_dum2(&mut self) -> XIPW_DUM2_W<XIP_CMD_W1_SPEC, 0> {
-        XIPW_DUM2_W::new(self)
+    pub fn xipw_dum2(&mut self) -> XIPW_DUM2_W<XIP_CMD_W1_SPEC> {
+        XIPW_DUM2_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - XIP write operate mode"]
     #[inline(always)]
     #[must_use]
-    pub fn xipw_opmode(&mut self) -> XIPW_OPMODE_W<XIP_CMD_W1_SPEC, 8> {
-        XIPW_OPMODE_W::new(self)
+    pub fn xipw_opmode(&mut self) -> XIPW_OPMODE_W<XIP_CMD_W1_SPEC> {
+        XIPW_OPMODE_W::new(self, 8)
     }
     #[doc = "Bit 11 - XIP write address length"]
     #[inline(always)]
     #[must_use]
-    pub fn xipw_adrlen(&mut self) -> XIPW_ADRLEN_W<XIP_CMD_W1_SPEC, 11> {
-        XIPW_ADRLEN_W::new(self)
+    pub fn xipw_adrlen(&mut self) -> XIPW_ADRLEN_W<XIP_CMD_W1_SPEC> {
+        XIPW_ADRLEN_W::new(self, 11)
     }
     #[doc = "Bits 12:19 - XIP write instruction code"]
     #[inline(always)]
     #[must_use]
-    pub fn xipw_insc(&mut self) -> XIPW_INSC_W<XIP_CMD_W1_SPEC, 12> {
-        XIPW_INSC_W::new(self)
+    pub fn xipw_insc(&mut self) -> XIPW_INSC_W<XIP_CMD_W1_SPEC> {
+        XIPW_INSC_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

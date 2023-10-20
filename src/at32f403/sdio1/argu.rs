@@ -5,7 +5,7 @@ pub type W = crate::W<ARGU_SPEC>;
 #[doc = "Field `ARGU` reader - Command argument"]
 pub type ARGU_R = crate::FieldReader<u32>;
 #[doc = "Field `ARGU` writer - Command argument"]
-pub type ARGU_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type ARGU_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Command argument"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Command argument"]
     #[inline(always)]
     #[must_use]
-    pub fn argu(&mut self) -> ARGU_W<ARGU_SPEC, 0> {
-        ARGU_W::new(self)
+    pub fn argu(&mut self) -> ARGU_W<ARGU_SPEC> {
+        ARGU_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,47 +5,47 @@ pub type W = crate::W<CTRL3_SPEC>;
 #[doc = "Field `ERRIEN` reader - Error interrupt enable"]
 pub type ERRIEN_R = crate::BitReader;
 #[doc = "Field `ERRIEN` writer - Error interrupt enable"]
-pub type ERRIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERRIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRDAEN` reader - IrDA enable"]
 pub type IRDAEN_R = crate::BitReader;
 #[doc = "Field `IRDAEN` writer - IrDA enable"]
-pub type IRDAEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRDAEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IRDALP` reader - IrDA low-power mode"]
 pub type IRDALP_R = crate::BitReader;
 #[doc = "Field `IRDALP` writer - IrDA low-power mode"]
-pub type IRDALP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IRDALP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLBEN` reader - Single line bidirectional half-duplex enable"]
 pub type SLBEN_R = crate::BitReader;
 #[doc = "Field `SLBEN` writer - Single line bidirectional half-duplex enable"]
-pub type SLBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLBEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCNACKEN` reader - Smartcard NACK enable"]
 pub type SCNACKEN_R = crate::BitReader;
 #[doc = "Field `SCNACKEN` writer - Smartcard NACK enable"]
-pub type SCNACKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCNACKEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SCMEN` reader - Smartcard mode enable"]
 pub type SCMEN_R = crate::BitReader;
 #[doc = "Field `SCMEN` writer - Smartcard mode enable"]
-pub type SCMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SCMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMAREN` reader - DMA receiver enable"]
 pub type DMAREN_R = crate::BitReader;
 #[doc = "Field `DMAREN` writer - DMA receiver enable"]
-pub type DMAREN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMAREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMATEN` reader - DMA transmitter enable"]
 pub type DMATEN_R = crate::BitReader;
 #[doc = "Field `DMATEN` writer - DMA transmitter enable"]
-pub type DMATEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMATEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTSEN` reader - RTS enable"]
 pub type RTSEN_R = crate::BitReader;
 #[doc = "Field `RTSEN` writer - RTS enable"]
-pub type RTSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RTSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTSEN` reader - CTS enable"]
 pub type CTSEN_R = crate::BitReader;
 #[doc = "Field `CTSEN` writer - CTS enable"]
-pub type CTSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CTSCFIEN` reader - CTSCF interrupt enable"]
 pub type CTSCFIEN_R = crate::BitReader;
 #[doc = "Field `CTSCFIEN` writer - CTSCF interrupt enable"]
-pub type CTSCFIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CTSCFIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Error interrupt enable"]
     #[inline(always)]
@@ -129,68 +129,68 @@ impl W {
     #[doc = "Bit 0 - Error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn errien(&mut self) -> ERRIEN_W<CTRL3_SPEC, 0> {
-        ERRIEN_W::new(self)
+    pub fn errien(&mut self) -> ERRIEN_W<CTRL3_SPEC> {
+        ERRIEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - IrDA enable"]
     #[inline(always)]
     #[must_use]
-    pub fn irdaen(&mut self) -> IRDAEN_W<CTRL3_SPEC, 1> {
-        IRDAEN_W::new(self)
+    pub fn irdaen(&mut self) -> IRDAEN_W<CTRL3_SPEC> {
+        IRDAEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - IrDA low-power mode"]
     #[inline(always)]
     #[must_use]
-    pub fn irdalp(&mut self) -> IRDALP_W<CTRL3_SPEC, 2> {
-        IRDALP_W::new(self)
+    pub fn irdalp(&mut self) -> IRDALP_W<CTRL3_SPEC> {
+        IRDALP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Single line bidirectional half-duplex enable"]
     #[inline(always)]
     #[must_use]
-    pub fn slben(&mut self) -> SLBEN_W<CTRL3_SPEC, 3> {
-        SLBEN_W::new(self)
+    pub fn slben(&mut self) -> SLBEN_W<CTRL3_SPEC> {
+        SLBEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Smartcard NACK enable"]
     #[inline(always)]
     #[must_use]
-    pub fn scnacken(&mut self) -> SCNACKEN_W<CTRL3_SPEC, 4> {
-        SCNACKEN_W::new(self)
+    pub fn scnacken(&mut self) -> SCNACKEN_W<CTRL3_SPEC> {
+        SCNACKEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Smartcard mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn scmen(&mut self) -> SCMEN_W<CTRL3_SPEC, 5> {
-        SCMEN_W::new(self)
+    pub fn scmen(&mut self) -> SCMEN_W<CTRL3_SPEC> {
+        SCMEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - DMA receiver enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaren(&mut self) -> DMAREN_W<CTRL3_SPEC, 6> {
-        DMAREN_W::new(self)
+    pub fn dmaren(&mut self) -> DMAREN_W<CTRL3_SPEC> {
+        DMAREN_W::new(self, 6)
     }
     #[doc = "Bit 7 - DMA transmitter enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dmaten(&mut self) -> DMATEN_W<CTRL3_SPEC, 7> {
-        DMATEN_W::new(self)
+    pub fn dmaten(&mut self) -> DMATEN_W<CTRL3_SPEC> {
+        DMATEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - RTS enable"]
     #[inline(always)]
     #[must_use]
-    pub fn rtsen(&mut self) -> RTSEN_W<CTRL3_SPEC, 8> {
-        RTSEN_W::new(self)
+    pub fn rtsen(&mut self) -> RTSEN_W<CTRL3_SPEC> {
+        RTSEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - CTS enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ctsen(&mut self) -> CTSEN_W<CTRL3_SPEC, 9> {
-        CTSEN_W::new(self)
+    pub fn ctsen(&mut self) -> CTSEN_W<CTRL3_SPEC> {
+        CTSEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - CTSCF interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ctscfien(&mut self) -> CTSCFIEN_W<CTRL3_SPEC, 10> {
-        CTSCFIEN_W::new(self)
+    pub fn ctscfien(&mut self) -> CTSCFIEN_W<CTRL3_SPEC> {
+        CTSCFIEN_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

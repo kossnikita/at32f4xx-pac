@@ -5,11 +5,11 @@ pub type W = crate::W<PTPTSLUD_SPEC>;
 #[doc = "Field `TSS` reader - Timestamp subseconds"]
 pub type TSS_R = crate::FieldReader<u32>;
 #[doc = "Field `TSS` writer - Timestamp subseconds"]
-pub type TSS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 31, O, u32>;
+pub type TSS_W<'a, REG> = crate::FieldWriter<'a, REG, 31, u32>;
 #[doc = "Field `AST` reader - Add or subtract time"]
 pub type AST_R = crate::BitReader;
 #[doc = "Field `AST` writer - Add or subtract time"]
-pub type AST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:30 - Timestamp subseconds"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:30 - Timestamp subseconds"]
     #[inline(always)]
     #[must_use]
-    pub fn tss(&mut self) -> TSS_W<PTPTSLUD_SPEC, 0> {
-        TSS_W::new(self)
+    pub fn tss(&mut self) -> TSS_W<PTPTSLUD_SPEC> {
+        TSS_W::new(self, 0)
     }
     #[doc = "Bit 31 - Add or subtract time"]
     #[inline(always)]
     #[must_use]
-    pub fn ast(&mut self) -> AST_W<PTPTSLUD_SPEC, 31> {
-        AST_W::new(self)
+    pub fn ast(&mut self) -> AST_W<PTPTSLUD_SPEC> {
+        AST_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

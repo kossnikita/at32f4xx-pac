@@ -5,43 +5,43 @@ pub type W = crate::W<DMABM_SPEC>;
 #[doc = "Field `SWR` reader - Software reset"]
 pub type SWR_R = crate::BitReader;
 #[doc = "Field `SWR` writer - Software reset"]
-pub type SWR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SWR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DA` reader - DMA Arbitration"]
 pub type DA_R = crate::BitReader;
 #[doc = "Field `DA` writer - DMA Arbitration"]
-pub type DA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DSL` reader - Descriptor skip length"]
 pub type DSL_R = crate::FieldReader;
 #[doc = "Field `DSL` writer - Descriptor skip length"]
-pub type DSL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type DSL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PBL` reader - Programmable burst length"]
 pub type PBL_R = crate::FieldReader;
 #[doc = "Field `PBL` writer - Programmable burst length"]
-pub type PBL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type PBL_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `PR` reader - Priority ratio"]
 pub type PR_R = crate::FieldReader;
 #[doc = "Field `PR` writer - Priority ratio"]
-pub type PR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `FB` reader - Fixed burst"]
 pub type FB_R = crate::BitReader;
 #[doc = "Field `FB` writer - Fixed burst"]
-pub type FB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RDP` reader - Rx DMA PBL"]
 pub type RDP_R = crate::FieldReader;
 #[doc = "Field `RDP` writer - Rx DMA PBL"]
-pub type RDP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RDP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `USP` reader - Use separate PBL"]
 pub type USP_R = crate::BitReader;
 #[doc = "Field `USP` writer - Use separate PBL"]
-pub type USP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PBLx8` reader - PNLx8 mode"]
 pub type PBLX8_R = crate::BitReader;
 #[doc = "Field `PBLx8` writer - PNLx8 mode"]
-pub type PBLX8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PBLX8_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AAB` reader - Address-aligned beats"]
 pub type AAB_R = crate::BitReader;
 #[doc = "Field `AAB` writer - Address-aligned beats"]
-pub type AAB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AAB_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Software reset"]
     #[inline(always)]
@@ -119,62 +119,62 @@ impl W {
     #[doc = "Bit 0 - Software reset"]
     #[inline(always)]
     #[must_use]
-    pub fn swr(&mut self) -> SWR_W<DMABM_SPEC, 0> {
-        SWR_W::new(self)
+    pub fn swr(&mut self) -> SWR_W<DMABM_SPEC> {
+        SWR_W::new(self, 0)
     }
     #[doc = "Bit 1 - DMA Arbitration"]
     #[inline(always)]
     #[must_use]
-    pub fn da(&mut self) -> DA_W<DMABM_SPEC, 1> {
-        DA_W::new(self)
+    pub fn da(&mut self) -> DA_W<DMABM_SPEC> {
+        DA_W::new(self, 1)
     }
     #[doc = "Bits 2:6 - Descriptor skip length"]
     #[inline(always)]
     #[must_use]
-    pub fn dsl(&mut self) -> DSL_W<DMABM_SPEC, 2> {
-        DSL_W::new(self)
+    pub fn dsl(&mut self) -> DSL_W<DMABM_SPEC> {
+        DSL_W::new(self, 2)
     }
     #[doc = "Bits 8:13 - Programmable burst length"]
     #[inline(always)]
     #[must_use]
-    pub fn pbl(&mut self) -> PBL_W<DMABM_SPEC, 8> {
-        PBL_W::new(self)
+    pub fn pbl(&mut self) -> PBL_W<DMABM_SPEC> {
+        PBL_W::new(self, 8)
     }
     #[doc = "Bits 14:15 - Priority ratio"]
     #[inline(always)]
     #[must_use]
-    pub fn pr(&mut self) -> PR_W<DMABM_SPEC, 14> {
-        PR_W::new(self)
+    pub fn pr(&mut self) -> PR_W<DMABM_SPEC> {
+        PR_W::new(self, 14)
     }
     #[doc = "Bit 16 - Fixed burst"]
     #[inline(always)]
     #[must_use]
-    pub fn fb(&mut self) -> FB_W<DMABM_SPEC, 16> {
-        FB_W::new(self)
+    pub fn fb(&mut self) -> FB_W<DMABM_SPEC> {
+        FB_W::new(self, 16)
     }
     #[doc = "Bits 17:22 - Rx DMA PBL"]
     #[inline(always)]
     #[must_use]
-    pub fn rdp(&mut self) -> RDP_W<DMABM_SPEC, 17> {
-        RDP_W::new(self)
+    pub fn rdp(&mut self) -> RDP_W<DMABM_SPEC> {
+        RDP_W::new(self, 17)
     }
     #[doc = "Bit 23 - Use separate PBL"]
     #[inline(always)]
     #[must_use]
-    pub fn usp(&mut self) -> USP_W<DMABM_SPEC, 23> {
-        USP_W::new(self)
+    pub fn usp(&mut self) -> USP_W<DMABM_SPEC> {
+        USP_W::new(self, 23)
     }
     #[doc = "Bit 24 - PNLx8 mode"]
     #[inline(always)]
     #[must_use]
-    pub fn pblx8(&mut self) -> PBLX8_W<DMABM_SPEC, 24> {
-        PBLX8_W::new(self)
+    pub fn pblx8(&mut self) -> PBLX8_W<DMABM_SPEC> {
+        PBLX8_W::new(self, 24)
     }
     #[doc = "Bit 25 - Address-aligned beats"]
     #[inline(always)]
     #[must_use]
-    pub fn aab(&mut self) -> AAB_W<DMABM_SPEC, 25> {
-        AAB_W::new(self)
+    pub fn aab(&mut self) -> AAB_W<DMABM_SPEC> {
+        AAB_W::new(self, 25)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

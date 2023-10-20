@@ -3,9 +3,10 @@ pub type R = crate::R<RFDTL_SPEC>;
 #[doc = "Field `RFDT[0-3]` reader - Receive FIFO data byte %s"]
 pub type RFDT_R = crate::FieldReader;
 impl R {
-    #[doc = "Receive FIFO data byte [0-3]"]
+    #[doc = "Receive FIFO data byte [0-3]\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn rfdt(&self, n: u8) -> RFDT_R {
+    pub fn rfdt(&self, n: u8) -> RFDT_R {
+        assert!(n < 4);
         RFDT_R::new(((self.bits >> (n * 8)) & 0xff) as u8)
     }
     #[doc = "Bits 0:7 - Receive FIFO data byte 0"]

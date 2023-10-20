@@ -5,23 +5,23 @@ pub type W = crate::W<IENA_SPEC>;
 #[doc = "Field `CFDIE` reader - Capture frame done interrupt enable"]
 pub type CFDIE_R = crate::BitReader;
 #[doc = "Field `CFDIE` writer - Capture frame done interrupt enable"]
-pub type CFDIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CFDIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OVRIE` reader - Data FIFO overrun interrupt enable"]
 pub type OVRIE_R = crate::BitReader;
 #[doc = "Field `OVRIE` writer - Data FIFO overrun interrupt enable"]
-pub type OVRIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OVRIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ESEIE` reader - Embedded synchronization error interrupt enable"]
 pub type ESEIE_R = crate::BitReader;
 #[doc = "Field `ESEIE` writer - Embedded synchronization error interrupt enable"]
-pub type ESEIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ESEIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VSIE` reader - Vertical synchronization interrupt enablee"]
 pub type VSIE_R = crate::BitReader;
 #[doc = "Field `VSIE` writer - Vertical synchronization interrupt enablee"]
-pub type VSIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VSIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSIE` reader - Horizontal synchronization interrupt enable"]
 pub type HSIE_R = crate::BitReader;
 #[doc = "Field `HSIE` writer - Horizontal synchronization interrupt enable"]
-pub type HSIE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSIE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Capture frame done interrupt enable"]
     #[inline(always)]
@@ -69,32 +69,32 @@ impl W {
     #[doc = "Bit 0 - Capture frame done interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cfdie(&mut self) -> CFDIE_W<IENA_SPEC, 0> {
-        CFDIE_W::new(self)
+    pub fn cfdie(&mut self) -> CFDIE_W<IENA_SPEC> {
+        CFDIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Data FIFO overrun interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ovrie(&mut self) -> OVRIE_W<IENA_SPEC, 1> {
-        OVRIE_W::new(self)
+    pub fn ovrie(&mut self) -> OVRIE_W<IENA_SPEC> {
+        OVRIE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Embedded synchronization error interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn eseie(&mut self) -> ESEIE_W<IENA_SPEC, 2> {
-        ESEIE_W::new(self)
+    pub fn eseie(&mut self) -> ESEIE_W<IENA_SPEC> {
+        ESEIE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Vertical synchronization interrupt enablee"]
     #[inline(always)]
     #[must_use]
-    pub fn vsie(&mut self) -> VSIE_W<IENA_SPEC, 3> {
-        VSIE_W::new(self)
+    pub fn vsie(&mut self) -> VSIE_W<IENA_SPEC> {
+        VSIE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Horizontal synchronization interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hsie(&mut self) -> HSIE_W<IENA_SPEC, 4> {
-        HSIE_W::new(self)
+    pub fn hsie(&mut self) -> HSIE_W<IENA_SPEC> {
+        HSIE_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

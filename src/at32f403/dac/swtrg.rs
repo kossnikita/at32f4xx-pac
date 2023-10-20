@@ -5,11 +5,11 @@ pub type W = crate::W<SWTRG_SPEC>;
 #[doc = "Field `D1SWTRG` reader - DAC1 software trigger"]
 pub type D1SWTRG_R = crate::BitReader;
 #[doc = "Field `D1SWTRG` writer - DAC1 software trigger"]
-pub type D1SWTRG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D1SWTRG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `D2SWTRG` reader - DAC2 software trigger"]
 pub type D2SWTRG_R = crate::BitReader;
 #[doc = "Field `D2SWTRG` writer - DAC2 software trigger"]
-pub type D2SWTRG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type D2SWTRG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - DAC1 software trigger"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bit 0 - DAC1 software trigger"]
     #[inline(always)]
     #[must_use]
-    pub fn d1swtrg(&mut self) -> D1SWTRG_W<SWTRG_SPEC, 0> {
-        D1SWTRG_W::new(self)
+    pub fn d1swtrg(&mut self) -> D1SWTRG_W<SWTRG_SPEC> {
+        D1SWTRG_W::new(self, 0)
     }
     #[doc = "Bit 1 - DAC2 software trigger"]
     #[inline(always)]
     #[must_use]
-    pub fn d2swtrg(&mut self) -> D2SWTRG_W<SWTRG_SPEC, 1> {
-        D2SWTRG_W::new(self)
+    pub fn d2swtrg(&mut self) -> D2SWTRG_W<SWTRG_SPEC> {
+        D2SWTRG_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

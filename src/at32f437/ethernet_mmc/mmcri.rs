@@ -5,15 +5,15 @@ pub type W = crate::W<MMCRI_SPEC>;
 #[doc = "Field `RFCE` reader - Received frames CRC error"]
 pub type RFCE_R = crate::BitReader;
 #[doc = "Field `RFCE` writer - Received frames CRC error"]
-pub type RFCE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RFAE` reader - Received frames alignment error"]
 pub type RFAE_R = crate::BitReader;
 #[doc = "Field `RFAE` writer - Received frames alignment error"]
-pub type RFAE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RFAE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RGUF` reader - Received good unicast frames"]
 pub type RGUF_R = crate::BitReader;
 #[doc = "Field `RGUF` writer - Received good unicast frames"]
-pub type RGUF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RGUF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 5 - Received frames CRC error"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 5 - Received frames CRC error"]
     #[inline(always)]
     #[must_use]
-    pub fn rfce(&mut self) -> RFCE_W<MMCRI_SPEC, 5> {
-        RFCE_W::new(self)
+    pub fn rfce(&mut self) -> RFCE_W<MMCRI_SPEC> {
+        RFCE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Received frames alignment error"]
     #[inline(always)]
     #[must_use]
-    pub fn rfae(&mut self) -> RFAE_W<MMCRI_SPEC, 6> {
-        RFAE_W::new(self)
+    pub fn rfae(&mut self) -> RFAE_W<MMCRI_SPEC> {
+        RFAE_W::new(self, 6)
     }
     #[doc = "Bit 17 - Received good unicast frames"]
     #[inline(always)]
     #[must_use]
-    pub fn rguf(&mut self) -> RGUF_W<MMCRI_SPEC, 17> {
-        RGUF_W::new(self)
+    pub fn rguf(&mut self) -> RGUF_W<MMCRI_SPEC> {
+        RGUF_W::new(self, 17)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

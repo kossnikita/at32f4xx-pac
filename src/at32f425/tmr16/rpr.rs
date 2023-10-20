@@ -5,7 +5,7 @@ pub type W = crate::W<RPR_SPEC>;
 #[doc = "Field `RPR` reader - Repetition of period value"]
 pub type RPR_R = crate::FieldReader;
 #[doc = "Field `RPR` writer - Repetition of period value"]
-pub type RPR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RPR_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Repetition of period value"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:7 - Repetition of period value"]
     #[inline(always)]
     #[must_use]
-    pub fn rpr(&mut self) -> RPR_W<RPR_SPEC, 0> {
-        RPR_W::new(self)
+    pub fn rpr(&mut self) -> RPR_W<RPR_SPEC> {
+        RPR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

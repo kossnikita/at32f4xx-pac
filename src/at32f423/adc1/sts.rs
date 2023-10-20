@@ -51,8 +51,8 @@ impl From<VMORW_AW> for bool {
     }
 }
 #[doc = "Field `VMOR` writer - Voltage monitoring out of range flag"]
-pub type VMOR_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, VMORW_AW>;
-impl<'a, REG, const O: u8> VMOR_W<'a, REG, O>
+pub type VMOR_W<'a, REG> = crate::BitWriter0C<'a, REG, VMORW_AW>;
+impl<'a, REG> VMOR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -111,8 +111,8 @@ impl From<OCCEW_AW> for bool {
     }
 }
 #[doc = "Field `OCCE` writer - Ordinary channels conversion end flag"]
-pub type OCCE_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, OCCEW_AW>;
-impl<'a, REG, const O: u8> OCCE_W<'a, REG, O>
+pub type OCCE_W<'a, REG> = crate::BitWriter0C<'a, REG, OCCEW_AW>;
+impl<'a, REG> OCCE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -175,8 +175,8 @@ impl From<PCCSW_AW> for bool {
     }
 }
 #[doc = "Field `PCCS` writer - Preempted channel conversion start flag"]
-pub type PCCS_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, PCCSW_AW>;
-impl<'a, REG, const O: u8> PCCS_W<'a, REG, O>
+pub type PCCS_W<'a, REG> = crate::BitWriter0C<'a, REG, PCCSW_AW>;
+impl<'a, REG> PCCS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -193,7 +193,7 @@ pub use PCCS_W as OCCS_W;
 #[doc = "Field `OCCO` reader - Ordinary channel conversion overflow flag"]
 pub type OCCO_R = crate::BitReader;
 #[doc = "Field `OCCO` writer - Ordinary channel conversion overflow flag"]
-pub type OCCO_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OCCO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RDY` reader - ADC ready to conversion flag"]
 pub type RDY_R = crate::BitReader;
 impl R {
@@ -255,38 +255,38 @@ impl W {
     #[doc = "Bit 0 - Voltage monitoring out of range flag"]
     #[inline(always)]
     #[must_use]
-    pub fn vmor(&mut self) -> VMOR_W<STS_SPEC, 0> {
-        VMOR_W::new(self)
+    pub fn vmor(&mut self) -> VMOR_W<STS_SPEC> {
+        VMOR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Ordinary channels conversion end flag"]
     #[inline(always)]
     #[must_use]
-    pub fn occe(&mut self) -> OCCE_W<STS_SPEC, 1> {
-        OCCE_W::new(self)
+    pub fn occe(&mut self) -> OCCE_W<STS_SPEC> {
+        OCCE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Preempted channels conversion end flag"]
     #[inline(always)]
     #[must_use]
-    pub fn pcce(&mut self) -> PCCE_W<STS_SPEC, 2> {
-        PCCE_W::new(self)
+    pub fn pcce(&mut self) -> PCCE_W<STS_SPEC> {
+        PCCE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Preempted channel conversion start flag"]
     #[inline(always)]
     #[must_use]
-    pub fn pccs(&mut self) -> PCCS_W<STS_SPEC, 3> {
-        PCCS_W::new(self)
+    pub fn pccs(&mut self) -> PCCS_W<STS_SPEC> {
+        PCCS_W::new(self, 3)
     }
     #[doc = "Bit 4 - Ordinary channel conversion start flag"]
     #[inline(always)]
     #[must_use]
-    pub fn occs(&mut self) -> OCCS_W<STS_SPEC, 4> {
-        OCCS_W::new(self)
+    pub fn occs(&mut self) -> OCCS_W<STS_SPEC> {
+        OCCS_W::new(self, 4)
     }
     #[doc = "Bit 5 - Ordinary channel conversion overflow flag"]
     #[inline(always)]
     #[must_use]
-    pub fn occo(&mut self) -> OCCO_W<STS_SPEC, 5> {
-        OCCO_W::new(self)
+    pub fn occo(&mut self) -> OCCO_W<STS_SPEC> {
+        OCCO_W::new(self, 5)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

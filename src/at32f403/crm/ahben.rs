@@ -5,35 +5,35 @@ pub type W = crate::W<AHBEN_SPEC>;
 #[doc = "Field `DMA1` reader - DMA1 clock enable"]
 pub type DMA1_R = crate::BitReader;
 #[doc = "Field `DMA1` writer - DMA1 clock enable"]
-pub type DMA1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA2` reader - DMA2 clock enable"]
 pub type DMA2_R = crate::BitReader;
 #[doc = "Field `DMA2` writer - DMA2 clock enable"]
-pub type DMA2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DMA2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRAM` reader - SRAM interface clock enable"]
 pub type SRAM_R = crate::BitReader;
 #[doc = "Field `SRAM` writer - SRAM interface clock enable"]
-pub type SRAM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SRAM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLASH` reader - FLASH clock enable"]
 pub type FLASH_R = crate::BitReader;
 #[doc = "Field `FLASH` writer - FLASH clock enable"]
-pub type FLASH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FLASH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRC` reader - CRC clock enable"]
 pub type CRC_R = crate::BitReader;
 #[doc = "Field `CRC` writer - CRC clock enable"]
-pub type CRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XMC` reader - XMC clock enable"]
 pub type XMC_R = crate::BitReader;
 #[doc = "Field `XMC` writer - XMC clock enable"]
-pub type XMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XMC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO1` reader - SDIO1 clock enable"]
 pub type SDIO1_R = crate::BitReader;
 #[doc = "Field `SDIO1` writer - SDIO1 clock enable"]
-pub type SDIO1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO2` reader - SDIO2 clock enable"]
 pub type SDIO2_R = crate::BitReader;
 #[doc = "Field `SDIO2` writer - SDIO2 clock enable"]
-pub type SDIO2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO2_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - DMA1 clock enable"]
     #[inline(always)]
@@ -99,50 +99,50 @@ impl W {
     #[doc = "Bit 0 - DMA1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dma1(&mut self) -> DMA1_W<AHBEN_SPEC, 0> {
-        DMA1_W::new(self)
+    pub fn dma1(&mut self) -> DMA1_W<AHBEN_SPEC> {
+        DMA1_W::new(self, 0)
     }
     #[doc = "Bit 1 - DMA2 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dma2(&mut self) -> DMA2_W<AHBEN_SPEC, 1> {
-        DMA2_W::new(self)
+    pub fn dma2(&mut self) -> DMA2_W<AHBEN_SPEC> {
+        DMA2_W::new(self, 1)
     }
     #[doc = "Bit 2 - SRAM interface clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sram(&mut self) -> SRAM_W<AHBEN_SPEC, 2> {
-        SRAM_W::new(self)
+    pub fn sram(&mut self) -> SRAM_W<AHBEN_SPEC> {
+        SRAM_W::new(self, 2)
     }
     #[doc = "Bit 4 - FLASH clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn flash(&mut self) -> FLASH_W<AHBEN_SPEC, 4> {
-        FLASH_W::new(self)
+    pub fn flash(&mut self) -> FLASH_W<AHBEN_SPEC> {
+        FLASH_W::new(self, 4)
     }
     #[doc = "Bit 6 - CRC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn crc(&mut self) -> CRC_W<AHBEN_SPEC, 6> {
-        CRC_W::new(self)
+    pub fn crc(&mut self) -> CRC_W<AHBEN_SPEC> {
+        CRC_W::new(self, 6)
     }
     #[doc = "Bit 8 - XMC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn xmc(&mut self) -> XMC_W<AHBEN_SPEC, 8> {
-        XMC_W::new(self)
+    pub fn xmc(&mut self) -> XMC_W<AHBEN_SPEC> {
+        XMC_W::new(self, 8)
     }
     #[doc = "Bit 10 - SDIO1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio1(&mut self) -> SDIO1_W<AHBEN_SPEC, 10> {
-        SDIO1_W::new(self)
+    pub fn sdio1(&mut self) -> SDIO1_W<AHBEN_SPEC> {
+        SDIO1_W::new(self, 10)
     }
     #[doc = "Bit 11 - SDIO2 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio2(&mut self) -> SDIO2_W<AHBEN_SPEC, 11> {
-        SDIO2_W::new(self)
+    pub fn sdio2(&mut self) -> SDIO2_W<AHBEN_SPEC> {
+        SDIO2_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

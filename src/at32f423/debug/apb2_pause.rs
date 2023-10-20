@@ -5,23 +5,23 @@ pub type W = crate::W<APB2_PAUSE_SPEC>;
 #[doc = "Field `TMR1_PAUSE` reader - TMR1_PAUSE"]
 pub type TMR1_PAUSE_R = crate::BitReader;
 #[doc = "Field `TMR1_PAUSE` writer - TMR1_PAUSE"]
-pub type TMR1_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR1_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR8_PAUSE` reader - TMR8_PAUSE"]
 pub type TMR8_PAUSE_R = crate::BitReader;
 #[doc = "Field `TMR8_PAUSE` writer - TMR8_PAUSE"]
-pub type TMR8_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR8_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR9_PAUSE` reader - TMR9_PAUSE"]
 pub type TMR9_PAUSE_R = crate::BitReader;
 #[doc = "Field `TMR9_PAUSE` writer - TMR9_PAUSE"]
-pub type TMR9_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR9_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR10_PAUSE` reader - TMR10_PAUSE"]
 pub type TMR10_PAUSE_R = crate::BitReader;
 #[doc = "Field `TMR10_PAUSE` writer - TMR10_PAUSE"]
-pub type TMR10_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR10_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR11_PAUSE` reader - TMR11_PAUSE"]
 pub type TMR11_PAUSE_R = crate::BitReader;
 #[doc = "Field `TMR11_PAUSE` writer - TMR11_PAUSE"]
-pub type TMR11_PAUSE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR11_PAUSE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - TMR1_PAUSE"]
     #[inline(always)]
@@ -69,32 +69,32 @@ impl W {
     #[doc = "Bit 0 - TMR1_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr1_pause(&mut self) -> TMR1_PAUSE_W<APB2_PAUSE_SPEC, 0> {
-        TMR1_PAUSE_W::new(self)
+    pub fn tmr1_pause(&mut self) -> TMR1_PAUSE_W<APB2_PAUSE_SPEC> {
+        TMR1_PAUSE_W::new(self, 0)
     }
     #[doc = "Bit 1 - TMR8_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr8_pause(&mut self) -> TMR8_PAUSE_W<APB2_PAUSE_SPEC, 1> {
-        TMR8_PAUSE_W::new(self)
+    pub fn tmr8_pause(&mut self) -> TMR8_PAUSE_W<APB2_PAUSE_SPEC> {
+        TMR8_PAUSE_W::new(self, 1)
     }
     #[doc = "Bit 16 - TMR9_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr9_pause(&mut self) -> TMR9_PAUSE_W<APB2_PAUSE_SPEC, 16> {
-        TMR9_PAUSE_W::new(self)
+    pub fn tmr9_pause(&mut self) -> TMR9_PAUSE_W<APB2_PAUSE_SPEC> {
+        TMR9_PAUSE_W::new(self, 16)
     }
     #[doc = "Bit 17 - TMR10_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr10_pause(&mut self) -> TMR10_PAUSE_W<APB2_PAUSE_SPEC, 17> {
-        TMR10_PAUSE_W::new(self)
+    pub fn tmr10_pause(&mut self) -> TMR10_PAUSE_W<APB2_PAUSE_SPEC> {
+        TMR10_PAUSE_W::new(self, 17)
     }
     #[doc = "Bit 18 - TMR11_PAUSE"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr11_pause(&mut self) -> TMR11_PAUSE_W<APB2_PAUSE_SPEC, 18> {
-        TMR11_PAUSE_W::new(self)
+    pub fn tmr11_pause(&mut self) -> TMR11_PAUSE_W<APB2_PAUSE_SPEC> {
+        TMR11_PAUSE_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

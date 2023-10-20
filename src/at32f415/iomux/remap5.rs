@@ -52,8 +52,8 @@ impl I2C1_GMUX_R {
     }
 }
 #[doc = "Field `I2C1_GMUX` writer - I2C1 muxing"]
-pub type I2C1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, I2C1_GMUX_A>;
-impl<'a, REG, const O: u8> I2C1_GMUX_W<'a, REG, O>
+pub type I2C1_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4, I2C1_GMUX_A>;
+impl<'a, REG> I2C1_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -132,8 +132,8 @@ impl I2C2_GMUX_R {
     }
 }
 #[doc = "Field `I2C2_GMUX` writer - I2C2 muxing"]
-pub type I2C2_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, I2C2_GMUX_A>;
-impl<'a, REG, const O: u8> I2C2_GMUX_W<'a, REG, O>
+pub type I2C2_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4, I2C2_GMUX_A>;
+impl<'a, REG> I2C2_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -201,8 +201,8 @@ impl SPI1_GMUX_R {
     }
 }
 #[doc = "Field `SPI1_GMUX` writer - SPI1 muxing"]
-pub type SPI1_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, SPI1_GMUX_A>;
-impl<'a, REG, const O: u8> SPI1_GMUX_W<'a, REG, O>
+pub type SPI1_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4, SPI1_GMUX_A>;
+impl<'a, REG> SPI1_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -260,8 +260,8 @@ impl SPI2_GMUX_R {
     }
 }
 #[doc = "Field `SPI2_GMUX` writer - SPI2 muxing"]
-pub type SPI2_GMUX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, SPI2_GMUX_A>;
-impl<'a, REG, const O: u8> SPI2_GMUX_W<'a, REG, O>
+pub type SPI2_GMUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4, SPI2_GMUX_A>;
+impl<'a, REG> SPI2_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -318,26 +318,26 @@ impl W {
     #[doc = "Bits 4:7 - I2C1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c1_gmux(&mut self) -> I2C1_GMUX_W<REMAP5_SPEC, 4> {
-        I2C1_GMUX_W::new(self)
+    pub fn i2c1_gmux(&mut self) -> I2C1_GMUX_W<REMAP5_SPEC> {
+        I2C1_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - I2C2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c2_gmux(&mut self) -> I2C2_GMUX_W<REMAP5_SPEC, 8> {
-        I2C2_GMUX_W::new(self)
+    pub fn i2c2_gmux(&mut self) -> I2C2_GMUX_W<REMAP5_SPEC> {
+        I2C2_GMUX_W::new(self, 8)
     }
     #[doc = "Bits 16:19 - SPI1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn spi1_gmux(&mut self) -> SPI1_GMUX_W<REMAP5_SPEC, 16> {
-        SPI1_GMUX_W::new(self)
+    pub fn spi1_gmux(&mut self) -> SPI1_GMUX_W<REMAP5_SPEC> {
+        SPI1_GMUX_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - SPI2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn spi2_gmux(&mut self) -> SPI2_GMUX_W<REMAP5_SPEC, 20> {
-        SPI2_GMUX_W::new(self)
+    pub fn spi2_gmux(&mut self) -> SPI2_GMUX_W<REMAP5_SPEC> {
+        SPI2_GMUX_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,39 +5,39 @@ pub type W = crate::W<HCINT4_SPEC>;
 #[doc = "Field `XFERC` reader - Transfer completed"]
 pub type XFERC_R = crate::BitReader;
 #[doc = "Field `XFERC` writer - Transfer completed"]
-pub type XFERC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XFERC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHHLTD` reader - Channel halted"]
 pub type CHHLTD_R = crate::BitReader;
 #[doc = "Field `CHHLTD` writer - Channel halted"]
-pub type CHHLTD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CHHLTD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STALL` reader - STALL response received interrupt"]
 pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - STALL response received interrupt"]
-pub type STALL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NAK` reader - NAK response received interrupt"]
 pub type NAK_R = crate::BitReader;
 #[doc = "Field `NAK` writer - NAK response received interrupt"]
-pub type NAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ACK` reader - ACK response received/transmitted interrupt"]
 pub type ACK_R = crate::BitReader;
 #[doc = "Field `ACK` writer - ACK response received/transmitted interrupt"]
-pub type ACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `XACTERR` reader - Transaction error"]
 pub type XACTERR_R = crate::BitReader;
 #[doc = "Field `XACTERR` writer - Transaction error"]
-pub type XACTERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XACTERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BBLERR` reader - Babble error"]
 pub type BBLERR_R = crate::BitReader;
 #[doc = "Field `BBLERR` writer - Babble error"]
-pub type BBLERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BBLERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FRMOVRUN` reader - Frame overrun"]
 pub type FRMOVRUN_R = crate::BitReader;
 #[doc = "Field `FRMOVRUN` writer - Frame overrun"]
-pub type FRMOVRUN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FRMOVRUN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTGLERR` reader - Data toggle error"]
 pub type DTGLERR_R = crate::BitReader;
 #[doc = "Field `DTGLERR` writer - Data toggle error"]
-pub type DTGLERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTGLERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Transfer completed"]
     #[inline(always)]
@@ -109,56 +109,56 @@ impl W {
     #[doc = "Bit 0 - Transfer completed"]
     #[inline(always)]
     #[must_use]
-    pub fn xferc(&mut self) -> XFERC_W<HCINT4_SPEC, 0> {
-        XFERC_W::new(self)
+    pub fn xferc(&mut self) -> XFERC_W<HCINT4_SPEC> {
+        XFERC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel halted"]
     #[inline(always)]
     #[must_use]
-    pub fn chhltd(&mut self) -> CHHLTD_W<HCINT4_SPEC, 1> {
-        CHHLTD_W::new(self)
+    pub fn chhltd(&mut self) -> CHHLTD_W<HCINT4_SPEC> {
+        CHHLTD_W::new(self, 1)
     }
     #[doc = "Bit 3 - STALL response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<HCINT4_SPEC, 3> {
-        STALL_W::new(self)
+    pub fn stall(&mut self) -> STALL_W<HCINT4_SPEC> {
+        STALL_W::new(self, 3)
     }
     #[doc = "Bit 4 - NAK response received interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn nak(&mut self) -> NAK_W<HCINT4_SPEC, 4> {
-        NAK_W::new(self)
+    pub fn nak(&mut self) -> NAK_W<HCINT4_SPEC> {
+        NAK_W::new(self, 4)
     }
     #[doc = "Bit 5 - ACK response received/transmitted interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn ack(&mut self) -> ACK_W<HCINT4_SPEC, 5> {
-        ACK_W::new(self)
+    pub fn ack(&mut self) -> ACK_W<HCINT4_SPEC> {
+        ACK_W::new(self, 5)
     }
     #[doc = "Bit 7 - Transaction error"]
     #[inline(always)]
     #[must_use]
-    pub fn xacterr(&mut self) -> XACTERR_W<HCINT4_SPEC, 7> {
-        XACTERR_W::new(self)
+    pub fn xacterr(&mut self) -> XACTERR_W<HCINT4_SPEC> {
+        XACTERR_W::new(self, 7)
     }
     #[doc = "Bit 8 - Babble error"]
     #[inline(always)]
     #[must_use]
-    pub fn bblerr(&mut self) -> BBLERR_W<HCINT4_SPEC, 8> {
-        BBLERR_W::new(self)
+    pub fn bblerr(&mut self) -> BBLERR_W<HCINT4_SPEC> {
+        BBLERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Frame overrun"]
     #[inline(always)]
     #[must_use]
-    pub fn frmovrun(&mut self) -> FRMOVRUN_W<HCINT4_SPEC, 9> {
-        FRMOVRUN_W::new(self)
+    pub fn frmovrun(&mut self) -> FRMOVRUN_W<HCINT4_SPEC> {
+        FRMOVRUN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data toggle error"]
     #[inline(always)]
     #[must_use]
-    pub fn dtglerr(&mut self) -> DTGLERR_W<HCINT4_SPEC, 10> {
-        DTGLERR_W::new(self)
+    pub fn dtglerr(&mut self) -> DTGLERR_W<HCINT4_SPEC> {
+        DTGLERR_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

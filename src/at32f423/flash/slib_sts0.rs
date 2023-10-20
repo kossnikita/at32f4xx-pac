@@ -5,19 +5,19 @@ pub type W = crate::W<SLIB_STS0_SPEC>;
 #[doc = "Field `BTM_AP_ENF` reader - Boot memory store application code enabled flag"]
 pub type BTM_AP_ENF_R = crate::BitReader;
 #[doc = "Field `BTM_AP_ENF` writer - Boot memory store application code enabled flag"]
-pub type BTM_AP_ENF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BTM_AP_ENF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EM_SLIB_ENF` reader - Extension memory sLib enabled flag"]
 pub type EM_SLIB_ENF_R = crate::BitReader;
 #[doc = "Field `EM_SLIB_ENF` writer - Extension memory sLib enabled flag"]
-pub type EM_SLIB_ENF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EM_SLIB_ENF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLIB_ENF` reader - sLib enabled flag"]
 pub type SLIB_ENF_R = crate::BitReader;
 #[doc = "Field `SLIB_ENF` writer - sLib enabled flag"]
-pub type SLIB_ENF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SLIB_ENF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EM_SLIB_INST_SS` reader - Extension memory sLib instruction start sector"]
 pub type EM_SLIB_INST_SS_R = crate::FieldReader;
 #[doc = "Field `EM_SLIB_INST_SS` writer - Extension memory sLib instruction start sector"]
-pub type EM_SLIB_INST_SS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type EM_SLIB_INST_SS_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bit 0 - Boot memory store application code enabled flag"]
     #[inline(always)]
@@ -62,26 +62,26 @@ impl W {
     #[doc = "Bit 0 - Boot memory store application code enabled flag"]
     #[inline(always)]
     #[must_use]
-    pub fn btm_ap_enf(&mut self) -> BTM_AP_ENF_W<SLIB_STS0_SPEC, 0> {
-        BTM_AP_ENF_W::new(self)
+    pub fn btm_ap_enf(&mut self) -> BTM_AP_ENF_W<SLIB_STS0_SPEC> {
+        BTM_AP_ENF_W::new(self, 0)
     }
     #[doc = "Bit 2 - Extension memory sLib enabled flag"]
     #[inline(always)]
     #[must_use]
-    pub fn em_slib_enf(&mut self) -> EM_SLIB_ENF_W<SLIB_STS0_SPEC, 2> {
-        EM_SLIB_ENF_W::new(self)
+    pub fn em_slib_enf(&mut self) -> EM_SLIB_ENF_W<SLIB_STS0_SPEC> {
+        EM_SLIB_ENF_W::new(self, 2)
     }
     #[doc = "Bit 3 - sLib enabled flag"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_enf(&mut self) -> SLIB_ENF_W<SLIB_STS0_SPEC, 3> {
-        SLIB_ENF_W::new(self)
+    pub fn slib_enf(&mut self) -> SLIB_ENF_W<SLIB_STS0_SPEC> {
+        SLIB_ENF_W::new(self, 3)
     }
     #[doc = "Bits 16:23 - Extension memory sLib instruction start sector"]
     #[inline(always)]
     #[must_use]
-    pub fn em_slib_inst_ss(&mut self) -> EM_SLIB_INST_SS_W<SLIB_STS0_SPEC, 16> {
-        EM_SLIB_INST_SS_W::new(self)
+    pub fn em_slib_inst_ss(&mut self) -> EM_SLIB_INST_SS_W<SLIB_STS0_SPEC> {
+        EM_SLIB_INST_SS_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<CMD_W2_SPEC>;
 #[doc = "Field `DCNT` reader - Read write data counter"]
 pub type DCNT_R = crate::FieldReader<u32>;
 #[doc = "Field `DCNT` writer - Read write data counter"]
-pub type DCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type DCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Read write data counter"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Read write data counter"]
     #[inline(always)]
     #[must_use]
-    pub fn dcnt(&mut self) -> DCNT_W<CMD_W2_SPEC, 0> {
-        DCNT_W::new(self)
+    pub fn dcnt(&mut self) -> DCNT_W<CMD_W2_SPEC> {
+        DCNT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

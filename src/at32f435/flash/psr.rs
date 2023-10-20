@@ -5,7 +5,7 @@ pub type W = crate::W<PSR_SPEC>;
 #[doc = "Field `NZW_BST` reader - Flash non-zero wait area boost"]
 pub type NZW_BST_R = crate::BitReader;
 #[doc = "Field `NZW_BST` writer - Flash non-zero wait area boost"]
-pub type NZW_BST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NZW_BST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NZW_BST_STS` reader - Flash non-zero wait area boost status"]
 pub type NZW_BST_STS_R = crate::BitReader;
 impl R {
@@ -37,8 +37,8 @@ impl W {
     #[doc = "Bit 12 - Flash non-zero wait area boost"]
     #[inline(always)]
     #[must_use]
-    pub fn nzw_bst(&mut self) -> NZW_BST_W<PSR_SPEC, 12> {
-        NZW_BST_W::new(self)
+    pub fn nzw_bst(&mut self) -> NZW_BST_W<PSR_SPEC> {
+        NZW_BST_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

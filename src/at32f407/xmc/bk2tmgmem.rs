@@ -5,19 +5,19 @@ pub type W = crate::W<BK2TMGMEM_SPEC>;
 #[doc = "Field `RGST` reader - Regular memory setup time"]
 pub type RGST_R = crate::FieldReader;
 #[doc = "Field `RGST` writer - Regular memory setup time"]
-pub type RGST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RGST_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RGWT` reader - Regular memory wait time"]
 pub type RGWT_R = crate::FieldReader;
 #[doc = "Field `RGWT` writer - Regular memory wait time"]
-pub type RGWT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RGWT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RGHT` reader - Regular memory hold time"]
 pub type RGHT_R = crate::FieldReader;
 #[doc = "Field `RGHT` writer - Regular memory hold time"]
-pub type RGHT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RGHT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `RGDHIZT` reader - Regular memory databus High resistance time"]
 pub type RGDHIZT_R = crate::FieldReader;
 #[doc = "Field `RGDHIZT` writer - Regular memory databus High resistance time"]
-pub type RGDHIZT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type RGDHIZT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Regular memory setup time"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:7 - Regular memory setup time"]
     #[inline(always)]
     #[must_use]
-    pub fn rgst(&mut self) -> RGST_W<BK2TMGMEM_SPEC, 0> {
-        RGST_W::new(self)
+    pub fn rgst(&mut self) -> RGST_W<BK2TMGMEM_SPEC> {
+        RGST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Regular memory wait time"]
     #[inline(always)]
     #[must_use]
-    pub fn rgwt(&mut self) -> RGWT_W<BK2TMGMEM_SPEC, 8> {
-        RGWT_W::new(self)
+    pub fn rgwt(&mut self) -> RGWT_W<BK2TMGMEM_SPEC> {
+        RGWT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Regular memory hold time"]
     #[inline(always)]
     #[must_use]
-    pub fn rght(&mut self) -> RGHT_W<BK2TMGMEM_SPEC, 16> {
-        RGHT_W::new(self)
+    pub fn rght(&mut self) -> RGHT_W<BK2TMGMEM_SPEC> {
+        RGHT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Regular memory databus High resistance time"]
     #[inline(always)]
     #[must_use]
-    pub fn rgdhizt(&mut self) -> RGDHIZT_W<BK2TMGMEM_SPEC, 24> {
-        RGDHIZT_W::new(self)
+    pub fn rgdhizt(&mut self) -> RGDHIZT_W<BK2TMGMEM_SPEC> {
+        RGDHIZT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -51,8 +51,8 @@ impl From<RLDFW_AW> for bool {
     }
 }
 #[doc = "Field `RLDF` writer - Reload counter interrupt flag"]
-pub type RLDF_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, RLDFW_AW>;
-impl<'a, REG, const O: u8> RLDF_W<'a, REG, O>
+pub type RLDF_W<'a, REG> = crate::BitWriter0C<'a, REG, RLDFW_AW>;
+impl<'a, REG> RLDF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -85,8 +85,8 @@ impl W {
     #[doc = "Bit 0 - Reload counter interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn rldf(&mut self) -> RLDF_W<STS_SPEC, 0> {
-        RLDF_W::new(self)
+    pub fn rldf(&mut self) -> RLDF_W<STS_SPEC> {
+        RLDF_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

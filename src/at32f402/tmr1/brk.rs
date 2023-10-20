@@ -5,7 +5,7 @@ pub type W = crate::W<BRK_SPEC>;
 #[doc = "Field `DTC` reader - Dead-time configuration"]
 pub type DTC_R = crate::FieldReader;
 #[doc = "Field `DTC` writer - Dead-time configuration"]
-pub type DTC_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 8, O>;
+pub type DTC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
 #[doc = "Field `WPC` reader - Write protected configuration"]
 pub type WPC_R = crate::FieldReader<WPC_A>;
 #[doc = "Write protected configuration\n\nValue on reset: 0"]
@@ -64,8 +64,8 @@ impl WPC_R {
     }
 }
 #[doc = "Field `WPC` writer - Write protected configuration"]
-pub type WPC_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, WPC_A>;
-impl<'a, REG, const O: u8> WPC_W<'a, REG, O>
+pub type WPC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, WPC_A>;
+impl<'a, REG> WPC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -142,8 +142,8 @@ impl From<FCSODISW_AW> for bool {
     }
 }
 #[doc = "Field `FCSODIS` writer - Frozen channel status when holistic output disable"]
-pub type FCSODIS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, FCSODISW_AW>;
-impl<'a, REG, const O: u8> FCSODIS_W<'a, REG, O>
+pub type FCSODIS_W<'a, REG> = crate::BitWriter<'a, REG, FCSODISW_AW>;
+impl<'a, REG> FCSODIS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -209,8 +209,8 @@ impl From<FCSOENW_AW> for bool {
     }
 }
 #[doc = "Field `FCSOEN` writer - Frozen channel status when holistic output enable"]
-pub type FCSOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, FCSOENW_AW>;
-impl<'a, REG, const O: u8> FCSOEN_W<'a, REG, O>
+pub type FCSOEN_W<'a, REG> = crate::BitWriter<'a, REG, FCSOENW_AW>;
+impl<'a, REG> FCSOEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -276,8 +276,8 @@ impl From<BRKENW_AW> for bool {
     }
 }
 #[doc = "Field `BRKEN` writer - Brake enable"]
-pub type BRKEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, BRKENW_AW>;
-impl<'a, REG, const O: u8> BRKEN_W<'a, REG, O>
+pub type BRKEN_W<'a, REG> = crate::BitWriter<'a, REG, BRKENW_AW>;
+impl<'a, REG> BRKEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -329,8 +329,8 @@ impl BRKV_R {
     }
 }
 #[doc = "Field `BRKV` writer - Brake input validity"]
-pub type BRKV_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, BRKV_A>;
-impl<'a, REG, const O: u8> BRKV_W<'a, REG, O>
+pub type BRKV_W<'a, REG> = crate::BitWriter<'a, REG, BRKV_A>;
+impl<'a, REG> BRKV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -396,8 +396,8 @@ impl From<AOENW_AW> for bool {
     }
 }
 #[doc = "Field `AOEN` writer - Automatic output enable"]
-pub type AOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, AOENW_AW>;
-impl<'a, REG, const O: u8> AOEN_W<'a, REG, O>
+pub type AOEN_W<'a, REG> = crate::BitWriter<'a, REG, AOENW_AW>;
+impl<'a, REG> AOEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -463,8 +463,8 @@ impl From<OENW_AW> for bool {
     }
 }
 #[doc = "Field `OEN` writer - Output enable"]
-pub type OEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OENW_AW>;
-impl<'a, REG, const O: u8> OEN_W<'a, REG, O>
+pub type OEN_W<'a, REG> = crate::BitWriter<'a, REG, OENW_AW>;
+impl<'a, REG> OEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -482,7 +482,7 @@ where
 #[doc = "Field `BKF` reader - Brake input filter"]
 pub type BKF_R = crate::FieldReader;
 #[doc = "Field `BKF` writer - Brake input filter"]
-pub type BKF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type BKF_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:7 - Dead-time configuration"]
     #[inline(always)]
@@ -554,56 +554,56 @@ impl W {
     #[doc = "Bits 0:7 - Dead-time configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn dtc(&mut self) -> DTC_W<BRK_SPEC, 0> {
-        DTC_W::new(self)
+    pub fn dtc(&mut self) -> DTC_W<BRK_SPEC> {
+        DTC_W::new(self, 0)
     }
     #[doc = "Bits 8:9 - Write protected configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn wpc(&mut self) -> WPC_W<BRK_SPEC, 8> {
-        WPC_W::new(self)
+    pub fn wpc(&mut self) -> WPC_W<BRK_SPEC> {
+        WPC_W::new(self, 8)
     }
     #[doc = "Bit 10 - Frozen channel status when holistic output disable"]
     #[inline(always)]
     #[must_use]
-    pub fn fcsodis(&mut self) -> FCSODIS_W<BRK_SPEC, 10> {
-        FCSODIS_W::new(self)
+    pub fn fcsodis(&mut self) -> FCSODIS_W<BRK_SPEC> {
+        FCSODIS_W::new(self, 10)
     }
     #[doc = "Bit 11 - Frozen channel status when holistic output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn fcsoen(&mut self) -> FCSOEN_W<BRK_SPEC, 11> {
-        FCSOEN_W::new(self)
+    pub fn fcsoen(&mut self) -> FCSOEN_W<BRK_SPEC> {
+        FCSOEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Brake enable"]
     #[inline(always)]
     #[must_use]
-    pub fn brken(&mut self) -> BRKEN_W<BRK_SPEC, 12> {
-        BRKEN_W::new(self)
+    pub fn brken(&mut self) -> BRKEN_W<BRK_SPEC> {
+        BRKEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Brake input validity"]
     #[inline(always)]
     #[must_use]
-    pub fn brkv(&mut self) -> BRKV_W<BRK_SPEC, 13> {
-        BRKV_W::new(self)
+    pub fn brkv(&mut self) -> BRKV_W<BRK_SPEC> {
+        BRKV_W::new(self, 13)
     }
     #[doc = "Bit 14 - Automatic output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn aoen(&mut self) -> AOEN_W<BRK_SPEC, 14> {
-        AOEN_W::new(self)
+    pub fn aoen(&mut self) -> AOEN_W<BRK_SPEC> {
+        AOEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn oen(&mut self) -> OEN_W<BRK_SPEC, 15> {
-        OEN_W::new(self)
+    pub fn oen(&mut self) -> OEN_W<BRK_SPEC> {
+        OEN_W::new(self, 15)
     }
     #[doc = "Bits 16:19 - Brake input filter"]
     #[inline(always)]
     #[must_use]
-    pub fn bkf(&mut self) -> BKF_W<BRK_SPEC, 16> {
-        BKF_W::new(self)
+    pub fn bkf(&mut self) -> BKF_W<BRK_SPEC> {
+        BKF_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

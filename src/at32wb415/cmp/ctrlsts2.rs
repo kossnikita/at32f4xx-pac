@@ -5,11 +5,11 @@ pub type W = crate::W<CTRLSTS2_SPEC>;
 #[doc = "Field `COMP1NINVSEL` reader - Comparator1 non-inverting input selection"]
 pub type COMP1NINVSEL_R = crate::FieldReader;
 #[doc = "Field `COMP1NINVSEL` writer - Comparator1 non-inverting input selection"]
-pub type COMP1NINVSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type COMP1NINVSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `COMP2NINVSEL` reader - Comparator2 non-inverting input selection"]
 pub type COMP2NINVSEL_R = crate::FieldReader;
 #[doc = "Field `COMP2NINVSEL` writer - Comparator2 non-inverting input selection"]
-pub type COMP2NINVSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type COMP2NINVSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Comparator1 non-inverting input selection"]
     #[inline(always)]
@@ -45,14 +45,14 @@ impl W {
     #[doc = "Bits 0:1 - Comparator1 non-inverting input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn comp1ninvsel(&mut self) -> COMP1NINVSEL_W<CTRLSTS2_SPEC, 0> {
-        COMP1NINVSEL_W::new(self)
+    pub fn comp1ninvsel(&mut self) -> COMP1NINVSEL_W<CTRLSTS2_SPEC> {
+        COMP1NINVSEL_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - Comparator2 non-inverting input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn comp2ninvsel(&mut self) -> COMP2NINVSEL_W<CTRLSTS2_SPEC, 16> {
-        COMP2NINVSEL_W::new(self)
+    pub fn comp2ninvsel(&mut self) -> COMP2NINVSEL_W<CTRLSTS2_SPEC> {
+        COMP2NINVSEL_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,7 +5,7 @@ pub type W = crate::W<TMRISE_SPEC>;
 #[doc = "Field `RISETIME` reader - I2C bus rise time"]
 pub type RISETIME_R = crate::FieldReader;
 #[doc = "Field `RISETIME` writer - I2C bus rise time"]
-pub type RISETIME_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type RISETIME_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - I2C bus rise time"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:5 - I2C bus rise time"]
     #[inline(always)]
     #[must_use]
-    pub fn risetime(&mut self) -> RISETIME_W<TMRISE_SPEC, 0> {
-        RISETIME_W::new(self)
+    pub fn risetime(&mut self) -> RISETIME_W<TMRISE_SPEC> {
+        RISETIME_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

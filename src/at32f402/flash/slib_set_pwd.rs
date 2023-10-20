@@ -1,7 +1,7 @@
 #[doc = "Register `SLIB_SET_PWD` writer"]
 pub type W = crate::W<SLIB_SET_PWD_SPEC>;
 #[doc = "Field `SLIB_PSET_VAL` writer - sLib password setting val"]
-pub type SLIB_PSET_VAL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type SLIB_PSET_VAL_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl core::fmt::Debug for crate::generic::Reg<SLIB_SET_PWD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -11,8 +11,8 @@ impl W {
     #[doc = "Bits 0:31 - sLib password setting val"]
     #[inline(always)]
     #[must_use]
-    pub fn slib_pset_val(&mut self) -> SLIB_PSET_VAL_W<SLIB_SET_PWD_SPEC, 0> {
-        SLIB_PSET_VAL_W::new(self)
+    pub fn slib_pset_val(&mut self) -> SLIB_PSET_VAL_W<SLIB_SET_PWD_SPEC> {
+        SLIB_PSET_VAL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

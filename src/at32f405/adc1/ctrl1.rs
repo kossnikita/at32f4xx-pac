@@ -5,7 +5,7 @@ pub type W = crate::W<CTRL1_SPEC>;
 #[doc = "Field `VMCSEL` reader - Voltage monitoring channel select"]
 pub type VMCSEL_R = crate::FieldReader;
 #[doc = "Field `VMCSEL` writer - Voltage monitoring channel select"]
-pub type VMCSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type VMCSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `CCEIEN` reader - Channel conversion end interrupt enable"]
 pub type CCEIEN_R = crate::BitReader<CCEIENR_A>;
 #[doc = "Channel conversion end interrupt enable\n\nValue on reset: 0"]
@@ -57,8 +57,8 @@ impl From<CCEIENW_AW> for bool {
     }
 }
 #[doc = "Field `CCEIEN` writer - Channel conversion end interrupt enable"]
-pub type CCEIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CCEIENW_AW>;
-impl<'a, REG, const O: u8> CCEIEN_W<'a, REG, O>
+pub type CCEIEN_W<'a, REG> = crate::BitWriter<'a, REG, CCEIENW_AW>;
+impl<'a, REG> CCEIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -124,8 +124,8 @@ impl From<VMORIENW_AW> for bool {
     }
 }
 #[doc = "Field `VMORIEN` writer - Voltage monitoring out of range interrupt enable"]
-pub type VMORIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, VMORIENW_AW>;
-impl<'a, REG, const O: u8> VMORIEN_W<'a, REG, O>
+pub type VMORIEN_W<'a, REG> = crate::BitWriter<'a, REG, VMORIENW_AW>;
+impl<'a, REG> VMORIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -195,8 +195,8 @@ impl From<SQENW_AW> for bool {
     }
 }
 #[doc = "Field `SQEN` writer - Sequence mode enable"]
-pub type SQEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SQENW_AW>;
-impl<'a, REG, const O: u8> SQEN_W<'a, REG, O>
+pub type SQEN_W<'a, REG> = crate::BitWriter<'a, REG, SQENW_AW>;
+impl<'a, REG> SQEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -248,8 +248,8 @@ impl VMSGEN_R {
     }
 }
 #[doc = "Field `VMSGEN` writer - Voltage monitoring enable on a single channel"]
-pub type VMSGEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, VMSGEN_A>;
-impl<'a, REG, const O: u8> VMSGEN_W<'a, REG, O>
+pub type VMSGEN_W<'a, REG> = crate::BitWriter<'a, REG, VMSGEN_A>;
+impl<'a, REG> VMSGEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -315,8 +315,8 @@ impl From<PCAUTOENW_AW> for bool {
     }
 }
 #[doc = "Field `PCAUTOEN` writer - Preempted group automatic conversion enable after ordinary group"]
-pub type PCAUTOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PCAUTOENW_AW>;
-impl<'a, REG, const O: u8> PCAUTOEN_W<'a, REG, O>
+pub type PCAUTOEN_W<'a, REG> = crate::BitWriter<'a, REG, PCAUTOENW_AW>;
+impl<'a, REG> PCAUTOEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -382,8 +382,8 @@ impl From<OCPENW_AW> for bool {
     }
 }
 #[doc = "Field `OCPEN` writer - Partitioned mode enable on ordinary channels"]
-pub type OCPEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, OCPENW_AW>;
-impl<'a, REG, const O: u8> OCPEN_W<'a, REG, O>
+pub type OCPEN_W<'a, REG> = crate::BitWriter<'a, REG, OCPENW_AW>;
+impl<'a, REG> OCPEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -405,7 +405,7 @@ pub use OCPEN_W as PCPEN_W;
 #[doc = "Field `OCPCNT` reader - Partitioned mode conversion count of ordinary channels"]
 pub type OCPCNT_R = crate::FieldReader;
 #[doc = "Field `OCPCNT` writer - Partitioned mode conversion count of ordinary channels"]
-pub type OCPCNT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type OCPCNT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 #[doc = "Field `PCVMEN` reader - Voltage monitoring enable on preempted channels"]
 pub type PCVMEN_R = crate::BitReader<PCVMENR_A>;
 #[doc = "Voltage monitoring enable on preempted channels\n\nValue on reset: 0"]
@@ -457,8 +457,8 @@ impl From<PCVMENW_AW> for bool {
     }
 }
 #[doc = "Field `PCVMEN` writer - Voltage monitoring enable on preempted channels"]
-pub type PCVMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PCVMENW_AW>;
-impl<'a, REG, const O: u8> PCVMEN_W<'a, REG, O>
+pub type PCVMEN_W<'a, REG> = crate::BitWriter<'a, REG, PCVMENW_AW>;
+impl<'a, REG> PCVMEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -566,74 +566,74 @@ impl W {
     #[doc = "Bits 0:4 - Voltage monitoring channel select"]
     #[inline(always)]
     #[must_use]
-    pub fn vmcsel(&mut self) -> VMCSEL_W<CTRL1_SPEC, 0> {
-        VMCSEL_W::new(self)
+    pub fn vmcsel(&mut self) -> VMCSEL_W<CTRL1_SPEC> {
+        VMCSEL_W::new(self, 0)
     }
     #[doc = "Bit 5 - Channel conversion end interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cceien(&mut self) -> CCEIEN_W<CTRL1_SPEC, 5> {
-        CCEIEN_W::new(self)
+    pub fn cceien(&mut self) -> CCEIEN_W<CTRL1_SPEC> {
+        CCEIEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Voltage monitoring out of range interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn vmorien(&mut self) -> VMORIEN_W<CTRL1_SPEC, 6> {
-        VMORIEN_W::new(self)
+    pub fn vmorien(&mut self) -> VMORIEN_W<CTRL1_SPEC> {
+        VMORIEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Conversion end interrupt enable for preempted channels"]
     #[inline(always)]
     #[must_use]
-    pub fn pcceien(&mut self) -> PCCEIEN_W<CTRL1_SPEC, 7> {
-        PCCEIEN_W::new(self)
+    pub fn pcceien(&mut self) -> PCCEIEN_W<CTRL1_SPEC> {
+        PCCEIEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Sequence mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sqen(&mut self) -> SQEN_W<CTRL1_SPEC, 8> {
-        SQEN_W::new(self)
+    pub fn sqen(&mut self) -> SQEN_W<CTRL1_SPEC> {
+        SQEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Voltage monitoring enable on a single channel"]
     #[inline(always)]
     #[must_use]
-    pub fn vmsgen(&mut self) -> VMSGEN_W<CTRL1_SPEC, 9> {
-        VMSGEN_W::new(self)
+    pub fn vmsgen(&mut self) -> VMSGEN_W<CTRL1_SPEC> {
+        VMSGEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Preempted group automatic conversion enable after ordinary group"]
     #[inline(always)]
     #[must_use]
-    pub fn pcautoen(&mut self) -> PCAUTOEN_W<CTRL1_SPEC, 10> {
-        PCAUTOEN_W::new(self)
+    pub fn pcautoen(&mut self) -> PCAUTOEN_W<CTRL1_SPEC> {
+        PCAUTOEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Partitioned mode enable on ordinary channels"]
     #[inline(always)]
     #[must_use]
-    pub fn ocpen(&mut self) -> OCPEN_W<CTRL1_SPEC, 11> {
-        OCPEN_W::new(self)
+    pub fn ocpen(&mut self) -> OCPEN_W<CTRL1_SPEC> {
+        OCPEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Partitioned mode enable on preempted channels"]
     #[inline(always)]
     #[must_use]
-    pub fn pcpen(&mut self) -> PCPEN_W<CTRL1_SPEC, 12> {
-        PCPEN_W::new(self)
+    pub fn pcpen(&mut self) -> PCPEN_W<CTRL1_SPEC> {
+        PCPEN_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - Partitioned mode conversion count of ordinary channels"]
     #[inline(always)]
     #[must_use]
-    pub fn ocpcnt(&mut self) -> OCPCNT_W<CTRL1_SPEC, 13> {
-        OCPCNT_W::new(self)
+    pub fn ocpcnt(&mut self) -> OCPCNT_W<CTRL1_SPEC> {
+        OCPCNT_W::new(self, 13)
     }
     #[doc = "Bit 22 - Voltage monitoring enable on preempted channels"]
     #[inline(always)]
     #[must_use]
-    pub fn pcvmen(&mut self) -> PCVMEN_W<CTRL1_SPEC, 22> {
-        PCVMEN_W::new(self)
+    pub fn pcvmen(&mut self) -> PCVMEN_W<CTRL1_SPEC> {
+        PCVMEN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Voltage monitoring enable on ordinary channels"]
     #[inline(always)]
     #[must_use]
-    pub fn ocvmen(&mut self) -> OCVMEN_W<CTRL1_SPEC, 23> {
-        OCVMEN_W::new(self)
+    pub fn ocvmen(&mut self) -> OCVMEN_W<CTRL1_SPEC> {
+        OCVMEN_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

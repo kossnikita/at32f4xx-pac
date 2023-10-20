@@ -92,8 +92,8 @@ impl SMSEL_R {
     }
 }
 #[doc = "Field `SMSEL` writer - Subordinate TMR mode selection"]
-pub type SMSEL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, SMSEL_A>;
-impl<'a, REG, const O: u8> SMSEL_W<'a, REG, O>
+pub type SMSEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, SMSEL_A>;
+impl<'a, REG> SMSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -229,8 +229,8 @@ impl STIS_R {
     }
 }
 #[doc = "Field `STIS` writer - Subordinate TMR input selection"]
-pub type STIS_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, STIS_A>;
-impl<'a, REG, const O: u8> STIS_W<'a, REG, O>
+pub type STIS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, STIS_A>;
+impl<'a, REG> STIS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -279,7 +279,7 @@ where
 #[doc = "Field `STS` reader - Subordinate TMR synchronization"]
 pub type STS_R = crate::BitReader;
 #[doc = "Field `STS` writer - Subordinate TMR synchronization"]
-pub type STS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type STS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - Subordinate TMR mode selection"]
     #[inline(always)]
@@ -315,20 +315,20 @@ impl W {
     #[doc = "Bits 0:2 - Subordinate TMR mode selection"]
     #[inline(always)]
     #[must_use]
-    pub fn smsel(&mut self) -> SMSEL_W<STCTRL_SPEC, 0> {
-        SMSEL_W::new(self)
+    pub fn smsel(&mut self) -> SMSEL_W<STCTRL_SPEC> {
+        SMSEL_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Subordinate TMR input selection"]
     #[inline(always)]
     #[must_use]
-    pub fn stis(&mut self) -> STIS_W<STCTRL_SPEC, 4> {
-        STIS_W::new(self)
+    pub fn stis(&mut self) -> STIS_W<STCTRL_SPEC> {
+        STIS_W::new(self, 4)
     }
     #[doc = "Bit 7 - Subordinate TMR synchronization"]
     #[inline(always)]
     #[must_use]
-    pub fn sts(&mut self) -> STS_W<STCTRL_SPEC, 7> {
-        STS_W::new(self)
+    pub fn sts(&mut self) -> STS_W<STCTRL_SPEC> {
+        STS_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

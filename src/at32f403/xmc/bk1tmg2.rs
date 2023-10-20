@@ -5,31 +5,31 @@ pub type W = crate::W<BK1TMG2_SPEC>;
 #[doc = "Field `ADDRST` reader - Address setup time"]
 pub type ADDRST_R = crate::FieldReader;
 #[doc = "Field `ADDRST` writer - Address setup time"]
-pub type ADDRST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ADDRST_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `ADDRHT` reader - Address-hold time"]
 pub type ADDRHT_R = crate::FieldReader;
 #[doc = "Field `ADDRHT` writer - Address-hold time"]
-pub type ADDRHT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ADDRHT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `DTST` reader - Asynchronous data setup time"]
 pub type DTST_R = crate::FieldReader;
 #[doc = "Field `DTST` writer - Asynchronous data setup time"]
-pub type DTST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type DTST_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `BUSLAT` reader - Bus latency"]
 pub type BUSLAT_R = crate::FieldReader;
 #[doc = "Field `BUSLAT` writer - Bus latency"]
-pub type BUSLAT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type BUSLAT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `CLKPSC` reader - Clock prescale"]
 pub type CLKPSC_R = crate::FieldReader;
 #[doc = "Field `CLKPSC` writer - Clock prescale"]
-pub type CLKPSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CLKPSC_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `DTLAT` reader - Data latency"]
 pub type DTLAT_R = crate::FieldReader;
 #[doc = "Field `DTLAT` writer - Data latency"]
-pub type DTLAT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type DTLAT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `ASYNCM` reader - Asynchronous mode"]
 pub type ASYNCM_R = crate::FieldReader;
 #[doc = "Field `ASYNCM` writer - Asynchronous mode"]
-pub type ASYNCM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type ASYNCM_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:3 - Address setup time"]
     #[inline(always)]
@@ -89,44 +89,44 @@ impl W {
     #[doc = "Bits 0:3 - Address setup time"]
     #[inline(always)]
     #[must_use]
-    pub fn addrst(&mut self) -> ADDRST_W<BK1TMG2_SPEC, 0> {
-        ADDRST_W::new(self)
+    pub fn addrst(&mut self) -> ADDRST_W<BK1TMG2_SPEC> {
+        ADDRST_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Address-hold time"]
     #[inline(always)]
     #[must_use]
-    pub fn addrht(&mut self) -> ADDRHT_W<BK1TMG2_SPEC, 4> {
-        ADDRHT_W::new(self)
+    pub fn addrht(&mut self) -> ADDRHT_W<BK1TMG2_SPEC> {
+        ADDRHT_W::new(self, 4)
     }
     #[doc = "Bits 8:15 - Asynchronous data setup time"]
     #[inline(always)]
     #[must_use]
-    pub fn dtst(&mut self) -> DTST_W<BK1TMG2_SPEC, 8> {
-        DTST_W::new(self)
+    pub fn dtst(&mut self) -> DTST_W<BK1TMG2_SPEC> {
+        DTST_W::new(self, 8)
     }
     #[doc = "Bits 16:19 - Bus latency"]
     #[inline(always)]
     #[must_use]
-    pub fn buslat(&mut self) -> BUSLAT_W<BK1TMG2_SPEC, 16> {
-        BUSLAT_W::new(self)
+    pub fn buslat(&mut self) -> BUSLAT_W<BK1TMG2_SPEC> {
+        BUSLAT_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - Clock prescale"]
     #[inline(always)]
     #[must_use]
-    pub fn clkpsc(&mut self) -> CLKPSC_W<BK1TMG2_SPEC, 20> {
-        CLKPSC_W::new(self)
+    pub fn clkpsc(&mut self) -> CLKPSC_W<BK1TMG2_SPEC> {
+        CLKPSC_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - Data latency"]
     #[inline(always)]
     #[must_use]
-    pub fn dtlat(&mut self) -> DTLAT_W<BK1TMG2_SPEC, 24> {
-        DTLAT_W::new(self)
+    pub fn dtlat(&mut self) -> DTLAT_W<BK1TMG2_SPEC> {
+        DTLAT_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - Asynchronous mode"]
     #[inline(always)]
     #[must_use]
-    pub fn asyncm(&mut self) -> ASYNCM_W<BK1TMG2_SPEC, 28> {
-        ASYNCM_W::new(self)
+    pub fn asyncm(&mut self) -> ASYNCM_W<BK1TMG2_SPEC> {
+        ASYNCM_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

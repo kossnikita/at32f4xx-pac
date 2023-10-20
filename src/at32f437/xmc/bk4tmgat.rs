@@ -5,19 +5,19 @@ pub type W = crate::W<BK4TMGAT_SPEC>;
 #[doc = "Field `ATST` reader - special memory setup time"]
 pub type ATST_R = crate::FieldReader;
 #[doc = "Field `ATST` writer - special memory setup time"]
-pub type ATST_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ATST_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ATWT` reader - special memory wait time"]
 pub type ATWT_R = crate::FieldReader;
 #[doc = "Field `ATWT` writer - special memory wait time"]
-pub type ATWT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ATWT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ATHT` reader - special memory hold time"]
 pub type ATHT_R = crate::FieldReader;
 #[doc = "Field `ATHT` writer - special memory hold time"]
-pub type ATHT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ATHT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ATDHIZT` reader - special memory databus High resistance time"]
 pub type ATDHIZT_R = crate::FieldReader;
 #[doc = "Field `ATDHIZT` writer - special memory databus High resistance time"]
-pub type ATDHIZT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type ATDHIZT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - special memory setup time"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:7 - special memory setup time"]
     #[inline(always)]
     #[must_use]
-    pub fn atst(&mut self) -> ATST_W<BK4TMGAT_SPEC, 0> {
-        ATST_W::new(self)
+    pub fn atst(&mut self) -> ATST_W<BK4TMGAT_SPEC> {
+        ATST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - special memory wait time"]
     #[inline(always)]
     #[must_use]
-    pub fn atwt(&mut self) -> ATWT_W<BK4TMGAT_SPEC, 8> {
-        ATWT_W::new(self)
+    pub fn atwt(&mut self) -> ATWT_W<BK4TMGAT_SPEC> {
+        ATWT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - special memory hold time"]
     #[inline(always)]
     #[must_use]
-    pub fn atht(&mut self) -> ATHT_W<BK4TMGAT_SPEC, 16> {
-        ATHT_W::new(self)
+    pub fn atht(&mut self) -> ATHT_W<BK4TMGAT_SPEC> {
+        ATHT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - special memory databus High resistance time"]
     #[inline(always)]
     #[must_use]
-    pub fn atdhizt(&mut self) -> ATDHIZT_W<BK4TMGAT_SPEC, 24> {
-        ATDHIZT_W::new(self)
+    pub fn atdhizt(&mut self) -> ATDHIZT_W<BK4TMGAT_SPEC> {
+        ATDHIZT_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

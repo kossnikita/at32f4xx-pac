@@ -5,19 +5,19 @@ pub type W = crate::W<AHBRST3_SPEC>;
 #[doc = "Field `XMC` reader - XMC reset"]
 pub type XMC_R = crate::BitReader;
 #[doc = "Field `XMC` writer - XMC reset"]
-pub type XMC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XMC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `QSPI1` reader - QSPI1 reset"]
 pub type QSPI1_R = crate::BitReader;
 #[doc = "Field `QSPI1` writer - QSPI1 reset"]
-pub type QSPI1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type QSPI1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `QSPI2` reader - QSPI2 reset"]
 pub type QSPI2_R = crate::BitReader;
 #[doc = "Field `QSPI2` writer - QSPI2 reset"]
-pub type QSPI2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type QSPI2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO2` reader - SDIO2 reset"]
 pub type SDIO2_R = crate::BitReader;
 #[doc = "Field `SDIO2` writer - SDIO2 reset"]
-pub type SDIO2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO2_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - XMC reset"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bit 0 - XMC reset"]
     #[inline(always)]
     #[must_use]
-    pub fn xmc(&mut self) -> XMC_W<AHBRST3_SPEC, 0> {
-        XMC_W::new(self)
+    pub fn xmc(&mut self) -> XMC_W<AHBRST3_SPEC> {
+        XMC_W::new(self, 0)
     }
     #[doc = "Bit 1 - QSPI1 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi1(&mut self) -> QSPI1_W<AHBRST3_SPEC, 1> {
-        QSPI1_W::new(self)
+    pub fn qspi1(&mut self) -> QSPI1_W<AHBRST3_SPEC> {
+        QSPI1_W::new(self, 1)
     }
     #[doc = "Bit 14 - QSPI2 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi2(&mut self) -> QSPI2_W<AHBRST3_SPEC, 14> {
-        QSPI2_W::new(self)
+    pub fn qspi2(&mut self) -> QSPI2_W<AHBRST3_SPEC> {
+        QSPI2_W::new(self, 14)
     }
     #[doc = "Bit 15 - SDIO2 reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio2(&mut self) -> SDIO2_W<AHBRST3_SPEC, 15> {
-        SDIO2_W::new(self)
+    pub fn sdio2(&mut self) -> SDIO2_W<AHBRST3_SPEC> {
+        SDIO2_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -39,8 +39,8 @@ impl COIEN_R {
     }
 }
 #[doc = "Field `COIEN[5-5]` writer - Channel %s output immediately enable"]
-pub type COIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C5OIEN_A>;
-impl<'a, REG, const O: u8> COIEN_W<'a, REG, O>
+pub type COIEN_W<'a, REG> = crate::BitWriter<'a, REG, C5OIEN_A>;
+impl<'a, REG> COIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -106,8 +106,8 @@ impl From<C5OBENW_AW> for bool {
     }
 }
 #[doc = "Field `COBEN[5-5]` writer - Channel %s output buffer enable"]
-pub type COBEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C5OBENW_AW>;
-impl<'a, REG, const O: u8> COBEN_W<'a, REG, O>
+pub type COBEN_W<'a, REG> = crate::BitWriter<'a, REG, C5OBENW_AW>;
+impl<'a, REG> COBEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -212,8 +212,8 @@ impl COCTRL_R {
     }
 }
 #[doc = "Field `COCTRL[5-5]` writer - Channel %s output control"]
-pub type COCTRL_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O, COCTRL_A>;
-impl<'a, REG, const O: u8> COCTRL_W<'a, REG, O>
+pub type COCTRL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, COCTRL_A>;
+impl<'a, REG> COCTRL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -310,8 +310,8 @@ impl From<C5OSENW_AW> for bool {
     }
 }
 #[doc = "Field `COSEN[5-5]` writer - Channel %s output switch enable"]
-pub type COSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, C5OSENW_AW>;
-impl<'a, REG, const O: u8> COSEN_W<'a, REG, O>
+pub type COSEN_W<'a, REG> = crate::BitWriter<'a, REG, C5OSENW_AW>;
+impl<'a, REG> COSEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -328,10 +328,11 @@ where
 }
 impl R {
     #[doc = "Channel [5-5]
-output immediately enable"]
+output immediately enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn coien(&self, n: u8) -> COIEN_R {
-        COIEN_R::new(((self.bits >> ((n - 5) * 0 + 2)) & 1) != 0)
+    pub fn coien(&self, n: u8) -> COIEN_R {
+        assert!(n < 1);
+        COIEN_R::new(((self.bits >> (n * 0 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - Channel 5 output immediately enable"]
     #[inline(always)]
@@ -339,10 +340,11 @@ output immediately enable"]
         COIEN_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Channel [5-5]
-output buffer enable"]
+output buffer enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn coben(&self, n: u8) -> COBEN_R {
-        COBEN_R::new(((self.bits >> ((n - 5) * 0 + 3)) & 1) != 0)
+    pub fn coben(&self, n: u8) -> COBEN_R {
+        assert!(n < 1);
+        COBEN_R::new(((self.bits >> (n * 0 + 3)) & 1) != 0)
     }
     #[doc = "Bit 3 - Channel 5 output buffer enable"]
     #[inline(always)]
@@ -350,10 +352,11 @@ output buffer enable"]
         COBEN_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Channel [5-5]
-output control"]
+output control\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn coctrl(&self, n: u8) -> COCTRL_R {
-        COCTRL_R::new(((self.bits >> ((n - 5) * 0 + 4)) & 7) as u8)
+    pub fn coctrl(&self, n: u8) -> COCTRL_R {
+        assert!(n < 1);
+        COCTRL_R::new(((self.bits >> (n * 0 + 4)) & 7) as u8)
     }
     #[doc = "Bits 4:6 - Channel 5 output control"]
     #[inline(always)]
@@ -361,10 +364,11 @@ output control"]
         COCTRL_R::new(((self.bits >> 4) & 7) as u8)
     }
     #[doc = "Channel [5-5]
-output switch enable"]
+output switch enable\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cosen(&self, n: u8) -> COSEN_R {
-        COSEN_R::new(((self.bits >> ((n - 5) * 0 + 7)) & 1) != 0)
+    pub fn cosen(&self, n: u8) -> COSEN_R {
+        assert!(n < 1);
+        COSEN_R::new(((self.bits >> (n * 0 + 7)) & 1) != 0)
     }
     #[doc = "Bit 7 - Channel 5 output switch enable"]
     #[inline(always)]
@@ -392,53 +396,57 @@ impl W {
 output immediately enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn coien<const O: u8>(&mut self) -> COIEN_W<CM3_OUTPUT_SPEC, O> {
-        COIEN_W::new(self)
+    pub fn coien(&mut self, n: u8) -> COIEN_W<CM3_OUTPUT_SPEC> {
+        assert!(n < 1);
+        COIEN_W::new(self, n * 0 + 2)
     }
     #[doc = "Bit 2 - Channel 5 output immediately enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c5oien(&mut self) -> COIEN_W<CM3_OUTPUT_SPEC, 2> {
-        COIEN_W::new(self)
+    pub fn c5oien(&mut self) -> COIEN_W<CM3_OUTPUT_SPEC> {
+        COIEN_W::new(self, 2)
     }
     #[doc = "Channel [5-5]
 output buffer enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn coben<const O: u8>(&mut self) -> COBEN_W<CM3_OUTPUT_SPEC, O> {
-        COBEN_W::new(self)
+    pub fn coben(&mut self, n: u8) -> COBEN_W<CM3_OUTPUT_SPEC> {
+        assert!(n < 1);
+        COBEN_W::new(self, n * 0 + 3)
     }
     #[doc = "Bit 3 - Channel 5 output buffer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c5oben(&mut self) -> COBEN_W<CM3_OUTPUT_SPEC, 3> {
-        COBEN_W::new(self)
+    pub fn c5oben(&mut self) -> COBEN_W<CM3_OUTPUT_SPEC> {
+        COBEN_W::new(self, 3)
     }
     #[doc = "Channel [5-5]
 output control"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn coctrl<const O: u8>(&mut self) -> COCTRL_W<CM3_OUTPUT_SPEC, O> {
-        COCTRL_W::new(self)
+    pub fn coctrl(&mut self, n: u8) -> COCTRL_W<CM3_OUTPUT_SPEC> {
+        assert!(n < 1);
+        COCTRL_W::new(self, n * 0 + 4)
     }
     #[doc = "Bits 4:6 - Channel 5 output control"]
     #[inline(always)]
     #[must_use]
-    pub fn c5octrl(&mut self) -> COCTRL_W<CM3_OUTPUT_SPEC, 4> {
-        COCTRL_W::new(self)
+    pub fn c5octrl(&mut self) -> COCTRL_W<CM3_OUTPUT_SPEC> {
+        COCTRL_W::new(self, 4)
     }
     #[doc = "Channel [5-5]
 output switch enable"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cosen<const O: u8>(&mut self) -> COSEN_W<CM3_OUTPUT_SPEC, O> {
-        COSEN_W::new(self)
+    pub fn cosen(&mut self, n: u8) -> COSEN_W<CM3_OUTPUT_SPEC> {
+        assert!(n < 1);
+        COSEN_W::new(self, n * 0 + 7)
     }
     #[doc = "Bit 7 - Channel 5 output switch enable"]
     #[inline(always)]
     #[must_use]
-    pub fn c5osen(&mut self) -> COSEN_W<CM3_OUTPUT_SPEC, 7> {
-        COSEN_W::new(self)
+    pub fn c5osen(&mut self) -> COSEN_W<CM3_OUTPUT_SPEC> {
+        COSEN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -15,8 +15,8 @@ impl From<TPEFCLRW_AW> for bool {
     }
 }
 #[doc = "Field `TPEFCLR` writer - Tamper event flag clear"]
-pub type TPEFCLR_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, TPEFCLRW_AW>;
-impl<'a, REG, const O: u8> TPEFCLR_W<'a, REG, O>
+pub type TPEFCLR_W<'a, REG> = crate::BitWriter1C<'a, REG, TPEFCLRW_AW>;
+impl<'a, REG> TPEFCLR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -39,8 +39,8 @@ impl From<TPIFCLRW_AW> for bool {
     }
 }
 #[doc = "Field `TPIFCLR` writer - Tamper interrupt flag clear"]
-pub type TPIFCLR_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, TPIFCLRW_AW>;
-impl<'a, REG, const O: u8> TPIFCLR_W<'a, REG, O>
+pub type TPIFCLR_W<'a, REG> = crate::BitWriter1C<'a, REG, TPIFCLRW_AW>;
+impl<'a, REG> TPIFCLR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -101,8 +101,8 @@ impl From<TPIENW_AW> for bool {
     }
 }
 #[doc = "Field `TPIEN` writer - Tamper pin interrupt enable"]
-pub type TPIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TPIENW_AW>;
-impl<'a, REG, const O: u8> TPIEN_W<'a, REG, O>
+pub type TPIEN_W<'a, REG> = crate::BitWriter<'a, REG, TPIENW_AW>;
+impl<'a, REG> TPIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -154,8 +154,8 @@ impl TPEF_R {
     }
 }
 #[doc = "Field `TPEF` writer - Tamper event flag"]
-pub type TPEF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TPEFR_A>;
-impl<'a, REG, const O: u8> TPEF_W<'a, REG, O>
+pub type TPEF_W<'a, REG> = crate::BitWriter<'a, REG, TPEFR_A>;
+impl<'a, REG> TPEF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -207,8 +207,8 @@ impl TPIF_R {
     }
 }
 #[doc = "Field `TPIF` writer - Tamper interrupt flag"]
-pub type TPIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TPIFR_A>;
-impl<'a, REG, const O: u8> TPIF_W<'a, REG, O>
+pub type TPIF_W<'a, REG> = crate::BitWriter<'a, REG, TPIFR_A>;
+impl<'a, REG> TPIF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -258,32 +258,32 @@ impl W {
     #[doc = "Bit 0 - Tamper event flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn tpefclr(&mut self) -> TPEFCLR_W<CTRLSTS_SPEC, 0> {
-        TPEFCLR_W::new(self)
+    pub fn tpefclr(&mut self) -> TPEFCLR_W<CTRLSTS_SPEC> {
+        TPEFCLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Tamper interrupt flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn tpifclr(&mut self) -> TPIFCLR_W<CTRLSTS_SPEC, 1> {
-        TPIFCLR_W::new(self)
+    pub fn tpifclr(&mut self) -> TPIFCLR_W<CTRLSTS_SPEC> {
+        TPIFCLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Tamper pin interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tpien(&mut self) -> TPIEN_W<CTRLSTS_SPEC, 2> {
-        TPIEN_W::new(self)
+    pub fn tpien(&mut self) -> TPIEN_W<CTRLSTS_SPEC> {
+        TPIEN_W::new(self, 2)
     }
     #[doc = "Bit 8 - Tamper event flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tpef(&mut self) -> TPEF_W<CTRLSTS_SPEC, 8> {
-        TPEF_W::new(self)
+    pub fn tpef(&mut self) -> TPEF_W<CTRLSTS_SPEC> {
+        TPEF_W::new(self, 8)
     }
     #[doc = "Bit 9 - Tamper interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tpif(&mut self) -> TPIF_W<CTRLSTS_SPEC, 9> {
-        TPIF_W::new(self)
+    pub fn tpif(&mut self) -> TPIF_W<CTRLSTS_SPEC> {
+        TPIF_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -32,8 +32,8 @@ impl OVFSWTR_R {
     }
 }
 #[doc = "Field `OVFSWTR` writer - Overflow event triggered by software"]
-pub type OVFSWTR_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, OVFSWTRW_A>;
-impl<'a, REG, const O: u8> OVFSWTR_W<'a, REG, O>
+pub type OVFSWTR_W<'a, REG> = crate::BitWriter1S<'a, REG, OVFSWTRW_A>;
+impl<'a, REG> OVFSWTR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -66,8 +66,8 @@ impl W {
     #[doc = "Bit 0 - Overflow event triggered by software"]
     #[inline(always)]
     #[must_use]
-    pub fn ovfswtr(&mut self) -> OVFSWTR_W<SWEVT_SPEC, 0> {
-        OVFSWTR_W::new(self)
+    pub fn ovfswtr(&mut self) -> OVFSWTR_W<SWEVT_SPEC> {
+        OVFSWTR_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

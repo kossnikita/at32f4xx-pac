@@ -5,27 +5,27 @@ pub type W = crate::W<GRSTCTL_SPEC>;
 #[doc = "Field `CSFTRST` reader - Core soft reset"]
 pub type CSFTRST_R = crate::BitReader;
 #[doc = "Field `CSFTRST` writer - Core soft reset"]
-pub type CSFTRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSFTRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PIUSFTRST` reader - PIU FS Dedicated Controller Soft Reset"]
 pub type PIUSFTRST_R = crate::BitReader;
 #[doc = "Field `PIUSFTRST` writer - PIU FS Dedicated Controller Soft Reset"]
-pub type PIUSFTRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PIUSFTRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FRMCNTRST` reader - Host frame counter reset"]
 pub type FRMCNTRST_R = crate::BitReader;
 #[doc = "Field `FRMCNTRST` writer - Host frame counter reset"]
-pub type FRMCNTRST_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FRMCNTRST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXFFLSH` reader - RxFIFO flush"]
 pub type RXFFLSH_R = crate::BitReader;
 #[doc = "Field `RXFFLSH` writer - RxFIFO flush"]
-pub type RXFFLSH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXFFLSH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFFLSH` reader - TxFIFO flush"]
 pub type TXFFLSH_R = crate::BitReader;
 #[doc = "Field `TXFFLSH` writer - TxFIFO flush"]
-pub type TXFFLSH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXFFLSH_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFNUM` reader - TxFIFO number"]
 pub type TXFNUM_R = crate::FieldReader;
 #[doc = "Field `TXFNUM` writer - TxFIFO number"]
-pub type TXFNUM_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type TXFNUM_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `DMAREQ` reader - DMA Request Signal"]
 pub type DMAREQ_R = crate::BitReader;
 #[doc = "Field `AHBIDLE` reader - AHB master idle"]
@@ -95,38 +95,38 @@ impl W {
     #[doc = "Bit 0 - Core soft reset"]
     #[inline(always)]
     #[must_use]
-    pub fn csftrst(&mut self) -> CSFTRST_W<GRSTCTL_SPEC, 0> {
-        CSFTRST_W::new(self)
+    pub fn csftrst(&mut self) -> CSFTRST_W<GRSTCTL_SPEC> {
+        CSFTRST_W::new(self, 0)
     }
     #[doc = "Bit 1 - PIU FS Dedicated Controller Soft Reset"]
     #[inline(always)]
     #[must_use]
-    pub fn piusftrst(&mut self) -> PIUSFTRST_W<GRSTCTL_SPEC, 1> {
-        PIUSFTRST_W::new(self)
+    pub fn piusftrst(&mut self) -> PIUSFTRST_W<GRSTCTL_SPEC> {
+        PIUSFTRST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Host frame counter reset"]
     #[inline(always)]
     #[must_use]
-    pub fn frmcntrst(&mut self) -> FRMCNTRST_W<GRSTCTL_SPEC, 2> {
-        FRMCNTRST_W::new(self)
+    pub fn frmcntrst(&mut self) -> FRMCNTRST_W<GRSTCTL_SPEC> {
+        FRMCNTRST_W::new(self, 2)
     }
     #[doc = "Bit 4 - RxFIFO flush"]
     #[inline(always)]
     #[must_use]
-    pub fn rxfflsh(&mut self) -> RXFFLSH_W<GRSTCTL_SPEC, 4> {
-        RXFFLSH_W::new(self)
+    pub fn rxfflsh(&mut self) -> RXFFLSH_W<GRSTCTL_SPEC> {
+        RXFFLSH_W::new(self, 4)
     }
     #[doc = "Bit 5 - TxFIFO flush"]
     #[inline(always)]
     #[must_use]
-    pub fn txfflsh(&mut self) -> TXFFLSH_W<GRSTCTL_SPEC, 5> {
-        TXFFLSH_W::new(self)
+    pub fn txfflsh(&mut self) -> TXFFLSH_W<GRSTCTL_SPEC> {
+        TXFFLSH_W::new(self, 5)
     }
     #[doc = "Bits 6:10 - TxFIFO number"]
     #[inline(always)]
     #[must_use]
-    pub fn txfnum(&mut self) -> TXFNUM_W<GRSTCTL_SPEC, 6> {
-        TXFNUM_W::new(self)
+    pub fn txfnum(&mut self) -> TXFNUM_W<GRSTCTL_SPEC> {
+        TXFNUM_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

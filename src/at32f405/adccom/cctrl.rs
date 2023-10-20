@@ -5,7 +5,7 @@ pub type W = crate::W<CCTRL_SPEC>;
 #[doc = "Field `ADCDIV` reader - ADC division"]
 pub type ADCDIV_R = crate::FieldReader;
 #[doc = "Field `ADCDIV` writer - ADC division"]
-pub type ADCDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ADCDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 16:19 - ADC division"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 16:19 - ADC division"]
     #[inline(always)]
     #[must_use]
-    pub fn adcdiv(&mut self) -> ADCDIV_W<CCTRL_SPEC, 16> {
-        ADCDIV_W::new(self)
+    pub fn adcdiv(&mut self) -> ADCDIV_W<CCTRL_SPEC> {
+        ADCDIV_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

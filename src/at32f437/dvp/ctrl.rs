@@ -5,63 +5,63 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `CAP` reader - Capture function enable"]
 pub type CAP_R = crate::BitReader;
 #[doc = "Field `CAP` writer - Capture function enable"]
-pub type CAP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CFM` reader - Capture fire mode"]
 pub type CFM_R = crate::BitReader;
 #[doc = "Field `CFM` writer - Capture fire mode"]
-pub type CFM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CFM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRP` reader - Cropping function enable"]
 pub type CRP_R = crate::BitReader;
 #[doc = "Field `CRP` writer - Cropping function enable"]
-pub type CRP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CRP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `JPEG` reader - JPEG format"]
 pub type JPEG_R = crate::BitReader;
 #[doc = "Field `JPEG` writer - JPEG format"]
-pub type JPEG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type JPEG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SM` reader - synchronization mode"]
 pub type SM_R = crate::BitReader;
 #[doc = "Field `SM` writer - synchronization mode"]
-pub type SM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CKP` reader - Pixel clock polarity"]
 pub type CKP_R = crate::BitReader;
 #[doc = "Field `CKP` writer - Pixel clock polarity"]
-pub type CKP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CKP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HSP` reader - Horizontal synchronization polarity"]
 pub type HSP_R = crate::BitReader;
 #[doc = "Field `HSP` writer - Horizontal synchronization polarity"]
-pub type HSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VSP` reader - Vertical synchronization polarity"]
 pub type VSP_R = crate::BitReader;
 #[doc = "Field `VSP` writer - Vertical synchronization polarity"]
-pub type VSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type VSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BFRC` reader - Basic frame rate control"]
 pub type BFRC_R = crate::FieldReader;
 #[doc = "Field `BFRC` writer - Basic frame rate control"]
-pub type BFRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type BFRC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PDL` reader - Pixel data length"]
 pub type PDL_R = crate::FieldReader;
 #[doc = "Field `PDL` writer - Pixel data length"]
-pub type PDL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PDL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ENA` reader - DVP enable"]
 pub type ENA_R = crate::BitReader;
 #[doc = "Field `ENA` writer - DVP enable"]
-pub type ENA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PCDC` reader - Basic pixel capture/drop control"]
 pub type PCDC_R = crate::FieldReader;
 #[doc = "Field `PCDC` writer - Basic pixel capture/drop control"]
-pub type PCDC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PCDC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PCDS` reader - Pixel capture/drop selection"]
 pub type PCDS_R = crate::BitReader;
 #[doc = "Field `PCDS` writer - Pixel capture/drop selection"]
-pub type PCDS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PCDS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCDC` reader - Line capture/drop control"]
 pub type LCDC_R = crate::BitReader;
 #[doc = "Field `LCDC` writer - Line capture/drop control"]
-pub type LCDC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LCDC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCDS` reader - Line capture/drop selection"]
 pub type LCDS_R = crate::BitReader;
 #[doc = "Field `LCDS` writer - Line capture/drop selection"]
-pub type LCDS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LCDS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Capture function enable"]
     #[inline(always)]
@@ -169,92 +169,92 @@ impl W {
     #[doc = "Bit 0 - Capture function enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cap(&mut self) -> CAP_W<CTRL_SPEC, 0> {
-        CAP_W::new(self)
+    pub fn cap(&mut self) -> CAP_W<CTRL_SPEC> {
+        CAP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Capture fire mode"]
     #[inline(always)]
     #[must_use]
-    pub fn cfm(&mut self) -> CFM_W<CTRL_SPEC, 1> {
-        CFM_W::new(self)
+    pub fn cfm(&mut self) -> CFM_W<CTRL_SPEC> {
+        CFM_W::new(self, 1)
     }
     #[doc = "Bit 2 - Cropping function enable"]
     #[inline(always)]
     #[must_use]
-    pub fn crp(&mut self) -> CRP_W<CTRL_SPEC, 2> {
-        CRP_W::new(self)
+    pub fn crp(&mut self) -> CRP_W<CTRL_SPEC> {
+        CRP_W::new(self, 2)
     }
     #[doc = "Bit 3 - JPEG format"]
     #[inline(always)]
     #[must_use]
-    pub fn jpeg(&mut self) -> JPEG_W<CTRL_SPEC, 3> {
-        JPEG_W::new(self)
+    pub fn jpeg(&mut self) -> JPEG_W<CTRL_SPEC> {
+        JPEG_W::new(self, 3)
     }
     #[doc = "Bit 4 - synchronization mode"]
     #[inline(always)]
     #[must_use]
-    pub fn sm(&mut self) -> SM_W<CTRL_SPEC, 4> {
-        SM_W::new(self)
+    pub fn sm(&mut self) -> SM_W<CTRL_SPEC> {
+        SM_W::new(self, 4)
     }
     #[doc = "Bit 5 - Pixel clock polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn ckp(&mut self) -> CKP_W<CTRL_SPEC, 5> {
-        CKP_W::new(self)
+    pub fn ckp(&mut self) -> CKP_W<CTRL_SPEC> {
+        CKP_W::new(self, 5)
     }
     #[doc = "Bit 6 - Horizontal synchronization polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn hsp(&mut self) -> HSP_W<CTRL_SPEC, 6> {
-        HSP_W::new(self)
+    pub fn hsp(&mut self) -> HSP_W<CTRL_SPEC> {
+        HSP_W::new(self, 6)
     }
     #[doc = "Bit 7 - Vertical synchronization polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn vsp(&mut self) -> VSP_W<CTRL_SPEC, 7> {
-        VSP_W::new(self)
+    pub fn vsp(&mut self) -> VSP_W<CTRL_SPEC> {
+        VSP_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - Basic frame rate control"]
     #[inline(always)]
     #[must_use]
-    pub fn bfrc(&mut self) -> BFRC_W<CTRL_SPEC, 8> {
-        BFRC_W::new(self)
+    pub fn bfrc(&mut self) -> BFRC_W<CTRL_SPEC> {
+        BFRC_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Pixel data length"]
     #[inline(always)]
     #[must_use]
-    pub fn pdl(&mut self) -> PDL_W<CTRL_SPEC, 10> {
-        PDL_W::new(self)
+    pub fn pdl(&mut self) -> PDL_W<CTRL_SPEC> {
+        PDL_W::new(self, 10)
     }
     #[doc = "Bit 14 - DVP enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ena(&mut self) -> ENA_W<CTRL_SPEC, 14> {
-        ENA_W::new(self)
+    pub fn ena(&mut self) -> ENA_W<CTRL_SPEC> {
+        ENA_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Basic pixel capture/drop control"]
     #[inline(always)]
     #[must_use]
-    pub fn pcdc(&mut self) -> PCDC_W<CTRL_SPEC, 16> {
-        PCDC_W::new(self)
+    pub fn pcdc(&mut self) -> PCDC_W<CTRL_SPEC> {
+        PCDC_W::new(self, 16)
     }
     #[doc = "Bit 18 - Pixel capture/drop selection"]
     #[inline(always)]
     #[must_use]
-    pub fn pcds(&mut self) -> PCDS_W<CTRL_SPEC, 18> {
-        PCDS_W::new(self)
+    pub fn pcds(&mut self) -> PCDS_W<CTRL_SPEC> {
+        PCDS_W::new(self, 18)
     }
     #[doc = "Bit 19 - Line capture/drop control"]
     #[inline(always)]
     #[must_use]
-    pub fn lcdc(&mut self) -> LCDC_W<CTRL_SPEC, 19> {
-        LCDC_W::new(self)
+    pub fn lcdc(&mut self) -> LCDC_W<CTRL_SPEC> {
+        LCDC_W::new(self, 19)
     }
     #[doc = "Bit 20 - Line capture/drop selection"]
     #[inline(always)]
     #[must_use]
-    pub fn lcds(&mut self) -> LCDS_W<CTRL_SPEC, 20> {
-        LCDS_W::new(self)
+    pub fn lcds(&mut self) -> LCDS_W<CTRL_SPEC> {
+        LCDS_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

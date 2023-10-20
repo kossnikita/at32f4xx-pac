@@ -5,19 +5,19 @@ pub type W = crate::W<SCR_SPEC>;
 #[doc = "Field `FMSC` reader - Frame start code"]
 pub type FMSC_R = crate::FieldReader;
 #[doc = "Field `FMSC` writer - Frame start code"]
-pub type FMSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type FMSC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `LNSC` reader - Line start code"]
 pub type LNSC_R = crate::FieldReader;
 #[doc = "Field `LNSC` writer - Line start code"]
-pub type LNSC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LNSC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `LNEC` reader - Line end code"]
 pub type LNEC_R = crate::FieldReader;
 #[doc = "Field `LNEC` writer - Line end code"]
-pub type LNEC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type LNEC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `FMEC` reader - Frame end code"]
 pub type FMEC_R = crate::FieldReader;
 #[doc = "Field `FMEC` writer - Frame end code"]
-pub type FMEC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type FMEC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Frame start code"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:7 - Frame start code"]
     #[inline(always)]
     #[must_use]
-    pub fn fmsc(&mut self) -> FMSC_W<SCR_SPEC, 0> {
-        FMSC_W::new(self)
+    pub fn fmsc(&mut self) -> FMSC_W<SCR_SPEC> {
+        FMSC_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Line start code"]
     #[inline(always)]
     #[must_use]
-    pub fn lnsc(&mut self) -> LNSC_W<SCR_SPEC, 8> {
-        LNSC_W::new(self)
+    pub fn lnsc(&mut self) -> LNSC_W<SCR_SPEC> {
+        LNSC_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Line end code"]
     #[inline(always)]
     #[must_use]
-    pub fn lnec(&mut self) -> LNEC_W<SCR_SPEC, 16> {
-        LNEC_W::new(self)
+    pub fn lnec(&mut self) -> LNEC_W<SCR_SPEC> {
+        LNEC_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Frame end code"]
     #[inline(always)]
     #[must_use]
-    pub fn fmec(&mut self) -> FMEC_W<SCR_SPEC, 24> {
-        FMEC_W::new(self)
+    pub fn fmec(&mut self) -> FMEC_W<SCR_SPEC> {
+        FMEC_W::new(self, 24)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

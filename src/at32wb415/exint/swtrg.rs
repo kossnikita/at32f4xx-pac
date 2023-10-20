@@ -51,8 +51,8 @@ impl From<SWT0W_AW> for bool {
     }
 }
 #[doc = "Field `SWT[0-22]` writer - Software trigger on line %s"]
-pub type SWT_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, SWT0W_AW>;
-impl<'a, REG, const O: u8> SWT_W<'a, REG, O>
+pub type SWT_W<'a, REG> = crate::BitWriter1S<'a, REG, SWT0W_AW>;
+impl<'a, REG> SWT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -63,9 +63,10 @@ where
     }
 }
 impl R {
-    #[doc = "Software trigger on line [0-22]"]
+    #[doc = "Software trigger on line [0-22]\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn swt(&self, n: u8) -> SWT_R {
+    pub fn swt(&self, n: u8) -> SWT_R {
+        assert!(n < 23);
         SWT_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - Software trigger on line 0"]
@@ -222,146 +223,147 @@ impl W {
     #[doc = "Software trigger on line [0-22]"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn swt<const O: u8>(&mut self) -> SWT_W<SWTRG_SPEC, O> {
-        SWT_W::new(self)
+    pub fn swt(&mut self, n: u8) -> SWT_W<SWTRG_SPEC> {
+        assert!(n < 23);
+        SWT_W::new(self, n)
     }
     #[doc = "Bit 0 - Software trigger on line 0"]
     #[inline(always)]
     #[must_use]
-    pub fn swt0(&mut self) -> SWT_W<SWTRG_SPEC, 0> {
-        SWT_W::new(self)
+    pub fn swt0(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Software trigger on line 1"]
     #[inline(always)]
     #[must_use]
-    pub fn swt1(&mut self) -> SWT_W<SWTRG_SPEC, 1> {
-        SWT_W::new(self)
+    pub fn swt1(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Software trigger on line 2"]
     #[inline(always)]
     #[must_use]
-    pub fn swt2(&mut self) -> SWT_W<SWTRG_SPEC, 2> {
-        SWT_W::new(self)
+    pub fn swt2(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Software trigger on line 3"]
     #[inline(always)]
     #[must_use]
-    pub fn swt3(&mut self) -> SWT_W<SWTRG_SPEC, 3> {
-        SWT_W::new(self)
+    pub fn swt3(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Software trigger on line 4"]
     #[inline(always)]
     #[must_use]
-    pub fn swt4(&mut self) -> SWT_W<SWTRG_SPEC, 4> {
-        SWT_W::new(self)
+    pub fn swt4(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 4)
     }
     #[doc = "Bit 5 - Software trigger on line 5"]
     #[inline(always)]
     #[must_use]
-    pub fn swt5(&mut self) -> SWT_W<SWTRG_SPEC, 5> {
-        SWT_W::new(self)
+    pub fn swt5(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 5)
     }
     #[doc = "Bit 6 - Software trigger on line 6"]
     #[inline(always)]
     #[must_use]
-    pub fn swt6(&mut self) -> SWT_W<SWTRG_SPEC, 6> {
-        SWT_W::new(self)
+    pub fn swt6(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Software trigger on line 7"]
     #[inline(always)]
     #[must_use]
-    pub fn swt7(&mut self) -> SWT_W<SWTRG_SPEC, 7> {
-        SWT_W::new(self)
+    pub fn swt7(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Software trigger on line 8"]
     #[inline(always)]
     #[must_use]
-    pub fn swt8(&mut self) -> SWT_W<SWTRG_SPEC, 8> {
-        SWT_W::new(self)
+    pub fn swt8(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Software trigger on line 9"]
     #[inline(always)]
     #[must_use]
-    pub fn swt9(&mut self) -> SWT_W<SWTRG_SPEC, 9> {
-        SWT_W::new(self)
+    pub fn swt9(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Software trigger on line 10"]
     #[inline(always)]
     #[must_use]
-    pub fn swt10(&mut self) -> SWT_W<SWTRG_SPEC, 10> {
-        SWT_W::new(self)
+    pub fn swt10(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 10)
     }
     #[doc = "Bit 11 - Software trigger on line 11"]
     #[inline(always)]
     #[must_use]
-    pub fn swt11(&mut self) -> SWT_W<SWTRG_SPEC, 11> {
-        SWT_W::new(self)
+    pub fn swt11(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 11)
     }
     #[doc = "Bit 12 - Software trigger on line 12"]
     #[inline(always)]
     #[must_use]
-    pub fn swt12(&mut self) -> SWT_W<SWTRG_SPEC, 12> {
-        SWT_W::new(self)
+    pub fn swt12(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 12)
     }
     #[doc = "Bit 13 - Software trigger on line 13"]
     #[inline(always)]
     #[must_use]
-    pub fn swt13(&mut self) -> SWT_W<SWTRG_SPEC, 13> {
-        SWT_W::new(self)
+    pub fn swt13(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 13)
     }
     #[doc = "Bit 14 - Software trigger on line 14"]
     #[inline(always)]
     #[must_use]
-    pub fn swt14(&mut self) -> SWT_W<SWTRG_SPEC, 14> {
-        SWT_W::new(self)
+    pub fn swt14(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 14)
     }
     #[doc = "Bit 15 - Software trigger on line 15"]
     #[inline(always)]
     #[must_use]
-    pub fn swt15(&mut self) -> SWT_W<SWTRG_SPEC, 15> {
-        SWT_W::new(self)
+    pub fn swt15(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 15)
     }
     #[doc = "Bit 16 - Software trigger on line 16"]
     #[inline(always)]
     #[must_use]
-    pub fn swt16(&mut self) -> SWT_W<SWTRG_SPEC, 16> {
-        SWT_W::new(self)
+    pub fn swt16(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 16)
     }
     #[doc = "Bit 17 - Software trigger on line 17"]
     #[inline(always)]
     #[must_use]
-    pub fn swt17(&mut self) -> SWT_W<SWTRG_SPEC, 17> {
-        SWT_W::new(self)
+    pub fn swt17(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 17)
     }
     #[doc = "Bit 18 - Software trigger on line 18"]
     #[inline(always)]
     #[must_use]
-    pub fn swt18(&mut self) -> SWT_W<SWTRG_SPEC, 18> {
-        SWT_W::new(self)
+    pub fn swt18(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 18)
     }
     #[doc = "Bit 19 - Software trigger on line 19"]
     #[inline(always)]
     #[must_use]
-    pub fn swt19(&mut self) -> SWT_W<SWTRG_SPEC, 19> {
-        SWT_W::new(self)
+    pub fn swt19(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 19)
     }
     #[doc = "Bit 20 - Software trigger on line 20"]
     #[inline(always)]
     #[must_use]
-    pub fn swt20(&mut self) -> SWT_W<SWTRG_SPEC, 20> {
-        SWT_W::new(self)
+    pub fn swt20(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 20)
     }
     #[doc = "Bit 21 - Software trigger on line 21"]
     #[inline(always)]
     #[must_use]
-    pub fn swt21(&mut self) -> SWT_W<SWTRG_SPEC, 21> {
-        SWT_W::new(self)
+    pub fn swt21(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 21)
     }
     #[doc = "Bit 22 - Software trigger on line 22"]
     #[inline(always)]
     #[must_use]
-    pub fn swt22(&mut self) -> SWT_W<SWTRG_SPEC, 22> {
-        SWT_W::new(self)
+    pub fn swt22(&mut self) -> SWT_W<SWTRG_SPEC> {
+        SWT_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

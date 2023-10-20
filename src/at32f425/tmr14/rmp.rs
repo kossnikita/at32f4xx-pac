@@ -5,7 +5,7 @@ pub type W = crate::W<RMP_SPEC>;
 #[doc = "Field `TMR14_CH1_IRMP` reader - TMR14 channel 1 input remap"]
 pub type TMR14_CH1_IRMP_R = crate::FieldReader;
 #[doc = "Field `TMR14_CH1_IRMP` writer - TMR14 channel 1 input remap"]
-pub type TMR14_CH1_IRMP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TMR14_CH1_IRMP_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 6:7 - TMR14 channel 1 input remap"]
     #[inline(always)]
@@ -32,8 +32,8 @@ impl W {
     #[doc = "Bits 6:7 - TMR14 channel 1 input remap"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr14_ch1_irmp(&mut self) -> TMR14_CH1_IRMP_W<RMP_SPEC, 6> {
-        TMR14_CH1_IRMP_W::new(self)
+    pub fn tmr14_ch1_irmp(&mut self) -> TMR14_CH1_IRMP_W<RMP_SPEC> {
+        TMR14_CH1_IRMP_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

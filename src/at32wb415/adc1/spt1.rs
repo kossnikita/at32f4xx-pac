@@ -5,19 +5,19 @@ pub type W = crate::W<SPT1_SPEC>;
 #[doc = "Field `CSPT10` reader - Selection sample time of channel ADC_IN10"]
 pub type CSPT10_R = crate::FieldReader;
 #[doc = "Field `CSPT10` writer - Selection sample time of channel ADC_IN10"]
-pub type CSPT10_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type CSPT10_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 #[doc = "Field `CSPT11` reader - Selection sample time of channel ADC_IN11"]
 pub type CSPT11_R = crate::FieldReader;
 #[doc = "Field `CSPT11` writer - Selection sample time of channel ADC_IN11"]
-pub type CSPT11_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type CSPT11_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 #[doc = "Field `CSPT16` reader - Selection sample time of channel ADC_IN16"]
 pub type CSPT16_R = crate::FieldReader;
 #[doc = "Field `CSPT16` writer - Selection sample time of channel ADC_IN16"]
-pub type CSPT16_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type CSPT16_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 #[doc = "Field `CSPT17` reader - Selection sample time of channel ADC_IN17"]
 pub type CSPT17_R = crate::FieldReader;
 #[doc = "Field `CSPT17` writer - Selection sample time of channel ADC_IN17"]
-pub type CSPT17_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type CSPT17_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN10"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN10"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt10(&mut self) -> CSPT10_W<SPT1_SPEC, 0> {
-        CSPT10_W::new(self)
+    pub fn cspt10(&mut self) -> CSPT10_W<SPT1_SPEC> {
+        CSPT10_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Selection sample time of channel ADC_IN11"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt11(&mut self) -> CSPT11_W<SPT1_SPEC, 3> {
-        CSPT11_W::new(self)
+    pub fn cspt11(&mut self) -> CSPT11_W<SPT1_SPEC> {
+        CSPT11_W::new(self, 3)
     }
     #[doc = "Bits 18:20 - Selection sample time of channel ADC_IN16"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt16(&mut self) -> CSPT16_W<SPT1_SPEC, 18> {
-        CSPT16_W::new(self)
+    pub fn cspt16(&mut self) -> CSPT16_W<SPT1_SPEC> {
+        CSPT16_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - Selection sample time of channel ADC_IN17"]
     #[inline(always)]
     #[must_use]
-    pub fn cspt17(&mut self) -> CSPT17_W<SPT1_SPEC, 21> {
-        CSPT17_W::new(self)
+    pub fn cspt17(&mut self) -> CSPT17_W<SPT1_SPEC> {
+        CSPT17_W::new(self, 21)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

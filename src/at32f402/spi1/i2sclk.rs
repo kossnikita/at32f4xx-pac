@@ -5,7 +5,7 @@ pub type W = crate::W<I2SCLK_SPEC>;
 #[doc = "Field `DIV7_0` reader - I2S division bit7 to bit0"]
 pub type DIV7_0_R = crate::FieldReader;
 #[doc = "Field `DIV7_0` writer - I2S division bit7 to bit0"]
-pub type DIV7_0_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 8, O>;
+pub type DIV7_0_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
 #[doc = "Field `ODD` reader - Odd result for I2S division"]
 pub type ODD_R = crate::BitReader<ODD_A>;
 #[doc = "Odd result for I2S division\n\nValue on reset: 0"]
@@ -43,8 +43,8 @@ impl ODD_R {
     }
 }
 #[doc = "Field `ODD` writer - Odd result for I2S division"]
-pub type ODD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ODD_A>;
-impl<'a, REG, const O: u8> ODD_W<'a, REG, O>
+pub type ODD_W<'a, REG> = crate::BitWriter<'a, REG, ODD_A>;
+impl<'a, REG> ODD_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -110,8 +110,8 @@ impl From<MCLKOEW_AW> for bool {
     }
 }
 #[doc = "Field `MCLKOE` writer - I2S master clock output enable"]
-pub type MCLKOE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MCLKOEW_AW>;
-impl<'a, REG, const O: u8> MCLKOE_W<'a, REG, O>
+pub type MCLKOE_W<'a, REG> = crate::BitWriter<'a, REG, MCLKOEW_AW>;
+impl<'a, REG> MCLKOE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -129,7 +129,7 @@ where
 #[doc = "Field `DIV9_8` reader - I2S division bit9 and bit8"]
 pub type DIV9_8_R = crate::FieldReader;
 #[doc = "Field `DIV9_8` writer - I2S division bit9 and bit8"]
-pub type DIV9_8_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
+pub type DIV9_8_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:7 - I2S division bit7 to bit0"]
     #[inline(always)]
@@ -171,26 +171,26 @@ impl W {
     #[doc = "Bits 0:7 - I2S division bit7 to bit0"]
     #[inline(always)]
     #[must_use]
-    pub fn div7_0(&mut self) -> DIV7_0_W<I2SCLK_SPEC, 0> {
-        DIV7_0_W::new(self)
+    pub fn div7_0(&mut self) -> DIV7_0_W<I2SCLK_SPEC> {
+        DIV7_0_W::new(self, 0)
     }
     #[doc = "Bit 8 - Odd result for I2S division"]
     #[inline(always)]
     #[must_use]
-    pub fn odd(&mut self) -> ODD_W<I2SCLK_SPEC, 8> {
-        ODD_W::new(self)
+    pub fn odd(&mut self) -> ODD_W<I2SCLK_SPEC> {
+        ODD_W::new(self, 8)
     }
     #[doc = "Bit 9 - I2S master clock output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn mclkoe(&mut self) -> MCLKOE_W<I2SCLK_SPEC, 9> {
-        MCLKOE_W::new(self)
+    pub fn mclkoe(&mut self) -> MCLKOE_W<I2SCLK_SPEC> {
+        MCLKOE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - I2S division bit9 and bit8"]
     #[inline(always)]
     #[must_use]
-    pub fn div9_8(&mut self) -> DIV9_8_W<I2SCLK_SPEC, 10> {
-        DIV9_8_W::new(self)
+    pub fn div9_8(&mut self) -> DIV9_8_W<I2SCLK_SPEC> {
+        DIV9_8_W::new(self, 10)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -51,8 +51,8 @@ impl From<TM0TCFW_AW> for bool {
     }
 }
 #[doc = "Field `TMTCF[0-2]` writer - Transmit mailbox %s transmission complete flag"]
-pub type TMTCF_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, TM0TCFW_AW>;
-impl<'a, REG, const O: u8> TMTCF_W<'a, REG, O>
+pub type TMTCF_W<'a, REG> = crate::BitWriter1C<'a, REG, TM0TCFW_AW>;
+impl<'a, REG> TMTCF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -111,8 +111,8 @@ impl From<TM0TSFW_AW> for bool {
     }
 }
 #[doc = "Field `TMTSF[0-2]` writer - Transmit mailbox %s transmission success flag"]
-pub type TMTSF_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, TM0TSFW_AW>;
-impl<'a, REG, const O: u8> TMTSF_W<'a, REG, O>
+pub type TMTSF_W<'a, REG> = crate::BitWriter1C<'a, REG, TM0TSFW_AW>;
+impl<'a, REG> TMTSF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -171,8 +171,8 @@ impl From<TM0ALFW_AW> for bool {
     }
 }
 #[doc = "Field `TMALF[0-2]` writer - Transmit mailbox %s arbitration lost flag"]
-pub type TMALF_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, TM0ALFW_AW>;
-impl<'a, REG, const O: u8> TMALF_W<'a, REG, O>
+pub type TMALF_W<'a, REG> = crate::BitWriter1C<'a, REG, TM0ALFW_AW>;
+impl<'a, REG> TMALF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -231,8 +231,8 @@ impl From<TM0TEFW_AW> for bool {
     }
 }
 #[doc = "Field `TMTEF[0-2]` writer - Transmit mailbox %s transmission error flag"]
-pub type TMTEF_W<'a, REG, const O: u8> = crate::BitWriter1C<'a, REG, O, TM0TEFW_AW>;
-impl<'a, REG, const O: u8> TMTEF_W<'a, REG, O>
+pub type TMTEF_W<'a, REG> = crate::BitWriter1C<'a, REG, TM0TEFW_AW>;
+impl<'a, REG> TMTEF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -291,8 +291,8 @@ impl From<TM0CTW_AW> for bool {
     }
 }
 #[doc = "Field `TMCT[0-2]` writer - Transmit mailbox %s cancel transmission"]
-pub type TMCT_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, TM0CTW_AW>;
-impl<'a, REG, const O: u8> TMCT_W<'a, REG, O>
+pub type TMCT_W<'a, REG> = crate::BitWriter1S<'a, REG, TM0CTW_AW>;
+impl<'a, REG> TMCT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -378,9 +378,10 @@ impl TMLPF_R {
 }
 impl R {
     #[doc = "Transmit mailbox [0-2]
-transmission complete flag"]
+transmission complete flag\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn tmtcf(&self, n: u8) -> TMTCF_R {
+    pub fn tmtcf(&self, n: u8) -> TMTCF_R {
+        assert!(n < 3);
         TMTCF_R::new(((self.bits >> (n * 8)) & 1) != 0)
     }
     #[doc = "Bit 0 - Transmit mailbox 0 transmission complete flag"]
@@ -399,9 +400,10 @@ transmission complete flag"]
         TMTCF_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Transmit mailbox [0-2]
-transmission success flag"]
+transmission success flag\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn tmtsf(&self, n: u8) -> TMTSF_R {
+    pub fn tmtsf(&self, n: u8) -> TMTSF_R {
+        assert!(n < 3);
         TMTSF_R::new(((self.bits >> (n * 8 + 1)) & 1) != 0)
     }
     #[doc = "Bit 1 - Transmit mailbox 0 transmission success flag"]
@@ -420,9 +422,10 @@ transmission success flag"]
         TMTSF_R::new(((self.bits >> 17) & 1) != 0)
     }
     #[doc = "Transmit mailbox [0-2]
-arbitration lost flag"]
+arbitration lost flag\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn tmalf(&self, n: u8) -> TMALF_R {
+    pub fn tmalf(&self, n: u8) -> TMALF_R {
+        assert!(n < 3);
         TMALF_R::new(((self.bits >> (n * 8 + 2)) & 1) != 0)
     }
     #[doc = "Bit 2 - Transmit mailbox 0 arbitration lost flag"]
@@ -441,9 +444,10 @@ arbitration lost flag"]
         TMALF_R::new(((self.bits >> 18) & 1) != 0)
     }
     #[doc = "Transmit mailbox [0-2]
-transmission error flag"]
+transmission error flag\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn tmtef(&self, n: u8) -> TMTEF_R {
+    pub fn tmtef(&self, n: u8) -> TMTEF_R {
+        assert!(n < 3);
         TMTEF_R::new(((self.bits >> (n * 8 + 3)) & 1) != 0)
     }
     #[doc = "Bit 3 - Transmit mailbox 0 transmission error flag"]
@@ -462,9 +466,10 @@ transmission error flag"]
         TMTEF_R::new(((self.bits >> 19) & 1) != 0)
     }
     #[doc = "Transmit mailbox [0-2]
-cancel transmission"]
+cancel transmission\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn tmct(&self, n: u8) -> TMCT_R {
+    pub fn tmct(&self, n: u8) -> TMCT_R {
+        assert!(n < 3);
         TMCT_R::new(((self.bits >> (n * 8 + 7)) & 1) != 0)
     }
     #[doc = "Bit 7 - Transmit mailbox 0 cancel transmission"]
@@ -488,9 +493,10 @@ cancel transmission"]
         TMNR_R::new(((self.bits >> 24) & 3) as u8)
     }
     #[doc = "Transmit mailbox [0-2]
-empty flag"]
+empty flag\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn tmef(&self, n: u8) -> TMEF_R {
+    pub fn tmef(&self, n: u8) -> TMEF_R {
+        assert!(n < 3);
         TMEF_R::new(((self.bits >> (n + 26)) & 1) != 0)
     }
     #[doc = "Bit 26 - Transmit mailbox 0 empty flag"]
@@ -509,9 +515,10 @@ empty flag"]
         TMEF_R::new(((self.bits >> 28) & 1) != 0)
     }
     #[doc = "Transmit mailbox [0-2]
-lowest priority flag"]
+lowest priority flag\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn tmlpf(&self, n: u8) -> TMLPF_R {
+    pub fn tmlpf(&self, n: u8) -> TMLPF_R {
+        assert!(n < 3);
         TMLPF_R::new(((self.bits >> (n + 29)) & 1) != 0)
     }
     #[doc = "Bit 29 - Transmit mailbox 0 lowest priority flag"]
@@ -568,126 +575,131 @@ impl W {
 transmission complete flag"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn tmtcf<const O: u8>(&mut self) -> TMTCF_W<TSTS_SPEC, O> {
-        TMTCF_W::new(self)
+    pub fn tmtcf(&mut self, n: u8) -> TMTCF_W<TSTS_SPEC> {
+        assert!(n < 3);
+        TMTCF_W::new(self, n * 8)
     }
     #[doc = "Bit 0 - Transmit mailbox 0 transmission complete flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm0tcf(&mut self) -> TMTCF_W<TSTS_SPEC, 0> {
-        TMTCF_W::new(self)
+    pub fn tm0tcf(&mut self) -> TMTCF_W<TSTS_SPEC> {
+        TMTCF_W::new(self, 0)
     }
     #[doc = "Bit 8 - Transmit mailbox 1 transmission complete flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm1tcf(&mut self) -> TMTCF_W<TSTS_SPEC, 8> {
-        TMTCF_W::new(self)
+    pub fn tm1tcf(&mut self) -> TMTCF_W<TSTS_SPEC> {
+        TMTCF_W::new(self, 8)
     }
     #[doc = "Bit 16 - Transmit mailbox 2 transmission complete flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm2tcf(&mut self) -> TMTCF_W<TSTS_SPEC, 16> {
-        TMTCF_W::new(self)
+    pub fn tm2tcf(&mut self) -> TMTCF_W<TSTS_SPEC> {
+        TMTCF_W::new(self, 16)
     }
     #[doc = "Transmit mailbox [0-2]
 transmission success flag"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn tmtsf<const O: u8>(&mut self) -> TMTSF_W<TSTS_SPEC, O> {
-        TMTSF_W::new(self)
+    pub fn tmtsf(&mut self, n: u8) -> TMTSF_W<TSTS_SPEC> {
+        assert!(n < 3);
+        TMTSF_W::new(self, n * 8 + 1)
     }
     #[doc = "Bit 1 - Transmit mailbox 0 transmission success flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm0tsf(&mut self) -> TMTSF_W<TSTS_SPEC, 1> {
-        TMTSF_W::new(self)
+    pub fn tm0tsf(&mut self) -> TMTSF_W<TSTS_SPEC> {
+        TMTSF_W::new(self, 1)
     }
     #[doc = "Bit 9 - Transmit mailbox 1 transmission success flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm1tsf(&mut self) -> TMTSF_W<TSTS_SPEC, 9> {
-        TMTSF_W::new(self)
+    pub fn tm1tsf(&mut self) -> TMTSF_W<TSTS_SPEC> {
+        TMTSF_W::new(self, 9)
     }
     #[doc = "Bit 17 - Transmit mailbox 2 transmission success flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm2tsf(&mut self) -> TMTSF_W<TSTS_SPEC, 17> {
-        TMTSF_W::new(self)
+    pub fn tm2tsf(&mut self) -> TMTSF_W<TSTS_SPEC> {
+        TMTSF_W::new(self, 17)
     }
     #[doc = "Transmit mailbox [0-2]
 arbitration lost flag"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn tmalf<const O: u8>(&mut self) -> TMALF_W<TSTS_SPEC, O> {
-        TMALF_W::new(self)
+    pub fn tmalf(&mut self, n: u8) -> TMALF_W<TSTS_SPEC> {
+        assert!(n < 3);
+        TMALF_W::new(self, n * 8 + 2)
     }
     #[doc = "Bit 2 - Transmit mailbox 0 arbitration lost flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm0alf(&mut self) -> TMALF_W<TSTS_SPEC, 2> {
-        TMALF_W::new(self)
+    pub fn tm0alf(&mut self) -> TMALF_W<TSTS_SPEC> {
+        TMALF_W::new(self, 2)
     }
     #[doc = "Bit 10 - Transmit mailbox 1 arbitration lost flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm1alf(&mut self) -> TMALF_W<TSTS_SPEC, 10> {
-        TMALF_W::new(self)
+    pub fn tm1alf(&mut self) -> TMALF_W<TSTS_SPEC> {
+        TMALF_W::new(self, 10)
     }
     #[doc = "Bit 18 - Transmit mailbox 2 arbitration lost flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm2alf(&mut self) -> TMALF_W<TSTS_SPEC, 18> {
-        TMALF_W::new(self)
+    pub fn tm2alf(&mut self) -> TMALF_W<TSTS_SPEC> {
+        TMALF_W::new(self, 18)
     }
     #[doc = "Transmit mailbox [0-2]
 transmission error flag"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn tmtef<const O: u8>(&mut self) -> TMTEF_W<TSTS_SPEC, O> {
-        TMTEF_W::new(self)
+    pub fn tmtef(&mut self, n: u8) -> TMTEF_W<TSTS_SPEC> {
+        assert!(n < 3);
+        TMTEF_W::new(self, n * 8 + 3)
     }
     #[doc = "Bit 3 - Transmit mailbox 0 transmission error flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm0tef(&mut self) -> TMTEF_W<TSTS_SPEC, 3> {
-        TMTEF_W::new(self)
+    pub fn tm0tef(&mut self) -> TMTEF_W<TSTS_SPEC> {
+        TMTEF_W::new(self, 3)
     }
     #[doc = "Bit 11 - Transmit mailbox 1 transmission error flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm1tef(&mut self) -> TMTEF_W<TSTS_SPEC, 11> {
-        TMTEF_W::new(self)
+    pub fn tm1tef(&mut self) -> TMTEF_W<TSTS_SPEC> {
+        TMTEF_W::new(self, 11)
     }
     #[doc = "Bit 19 - Transmit mailbox 2 transmission error flag"]
     #[inline(always)]
     #[must_use]
-    pub fn tm2tef(&mut self) -> TMTEF_W<TSTS_SPEC, 19> {
-        TMTEF_W::new(self)
+    pub fn tm2tef(&mut self) -> TMTEF_W<TSTS_SPEC> {
+        TMTEF_W::new(self, 19)
     }
     #[doc = "Transmit mailbox [0-2]
 cancel transmission"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn tmct<const O: u8>(&mut self) -> TMCT_W<TSTS_SPEC, O> {
-        TMCT_W::new(self)
+    pub fn tmct(&mut self, n: u8) -> TMCT_W<TSTS_SPEC> {
+        assert!(n < 3);
+        TMCT_W::new(self, n * 8 + 7)
     }
     #[doc = "Bit 7 - Transmit mailbox 0 cancel transmission"]
     #[inline(always)]
     #[must_use]
-    pub fn tm0ct(&mut self) -> TMCT_W<TSTS_SPEC, 7> {
-        TMCT_W::new(self)
+    pub fn tm0ct(&mut self) -> TMCT_W<TSTS_SPEC> {
+        TMCT_W::new(self, 7)
     }
     #[doc = "Bit 15 - Transmit mailbox 1 cancel transmission"]
     #[inline(always)]
     #[must_use]
-    pub fn tm1ct(&mut self) -> TMCT_W<TSTS_SPEC, 15> {
-        TMCT_W::new(self)
+    pub fn tm1ct(&mut self) -> TMCT_W<TSTS_SPEC> {
+        TMCT_W::new(self, 15)
     }
     #[doc = "Bit 23 - Transmit mailbox 2 cancel transmission"]
     #[inline(always)]
     #[must_use]
-    pub fn tm2ct(&mut self) -> TMCT_W<TSTS_SPEC, 23> {
-        TMCT_W::new(self)
+    pub fn tm2ct(&mut self) -> TMCT_W<TSTS_SPEC> {
+        TMCT_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

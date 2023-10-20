@@ -5,39 +5,39 @@ pub type W = crate::W<CFG1_SPEC>;
 #[doc = "Field `MEM_MAP_SEL` reader - Memory address mapping selection bits"]
 pub type MEM_MAP_SEL_R = crate::FieldReader;
 #[doc = "Field `MEM_MAP_SEL` writer - Memory address mapping selection bits"]
-pub type MEM_MAP_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type MEM_MAP_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `PA11_12_RMP` reader - PA11 PA12 Remap"]
 pub type PA11_12_RMP_R = crate::BitReader;
 #[doc = "Field `PA11_12_RMP` writer - PA11 PA12 Remap"]
-pub type PA11_12_RMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PA11_12_RMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IR_POL` reader - IRTMR Polariyt select"]
 pub type IR_POL_R = crate::BitReader;
 #[doc = "Field `IR_POL` writer - IRTMR Polariyt select"]
-pub type IR_POL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IR_POL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IR_SRC_SEL` reader - IRTMR source select"]
 pub type IR_SRC_SEL_R = crate::FieldReader;
 #[doc = "Field `IR_SRC_SEL` writer - IRTMR source select"]
-pub type IR_SRC_SEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type IR_SRC_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `ADC_DMA_RMP` reader - ADC DMA remap"]
 pub type ADC_DMA_RMP_R = crate::BitReader;
 #[doc = "Field `ADC_DMA_RMP` writer - ADC DMA remap"]
-pub type ADC_DMA_RMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADC_DMA_RMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART1_TX_DMA_RMP` reader - USART1 transmit DMA remap"]
 pub type USART1_TX_DMA_RMP_R = crate::BitReader;
 #[doc = "Field `USART1_TX_DMA_RMP` writer - USART1 transmit DMA remap"]
-pub type USART1_TX_DMA_RMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USART1_TX_DMA_RMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `USART1_RX_DMA_RMP` reader - USART1 receive DMA remap"]
 pub type USART1_RX_DMA_RMP_R = crate::BitReader;
 #[doc = "Field `USART1_RX_DMA_RMP` writer - USART1 receive DMA remap"]
-pub type USART1_RX_DMA_RMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type USART1_RX_DMA_RMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR16_DMA_RMP` reader - TMR16 DMA remap"]
 pub type TMR16_DMA_RMP_R = crate::BitReader;
 #[doc = "Field `TMR16_DMA_RMP` writer - TMR16 DMA remap"]
-pub type TMR16_DMA_RMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR16_DMA_RMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR17_DMA_RMP` reader - TMR17 DMA remap"]
 pub type TMR17_DMA_RMP_R = crate::BitReader;
 #[doc = "Field `TMR17_DMA_RMP` writer - TMR17 DMA remap"]
-pub type TMR17_DMA_RMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TMR17_DMA_RMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:1 - Memory address mapping selection bits"]
     #[inline(always)]
@@ -124,56 +124,56 @@ impl W {
     #[doc = "Bits 0:1 - Memory address mapping selection bits"]
     #[inline(always)]
     #[must_use]
-    pub fn mem_map_sel(&mut self) -> MEM_MAP_SEL_W<CFG1_SPEC, 0> {
-        MEM_MAP_SEL_W::new(self)
+    pub fn mem_map_sel(&mut self) -> MEM_MAP_SEL_W<CFG1_SPEC> {
+        MEM_MAP_SEL_W::new(self, 0)
     }
     #[doc = "Bit 4 - PA11 PA12 Remap"]
     #[inline(always)]
     #[must_use]
-    pub fn pa11_12_rmp(&mut self) -> PA11_12_RMP_W<CFG1_SPEC, 4> {
-        PA11_12_RMP_W::new(self)
+    pub fn pa11_12_rmp(&mut self) -> PA11_12_RMP_W<CFG1_SPEC> {
+        PA11_12_RMP_W::new(self, 4)
     }
     #[doc = "Bit 5 - IRTMR Polariyt select"]
     #[inline(always)]
     #[must_use]
-    pub fn ir_pol(&mut self) -> IR_POL_W<CFG1_SPEC, 5> {
-        IR_POL_W::new(self)
+    pub fn ir_pol(&mut self) -> IR_POL_W<CFG1_SPEC> {
+        IR_POL_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - IRTMR source select"]
     #[inline(always)]
     #[must_use]
-    pub fn ir_src_sel(&mut self) -> IR_SRC_SEL_W<CFG1_SPEC, 6> {
-        IR_SRC_SEL_W::new(self)
+    pub fn ir_src_sel(&mut self) -> IR_SRC_SEL_W<CFG1_SPEC> {
+        IR_SRC_SEL_W::new(self, 6)
     }
     #[doc = "Bit 8 - ADC DMA remap"]
     #[inline(always)]
     #[must_use]
-    pub fn adc_dma_rmp(&mut self) -> ADC_DMA_RMP_W<CFG1_SPEC, 8> {
-        ADC_DMA_RMP_W::new(self)
+    pub fn adc_dma_rmp(&mut self) -> ADC_DMA_RMP_W<CFG1_SPEC> {
+        ADC_DMA_RMP_W::new(self, 8)
     }
     #[doc = "Bit 9 - USART1 transmit DMA remap"]
     #[inline(always)]
     #[must_use]
-    pub fn usart1_tx_dma_rmp(&mut self) -> USART1_TX_DMA_RMP_W<CFG1_SPEC, 9> {
-        USART1_TX_DMA_RMP_W::new(self)
+    pub fn usart1_tx_dma_rmp(&mut self) -> USART1_TX_DMA_RMP_W<CFG1_SPEC> {
+        USART1_TX_DMA_RMP_W::new(self, 9)
     }
     #[doc = "Bit 10 - USART1 receive DMA remap"]
     #[inline(always)]
     #[must_use]
-    pub fn usart1_rx_dma_rmp(&mut self) -> USART1_RX_DMA_RMP_W<CFG1_SPEC, 10> {
-        USART1_RX_DMA_RMP_W::new(self)
+    pub fn usart1_rx_dma_rmp(&mut self) -> USART1_RX_DMA_RMP_W<CFG1_SPEC> {
+        USART1_RX_DMA_RMP_W::new(self, 10)
     }
     #[doc = "Bit 11 - TMR16 DMA remap"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr16_dma_rmp(&mut self) -> TMR16_DMA_RMP_W<CFG1_SPEC, 11> {
-        TMR16_DMA_RMP_W::new(self)
+    pub fn tmr16_dma_rmp(&mut self) -> TMR16_DMA_RMP_W<CFG1_SPEC> {
+        TMR16_DMA_RMP_W::new(self, 11)
     }
     #[doc = "Bit 12 - TMR17 DMA remap"]
     #[inline(always)]
     #[must_use]
-    pub fn tmr17_dma_rmp(&mut self) -> TMR17_DMA_RMP_W<CFG1_SPEC, 12> {
-        TMR17_DMA_RMP_W::new(self)
+    pub fn tmr17_dma_rmp(&mut self) -> TMR17_DMA_RMP_W<CFG1_SPEC> {
+        TMR17_DMA_RMP_W::new(self, 12)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

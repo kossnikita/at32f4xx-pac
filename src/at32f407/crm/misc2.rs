@@ -5,7 +5,7 @@ pub type W = crate::W<MISC2_SPEC>;
 #[doc = "Field `CLK_TO_TMR` reader - Clock output internal connect to timer10"]
 pub type CLK_TO_TMR_R = crate::BitReader;
 #[doc = "Field `CLK_TO_TMR` writer - Clock output internal connect to timer10"]
-pub type CLK_TO_TMR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CLK_TO_TMR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 16 - Clock output internal connect to timer10"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 16 - Clock output internal connect to timer10"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_to_tmr(&mut self) -> CLK_TO_TMR_W<MISC2_SPEC, 16> {
-        CLK_TO_TMR_W::new(self)
+    pub fn clk_to_tmr(&mut self) -> CLK_TO_TMR_W<MISC2_SPEC> {
+        CLK_TO_TMR_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

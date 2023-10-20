@@ -39,8 +39,8 @@ impl SEL_R {
     }
 }
 #[doc = "Field `SEL[0-27]` writer - Filter bit width select"]
-pub type SEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, SEL0_A>;
-impl<'a, REG, const O: u8> SEL_W<'a, REG, O>
+pub type SEL_W<'a, REG> = crate::BitWriter<'a, REG, SEL0_A>;
+impl<'a, REG> SEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -56,9 +56,10 @@ where
     }
 }
 impl R {
-    #[doc = "Filter bit width select"]
+    #[doc = "Filter bit width select\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn sel(&self, n: u8) -> SEL_R {
+    pub fn sel(&self, n: u8) -> SEL_R {
+        assert!(n < 28);
         SEL_R::new(((self.bits >> n) & 1) != 0)
     }
     #[doc = "Bit 0 - Filter bit width select"]
@@ -245,176 +246,177 @@ impl W {
     #[doc = "Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn sel<const O: u8>(&mut self) -> SEL_W<FBWCFG_SPEC, O> {
-        SEL_W::new(self)
+    pub fn sel(&mut self, n: u8) -> SEL_W<FBWCFG_SPEC> {
+        assert!(n < 28);
+        SEL_W::new(self, n)
     }
     #[doc = "Bit 0 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel0(&mut self) -> SEL_W<FBWCFG_SPEC, 0> {
-        SEL_W::new(self)
+    pub fn sel0(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel1(&mut self) -> SEL_W<FBWCFG_SPEC, 1> {
-        SEL_W::new(self)
+    pub fn sel1(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel2(&mut self) -> SEL_W<FBWCFG_SPEC, 2> {
-        SEL_W::new(self)
+    pub fn sel2(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel3(&mut self) -> SEL_W<FBWCFG_SPEC, 3> {
-        SEL_W::new(self)
+    pub fn sel3(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel4(&mut self) -> SEL_W<FBWCFG_SPEC, 4> {
-        SEL_W::new(self)
+    pub fn sel4(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 4)
     }
     #[doc = "Bit 5 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel5(&mut self) -> SEL_W<FBWCFG_SPEC, 5> {
-        SEL_W::new(self)
+    pub fn sel5(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 5)
     }
     #[doc = "Bit 6 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel6(&mut self) -> SEL_W<FBWCFG_SPEC, 6> {
-        SEL_W::new(self)
+    pub fn sel6(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel7(&mut self) -> SEL_W<FBWCFG_SPEC, 7> {
-        SEL_W::new(self)
+    pub fn sel7(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel8(&mut self) -> SEL_W<FBWCFG_SPEC, 8> {
-        SEL_W::new(self)
+    pub fn sel8(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel9(&mut self) -> SEL_W<FBWCFG_SPEC, 9> {
-        SEL_W::new(self)
+    pub fn sel9(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel10(&mut self) -> SEL_W<FBWCFG_SPEC, 10> {
-        SEL_W::new(self)
+    pub fn sel10(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel11(&mut self) -> SEL_W<FBWCFG_SPEC, 11> {
-        SEL_W::new(self)
+    pub fn sel11(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 11)
     }
     #[doc = "Bit 12 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel12(&mut self) -> SEL_W<FBWCFG_SPEC, 12> {
-        SEL_W::new(self)
+    pub fn sel12(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 12)
     }
     #[doc = "Bit 13 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel13(&mut self) -> SEL_W<FBWCFG_SPEC, 13> {
-        SEL_W::new(self)
+    pub fn sel13(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 13)
     }
     #[doc = "Bit 14 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel14(&mut self) -> SEL_W<FBWCFG_SPEC, 14> {
-        SEL_W::new(self)
+    pub fn sel14(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 14)
     }
     #[doc = "Bit 15 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel15(&mut self) -> SEL_W<FBWCFG_SPEC, 15> {
-        SEL_W::new(self)
+    pub fn sel15(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 15)
     }
     #[doc = "Bit 16 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel16(&mut self) -> SEL_W<FBWCFG_SPEC, 16> {
-        SEL_W::new(self)
+    pub fn sel16(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 16)
     }
     #[doc = "Bit 17 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel17(&mut self) -> SEL_W<FBWCFG_SPEC, 17> {
-        SEL_W::new(self)
+    pub fn sel17(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 17)
     }
     #[doc = "Bit 18 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel18(&mut self) -> SEL_W<FBWCFG_SPEC, 18> {
-        SEL_W::new(self)
+    pub fn sel18(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 18)
     }
     #[doc = "Bit 19 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel19(&mut self) -> SEL_W<FBWCFG_SPEC, 19> {
-        SEL_W::new(self)
+    pub fn sel19(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 19)
     }
     #[doc = "Bit 20 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel20(&mut self) -> SEL_W<FBWCFG_SPEC, 20> {
-        SEL_W::new(self)
+    pub fn sel20(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 20)
     }
     #[doc = "Bit 21 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel21(&mut self) -> SEL_W<FBWCFG_SPEC, 21> {
-        SEL_W::new(self)
+    pub fn sel21(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 21)
     }
     #[doc = "Bit 22 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel22(&mut self) -> SEL_W<FBWCFG_SPEC, 22> {
-        SEL_W::new(self)
+    pub fn sel22(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 22)
     }
     #[doc = "Bit 23 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel23(&mut self) -> SEL_W<FBWCFG_SPEC, 23> {
-        SEL_W::new(self)
+    pub fn sel23(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 23)
     }
     #[doc = "Bit 24 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel24(&mut self) -> SEL_W<FBWCFG_SPEC, 24> {
-        SEL_W::new(self)
+    pub fn sel24(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel25(&mut self) -> SEL_W<FBWCFG_SPEC, 25> {
-        SEL_W::new(self)
+    pub fn sel25(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 25)
     }
     #[doc = "Bit 26 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel26(&mut self) -> SEL_W<FBWCFG_SPEC, 26> {
-        SEL_W::new(self)
+    pub fn sel26(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 26)
     }
     #[doc = "Bit 27 - Filter bit width select"]
     #[inline(always)]
     #[must_use]
-    pub fn sel27(&mut self) -> SEL_W<FBWCFG_SPEC, 27> {
-        SEL_W::new(self)
+    pub fn sel27(&mut self) -> SEL_W<FBWCFG_SPEC> {
+        SEL_W::new(self, 27)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

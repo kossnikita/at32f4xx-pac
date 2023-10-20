@@ -5,11 +5,11 @@ pub type W = crate::W<HPTXFSIZ_SPEC>;
 #[doc = "Field `PTXFSTADDR` reader - Host periodic TxFIFO start address"]
 pub type PTXFSTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXFSTADDR` writer - Host periodic TxFIFO start address"]
-pub type PTXFSTADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PTXFSTADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `PTXFSIZE` reader - Host periodic TxFIFO depth"]
 pub type PTXFSIZE_R = crate::FieldReader<u16>;
 #[doc = "Field `PTXFSIZE` writer - Host periodic TxFIFO depth"]
-pub type PTXFSIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PTXFSIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Host periodic TxFIFO start address"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:15 - Host periodic TxFIFO start address"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfstaddr(&mut self) -> PTXFSTADDR_W<HPTXFSIZ_SPEC, 0> {
-        PTXFSTADDR_W::new(self)
+    pub fn ptxfstaddr(&mut self) -> PTXFSTADDR_W<HPTXFSIZ_SPEC> {
+        PTXFSTADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Host periodic TxFIFO depth"]
     #[inline(always)]
     #[must_use]
-    pub fn ptxfsize(&mut self) -> PTXFSIZE_W<HPTXFSIZ_SPEC, 16> {
-        PTXFSIZE_W::new(self)
+    pub fn ptxfsize(&mut self) -> PTXFSIZE_W<HPTXFSIZ_SPEC> {
+        PTXFSIZE_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

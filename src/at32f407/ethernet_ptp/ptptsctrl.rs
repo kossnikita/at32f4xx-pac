@@ -5,67 +5,67 @@ pub type W = crate::W<PTPTSCTRL_SPEC>;
 #[doc = "Field `TE` reader - Timestamp enable"]
 pub type TE_R = crate::BitReader;
 #[doc = "Field `TE` writer - Timestamp enable"]
-pub type TE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TFCU` reader - Timestamp fine or coarse update"]
 pub type TFCU_R = crate::BitReader;
 #[doc = "Field `TFCU` writer - Timestamp fine or coarse update"]
-pub type TFCU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TFCU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TI` reader - Timestamp initialize"]
 pub type TI_R = crate::BitReader;
 #[doc = "Field `TI` writer - Timestamp initialize"]
-pub type TI_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TU` reader - Timestamp update"]
 pub type TU_R = crate::BitReader;
 #[doc = "Field `TU` writer - Timestamp update"]
-pub type TU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TITE` reader - Timestamp interrupt trigger enable"]
 pub type TITE_R = crate::BitReader;
 #[doc = "Field `TITE` writer - Timestamp interrupt trigger enable"]
-pub type TITE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TITE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ARU` reader - Addend register update"]
 pub type ARU_R = crate::BitReader;
 #[doc = "Field `ARU` writer - Addend register update"]
-pub type ARU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ARU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETAF` reader - Enable timestamp for all frames"]
 pub type ETAF_R = crate::BitReader;
 #[doc = "Field `ETAF` writer - Enable timestamp for all frames"]
-pub type ETAF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETAF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TDBRC` reader - Timestamp digital or binary rollover control"]
 pub type TDBRC_R = crate::BitReader;
 #[doc = "Field `TDBRC` writer - Timestamp digital or binary rollover control"]
-pub type TDBRC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TDBRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPPV2F` reader - Enable PTP packet processing for version2 format"]
 pub type EPPV2F_R = crate::BitReader;
 #[doc = "Field `EPPV2F` writer - Enable PTP packet processing for version2 format"]
-pub type EPPV2F_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPPV2F_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPPEF` reader - Enable processing of PTP over EMAC frames"]
 pub type EPPEF_R = crate::BitReader;
 #[doc = "Field `EPPEF` writer - Enable processing of PTP over EMAC frames"]
-pub type EPPEF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPPEF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPPFSIP6U` reader - Enable processing of PTP frames sent over IPv6-UDP"]
 pub type EPPFSIP6U_R = crate::BitReader;
 #[doc = "Field `EPPFSIP6U` writer - Enable processing of PTP frames sent over IPv6-UDP"]
-pub type EPPFSIP6U_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPPFSIP6U_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPPFSIP4U` reader - Enable processing of PTP frames sent over IPv4-UDP"]
 pub type EPPFSIP4U_R = crate::BitReader;
 #[doc = "Field `EPPFSIP4U` writer - Enable processing of PTP frames sent over IPv4-UDP"]
-pub type EPPFSIP4U_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPPFSIP4U_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETSFEM` reader - Enable timestamp snapshot for event message"]
 pub type ETSFEM_R = crate::BitReader;
 #[doc = "Field `ETSFEM` writer - Enable timestamp snapshot for event message"]
-pub type ETSFEM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETSFEM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ESFMRTM` reader - Enable snapshot for message relevant to master"]
 pub type ESFMRTM_R = crate::BitReader;
 #[doc = "Field `ESFMRTM` writer - Enable snapshot for message relevant to master"]
-pub type ESFMRTM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ESFMRTM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPPFTS` reader - Select PTP packet for taking snapshot"]
 pub type SPPFTS_R = crate::FieldReader;
 #[doc = "Field `SPPFTS` writer - Select PTP packet for taking snapshot"]
-pub type SPPFTS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type SPPFTS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `EMAFPFF` reader - Enable MAC address for PTP frame filtering"]
 pub type EMAFPFF_R = crate::BitReader;
 #[doc = "Field `EMAFPFF` writer - Enable MAC address for PTP frame filtering"]
-pub type EMAFPFF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EMAFPFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Timestamp enable"]
     #[inline(always)]
@@ -179,98 +179,98 @@ impl W {
     #[doc = "Bit 0 - Timestamp enable"]
     #[inline(always)]
     #[must_use]
-    pub fn te(&mut self) -> TE_W<PTPTSCTRL_SPEC, 0> {
-        TE_W::new(self)
+    pub fn te(&mut self) -> TE_W<PTPTSCTRL_SPEC> {
+        TE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Timestamp fine or coarse update"]
     #[inline(always)]
     #[must_use]
-    pub fn tfcu(&mut self) -> TFCU_W<PTPTSCTRL_SPEC, 1> {
-        TFCU_W::new(self)
+    pub fn tfcu(&mut self) -> TFCU_W<PTPTSCTRL_SPEC> {
+        TFCU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Timestamp initialize"]
     #[inline(always)]
     #[must_use]
-    pub fn ti(&mut self) -> TI_W<PTPTSCTRL_SPEC, 2> {
-        TI_W::new(self)
+    pub fn ti(&mut self) -> TI_W<PTPTSCTRL_SPEC> {
+        TI_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timestamp update"]
     #[inline(always)]
     #[must_use]
-    pub fn tu(&mut self) -> TU_W<PTPTSCTRL_SPEC, 3> {
-        TU_W::new(self)
+    pub fn tu(&mut self) -> TU_W<PTPTSCTRL_SPEC> {
+        TU_W::new(self, 3)
     }
     #[doc = "Bit 4 - Timestamp interrupt trigger enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tite(&mut self) -> TITE_W<PTPTSCTRL_SPEC, 4> {
-        TITE_W::new(self)
+    pub fn tite(&mut self) -> TITE_W<PTPTSCTRL_SPEC> {
+        TITE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Addend register update"]
     #[inline(always)]
     #[must_use]
-    pub fn aru(&mut self) -> ARU_W<PTPTSCTRL_SPEC, 5> {
-        ARU_W::new(self)
+    pub fn aru(&mut self) -> ARU_W<PTPTSCTRL_SPEC> {
+        ARU_W::new(self, 5)
     }
     #[doc = "Bit 8 - Enable timestamp for all frames"]
     #[inline(always)]
     #[must_use]
-    pub fn etaf(&mut self) -> ETAF_W<PTPTSCTRL_SPEC, 8> {
-        ETAF_W::new(self)
+    pub fn etaf(&mut self) -> ETAF_W<PTPTSCTRL_SPEC> {
+        ETAF_W::new(self, 8)
     }
     #[doc = "Bit 9 - Timestamp digital or binary rollover control"]
     #[inline(always)]
     #[must_use]
-    pub fn tdbrc(&mut self) -> TDBRC_W<PTPTSCTRL_SPEC, 9> {
-        TDBRC_W::new(self)
+    pub fn tdbrc(&mut self) -> TDBRC_W<PTPTSCTRL_SPEC> {
+        TDBRC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Enable PTP packet processing for version2 format"]
     #[inline(always)]
     #[must_use]
-    pub fn eppv2f(&mut self) -> EPPV2F_W<PTPTSCTRL_SPEC, 10> {
-        EPPV2F_W::new(self)
+    pub fn eppv2f(&mut self) -> EPPV2F_W<PTPTSCTRL_SPEC> {
+        EPPV2F_W::new(self, 10)
     }
     #[doc = "Bit 11 - Enable processing of PTP over EMAC frames"]
     #[inline(always)]
     #[must_use]
-    pub fn eppef(&mut self) -> EPPEF_W<PTPTSCTRL_SPEC, 11> {
-        EPPEF_W::new(self)
+    pub fn eppef(&mut self) -> EPPEF_W<PTPTSCTRL_SPEC> {
+        EPPEF_W::new(self, 11)
     }
     #[doc = "Bit 12 - Enable processing of PTP frames sent over IPv6-UDP"]
     #[inline(always)]
     #[must_use]
-    pub fn eppfsip6u(&mut self) -> EPPFSIP6U_W<PTPTSCTRL_SPEC, 12> {
-        EPPFSIP6U_W::new(self)
+    pub fn eppfsip6u(&mut self) -> EPPFSIP6U_W<PTPTSCTRL_SPEC> {
+        EPPFSIP6U_W::new(self, 12)
     }
     #[doc = "Bit 13 - Enable processing of PTP frames sent over IPv4-UDP"]
     #[inline(always)]
     #[must_use]
-    pub fn eppfsip4u(&mut self) -> EPPFSIP4U_W<PTPTSCTRL_SPEC, 13> {
-        EPPFSIP4U_W::new(self)
+    pub fn eppfsip4u(&mut self) -> EPPFSIP4U_W<PTPTSCTRL_SPEC> {
+        EPPFSIP4U_W::new(self, 13)
     }
     #[doc = "Bit 14 - Enable timestamp snapshot for event message"]
     #[inline(always)]
     #[must_use]
-    pub fn etsfem(&mut self) -> ETSFEM_W<PTPTSCTRL_SPEC, 14> {
-        ETSFEM_W::new(self)
+    pub fn etsfem(&mut self) -> ETSFEM_W<PTPTSCTRL_SPEC> {
+        ETSFEM_W::new(self, 14)
     }
     #[doc = "Bit 15 - Enable snapshot for message relevant to master"]
     #[inline(always)]
     #[must_use]
-    pub fn esfmrtm(&mut self) -> ESFMRTM_W<PTPTSCTRL_SPEC, 15> {
-        ESFMRTM_W::new(self)
+    pub fn esfmrtm(&mut self) -> ESFMRTM_W<PTPTSCTRL_SPEC> {
+        ESFMRTM_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - Select PTP packet for taking snapshot"]
     #[inline(always)]
     #[must_use]
-    pub fn sppfts(&mut self) -> SPPFTS_W<PTPTSCTRL_SPEC, 16> {
-        SPPFTS_W::new(self)
+    pub fn sppfts(&mut self) -> SPPFTS_W<PTPTSCTRL_SPEC> {
+        SPPFTS_W::new(self, 16)
     }
     #[doc = "Bit 18 - Enable MAC address for PTP frame filtering"]
     #[inline(always)]
     #[must_use]
-    pub fn emafpff(&mut self) -> EMAFPFF_W<PTPTSCTRL_SPEC, 18> {
-        EMAFPFF_W::new(self)
+    pub fn emafpff(&mut self) -> EMAFPFF_W<PTPTSCTRL_SPEC> {
+        EMAFPFF_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

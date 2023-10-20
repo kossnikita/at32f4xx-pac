@@ -5,7 +5,7 @@ pub type W = crate::W<BTH_SPEC>;
 #[doc = "Field `MIBTHD` reader - Monochrome image binarization threshold"]
 pub type MIBTHD_R = crate::FieldReader;
 #[doc = "Field `MIBTHD` writer - Monochrome image binarization threshold"]
-pub type MIBTHD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type MIBTHD_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - Monochrome image binarization threshold"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:7 - Monochrome image binarization threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn mibthd(&mut self) -> MIBTHD_W<BTH_SPEC, 0> {
-        MIBTHD_W::new(self)
+    pub fn mibthd(&mut self) -> MIBTHD_W<BTH_SPEC> {
+        MIBTHD_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

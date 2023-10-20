@@ -5,31 +5,31 @@ pub type W = crate::W<MACFCTRL_SPEC>;
 #[doc = "Field `FCB_BPA` reader - Flow control busy/back pressure activate"]
 pub type FCB_BPA_R = crate::BitReader;
 #[doc = "Field `FCB_BPA` writer - Flow control busy/back pressure activate"]
-pub type FCB_BPA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type FCB_BPA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETF` reader - Enable transmit flow control"]
 pub type ETF_R = crate::BitReader;
 #[doc = "Field `ETF` writer - Enable transmit flow control"]
-pub type ETF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ETF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERF` reader - Enable receive flow control"]
 pub type ERF_R = crate::BitReader;
 #[doc = "Field `ERF` writer - Enable receive flow control"]
-pub type ERF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DUP` reader - Detect unicast pause frame"]
 pub type DUP_R = crate::BitReader;
 #[doc = "Field `DUP` writer - Detect unicast pause frame"]
-pub type DUP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLT` reader - Pause low threshold"]
 pub type PLT_R = crate::FieldReader;
 #[doc = "Field `PLT` writer - Pause low threshold"]
-pub type PLT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PLT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DZQP` reader - Disable zero-quanta pause"]
 pub type DZQP_R = crate::BitReader;
 #[doc = "Field `DZQP` writer - Disable zero-quanta pause"]
-pub type DZQP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DZQP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PT` reader - Pass time"]
 pub type PT_R = crate::FieldReader<u16>;
 #[doc = "Field `PT` writer - Pass time"]
-pub type PT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type PT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bit 0 - Flow control busy/back pressure activate"]
     #[inline(always)]
@@ -89,44 +89,44 @@ impl W {
     #[doc = "Bit 0 - Flow control busy/back pressure activate"]
     #[inline(always)]
     #[must_use]
-    pub fn fcb_bpa(&mut self) -> FCB_BPA_W<MACFCTRL_SPEC, 0> {
-        FCB_BPA_W::new(self)
+    pub fn fcb_bpa(&mut self) -> FCB_BPA_W<MACFCTRL_SPEC> {
+        FCB_BPA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable transmit flow control"]
     #[inline(always)]
     #[must_use]
-    pub fn etf(&mut self) -> ETF_W<MACFCTRL_SPEC, 1> {
-        ETF_W::new(self)
+    pub fn etf(&mut self) -> ETF_W<MACFCTRL_SPEC> {
+        ETF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable receive flow control"]
     #[inline(always)]
     #[must_use]
-    pub fn erf(&mut self) -> ERF_W<MACFCTRL_SPEC, 2> {
-        ERF_W::new(self)
+    pub fn erf(&mut self) -> ERF_W<MACFCTRL_SPEC> {
+        ERF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Detect unicast pause frame"]
     #[inline(always)]
     #[must_use]
-    pub fn dup(&mut self) -> DUP_W<MACFCTRL_SPEC, 3> {
-        DUP_W::new(self)
+    pub fn dup(&mut self) -> DUP_W<MACFCTRL_SPEC> {
+        DUP_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - Pause low threshold"]
     #[inline(always)]
     #[must_use]
-    pub fn plt(&mut self) -> PLT_W<MACFCTRL_SPEC, 4> {
-        PLT_W::new(self)
+    pub fn plt(&mut self) -> PLT_W<MACFCTRL_SPEC> {
+        PLT_W::new(self, 4)
     }
     #[doc = "Bit 7 - Disable zero-quanta pause"]
     #[inline(always)]
     #[must_use]
-    pub fn dzqp(&mut self) -> DZQP_W<MACFCTRL_SPEC, 7> {
-        DZQP_W::new(self)
+    pub fn dzqp(&mut self) -> DZQP_W<MACFCTRL_SPEC> {
+        DZQP_W::new(self, 7)
     }
     #[doc = "Bits 16:31 - Pass time"]
     #[inline(always)]
     #[must_use]
-    pub fn pt(&mut self) -> PT_W<MACFCTRL_SPEC, 16> {
-        PT_W::new(self)
+    pub fn pt(&mut self) -> PT_W<MACFCTRL_SPEC> {
+        PT_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

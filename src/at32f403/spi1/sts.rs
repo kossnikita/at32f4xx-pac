@@ -13,7 +13,7 @@ pub type TUERR_R = crate::BitReader;
 #[doc = "Field `CCERR` reader - CRC calculation error"]
 pub type CCERR_R = crate::BitReader;
 #[doc = "Field `CCERR` writer - CRC calculation error"]
-pub type CCERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CCERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MMERR` reader - Master mode error"]
 pub type MMERR_R = crate::BitReader;
 #[doc = "Field `ROERR` reader - Receiver overflow error"]
@@ -85,8 +85,8 @@ impl W {
     #[doc = "Bit 4 - CRC calculation error"]
     #[inline(always)]
     #[must_use]
-    pub fn ccerr(&mut self) -> CCERR_W<STS_SPEC, 4> {
-        CCERR_W::new(self)
+    pub fn ccerr(&mut self) -> CCERR_W<STS_SPEC> {
+        CCERR_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,11 +5,11 @@ pub type W = crate::W<ALA_SPEC>;
 #[doc = "Field `SU` reader - Second units"]
 pub type SU_R = crate::FieldReader;
 #[doc = "Field `SU` writer - Second units"]
-pub type SU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type SU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `ST` reader - Second tens"]
 pub type ST_R = crate::FieldReader;
 #[doc = "Field `ST` writer - Second tens"]
-pub type ST_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type ST_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 #[doc = "Field `MASK1` reader - Seconds mask"]
 pub type MASK1_R = crate::BitReader<MASK1_A>;
 #[doc = "Seconds mask\n\nValue on reset: 0"]
@@ -47,8 +47,8 @@ impl MASK1_R {
     }
 }
 #[doc = "Field `MASK1` writer - Seconds mask"]
-pub type MASK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MASK1_A>;
-impl<'a, REG, const O: u8> MASK1_W<'a, REG, O>
+pub type MASK1_W<'a, REG> = crate::BitWriter<'a, REG, MASK1_A>;
+impl<'a, REG> MASK1_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -66,11 +66,11 @@ where
 #[doc = "Field `MU` reader - Minute units"]
 pub type MU_R = crate::FieldReader;
 #[doc = "Field `MU` writer - Minute units"]
-pub type MU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type MU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `MT` reader - Minute tens"]
 pub type MT_R = crate::FieldReader;
 #[doc = "Field `MT` writer - Minute tens"]
-pub type MT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 3, O>;
+pub type MT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 #[doc = "Field `MASK2` reader - Minutes mask"]
 pub type MASK2_R = crate::BitReader<MASK2_A>;
 #[doc = "Minutes mask\n\nValue on reset: 0"]
@@ -108,8 +108,8 @@ impl MASK2_R {
     }
 }
 #[doc = "Field `MASK2` writer - Minutes mask"]
-pub type MASK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MASK2_A>;
-impl<'a, REG, const O: u8> MASK2_W<'a, REG, O>
+pub type MASK2_W<'a, REG> = crate::BitWriter<'a, REG, MASK2_A>;
+impl<'a, REG> MASK2_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -127,11 +127,11 @@ where
 #[doc = "Field `HU` reader - Hour units"]
 pub type HU_R = crate::FieldReader;
 #[doc = "Field `HU` writer - Hour units"]
-pub type HU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type HU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `HT` reader - Hour tens"]
 pub type HT_R = crate::FieldReader;
 #[doc = "Field `HT` writer - Hour tens"]
-pub type HT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
+pub type HT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
 #[doc = "Field `AMPM` reader - AM/PM"]
 pub type AMPM_R = crate::BitReader<AMPM_A>;
 #[doc = "AM/PM\n\nValue on reset: 0"]
@@ -169,8 +169,8 @@ impl AMPM_R {
     }
 }
 #[doc = "Field `AMPM` writer - AM/PM"]
-pub type AMPM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, AMPM_A>;
-impl<'a, REG, const O: u8> AMPM_W<'a, REG, O>
+pub type AMPM_W<'a, REG> = crate::BitWriter<'a, REG, AMPM_A>;
+impl<'a, REG> AMPM_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -222,8 +222,8 @@ impl MASK3_R {
     }
 }
 #[doc = "Field `MASK3` writer - Hours mask"]
-pub type MASK3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MASK3_A>;
-impl<'a, REG, const O: u8> MASK3_W<'a, REG, O>
+pub type MASK3_W<'a, REG> = crate::BitWriter<'a, REG, MASK3_A>;
+impl<'a, REG> MASK3_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -241,11 +241,11 @@ where
 #[doc = "Field `DU` reader - Date units"]
 pub type DU_R = crate::FieldReader;
 #[doc = "Field `DU` writer - Date units"]
-pub type DU_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type DU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 #[doc = "Field `DT` reader - Date tens"]
 pub type DT_R = crate::FieldReader;
 #[doc = "Field `DT` writer - Date tens"]
-pub type DT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
+pub type DT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
 #[doc = "Field `WKSEL` reader - Date/week mode select"]
 pub type WKSEL_R = crate::BitReader<WKSEL_A>;
 #[doc = "Date/week mode select\n\nValue on reset: 0"]
@@ -283,8 +283,8 @@ impl WKSEL_R {
     }
 }
 #[doc = "Field `WKSEL` writer - Date/week mode select"]
-pub type WKSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, WKSEL_A>;
-impl<'a, REG, const O: u8> WKSEL_W<'a, REG, O>
+pub type WKSEL_W<'a, REG> = crate::BitWriter<'a, REG, WKSEL_A>;
+impl<'a, REG> WKSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -336,8 +336,8 @@ impl MASK4_R {
     }
 }
 #[doc = "Field `MASK4` writer - Date/week mask"]
-pub type MASK4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MASK4_A>;
-impl<'a, REG, const O: u8> MASK4_W<'a, REG, O>
+pub type MASK4_W<'a, REG> = crate::BitWriter<'a, REG, MASK4_A>;
+impl<'a, REG> MASK4_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -453,86 +453,86 @@ impl W {
     #[doc = "Bits 0:3 - Second units"]
     #[inline(always)]
     #[must_use]
-    pub fn su(&mut self) -> SU_W<ALA_SPEC, 0> {
-        SU_W::new(self)
+    pub fn su(&mut self) -> SU_W<ALA_SPEC> {
+        SU_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Second tens"]
     #[inline(always)]
     #[must_use]
-    pub fn st(&mut self) -> ST_W<ALA_SPEC, 4> {
-        ST_W::new(self)
+    pub fn st(&mut self) -> ST_W<ALA_SPEC> {
+        ST_W::new(self, 4)
     }
     #[doc = "Bit 7 - Seconds mask"]
     #[inline(always)]
     #[must_use]
-    pub fn mask1(&mut self) -> MASK1_W<ALA_SPEC, 7> {
-        MASK1_W::new(self)
+    pub fn mask1(&mut self) -> MASK1_W<ALA_SPEC> {
+        MASK1_W::new(self, 7)
     }
     #[doc = "Bits 8:11 - Minute units"]
     #[inline(always)]
     #[must_use]
-    pub fn mu(&mut self) -> MU_W<ALA_SPEC, 8> {
-        MU_W::new(self)
+    pub fn mu(&mut self) -> MU_W<ALA_SPEC> {
+        MU_W::new(self, 8)
     }
     #[doc = "Bits 12:14 - Minute tens"]
     #[inline(always)]
     #[must_use]
-    pub fn mt(&mut self) -> MT_W<ALA_SPEC, 12> {
-        MT_W::new(self)
+    pub fn mt(&mut self) -> MT_W<ALA_SPEC> {
+        MT_W::new(self, 12)
     }
     #[doc = "Bit 15 - Minutes mask"]
     #[inline(always)]
     #[must_use]
-    pub fn mask2(&mut self) -> MASK2_W<ALA_SPEC, 15> {
-        MASK2_W::new(self)
+    pub fn mask2(&mut self) -> MASK2_W<ALA_SPEC> {
+        MASK2_W::new(self, 15)
     }
     #[doc = "Bits 16:19 - Hour units"]
     #[inline(always)]
     #[must_use]
-    pub fn hu(&mut self) -> HU_W<ALA_SPEC, 16> {
-        HU_W::new(self)
+    pub fn hu(&mut self) -> HU_W<ALA_SPEC> {
+        HU_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Hour tens"]
     #[inline(always)]
     #[must_use]
-    pub fn ht(&mut self) -> HT_W<ALA_SPEC, 20> {
-        HT_W::new(self)
+    pub fn ht(&mut self) -> HT_W<ALA_SPEC> {
+        HT_W::new(self, 20)
     }
     #[doc = "Bit 22 - AM/PM"]
     #[inline(always)]
     #[must_use]
-    pub fn ampm(&mut self) -> AMPM_W<ALA_SPEC, 22> {
-        AMPM_W::new(self)
+    pub fn ampm(&mut self) -> AMPM_W<ALA_SPEC> {
+        AMPM_W::new(self, 22)
     }
     #[doc = "Bit 23 - Hours mask"]
     #[inline(always)]
     #[must_use]
-    pub fn mask3(&mut self) -> MASK3_W<ALA_SPEC, 23> {
-        MASK3_W::new(self)
+    pub fn mask3(&mut self) -> MASK3_W<ALA_SPEC> {
+        MASK3_W::new(self, 23)
     }
     #[doc = "Bits 24:27 - Date units"]
     #[inline(always)]
     #[must_use]
-    pub fn du(&mut self) -> DU_W<ALA_SPEC, 24> {
-        DU_W::new(self)
+    pub fn du(&mut self) -> DU_W<ALA_SPEC> {
+        DU_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - Date tens"]
     #[inline(always)]
     #[must_use]
-    pub fn dt(&mut self) -> DT_W<ALA_SPEC, 28> {
-        DT_W::new(self)
+    pub fn dt(&mut self) -> DT_W<ALA_SPEC> {
+        DT_W::new(self, 28)
     }
     #[doc = "Bit 30 - Date/week mode select"]
     #[inline(always)]
     #[must_use]
-    pub fn wksel(&mut self) -> WKSEL_W<ALA_SPEC, 30> {
-        WKSEL_W::new(self)
+    pub fn wksel(&mut self) -> WKSEL_W<ALA_SPEC> {
+        WKSEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - Date/week mask"]
     #[inline(always)]
     #[must_use]
-    pub fn mask4(&mut self) -> MASK4_W<ALA_SPEC, 31> {
-        MASK4_W::new(self)
+    pub fn mask4(&mut self) -> MASK4_W<ALA_SPEC> {
+        MASK4_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

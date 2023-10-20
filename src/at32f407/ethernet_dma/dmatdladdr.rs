@@ -5,7 +5,7 @@ pub type W = crate::W<DMATDLADDR_SPEC>;
 #[doc = "Field `STL` reader - Start of transmit list"]
 pub type STL_R = crate::FieldReader<u32>;
 #[doc = "Field `STL` writer - Start of transmit list"]
-pub type STL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type STL_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Start of transmit list"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Start of transmit list"]
     #[inline(always)]
     #[must_use]
-    pub fn stl(&mut self) -> STL_W<DMATDLADDR_SPEC, 0> {
-        STL_W::new(self)
+    pub fn stl(&mut self) -> STL_W<DMATDLADDR_SPEC> {
+        STL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

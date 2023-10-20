@@ -5,27 +5,27 @@ pub type W = crate::W<CMD_SPEC>;
 #[doc = "Field `CMDIDX` reader - CMDIDX"]
 pub type CMDIDX_R = crate::FieldReader;
 #[doc = "Field `CMDIDX` writer - CMDIDX"]
-pub type CMDIDX_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type CMDIDX_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `RSPWT` reader - WAITRESP"]
 pub type RSPWT_R = crate::FieldReader;
 #[doc = "Field `RSPWT` writer - WAITRESP"]
-pub type RSPWT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RSPWT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `INTWT` reader - WAITINT"]
 pub type INTWT_R = crate::BitReader;
 #[doc = "Field `INTWT` writer - WAITINT"]
-pub type INTWT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTWT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PNDWT` reader - WAITPEND"]
 pub type PNDWT_R = crate::BitReader;
 #[doc = "Field `PNDWT` writer - WAITPEND"]
-pub type PNDWT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PNDWT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDMEN` reader - CPSMEN"]
 pub type CMDMEN_R = crate::BitReader;
 #[doc = "Field `CMDMEN` writer - CPSMEN"]
-pub type CMDMEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDMEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIOSUSP` reader - SDIOSuspend"]
 pub type SDIOSUSP_R = crate::BitReader;
 #[doc = "Field `SDIOSUSP` writer - SDIOSuspend"]
-pub type SDIOSUSP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIOSUSP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:5 - CMDIDX"]
     #[inline(always)]
@@ -79,38 +79,38 @@ impl W {
     #[doc = "Bits 0:5 - CMDIDX"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdidx(&mut self) -> CMDIDX_W<CMD_SPEC, 0> {
-        CMDIDX_W::new(self)
+    pub fn cmdidx(&mut self) -> CMDIDX_W<CMD_SPEC> {
+        CMDIDX_W::new(self, 0)
     }
     #[doc = "Bits 6:7 - WAITRESP"]
     #[inline(always)]
     #[must_use]
-    pub fn rspwt(&mut self) -> RSPWT_W<CMD_SPEC, 6> {
-        RSPWT_W::new(self)
+    pub fn rspwt(&mut self) -> RSPWT_W<CMD_SPEC> {
+        RSPWT_W::new(self, 6)
     }
     #[doc = "Bit 8 - WAITINT"]
     #[inline(always)]
     #[must_use]
-    pub fn intwt(&mut self) -> INTWT_W<CMD_SPEC, 8> {
-        INTWT_W::new(self)
+    pub fn intwt(&mut self) -> INTWT_W<CMD_SPEC> {
+        INTWT_W::new(self, 8)
     }
     #[doc = "Bit 9 - WAITPEND"]
     #[inline(always)]
     #[must_use]
-    pub fn pndwt(&mut self) -> PNDWT_W<CMD_SPEC, 9> {
-        PNDWT_W::new(self)
+    pub fn pndwt(&mut self) -> PNDWT_W<CMD_SPEC> {
+        PNDWT_W::new(self, 9)
     }
     #[doc = "Bit 10 - CPSMEN"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdmen(&mut self) -> CMDMEN_W<CMD_SPEC, 10> {
-        CMDMEN_W::new(self)
+    pub fn cmdmen(&mut self) -> CMDMEN_W<CMD_SPEC> {
+        CMDMEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - SDIOSuspend"]
     #[inline(always)]
     #[must_use]
-    pub fn sdiosusp(&mut self) -> SDIOSUSP_W<CMD_SPEC, 11> {
-        SDIOSUSP_W::new(self)
+    pub fn sdiosusp(&mut self) -> SDIOSUSP_W<CMD_SPEC> {
+        SDIOSUSP_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

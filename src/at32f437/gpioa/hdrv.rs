@@ -5,67 +5,67 @@ pub type W = crate::W<HDRV_SPEC>;
 #[doc = "Field `HDRV0` reader - Port x driver bit y"]
 pub type HDRV0_R = crate::BitReader;
 #[doc = "Field `HDRV0` writer - Port x driver bit y"]
-pub type HDRV0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV1` reader - Port x driver bit y"]
 pub type HDRV1_R = crate::BitReader;
 #[doc = "Field `HDRV1` writer - Port x driver bit y"]
-pub type HDRV1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV2` reader - Port x driver bit y"]
 pub type HDRV2_R = crate::BitReader;
 #[doc = "Field `HDRV2` writer - Port x driver bit y"]
-pub type HDRV2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV3` reader - Port x driver bit y"]
 pub type HDRV3_R = crate::BitReader;
 #[doc = "Field `HDRV3` writer - Port x driver bit y"]
-pub type HDRV3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV4` reader - Port x driver bit y"]
 pub type HDRV4_R = crate::BitReader;
 #[doc = "Field `HDRV4` writer - Port x driver bit y"]
-pub type HDRV4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV5` reader - Port x driver bit y"]
 pub type HDRV5_R = crate::BitReader;
 #[doc = "Field `HDRV5` writer - Port x driver bit y"]
-pub type HDRV5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV6` reader - Port x driver bit y"]
 pub type HDRV6_R = crate::BitReader;
 #[doc = "Field `HDRV6` writer - Port x driver bit y"]
-pub type HDRV6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV7` reader - Port x driver bit y"]
 pub type HDRV7_R = crate::BitReader;
 #[doc = "Field `HDRV7` writer - Port x driver bit y"]
-pub type HDRV7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV8` reader - Port x driver bit y"]
 pub type HDRV8_R = crate::BitReader;
 #[doc = "Field `HDRV8` writer - Port x driver bit y"]
-pub type HDRV8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV8_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV9` reader - Port x driver bit y"]
 pub type HDRV9_R = crate::BitReader;
 #[doc = "Field `HDRV9` writer - Port x driver bit y"]
-pub type HDRV9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV9_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV10` reader - Port x driver bit y"]
 pub type HDRV10_R = crate::BitReader;
 #[doc = "Field `HDRV10` writer - Port x driver bit y"]
-pub type HDRV10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV11` reader - Port x driver bit y"]
 pub type HDRV11_R = crate::BitReader;
 #[doc = "Field `HDRV11` writer - Port x driver bit y"]
-pub type HDRV11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV11_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV12` reader - Port x driver bit y"]
 pub type HDRV12_R = crate::BitReader;
 #[doc = "Field `HDRV12` writer - Port x driver bit y"]
-pub type HDRV12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV12_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV13` reader - Port x driver bit y"]
 pub type HDRV13_R = crate::BitReader;
 #[doc = "Field `HDRV13` writer - Port x driver bit y"]
-pub type HDRV13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV13_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV14` reader - Port x driver bit y"]
 pub type HDRV14_R = crate::BitReader;
 #[doc = "Field `HDRV14` writer - Port x driver bit y"]
-pub type HDRV14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV14_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HDRV15` reader - Port x driver bit y"]
 pub type HDRV15_R = crate::BitReader;
 #[doc = "Field `HDRV15` writer - Port x driver bit y"]
-pub type HDRV15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HDRV15_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Port x driver bit y"]
     #[inline(always)]
@@ -179,98 +179,98 @@ impl W {
     #[doc = "Bit 0 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv0(&mut self) -> HDRV0_W<HDRV_SPEC, 0> {
-        HDRV0_W::new(self)
+    pub fn hdrv0(&mut self) -> HDRV0_W<HDRV_SPEC> {
+        HDRV0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv1(&mut self) -> HDRV1_W<HDRV_SPEC, 1> {
-        HDRV1_W::new(self)
+    pub fn hdrv1(&mut self) -> HDRV1_W<HDRV_SPEC> {
+        HDRV1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv2(&mut self) -> HDRV2_W<HDRV_SPEC, 2> {
-        HDRV2_W::new(self)
+    pub fn hdrv2(&mut self) -> HDRV2_W<HDRV_SPEC> {
+        HDRV2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv3(&mut self) -> HDRV3_W<HDRV_SPEC, 3> {
-        HDRV3_W::new(self)
+    pub fn hdrv3(&mut self) -> HDRV3_W<HDRV_SPEC> {
+        HDRV3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv4(&mut self) -> HDRV4_W<HDRV_SPEC, 4> {
-        HDRV4_W::new(self)
+    pub fn hdrv4(&mut self) -> HDRV4_W<HDRV_SPEC> {
+        HDRV4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv5(&mut self) -> HDRV5_W<HDRV_SPEC, 5> {
-        HDRV5_W::new(self)
+    pub fn hdrv5(&mut self) -> HDRV5_W<HDRV_SPEC> {
+        HDRV5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv6(&mut self) -> HDRV6_W<HDRV_SPEC, 6> {
-        HDRV6_W::new(self)
+    pub fn hdrv6(&mut self) -> HDRV6_W<HDRV_SPEC> {
+        HDRV6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv7(&mut self) -> HDRV7_W<HDRV_SPEC, 7> {
-        HDRV7_W::new(self)
+    pub fn hdrv7(&mut self) -> HDRV7_W<HDRV_SPEC> {
+        HDRV7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv8(&mut self) -> HDRV8_W<HDRV_SPEC, 8> {
-        HDRV8_W::new(self)
+    pub fn hdrv8(&mut self) -> HDRV8_W<HDRV_SPEC> {
+        HDRV8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv9(&mut self) -> HDRV9_W<HDRV_SPEC, 9> {
-        HDRV9_W::new(self)
+    pub fn hdrv9(&mut self) -> HDRV9_W<HDRV_SPEC> {
+        HDRV9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv10(&mut self) -> HDRV10_W<HDRV_SPEC, 10> {
-        HDRV10_W::new(self)
+    pub fn hdrv10(&mut self) -> HDRV10_W<HDRV_SPEC> {
+        HDRV10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv11(&mut self) -> HDRV11_W<HDRV_SPEC, 11> {
-        HDRV11_W::new(self)
+    pub fn hdrv11(&mut self) -> HDRV11_W<HDRV_SPEC> {
+        HDRV11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv12(&mut self) -> HDRV12_W<HDRV_SPEC, 12> {
-        HDRV12_W::new(self)
+    pub fn hdrv12(&mut self) -> HDRV12_W<HDRV_SPEC> {
+        HDRV12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv13(&mut self) -> HDRV13_W<HDRV_SPEC, 13> {
-        HDRV13_W::new(self)
+    pub fn hdrv13(&mut self) -> HDRV13_W<HDRV_SPEC> {
+        HDRV13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv14(&mut self) -> HDRV14_W<HDRV_SPEC, 14> {
-        HDRV14_W::new(self)
+    pub fn hdrv14(&mut self) -> HDRV14_W<HDRV_SPEC> {
+        HDRV14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Port x driver bit y"]
     #[inline(always)]
     #[must_use]
-    pub fn hdrv15(&mut self) -> HDRV15_W<HDRV_SPEC, 15> {
-        HDRV15_W::new(self)
+    pub fn hdrv15(&mut self) -> HDRV15_W<HDRV_SPEC> {
+        HDRV15_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

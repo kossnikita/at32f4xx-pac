@@ -5,51 +5,51 @@ pub type W = crate::W<INTCLR_SPEC>;
 #[doc = "Field `CMDFAIL` reader - Command crc fail flag clear"]
 pub type CMDFAIL_R = crate::BitReader;
 #[doc = "Field `CMDFAIL` writer - Command crc fail flag clear"]
-pub type CMDFAIL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDFAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTFAIL` reader - Data crc fail flag clear"]
 pub type DTFAIL_R = crate::BitReader;
 #[doc = "Field `DTFAIL` writer - Data crc fail flag clear"]
-pub type DTFAIL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTFAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDTIMEOUT` reader - Command timeout flag clear"]
 pub type CMDTIMEOUT_R = crate::BitReader;
 #[doc = "Field `CMDTIMEOUT` writer - Command timeout flag clear"]
-pub type CMDTIMEOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDTIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTTIMEOUT` reader - Data timeout flag clear"]
 pub type DTTIMEOUT_R = crate::BitReader;
 #[doc = "Field `DTTIMEOUT` writer - Data timeout flag clear"]
-pub type DTTIMEOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTTIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXERRU` reader - Tx under run error flag clear"]
 pub type TXERRU_R = crate::BitReader;
 #[doc = "Field `TXERRU` writer - Tx under run error flag clear"]
-pub type TXERRU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TXERRU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RXERRU` reader - Rx over run error flag clear"]
 pub type RXERRU_R = crate::BitReader;
 #[doc = "Field `RXERRU` writer - Rx over run error flag clear"]
-pub type RXERRU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RXERRU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDRSPCMPL` reader - Command response complete flag clear"]
 pub type CMDRSPCMPL_R = crate::BitReader;
 #[doc = "Field `CMDRSPCMPL` writer - Command response complete flag clear"]
-pub type CMDRSPCMPL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDRSPCMPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CMDCMPL` reader - Command sent flag clear"]
 pub type CMDCMPL_R = crate::BitReader;
 #[doc = "Field `CMDCMPL` writer - Command sent flag clear"]
-pub type CMDCMPL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CMDCMPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTCMPL` reader - Data sent flag clear"]
 pub type DTCMPL_R = crate::BitReader;
 #[doc = "Field `DTCMPL` writer - Data sent flag clear"]
-pub type DTCMPL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTCMPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SBITERR` reader - Start bit error flag clear"]
 pub type SBITERR_R = crate::BitReader;
 #[doc = "Field `SBITERR` writer - Start bit error flag clear"]
-pub type SBITERR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SBITERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DTBLKCMPL` reader - Data block sent clear"]
 pub type DTBLKCMPL_R = crate::BitReader;
 #[doc = "Field `DTBLKCMPL` writer - Data block sent clear"]
-pub type DTBLKCMPL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DTBLKCMPL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `IOIF` reader - SD I/O interrupt flag clear"]
 pub type IOIF_R = crate::BitReader;
 #[doc = "Field `IOIF` writer - SD I/O interrupt flag clear"]
-pub type IOIF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type IOIF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Command crc fail flag clear"]
     #[inline(always)]
@@ -139,74 +139,74 @@ impl W {
     #[doc = "Bit 0 - Command crc fail flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdfail(&mut self) -> CMDFAIL_W<INTCLR_SPEC, 0> {
-        CMDFAIL_W::new(self)
+    pub fn cmdfail(&mut self) -> CMDFAIL_W<INTCLR_SPEC> {
+        CMDFAIL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Data crc fail flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dtfail(&mut self) -> DTFAIL_W<INTCLR_SPEC, 1> {
-        DTFAIL_W::new(self)
+    pub fn dtfail(&mut self) -> DTFAIL_W<INTCLR_SPEC> {
+        DTFAIL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Command timeout flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdtimeout(&mut self) -> CMDTIMEOUT_W<INTCLR_SPEC, 2> {
-        CMDTIMEOUT_W::new(self)
+    pub fn cmdtimeout(&mut self) -> CMDTIMEOUT_W<INTCLR_SPEC> {
+        CMDTIMEOUT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Data timeout flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dttimeout(&mut self) -> DTTIMEOUT_W<INTCLR_SPEC, 3> {
-        DTTIMEOUT_W::new(self)
+    pub fn dttimeout(&mut self) -> DTTIMEOUT_W<INTCLR_SPEC> {
+        DTTIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Tx under run error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn txerru(&mut self) -> TXERRU_W<INTCLR_SPEC, 4> {
-        TXERRU_W::new(self)
+    pub fn txerru(&mut self) -> TXERRU_W<INTCLR_SPEC> {
+        TXERRU_W::new(self, 4)
     }
     #[doc = "Bit 5 - Rx over run error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn rxerru(&mut self) -> RXERRU_W<INTCLR_SPEC, 5> {
-        RXERRU_W::new(self)
+    pub fn rxerru(&mut self) -> RXERRU_W<INTCLR_SPEC> {
+        RXERRU_W::new(self, 5)
     }
     #[doc = "Bit 6 - Command response complete flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdrspcmpl(&mut self) -> CMDRSPCMPL_W<INTCLR_SPEC, 6> {
-        CMDRSPCMPL_W::new(self)
+    pub fn cmdrspcmpl(&mut self) -> CMDRSPCMPL_W<INTCLR_SPEC> {
+        CMDRSPCMPL_W::new(self, 6)
     }
     #[doc = "Bit 7 - Command sent flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn cmdcmpl(&mut self) -> CMDCMPL_W<INTCLR_SPEC, 7> {
-        CMDCMPL_W::new(self)
+    pub fn cmdcmpl(&mut self) -> CMDCMPL_W<INTCLR_SPEC> {
+        CMDCMPL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Data sent flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dtcmpl(&mut self) -> DTCMPL_W<INTCLR_SPEC, 8> {
-        DTCMPL_W::new(self)
+    pub fn dtcmpl(&mut self) -> DTCMPL_W<INTCLR_SPEC> {
+        DTCMPL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Start bit error flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn sbiterr(&mut self) -> SBITERR_W<INTCLR_SPEC, 9> {
-        SBITERR_W::new(self)
+    pub fn sbiterr(&mut self) -> SBITERR_W<INTCLR_SPEC> {
+        SBITERR_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data block sent clear"]
     #[inline(always)]
     #[must_use]
-    pub fn dtblkcmpl(&mut self) -> DTBLKCMPL_W<INTCLR_SPEC, 10> {
-        DTBLKCMPL_W::new(self)
+    pub fn dtblkcmpl(&mut self) -> DTBLKCMPL_W<INTCLR_SPEC> {
+        DTBLKCMPL_W::new(self, 10)
     }
     #[doc = "Bit 22 - SD I/O interrupt flag clear"]
     #[inline(always)]
     #[must_use]
-    pub fn ioif(&mut self) -> IOIF_W<INTCLR_SPEC, 22> {
-        IOIF_W::new(self)
+    pub fn ioif(&mut self) -> IOIF_W<INTCLR_SPEC> {
+        IOIF_W::new(self, 22)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

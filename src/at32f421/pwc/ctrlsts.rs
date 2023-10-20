@@ -11,19 +11,19 @@ pub type PVMOF_R = crate::BitReader;
 #[doc = "Field `SWPEN1` reader - Standby wake-up pin1 enable"]
 pub type SWPEN1_R = crate::BitReader;
 #[doc = "Field `SWPEN1` writer - Standby wake-up pin1 enable"]
-pub type SWPEN1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SWPEN1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWPEN2` reader - Standby wake-up pin2 enable"]
 pub type SWPEN2_R = crate::BitReader;
 #[doc = "Field `SWPEN2` writer - Standby wake-up pin2 enable"]
-pub type SWPEN2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SWPEN2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWPEN6` reader - Standby wake-up pin2 enable"]
 pub type SWPEN6_R = crate::BitReader;
 #[doc = "Field `SWPEN6` writer - Standby wake-up pin2 enable"]
-pub type SWPEN6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SWPEN6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SWPEN7` reader - Standby wake-up pin2 enable"]
 pub type SWPEN7_R = crate::BitReader;
 #[doc = "Field `SWPEN7` writer - Standby wake-up pin2 enable"]
-pub type SWPEN7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SWPEN7_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Standby wake-up event flag"]
     #[inline(always)]
@@ -83,26 +83,26 @@ impl W {
     #[doc = "Bit 8 - Standby wake-up pin1 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn swpen1(&mut self) -> SWPEN1_W<CTRLSTS_SPEC, 8> {
-        SWPEN1_W::new(self)
+    pub fn swpen1(&mut self) -> SWPEN1_W<CTRLSTS_SPEC> {
+        SWPEN1_W::new(self, 8)
     }
     #[doc = "Bit 9 - Standby wake-up pin2 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn swpen2(&mut self) -> SWPEN2_W<CTRLSTS_SPEC, 9> {
-        SWPEN2_W::new(self)
+    pub fn swpen2(&mut self) -> SWPEN2_W<CTRLSTS_SPEC> {
+        SWPEN2_W::new(self, 9)
     }
     #[doc = "Bit 13 - Standby wake-up pin2 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn swpen6(&mut self) -> SWPEN6_W<CTRLSTS_SPEC, 13> {
-        SWPEN6_W::new(self)
+    pub fn swpen6(&mut self) -> SWPEN6_W<CTRLSTS_SPEC> {
+        SWPEN6_W::new(self, 13)
     }
     #[doc = "Bit 14 - Standby wake-up pin2 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn swpen7(&mut self) -> SWPEN7_W<CTRLSTS_SPEC, 14> {
-        SWPEN7_W::new(self)
+    pub fn swpen7(&mut self) -> SWPEN7_W<CTRLSTS_SPEC> {
+        SWPEN7_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

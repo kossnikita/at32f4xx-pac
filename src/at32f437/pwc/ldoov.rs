@@ -5,7 +5,7 @@ pub type W = crate::W<LDOOV_SPEC>;
 #[doc = "Field `LDOOVSEL` reader - LDO output voltage select"]
 pub type LDOOVSEL_R = crate::FieldReader;
 #[doc = "Field `LDOOVSEL` writer - LDO output voltage select"]
-pub type LDOOVSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type LDOOVSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Bits 0:2 - LDO output voltage select"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:2 - LDO output voltage select"]
     #[inline(always)]
     #[must_use]
-    pub fn ldoovsel(&mut self) -> LDOOVSEL_W<LDOOV_SPEC, 0> {
-        LDOOVSEL_W::new(self)
+    pub fn ldoovsel(&mut self) -> LDOOVSEL_W<LDOOV_SPEC> {
+        LDOOVSEL_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

@@ -5,12 +5,13 @@ pub type W = crate::W<MUXL_SPEC>;
 #[doc = "Field `MUX[0-7]` reader - GPIOx pin %s muxing"]
 pub type MUX_R = crate::FieldReader;
 #[doc = "Field `MUX[0-7]` writer - GPIOx pin %s muxing"]
-pub type MUX_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 4, O>;
+pub type MUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 impl R {
     #[doc = "GPIOx pin [0-7]
-muxing"]
+muxing\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn mux(&self, n: u8) -> MUX_R {
+    pub fn mux(&self, n: u8) -> MUX_R {
+        assert!(n < 8);
         MUX_R::new(((self.bits >> (n * 4)) & 0x0f) as u8)
     }
     #[doc = "Bits 0:3 - GPIOx pin 0 muxing"]
@@ -78,56 +79,57 @@ impl W {
 muxing"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn mux<const O: u8>(&mut self) -> MUX_W<MUXL_SPEC, O> {
-        MUX_W::new(self)
+    pub fn mux(&mut self, n: u8) -> MUX_W<MUXL_SPEC> {
+        assert!(n < 8);
+        MUX_W::new(self, n * 4)
     }
     #[doc = "Bits 0:3 - GPIOx pin 0 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn mux0(&mut self) -> MUX_W<MUXL_SPEC, 0> {
-        MUX_W::new(self)
+    pub fn mux0(&mut self) -> MUX_W<MUXL_SPEC> {
+        MUX_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - GPIOx pin 1 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn mux1(&mut self) -> MUX_W<MUXL_SPEC, 4> {
-        MUX_W::new(self)
+    pub fn mux1(&mut self) -> MUX_W<MUXL_SPEC> {
+        MUX_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - GPIOx pin 2 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn mux2(&mut self) -> MUX_W<MUXL_SPEC, 8> {
-        MUX_W::new(self)
+    pub fn mux2(&mut self) -> MUX_W<MUXL_SPEC> {
+        MUX_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - GPIOx pin 3 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn mux3(&mut self) -> MUX_W<MUXL_SPEC, 12> {
-        MUX_W::new(self)
+    pub fn mux3(&mut self) -> MUX_W<MUXL_SPEC> {
+        MUX_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - GPIOx pin 4 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn mux4(&mut self) -> MUX_W<MUXL_SPEC, 16> {
-        MUX_W::new(self)
+    pub fn mux4(&mut self) -> MUX_W<MUXL_SPEC> {
+        MUX_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - GPIOx pin 5 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn mux5(&mut self) -> MUX_W<MUXL_SPEC, 20> {
-        MUX_W::new(self)
+    pub fn mux5(&mut self) -> MUX_W<MUXL_SPEC> {
+        MUX_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - GPIOx pin 6 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn mux6(&mut self) -> MUX_W<MUXL_SPEC, 24> {
-        MUX_W::new(self)
+    pub fn mux6(&mut self) -> MUX_W<MUXL_SPEC> {
+        MUX_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - GPIOx pin 7 muxing"]
     #[inline(always)]
     #[must_use]
-    pub fn mux7(&mut self) -> MUX_W<MUXL_SPEC, 28> {
-        MUX_W::new(self)
+    pub fn mux7(&mut self) -> MUX_W<MUXL_SPEC> {
+        MUX_W::new(self, 28)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

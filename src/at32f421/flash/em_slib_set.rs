@@ -1,9 +1,9 @@
 #[doc = "Register `EM_SLIB_SET` writer"]
 pub type W = crate::W<EM_SLIB_SET_SPEC>;
 #[doc = "Field `EM_SLIB_SET` writer - Extension memory sLib setting"]
-pub type EM_SLIB_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type EM_SLIB_SET_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `EM_SLIB_ISS_SET` writer - Extension memory sLib instruction start sector setting"]
-pub type EM_SLIB_ISS_SET_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
+pub type EM_SLIB_ISS_SET_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl core::fmt::Debug for crate::generic::Reg<EM_SLIB_SET_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -13,14 +13,14 @@ impl W {
     #[doc = "Bits 0:15 - Extension memory sLib setting"]
     #[inline(always)]
     #[must_use]
-    pub fn em_slib_set(&mut self) -> EM_SLIB_SET_W<EM_SLIB_SET_SPEC, 0> {
-        EM_SLIB_SET_W::new(self)
+    pub fn em_slib_set(&mut self) -> EM_SLIB_SET_W<EM_SLIB_SET_SPEC> {
+        EM_SLIB_SET_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Extension memory sLib instruction start sector setting"]
     #[inline(always)]
     #[must_use]
-    pub fn em_slib_iss_set(&mut self) -> EM_SLIB_ISS_SET_W<EM_SLIB_SET_SPEC, 16> {
-        EM_SLIB_ISS_SET_W::new(self)
+    pub fn em_slib_iss_set(&mut self) -> EM_SLIB_ISS_SET_W<EM_SLIB_SET_SPEC> {
+        EM_SLIB_ISS_SET_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

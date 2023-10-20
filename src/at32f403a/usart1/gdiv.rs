@@ -5,11 +5,11 @@ pub type W = crate::W<GDIV_SPEC>;
 #[doc = "Field `ISDIV` reader - IrDA/smartcard division value"]
 pub type ISDIV_R = crate::FieldReader;
 #[doc = "Field `ISDIV` writer - IrDA/smartcard division value"]
-pub type ISDIV_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 8, O>;
+pub type ISDIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
 #[doc = "Field `SCGT` reader - Smart card guard time value"]
 pub type SCGT_R = crate::FieldReader;
 #[doc = "Field `SCGT` writer - Smart card guard time value"]
-pub type SCGT_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 8, O>;
+pub type SCGT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - IrDA/smartcard division value"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:7 - IrDA/smartcard division value"]
     #[inline(always)]
     #[must_use]
-    pub fn isdiv(&mut self) -> ISDIV_W<GDIV_SPEC, 0> {
-        ISDIV_W::new(self)
+    pub fn isdiv(&mut self) -> ISDIV_W<GDIV_SPEC> {
+        ISDIV_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Smart card guard time value"]
     #[inline(always)]
     #[must_use]
-    pub fn scgt(&mut self) -> SCGT_W<GDIV_SPEC, 8> {
-        SCGT_W::new(self)
+    pub fn scgt(&mut self) -> SCGT_W<GDIV_SPEC> {
+        SCGT_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

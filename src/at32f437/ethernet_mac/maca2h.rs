@@ -5,19 +5,19 @@ pub type W = crate::W<MACA2H_SPEC>;
 #[doc = "Field `MA2H` reader - MAC address 2 high"]
 pub type MA2H_R = crate::FieldReader<u16>;
 #[doc = "Field `MA2H` writer - MAC address 2 high"]
-pub type MA2H_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type MA2H_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `MBC` reader - Mask byte control"]
 pub type MBC_R = crate::FieldReader;
 #[doc = "Field `MBC` writer - Mask byte control"]
-pub type MBC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 6, O>;
+pub type MBC_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `SA` reader - Source address"]
 pub type SA_R = crate::BitReader;
 #[doc = "Field `SA` writer - Source address"]
-pub type SA_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `AE` reader - Address enable"]
 pub type AE_R = crate::BitReader;
 #[doc = "Field `AE` writer - Address enable"]
-pub type AE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type AE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - MAC address 2 high"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:15 - MAC address 2 high"]
     #[inline(always)]
     #[must_use]
-    pub fn ma2h(&mut self) -> MA2H_W<MACA2H_SPEC, 0> {
-        MA2H_W::new(self)
+    pub fn ma2h(&mut self) -> MA2H_W<MACA2H_SPEC> {
+        MA2H_W::new(self, 0)
     }
     #[doc = "Bits 24:29 - Mask byte control"]
     #[inline(always)]
     #[must_use]
-    pub fn mbc(&mut self) -> MBC_W<MACA2H_SPEC, 24> {
-        MBC_W::new(self)
+    pub fn mbc(&mut self) -> MBC_W<MACA2H_SPEC> {
+        MBC_W::new(self, 24)
     }
     #[doc = "Bit 30 - Source address"]
     #[inline(always)]
     #[must_use]
-    pub fn sa(&mut self) -> SA_W<MACA2H_SPEC, 30> {
-        SA_W::new(self)
+    pub fn sa(&mut self) -> SA_W<MACA2H_SPEC> {
+        SA_W::new(self, 30)
     }
     #[doc = "Bit 31 - Address enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ae(&mut self) -> AE_W<MACA2H_SPEC, 31> {
-        AE_W::new(self)
+    pub fn ae(&mut self) -> AE_W<MACA2H_SPEC> {
+        AE_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

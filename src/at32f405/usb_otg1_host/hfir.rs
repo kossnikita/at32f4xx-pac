@@ -5,7 +5,7 @@ pub type W = crate::W<HFIR_SPEC>;
 #[doc = "Field `FRINT` reader - Frame interval"]
 pub type FRINT_R = crate::FieldReader<u16>;
 #[doc = "Field `FRINT` writer - Frame interval"]
-pub type FRINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type FRINT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Frame interval"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:15 - Frame interval"]
     #[inline(always)]
     #[must_use]
-    pub fn frint(&mut self) -> FRINT_W<HFIR_SPEC, 0> {
-        FRINT_W::new(self)
+    pub fn frint(&mut self) -> FRINT_W<HFIR_SPEC> {
+        FRINT_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

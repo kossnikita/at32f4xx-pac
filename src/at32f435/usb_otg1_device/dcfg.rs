@@ -5,19 +5,19 @@ pub type W = crate::W<DCFG_SPEC>;
 #[doc = "Field `DEVSPD` reader - Device speed"]
 pub type DEVSPD_R = crate::FieldReader;
 #[doc = "Field `DEVSPD` writer - Device speed"]
-pub type DEVSPD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DEVSPD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `NZSTSOUTHSHK` reader - Non-zero-length status OUT handshake"]
 pub type NZSTSOUTHSHK_R = crate::BitReader;
 #[doc = "Field `NZSTSOUTHSHK` writer - Non-zero-length status OUT handshake"]
-pub type NZSTSOUTHSHK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type NZSTSOUTHSHK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEVADDR` reader - Device address"]
 pub type DEVADDR_R = crate::FieldReader;
 #[doc = "Field `DEVADDR` writer - Device address"]
-pub type DEVADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type DEVADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `PERFRINT` reader - Periodic frame interval"]
 pub type PERFRINT_R = crate::FieldReader;
 #[doc = "Field `PERFRINT` writer - Periodic frame interval"]
-pub type PERFRINT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PERFRINT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Device speed"]
     #[inline(always)]
@@ -62,26 +62,26 @@ impl W {
     #[doc = "Bits 0:1 - Device speed"]
     #[inline(always)]
     #[must_use]
-    pub fn devspd(&mut self) -> DEVSPD_W<DCFG_SPEC, 0> {
-        DEVSPD_W::new(self)
+    pub fn devspd(&mut self) -> DEVSPD_W<DCFG_SPEC> {
+        DEVSPD_W::new(self, 0)
     }
     #[doc = "Bit 2 - Non-zero-length status OUT handshake"]
     #[inline(always)]
     #[must_use]
-    pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<DCFG_SPEC, 2> {
-        NZSTSOUTHSHK_W::new(self)
+    pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<DCFG_SPEC> {
+        NZSTSOUTHSHK_W::new(self, 2)
     }
     #[doc = "Bits 4:10 - Device address"]
     #[inline(always)]
     #[must_use]
-    pub fn devaddr(&mut self) -> DEVADDR_W<DCFG_SPEC, 4> {
-        DEVADDR_W::new(self)
+    pub fn devaddr(&mut self) -> DEVADDR_W<DCFG_SPEC> {
+        DEVADDR_W::new(self, 4)
     }
     #[doc = "Bits 11:12 - Periodic frame interval"]
     #[inline(always)]
     #[must_use]
-    pub fn perfrint(&mut self) -> PERFRINT_W<DCFG_SPEC, 11> {
-        PERFRINT_W::new(self)
+    pub fn perfrint(&mut self) -> PERFRINT_W<DCFG_SPEC> {
+        PERFRINT_W::new(self, 11)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

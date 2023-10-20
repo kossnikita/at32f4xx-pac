@@ -60,8 +60,8 @@ impl C3C_R {
     }
 }
 #[doc = "Field `C3C` writer - Channel 3 configure"]
-pub type C3C_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, C3C_A>;
-impl<'a, REG, const O: u8> C3C_W<'a, REG, O>
+pub type C3C_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C3C_A>;
+impl<'a, REG> C3C_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -145,8 +145,8 @@ impl CIDIV_R {
     }
 }
 #[doc = "Field `CIDIV[3-4]` writer - Channel %s input divider"]
-pub type CIDIV_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, C3IDIV_A>;
-impl<'a, REG, const O: u8> CIDIV_W<'a, REG, O>
+pub type CIDIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C3IDIV_A>;
+impl<'a, REG> CIDIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -175,7 +175,7 @@ where
 #[doc = "Field `CDF[3-4]` reader - Channel %s digital filter"]
 pub type CDF_R = crate::FieldReader;
 #[doc = "Field `CDF[3-4]` writer - Channel %s digital filter"]
-pub type CDF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type CDF_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `C4C` reader - Channel 4 configure"]
 pub type C4C_R = crate::FieldReader<C4C_A>;
 #[doc = "Channel 4 configure\n\nValue on reset: 0"]
@@ -234,8 +234,8 @@ impl C4C_R {
     }
 }
 #[doc = "Field `C4C` writer - Channel 4 configure"]
-pub type C4C_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, C4C_A>;
-impl<'a, REG, const O: u8> C4C_W<'a, REG, O>
+pub type C4C_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C4C_A>;
+impl<'a, REG> C4C_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
@@ -268,10 +268,11 @@ impl R {
         C3C_R::new((self.bits & 3) as u8)
     }
     #[doc = "Channel [3-4]
-input divider"]
+input divider\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cidiv(&self, n: u8) -> CIDIV_R {
-        CIDIV_R::new(((self.bits >> ((n - 3) * 8 + 2)) & 3) as u8)
+    pub fn cidiv(&self, n: u8) -> CIDIV_R {
+        assert!(n < 2);
+        CIDIV_R::new(((self.bits >> (n * 8 + 2)) & 3) as u8)
     }
     #[doc = "Bits 2:3 - Channel 3 input divider"]
     #[inline(always)]
@@ -284,10 +285,11 @@ input divider"]
         CIDIV_R::new(((self.bits >> 10) & 3) as u8)
     }
     #[doc = "Channel [3-4]
-digital filter"]
+digital filter\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn cdf(&self, n: u8) -> CDF_R {
-        CDF_R::new(((self.bits >> ((n - 3) * 8 + 4)) & 0x0f) as u8)
+    pub fn cdf(&self, n: u8) -> CDF_R {
+        assert!(n < 2);
+        CDF_R::new(((self.bits >> (n * 8 + 4)) & 0x0f) as u8)
     }
     #[doc = "Bits 4:7 - Channel 3 digital filter"]
     #[inline(always)]
@@ -326,52 +328,54 @@ impl W {
     #[doc = "Bits 0:1 - Channel 3 configure"]
     #[inline(always)]
     #[must_use]
-    pub fn c3c(&mut self) -> C3C_W<CM2_INPUT_SPEC, 0> {
-        C3C_W::new(self)
+    pub fn c3c(&mut self) -> C3C_W<CM2_INPUT_SPEC> {
+        C3C_W::new(self, 0)
     }
     #[doc = "Channel [3-4]
 input divider"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cidiv<const O: u8>(&mut self) -> CIDIV_W<CM2_INPUT_SPEC, O> {
-        CIDIV_W::new(self)
+    pub fn cidiv(&mut self, n: u8) -> CIDIV_W<CM2_INPUT_SPEC> {
+        assert!(n < 2);
+        CIDIV_W::new(self, n * 8 + 2)
     }
     #[doc = "Bits 2:3 - Channel 3 input divider"]
     #[inline(always)]
     #[must_use]
-    pub fn c3idiv(&mut self) -> CIDIV_W<CM2_INPUT_SPEC, 2> {
-        CIDIV_W::new(self)
+    pub fn c3idiv(&mut self) -> CIDIV_W<CM2_INPUT_SPEC> {
+        CIDIV_W::new(self, 2)
     }
     #[doc = "Bits 10:11 - Channel 4 input divider"]
     #[inline(always)]
     #[must_use]
-    pub fn c4idiv(&mut self) -> CIDIV_W<CM2_INPUT_SPEC, 10> {
-        CIDIV_W::new(self)
+    pub fn c4idiv(&mut self) -> CIDIV_W<CM2_INPUT_SPEC> {
+        CIDIV_W::new(self, 10)
     }
     #[doc = "Channel [3-4]
 digital filter"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn cdf<const O: u8>(&mut self) -> CDF_W<CM2_INPUT_SPEC, O> {
-        CDF_W::new(self)
+    pub fn cdf(&mut self, n: u8) -> CDF_W<CM2_INPUT_SPEC> {
+        assert!(n < 2);
+        CDF_W::new(self, n * 8 + 4)
     }
     #[doc = "Bits 4:7 - Channel 3 digital filter"]
     #[inline(always)]
     #[must_use]
-    pub fn c3df(&mut self) -> CDF_W<CM2_INPUT_SPEC, 4> {
-        CDF_W::new(self)
+    pub fn c3df(&mut self) -> CDF_W<CM2_INPUT_SPEC> {
+        CDF_W::new(self, 4)
     }
     #[doc = "Bits 12:15 - Channel 4 digital filter"]
     #[inline(always)]
     #[must_use]
-    pub fn c4df(&mut self) -> CDF_W<CM2_INPUT_SPEC, 12> {
-        CDF_W::new(self)
+    pub fn c4df(&mut self) -> CDF_W<CM2_INPUT_SPEC> {
+        CDF_W::new(self, 12)
     }
     #[doc = "Bits 8:9 - Channel 4 configure"]
     #[inline(always)]
     #[must_use]
-    pub fn c4c(&mut self) -> C4C_W<CM2_INPUT_SPEC, 8> {
-        C4C_W::new(self)
+    pub fn c4c(&mut self) -> C4C_W<CM2_INPUT_SPEC> {
+        C4C_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

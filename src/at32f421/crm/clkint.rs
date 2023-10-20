@@ -17,35 +17,35 @@ pub type CFDF_R = crate::BitReader;
 #[doc = "Field `LICKSTBLIEN` reader - LICK ready interrupt enable"]
 pub type LICKSTBLIEN_R = crate::BitReader;
 #[doc = "Field `LICKSTBLIEN` writer - LICK ready interrupt enable"]
-pub type LICKSTBLIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LICKSTBLIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEXTSTBLIEN` reader - LEXT ready interrupt enable"]
 pub type LEXTSTBLIEN_R = crate::BitReader;
 #[doc = "Field `LEXTSTBLIEN` writer - LEXT ready interrupt enable"]
-pub type LEXTSTBLIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEXTSTBLIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HICKSTBLIEN` reader - HICK ready interrupt enable"]
 pub type HICKSTBLIEN_R = crate::BitReader;
 #[doc = "Field `HICKSTBLIEN` writer - HICK ready interrupt enable"]
-pub type HICKSTBLIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICKSTBLIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEXTSTBLIEN` reader - HEXT ready interrupt enable"]
 pub type HEXTSTBLIEN_R = crate::BitReader;
 #[doc = "Field `HEXTSTBLIEN` writer - HEXT ready interrupt enable"]
-pub type HEXTSTBLIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEXTSTBLIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLSTBLIEN` reader - PLL ready interrupt enable"]
 pub type PLLSTBLIEN_R = crate::BitReader;
 #[doc = "Field `PLLSTBLIEN` writer - PLL ready interrupt enable"]
-pub type PLLSTBLIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLSTBLIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LICKSTBLFC` writer - LICK ready interrupt clear"]
-pub type LICKSTBLFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LICKSTBLFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LEXTSTBLFC` writer - LEXT ready interrupt clear"]
-pub type LEXTSTBLFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type LEXTSTBLFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HICKSTBLFC` writer - HICK ready interrupt clear"]
-pub type HICKSTBLFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HICKSTBLFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HEXTSTBLFC` writer - HEXT ready interrupt clear"]
-pub type HEXTSTBLFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type HEXTSTBLFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PLLSTBLFC` writer - PLL ready interrupt clear"]
-pub type PLLSTBLFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PLLSTBLFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CFDFC` writer - Clock failure detection interrupt clear"]
-pub type CFDFC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CFDFC_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - LICK ready interrupt flag"]
     #[inline(always)]
@@ -129,68 +129,68 @@ impl W {
     #[doc = "Bit 8 - LICK ready interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lickstblien(&mut self) -> LICKSTBLIEN_W<CLKINT_SPEC, 8> {
-        LICKSTBLIEN_W::new(self)
+    pub fn lickstblien(&mut self) -> LICKSTBLIEN_W<CLKINT_SPEC> {
+        LICKSTBLIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - LEXT ready interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn lextstblien(&mut self) -> LEXTSTBLIEN_W<CLKINT_SPEC, 9> {
-        LEXTSTBLIEN_W::new(self)
+    pub fn lextstblien(&mut self) -> LEXTSTBLIEN_W<CLKINT_SPEC> {
+        LEXTSTBLIEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - HICK ready interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hickstblien(&mut self) -> HICKSTBLIEN_W<CLKINT_SPEC, 10> {
-        HICKSTBLIEN_W::new(self)
+    pub fn hickstblien(&mut self) -> HICKSTBLIEN_W<CLKINT_SPEC> {
+        HICKSTBLIEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - HEXT ready interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn hextstblien(&mut self) -> HEXTSTBLIEN_W<CLKINT_SPEC, 11> {
-        HEXTSTBLIEN_W::new(self)
+    pub fn hextstblien(&mut self) -> HEXTSTBLIEN_W<CLKINT_SPEC> {
+        HEXTSTBLIEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - PLL ready interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn pllstblien(&mut self) -> PLLSTBLIEN_W<CLKINT_SPEC, 12> {
-        PLLSTBLIEN_W::new(self)
+    pub fn pllstblien(&mut self) -> PLLSTBLIEN_W<CLKINT_SPEC> {
+        PLLSTBLIEN_W::new(self, 12)
     }
     #[doc = "Bit 16 - LICK ready interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn lickstblfc(&mut self) -> LICKSTBLFC_W<CLKINT_SPEC, 16> {
-        LICKSTBLFC_W::new(self)
+    pub fn lickstblfc(&mut self) -> LICKSTBLFC_W<CLKINT_SPEC> {
+        LICKSTBLFC_W::new(self, 16)
     }
     #[doc = "Bit 17 - LEXT ready interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn lextstblfc(&mut self) -> LEXTSTBLFC_W<CLKINT_SPEC, 17> {
-        LEXTSTBLFC_W::new(self)
+    pub fn lextstblfc(&mut self) -> LEXTSTBLFC_W<CLKINT_SPEC> {
+        LEXTSTBLFC_W::new(self, 17)
     }
     #[doc = "Bit 18 - HICK ready interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hickstblfc(&mut self) -> HICKSTBLFC_W<CLKINT_SPEC, 18> {
-        HICKSTBLFC_W::new(self)
+    pub fn hickstblfc(&mut self) -> HICKSTBLFC_W<CLKINT_SPEC> {
+        HICKSTBLFC_W::new(self, 18)
     }
     #[doc = "Bit 19 - HEXT ready interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn hextstblfc(&mut self) -> HEXTSTBLFC_W<CLKINT_SPEC, 19> {
-        HEXTSTBLFC_W::new(self)
+    pub fn hextstblfc(&mut self) -> HEXTSTBLFC_W<CLKINT_SPEC> {
+        HEXTSTBLFC_W::new(self, 19)
     }
     #[doc = "Bit 20 - PLL ready interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn pllstblfc(&mut self) -> PLLSTBLFC_W<CLKINT_SPEC, 20> {
-        PLLSTBLFC_W::new(self)
+    pub fn pllstblfc(&mut self) -> PLLSTBLFC_W<CLKINT_SPEC> {
+        PLLSTBLFC_W::new(self, 20)
     }
     #[doc = "Bit 23 - Clock failure detection interrupt clear"]
     #[inline(always)]
     #[must_use]
-    pub fn cfdfc(&mut self) -> CFDFC_W<CLKINT_SPEC, 23> {
-        CFDFC_W::new(self)
+    pub fn cfdfc(&mut self) -> CFDFC_W<CLKINT_SPEC> {
+        CFDFC_W::new(self, 23)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

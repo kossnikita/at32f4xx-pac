@@ -3,19 +3,19 @@ pub type R = crate::R<CMD_SPEC>;
 #[doc = "Register `CMD` writer"]
 pub type W = crate::W<CMD_SPEC>;
 #[doc = "Field `CMD` writer - SDRAM Command"]
-pub type CMD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type CMD_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `BK2` writer - SDRAM Bank 2"]
-pub type BK2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BK2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BK1` writer - SDRAM Bank 1"]
-pub type BK1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BK1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ART` reader - Auto-refresh times"]
 pub type ART_R = crate::FieldReader;
 #[doc = "Field `ART` writer - Auto-refresh times"]
-pub type ART_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
+pub type ART_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `MRD` reader - Mode register data"]
 pub type MRD_R = crate::FieldReader<u16>;
 #[doc = "Field `MRD` writer - Mode register data"]
-pub type MRD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 13, O, u16>;
+pub type MRD_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
     #[doc = "Bits 5:8 - Auto-refresh times"]
     #[inline(always)]
@@ -45,32 +45,32 @@ impl W {
     #[doc = "Bits 0:2 - SDRAM Command"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd(&mut self) -> CMD_W<CMD_SPEC, 0> {
-        CMD_W::new(self)
+    pub fn cmd(&mut self) -> CMD_W<CMD_SPEC> {
+        CMD_W::new(self, 0)
     }
     #[doc = "Bit 3 - SDRAM Bank 2"]
     #[inline(always)]
     #[must_use]
-    pub fn bk2(&mut self) -> BK2_W<CMD_SPEC, 3> {
-        BK2_W::new(self)
+    pub fn bk2(&mut self) -> BK2_W<CMD_SPEC> {
+        BK2_W::new(self, 3)
     }
     #[doc = "Bit 4 - SDRAM Bank 1"]
     #[inline(always)]
     #[must_use]
-    pub fn bk1(&mut self) -> BK1_W<CMD_SPEC, 4> {
-        BK1_W::new(self)
+    pub fn bk1(&mut self) -> BK1_W<CMD_SPEC> {
+        BK1_W::new(self, 4)
     }
     #[doc = "Bits 5:8 - Auto-refresh times"]
     #[inline(always)]
     #[must_use]
-    pub fn art(&mut self) -> ART_W<CMD_SPEC, 5> {
-        ART_W::new(self)
+    pub fn art(&mut self) -> ART_W<CMD_SPEC> {
+        ART_W::new(self, 5)
     }
     #[doc = "Bits 9:21 - Mode register data"]
     #[inline(always)]
     #[must_use]
-    pub fn mrd(&mut self) -> MRD_W<CMD_SPEC, 9> {
-        MRD_W::new(self)
+    pub fn mrd(&mut self) -> MRD_W<CMD_SPEC> {
+        MRD_W::new(self, 9)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

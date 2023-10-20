@@ -5,17 +5,18 @@ pub type W = crate::W<PSQ_SPEC>;
 #[doc = "Field `PSN[1-4]` reader - Number of %s conversion in preempted sequence"]
 pub type PSN_R = crate::FieldReader;
 #[doc = "Field `PSN[1-4]` writer - Number of %s conversion in preempted sequence"]
-pub type PSN_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
+pub type PSN_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PCLEN` reader - Preempted conversion sequence length"]
 pub type PCLEN_R = crate::FieldReader;
 #[doc = "Field `PCLEN` writer - Preempted conversion sequence length"]
-pub type PCLEN_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O>;
+pub type PCLEN_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
 impl R {
     #[doc = "Number of [1-4]
-conversion in preempted sequence"]
+conversion in preempted sequence\n\nNOTE: `n` is number of field in register starting from 0"]
     #[inline(always)]
-    pub unsafe fn psn(&self, n: u8) -> PSN_R {
-        PSN_R::new(((self.bits >> ((n - 1) * 5)) & 0x1f) as u8)
+    pub fn psn(&self, n: u8) -> PSN_R {
+        assert!(n < 4);
+        PSN_R::new(((self.bits >> (n * 5)) & 0x1f) as u8)
     }
     #[doc = "Bits 0:4 - Number of 1 conversion in preempted sequence"]
     #[inline(always)]
@@ -64,38 +65,39 @@ impl W {
 conversion in preempted sequence"]
     #[inline(always)]
     #[must_use]
-    pub unsafe fn psn<const O: u8>(&mut self) -> PSN_W<PSQ_SPEC, O> {
-        PSN_W::new(self)
+    pub fn psn(&mut self, n: u8) -> PSN_W<PSQ_SPEC> {
+        assert!(n < 4);
+        PSN_W::new(self, n * 5)
     }
     #[doc = "Bits 0:4 - Number of 1 conversion in preempted sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn psn1(&mut self) -> PSN_W<PSQ_SPEC, 0> {
-        PSN_W::new(self)
+    pub fn psn1(&mut self) -> PSN_W<PSQ_SPEC> {
+        PSN_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Number of 2 conversion in preempted sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn psn2(&mut self) -> PSN_W<PSQ_SPEC, 5> {
-        PSN_W::new(self)
+    pub fn psn2(&mut self) -> PSN_W<PSQ_SPEC> {
+        PSN_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - Number of 3 conversion in preempted sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn psn3(&mut self) -> PSN_W<PSQ_SPEC, 10> {
-        PSN_W::new(self)
+    pub fn psn3(&mut self) -> PSN_W<PSQ_SPEC> {
+        PSN_W::new(self, 10)
     }
     #[doc = "Bits 15:19 - Number of 4 conversion in preempted sequence"]
     #[inline(always)]
     #[must_use]
-    pub fn psn4(&mut self) -> PSN_W<PSQ_SPEC, 15> {
-        PSN_W::new(self)
+    pub fn psn4(&mut self) -> PSN_W<PSQ_SPEC> {
+        PSN_W::new(self, 15)
     }
     #[doc = "Bits 20:21 - Preempted conversion sequence length"]
     #[inline(always)]
     #[must_use]
-    pub fn pclen(&mut self) -> PCLEN_W<PSQ_SPEC, 20> {
-        PCLEN_W::new(self)
+    pub fn pclen(&mut self) -> PCLEN_W<PSQ_SPEC> {
+        PCLEN_W::new(self, 20)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

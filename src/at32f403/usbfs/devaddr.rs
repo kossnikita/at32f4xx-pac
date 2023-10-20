@@ -5,11 +5,11 @@ pub type W = crate::W<DEVADDR_SPEC>;
 #[doc = "Field `ADDR` reader - Host assign device address"]
 pub type ADDR_R = crate::FieldReader;
 #[doc = "Field `ADDR` writer - Host assign device address"]
-pub type ADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 7, O>;
+pub type ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 #[doc = "Field `CEN` reader - USB core enable"]
 pub type CEN_R = crate::BitReader;
 #[doc = "Field `CEN` writer - USB core enable"]
-pub type CEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:6 - Host assign device address"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bits 0:6 - Host assign device address"]
     #[inline(always)]
     #[must_use]
-    pub fn addr(&mut self) -> ADDR_W<DEVADDR_SPEC, 0> {
-        ADDR_W::new(self)
+    pub fn addr(&mut self) -> ADDR_W<DEVADDR_SPEC> {
+        ADDR_W::new(self, 0)
     }
     #[doc = "Bit 7 - USB core enable"]
     #[inline(always)]
     #[must_use]
-    pub fn cen(&mut self) -> CEN_W<DEVADDR_SPEC, 7> {
-        CEN_W::new(self)
+    pub fn cen(&mut self) -> CEN_W<DEVADDR_SPEC> {
+        CEN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

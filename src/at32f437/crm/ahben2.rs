@@ -5,15 +5,15 @@ pub type W = crate::W<AHBEN2_SPEC>;
 #[doc = "Field `DVP` reader - DVP clock enable"]
 pub type DVP_R = crate::BitReader;
 #[doc = "Field `DVP` writer - DVP clock enable"]
-pub type DVP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DVP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OTGFS1` reader - OTGFS1 clock enable"]
 pub type OTGFS1_R = crate::BitReader;
 #[doc = "Field `OTGFS1` writer - OTGFS1 clock enable"]
-pub type OTGFS1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OTGFS1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SDIO1` reader - SDIO1 clock enable"]
 pub type SDIO1_R = crate::BitReader;
 #[doc = "Field `SDIO1` writer - SDIO1 clock enable"]
-pub type SDIO1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type SDIO1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - DVP clock enable"]
     #[inline(always)]
@@ -49,20 +49,20 @@ impl W {
     #[doc = "Bit 0 - DVP clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dvp(&mut self) -> DVP_W<AHBEN2_SPEC, 0> {
-        DVP_W::new(self)
+    pub fn dvp(&mut self) -> DVP_W<AHBEN2_SPEC> {
+        DVP_W::new(self, 0)
     }
     #[doc = "Bit 7 - OTGFS1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn otgfs1(&mut self) -> OTGFS1_W<AHBEN2_SPEC, 7> {
-        OTGFS1_W::new(self)
+    pub fn otgfs1(&mut self) -> OTGFS1_W<AHBEN2_SPEC> {
+        OTGFS1_W::new(self, 7)
     }
     #[doc = "Bit 15 - SDIO1 clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sdio1(&mut self) -> SDIO1_W<AHBEN2_SPEC, 15> {
-        SDIO1_W::new(self)
+    pub fn sdio1(&mut self) -> SDIO1_W<AHBEN2_SPEC> {
+        SDIO1_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

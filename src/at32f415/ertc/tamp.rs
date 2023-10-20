@@ -5,39 +5,39 @@ pub type W = crate::W<TAMP_SPEC>;
 #[doc = "Field `TP1EN` reader - Tamper detection 1 enable"]
 pub type TP1EN_R = crate::BitReader;
 #[doc = "Field `TP1EN` writer - Tamper detection 1 enable"]
-pub type TP1EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TP1EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TP1EDG` reader - Tamper detection 1 valid edge"]
 pub type TP1EDG_R = crate::BitReader;
 #[doc = "Field `TP1EDG` writer - Tamper detection 1 valid edge"]
-pub type TP1EDG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TP1EDG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TPIEN` reader - Tamper detection interrupt enable"]
 pub type TPIEN_R = crate::BitReader;
 #[doc = "Field `TPIEN` writer - Tamper detection interrupt enable"]
-pub type TPIEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TPIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TPTSEN` reader - Tamper detection timestamp enable"]
 pub type TPTSEN_R = crate::BitReader;
 #[doc = "Field `TPTSEN` writer - Tamper detection timestamp enable"]
-pub type TPTSEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TPTSEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TPFREQ` reader - Tamper detection frequency"]
 pub type TPFREQ_R = crate::FieldReader;
 #[doc = "Field `TPFREQ` writer - Tamper detection frequency"]
-pub type TPFREQ_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
+pub type TPFREQ_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 #[doc = "Field `TPFLT` reader - Tamper detection filter time"]
 pub type TPFLT_R = crate::FieldReader;
 #[doc = "Field `TPFLT` writer - Tamper detection filter time"]
-pub type TPFLT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TPFLT_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TPPR` reader - Tamper detection pre-charge time"]
 pub type TPPR_R = crate::FieldReader;
 #[doc = "Field `TPPR` writer - Tamper detection pre-charge time"]
-pub type TPPR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type TPPR_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `TPPU` reader - Tamper detection pull-up"]
 pub type TPPU_R = crate::BitReader;
 #[doc = "Field `TPPU` writer - Tamper detection pull-up"]
-pub type TPPU_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TPPU_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUTTYPE` reader - Output type"]
 pub type OUTTYPE_R = crate::BitReader;
 #[doc = "Field `OUTTYPE` writer - Output type"]
-pub type OUTTYPE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type OUTTYPE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Tamper detection 1 enable"]
     #[inline(always)]
@@ -109,56 +109,56 @@ impl W {
     #[doc = "Bit 0 - Tamper detection 1 enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tp1en(&mut self) -> TP1EN_W<TAMP_SPEC, 0> {
-        TP1EN_W::new(self)
+    pub fn tp1en(&mut self) -> TP1EN_W<TAMP_SPEC> {
+        TP1EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Tamper detection 1 valid edge"]
     #[inline(always)]
     #[must_use]
-    pub fn tp1edg(&mut self) -> TP1EDG_W<TAMP_SPEC, 1> {
-        TP1EDG_W::new(self)
+    pub fn tp1edg(&mut self) -> TP1EDG_W<TAMP_SPEC> {
+        TP1EDG_W::new(self, 1)
     }
     #[doc = "Bit 2 - Tamper detection interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tpien(&mut self) -> TPIEN_W<TAMP_SPEC, 2> {
-        TPIEN_W::new(self)
+    pub fn tpien(&mut self) -> TPIEN_W<TAMP_SPEC> {
+        TPIEN_W::new(self, 2)
     }
     #[doc = "Bit 7 - Tamper detection timestamp enable"]
     #[inline(always)]
     #[must_use]
-    pub fn tptsen(&mut self) -> TPTSEN_W<TAMP_SPEC, 7> {
-        TPTSEN_W::new(self)
+    pub fn tptsen(&mut self) -> TPTSEN_W<TAMP_SPEC> {
+        TPTSEN_W::new(self, 7)
     }
     #[doc = "Bits 8:10 - Tamper detection frequency"]
     #[inline(always)]
     #[must_use]
-    pub fn tpfreq(&mut self) -> TPFREQ_W<TAMP_SPEC, 8> {
-        TPFREQ_W::new(self)
+    pub fn tpfreq(&mut self) -> TPFREQ_W<TAMP_SPEC> {
+        TPFREQ_W::new(self, 8)
     }
     #[doc = "Bits 11:12 - Tamper detection filter time"]
     #[inline(always)]
     #[must_use]
-    pub fn tpflt(&mut self) -> TPFLT_W<TAMP_SPEC, 11> {
-        TPFLT_W::new(self)
+    pub fn tpflt(&mut self) -> TPFLT_W<TAMP_SPEC> {
+        TPFLT_W::new(self, 11)
     }
     #[doc = "Bits 13:14 - Tamper detection pre-charge time"]
     #[inline(always)]
     #[must_use]
-    pub fn tppr(&mut self) -> TPPR_W<TAMP_SPEC, 13> {
-        TPPR_W::new(self)
+    pub fn tppr(&mut self) -> TPPR_W<TAMP_SPEC> {
+        TPPR_W::new(self, 13)
     }
     #[doc = "Bit 15 - Tamper detection pull-up"]
     #[inline(always)]
     #[must_use]
-    pub fn tppu(&mut self) -> TPPU_W<TAMP_SPEC, 15> {
-        TPPU_W::new(self)
+    pub fn tppu(&mut self) -> TPPU_W<TAMP_SPEC> {
+        TPPU_W::new(self, 15)
     }
     #[doc = "Bit 18 - Output type"]
     #[inline(always)]
     #[must_use]
-    pub fn outtype(&mut self) -> OUTTYPE_W<TAMP_SPEC, 18> {
-        OUTTYPE_W::new(self)
+    pub fn outtype(&mut self) -> OUTTYPE_W<TAMP_SPEC> {
+        OUTTYPE_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

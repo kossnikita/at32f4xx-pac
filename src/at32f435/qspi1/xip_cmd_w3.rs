@@ -5,11 +5,11 @@ pub type W = crate::W<XIP_CMD_W3_SPEC>;
 #[doc = "Field `BYPASSC` reader - Bypass cache function"]
 pub type BYPASSC_R = crate::BitReader;
 #[doc = "Field `BYPASSC` writer - Bypass cache function"]
-pub type BYPASSC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BYPASSC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CSTS` reader - Cache status"]
 pub type CSTS_R = crate::BitReader;
 #[doc = "Field `CSTS` writer - Cache status"]
-pub type CSTS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSTS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Bypass cache function"]
     #[inline(always)]
@@ -39,14 +39,14 @@ impl W {
     #[doc = "Bit 0 - Bypass cache function"]
     #[inline(always)]
     #[must_use]
-    pub fn bypassc(&mut self) -> BYPASSC_W<XIP_CMD_W3_SPEC, 0> {
-        BYPASSC_W::new(self)
+    pub fn bypassc(&mut self) -> BYPASSC_W<XIP_CMD_W3_SPEC> {
+        BYPASSC_W::new(self, 0)
     }
     #[doc = "Bit 3 - Cache status"]
     #[inline(always)]
     #[must_use]
-    pub fn csts(&mut self) -> CSTS_W<XIP_CMD_W3_SPEC, 3> {
-        CSTS_W::new(self)
+    pub fn csts(&mut self) -> CSTS_W<XIP_CMD_W3_SPEC> {
+        CSTS_W::new(self, 3)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

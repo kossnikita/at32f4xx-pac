@@ -5,19 +5,19 @@ pub type W = crate::W<HCTSIZ6_SPEC>;
 #[doc = "Field `XFERSIZE` reader - Transfer size"]
 pub type XFERSIZE_R = crate::FieldReader<u32>;
 #[doc = "Field `XFERSIZE` writer - Transfer size"]
-pub type XFERSIZE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 19, O, u32>;
+pub type XFERSIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 19, u32>;
 #[doc = "Field `PKTCNT` reader - Packet count"]
 pub type PKTCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `PKTCNT` writer - Packet count"]
-pub type PKTCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
+pub type PKTCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 #[doc = "Field `PID` reader - PID"]
 pub type PID_R = crate::FieldReader;
 #[doc = "Field `PID` writer - PID"]
-pub type PID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type PID_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DOPNG` reader - Do Ping"]
 pub type DOPNG_R = crate::BitReader;
 #[doc = "Field `DOPNG` writer - Do Ping"]
-pub type DOPNG_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type DOPNG_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:18 - Transfer size"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:18 - Transfer size"]
     #[inline(always)]
     #[must_use]
-    pub fn xfersize(&mut self) -> XFERSIZE_W<HCTSIZ6_SPEC, 0> {
-        XFERSIZE_W::new(self)
+    pub fn xfersize(&mut self) -> XFERSIZE_W<HCTSIZ6_SPEC> {
+        XFERSIZE_W::new(self, 0)
     }
     #[doc = "Bits 19:28 - Packet count"]
     #[inline(always)]
     #[must_use]
-    pub fn pktcnt(&mut self) -> PKTCNT_W<HCTSIZ6_SPEC, 19> {
-        PKTCNT_W::new(self)
+    pub fn pktcnt(&mut self) -> PKTCNT_W<HCTSIZ6_SPEC> {
+        PKTCNT_W::new(self, 19)
     }
     #[doc = "Bits 29:30 - PID"]
     #[inline(always)]
     #[must_use]
-    pub fn pid(&mut self) -> PID_W<HCTSIZ6_SPEC, 29> {
-        PID_W::new(self)
+    pub fn pid(&mut self) -> PID_W<HCTSIZ6_SPEC> {
+        PID_W::new(self, 29)
     }
     #[doc = "Bit 31 - Do Ping"]
     #[inline(always)]
     #[must_use]
-    pub fn dopng(&mut self) -> DOPNG_W<HCTSIZ6_SPEC, 31> {
-        DOPNG_W::new(self)
+    pub fn dopng(&mut self) -> DOPNG_W<HCTSIZ6_SPEC> {
+        DOPNG_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

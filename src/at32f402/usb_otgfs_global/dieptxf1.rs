@@ -5,11 +5,11 @@ pub type W = crate::W<DIEPTXF1_SPEC>;
 #[doc = "Field `INEPTXFSTADDR` reader - IN endpoint FIFO1 transmit RAM start address"]
 pub type INEPTXFSTADDR_R = crate::FieldReader<u16>;
 #[doc = "Field `INEPTXFSTADDR` writer - IN endpoint FIFO1 transmit RAM start address"]
-pub type INEPTXFSTADDR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type INEPTXFSTADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `INEPTXFDEP` reader - IN endpoint TxFIFO depth"]
 pub type INEPTXFDEP_R = crate::FieldReader<u16>;
 #[doc = "Field `INEPTXFDEP` writer - IN endpoint TxFIFO depth"]
-pub type INEPTXFDEP_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
+pub type INEPTXFDEP_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - IN endpoint FIFO1 transmit RAM start address"]
     #[inline(always)]
@@ -42,14 +42,14 @@ impl W {
     #[doc = "Bits 0:15 - IN endpoint FIFO1 transmit RAM start address"]
     #[inline(always)]
     #[must_use]
-    pub fn ineptxfstaddr(&mut self) -> INEPTXFSTADDR_W<DIEPTXF1_SPEC, 0> {
-        INEPTXFSTADDR_W::new(self)
+    pub fn ineptxfstaddr(&mut self) -> INEPTXFSTADDR_W<DIEPTXF1_SPEC> {
+        INEPTXFSTADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - IN endpoint TxFIFO depth"]
     #[inline(always)]
     #[must_use]
-    pub fn ineptxfdep(&mut self) -> INEPTXFDEP_W<DIEPTXF1_SPEC, 16> {
-        INEPTXFDEP_W::new(self)
+    pub fn ineptxfdep(&mut self) -> INEPTXFDEP_W<DIEPTXF1_SPEC> {
+        INEPTXFDEP_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

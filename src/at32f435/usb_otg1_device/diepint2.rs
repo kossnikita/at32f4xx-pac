@@ -5,23 +5,23 @@ pub type W = crate::W<DIEPINT2_SPEC>;
 #[doc = "Field `XFERC` reader - Transfer completed interrupt"]
 pub type XFERC_R = crate::BitReader;
 #[doc = "Field `XFERC` writer - Transfer completed interrupt"]
-pub type XFERC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type XFERC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EPTDISD` reader - Endpoint disabled interrupt"]
 pub type EPTDISD_R = crate::BitReader;
 #[doc = "Field `EPTDISD` writer - Endpoint disabled interrupt"]
-pub type EPTDISD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EPTDISD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TIMEOUT` reader - Timeout condition"]
 pub type TIMEOUT_R = crate::BitReader;
 #[doc = "Field `TIMEOUT` writer - Timeout condition"]
-pub type TIMEOUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type TIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTKNTXFEMP` reader - IN token received when TxFIFO is empty"]
 pub type INTKNTXFEMP_R = crate::BitReader;
 #[doc = "Field `INTKNTXFEMP` writer - IN token received when TxFIFO is empty"]
-pub type INTKNTXFEMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INTKNTXFEMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INEPTNAK` reader - IN endpoint NAK effective"]
 pub type INEPTNAK_R = crate::BitReader;
 #[doc = "Field `INEPTNAK` writer - IN endpoint NAK effective"]
-pub type INEPTNAK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INEPTNAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TXFEMP` reader - Transmit FIFO empty"]
 pub type TXFEMP_R = crate::BitReader;
 impl R {
@@ -77,32 +77,32 @@ impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn xferc(&mut self) -> XFERC_W<DIEPINT2_SPEC, 0> {
-        XFERC_W::new(self)
+    pub fn xferc(&mut self) -> XFERC_W<DIEPINT2_SPEC> {
+        XFERC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt"]
     #[inline(always)]
     #[must_use]
-    pub fn eptdisd(&mut self) -> EPTDISD_W<DIEPINT2_SPEC, 1> {
-        EPTDISD_W::new(self)
+    pub fn eptdisd(&mut self) -> EPTDISD_W<DIEPINT2_SPEC> {
+        EPTDISD_W::new(self, 1)
     }
     #[doc = "Bit 3 - Timeout condition"]
     #[inline(always)]
     #[must_use]
-    pub fn timeout(&mut self) -> TIMEOUT_W<DIEPINT2_SPEC, 3> {
-        TIMEOUT_W::new(self)
+    pub fn timeout(&mut self) -> TIMEOUT_W<DIEPINT2_SPEC> {
+        TIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - IN token received when TxFIFO is empty"]
     #[inline(always)]
     #[must_use]
-    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<DIEPINT2_SPEC, 4> {
-        INTKNTXFEMP_W::new(self)
+    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<DIEPINT2_SPEC> {
+        INTKNTXFEMP_W::new(self, 4)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective"]
     #[inline(always)]
     #[must_use]
-    pub fn ineptnak(&mut self) -> INEPTNAK_W<DIEPINT2_SPEC, 6> {
-        INEPTNAK_W::new(self)
+    pub fn ineptnak(&mut self) -> INEPTNAK_W<DIEPINT2_SPEC> {
+        INEPTNAK_W::new(self, 6)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

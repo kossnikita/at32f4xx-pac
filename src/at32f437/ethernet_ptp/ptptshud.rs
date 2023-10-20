@@ -5,7 +5,7 @@ pub type W = crate::W<PTPTSHUD_SPEC>;
 #[doc = "Field `TS` reader - Timestamp second"]
 pub type TS_R = crate::FieldReader<u32>;
 #[doc = "Field `TS` writer - Timestamp second"]
-pub type TS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type TS_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Timestamp second"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bits 0:31 - Timestamp second"]
     #[inline(always)]
     #[must_use]
-    pub fn ts(&mut self) -> TS_W<PTPTSHUD_SPEC, 0> {
-        TS_W::new(self)
+    pub fn ts(&mut self) -> TS_W<PTPTSHUD_SPEC> {
+        TS_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

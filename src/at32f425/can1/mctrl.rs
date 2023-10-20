@@ -53,8 +53,8 @@ impl From<FZENW_AW> for bool {
     }
 }
 #[doc = "Field `FZEN` writer - Freeze mode enable"]
-pub type FZEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, FZENW_AW>;
-impl<'a, REG, const O: u8> FZEN_W<'a, REG, O>
+pub type FZEN_W<'a, REG> = crate::BitWriter<'a, REG, FZENW_AW>;
+impl<'a, REG> FZEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -120,8 +120,8 @@ impl From<DZENW_AW> for bool {
     }
 }
 #[doc = "Field `DZEN` writer - Doze mode enable"]
-pub type DZEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, DZENW_AW>;
-impl<'a, REG, const O: u8> DZEN_W<'a, REG, O>
+pub type DZEN_W<'a, REG> = crate::BitWriter<'a, REG, DZENW_AW>;
+impl<'a, REG> DZEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -173,8 +173,8 @@ impl MMSSR_R {
     }
 }
 #[doc = "Field `MMSSR` writer - Multiple message sending sequence rule"]
-pub type MMSSR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MMSSR_A>;
-impl<'a, REG, const O: u8> MMSSR_W<'a, REG, O>
+pub type MMSSR_W<'a, REG> = crate::BitWriter<'a, REG, MMSSR_A>;
+impl<'a, REG> MMSSR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -226,8 +226,8 @@ impl MDRSEL_R {
     }
 }
 #[doc = "Field `MDRSEL` writer - Message discarding rule select when overflow"]
-pub type MDRSEL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MDRSEL_A>;
-impl<'a, REG, const O: u8> MDRSEL_W<'a, REG, O>
+pub type MDRSEL_W<'a, REG> = crate::BitWriter<'a, REG, MDRSEL_A>;
+impl<'a, REG> MDRSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -293,8 +293,8 @@ impl From<PRSFENW_AW> for bool {
     }
 }
 #[doc = "Field `PRSFEN` writer - Prohibit retransmission when sending fails enable"]
-pub type PRSFEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PRSFENW_AW>;
-impl<'a, REG, const O: u8> PRSFEN_W<'a, REG, O>
+pub type PRSFEN_W<'a, REG> = crate::BitWriter<'a, REG, PRSFENW_AW>;
+impl<'a, REG> PRSFEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -360,8 +360,8 @@ impl From<AEDENW_AW> for bool {
     }
 }
 #[doc = "Field `AEDEN` writer - Automatic exit doze mode enable"]
-pub type AEDEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, AEDENW_AW>;
-impl<'a, REG, const O: u8> AEDEN_W<'a, REG, O>
+pub type AEDEN_W<'a, REG> = crate::BitWriter<'a, REG, AEDENW_AW>;
+impl<'a, REG> AEDEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -427,8 +427,8 @@ impl From<AEBOENW_AW> for bool {
     }
 }
 #[doc = "Field `AEBOEN` writer - Automatic exit bus-off enable"]
-pub type AEBOEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, AEBOENW_AW>;
-impl<'a, REG, const O: u8> AEBOEN_W<'a, REG, O>
+pub type AEBOEN_W<'a, REG> = crate::BitWriter<'a, REG, AEBOENW_AW>;
+impl<'a, REG> AEBOEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -494,8 +494,8 @@ impl From<TTCENW_AW> for bool {
     }
 }
 #[doc = "Field `TTCEN` writer - Time triggered communication mode enable"]
-pub type TTCEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TTCENW_AW>;
-impl<'a, REG, const O: u8> TTCEN_W<'a, REG, O>
+pub type TTCEN_W<'a, REG> = crate::BitWriter<'a, REG, TTCENW_AW>;
+impl<'a, REG> TTCEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -559,8 +559,8 @@ impl From<SPRSTW_AW> for bool {
     }
 }
 #[doc = "Field `SPRST` writer - Software partial reset"]
-pub type SPRST_W<'a, REG, const O: u8> = crate::BitWriter1S<'a, REG, O, SPRSTW_AW>;
-impl<'a, REG, const O: u8> SPRST_W<'a, REG, O>
+pub type SPRST_W<'a, REG> = crate::BitWriter1S<'a, REG, SPRSTW_AW>;
+impl<'a, REG> SPRST_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -607,8 +607,8 @@ impl PTD_R {
     }
 }
 #[doc = "Field `PTD` writer - Prohibit transmission when debug"]
-pub type PTD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, PTD_A>;
-impl<'a, REG, const O: u8> PTD_W<'a, REG, O>
+pub type PTD_W<'a, REG> = crate::BitWriter<'a, REG, PTD_A>;
+impl<'a, REG> PTD_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -700,62 +700,62 @@ impl W {
     #[doc = "Bit 0 - Freeze mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn fzen(&mut self) -> FZEN_W<MCTRL_SPEC, 0> {
-        FZEN_W::new(self)
+    pub fn fzen(&mut self) -> FZEN_W<MCTRL_SPEC> {
+        FZEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Doze mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dzen(&mut self) -> DZEN_W<MCTRL_SPEC, 1> {
-        DZEN_W::new(self)
+    pub fn dzen(&mut self) -> DZEN_W<MCTRL_SPEC> {
+        DZEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Multiple message sending sequence rule"]
     #[inline(always)]
     #[must_use]
-    pub fn mmssr(&mut self) -> MMSSR_W<MCTRL_SPEC, 2> {
-        MMSSR_W::new(self)
+    pub fn mmssr(&mut self) -> MMSSR_W<MCTRL_SPEC> {
+        MMSSR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Message discarding rule select when overflow"]
     #[inline(always)]
     #[must_use]
-    pub fn mdrsel(&mut self) -> MDRSEL_W<MCTRL_SPEC, 3> {
-        MDRSEL_W::new(self)
+    pub fn mdrsel(&mut self) -> MDRSEL_W<MCTRL_SPEC> {
+        MDRSEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - Prohibit retransmission when sending fails enable"]
     #[inline(always)]
     #[must_use]
-    pub fn prsfen(&mut self) -> PRSFEN_W<MCTRL_SPEC, 4> {
-        PRSFEN_W::new(self)
+    pub fn prsfen(&mut self) -> PRSFEN_W<MCTRL_SPEC> {
+        PRSFEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Automatic exit doze mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn aeden(&mut self) -> AEDEN_W<MCTRL_SPEC, 5> {
-        AEDEN_W::new(self)
+    pub fn aeden(&mut self) -> AEDEN_W<MCTRL_SPEC> {
+        AEDEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Automatic exit bus-off enable"]
     #[inline(always)]
     #[must_use]
-    pub fn aeboen(&mut self) -> AEBOEN_W<MCTRL_SPEC, 6> {
-        AEBOEN_W::new(self)
+    pub fn aeboen(&mut self) -> AEBOEN_W<MCTRL_SPEC> {
+        AEBOEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Time triggered communication mode enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ttcen(&mut self) -> TTCEN_W<MCTRL_SPEC, 7> {
-        TTCEN_W::new(self)
+    pub fn ttcen(&mut self) -> TTCEN_W<MCTRL_SPEC> {
+        TTCEN_W::new(self, 7)
     }
     #[doc = "Bit 15 - Software partial reset"]
     #[inline(always)]
     #[must_use]
-    pub fn sprst(&mut self) -> SPRST_W<MCTRL_SPEC, 15> {
-        SPRST_W::new(self)
+    pub fn sprst(&mut self) -> SPRST_W<MCTRL_SPEC> {
+        SPRST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Prohibit transmission when debug"]
     #[inline(always)]
     #[must_use]
-    pub fn ptd(&mut self) -> PTD_W<MCTRL_SPEC, 16> {
-        PTD_W::new(self)
+    pub fn ptd(&mut self) -> PTD_W<MCTRL_SPEC> {
+        PTD_W::new(self, 16)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

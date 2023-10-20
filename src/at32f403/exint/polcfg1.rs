@@ -5,79 +5,79 @@ pub type W = crate::W<POLCFG1_SPEC>;
 #[doc = "Field `RP0` reader - Rising polarity configuration bit of line 0"]
 pub type RP0_R = crate::BitReader;
 #[doc = "Field `RP0` writer - Rising polarity configuration bit of line 0"]
-pub type RP0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP1` reader - Rising polarity configuration bit of line 1"]
 pub type RP1_R = crate::BitReader;
 #[doc = "Field `RP1` writer - Rising polarity configuration bit of line 1"]
-pub type RP1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP2` reader - Rising polarity configuration bit of line 2"]
 pub type RP2_R = crate::BitReader;
 #[doc = "Field `RP2` writer - Rising polarity configuration bit of line 2"]
-pub type RP2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP3` reader - Rising polarity configuration bit of line 3"]
 pub type RP3_R = crate::BitReader;
 #[doc = "Field `RP3` writer - Rising polarity configuration bit of line 3"]
-pub type RP3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP4` reader - Rising polarity configuration bit of line 4"]
 pub type RP4_R = crate::BitReader;
 #[doc = "Field `RP4` writer - Rising polarity configuration bit of line 4"]
-pub type RP4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP5` reader - Rising polarity configuration bit of line 5"]
 pub type RP5_R = crate::BitReader;
 #[doc = "Field `RP5` writer - Rising polarity configuration bit of line 5"]
-pub type RP5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP6` reader - Rising polarity configuration bit of linee 6"]
 pub type RP6_R = crate::BitReader;
 #[doc = "Field `RP6` writer - Rising polarity configuration bit of linee 6"]
-pub type RP6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP6_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP7` reader - Rising polarity configuration bit of line 7"]
 pub type RP7_R = crate::BitReader;
 #[doc = "Field `RP7` writer - Rising polarity configuration bit of line 7"]
-pub type RP7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP7_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP8` reader - Rising polarity configuration bit of line 8"]
 pub type RP8_R = crate::BitReader;
 #[doc = "Field `RP8` writer - Rising polarity configuration bit of line 8"]
-pub type RP8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP8_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP9` reader - Rising polarity configuration bit of line 9"]
 pub type RP9_R = crate::BitReader;
 #[doc = "Field `RP9` writer - Rising polarity configuration bit of line 9"]
-pub type RP9_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP9_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP10` reader - Rising polarity configuration bit of line 10"]
 pub type RP10_R = crate::BitReader;
 #[doc = "Field `RP10` writer - Rising polarity configuration bit of line 10"]
-pub type RP10_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP11` reader - Rising polarity configuration bit of line 11"]
 pub type RP11_R = crate::BitReader;
 #[doc = "Field `RP11` writer - Rising polarity configuration bit of line 11"]
-pub type RP11_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP11_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP12` reader - Rising polarity configuration bit of line 12"]
 pub type RP12_R = crate::BitReader;
 #[doc = "Field `RP12` writer - Rising polarity configuration bit of line 12"]
-pub type RP12_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP12_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP13` reader - Rising polarity configuration bit of line 13"]
 pub type RP13_R = crate::BitReader;
 #[doc = "Field `RP13` writer - Rising polarity configuration bit of line 13"]
-pub type RP13_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP13_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP14` reader - Rising polarity configuration bit of line 14"]
 pub type RP14_R = crate::BitReader;
 #[doc = "Field `RP14` writer - Rising polarity configuration bit of line 14"]
-pub type RP14_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP14_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP15` reader - Rising polarity configuration bit of line 15"]
 pub type RP15_R = crate::BitReader;
 #[doc = "Field `RP15` writer - Rising polarity configuration bit of line 15"]
-pub type RP15_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP15_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP16` reader - Rising polarity configuration bit of line 16"]
 pub type RP16_R = crate::BitReader;
 #[doc = "Field `RP16` writer - Rising polarity configuration bit of line 16"]
-pub type RP16_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP16_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP17` reader - Rising polarity configuration bit of line 17"]
 pub type RP17_R = crate::BitReader;
 #[doc = "Field `RP17` writer - Rising polarity configuration bit of line 17"]
-pub type RP17_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP17_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RP18` reader - Rising polarity configuration bit of line 18"]
 pub type RP18_R = crate::BitReader;
 #[doc = "Field `RP18` writer - Rising polarity configuration bit of line 18"]
-pub type RP18_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RP18_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Rising polarity configuration bit of line 0"]
     #[inline(always)]
@@ -209,116 +209,116 @@ impl W {
     #[doc = "Bit 0 - Rising polarity configuration bit of line 0"]
     #[inline(always)]
     #[must_use]
-    pub fn rp0(&mut self) -> RP0_W<POLCFG1_SPEC, 0> {
-        RP0_W::new(self)
+    pub fn rp0(&mut self) -> RP0_W<POLCFG1_SPEC> {
+        RP0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Rising polarity configuration bit of line 1"]
     #[inline(always)]
     #[must_use]
-    pub fn rp1(&mut self) -> RP1_W<POLCFG1_SPEC, 1> {
-        RP1_W::new(self)
+    pub fn rp1(&mut self) -> RP1_W<POLCFG1_SPEC> {
+        RP1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Rising polarity configuration bit of line 2"]
     #[inline(always)]
     #[must_use]
-    pub fn rp2(&mut self) -> RP2_W<POLCFG1_SPEC, 2> {
-        RP2_W::new(self)
+    pub fn rp2(&mut self) -> RP2_W<POLCFG1_SPEC> {
+        RP2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Rising polarity configuration bit of line 3"]
     #[inline(always)]
     #[must_use]
-    pub fn rp3(&mut self) -> RP3_W<POLCFG1_SPEC, 3> {
-        RP3_W::new(self)
+    pub fn rp3(&mut self) -> RP3_W<POLCFG1_SPEC> {
+        RP3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Rising polarity configuration bit of line 4"]
     #[inline(always)]
     #[must_use]
-    pub fn rp4(&mut self) -> RP4_W<POLCFG1_SPEC, 4> {
-        RP4_W::new(self)
+    pub fn rp4(&mut self) -> RP4_W<POLCFG1_SPEC> {
+        RP4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Rising polarity configuration bit of line 5"]
     #[inline(always)]
     #[must_use]
-    pub fn rp5(&mut self) -> RP5_W<POLCFG1_SPEC, 5> {
-        RP5_W::new(self)
+    pub fn rp5(&mut self) -> RP5_W<POLCFG1_SPEC> {
+        RP5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Rising polarity configuration bit of linee 6"]
     #[inline(always)]
     #[must_use]
-    pub fn rp6(&mut self) -> RP6_W<POLCFG1_SPEC, 6> {
-        RP6_W::new(self)
+    pub fn rp6(&mut self) -> RP6_W<POLCFG1_SPEC> {
+        RP6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Rising polarity configuration bit of line 7"]
     #[inline(always)]
     #[must_use]
-    pub fn rp7(&mut self) -> RP7_W<POLCFG1_SPEC, 7> {
-        RP7_W::new(self)
+    pub fn rp7(&mut self) -> RP7_W<POLCFG1_SPEC> {
+        RP7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Rising polarity configuration bit of line 8"]
     #[inline(always)]
     #[must_use]
-    pub fn rp8(&mut self) -> RP8_W<POLCFG1_SPEC, 8> {
-        RP8_W::new(self)
+    pub fn rp8(&mut self) -> RP8_W<POLCFG1_SPEC> {
+        RP8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Rising polarity configuration bit of line 9"]
     #[inline(always)]
     #[must_use]
-    pub fn rp9(&mut self) -> RP9_W<POLCFG1_SPEC, 9> {
-        RP9_W::new(self)
+    pub fn rp9(&mut self) -> RP9_W<POLCFG1_SPEC> {
+        RP9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Rising polarity configuration bit of line 10"]
     #[inline(always)]
     #[must_use]
-    pub fn rp10(&mut self) -> RP10_W<POLCFG1_SPEC, 10> {
-        RP10_W::new(self)
+    pub fn rp10(&mut self) -> RP10_W<POLCFG1_SPEC> {
+        RP10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Rising polarity configuration bit of line 11"]
     #[inline(always)]
     #[must_use]
-    pub fn rp11(&mut self) -> RP11_W<POLCFG1_SPEC, 11> {
-        RP11_W::new(self)
+    pub fn rp11(&mut self) -> RP11_W<POLCFG1_SPEC> {
+        RP11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Rising polarity configuration bit of line 12"]
     #[inline(always)]
     #[must_use]
-    pub fn rp12(&mut self) -> RP12_W<POLCFG1_SPEC, 12> {
-        RP12_W::new(self)
+    pub fn rp12(&mut self) -> RP12_W<POLCFG1_SPEC> {
+        RP12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Rising polarity configuration bit of line 13"]
     #[inline(always)]
     #[must_use]
-    pub fn rp13(&mut self) -> RP13_W<POLCFG1_SPEC, 13> {
-        RP13_W::new(self)
+    pub fn rp13(&mut self) -> RP13_W<POLCFG1_SPEC> {
+        RP13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Rising polarity configuration bit of line 14"]
     #[inline(always)]
     #[must_use]
-    pub fn rp14(&mut self) -> RP14_W<POLCFG1_SPEC, 14> {
-        RP14_W::new(self)
+    pub fn rp14(&mut self) -> RP14_W<POLCFG1_SPEC> {
+        RP14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Rising polarity configuration bit of line 15"]
     #[inline(always)]
     #[must_use]
-    pub fn rp15(&mut self) -> RP15_W<POLCFG1_SPEC, 15> {
-        RP15_W::new(self)
+    pub fn rp15(&mut self) -> RP15_W<POLCFG1_SPEC> {
+        RP15_W::new(self, 15)
     }
     #[doc = "Bit 16 - Rising polarity configuration bit of line 16"]
     #[inline(always)]
     #[must_use]
-    pub fn rp16(&mut self) -> RP16_W<POLCFG1_SPEC, 16> {
-        RP16_W::new(self)
+    pub fn rp16(&mut self) -> RP16_W<POLCFG1_SPEC> {
+        RP16_W::new(self, 16)
     }
     #[doc = "Bit 17 - Rising polarity configuration bit of line 17"]
     #[inline(always)]
     #[must_use]
-    pub fn rp17(&mut self) -> RP17_W<POLCFG1_SPEC, 17> {
-        RP17_W::new(self)
+    pub fn rp17(&mut self) -> RP17_W<POLCFG1_SPEC> {
+        RP17_W::new(self, 17)
     }
     #[doc = "Bit 18 - Rising polarity configuration bit of line 18"]
     #[inline(always)]
     #[must_use]
-    pub fn rp18(&mut self) -> RP18_W<POLCFG1_SPEC, 18> {
-        RP18_W::new(self)
+    pub fn rp18(&mut self) -> RP18_W<POLCFG1_SPEC> {
+        RP18_W::new(self, 18)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

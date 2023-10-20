@@ -195,8 +195,8 @@ impl From<CCERRW_AW> for bool {
     }
 }
 #[doc = "Field `CCERR` writer - CRC calculation error"]
-pub type CCERR_W<'a, REG, const O: u8> = crate::BitWriter0C<'a, REG, O, CCERRW_AW>;
-impl<'a, REG, const O: u8> CCERR_W<'a, REG, O>
+pub type CCERR_W<'a, REG> = crate::BitWriter0C<'a, REG, CCERRW_AW>;
+impl<'a, REG> CCERR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
@@ -317,7 +317,7 @@ impl BF_R {
 #[doc = "Field `CSPAS` reader - CS pulse abnormal setting fiag"]
 pub type CSPAS_R = crate::BitReader;
 #[doc = "Field `CSPAS` writer - CS pulse abnormal setting fiag"]
-pub type CSPAS_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CSPAS_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Receive data buffer full"]
     #[inline(always)]
@@ -389,14 +389,14 @@ impl W {
     #[doc = "Bit 4 - CRC calculation error"]
     #[inline(always)]
     #[must_use]
-    pub fn ccerr(&mut self) -> CCERR_W<STS_SPEC, 4> {
-        CCERR_W::new(self)
+    pub fn ccerr(&mut self) -> CCERR_W<STS_SPEC> {
+        CCERR_W::new(self, 4)
     }
     #[doc = "Bit 8 - CS pulse abnormal setting fiag"]
     #[inline(always)]
     #[must_use]
-    pub fn cspas(&mut self) -> CSPAS_W<STS_SPEC, 8> {
-        CSPAS_W::new(self)
+    pub fn cspas(&mut self) -> CSPAS_W<STS_SPEC> {
+        CSPAS_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

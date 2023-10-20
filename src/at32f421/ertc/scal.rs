@@ -5,19 +5,19 @@ pub type W = crate::W<SCAL_SPEC>;
 #[doc = "Field `DEC` reader - Decrease ERTC clock"]
 pub type DEC_R = crate::FieldReader<u16>;
 #[doc = "Field `DEC` writer - Decrease ERTC clock"]
-pub type DEC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 9, O, u16>;
+pub type DEC_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `CAL16` reader - 16 second calibration period"]
 pub type CAL16_R = crate::BitReader;
 #[doc = "Field `CAL16` writer - 16 second calibration period"]
-pub type CAL16_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAL16_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAL8` reader - 8-second calibration period"]
 pub type CAL8_R = crate::BitReader;
 #[doc = "Field `CAL8` writer - 8-second calibration period"]
-pub type CAL8_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type CAL8_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADD` reader - Add ERTC clock"]
 pub type ADD_R = crate::BitReader;
 #[doc = "Field `ADD` writer - Add ERTC clock"]
-pub type ADD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ADD_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:8 - Decrease ERTC clock"]
     #[inline(always)]
@@ -59,26 +59,26 @@ impl W {
     #[doc = "Bits 0:8 - Decrease ERTC clock"]
     #[inline(always)]
     #[must_use]
-    pub fn dec(&mut self) -> DEC_W<SCAL_SPEC, 0> {
-        DEC_W::new(self)
+    pub fn dec(&mut self) -> DEC_W<SCAL_SPEC> {
+        DEC_W::new(self, 0)
     }
     #[doc = "Bit 13 - 16 second calibration period"]
     #[inline(always)]
     #[must_use]
-    pub fn cal16(&mut self) -> CAL16_W<SCAL_SPEC, 13> {
-        CAL16_W::new(self)
+    pub fn cal16(&mut self) -> CAL16_W<SCAL_SPEC> {
+        CAL16_W::new(self, 13)
     }
     #[doc = "Bit 14 - 8-second calibration period"]
     #[inline(always)]
     #[must_use]
-    pub fn cal8(&mut self) -> CAL8_W<SCAL_SPEC, 14> {
-        CAL8_W::new(self)
+    pub fn cal8(&mut self) -> CAL8_W<SCAL_SPEC> {
+        CAL8_W::new(self, 14)
     }
     #[doc = "Bit 15 - Add ERTC clock"]
     #[inline(always)]
     #[must_use]
-    pub fn add(&mut self) -> ADD_W<SCAL_SPEC, 15> {
-        ADD_W::new(self)
+    pub fn add(&mut self) -> ADD_W<SCAL_SPEC> {
+        ADD_W::new(self, 15)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

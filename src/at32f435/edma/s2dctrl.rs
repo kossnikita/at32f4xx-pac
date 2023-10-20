@@ -5,35 +5,35 @@ pub type W = crate::W<S2DCTRL_SPEC>;
 #[doc = "Field `S1_2DEN` reader - Stream 1 2D transfer enable"]
 pub type S1_2DEN_R = crate::BitReader;
 #[doc = "Field `S1_2DEN` writer - Stream 1 2D transfer enable"]
-pub type S1_2DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type S1_2DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `S2_2DEN` reader - Stream 2 2D transfer enable"]
 pub type S2_2DEN_R = crate::BitReader;
 #[doc = "Field `S2_2DEN` writer - Stream 2 2D transfer enable"]
-pub type S2_2DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type S2_2DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `S3_2DEN` reader - Stream 3 2D transfer enable"]
 pub type S3_2DEN_R = crate::BitReader;
 #[doc = "Field `S3_2DEN` writer - Stream 3 2D transfer enable"]
-pub type S3_2DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type S3_2DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `S4_2DEN` reader - Stream 4 2D transfer enable"]
 pub type S4_2DEN_R = crate::BitReader;
 #[doc = "Field `S4_2DEN` writer - Stream 4 2D transfer enable"]
-pub type S4_2DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type S4_2DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `S5_2DEN` reader - Stream 5 2D transfer enable"]
 pub type S5_2DEN_R = crate::BitReader;
 #[doc = "Field `S5_2DEN` writer - Stream 5 2D transfer enable"]
-pub type S5_2DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type S5_2DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `S6_2DEN` reader - Stream 6 2D transfer enable"]
 pub type S6_2DEN_R = crate::BitReader;
 #[doc = "Field `S6_2DEN` writer - Stream 6 2D transfer enable"]
-pub type S6_2DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type S6_2DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `S7_2DEN` reader - Stream 7 2D transfer enable"]
 pub type S7_2DEN_R = crate::BitReader;
 #[doc = "Field `S7_2DEN` writer - Stream 7 2D transfer enable"]
-pub type S7_2DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type S7_2DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `S8_2DEN` reader - Stream 8 2D transfer enable"]
 pub type S8_2DEN_R = crate::BitReader;
 #[doc = "Field `S8_2DEN` writer - Stream 8 2D transfer enable"]
-pub type S8_2DEN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type S8_2DEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Stream 1 2D transfer enable"]
     #[inline(always)]
@@ -99,50 +99,50 @@ impl W {
     #[doc = "Bit 0 - Stream 1 2D transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn s1_2den(&mut self) -> S1_2DEN_W<S2DCTRL_SPEC, 0> {
-        S1_2DEN_W::new(self)
+    pub fn s1_2den(&mut self) -> S1_2DEN_W<S2DCTRL_SPEC> {
+        S1_2DEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Stream 2 2D transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn s2_2den(&mut self) -> S2_2DEN_W<S2DCTRL_SPEC, 1> {
-        S2_2DEN_W::new(self)
+    pub fn s2_2den(&mut self) -> S2_2DEN_W<S2DCTRL_SPEC> {
+        S2_2DEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Stream 3 2D transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn s3_2den(&mut self) -> S3_2DEN_W<S2DCTRL_SPEC, 2> {
-        S3_2DEN_W::new(self)
+    pub fn s3_2den(&mut self) -> S3_2DEN_W<S2DCTRL_SPEC> {
+        S3_2DEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Stream 4 2D transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn s4_2den(&mut self) -> S4_2DEN_W<S2DCTRL_SPEC, 3> {
-        S4_2DEN_W::new(self)
+    pub fn s4_2den(&mut self) -> S4_2DEN_W<S2DCTRL_SPEC> {
+        S4_2DEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Stream 5 2D transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn s5_2den(&mut self) -> S5_2DEN_W<S2DCTRL_SPEC, 4> {
-        S5_2DEN_W::new(self)
+    pub fn s5_2den(&mut self) -> S5_2DEN_W<S2DCTRL_SPEC> {
+        S5_2DEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Stream 6 2D transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn s6_2den(&mut self) -> S6_2DEN_W<S2DCTRL_SPEC, 5> {
-        S6_2DEN_W::new(self)
+    pub fn s6_2den(&mut self) -> S6_2DEN_W<S2DCTRL_SPEC> {
+        S6_2DEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Stream 7 2D transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn s7_2den(&mut self) -> S7_2DEN_W<S2DCTRL_SPEC, 6> {
-        S7_2DEN_W::new(self)
+    pub fn s7_2den(&mut self) -> S7_2DEN_W<S2DCTRL_SPEC> {
+        S7_2DEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Stream 8 2D transfer enable"]
     #[inline(always)]
     #[must_use]
-    pub fn s8_2den(&mut self) -> S8_2DEN_W<S2DCTRL_SPEC, 7> {
-        S8_2DEN_W::new(self)
+    pub fn s8_2den(&mut self) -> S8_2DEN_W<S2DCTRL_SPEC> {
+        S8_2DEN_W::new(self, 7)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

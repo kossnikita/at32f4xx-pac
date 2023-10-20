@@ -1,7 +1,7 @@
 #[doc = "Register `ADDR` writer"]
 pub type W = crate::W<ADDR_SPEC>;
 #[doc = "Field `FA` writer - Flash Address"]
-pub type FA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 32, O, u32>;
+pub type FA_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl core::fmt::Debug for crate::generic::Reg<ADDR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "(not readable)")
@@ -11,8 +11,8 @@ impl W {
     #[doc = "Bits 0:31 - Flash Address"]
     #[inline(always)]
     #[must_use]
-    pub fn fa(&mut self) -> FA_W<ADDR_SPEC, 0> {
-        FA_W::new(self)
+    pub fn fa(&mut self) -> FA_W<ADDR_SPEC> {
+        FA_W::new(self, 0)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

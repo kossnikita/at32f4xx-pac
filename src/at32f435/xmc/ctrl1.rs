@@ -5,39 +5,39 @@ pub type W = crate::W<CTRL1_SPEC>;
 #[doc = "Field `CA` reader - Number of column address bits"]
 pub type CA_R = crate::FieldReader;
 #[doc = "Field `CA` writer - Number of column address bits"]
-pub type CA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `RA` reader - Number of row address bits"]
 pub type RA_R = crate::FieldReader;
 #[doc = "Field `RA` writer - Number of row address bits"]
-pub type RA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RA_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DB` reader - Memory data bus width"]
 pub type DB_R = crate::FieldReader;
 #[doc = "Field `DB` writer - Memory data bus width"]
-pub type DB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type DB_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `INBK` reader - Number of internal banks"]
 pub type INBK_R = crate::BitReader;
 #[doc = "Field `INBK` writer - Number of internal banks"]
-pub type INBK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type INBK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CAS` reader - CAS latency"]
 pub type CAS_R = crate::FieldReader;
 #[doc = "Field `CAS` writer - CAS latency"]
-pub type CAS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CAS_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `WRP` reader - Write protection"]
 pub type WRP_R = crate::BitReader;
 #[doc = "Field `WRP` writer - Write protection"]
-pub type WRP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type WRP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLKDIV` reader - Clock division configuration"]
 pub type CLKDIV_R = crate::FieldReader;
 #[doc = "Field `CLKDIV` writer - Clock division configuration"]
-pub type CLKDIV_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type CLKDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `BSTR` reader - Burst read"]
 pub type BSTR_R = crate::BitReader;
 #[doc = "Field `BSTR` writer - Burst read"]
-pub type BSTR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type BSTR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RD` reader - Read delay"]
 pub type RD_R = crate::FieldReader;
 #[doc = "Field `RD` writer - Read delay"]
-pub type RD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
+pub type RD_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Bits 0:1 - Number of column address bits"]
     #[inline(always)]
@@ -109,56 +109,56 @@ impl W {
     #[doc = "Bits 0:1 - Number of column address bits"]
     #[inline(always)]
     #[must_use]
-    pub fn ca(&mut self) -> CA_W<CTRL1_SPEC, 0> {
-        CA_W::new(self)
+    pub fn ca(&mut self) -> CA_W<CTRL1_SPEC> {
+        CA_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Number of row address bits"]
     #[inline(always)]
     #[must_use]
-    pub fn ra(&mut self) -> RA_W<CTRL1_SPEC, 2> {
-        RA_W::new(self)
+    pub fn ra(&mut self) -> RA_W<CTRL1_SPEC> {
+        RA_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Memory data bus width"]
     #[inline(always)]
     #[must_use]
-    pub fn db(&mut self) -> DB_W<CTRL1_SPEC, 4> {
-        DB_W::new(self)
+    pub fn db(&mut self) -> DB_W<CTRL1_SPEC> {
+        DB_W::new(self, 4)
     }
     #[doc = "Bit 6 - Number of internal banks"]
     #[inline(always)]
     #[must_use]
-    pub fn inbk(&mut self) -> INBK_W<CTRL1_SPEC, 6> {
-        INBK_W::new(self)
+    pub fn inbk(&mut self) -> INBK_W<CTRL1_SPEC> {
+        INBK_W::new(self, 6)
     }
     #[doc = "Bits 7:8 - CAS latency"]
     #[inline(always)]
     #[must_use]
-    pub fn cas(&mut self) -> CAS_W<CTRL1_SPEC, 7> {
-        CAS_W::new(self)
+    pub fn cas(&mut self) -> CAS_W<CTRL1_SPEC> {
+        CAS_W::new(self, 7)
     }
     #[doc = "Bit 9 - Write protection"]
     #[inline(always)]
     #[must_use]
-    pub fn wrp(&mut self) -> WRP_W<CTRL1_SPEC, 9> {
-        WRP_W::new(self)
+    pub fn wrp(&mut self) -> WRP_W<CTRL1_SPEC> {
+        WRP_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - Clock division configuration"]
     #[inline(always)]
     #[must_use]
-    pub fn clkdiv(&mut self) -> CLKDIV_W<CTRL1_SPEC, 10> {
-        CLKDIV_W::new(self)
+    pub fn clkdiv(&mut self) -> CLKDIV_W<CTRL1_SPEC> {
+        CLKDIV_W::new(self, 10)
     }
     #[doc = "Bit 12 - Burst read"]
     #[inline(always)]
     #[must_use]
-    pub fn bstr(&mut self) -> BSTR_W<CTRL1_SPEC, 12> {
-        BSTR_W::new(self)
+    pub fn bstr(&mut self) -> BSTR_W<CTRL1_SPEC> {
+        BSTR_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - Read delay"]
     #[inline(always)]
     #[must_use]
-    pub fn rd(&mut self) -> RD_W<CTRL1_SPEC, 13> {
-        RD_W::new(self)
+    pub fn rd(&mut self) -> RD_W<CTRL1_SPEC> {
+        RD_W::new(self, 13)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

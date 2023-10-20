@@ -5,31 +5,31 @@ pub type W = crate::W<MACPMTCTRLSTS_SPEC>;
 #[doc = "Field `PD` reader - Power down"]
 pub type PD_R = crate::BitReader;
 #[doc = "Field `PD` writer - Power down"]
-pub type PD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type PD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EMP` reader - Enable magic packet"]
 pub type EMP_R = crate::BitReader;
 #[doc = "Field `EMP` writer - Enable magic packet"]
-pub type EMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type EMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERWF` reader - Enable remote wakeup frame"]
 pub type ERWF_R = crate::BitReader;
 #[doc = "Field `ERWF` writer - Enable remote wakeup frame"]
-pub type ERWF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type ERWF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RMP` reader - Received magic packet"]
 pub type RMP_R = crate::BitReader;
 #[doc = "Field `RMP` writer - Received magic packet"]
-pub type RMP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RMP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RRWF` reader - Recevied remote wakeup frame"]
 pub type RRWF_R = crate::BitReader;
 #[doc = "Field `RRWF` writer - Recevied remote wakeup frame"]
-pub type RRWF_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RRWF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GUC` reader - Global unicast"]
 pub type GUC_R = crate::BitReader;
 #[doc = "Field `GUC` writer - Global unicast"]
-pub type GUC_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type GUC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RWFFPR` reader - Remote wakeup frame filter register pointer reset"]
 pub type RWFFPR_R = crate::BitReader;
 #[doc = "Field `RWFFPR` writer - Remote wakeup frame filter register pointer reset"]
-pub type RWFFPR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type RWFFPR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Power down"]
     #[inline(always)]
@@ -89,44 +89,44 @@ impl W {
     #[doc = "Bit 0 - Power down"]
     #[inline(always)]
     #[must_use]
-    pub fn pd(&mut self) -> PD_W<MACPMTCTRLSTS_SPEC, 0> {
-        PD_W::new(self)
+    pub fn pd(&mut self) -> PD_W<MACPMTCTRLSTS_SPEC> {
+        PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable magic packet"]
     #[inline(always)]
     #[must_use]
-    pub fn emp(&mut self) -> EMP_W<MACPMTCTRLSTS_SPEC, 1> {
-        EMP_W::new(self)
+    pub fn emp(&mut self) -> EMP_W<MACPMTCTRLSTS_SPEC> {
+        EMP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable remote wakeup frame"]
     #[inline(always)]
     #[must_use]
-    pub fn erwf(&mut self) -> ERWF_W<MACPMTCTRLSTS_SPEC, 2> {
-        ERWF_W::new(self)
+    pub fn erwf(&mut self) -> ERWF_W<MACPMTCTRLSTS_SPEC> {
+        ERWF_W::new(self, 2)
     }
     #[doc = "Bit 5 - Received magic packet"]
     #[inline(always)]
     #[must_use]
-    pub fn rmp(&mut self) -> RMP_W<MACPMTCTRLSTS_SPEC, 5> {
-        RMP_W::new(self)
+    pub fn rmp(&mut self) -> RMP_W<MACPMTCTRLSTS_SPEC> {
+        RMP_W::new(self, 5)
     }
     #[doc = "Bit 6 - Recevied remote wakeup frame"]
     #[inline(always)]
     #[must_use]
-    pub fn rrwf(&mut self) -> RRWF_W<MACPMTCTRLSTS_SPEC, 6> {
-        RRWF_W::new(self)
+    pub fn rrwf(&mut self) -> RRWF_W<MACPMTCTRLSTS_SPEC> {
+        RRWF_W::new(self, 6)
     }
     #[doc = "Bit 9 - Global unicast"]
     #[inline(always)]
     #[must_use]
-    pub fn guc(&mut self) -> GUC_W<MACPMTCTRLSTS_SPEC, 9> {
-        GUC_W::new(self)
+    pub fn guc(&mut self) -> GUC_W<MACPMTCTRLSTS_SPEC> {
+        GUC_W::new(self, 9)
     }
     #[doc = "Bit 31 - Remote wakeup frame filter register pointer reset"]
     #[inline(always)]
     #[must_use]
-    pub fn rwffpr(&mut self) -> RWFFPR_W<MACPMTCTRLSTS_SPEC, 31> {
-        RWFFPR_W::new(self)
+    pub fn rwffpr(&mut self) -> RWFFPR_W<MACPMTCTRLSTS_SPEC> {
+        RWFFPR_W::new(self, 31)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

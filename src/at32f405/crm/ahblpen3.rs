@@ -5,7 +5,7 @@ pub type W = crate::W<AHBLPEN3_SPEC>;
 #[doc = "Field `QSPI1LP` reader - QSPI1 clock enable during sleep mode"]
 pub type QSPI1LP_R = crate::BitReader;
 #[doc = "Field `QSPI1LP` writer - QSPI1 clock enable during sleep mode"]
-pub type QSPI1LP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
+pub type QSPI1LP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - QSPI1 clock enable during sleep mode"]
     #[inline(always)]
@@ -29,8 +29,8 @@ impl W {
     #[doc = "Bit 1 - QSPI1 clock enable during sleep mode"]
     #[inline(always)]
     #[must_use]
-    pub fn qspi1lp(&mut self) -> QSPI1LP_W<AHBLPEN3_SPEC, 1> {
-        QSPI1LP_W::new(self)
+    pub fn qspi1lp(&mut self) -> QSPI1LP_W<AHBLPEN3_SPEC> {
+        QSPI1LP_W::new(self, 1)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]
