@@ -20,7 +20,7 @@ impl W {
         self
     }
 }
-#[doc = "DMA channel %s peripheral base address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`paddr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`paddr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA channel peripheral base address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`paddr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`paddr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PADDR_SPEC;
 impl crate::RegisterSpec for PADDR_SPEC {
     type Ux = u32;

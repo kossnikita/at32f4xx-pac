@@ -1,20 +1,20 @@
 CRC:
   _modify:
     DT:
-      size: 32
       writeConstraint: [0, 0xFFFFFFFF]
-    CDT:
-      size: 8
-      writeConstraint: [0, 0xFF]
     IDT:
-      size: 32
       writeConstraint: [0, 0xFFFFFFFF]
   DT:
     _delete:
       - DT
-  CDT:
+  IDT:
     _delete:
-      - CDT
+      - IDT
+  CDT:
+    _modify:
+      CDT:
+        bitWidth: 8
+    CDT: [0, 0xFF]
   CTRL:
     RST:
       _W1S:
@@ -30,6 +30,3 @@ CRC:
     REVOD:
       NoEffect: [0, "No effect"]
       WordReverse: [1, "Word reverse"]
-  IDT:
-    _delete:
-      - IDT

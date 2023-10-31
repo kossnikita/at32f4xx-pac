@@ -4036,7 +4036,7 @@
           <register>
             <name>CTRL</name>
             <displayName>C1CTRL</displayName>
-            <description>DMA channel %s configuration register</description>
+            <description>DMA channel configuration register</description>
             <addressOffset>0x0</addressOffset>
             <size>0x20</size>
             <access>read-write</access>
@@ -4419,7 +4419,7 @@
           <register>
             <name>DTCNT</name>
             <displayName>C1DTCNT</displayName>
-            <description>DMA channel %s number of data to transfer register</description>
+            <description>DMA channel number of data to transfer register</description>
             <addressOffset>0x4</addressOffset>
             <size>0x10</size>
             <access>read-write</access>
@@ -4434,7 +4434,7 @@
           <register>
             <name>PADDR</name>
             <displayName>C1PADDR</displayName>
-            <description>DMA channel %s peripheral base address register</description>
+            <description>DMA channel peripheral base address register</description>
             <addressOffset>0x8</addressOffset>
             <size>0x20</size>
             <access>read-write</access>
@@ -4449,7 +4449,7 @@
           <register>
             <name>MADDR</name>
             <displayName>C1MADDR</displayName>
-            <description>DMA channel %s memory base address register</description>
+            <description>DMA channel memory base address register</description>
             <addressOffset>0xC</addressOffset>
             <size>0x20</size>
             <access>read-write</access>
@@ -7061,7 +7061,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>1-20</dimIndex>
           <name>BPR%sDT</name>
-          <displayName>BPR1DT</displayName>
+          <displayName>BPR%sDT</displayName>
           <description>Battery powered domain register</description>
           <addressOffset>0x50</addressOffset>
           <size>0x20</size>
@@ -7189,15 +7189,23 @@
           <displayName>RLD</displayName>
           <description>Reload register</description>
           <addressOffset>0x8</addressOffset>
-          <size>0xc</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>4095</maximum>
-            </range>
-          </writeConstraint>
+          <fields>
+            <field>
+              <name>RLD</name>
+              <description>Reload value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>4095</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>STS</name>
@@ -19235,15 +19243,23 @@
           <displayName>PCDTO1</displayName>
           <description>Data offset for Preempted channel %s</description>
           <addressOffset>0x14</addressOffset>
-          <size>0xc</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>4095</maximum>
-            </range>
-          </writeConstraint>
+          <fields>
+            <field>
+              <name>DTO</name>
+              <description>Data offset for Preempted channel 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>4095</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <dim>2</dim>
@@ -19253,15 +19269,23 @@
           <displayName>VMHB</displayName>
           <description>Voltage monitoring %s boundary register</description>
           <addressOffset>0x24</addressOffset>
-          <size>0xc</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000FFF</resetValue>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>4095</maximum>
-            </range>
-          </writeConstraint>
+          <fields>
+            <field>
+              <name>VMB</name>
+              <description>Voltage monitoring high boundary</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>4095</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>OSQ1</name>
@@ -19399,30 +19423,46 @@
           <displayName>PDT1</displayName>
           <description>Preempted data register %s</description>
           <addressOffset>0x3C</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>65535</maximum>
-            </range>
-          </writeConstraint>
+          <fields>
+            <field>
+              <name>PDT</name>
+              <description>Preempted data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>ODT</name>
           <displayName>ODT</displayName>
           <description>Ordinary  data register</description>
           <addressOffset>0x4C</addressOffset>
-          <size>0x10</size>
+          <size>0x20</size>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>65535</maximum>
-            </range>
-          </writeConstraint>
+          <fields>
+            <field>
+              <name>ODT</name>
+              <description>Conversion data of ordinary channel</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
       </registers>
     </peripheral>
@@ -22155,15 +22195,23 @@
           <displayName>CDT</displayName>
           <description>Common data register</description>
           <addressOffset>0x4</addressOffset>
-          <size>0x8</size>
+          <size>0x20</size>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
-          <writeConstraint>
-            <range>
-              <minimum>0</minimum>
-              <maximum>255</maximum>
-            </range>
-          </writeConstraint>
+          <fields>
+            <field>
+              <name>CDT</name>
+              <description>Common Data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>CTRL</name>

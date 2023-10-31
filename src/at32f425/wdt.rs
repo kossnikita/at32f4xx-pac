@@ -8,7 +8,6 @@ pub struct RegisterBlock {
     pub div: DIV,
     #[doc = "0x08 - Reload register"]
     pub rld: RLD,
-    _reserved3: [u8; 0x02],
     #[doc = "0x0c - Status register"]
     pub sts: STS,
     #[doc = "0x10 - Window register"]

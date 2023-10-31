@@ -20,7 +20,7 @@ impl W {
         self
     }
 }
-#[doc = "DMA channel %s number of data to transfer register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dtcnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dtcnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA channel number of data to transfer register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dtcnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dtcnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DTCNT_SPEC;
 impl crate::RegisterSpec for DTCNT_SPEC {
     type Ux = u16;

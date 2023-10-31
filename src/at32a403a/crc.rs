@@ -6,7 +6,6 @@ pub struct RegisterBlock {
     pub dt: DT,
     #[doc = "0x04 - Common data register"]
     pub cdt: CDT,
-    _reserved2: [u8; 0x03],
     #[doc = "0x08 - Control register"]
     pub ctrl: CTRL,
     _reserved3: [u8; 0x04],

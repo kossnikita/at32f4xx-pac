@@ -12,12 +12,10 @@ pub struct RegisterBlock {
     pub spt1: SPT1,
     #[doc = "0x10 - sample time register 2"]
     pub spt2: SPT2,
-    #[doc = "0x14 - Data offset for Preempted channel %s"]
-    pub pcdto: crate::ArrayProxy<PCDTO, 4, 0x04>,
-    _reserved6: [u8; 0x10],
-    #[doc = "0x24 - Voltage monitoring %s boundary register"]
-    pub vmb: crate::ArrayProxy<VMB, 2, 0x04>,
-    _reserved7: [u8; 0x08],
+    #[doc = "0x14..0x24 - Data offset for Preempted channel %s"]
+    pub pcdto: [PCDTO; 4],
+    #[doc = "0x24..0x2c - Voltage monitoring %s boundary register"]
+    pub vmb: [VMB; 2],
     #[doc = "0x2c - Ordinary sequence register 1"]
     pub osq1: OSQ1,
     #[doc = "0x30 - Ordinary sequence register 2"]
@@ -26,9 +24,8 @@ pub struct RegisterBlock {
     pub osq3: OSQ3,
     #[doc = "0x38 - Preempted sequence register"]
     pub psq: PSQ,
-    #[doc = "0x3c - Preempted data register %s"]
-    pub pdt: crate::ArrayProxy<PDT, 4, 0x04>,
-    _reserved12: [u8; 0x10],
+    #[doc = "0x3c..0x4c - Preempted data register %s"]
+    pub pdt: [PDT; 4],
     #[doc = "0x4c - Ordinary data register"]
     pub odt: ODT,
 }
@@ -38,17 +35,17 @@ impl RegisterBlock {
     pub fn pcdto1(&self) -> &PCDTO {
         &self.pcdto[0]
     }
-    #[doc = "0x15 - Data offset for Preempted channel %s"]
+    #[doc = "0x18 - Data offset for Preempted channel %s"]
     #[inline(always)]
     pub fn pcdto2(&self) -> &PCDTO {
         &self.pcdto[1]
     }
-    #[doc = "0x17 - Data offset for Preempted channel %s"]
+    #[doc = "0x1c - Data offset for Preempted channel %s"]
     #[inline(always)]
     pub fn pcdto3(&self) -> &PCDTO {
         &self.pcdto[2]
     }
-    #[doc = "0x18 - Data offset for Preempted channel %s"]
+    #[doc = "0x20 - Data offset for Preempted channel %s"]
     #[inline(always)]
     pub fn pcdto4(&self) -> &PCDTO {
         &self.pcdto[3]
@@ -58,7 +55,7 @@ impl RegisterBlock {
     pub fn vmhb(&self) -> &VMB {
         &self.vmb[0]
     }
-    #[doc = "0x25 - Voltage monitoring %s boundary register"]
+    #[doc = "0x28 - Voltage monitoring %s boundary register"]
     #[inline(always)]
     pub fn vmlb(&self) -> &VMB {
         &self.vmb[1]
@@ -68,17 +65,17 @@ impl RegisterBlock {
     pub fn pdt1(&self) -> &PDT {
         &self.pdt[0]
     }
-    #[doc = "0x3e - Preempted data register %s"]
+    #[doc = "0x40 - Preempted data register %s"]
     #[inline(always)]
     pub fn pdt2(&self) -> &PDT {
         &self.pdt[1]
     }
-    #[doc = "0x40 - Preempted data register %s"]
+    #[doc = "0x44 - Preempted data register %s"]
     #[inline(always)]
     pub fn pdt3(&self) -> &PDT {
         &self.pdt[2]
     }
-    #[doc = "0x42 - Preempted data register %s"]
+    #[doc = "0x48 - Preempted data register %s"]
     #[inline(always)]
     pub fn pdt4(&self) -> &PDT {
         &self.pdt[3]

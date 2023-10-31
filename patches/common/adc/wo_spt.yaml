@@ -6,16 +6,21 @@ ADC,ADC?:
       description: Preempted data register %s
     VM?B:
       description: Voltage monitoring %s boundary register
-  _modify:
-    PCDTO?:
-      size: 12
-      writeConstraint: [0, 0xFFF]
-    VM?B:
-      size: 12
-      writeConstraint: [0, 0xFFF]
-    PDT?:
-      size: 16
-      writeConstraint: [0, 0xFFFF]
+  PCDTO?:
+    _modify:
+      PCDTO?:
+        name: DTO
+    DTO: [0, 0xFFF]
+  VM?B:
+    _modify:
+      VM?B:
+        name: VMB
+    VMB: [0, 0xFFF]
+  PDT?:
+    _modify:
+      PDT?:
+        name: PDT
+    PDT: [0, 0xFFFF]
   STS:
     VMOR:
       _read:
@@ -118,12 +123,6 @@ ADC,ADC?:
       Triggered: [1, "Conversion of ordinary channels triggered"]
   SPT?:
     CSPT*: [0, 7]
-  PCDTO?:
-    _delete:
-      - PCDTO?
-  VM?B:
-    _delete:
-      - VM?B
   OSQ1:
     OCLEN: [0, 15]
   OSQ?:
@@ -137,6 +136,3 @@ ADC,ADC?:
         description: "Number of %s conversion in preempted sequence"
     PSN?: [0, 17]
     PCLEN: [0, 3]
-  PDT?:
-    _delete:
-      - PDT?

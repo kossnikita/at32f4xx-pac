@@ -12,16 +12,16 @@ DMA?:
       description: "DMA Channel %s"
       C?CTRL:
         name: CTRL
-        description: "DMA channel %s configuration register"
+        description: "DMA channel configuration register"
       C?DTCNT:
         name: DTCNT
-        description: "DMA channel %s number of data to transfer register"
+        description: "DMA channel number of data to transfer register"
       C?PADDR:
         name: PADDR
-        description: "DMA channel %s peripheral base address register"
+        description: "DMA channel peripheral base address register"
       C?MADDR:
         name: MADDR
-        description: "DMA channel %s memory base address register"
+        description: "DMA channel memory base address register"
   _clusters:
     Channel%s:
       CTRL:
