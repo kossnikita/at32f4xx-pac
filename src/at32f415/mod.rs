@@ -62,11 +62,11 @@ extern "C" {
     fn DMA2_CHANNEL2();
     fn DMA2_CHANNEL3();
     fn DMA2_CHANNEL4_5();
+    fn OTGFS();
     fn CMP1();
     fn CMP2();
     fn ACC();
     fn DMA2_CHANNEL6_7();
-    fn OTGFS();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -77,7 +77,7 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
-pub static __INTERRUPTS: [Vector; 78] = [
+pub static __INTERRUPTS: [Vector; 76] = [
     Vector { _handler: WWDT },
     Vector { _handler: PVM },
     Vector { _handler: TAMPER },
@@ -179,7 +179,7 @@ pub static __INTERRUPTS: [Vector; 78] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: OTGFS },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: CMP1 },
@@ -190,8 +190,6 @@ pub static __INTERRUPTS: [Vector; 78] = [
     Vector {
         _handler: DMA2_CHANNEL6_7,
     },
-    Vector { _reserved: 0 },
-    Vector { _handler: OTGFS },
 ];
 #[doc = r"Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -299,6 +297,8 @@ interrupts"]
     DMA2_CHANNEL3 = 58,
     #[doc = "59 - DMA2 Channel4 and DMA2 Channel5 global interrupt"]
     DMA2_CHANNEL4_5 = 59,
+    #[doc = "67 - USB On The Go FS global interrupt"]
+    OTGFS = 67,
     #[doc = "70 - CMP1 interrupt"]
     CMP1 = 70,
     #[doc = "71 - CMP2 interrupt"]
@@ -307,8 +307,6 @@ interrupts"]
     ACC = 72,
     #[doc = "75 - DMA2 Channel6 and DMA2 Channel7 global interrupt"]
     DMA2_CHANNEL6_7 = 75,
-    #[doc = "77 - USB On The Go FS global interrupt"]
-    OTGFS = 77,
 }
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]

@@ -10,6 +10,9 @@ pub struct RegisterBlock {
     pub apb1_pause: APB1_PAUSE,
     #[doc = "0x0c - DEBUG APB2 PAUSE"]
     pub apb2_pause: APB2_PAUSE,
+    _reserved4: [u8; 0x10],
+    #[doc = "0x20 - SERIES ID"]
+    pub ser_id: SER_ID,
 }
 #[doc = "IDCODE (r) register accessor: DEBUG IDCODE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idcode::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`idcode`]
 module"]
@@ -31,3 +34,8 @@ module"]
 pub type APB2_PAUSE = crate::Reg<apb2_pause::APB2_PAUSE_SPEC>;
 #[doc = "DEBUG APB2 PAUSE"]
 pub mod apb2_pause;
+#[doc = "SER_ID (r) register accessor: SERIES ID\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ser_id::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ser_id`]
+module"]
+pub type SER_ID = crate::Reg<ser_id::SER_ID_SPEC>;
+#[doc = "SERIES ID"]
+pub mod ser_id;

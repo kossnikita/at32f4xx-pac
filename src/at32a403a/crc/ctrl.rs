@@ -43,6 +43,10 @@ where
         self.variant(RSTW_A::Reset)
     }
 }
+#[doc = "Field `POLY_SIZE` reader - Polynomial size"]
+pub type POLY_SIZE_R = crate::FieldReader;
+#[doc = "Field `POLY_SIZE` writer - Polynomial size"]
+pub type POLY_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `REVID` reader - Reverse input data"]
 pub type REVID_R = crate::FieldReader<REVID_A>;
 #[doc = "Reverse input data\n\nValue on reset: 0"]
@@ -170,6 +174,11 @@ impl R {
     pub fn rst(&self) -> RST_R {
         RST_R::new((self.bits & 1) != 0)
     }
+    #[doc = "Bits 3:4 - Polynomial size"]
+    #[inline(always)]
+    pub fn poly_size(&self) -> POLY_SIZE_R {
+        POLY_SIZE_R::new(((self.bits >> 3) & 3) as u8)
+    }
     #[doc = "Bits 5:6 - Reverse input data"]
     #[inline(always)]
     pub fn revid(&self) -> REVID_R {
@@ -185,6 +194,7 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
             .field("rst", &format_args!("{}", self.rst().bit()))
+            .field("poly_size", &format_args!("{}", self.poly_size().bits()))
             .field("revid", &format_args!("{}", self.revid().bits()))
             .field("revod", &format_args!("{}", self.revod().bit()))
             .finish()
@@ -201,6 +211,12 @@ impl W {
     #[must_use]
     pub fn rst(&mut self) -> RST_W<CTRL_SPEC> {
         RST_W::new(self, 0)
+    }
+    #[doc = "Bits 3:4 - Polynomial size"]
+    #[inline(always)]
+    #[must_use]
+    pub fn poly_size(&mut self) -> POLY_SIZE_W<CTRL_SPEC> {
+        POLY_SIZE_W::new(self, 3)
     }
     #[doc = "Bits 5:6 - Reverse input data"]
     #[inline(always)]

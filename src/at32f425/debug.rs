@@ -6,6 +6,9 @@ pub struct RegisterBlock {
     pub idcode: IDCODE,
     #[doc = "0x04 - DEBUG_CTRL"]
     pub ctrl: CTRL,
+    _reserved2: [u8; 0x18],
+    #[doc = "0x20 - SERIES ID"]
+    pub ser_id: SER_ID,
 }
 #[doc = "IDCODE (r) register accessor: DEBUG_IDCODE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idcode::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`idcode`]
 module"]
@@ -17,3 +20,8 @@ module"]
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "DEBUG_CTRL"]
 pub mod ctrl;
+#[doc = "SER_ID (r) register accessor: SERIES ID\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ser_id::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`ser_id`]
+module"]
+pub type SER_ID = crate::Reg<ser_id::SER_ID_SPEC>;
+#[doc = "SERIES ID"]
+pub mod ser_id;

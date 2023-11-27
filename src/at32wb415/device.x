@@ -42,9 +42,9 @@ PROVIDE(DMA2_CHANNEL1 = DefaultHandler);
 PROVIDE(DMA2_CHANNEL2 = DefaultHandler);
 PROVIDE(DMA2_CHANNEL3 = DefaultHandler);
 PROVIDE(DMA2_CHANNEL4_5 = DefaultHandler);
+PROVIDE(OTGFS = DefaultHandler);
 PROVIDE(CMP1 = DefaultHandler);
 PROVIDE(CMP2 = DefaultHandler);
 PROVIDE(ACC = DefaultHandler);
 PROVIDE(DMA2_CHANNEL6_7 = DefaultHandler);
-PROVIDE(OTGFS = DefaultHandler);
 

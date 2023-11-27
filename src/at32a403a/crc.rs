@@ -11,6 +11,8 @@ pub struct RegisterBlock {
     _reserved3: [u8; 0x04],
     #[doc = "0x10 - Initial data register"]
     pub idt: IDT,
+    #[doc = "0x14 - Polynomial coefficient register"]
+    pub poly: POLY,
 }
 #[doc = "DT (rw) register accessor: Data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`dt`]
 module"]
@@ -32,3 +34,8 @@ module"]
 pub type IDT = crate::Reg<idt::IDT_SPEC>;
 #[doc = "Initial data register"]
 pub mod idt;
+#[doc = "POLY (rw) register accessor: Polynomial coefficient register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`poly::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`poly::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`poly`]
+module"]
+pub type POLY = crate::Reg<poly::POLY_SPEC>;
+#[doc = "Polynomial coefficient register"]
+pub mod poly;
