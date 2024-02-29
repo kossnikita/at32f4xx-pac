@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "at32f4xx-pac"
-version = "0.1.3"
+version = "0.2.0"
 authors = ["Nikita Koss <kossnikita@gmail.com>"]
 description = "Device support crates for AT32F4 devices"
 repository = "https://github.com/kossnikita/at32f4xx-pac"
