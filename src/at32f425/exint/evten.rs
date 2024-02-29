@@ -2,58 +2,58 @@
 pub type R = crate::R<EVTEN_SPEC>;
 #[doc = "Register `EVTEN` writer"]
 pub type W = crate::W<EVTEN_SPEC>;
-#[doc = "Field `EVTEN[0-20]` reader - Event enable or disable on line %s"]
-pub type EVTEN_R = crate::BitReader<EVTEN0R_A>;
 #[doc = "Event enable or disable on line %s\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum EVTEN0R_A {
+pub enum Evten0r {
     #[doc = "0: Event request is disabled"]
     Disabled = 0,
     #[doc = "1: Event request is enabled"]
     Enabled = 1,
 }
-impl From<EVTEN0R_A> for bool {
+impl From<Evten0r> for bool {
     #[inline(always)]
-    fn from(variant: EVTEN0R_A) -> Self {
+    fn from(variant: Evten0r) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `EVTEN(0-20)` reader - Event enable or disable on line %s"]
+pub type EVTEN_R = crate::BitReader<Evten0r>;
 impl EVTEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> EVTEN0R_A {
+    pub const fn variant(&self) -> Evten0r {
         match self.bits {
-            false => EVTEN0R_A::Disabled,
-            true => EVTEN0R_A::Enabled,
+            false => Evten0r::Disabled,
+            true => Evten0r::Enabled,
         }
     }
     #[doc = "Event request is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == EVTEN0R_A::Disabled
+        *self == Evten0r::Disabled
     }
     #[doc = "Event request is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == EVTEN0R_A::Enabled
+        *self == Evten0r::Enabled
     }
 }
 #[doc = "Event enable or disable on line %s\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum EVTEN0W_AW {
+pub enum Evten0wWO {
     #[doc = "0: Event request disable"]
     Disable = 0,
     #[doc = "1: Event request enable"]
     Enable = 1,
 }
-impl From<EVTEN0W_AW> for bool {
+impl From<Evten0wWO> for bool {
     #[inline(always)]
-    fn from(variant: EVTEN0W_AW) -> Self {
+    fn from(variant: Evten0wWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EVTEN[0-20]` writer - Event enable or disable on line %s"]
-pub type EVTEN_W<'a, REG> = crate::BitWriter<'a, REG, EVTEN0W_AW>;
+#[doc = "Field `EVTEN(0-20)` writer - Event enable or disable on line %s"]
+pub type EVTEN_W<'a, REG> = crate::BitWriter<'a, REG, Evten0wWO>;
 impl<'a, REG> EVTEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,20 +61,29 @@ where
     #[doc = "Event request disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(EVTEN0W_AW::Disable)
+        self.variant(Evten0wWO::Disable)
     }
     #[doc = "Event request enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(EVTEN0W_AW::Enable)
+        self.variant(Evten0wWO::Enable)
     }
 }
 impl R {
-    #[doc = "Event enable or disable on line [0-20]\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Event enable or disable on line (0-20)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EVTEN0` field"]
     #[inline(always)]
     pub fn evten(&self, n: u8) -> EVTEN_R {
-        assert!(n < 21);
+        #[allow(clippy::no_effect)]
+        [(); 21][n as usize];
         EVTEN_R::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Event enable or disable on line (0-20)"]
+    #[inline(always)]
+    pub fn evten_iter(&self) -> impl Iterator<Item = EVTEN_R> + '_ {
+        (0..21).map(move |n| EVTEN_R::new(((self.bits >> n) & 1) != 0))
     }
     #[doc = "Bit 0 - Event enable or disable on line 0"]
     #[inline(always)]
@@ -211,15 +220,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<EVTEN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Event enable or disable on line [0-20]"]
+    #[doc = "Event enable or disable on line (0-20)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EVTEN0` field"]
     #[inline(always)]
     #[must_use]
     pub fn evten(&mut self, n: u8) -> EVTEN_W<EVTEN_SPEC> {
-        assert!(n < 21);
+        #[allow(clippy::no_effect)]
+        [(); 21][n as usize];
         EVTEN_W::new(self, n)
     }
     #[doc = "Bit 0 - Event enable or disable on line 0"]
@@ -348,16 +360,6 @@ impl W {
     pub fn evten20(&mut self) -> EVTEN_W<EVTEN_SPEC> {
         EVTEN_W::new(self, 20)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Event enable register (EXTINT_EVTEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evten::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evten::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EVTEN_SPEC;
@@ -368,10 +370,11 @@ impl crate::RegisterSpec for EVTEN_SPEC {
 impl crate::Readable for EVTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`evten::W`](W) writer structure"]
 impl crate::Writable for EVTEN_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EVTEN to value 0"]
 impl crate::Resettable for EVTEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

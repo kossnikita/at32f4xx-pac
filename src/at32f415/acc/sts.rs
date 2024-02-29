@@ -1,7 +1,5 @@
 #[doc = "Register `STS` reader"]
 pub type R = crate::R<STS_SPEC>;
-#[doc = "Field `CALRDY` reader - Internal high-speed clock calibration ready"]
-pub type CALRDY_R = crate::BitReader<CALRDY_A>;
 #[doc = "Internal high-speed clock calibration ready\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CALRDY_A {
@@ -16,6 +14,8 @@ impl From<CALRDY_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CALRDY` reader - Internal high-speed clock calibration ready"]
+pub type CALRDY_R = crate::BitReader<CALRDY_A>;
 impl CALRDY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -36,8 +36,6 @@ impl CALRDY_R {
         *self == CALRDY_A::Ready
     }
 }
-#[doc = "Field `RSLOST` reader - Reference Signal Lost"]
-pub type RSLOST_R = crate::BitReader<RSLOST_A>;
 #[doc = "Reference Signal Lost\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum RSLOST_A {
@@ -52,6 +50,8 @@ impl From<RSLOST_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RSLOST` reader - Reference Signal Lost"]
+pub type RSLOST_R = crate::BitReader<RSLOST_A>;
 impl RSLOST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -94,7 +94,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -106,5 +106,5 @@ impl crate::RegisterSpec for STS_SPEC {
 impl crate::Readable for STS_SPEC {}
 #[doc = "`reset()` method sets STS to value 0"]
 impl crate::Resettable for STS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

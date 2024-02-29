@@ -5,7 +5,8 @@ _modify:
     access: write-only
 SCR:
   _array:
-    IOSB*: {}
+    IOSB*:
+      description: Set bit %s
     IOCB*: {}
   IOSB*:
     _W1S:
@@ -15,7 +16,8 @@ SCR:
       Clear: [1, "Clear the corresponding ODT bit"]
 CLR:
   _array:
-    IOCB*: {}
+    IOCB*:
+      description: Clear bit %s
   IOCB*:
     _W1C:
       Clear: [1, "Clear the corresponding ODT bit"]

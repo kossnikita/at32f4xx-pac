@@ -6,56 +6,56 @@ pub type W = crate::W<CTRL_SPEC>;
 pub type CNT_R = crate::FieldReader;
 #[doc = "Field `CNT` writer - Decrement counter"]
 pub type CNT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
-#[doc = "Field `WWDTEN` reader - Window watchdog enable"]
-pub type WWDTEN_R = crate::BitReader<WWDTENR_A>;
 #[doc = "Window watchdog enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum WWDTENR_A {
+pub enum Wwdtenr {
     #[doc = "0: Disabled"]
     Disabled = 0,
     #[doc = "1: Enabled"]
     Enabled = 1,
 }
-impl From<WWDTENR_A> for bool {
+impl From<Wwdtenr> for bool {
     #[inline(always)]
-    fn from(variant: WWDTENR_A) -> Self {
+    fn from(variant: Wwdtenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `WWDTEN` reader - Window watchdog enable"]
+pub type WWDTEN_R = crate::BitReader<Wwdtenr>;
 impl WWDTEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> WWDTENR_A {
+    pub const fn variant(&self) -> Wwdtenr {
         match self.bits {
-            false => WWDTENR_A::Disabled,
-            true => WWDTENR_A::Enabled,
+            false => Wwdtenr::Disabled,
+            true => Wwdtenr::Enabled,
         }
     }
     #[doc = "Disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == WWDTENR_A::Disabled
+        *self == Wwdtenr::Disabled
     }
     #[doc = "Enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == WWDTENR_A::Enabled
+        *self == Wwdtenr::Enabled
     }
 }
 #[doc = "Window watchdog enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum WWDTENW_AW {
+pub enum WwdtenwWO {
     #[doc = "1: Enable"]
     Enable = 1,
 }
-impl From<WWDTENW_AW> for bool {
+impl From<WwdtenwWO> for bool {
     #[inline(always)]
-    fn from(variant: WWDTENW_AW) -> Self {
+    fn from(variant: WwdtenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `WWDTEN` writer - Window watchdog enable"]
-pub type WWDTEN_W<'a, REG> = crate::BitWriter1S<'a, REG, WWDTENW_AW>;
+pub type WWDTEN_W<'a, REG> = crate::BitWriter1S<'a, REG, WwdtenwWO>;
 impl<'a, REG> WWDTEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -63,7 +63,7 @@ where
     #[doc = "Enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(WWDTENW_AW::Enable)
+        self.variant(WwdtenwWO::Enable)
     }
 }
 impl R {
@@ -88,7 +88,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -104,16 +104,6 @@ impl W {
     pub fn wwdten(&mut self) -> WWDTEN_W<CTRL_SPEC> {
         WWDTEN_W::new(self, 7)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
@@ -124,10 +114,11 @@ impl crate::RegisterSpec for CTRL_SPEC {
 impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0x80;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x80;
 }
 #[doc = "`reset()` method sets CTRL to value 0x7f"]
 impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x7f;
+    const RESET_VALUE: u32 = 0x7f;
 }

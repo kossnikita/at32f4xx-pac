@@ -42,7 +42,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DIEPTSIZ5_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -64,16 +64,6 @@ impl W {
     pub fn mc(&mut self) -> MC_W<DIEPTSIZ5_SPEC> {
         MC_W::new(self, 29)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "OTG device IN endpoint-5 transfer size register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptsiz5::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptsiz5::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPTSIZ5_SPEC;
@@ -84,10 +74,11 @@ impl crate::RegisterSpec for DIEPTSIZ5_SPEC {
 impl crate::Readable for DIEPTSIZ5_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dieptsiz5::W`](W) writer structure"]
 impl crate::Writable for DIEPTSIZ5_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPTSIZ5 to value 0"]
 impl crate::Resettable for DIEPTSIZ5_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

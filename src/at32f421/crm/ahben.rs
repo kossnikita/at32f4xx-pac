@@ -2,10 +2,10 @@
 pub type R = crate::R<AHBEN_SPEC>;
 #[doc = "Register `AHBEN` writer"]
 pub type W = crate::W<AHBEN_SPEC>;
-#[doc = "Field `DMA` reader - DMA clock enable"]
-pub type DMA_R = crate::BitReader;
-#[doc = "Field `DMA` writer - DMA clock enable"]
-pub type DMA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DMA1` reader - DMA clock enable"]
+pub type DMA1_R = crate::BitReader;
+#[doc = "Field `DMA1` writer - DMA clock enable"]
+pub type DMA1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SRAM` reader - SRAM interface clock enable"]
 pub type SRAM_R = crate::BitReader;
 #[doc = "Field `SRAM` writer - SRAM interface clock enable"]
@@ -37,8 +37,8 @@ pub type GPIOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - DMA clock enable"]
     #[inline(always)]
-    pub fn dma(&self) -> DMA_R {
-        DMA_R::new((self.bits & 1) != 0)
+    pub fn dma1(&self) -> DMA1_R {
+        DMA1_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - SRAM interface clock enable"]
     #[inline(always)]
@@ -79,7 +79,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHBEN")
-            .field("dma", &format_args!("{}", self.dma().bit()))
+            .field("dma1", &format_args!("{}", self.dma1().bit()))
             .field("sram", &format_args!("{}", self.sram().bit()))
             .field("flash", &format_args!("{}", self.flash().bit()))
             .field("crc", &format_args!("{}", self.crc().bit()))
@@ -92,15 +92,15 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<AHBEN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - DMA clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn dma(&mut self) -> DMA_W<AHBEN_SPEC> {
-        DMA_W::new(self, 0)
+    pub fn dma1(&mut self) -> DMA1_W<AHBEN_SPEC> {
+        DMA1_W::new(self, 0)
     }
     #[doc = "Bit 2 - SRAM interface clock enable"]
     #[inline(always)]
@@ -144,16 +144,6 @@ impl W {
     pub fn gpiof(&mut self) -> GPIOF_W<AHBEN_SPEC> {
         GPIOF_W::new(self, 22)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "AHB Peripheral Clock enable register (CRM_AHBEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahben::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahben::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AHBEN_SPEC;
@@ -164,10 +154,11 @@ impl crate::RegisterSpec for AHBEN_SPEC {
 impl crate::Readable for AHBEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahben::W`](W) writer structure"]
 impl crate::Writable for AHBEN_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBEN to value 0x14"]
 impl crate::Resettable for AHBEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0x14;
+    const RESET_VALUE: u32 = 0x14;
 }

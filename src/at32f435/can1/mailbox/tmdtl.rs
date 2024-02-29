@@ -2,16 +2,25 @@
 pub type R = crate::R<TMDTL_SPEC>;
 #[doc = "Register `TMDTL` writer"]
 pub type W = crate::W<TMDTL_SPEC>;
-#[doc = "Field `TMDT[0-3]` reader - Transmit mailbox data byte %s"]
+#[doc = "Field `TMDT(0-3)` reader - Transmit mailbox data byte %s"]
 pub type TMDT_R = crate::FieldReader;
-#[doc = "Field `TMDT[0-3]` writer - Transmit mailbox data byte %s"]
+#[doc = "Field `TMDT(0-3)` writer - Transmit mailbox data byte %s"]
 pub type TMDT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
 impl R {
-    #[doc = "Transmit mailbox data byte [0-3]\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Transmit mailbox data byte (0-3)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TMDT0` field"]
     #[inline(always)]
     pub fn tmdt(&self, n: u8) -> TMDT_R {
-        assert!(n < 4);
+        #[allow(clippy::no_effect)]
+        [(); 4][n as usize];
         TMDT_R::new(((self.bits >> (n * 8)) & 0xff) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Transmit mailbox data byte (0-3)"]
+    #[inline(always)]
+    pub fn tmdt_iter(&self) -> impl Iterator<Item = TMDT_R> + '_ {
+        (0..4).map(move |n| TMDT_R::new(((self.bits >> (n * 8)) & 0xff) as u8))
     }
     #[doc = "Bits 0:7 - Transmit mailbox data byte 0"]
     #[inline(always)]
@@ -46,15 +55,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<TMDTL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Transmit mailbox data byte [0-3]"]
+    #[doc = "Transmit mailbox data byte (0-3)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TMDT0` field"]
     #[inline(always)]
     #[must_use]
     pub fn tmdt(&mut self, n: u8) -> TMDT_W<TMDTL_SPEC> {
-        assert!(n < 4);
+        #[allow(clippy::no_effect)]
+        [(); 4][n as usize];
         TMDT_W::new(self, n * 8)
     }
     #[doc = "Bits 0:7 - Transmit mailbox data byte 0"]
@@ -81,16 +93,6 @@ impl W {
     pub fn tmdt3(&mut self) -> TMDT_W<TMDTL_SPEC> {
         TMDT_W::new(self, 24)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Transmit mailbox data low register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tmdtl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tmdtl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TMDTL_SPEC;
@@ -101,10 +103,11 @@ impl crate::RegisterSpec for TMDTL_SPEC {
 impl crate::Readable for TMDTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmdtl::W`](W) writer structure"]
 impl crate::Writable for TMDTL_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TMDTL to value 0"]
 impl crate::Resettable for TMDTL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

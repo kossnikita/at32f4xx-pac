@@ -2,58 +2,58 @@
 pub type R = crate::R<IDEN_SPEC>;
 #[doc = "Register `IDEN` writer"]
 pub type W = crate::W<IDEN_SPEC>;
-#[doc = "Field `OVFIEN` reader - Overflow interrupt enable"]
-pub type OVFIEN_R = crate::BitReader<OVFIENR_A>;
 #[doc = "Overflow interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OVFIENR_A {
+pub enum Ovfienr {
     #[doc = "0: Overflow interrupt is disabled"]
     Disabled = 0,
     #[doc = "1: Overflow interrupt is enabled"]
     Enabled = 1,
 }
-impl From<OVFIENR_A> for bool {
+impl From<Ovfienr> for bool {
     #[inline(always)]
-    fn from(variant: OVFIENR_A) -> Self {
+    fn from(variant: Ovfienr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `OVFIEN` reader - Overflow interrupt enable"]
+pub type OVFIEN_R = crate::BitReader<Ovfienr>;
 impl OVFIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> OVFIENR_A {
+    pub const fn variant(&self) -> Ovfienr {
         match self.bits {
-            false => OVFIENR_A::Disabled,
-            true => OVFIENR_A::Enabled,
+            false => Ovfienr::Disabled,
+            true => Ovfienr::Enabled,
         }
     }
     #[doc = "Overflow interrupt is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == OVFIENR_A::Disabled
+        *self == Ovfienr::Disabled
     }
     #[doc = "Overflow interrupt is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == OVFIENR_A::Enabled
+        *self == Ovfienr::Enabled
     }
 }
 #[doc = "Overflow interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OVFIENW_AW {
+pub enum OvfienwWO {
     #[doc = "0: Overflow interrupt disable"]
     Disable = 0,
     #[doc = "1: Overflow interrupt enable"]
     Enable = 1,
 }
-impl From<OVFIENW_AW> for bool {
+impl From<OvfienwWO> for bool {
     #[inline(always)]
-    fn from(variant: OVFIENW_AW) -> Self {
+    fn from(variant: OvfienwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OVFIEN` writer - Overflow interrupt enable"]
-pub type OVFIEN_W<'a, REG> = crate::BitWriter<'a, REG, OVFIENW_AW>;
+pub type OVFIEN_W<'a, REG> = crate::BitWriter<'a, REG, OvfienwWO>;
 impl<'a, REG> OVFIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,66 +61,66 @@ where
     #[doc = "Overflow interrupt disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(OVFIENW_AW::Disable)
+        self.variant(OvfienwWO::Disable)
     }
     #[doc = "Overflow interrupt enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(OVFIENW_AW::Enable)
+        self.variant(OvfienwWO::Enable)
     }
 }
-#[doc = "Field `CIEN[1-1]` reader - Channel %s interrupt enable"]
-pub type CIEN_R = crate::BitReader<C1IENR_A>;
 #[doc = "Channel %s interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum C1IENR_A {
+pub enum C1ienr {
     #[doc = "0: Channel interrupt is disabled"]
     Disabled = 0,
     #[doc = "1: Channel interrupt is enabled"]
     Enabled = 1,
 }
-impl From<C1IENR_A> for bool {
+impl From<C1ienr> for bool {
     #[inline(always)]
-    fn from(variant: C1IENR_A) -> Self {
+    fn from(variant: C1ienr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CIEN(1-1)` reader - Channel %s interrupt enable"]
+pub type CIEN_R = crate::BitReader<C1ienr>;
 impl CIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> C1IENR_A {
+    pub const fn variant(&self) -> C1ienr {
         match self.bits {
-            false => C1IENR_A::Disabled,
-            true => C1IENR_A::Enabled,
+            false => C1ienr::Disabled,
+            true => C1ienr::Enabled,
         }
     }
     #[doc = "Channel interrupt is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == C1IENR_A::Disabled
+        *self == C1ienr::Disabled
     }
     #[doc = "Channel interrupt is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == C1IENR_A::Enabled
+        *self == C1ienr::Enabled
     }
 }
 #[doc = "Channel %s interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum C1IENW_AW {
+pub enum C1ienwWO {
     #[doc = "0: Channel interrupt disable"]
     Disable = 0,
     #[doc = "1: Channel interrupt enable"]
     Enable = 1,
 }
-impl From<C1IENW_AW> for bool {
+impl From<C1ienwWO> for bool {
     #[inline(always)]
-    fn from(variant: C1IENW_AW) -> Self {
+    fn from(variant: C1ienwWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CIEN[1-1]` writer - Channel %s interrupt enable"]
-pub type CIEN_W<'a, REG> = crate::BitWriter<'a, REG, C1IENW_AW>;
+#[doc = "Field `CIEN(1-1)` writer - Channel %s interrupt enable"]
+pub type CIEN_W<'a, REG> = crate::BitWriter<'a, REG, C1ienwWO>;
 impl<'a, REG> CIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -128,12 +128,12 @@ where
     #[doc = "Channel interrupt disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(C1IENW_AW::Disable)
+        self.variant(C1ienwWO::Disable)
     }
     #[doc = "Channel interrupt enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(C1IENW_AW::Enable)
+        self.variant(C1ienwWO::Enable)
     }
 }
 #[doc = "Field `HALLIEN` reader - HALL interrupt enable"]
@@ -158,12 +158,20 @@ impl R {
     pub fn ovfien(&self) -> OVFIEN_R {
         OVFIEN_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Channel [1-1]
-interrupt enable\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (1-1) interrupt enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IEN` field"]
     #[inline(always)]
     pub fn cien(&self, n: u8) -> CIEN_R {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         CIEN_R::new(((self.bits >> (n * 0 + 1)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (1-1) interrupt enable"]
+    #[inline(always)]
+    pub fn cien_iter(&self) -> impl Iterator<Item = CIEN_R> + '_ {
+        (0..1).map(move |n| CIEN_R::new(((self.bits >> (n * 0 + 1)) & 1) != 0))
     }
     #[doc = "Bit 1 - Channel 1 interrupt enable"]
     #[inline(always)]
@@ -205,7 +213,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<IDEN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -215,12 +223,14 @@ impl W {
     pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC> {
         OVFIEN_W::new(self, 0)
     }
-    #[doc = "Channel [1-1]
-interrupt enable"]
+    #[doc = "Channel (1-1) interrupt enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IEN` field"]
     #[inline(always)]
     #[must_use]
     pub fn cien(&mut self, n: u8) -> CIEN_W<IDEN_SPEC> {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         CIEN_W::new(self, n * 0 + 1)
     }
     #[doc = "Bit 1 - Channel 1 interrupt enable"]
@@ -253,16 +263,6 @@ interrupt enable"]
     pub fn c1den(&mut self) -> C1DEN_W<IDEN_SPEC> {
         C1DEN_W::new(self, 9)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt/DMA enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iden::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iden::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IDEN_SPEC;
@@ -273,10 +273,11 @@ impl crate::RegisterSpec for IDEN_SPEC {
 impl crate::Readable for IDEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`iden::W`](W) writer structure"]
 impl crate::Writable for IDEN_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IDEN to value 0"]
 impl crate::Resettable for IDEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

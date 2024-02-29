@@ -2,56 +2,56 @@
 pub type R = crate::R<STS_SPEC>;
 #[doc = "Register `STS` writer"]
 pub type W = crate::W<STS_SPEC>;
-#[doc = "Field `VMOR` reader - Voltage monitoring out of range flag"]
-pub type VMOR_R = crate::BitReader<VMORR_A>;
 #[doc = "Voltage monitoring out of range flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum VMORR_A {
+pub enum Vmorr {
     #[doc = "0: Voltage is within the value programmed"]
     InRange = 0,
     #[doc = "1: Voltage is outside the value programmed"]
     OutOfRange = 1,
 }
-impl From<VMORR_A> for bool {
+impl From<Vmorr> for bool {
     #[inline(always)]
-    fn from(variant: VMORR_A) -> Self {
+    fn from(variant: Vmorr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `VMOR` reader - Voltage monitoring out of range flag"]
+pub type VMOR_R = crate::BitReader<Vmorr>;
 impl VMOR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> VMORR_A {
+    pub const fn variant(&self) -> Vmorr {
         match self.bits {
-            false => VMORR_A::InRange,
-            true => VMORR_A::OutOfRange,
+            false => Vmorr::InRange,
+            true => Vmorr::OutOfRange,
         }
     }
     #[doc = "Voltage is within the value programmed"]
     #[inline(always)]
     pub fn is_in_range(&self) -> bool {
-        *self == VMORR_A::InRange
+        *self == Vmorr::InRange
     }
     #[doc = "Voltage is outside the value programmed"]
     #[inline(always)]
     pub fn is_out_of_range(&self) -> bool {
-        *self == VMORR_A::OutOfRange
+        *self == Vmorr::OutOfRange
     }
 }
 #[doc = "Voltage monitoring out of range flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum VMORW_AW {
+pub enum VmorwWO {
     #[doc = "0: Clear flag"]
     Clear = 0,
 }
-impl From<VMORW_AW> for bool {
+impl From<VmorwWO> for bool {
     #[inline(always)]
-    fn from(variant: VMORW_AW) -> Self {
+    fn from(variant: VmorwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `VMOR` writer - Voltage monitoring out of range flag"]
-pub type VMOR_W<'a, REG> = crate::BitWriter0C<'a, REG, VMORW_AW>;
+pub type VMOR_W<'a, REG> = crate::BitWriter0C<'a, REG, VmorwWO>;
 impl<'a, REG> VMOR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -59,59 +59,59 @@ where
     #[doc = "Clear flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(VMORW_AW::Clear)
+        self.variant(VmorwWO::Clear)
     }
 }
-#[doc = "Field `OCCE` reader - Ordinary channels conversion end flag"]
-pub type OCCE_R = crate::BitReader<OCCER_A>;
 #[doc = "Ordinary channels conversion end flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OCCER_A {
+pub enum Occer {
     #[doc = "0: Conversion is not complete"]
     NotComplete = 0,
     #[doc = "1: Conversion is complete"]
     Complete = 1,
 }
-impl From<OCCER_A> for bool {
+impl From<Occer> for bool {
     #[inline(always)]
-    fn from(variant: OCCER_A) -> Self {
+    fn from(variant: Occer) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `OCCE` reader - Ordinary channels conversion end flag"]
+pub type OCCE_R = crate::BitReader<Occer>;
 impl OCCE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> OCCER_A {
+    pub const fn variant(&self) -> Occer {
         match self.bits {
-            false => OCCER_A::NotComplete,
-            true => OCCER_A::Complete,
+            false => Occer::NotComplete,
+            true => Occer::Complete,
         }
     }
     #[doc = "Conversion is not complete"]
     #[inline(always)]
     pub fn is_not_complete(&self) -> bool {
-        *self == OCCER_A::NotComplete
+        *self == Occer::NotComplete
     }
     #[doc = "Conversion is complete"]
     #[inline(always)]
     pub fn is_complete(&self) -> bool {
-        *self == OCCER_A::Complete
+        *self == Occer::Complete
     }
 }
 #[doc = "Ordinary channels conversion end flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OCCEW_AW {
+pub enum OccewWO {
     #[doc = "0: Clear flag"]
     Clear = 0,
 }
-impl From<OCCEW_AW> for bool {
+impl From<OccewWO> for bool {
     #[inline(always)]
-    fn from(variant: OCCEW_AW) -> Self {
+    fn from(variant: OccewWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OCCE` writer - Ordinary channels conversion end flag"]
-pub type OCCE_W<'a, REG> = crate::BitWriter0C<'a, REG, OCCEW_AW>;
+pub type OCCE_W<'a, REG> = crate::BitWriter0C<'a, REG, OccewWO>;
 impl<'a, REG> OCCE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -119,63 +119,63 @@ where
     #[doc = "Clear flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(OCCEW_AW::Clear)
+        self.variant(OccewWO::Clear)
     }
 }
 #[doc = "Field `PCCE` reader - Preempted channels conversion end flag"]
 pub use OCCE_R as PCCE_R;
 #[doc = "Field `PCCE` writer - Preempted channels conversion end flag"]
 pub use OCCE_W as PCCE_W;
-#[doc = "Field `PCCS` reader - Preempted channel conversion start flag"]
-pub type PCCS_R = crate::BitReader<PCCSR_A>;
 #[doc = "Preempted channel conversion start flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PCCSR_A {
+pub enum Pccsr {
     #[doc = "0: No channel conversion started"]
     Idle = 0,
     #[doc = "1: Channel conversion has started"]
     Started = 1,
 }
-impl From<PCCSR_A> for bool {
+impl From<Pccsr> for bool {
     #[inline(always)]
-    fn from(variant: PCCSR_A) -> Self {
+    fn from(variant: Pccsr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `PCCS` reader - Preempted channel conversion start flag"]
+pub type PCCS_R = crate::BitReader<Pccsr>;
 impl PCCS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> PCCSR_A {
+    pub const fn variant(&self) -> Pccsr {
         match self.bits {
-            false => PCCSR_A::Idle,
-            true => PCCSR_A::Started,
+            false => Pccsr::Idle,
+            true => Pccsr::Started,
         }
     }
     #[doc = "No channel conversion started"]
     #[inline(always)]
     pub fn is_idle(&self) -> bool {
-        *self == PCCSR_A::Idle
+        *self == Pccsr::Idle
     }
     #[doc = "Channel conversion has started"]
     #[inline(always)]
     pub fn is_started(&self) -> bool {
-        *self == PCCSR_A::Started
+        *self == Pccsr::Started
     }
 }
 #[doc = "Preempted channel conversion start flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PCCSW_AW {
+pub enum PccswWO {
     #[doc = "0: Clear flag"]
     Clear = 0,
 }
-impl From<PCCSW_AW> for bool {
+impl From<PccswWO> for bool {
     #[inline(always)]
-    fn from(variant: PCCSW_AW) -> Self {
+    fn from(variant: PccswWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `PCCS` writer - Preempted channel conversion start flag"]
-pub type PCCS_W<'a, REG> = crate::BitWriter0C<'a, REG, PCCSW_AW>;
+pub type PCCS_W<'a, REG> = crate::BitWriter0C<'a, REG, PccswWO>;
 impl<'a, REG> PCCS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -183,7 +183,7 @@ where
     #[doc = "Clear flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(PCCSW_AW::Clear)
+        self.variant(PccswWO::Clear)
     }
 }
 #[doc = "Field `OCCS` reader - Ordinary channel conversion start flag"]
@@ -248,7 +248,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -288,16 +288,6 @@ impl W {
     pub fn occo(&mut self) -> OCCO_W<STS_SPEC> {
         OCCO_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
@@ -308,10 +298,11 @@ impl crate::RegisterSpec for STS_SPEC {
 impl crate::Readable for STS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts::W`](W) writer structure"]
 impl crate::Writable for STS_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0x1f;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x1f;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0"]
 impl crate::Resettable for STS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -2,58 +2,58 @@
 pub type R = crate::R<CTRL2_SPEC>;
 #[doc = "Register `CTRL2` writer"]
 pub type W = crate::W<CTRL2_SPEC>;
-#[doc = "Field `CBCTRL` reader - Channel buffer control"]
-pub type CBCTRL_R = crate::BitReader<CBCTRLR_A>;
 #[doc = "Channel buffer control\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CBCTRLR_A {
+pub enum Cbctrlr {
     #[doc = "0: CxEN, CxCEN and CxOCTRL bits are not buffered"]
     Disabled = 0,
     #[doc = "1: CxEN, CxCEN and CxOCTRL bits are buffered"]
     Enabled = 1,
 }
-impl From<CBCTRLR_A> for bool {
+impl From<Cbctrlr> for bool {
     #[inline(always)]
-    fn from(variant: CBCTRLR_A) -> Self {
+    fn from(variant: Cbctrlr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CBCTRL` reader - Channel buffer control"]
+pub type CBCTRL_R = crate::BitReader<Cbctrlr>;
 impl CBCTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CBCTRLR_A {
+    pub const fn variant(&self) -> Cbctrlr {
         match self.bits {
-            false => CBCTRLR_A::Disabled,
-            true => CBCTRLR_A::Enabled,
+            false => Cbctrlr::Disabled,
+            true => Cbctrlr::Enabled,
         }
     }
     #[doc = "CxEN, CxCEN and CxOCTRL bits are not buffered"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == CBCTRLR_A::Disabled
+        *self == Cbctrlr::Disabled
     }
     #[doc = "CxEN, CxCEN and CxOCTRL bits are buffered"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == CBCTRLR_A::Enabled
+        *self == Cbctrlr::Enabled
     }
 }
 #[doc = "Channel buffer control\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CBCTRLW_AW {
+pub enum CbctrlwWO {
     #[doc = "0: CxEN, CxCEN and CxOCTRL bits buffer disable"]
     Disable = 0,
     #[doc = "1: CxEN, CxCEN and CxOCTRL bits buffer enable"]
     Enable = 1,
 }
-impl From<CBCTRLW_AW> for bool {
+impl From<CbctrlwWO> for bool {
     #[inline(always)]
-    fn from(variant: CBCTRLW_AW) -> Self {
+    fn from(variant: CbctrlwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CBCTRL` writer - Channel buffer control"]
-pub type CBCTRL_W<'a, REG> = crate::BitWriter<'a, REG, CBCTRLW_AW>;
+pub type CBCTRL_W<'a, REG> = crate::BitWriter<'a, REG, CbctrlwWO>;
 impl<'a, REG> CBCTRL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,12 +61,12 @@ where
     #[doc = "CxEN, CxCEN and CxOCTRL bits buffer disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(CBCTRLW_AW::Disable)
+        self.variant(CbctrlwWO::Disable)
     }
     #[doc = "CxEN, CxCEN and CxOCTRL bits buffer enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(CBCTRLW_AW::Enable)
+        self.variant(CbctrlwWO::Enable)
     }
 }
 #[doc = "Field `CCFS` reader - Channel control bit fresh select"]
@@ -77,8 +77,6 @@ pub type CCFS_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type DRS_R = crate::BitReader;
 #[doc = "Field `DRS` writer - DMA request source"]
 pub type DRS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PTOS` reader - Primary TMR output selection"]
-pub type PTOS_R = crate::FieldReader<PTOS_A>;
 #[doc = "Primary TMR output selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -109,6 +107,8 @@ impl From<PTOS_A> for u8 {
 impl crate::FieldSpec for PTOS_A {
     type Ux = u8;
 }
+#[doc = "Field `PTOS` reader - Primary TMR output selection"]
+pub type PTOS_R = crate::FieldReader<PTOS_A>;
 impl PTOS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -278,7 +278,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -324,16 +324,6 @@ impl W {
     pub fn c2ios(&mut self) -> C2IOS_W<CTRL2_SPEC> {
         C2IOS_W::new(self, 10)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
@@ -344,10 +334,11 @@ impl crate::RegisterSpec for CTRL2_SPEC {
 impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
 impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

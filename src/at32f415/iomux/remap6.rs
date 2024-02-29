@@ -2,8 +2,6 @@
 pub type R = crate::R<REMAP6_SPEC>;
 #[doc = "Register `REMAP6` writer"]
 pub type W = crate::W<REMAP6_SPEC>;
-#[doc = "Field `CAN1_GMUX` reader - CAN1 muxing"]
-pub type CAN1_GMUX_R = crate::FieldReader<CAN1_GMUX_A>;
 #[doc = "CAN1 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -22,6 +20,8 @@ impl From<CAN1_GMUX_A> for u8 {
 impl crate::FieldSpec for CAN1_GMUX_A {
     type Ux = u8;
 }
+#[doc = "Field `CAN1_GMUX` reader - CAN1 muxing"]
+pub type CAN1_GMUX_R = crate::FieldReader<CAN1_GMUX_A>;
 impl CAN1_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -61,8 +61,6 @@ where
         self.variant(CAN1_GMUX_A::Mux1)
     }
 }
-#[doc = "Field `SDIO1_GMUX` reader - SDIO1 muxing"]
-pub type SDIO1_GMUX_R = crate::FieldReader<SDIO1_GMUX_A>;
 #[doc = "SDIO1 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -87,6 +85,8 @@ impl From<SDIO1_GMUX_A> for u8 {
 impl crate::FieldSpec for SDIO1_GMUX_A {
     type Ux = u8;
 }
+#[doc = "Field `SDIO1_GMUX` reader - SDIO1 muxing"]
+pub type SDIO1_GMUX_R = crate::FieldReader<SDIO1_GMUX_A>;
 impl SDIO1_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -159,8 +159,6 @@ where
         self.variant(SDIO1_GMUX_A::Mux4)
     }
 }
-#[doc = "Field `USART1_GMUX` reader - USART1 muxing"]
-pub type USART1_GMUX_R = crate::FieldReader<USART1_GMUX_A>;
 #[doc = "USART1 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -179,6 +177,8 @@ impl From<USART1_GMUX_A> for u8 {
 impl crate::FieldSpec for USART1_GMUX_A {
     type Ux = u8;
 }
+#[doc = "Field `USART1_GMUX` reader - USART1 muxing"]
+pub type USART1_GMUX_R = crate::FieldReader<USART1_GMUX_A>;
 impl USART1_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -218,8 +218,6 @@ where
         self.variant(USART1_GMUX_A::Mux1)
     }
 }
-#[doc = "Field `USART3_GMUX` reader - USART3 muxing"]
-pub type USART3_GMUX_R = crate::FieldReader<USART3_GMUX_A>;
 #[doc = "USART3 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -240,6 +238,8 @@ impl From<USART3_GMUX_A> for u8 {
 impl crate::FieldSpec for USART3_GMUX_A {
     type Ux = u8;
 }
+#[doc = "Field `USART3_GMUX` reader - USART3 muxing"]
+pub type USART3_GMUX_R = crate::FieldReader<USART3_GMUX_A>;
 impl USART3_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -290,8 +290,6 @@ where
         self.variant(USART3_GMUX_A::Mux2)
     }
 }
-#[doc = "Field `UART4_GMUX` reader - UART4 muxing"]
-pub type UART4_GMUX_R = crate::FieldReader<UART4_GMUX_A>;
 #[doc = "UART4 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -310,6 +308,8 @@ impl From<UART4_GMUX_A> for u8 {
 impl crate::FieldSpec for UART4_GMUX_A {
     type Ux = u8;
 }
+#[doc = "Field `UART4_GMUX` reader - UART4 muxing"]
+pub type UART4_GMUX_R = crate::FieldReader<UART4_GMUX_A>;
 impl UART4_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -395,7 +395,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<REMAP6_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -429,16 +429,6 @@ impl W {
     pub fn uart4_gmux(&mut self) -> UART4_GMUX_W<REMAP6_SPEC> {
         UART4_GMUX_W::new(self, 28)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "IO MUX remap register 6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap6::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap6::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP6_SPEC;
@@ -449,10 +439,11 @@ impl crate::RegisterSpec for REMAP6_SPEC {
 impl crate::Readable for REMAP6_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap6::W`](W) writer structure"]
 impl crate::Writable for REMAP6_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP6 to value 0"]
 impl crate::Resettable for REMAP6_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

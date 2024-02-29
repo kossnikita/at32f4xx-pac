@@ -18,7 +18,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<BUFCNTR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Bits 23:0 = FIFOCOUNT: Remaining number of words to be written to or read from the FIFO\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bufcntr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -30,5 +30,5 @@ impl crate::RegisterSpec for BUFCNTR_SPEC {
 impl crate::Readable for BUFCNTR_SPEC {}
 #[doc = "`reset()` method sets BUFCNTR to value 0"]
 impl crate::Resettable for BUFCNTR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

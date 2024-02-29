@@ -2,6 +2,20 @@ _svd: "../svd/AT32F421.svd"
 
 _modify:
   name: AT32F421
+  ADC:
+    name: ADC1
+
+CRM:
+  AHBEN:
+    _modify:
+      DMAEN:
+        name: DMA1EN
+  APB2EN:
+    _modify:
+      SCFGCMPEN:
+        name: SCFGEN
+      ADCEN:
+        name: ADC1EN
 
 _include:
   - common/crm/common.yaml

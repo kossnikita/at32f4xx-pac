@@ -2,58 +2,58 @@
 pub type R = crate::R<WPR_SPEC>;
 #[doc = "Register `WPR` writer"]
 pub type W = crate::W<WPR_SPEC>;
-#[doc = "Field `WPEN[0-15]` reader - Write protect enable %s"]
-pub type WPEN_R = crate::BitReader<WPEN0R_A>;
 #[doc = "Write protect enable %s\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum WPEN0R_A {
+pub enum Wpen0r {
     #[doc = "0: Port is not write protected"]
     NotProtected = 0,
     #[doc = "1: Port is write protected"]
     Protected = 1,
 }
-impl From<WPEN0R_A> for bool {
+impl From<Wpen0r> for bool {
     #[inline(always)]
-    fn from(variant: WPEN0R_A) -> Self {
+    fn from(variant: Wpen0r) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `WPEN(0-15)` reader - Write protect enable %s"]
+pub type WPEN_R = crate::BitReader<Wpen0r>;
 impl WPEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> WPEN0R_A {
+    pub const fn variant(&self) -> Wpen0r {
         match self.bits {
-            false => WPEN0R_A::NotProtected,
-            true => WPEN0R_A::Protected,
+            false => Wpen0r::NotProtected,
+            true => Wpen0r::Protected,
         }
     }
     #[doc = "Port is not write protected"]
     #[inline(always)]
     pub fn is_not_protected(&self) -> bool {
-        *self == WPEN0R_A::NotProtected
+        *self == Wpen0r::NotProtected
     }
     #[doc = "Port is write protected"]
     #[inline(always)]
     pub fn is_protected(&self) -> bool {
-        *self == WPEN0R_A::Protected
+        *self == Wpen0r::Protected
     }
 }
 #[doc = "Write protect enable %s\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum WPEN0W_AW {
+pub enum Wpen0wWO {
     #[doc = "0: No effect"]
     NoProtect = 0,
     #[doc = "1: Write protect"]
     Protect = 1,
 }
-impl From<WPEN0W_AW> for bool {
+impl From<Wpen0wWO> for bool {
     #[inline(always)]
-    fn from(variant: WPEN0W_AW) -> Self {
+    fn from(variant: Wpen0wWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `WPEN[0-15]` writer - Write protect enable %s"]
-pub type WPEN_W<'a, REG> = crate::BitWriter<'a, REG, WPEN0W_AW>;
+#[doc = "Field `WPEN(0-15)` writer - Write protect enable %s"]
+pub type WPEN_W<'a, REG> = crate::BitWriter<'a, REG, Wpen0wWO>;
 impl<'a, REG> WPEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,16 +61,14 @@ where
     #[doc = "No effect"]
     #[inline(always)]
     pub fn no_protect(self) -> &'a mut crate::W<REG> {
-        self.variant(WPEN0W_AW::NoProtect)
+        self.variant(Wpen0wWO::NoProtect)
     }
     #[doc = "Write protect"]
     #[inline(always)]
     pub fn protect(self) -> &'a mut crate::W<REG> {
-        self.variant(WPEN0W_AW::Protect)
+        self.variant(Wpen0wWO::Protect)
     }
 }
-#[doc = "Field `WPSEQ` reader - Write protect sequence"]
-pub type WPSEQ_R = crate::BitReader<WPSEQ_A>;
 #[doc = "Write protect sequence\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WPSEQ_A {
@@ -85,6 +83,8 @@ impl From<WPSEQ_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `WPSEQ` reader - Write protect sequence"]
+pub type WPSEQ_R = crate::BitReader<WPSEQ_A>;
 impl WPSEQ_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -123,11 +123,20 @@ where
     }
 }
 impl R {
-    #[doc = "Write protect enable [0-15]\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Write protect enable (0-15)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `WPEN0` field"]
     #[inline(always)]
     pub fn wpen(&self, n: u8) -> WPEN_R {
-        assert!(n < 16);
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         WPEN_R::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Write protect enable (0-15)"]
+    #[inline(always)]
+    pub fn wpen_iter(&self) -> impl Iterator<Item = WPEN_R> + '_ {
+        (0..16).map(move |n| WPEN_R::new(((self.bits >> n) & 1) != 0))
     }
     #[doc = "Bit 0 - Write protect enable 0"]
     #[inline(always)]
@@ -240,15 +249,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<WPR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Write protect enable [0-15]"]
+    #[doc = "Write protect enable (0-15)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `WPEN0` field"]
     #[inline(always)]
     #[must_use]
     pub fn wpen(&mut self, n: u8) -> WPEN_W<WPR_SPEC> {
-        assert!(n < 16);
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         WPEN_W::new(self, n)
     }
     #[doc = "Bit 0 - Write protect enable 0"]
@@ -353,16 +365,6 @@ impl W {
     pub fn wpseq(&mut self) -> WPSEQ_W<WPR_SPEC> {
         WPSEQ_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Port write protect register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wpr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wpr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WPR_SPEC;
@@ -373,10 +375,11 @@ impl crate::RegisterSpec for WPR_SPEC {
 impl crate::Readable for WPR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wpr::W`](W) writer structure"]
 impl crate::Writable for WPR_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WPR to value 0"]
 impl crate::Resettable for WPR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

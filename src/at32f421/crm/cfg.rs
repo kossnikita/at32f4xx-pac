@@ -2,8 +2,6 @@
 pub type R = crate::R<CFG_SPEC>;
 #[doc = "Register `CFG` writer"]
 pub type W = crate::W<CFG_SPEC>;
-#[doc = "Field `SCLKSEL` reader - System clock select"]
-pub type SCLKSEL_R = crate::FieldReader<SCLKSEL_A>;
 #[doc = "System clock select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -24,6 +22,8 @@ impl From<SCLKSEL_A> for u8 {
 impl crate::FieldSpec for SCLKSEL_A {
     type Ux = u8;
 }
+#[doc = "Field `SCLKSEL` reader - System clock select"]
+pub type SCLKSEL_R = crate::FieldReader<SCLKSEL_A>;
 impl SCLKSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -74,8 +74,6 @@ where
         self.variant(SCLKSEL_A::Pll)
     }
 }
-#[doc = "Field `SCLKSTS` reader - System Clock select Status"]
-pub type SCLKSTS_R = crate::FieldReader<SCLKSTS_A>;
 #[doc = "System Clock select Status\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -96,6 +94,8 @@ impl From<SCLKSTS_A> for u8 {
 impl crate::FieldSpec for SCLKSTS_A {
     type Ux = u8;
 }
+#[doc = "Field `SCLKSTS` reader - System Clock select Status"]
+pub type SCLKSTS_R = crate::FieldReader<SCLKSTS_A>;
 impl SCLKSTS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -123,8 +123,6 @@ impl SCLKSTS_R {
         *self == SCLKSTS_A::Pll
     }
 }
-#[doc = "Field `AHBDIV` reader - AHB division"]
-pub type AHBDIV_R = crate::FieldReader<AHBDIV_A>;
 #[doc = "AHB division\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -157,6 +155,8 @@ impl From<AHBDIV_A> for u8 {
 impl crate::FieldSpec for AHBDIV_A {
     type Ux = u8;
 }
+#[doc = "Field `AHBDIV` reader - AHB division"]
+pub type AHBDIV_R = crate::FieldReader<AHBDIV_A>;
 impl AHBDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -273,8 +273,6 @@ where
         self.variant(AHBDIV_A::Div512)
     }
 }
-#[doc = "Field `APB1DIV` reader - APB1 division"]
-pub type APB1DIV_R = crate::FieldReader<APB1DIV_A>;
 #[doc = "APB1 division\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -299,6 +297,8 @@ impl From<APB1DIV_A> for u8 {
 impl crate::FieldSpec for APB1DIV_A {
     type Ux = u8;
 }
+#[doc = "Field `APB1DIV` reader - APB1 division"]
+pub type APB1DIV_R = crate::FieldReader<APB1DIV_A>;
 impl APB1DIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -383,8 +383,6 @@ pub type ADCDIV1_0_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 pub type PLLRCS_R = crate::BitReader;
 #[doc = "Field `PLLRCS` writer - PLL reference clock select"]
 pub type PLLRCS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PLLHEXTDIV` reader - HEXT division selection for PLL entry clock"]
-pub type PLLHEXTDIV_R = crate::BitReader<PLLHEXTDIV_A>;
 #[doc = "HEXT division selection for PLL entry clock\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PLLHEXTDIV_A {
@@ -399,6 +397,8 @@ impl From<PLLHEXTDIV_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `PLLHEXTDIV` reader - HEXT division selection for PLL entry clock"]
+pub type PLLHEXTDIV_R = crate::BitReader<PLLHEXTDIV_A>;
 impl PLLHEXTDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -534,7 +534,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -604,16 +604,6 @@ impl W {
     pub fn pllmult5_4(&mut self) -> PLLMULT5_4_W<CFG_SPEC> {
         PLLMULT5_4_W::new(self, 29)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Clock configuration register (CRM_CFG)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG_SPEC;
@@ -624,10 +614,11 @@ impl crate::RegisterSpec for CFG_SPEC {
 impl crate::Readable for CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg::W`](W) writer structure"]
 impl crate::Writable for CFG_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG to value 0"]
 impl crate::Resettable for CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

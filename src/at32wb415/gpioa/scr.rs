@@ -2,18 +2,18 @@
 pub type W = crate::W<SCR_SPEC>;
 #[doc = "Set bit %s\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum IOSB0W_AW {
+pub enum IOSB0W_A {
     #[doc = "1: Set the corresponding ODT bit"]
     Set = 1,
 }
-impl From<IOSB0W_AW> for bool {
+impl From<IOSB0W_A> for bool {
     #[inline(always)]
-    fn from(variant: IOSB0W_AW) -> Self {
+    fn from(variant: IOSB0W_A) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `IOSB[0-15]` writer - Set bit %s"]
-pub type IOSB_W<'a, REG> = crate::BitWriter1S<'a, REG, IOSB0W_AW>;
+#[doc = "Field `IOSB(0-15)` writer - Set bit %s"]
+pub type IOSB_W<'a, REG> = crate::BitWriter1S<'a, REG, IOSB0W_A>;
 impl<'a, REG> IOSB_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -21,23 +21,23 @@ where
     #[doc = "Set the corresponding ODT bit"]
     #[inline(always)]
     pub fn set(self) -> &'a mut crate::W<REG> {
-        self.variant(IOSB0W_AW::Set)
+        self.variant(IOSB0W_A::Set)
     }
 }
 #[doc = "Clear bit %s\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum IOCB0W_AW {
+pub enum IOCB0W_A {
     #[doc = "1: Clear the corresponding ODT bit"]
     Clear = 1,
 }
-impl From<IOCB0W_AW> for bool {
+impl From<IOCB0W_A> for bool {
     #[inline(always)]
-    fn from(variant: IOCB0W_AW) -> Self {
+    fn from(variant: IOCB0W_A) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `IOCB[0-15]` writer - Clear bit %s"]
-pub type IOCB_W<'a, REG> = crate::BitWriter1C<'a, REG, IOCB0W_AW>;
+#[doc = "Field `IOCB(0-15)` writer - Clear bit %s"]
+pub type IOCB_W<'a, REG> = crate::BitWriter1C<'a, REG, IOCB0W_A>;
 impl<'a, REG> IOCB_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -45,7 +45,7 @@ where
     #[doc = "Clear the corresponding ODT bit"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(IOCB0W_AW::Clear)
+        self.variant(IOCB0W_A::Clear)
     }
 }
 impl core::fmt::Debug for crate::generic::Reg<SCR_SPEC> {
@@ -54,11 +54,14 @@ impl core::fmt::Debug for crate::generic::Reg<SCR_SPEC> {
     }
 }
 impl W {
-    #[doc = "Set bit [0-15]"]
+    #[doc = "Set bit (0-15)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOSB0` field"]
     #[inline(always)]
     #[must_use]
     pub fn iosb(&mut self, n: u8) -> IOSB_W<SCR_SPEC> {
-        assert!(n < 16);
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         IOSB_W::new(self, n)
     }
     #[doc = "Bit 0 - Set bit 0"]
@@ -157,11 +160,14 @@ impl W {
     pub fn iosb15(&mut self) -> IOSB_W<SCR_SPEC> {
         IOSB_W::new(self, 15)
     }
-    #[doc = "Clear bit [0-15]"]
+    #[doc = "Clear bit (0-15)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOCB0` field"]
     #[inline(always)]
     #[must_use]
     pub fn iocb(&mut self, n: u8) -> IOCB_W<SCR_SPEC> {
-        assert!(n < 16);
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         IOCB_W::new(self, n + 16)
     }
     #[doc = "Bit 16 - Clear bit 0"]
@@ -260,16 +266,6 @@ impl W {
     pub fn iocb15(&mut self) -> IOCB_W<SCR_SPEC> {
         IOCB_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Port bit set/clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SCR_SPEC;
@@ -278,10 +274,11 @@ impl crate::RegisterSpec for SCR_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`scr::W`](W) writer structure"]
 impl crate::Writable for SCR_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0x0001_0001;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0001_0001;
 }
 #[doc = "`reset()` method sets SCR to value 0"]
 impl crate::Resettable for SCR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

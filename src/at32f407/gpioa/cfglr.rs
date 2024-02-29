@@ -2,8 +2,6 @@
 pub type R = crate::R<CFGLR_SPEC>;
 #[doc = "Register `CFGLR` writer"]
 pub type W = crate::W<CFGLR_SPEC>;
-#[doc = "Field `IOMC[0-7]` reader - Port n.%s mode configurate bits"]
-pub type IOMC_R = crate::FieldReader<IOMC0_A>;
 #[doc = "Port n.%s mode configurate bits\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -26,6 +24,8 @@ impl From<IOMC0_A> for u8 {
 impl crate::FieldSpec for IOMC0_A {
     type Ux = u8;
 }
+#[doc = "Field `IOMC(0-7)` reader - Port n.%s mode configurate bits"]
+pub type IOMC_R = crate::FieldReader<IOMC0_A>;
 impl IOMC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -59,7 +59,7 @@ impl IOMC_R {
         *self == IOMC0_A::OutputMaximum
     }
 }
-#[doc = "Field `IOMC[0-7]` writer - Port n.%s mode configurate bits"]
+#[doc = "Field `IOMC(0-7)` writer - Port n.%s mode configurate bits"]
 pub type IOMC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, IOMC0_A>;
 impl<'a, REG> IOMC_W<'a, REG>
 where
@@ -87,8 +87,6 @@ where
         self.variant(IOMC0_A::OutputMaximum)
     }
 }
-#[doc = "Field `IOFC[0-7]` reader - Port n.%s function configurate bits"]
-pub type IOFC_R = crate::FieldReader<IOFC0_A>;
 #[doc = "Port n.%s function configurate bits\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -111,6 +109,8 @@ impl From<IOFC0_A> for u8 {
 impl crate::FieldSpec for IOFC0_A {
     type Ux = u8;
 }
+#[doc = "Field `IOFC(0-7)` reader - Port n.%s function configurate bits"]
+pub type IOFC_R = crate::FieldReader<IOFC0_A>;
 impl IOFC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -144,7 +144,7 @@ impl IOFC_R {
         *self == IOFC0_A::MuxOpenDrain
     }
 }
-#[doc = "Field `IOFC[0-7]` writer - Port n.%s function configurate bits"]
+#[doc = "Field `IOFC(0-7)` writer - Port n.%s function configurate bits"]
 pub type IOFC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, IOFC0_A>;
 impl<'a, REG> IOFC_W<'a, REG>
 where
@@ -173,12 +173,20 @@ where
     }
 }
 impl R {
-    #[doc = "Port n.[0-7]
-mode configurate bits\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Port n.(0-7) mode configurate bits"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOMC0` field"]
     #[inline(always)]
     pub fn iomc(&self, n: u8) -> IOMC_R {
-        assert!(n < 8);
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         IOMC_R::new(((self.bits >> (n * 4)) & 3) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Port n.(0-7) mode configurate bits"]
+    #[inline(always)]
+    pub fn iomc_iter(&self) -> impl Iterator<Item = IOMC_R> + '_ {
+        (0..8).map(move |n| IOMC_R::new(((self.bits >> (n * 4)) & 3) as u8))
     }
     #[doc = "Bits 0:1 - Port n.0 mode configurate bits"]
     #[inline(always)]
@@ -220,12 +228,20 @@ mode configurate bits\n\nNOTE: `n` is number of field in register starting from 
     pub fn iomc7(&self) -> IOMC_R {
         IOMC_R::new(((self.bits >> 28) & 3) as u8)
     }
-    #[doc = "Port n.[0-7]
-function configurate bits\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Port n.(0-7) function configurate bits"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOFC0` field"]
     #[inline(always)]
     pub fn iofc(&self, n: u8) -> IOFC_R {
-        assert!(n < 8);
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         IOFC_R::new(((self.bits >> (n * 4 + 2)) & 3) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Port n.(0-7) function configurate bits"]
+    #[inline(always)]
+    pub fn iofc_iter(&self) -> impl Iterator<Item = IOFC_R> + '_ {
+        (0..8).map(move |n| IOFC_R::new(((self.bits >> (n * 4 + 2)) & 3) as u8))
     }
     #[doc = "Bits 2:3 - Port n.0 function configurate bits"]
     #[inline(always)]
@@ -292,16 +308,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CFGLR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Port n.[0-7]
-mode configurate bits"]
+    #[doc = "Port n.(0-7) mode configurate bits"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOMC0` field"]
     #[inline(always)]
     #[must_use]
     pub fn iomc(&mut self, n: u8) -> IOMC_W<CFGLR_SPEC> {
-        assert!(n < 8);
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         IOMC_W::new(self, n * 4)
     }
     #[doc = "Bits 0:1 - Port n.0 mode configurate bits"]
@@ -352,12 +370,14 @@ mode configurate bits"]
     pub fn iomc7(&mut self) -> IOMC_W<CFGLR_SPEC> {
         IOMC_W::new(self, 28)
     }
-    #[doc = "Port n.[0-7]
-function configurate bits"]
+    #[doc = "Port n.(0-7) function configurate bits"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOFC0` field"]
     #[inline(always)]
     #[must_use]
     pub fn iofc(&mut self, n: u8) -> IOFC_W<CFGLR_SPEC> {
-        assert!(n < 8);
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         IOFC_W::new(self, n * 4 + 2)
     }
     #[doc = "Bits 2:3 - Port n.0 function configurate bits"]
@@ -408,16 +428,6 @@ function configurate bits"]
     pub fn iofc7(&mut self) -> IOFC_W<CFGLR_SPEC> {
         IOFC_W::new(self, 30)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "GPIO function configurate low register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfglr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfglr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFGLR_SPEC;
@@ -428,10 +438,11 @@ impl crate::RegisterSpec for CFGLR_SPEC {
 impl crate::Readable for CFGLR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfglr::W`](W) writer structure"]
 impl crate::Writable for CFGLR_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFGLR to value 0x4444_4444"]
 impl crate::Resettable for CFGLR_SPEC {
-    const RESET_VALUE: Self::Ux = 0x4444_4444;
+    const RESET_VALUE: u32 = 0x4444_4444;
 }

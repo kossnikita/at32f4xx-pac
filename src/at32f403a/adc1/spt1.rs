@@ -2,16 +2,25 @@
 pub type R = crate::R<SPT1_SPEC>;
 #[doc = "Register `SPT1` writer"]
 pub type W = crate::W<SPT1_SPEC>;
-#[doc = "Field `CSPT[10-17]` reader - Selection sample time of channel ADC_IN%s"]
+#[doc = "Field `CSPT(10-17)` reader - Selection sample time of channel ADC_IN%s"]
 pub type CSPT_R = crate::FieldReader;
-#[doc = "Field `CSPT[10-17]` writer - Selection sample time of channel ADC_IN%s"]
+#[doc = "Field `CSPT(10-17)` writer - Selection sample time of channel ADC_IN%s"]
 pub type CSPT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 impl R {
-    #[doc = "Selection sample time of channel ADC_IN[10-17]\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Selection sample time of channel ADC_IN(10-17)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CSPT10` field"]
     #[inline(always)]
     pub fn cspt(&self, n: u8) -> CSPT_R {
-        assert!(n < 8);
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CSPT_R::new(((self.bits >> (n * 3)) & 7) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Selection sample time of channel ADC_IN(10-17)"]
+    #[inline(always)]
+    pub fn cspt_iter(&self) -> impl Iterator<Item = CSPT_R> + '_ {
+        (0..8).map(move |n| CSPT_R::new(((self.bits >> (n * 3)) & 7) as u8))
     }
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN10"]
     #[inline(always)]
@@ -70,15 +79,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<SPT1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Selection sample time of channel ADC_IN[10-17]"]
+    #[doc = "Selection sample time of channel ADC_IN(10-17)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CSPT10` field"]
     #[inline(always)]
     #[must_use]
     pub fn cspt(&mut self, n: u8) -> CSPT_W<SPT1_SPEC> {
-        assert!(n < 8);
+        #[allow(clippy::no_effect)]
+        [(); 8][n as usize];
         CSPT_W::new(self, n * 3)
     }
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN10"]
@@ -129,16 +141,6 @@ impl W {
     pub fn cspt17(&mut self) -> CSPT_W<SPT1_SPEC> {
         CSPT_W::new(self, 21)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "sample time register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spt1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spt1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPT1_SPEC;
@@ -149,10 +151,11 @@ impl crate::RegisterSpec for SPT1_SPEC {
 impl crate::Readable for SPT1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spt1::W`](W) writer structure"]
 impl crate::Writable for SPT1_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPT1 to value 0"]
 impl crate::Resettable for SPT1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

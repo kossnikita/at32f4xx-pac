@@ -50,7 +50,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<TSDT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "timestamp date register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsdt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -62,5 +62,5 @@ impl crate::RegisterSpec for TSDT_SPEC {
 impl crate::Readable for TSDT_SPEC {}
 #[doc = "`reset()` method sets TSDT to value 0"]
 impl crate::Resettable for TSDT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

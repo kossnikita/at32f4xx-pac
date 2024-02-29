@@ -18,7 +18,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<WIN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Window register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`win::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -30,5 +30,5 @@ impl crate::RegisterSpec for WIN_SPEC {
 impl crate::Readable for WIN_SPEC {}
 #[doc = "`reset()` method sets WIN to value 0x0fff"]
 impl crate::Resettable for WIN_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0fff;
+    const RESET_VALUE: u32 = 0x0fff;
 }

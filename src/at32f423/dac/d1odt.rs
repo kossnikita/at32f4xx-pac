@@ -18,7 +18,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<D1ODT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "DAC1 data output register (DAC_D1ODT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`d1odt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -30,5 +30,5 @@ impl crate::RegisterSpec for D1ODT_SPEC {
 impl crate::Readable for D1ODT_SPEC {}
 #[doc = "`reset()` method sets D1ODT to value 0"]
 impl crate::Resettable for D1ODT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

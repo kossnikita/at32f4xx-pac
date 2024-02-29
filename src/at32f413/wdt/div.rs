@@ -2,8 +2,6 @@
 pub type R = crate::R<DIV_SPEC>;
 #[doc = "Register `DIV` writer"]
 pub type W = crate::W<DIV_SPEC>;
-#[doc = "Field `DIV` reader - Division divider"]
-pub type DIV_R = crate::FieldReader<DIV_A>;
 #[doc = "Division divider\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -23,7 +21,7 @@ pub enum DIV_A {
     #[doc = "6: LICK divided by 256"]
     Div256 = 6,
     #[doc = "7: LICK divided by 256"]
-    Div2562 = 7,
+    Div256_2 = 7,
 }
 impl From<DIV_A> for u8 {
     #[inline(always)]
@@ -34,6 +32,8 @@ impl From<DIV_A> for u8 {
 impl crate::FieldSpec for DIV_A {
     type Ux = u8;
 }
+#[doc = "Field `DIV` reader - Division divider"]
+pub type DIV_R = crate::FieldReader<DIV_A>;
 impl DIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -46,7 +46,7 @@ impl DIV_R {
             4 => DIV_A::Div64,
             5 => DIV_A::Div128,
             6 => DIV_A::Div256,
-            7 => DIV_A::Div2562,
+            7 => DIV_A::Div256_2,
             _ => unreachable!(),
         }
     }
@@ -88,7 +88,7 @@ impl DIV_R {
     #[doc = "LICK divided by 256"]
     #[inline(always)]
     pub fn is_div256_2(&self) -> bool {
-        *self == DIV_A::Div2562
+        *self == DIV_A::Div256_2
     }
 }
 #[doc = "Field `DIV` writer - Division divider"]
@@ -136,7 +136,7 @@ where
     #[doc = "LICK divided by 256"]
     #[inline(always)]
     pub fn div256_2(self) -> &'a mut crate::W<REG> {
-        self.variant(DIV_A::Div2562)
+        self.variant(DIV_A::Div256_2)
     }
 }
 impl R {
@@ -155,7 +155,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DIV_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -164,16 +164,6 @@ impl W {
     #[must_use]
     pub fn div(&mut self) -> DIV_W<DIV_SPEC> {
         DIV_W::new(self, 0)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
     }
 }
 #[doc = "Division register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`div::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -185,10 +175,11 @@ impl crate::RegisterSpec for DIV_SPEC {
 impl crate::Readable for DIV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`div::W`](W) writer structure"]
 impl crate::Writable for DIV_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIV to value 0"]
 impl crate::Resettable for DIV_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

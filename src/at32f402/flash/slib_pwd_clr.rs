@@ -14,16 +14,6 @@ impl W {
     pub fn slib_pclr_val(&mut self) -> SLIB_PCLR_VAL_W<SLIB_PWD_CLR_SPEC> {
         SLIB_PCLR_VAL_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "SLIB password clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slib_pwd_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLIB_PWD_CLR_SPEC;
@@ -32,10 +22,11 @@ impl crate::RegisterSpec for SLIB_PWD_CLR_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`slib_pwd_clr::W`](W) writer structure"]
 impl crate::Writable for SLIB_PWD_CLR_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLIB_PWD_CLR to value 0"]
 impl crate::Resettable for SLIB_PWD_CLR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

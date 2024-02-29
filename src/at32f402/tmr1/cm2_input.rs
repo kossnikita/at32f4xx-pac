@@ -2,8 +2,6 @@
 pub type R = crate::R<CM2_INPUT_SPEC>;
 #[doc = "Register `CM2_INPUT` writer"]
 pub type W = crate::W<CM2_INPUT_SPEC>;
-#[doc = "Field `C3C` reader - Channel 3 configure"]
-pub type C3C_R = crate::FieldReader<C3C_A>;
 #[doc = "Channel 3 configure\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -26,6 +24,8 @@ impl From<C3C_A> for u8 {
 impl crate::FieldSpec for C3C_A {
     type Ux = u8;
 }
+#[doc = "Field `C3C` reader - Channel 3 configure"]
+pub type C3C_R = crate::FieldReader<C3C_A>;
 impl C3C_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -87,8 +87,6 @@ where
         self.variant(C3C_A::Stis)
     }
 }
-#[doc = "Field `CIDIV[3-4]` reader - Channel %s input divider"]
-pub type CIDIV_R = crate::FieldReader<C3IDIV_A>;
 #[doc = "Channel %s input divider\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -111,6 +109,8 @@ impl From<C3IDIV_A> for u8 {
 impl crate::FieldSpec for C3IDIV_A {
     type Ux = u8;
 }
+#[doc = "Field `CIDIV(3-4)` reader - Channel %s input divider"]
+pub type CIDIV_R = crate::FieldReader<C3IDIV_A>;
 impl CIDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -144,7 +144,7 @@ impl CIDIV_R {
         *self == C3IDIV_A::Div8
     }
 }
-#[doc = "Field `CIDIV[3-4]` writer - Channel %s input divider"]
+#[doc = "Field `CIDIV(3-4)` writer - Channel %s input divider"]
 pub type CIDIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C3IDIV_A>;
 impl<'a, REG> CIDIV_W<'a, REG>
 where
@@ -172,8 +172,6 @@ where
         self.variant(C3IDIV_A::Div8)
     }
 }
-#[doc = "Field `CDF[3-4]` reader - Channel %s digital filter"]
-pub type CDF_R = crate::FieldReader<CDF_A>;
 #[doc = "Channel %s digital filter\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -220,6 +218,8 @@ impl From<CDF_A> for u8 {
 impl crate::FieldSpec for CDF_A {
     type Ux = u8;
 }
+#[doc = "Field `CDF(3-4)` reader - Channel %s digital filter"]
+pub type CDF_R = crate::FieldReader<CDF_A>;
 impl CDF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -325,7 +325,7 @@ impl CDF_R {
         *self == CDF_A::Div32n8
     }
 }
-#[doc = "Field `CDF[3-4]` writer - Channel %s digital filter"]
+#[doc = "Field `CDF(3-4)` writer - Channel %s digital filter"]
 pub type CDF_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, CDF_A>;
 impl<'a, REG> CDF_W<'a, REG>
 where
@@ -413,8 +413,6 @@ where
         self.variant(CDF_A::Div32n8)
     }
 }
-#[doc = "Field `C4C` reader - Channel 4 configure"]
-pub type C4C_R = crate::FieldReader<C4C_A>;
 #[doc = "Channel 4 configure\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -437,6 +435,8 @@ impl From<C4C_A> for u8 {
 impl crate::FieldSpec for C4C_A {
     type Ux = u8;
 }
+#[doc = "Field `C4C` reader - Channel 4 configure"]
+pub type C4C_R = crate::FieldReader<C4C_A>;
 impl C4C_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -504,12 +504,20 @@ impl R {
     pub fn c3c(&self) -> C3C_R {
         C3C_R::new((self.bits & 3) as u8)
     }
-    #[doc = "Channel [3-4]
-input divider\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (3-4) input divider"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C3IDIV` field"]
     #[inline(always)]
     pub fn cidiv(&self, n: u8) -> CIDIV_R {
-        assert!(n < 2);
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CIDIV_R::new(((self.bits >> (n * 8 + 2)) & 3) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (3-4) input divider"]
+    #[inline(always)]
+    pub fn cidiv_iter(&self) -> impl Iterator<Item = CIDIV_R> + '_ {
+        (0..2).map(move |n| CIDIV_R::new(((self.bits >> (n * 8 + 2)) & 3) as u8))
     }
     #[doc = "Bits 2:3 - Channel 3 input divider"]
     #[inline(always)]
@@ -521,12 +529,20 @@ input divider\n\nNOTE: `n` is number of field in register starting from 0"]
     pub fn c4idiv(&self) -> CIDIV_R {
         CIDIV_R::new(((self.bits >> 10) & 3) as u8)
     }
-    #[doc = "Channel [3-4]
-digital filter\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (3-4) digital filter"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C3DF` field"]
     #[inline(always)]
     pub fn cdf(&self, n: u8) -> CDF_R {
-        assert!(n < 2);
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CDF_R::new(((self.bits >> (n * 8 + 4)) & 0x0f) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (3-4) digital filter"]
+    #[inline(always)]
+    pub fn cdf_iter(&self) -> impl Iterator<Item = CDF_R> + '_ {
+        (0..2).map(move |n| CDF_R::new(((self.bits >> (n * 8 + 4)) & 0x0f) as u8))
     }
     #[doc = "Bits 4:7 - Channel 3 digital filter"]
     #[inline(always)]
@@ -558,7 +574,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CM2_INPUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -568,12 +584,14 @@ impl W {
     pub fn c3c(&mut self) -> C3C_W<CM2_INPUT_SPEC> {
         C3C_W::new(self, 0)
     }
-    #[doc = "Channel [3-4]
-input divider"]
+    #[doc = "Channel (3-4) input divider"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C3IDIV` field"]
     #[inline(always)]
     #[must_use]
     pub fn cidiv(&mut self, n: u8) -> CIDIV_W<CM2_INPUT_SPEC> {
-        assert!(n < 2);
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CIDIV_W::new(self, n * 8 + 2)
     }
     #[doc = "Bits 2:3 - Channel 3 input divider"]
@@ -588,12 +606,14 @@ input divider"]
     pub fn c4idiv(&mut self) -> CIDIV_W<CM2_INPUT_SPEC> {
         CIDIV_W::new(self, 10)
     }
-    #[doc = "Channel [3-4]
-digital filter"]
+    #[doc = "Channel (3-4) digital filter"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C3DF` field"]
     #[inline(always)]
     #[must_use]
     pub fn cdf(&mut self, n: u8) -> CDF_W<CM2_INPUT_SPEC> {
-        assert!(n < 2);
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CDF_W::new(self, n * 8 + 4)
     }
     #[doc = "Bits 4:7 - Channel 3 digital filter"]
@@ -614,16 +634,6 @@ digital filter"]
     pub fn c4c(&mut self) -> C4C_W<CM2_INPUT_SPEC> {
         C4C_W::new(self, 8)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Channel input mode register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cm2_input::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cm2_input::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CM2_INPUT_SPEC;
@@ -634,10 +644,11 @@ impl crate::RegisterSpec for CM2_INPUT_SPEC {
 impl crate::Readable for CM2_INPUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cm2_input::W`](W) writer structure"]
 impl crate::Writable for CM2_INPUT_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CM2_INPUT to value 0"]
 impl crate::Resettable for CM2_INPUT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

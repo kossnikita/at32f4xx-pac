@@ -26,7 +26,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -38,5 +38,5 @@ impl crate::RegisterSpec for CTRL2_SPEC {
 impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`reset()` method sets CTRL2 to value 0x2080"]
 impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: Self::Ux = 0x2080;
+    const RESET_VALUE: u32 = 0x2080;
 }

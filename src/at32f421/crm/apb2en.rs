@@ -2,14 +2,14 @@
 pub type R = crate::R<APB2EN_SPEC>;
 #[doc = "Register `APB2EN` writer"]
 pub type W = crate::W<APB2EN_SPEC>;
-#[doc = "Field `SCFGCMP` reader - Syscfg and comparator clock enable"]
-pub type SCFGCMP_R = crate::BitReader;
-#[doc = "Field `SCFGCMP` writer - Syscfg and comparator clock enable"]
-pub type SCFGCMP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `ADC` reader - ADC clock enable"]
-pub type ADC_R = crate::BitReader;
-#[doc = "Field `ADC` writer - ADC clock enable"]
-pub type ADC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SCFG` reader - Syscfg and comparator clock enable"]
+pub type SCFG_R = crate::BitReader;
+#[doc = "Field `SCFG` writer - Syscfg and comparator clock enable"]
+pub type SCFG_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ADC1` reader - ADC clock enable"]
+pub type ADC1_R = crate::BitReader;
+#[doc = "Field `ADC1` writer - ADC clock enable"]
+pub type ADC1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TMR1` reader - Timer1 clock enable"]
 pub type TMR1_R = crate::BitReader;
 #[doc = "Field `TMR1` writer - Timer1 clock enable"]
@@ -37,13 +37,13 @@ pub type TMR17_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Syscfg and comparator clock enable"]
     #[inline(always)]
-    pub fn scfgcmp(&self) -> SCFGCMP_R {
-        SCFGCMP_R::new((self.bits & 1) != 0)
+    pub fn scfg(&self) -> SCFG_R {
+        SCFG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 9 - ADC clock enable"]
     #[inline(always)]
-    pub fn adc(&self) -> ADC_R {
-        ADC_R::new(((self.bits >> 9) & 1) != 0)
+    pub fn adc1(&self) -> ADC1_R {
+        ADC1_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bit 11 - Timer1 clock enable"]
     #[inline(always)]
@@ -79,8 +79,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB2EN")
-            .field("scfgcmp", &format_args!("{}", self.scfgcmp().bit()))
-            .field("adc", &format_args!("{}", self.adc().bit()))
+            .field("scfg", &format_args!("{}", self.scfg().bit()))
+            .field("adc1", &format_args!("{}", self.adc1().bit()))
             .field("tmr1", &format_args!("{}", self.tmr1().bit()))
             .field("spi1", &format_args!("{}", self.spi1().bit()))
             .field("usart1", &format_args!("{}", self.usart1().bit()))
@@ -92,21 +92,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<APB2EN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Bit 0 - Syscfg and comparator clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn scfgcmp(&mut self) -> SCFGCMP_W<APB2EN_SPEC> {
-        SCFGCMP_W::new(self, 0)
+    pub fn scfg(&mut self) -> SCFG_W<APB2EN_SPEC> {
+        SCFG_W::new(self, 0)
     }
     #[doc = "Bit 9 - ADC clock enable"]
     #[inline(always)]
     #[must_use]
-    pub fn adc(&mut self) -> ADC_W<APB2EN_SPEC> {
-        ADC_W::new(self, 9)
+    pub fn adc1(&mut self) -> ADC1_W<APB2EN_SPEC> {
+        ADC1_W::new(self, 9)
     }
     #[doc = "Bit 11 - Timer1 clock enable"]
     #[inline(always)]
@@ -144,16 +144,6 @@ impl W {
     pub fn tmr17(&mut self) -> TMR17_W<APB2EN_SPEC> {
         TMR17_W::new(self, 18)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "APB2 peripheral clock enable register (CRM_APB2EN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2en::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb2en::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB2EN_SPEC;
@@ -164,10 +154,11 @@ impl crate::RegisterSpec for APB2EN_SPEC {
 impl crate::Readable for APB2EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb2en::W`](W) writer structure"]
 impl crate::Writable for APB2EN_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB2EN to value 0"]
 impl crate::Resettable for APB2EN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -52,7 +52,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<I2SCLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -80,16 +80,6 @@ impl W {
     pub fn i2sdiv9_8(&mut self) -> I2SDIV9_8_W<I2SCLK_SPEC> {
         I2SDIV9_8_W::new(self, 10)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "I2S clock register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2sclk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2sclk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2SCLK_SPEC;
@@ -100,10 +90,11 @@ impl crate::RegisterSpec for I2SCLK_SPEC {
 impl crate::Readable for I2SCLK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2sclk::W`](W) writer structure"]
 impl crate::Writable for I2SCLK_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets I2SCLK to value 0x0a"]
 impl crate::Resettable for I2SCLK_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0a;
+    const RESET_VALUE: u32 = 0x0a;
 }

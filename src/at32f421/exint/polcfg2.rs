@@ -2,58 +2,58 @@
 pub type R = crate::R<POLCFG2_SPEC>;
 #[doc = "Register `POLCFG2` writer"]
 pub type W = crate::W<POLCFG2_SPEC>;
-#[doc = "Field `FP[0-17]` reader - Falling polarity configuration bit on line %s"]
-pub type FP_R = crate::BitReader<FP0R_A>;
 #[doc = "Falling polarity configuration bit on line %s\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum FP0R_A {
+pub enum Fp0r {
     #[doc = "0: Falling polarity is disabled"]
     Disabled = 0,
     #[doc = "1: Falling polarity is enabled"]
     Enabled = 1,
 }
-impl From<FP0R_A> for bool {
+impl From<Fp0r> for bool {
     #[inline(always)]
-    fn from(variant: FP0R_A) -> Self {
+    fn from(variant: Fp0r) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `FP(0-17)` reader - Falling polarity configuration bit on line %s"]
+pub type FP_R = crate::BitReader<Fp0r>;
 impl FP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FP0R_A {
+    pub const fn variant(&self) -> Fp0r {
         match self.bits {
-            false => FP0R_A::Disabled,
-            true => FP0R_A::Enabled,
+            false => Fp0r::Disabled,
+            true => Fp0r::Enabled,
         }
     }
     #[doc = "Falling polarity is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == FP0R_A::Disabled
+        *self == Fp0r::Disabled
     }
     #[doc = "Falling polarity is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == FP0R_A::Enabled
+        *self == Fp0r::Enabled
     }
 }
 #[doc = "Falling polarity configuration bit on line %s\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum FP0W_AW {
+pub enum Fp0wWO {
     #[doc = "0: Falling polarity disable"]
     Disable = 0,
     #[doc = "1: Falling polarity enable"]
     Enable = 1,
 }
-impl From<FP0W_AW> for bool {
+impl From<Fp0wWO> for bool {
     #[inline(always)]
-    fn from(variant: FP0W_AW) -> Self {
+    fn from(variant: Fp0wWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `FP[0-17]` writer - Falling polarity configuration bit on line %s"]
-pub type FP_W<'a, REG> = crate::BitWriter<'a, REG, FP0W_AW>;
+#[doc = "Field `FP(0-17)` writer - Falling polarity configuration bit on line %s"]
+pub type FP_W<'a, REG> = crate::BitWriter<'a, REG, Fp0wWO>;
 impl<'a, REG> FP_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,12 +61,12 @@ where
     #[doc = "Falling polarity disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(FP0W_AW::Disable)
+        self.variant(Fp0wWO::Disable)
     }
     #[doc = "Falling polarity enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(FP0W_AW::Enable)
+        self.variant(Fp0wWO::Enable)
     }
 }
 #[doc = "Field `FP19` reader - Falling polarity event configuration bit of line 19"]
@@ -78,11 +78,20 @@ pub use FP_W as FP19_W;
 #[doc = "Field `FP21` writer - Falling polarity event configuration bit of line 21"]
 pub use FP_W as FP21_W;
 impl R {
-    #[doc = "Falling polarity configuration bit on line [0-17]\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Falling polarity configuration bit on line (0-17)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `FP0` field"]
     #[inline(always)]
     pub fn fp(&self, n: u8) -> FP_R {
-        assert!(n < 18);
+        #[allow(clippy::no_effect)]
+        [(); 18][n as usize];
         FP_R::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Falling polarity configuration bit on line (0-17)"]
+    #[inline(always)]
+    pub fn fp_iter(&self) -> impl Iterator<Item = FP_R> + '_ {
+        (0..18).map(move |n| FP_R::new(((self.bits >> n) & 1) != 0))
     }
     #[doc = "Bit 0 - Falling polarity configuration bit on line 0"]
     #[inline(always)]
@@ -213,15 +222,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<POLCFG2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Falling polarity configuration bit on line [0-17]"]
+    #[doc = "Falling polarity configuration bit on line (0-17)"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `FP0` field"]
     #[inline(always)]
     #[must_use]
     pub fn fp(&mut self, n: u8) -> FP_W<POLCFG2_SPEC> {
-        assert!(n < 18);
+        #[allow(clippy::no_effect)]
+        [(); 18][n as usize];
         FP_W::new(self, n)
     }
     #[doc = "Bit 0 - Falling polarity configuration bit on line 0"]
@@ -344,16 +356,6 @@ impl W {
     pub fn fp21(&mut self) -> FP21_W<POLCFG2_SPEC> {
         FP21_W::new(self, 21)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Falling polarity configuration register(EXTINT_POLCFG2)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`polcfg2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`polcfg2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POLCFG2_SPEC;
@@ -364,10 +366,11 @@ impl crate::RegisterSpec for POLCFG2_SPEC {
 impl crate::Readable for POLCFG2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`polcfg2::W`](W) writer structure"]
 impl crate::Writable for POLCFG2_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets POLCFG2 to value 0"]
 impl crate::Resettable for POLCFG2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

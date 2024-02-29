@@ -26,7 +26,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<HFNUM_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "OTGHS host frame number/frame time remaining register (OTGHS_HFNUM)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hfnum::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -38,5 +38,5 @@ impl crate::RegisterSpec for HFNUM_SPEC {
 impl crate::Readable for HFNUM_SPEC {}
 #[doc = "`reset()` method sets HFNUM to value 0x3fff"]
 impl crate::Resettable for HFNUM_SPEC {
-    const RESET_VALUE: Self::Ux = 0x3fff;
+    const RESET_VALUE: u32 = 0x3fff;
 }

@@ -13,7 +13,7 @@ _derive:
 
 TMR9,TMR10:
   _include:
-    - dir.yaml
+    - common/tmr/dir.yaml
 
 _include:
   - common/crm/common.yaml

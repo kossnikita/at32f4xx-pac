@@ -2,8 +2,6 @@
 pub type R = crate::R<CTRL_SPEC>;
 #[doc = "Register `CTRL` writer"]
 pub type W = crate::W<CTRL_SPEC>;
-#[doc = "Field `RST` reader - Reset bit"]
-pub type RST_R = crate::BitReader<RSTW_A>;
 #[doc = "Reset bit\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum RSTW_A {
@@ -16,6 +14,8 @@ impl From<RSTW_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RST` reader - Reset bit"]
+pub type RST_R = crate::BitReader<RSTW_A>;
 impl RST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -47,8 +47,6 @@ where
 pub type POLY_SIZE_R = crate::FieldReader;
 #[doc = "Field `POLY_SIZE` writer - Polynomial size"]
 pub type POLY_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `REVID` reader - Reverse input data"]
-pub type REVID_R = crate::FieldReader<REVID_A>;
 #[doc = "Reverse input data\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -71,6 +69,8 @@ impl From<REVID_A> for u8 {
 impl crate::FieldSpec for REVID_A {
     type Ux = u8;
 }
+#[doc = "Field `REVID` reader - Reverse input data"]
+pub type REVID_R = crate::FieldReader<REVID_A>;
 impl REVID_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -132,8 +132,6 @@ where
         self.variant(REVID_A::WordReverse)
     }
 }
-#[doc = "Field `REVOD` reader - Reverse output data"]
-pub type REVOD_R = crate::BitReader<REVOD_A>;
 #[doc = "Reverse output data\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum REVOD_A {
@@ -148,6 +146,8 @@ impl From<REVOD_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `REVOD` reader - Reverse output data"]
+pub type REVOD_R = crate::BitReader<REVOD_A>;
 impl REVOD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -202,7 +202,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -224,16 +224,6 @@ impl W {
     pub fn revid(&mut self) -> REVID_W<CTRL_SPEC> {
         REVID_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
@@ -244,10 +234,11 @@ impl crate::RegisterSpec for CTRL_SPEC {
 impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0x01;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
 impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

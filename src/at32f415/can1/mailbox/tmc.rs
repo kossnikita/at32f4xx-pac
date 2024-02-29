@@ -6,58 +6,58 @@ pub type W = crate::W<TMC_SPEC>;
 pub type DTBL_R = crate::FieldReader;
 #[doc = "Field `DTBL` writer - Transmit mailbox data byte length"]
 pub type DTBL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
-#[doc = "Field `TSTEN` reader - Transmit mailbox time stamp transmit enable"]
-pub type TSTEN_R = crate::BitReader<TSTENR_A>;
 #[doc = "Transmit mailbox time stamp transmit enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TSTENR_A {
+pub enum Tstenr {
     #[doc = "0: Mailbox time stamp transmit is disabled"]
     Disabled = 0,
     #[doc = "1: Mailbox time stamp transmit is enabled"]
     Enabled = 1,
 }
-impl From<TSTENR_A> for bool {
+impl From<Tstenr> for bool {
     #[inline(always)]
-    fn from(variant: TSTENR_A) -> Self {
+    fn from(variant: Tstenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TSTEN` reader - Transmit mailbox time stamp transmit enable"]
+pub type TSTEN_R = crate::BitReader<Tstenr>;
 impl TSTEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> TSTENR_A {
+    pub const fn variant(&self) -> Tstenr {
         match self.bits {
-            false => TSTENR_A::Disabled,
-            true => TSTENR_A::Enabled,
+            false => Tstenr::Disabled,
+            true => Tstenr::Enabled,
         }
     }
     #[doc = "Mailbox time stamp transmit is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == TSTENR_A::Disabled
+        *self == Tstenr::Disabled
     }
     #[doc = "Mailbox time stamp transmit is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == TSTENR_A::Enabled
+        *self == Tstenr::Enabled
     }
 }
 #[doc = "Transmit mailbox time stamp transmit enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TSTENW_AW {
+pub enum TstenwWO {
     #[doc = "0: Mailbox time stamp transmit disable"]
     Disable = 0,
     #[doc = "1: Mailbox time stamp transmit enable"]
     Enable = 1,
 }
-impl From<TSTENW_AW> for bool {
+impl From<TstenwWO> for bool {
     #[inline(always)]
-    fn from(variant: TSTENW_AW) -> Self {
+    fn from(variant: TstenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `TSTEN` writer - Transmit mailbox time stamp transmit enable"]
-pub type TSTEN_W<'a, REG> = crate::BitWriter<'a, REG, TSTENW_AW>;
+pub type TSTEN_W<'a, REG> = crate::BitWriter<'a, REG, TstenwWO>;
 impl<'a, REG> TSTEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -65,12 +65,12 @@ where
     #[doc = "Mailbox time stamp transmit disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(TSTENW_AW::Disable)
+        self.variant(TstenwWO::Disable)
     }
     #[doc = "Mailbox time stamp transmit enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(TSTENW_AW::Enable)
+        self.variant(TstenwWO::Enable)
     }
 }
 #[doc = "Field `TS` reader - Transmit mailbox time stamp"]
@@ -105,7 +105,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<TMC_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -127,16 +127,6 @@ impl W {
     pub fn ts(&mut self) -> TS_W<TMC_SPEC> {
         TS_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Transmit mailbox data length and time stamp register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tmc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tmc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TMC_SPEC;
@@ -147,10 +137,11 @@ impl crate::RegisterSpec for TMC_SPEC {
 impl crate::Readable for TMC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmc::W`](W) writer structure"]
 impl crate::Writable for TMC_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TMC to value 0"]
 impl crate::Resettable for TMC_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

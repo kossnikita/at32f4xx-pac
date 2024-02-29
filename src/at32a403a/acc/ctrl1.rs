@@ -2,58 +2,58 @@
 pub type R = crate::R<CTRL1_SPEC>;
 #[doc = "Register `CTRL1` writer"]
 pub type W = crate::W<CTRL1_SPEC>;
-#[doc = "Field `CALON` reader - Calibration on"]
-pub type CALON_R = crate::BitReader<CALONR_A>;
 #[doc = "Calibration on\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CALONR_A {
+pub enum Calonr {
     #[doc = "0: Calibration disabled"]
     Disabled = 0,
     #[doc = "1: Calibration enabled, and starts searching for a pulse on the USB_SOF"]
     Enabled = 1,
 }
-impl From<CALONR_A> for bool {
+impl From<Calonr> for bool {
     #[inline(always)]
-    fn from(variant: CALONR_A) -> Self {
+    fn from(variant: Calonr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CALON` reader - Calibration on"]
+pub type CALON_R = crate::BitReader<Calonr>;
 impl CALON_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CALONR_A {
+    pub const fn variant(&self) -> Calonr {
         match self.bits {
-            false => CALONR_A::Disabled,
-            true => CALONR_A::Enabled,
+            false => Calonr::Disabled,
+            true => Calonr::Enabled,
         }
     }
     #[doc = "Calibration disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == CALONR_A::Disabled
+        *self == Calonr::Disabled
     }
     #[doc = "Calibration enabled, and starts searching for a pulse on the USB_SOF"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == CALONR_A::Enabled
+        *self == Calonr::Enabled
     }
 }
 #[doc = "Calibration on\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CALONW_AW {
+pub enum CalonwWO {
     #[doc = "0: Calibration disabled"]
     Disable = 0,
     #[doc = "1: Calibration enabled, and starts searching for a pulse on the USB_SOF"]
     Enable = 1,
 }
-impl From<CALONW_AW> for bool {
+impl From<CalonwWO> for bool {
     #[inline(always)]
-    fn from(variant: CALONW_AW) -> Self {
+    fn from(variant: CalonwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CALON` writer - Calibration on"]
-pub type CALON_W<'a, REG> = crate::BitWriter<'a, REG, CALONW_AW>;
+pub type CALON_W<'a, REG> = crate::BitWriter<'a, REG, CalonwWO>;
 impl<'a, REG> CALON_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,16 +61,14 @@ where
     #[doc = "Calibration disabled"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(CALONW_AW::Disable)
+        self.variant(CalonwWO::Disable)
     }
     #[doc = "Calibration enabled, and starts searching for a pulse on the USB_SOF"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(CALONW_AW::Enable)
+        self.variant(CalonwWO::Enable)
     }
 }
-#[doc = "Field `ENTRIM` reader - Enable trim"]
-pub type ENTRIM_R = crate::BitReader<ENTRIM_A>;
 #[doc = "Enable trim\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ENTRIM_A {
@@ -85,6 +83,8 @@ impl From<ENTRIM_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ENTRIM` reader - Enable trim"]
+pub type ENTRIM_R = crate::BitReader<ENTRIM_A>;
 impl ENTRIM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -122,58 +122,58 @@ where
         self.variant(ENTRIM_A::Hicktrim)
     }
 }
-#[doc = "Field `EIEN` reader - RSLOST error interrupt enable"]
-pub type EIEN_R = crate::BitReader<EIENR_A>;
 #[doc = "RSLOST error interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum EIENR_A {
+pub enum Eienr {
     #[doc = "0: Interrupt generation disabled"]
     Disabled = 0,
     #[doc = "1: ACC interrupt is generated when RSLOST=1 in the ACC_STS register"]
     Enabled = 1,
 }
-impl From<EIENR_A> for bool {
+impl From<Eienr> for bool {
     #[inline(always)]
-    fn from(variant: EIENR_A) -> Self {
+    fn from(variant: Eienr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `EIEN` reader - RSLOST error interrupt enable"]
+pub type EIEN_R = crate::BitReader<Eienr>;
 impl EIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> EIENR_A {
+    pub const fn variant(&self) -> Eienr {
         match self.bits {
-            false => EIENR_A::Disabled,
-            true => EIENR_A::Enabled,
+            false => Eienr::Disabled,
+            true => Eienr::Enabled,
         }
     }
     #[doc = "Interrupt generation disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == EIENR_A::Disabled
+        *self == Eienr::Disabled
     }
     #[doc = "ACC interrupt is generated when RSLOST=1 in the ACC_STS register"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == EIENR_A::Enabled
+        *self == Eienr::Enabled
     }
 }
 #[doc = "RSLOST error interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum EIENW_AW {
+pub enum EienwWO {
     #[doc = "0: Interrupt generation disabled"]
     Disable = 0,
     #[doc = "1: ACC interrupt is generated when RSLOST=1 in the ACC_STS register"]
     Enable = 1,
 }
-impl From<EIENW_AW> for bool {
+impl From<EienwWO> for bool {
     #[inline(always)]
-    fn from(variant: EIENW_AW) -> Self {
+    fn from(variant: EienwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `EIEN` writer - RSLOST error interrupt enable"]
-pub type EIEN_W<'a, REG> = crate::BitWriter<'a, REG, EIENW_AW>;
+pub type EIEN_W<'a, REG> = crate::BitWriter<'a, REG, EienwWO>;
 impl<'a, REG> EIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -181,66 +181,66 @@ where
     #[doc = "Interrupt generation disabled"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(EIENW_AW::Disable)
+        self.variant(EienwWO::Disable)
     }
     #[doc = "ACC interrupt is generated when RSLOST=1 in the ACC_STS register"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(EIENW_AW::Enable)
+        self.variant(EienwWO::Enable)
     }
 }
-#[doc = "Field `CALRDYIEN` reader - CALRDY interrupt enable"]
-pub type CALRDYIEN_R = crate::BitReader<CALRDYIENR_A>;
 #[doc = "CALRDY interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CALRDYIENR_A {
+pub enum Calrdyienr {
     #[doc = "0: Interrupt generation disabled"]
     Disabled = 0,
     #[doc = "1: ACC interrupt is generated when CALRDY=1 in the ACC_STS register"]
     Enabled = 1,
 }
-impl From<CALRDYIENR_A> for bool {
+impl From<Calrdyienr> for bool {
     #[inline(always)]
-    fn from(variant: CALRDYIENR_A) -> Self {
+    fn from(variant: Calrdyienr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CALRDYIEN` reader - CALRDY interrupt enable"]
+pub type CALRDYIEN_R = crate::BitReader<Calrdyienr>;
 impl CALRDYIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CALRDYIENR_A {
+    pub const fn variant(&self) -> Calrdyienr {
         match self.bits {
-            false => CALRDYIENR_A::Disabled,
-            true => CALRDYIENR_A::Enabled,
+            false => Calrdyienr::Disabled,
+            true => Calrdyienr::Enabled,
         }
     }
     #[doc = "Interrupt generation disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == CALRDYIENR_A::Disabled
+        *self == Calrdyienr::Disabled
     }
     #[doc = "ACC interrupt is generated when CALRDY=1 in the ACC_STS register"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == CALRDYIENR_A::Enabled
+        *self == Calrdyienr::Enabled
     }
 }
 #[doc = "CALRDY interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CALRDYIENW_AW {
+pub enum CalrdyienwWO {
     #[doc = "0: Interrupt generation disabled"]
     Disable = 0,
     #[doc = "1: ACC interrupt is generated when CALRDY=1 in the ACC_STS register"]
     Enable = 1,
 }
-impl From<CALRDYIENW_AW> for bool {
+impl From<CalrdyienwWO> for bool {
     #[inline(always)]
-    fn from(variant: CALRDYIENW_AW) -> Self {
+    fn from(variant: CalrdyienwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CALRDYIEN` writer - CALRDY interrupt enable"]
-pub type CALRDYIEN_W<'a, REG> = crate::BitWriter<'a, REG, CALRDYIENW_AW>;
+pub type CALRDYIEN_W<'a, REG> = crate::BitWriter<'a, REG, CalrdyienwWO>;
 impl<'a, REG> CALRDYIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -248,12 +248,12 @@ where
     #[doc = "Interrupt generation disabled"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(CALRDYIENW_AW::Disable)
+        self.variant(CalrdyienwWO::Disable)
     }
     #[doc = "ACC interrupt is generated when CALRDY=1 in the ACC_STS register"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(CALRDYIENW_AW::Enable)
+        self.variant(CalrdyienwWO::Enable)
     }
 }
 #[doc = "Field `STEP` reader - Calibrated step"]
@@ -300,7 +300,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -334,16 +334,6 @@ impl W {
     pub fn step(&mut self) -> STEP_W<CTRL1_SPEC> {
         STEP_W::new(self, 8)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL1_SPEC;
@@ -354,10 +344,11 @@ impl crate::RegisterSpec for CTRL1_SPEC {
 impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0x0100"]
 impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0100;
+    const RESET_VALUE: u32 = 0x0100;
 }

@@ -2,58 +2,58 @@
 pub type R = crate::R<FACFG_SPEC>;
 #[doc = "Register `FACFG` writer"]
 pub type W = crate::W<FACFG_SPEC>;
-#[doc = "Field `EN[0-13]` reader - Filter activate enable"]
-pub type EN_R = crate::BitReader<EN0R_A>;
 #[doc = "Filter activate enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum EN0R_A {
+pub enum En0r {
     #[doc = "0: Filter is disabled"]
     Disabled = 0,
     #[doc = "1: Filter is enabled"]
     Enabled = 1,
 }
-impl From<EN0R_A> for bool {
+impl From<En0r> for bool {
     #[inline(always)]
-    fn from(variant: EN0R_A) -> Self {
+    fn from(variant: En0r) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `EN(0-13)` reader - Filter activate enable"]
+pub type EN_R = crate::BitReader<En0r>;
 impl EN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> EN0R_A {
+    pub const fn variant(&self) -> En0r {
         match self.bits {
-            false => EN0R_A::Disabled,
-            true => EN0R_A::Enabled,
+            false => En0r::Disabled,
+            true => En0r::Enabled,
         }
     }
     #[doc = "Filter is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == EN0R_A::Disabled
+        *self == En0r::Disabled
     }
     #[doc = "Filter is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == EN0R_A::Enabled
+        *self == En0r::Enabled
     }
 }
 #[doc = "Filter activate enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum EN0W_AW {
+pub enum En0wWO {
     #[doc = "0: Filter disable"]
     Disable = 0,
     #[doc = "1: Filter enable"]
     Enable = 1,
 }
-impl From<EN0W_AW> for bool {
+impl From<En0wWO> for bool {
     #[inline(always)]
-    fn from(variant: EN0W_AW) -> Self {
+    fn from(variant: En0wWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `EN[0-13]` writer - Filter activate enable"]
-pub type EN_W<'a, REG> = crate::BitWriter<'a, REG, EN0W_AW>;
+#[doc = "Field `EN(0-13)` writer - Filter activate enable"]
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG, En0wWO>;
 impl<'a, REG> EN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,20 +61,29 @@ where
     #[doc = "Filter disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(EN0W_AW::Disable)
+        self.variant(En0wWO::Disable)
     }
     #[doc = "Filter enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(EN0W_AW::Enable)
+        self.variant(En0wWO::Enable)
     }
 }
 impl R {
-    #[doc = "Filter activate enable\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Filter activate enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EN0` field"]
     #[inline(always)]
     pub fn en(&self, n: u8) -> EN_R {
-        assert!(n < 14);
+        #[allow(clippy::no_effect)]
+        [(); 14][n as usize];
         EN_R::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Filter activate enable"]
+    #[inline(always)]
+    pub fn en_iter(&self) -> impl Iterator<Item = EN_R> + '_ {
+        (0..14).map(move |n| EN_R::new(((self.bits >> n) & 1) != 0))
     }
     #[doc = "Bit 0 - Filter activate enable"]
     #[inline(always)]
@@ -169,15 +178,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<FACFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Filter activate enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EN0` field"]
     #[inline(always)]
     #[must_use]
     pub fn en(&mut self, n: u8) -> EN_W<FACFG_SPEC> {
-        assert!(n < 14);
+        #[allow(clippy::no_effect)]
+        [(); 14][n as usize];
         EN_W::new(self, n)
     }
     #[doc = "Bit 0 - Filter activate enable"]
@@ -264,16 +276,6 @@ impl W {
     pub fn en13(&mut self) -> EN_W<FACFG_SPEC> {
         EN_W::new(self, 13)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Filter activate configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`facfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`facfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FACFG_SPEC;
@@ -284,10 +286,11 @@ impl crate::RegisterSpec for FACFG_SPEC {
 impl crate::Readable for FACFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`facfg::W`](W) writer structure"]
 impl crate::Writable for FACFG_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FACFG to value 0"]
 impl crate::Resettable for FACFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

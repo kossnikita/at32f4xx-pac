@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<AHBLPEN3_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -31,16 +31,6 @@ impl W {
     #[must_use]
     pub fn xmclp(&mut self) -> XMCLP_W<AHBLPEN3_SPEC> {
         XMCLP_W::new(self, 0)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
     }
 }
 #[doc = "AHB peripheral Low-power clock enable register 3 (CRM_AHBLPEN3)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahblpen3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahblpen3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -52,10 +42,11 @@ impl crate::RegisterSpec for AHBLPEN3_SPEC {
 impl crate::Readable for AHBLPEN3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahblpen3::W`](W) writer structure"]
 impl crate::Writable for AHBLPEN3_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBLPEN3 to value 0xc003"]
 impl crate::Resettable for AHBLPEN3_SPEC {
-    const RESET_VALUE: Self::Ux = 0xc003;
+    const RESET_VALUE: u32 = 0xc003;
 }

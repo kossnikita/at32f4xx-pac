@@ -6,8 +6,6 @@ pub type W = crate::W<I2SCLK_SPEC>;
 pub type DIV7_0_R = crate::FieldReader;
 #[doc = "Field `DIV7_0` writer - I2S division bit7 to bit0"]
 pub type DIV7_0_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
-#[doc = "Field `ODD` reader - Odd result for I2S division"]
-pub type ODD_R = crate::BitReader<ODD_A>;
 #[doc = "Odd result for I2S division\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ODD_A {
@@ -22,6 +20,8 @@ impl From<ODD_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ODD` reader - Odd result for I2S division"]
+pub type ODD_R = crate::BitReader<ODD_A>;
 impl ODD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -59,58 +59,58 @@ where
         self.variant(ODD_A::DoublePlusOne)
     }
 }
-#[doc = "Field `MCLKOE` reader - I2S master clock output enable"]
-pub type MCLKOE_R = crate::BitReader<MCLKOER_A>;
 #[doc = "I2S master clock output enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum MCLKOER_A {
+pub enum Mclkoer {
     #[doc = "0: Master clock output is disabled"]
     Disabled = 0,
     #[doc = "1: Master clock output is enabled"]
     Enabled = 1,
 }
-impl From<MCLKOER_A> for bool {
+impl From<Mclkoer> for bool {
     #[inline(always)]
-    fn from(variant: MCLKOER_A) -> Self {
+    fn from(variant: Mclkoer) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `MCLKOE` reader - I2S master clock output enable"]
+pub type MCLKOE_R = crate::BitReader<Mclkoer>;
 impl MCLKOE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> MCLKOER_A {
+    pub const fn variant(&self) -> Mclkoer {
         match self.bits {
-            false => MCLKOER_A::Disabled,
-            true => MCLKOER_A::Enabled,
+            false => Mclkoer::Disabled,
+            true => Mclkoer::Enabled,
         }
     }
     #[doc = "Master clock output is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == MCLKOER_A::Disabled
+        *self == Mclkoer::Disabled
     }
     #[doc = "Master clock output is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == MCLKOER_A::Enabled
+        *self == Mclkoer::Enabled
     }
 }
 #[doc = "I2S master clock output enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum MCLKOEW_AW {
+pub enum MclkoewWO {
     #[doc = "0: Master clock output disable"]
     Disable = 0,
     #[doc = "1: Master clock output enable"]
     Enable = 1,
 }
-impl From<MCLKOEW_AW> for bool {
+impl From<MclkoewWO> for bool {
     #[inline(always)]
-    fn from(variant: MCLKOEW_AW) -> Self {
+    fn from(variant: MclkoewWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `MCLKOE` writer - I2S master clock output enable"]
-pub type MCLKOE_W<'a, REG> = crate::BitWriter<'a, REG, MCLKOEW_AW>;
+pub type MCLKOE_W<'a, REG> = crate::BitWriter<'a, REG, MclkoewWO>;
 impl<'a, REG> MCLKOE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -118,12 +118,12 @@ where
     #[doc = "Master clock output disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(MCLKOEW_AW::Disable)
+        self.variant(MclkoewWO::Disable)
     }
     #[doc = "Master clock output enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(MCLKOEW_AW::Enable)
+        self.variant(MclkoewWO::Enable)
     }
 }
 #[doc = "Field `DIV9_8` reader - I2S division bit9 and bit8"]
@@ -164,7 +164,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<I2SCLK_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -192,16 +192,6 @@ impl W {
     pub fn div9_8(&mut self) -> DIV9_8_W<I2SCLK_SPEC> {
         DIV9_8_W::new(self, 10)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "I2S clock register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2sclk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2sclk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2SCLK_SPEC;
@@ -212,10 +202,11 @@ impl crate::RegisterSpec for I2SCLK_SPEC {
 impl crate::Readable for I2SCLK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2sclk::W`](W) writer structure"]
 impl crate::Writable for I2SCLK_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets I2SCLK to value 0x0a"]
 impl crate::Resettable for I2SCLK_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0a;
+    const RESET_VALUE: u32 = 0x0a;
 }

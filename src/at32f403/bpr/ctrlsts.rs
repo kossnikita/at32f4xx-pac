@@ -4,18 +4,18 @@ pub type R = crate::R<CTRLSTS_SPEC>;
 pub type W = crate::W<CTRLSTS_SPEC>;
 #[doc = "Tamper event flag clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TPEFCLRW_AW {
+pub enum TPEFCLRW_A {
     #[doc = "1: Clear the tamper event flag"]
     Clear = 1,
 }
-impl From<TPEFCLRW_AW> for bool {
+impl From<TPEFCLRW_A> for bool {
     #[inline(always)]
-    fn from(variant: TPEFCLRW_AW) -> Self {
+    fn from(variant: TPEFCLRW_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `TPEFCLR` writer - Tamper event flag clear"]
-pub type TPEFCLR_W<'a, REG> = crate::BitWriter1C<'a, REG, TPEFCLRW_AW>;
+pub type TPEFCLR_W<'a, REG> = crate::BitWriter1C<'a, REG, TPEFCLRW_A>;
 impl<'a, REG> TPEFCLR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -23,23 +23,23 @@ where
     #[doc = "Clear the tamper event flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(TPEFCLRW_AW::Clear)
+        self.variant(TPEFCLRW_A::Clear)
     }
 }
 #[doc = "Tamper interrupt flag clear\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TPIFCLRW_AW {
+pub enum TPIFCLRW_A {
     #[doc = "1: Tamper interrupt flag clear"]
     Clear = 1,
 }
-impl From<TPIFCLRW_AW> for bool {
+impl From<TPIFCLRW_A> for bool {
     #[inline(always)]
-    fn from(variant: TPIFCLRW_AW) -> Self {
+    fn from(variant: TPIFCLRW_A) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `TPIFCLR` writer - Tamper interrupt flag clear"]
-pub type TPIFCLR_W<'a, REG> = crate::BitWriter1C<'a, REG, TPIFCLRW_AW>;
+pub type TPIFCLR_W<'a, REG> = crate::BitWriter1C<'a, REG, TPIFCLRW_A>;
 impl<'a, REG> TPIFCLR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -47,61 +47,61 @@ where
     #[doc = "Tamper interrupt flag clear"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(TPIFCLRW_AW::Clear)
+        self.variant(TPIFCLRW_A::Clear)
     }
 }
-#[doc = "Field `TPIEN` reader - Tamper pin interrupt enable"]
-pub type TPIEN_R = crate::BitReader<TPIENR_A>;
 #[doc = "Tamper pin interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TPIENR_A {
+pub enum Tpienr {
     #[doc = "0: Tamper pin interrupt is disabled"]
     Disabled = 0,
     #[doc = "1: Tamper pin interrupt is enabled"]
     Enabled = 1,
 }
-impl From<TPIENR_A> for bool {
+impl From<Tpienr> for bool {
     #[inline(always)]
-    fn from(variant: TPIENR_A) -> Self {
+    fn from(variant: Tpienr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TPIEN` reader - Tamper pin interrupt enable"]
+pub type TPIEN_R = crate::BitReader<Tpienr>;
 impl TPIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> TPIENR_A {
+    pub const fn variant(&self) -> Tpienr {
         match self.bits {
-            false => TPIENR_A::Disabled,
-            true => TPIENR_A::Enabled,
+            false => Tpienr::Disabled,
+            true => Tpienr::Enabled,
         }
     }
     #[doc = "Tamper pin interrupt is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == TPIENR_A::Disabled
+        *self == Tpienr::Disabled
     }
     #[doc = "Tamper pin interrupt is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == TPIENR_A::Enabled
+        *self == Tpienr::Enabled
     }
 }
 #[doc = "Tamper pin interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TPIENW_AW {
+pub enum TpienwWO {
     #[doc = "0: Tamper pin interrupt disable"]
     Disable = 0,
     #[doc = "1: Tamper pin interrupt enable"]
     Enable = 1,
 }
-impl From<TPIENW_AW> for bool {
+impl From<TpienwWO> for bool {
     #[inline(always)]
-    fn from(variant: TPIENW_AW) -> Self {
+    fn from(variant: TpienwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `TPIEN` writer - Tamper pin interrupt enable"]
-pub type TPIEN_W<'a, REG> = crate::BitWriter<'a, REG, TPIENW_AW>;
+pub type TPIEN_W<'a, REG> = crate::BitWriter<'a, REG, TpienwWO>;
 impl<'a, REG> TPIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -109,16 +109,14 @@ where
     #[doc = "Tamper pin interrupt disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(TPIENW_AW::Disable)
+        self.variant(TpienwWO::Disable)
     }
     #[doc = "Tamper pin interrupt enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(TPIENW_AW::Enable)
+        self.variant(TpienwWO::Enable)
     }
 }
-#[doc = "Field `TPEF` reader - Tamper event flag"]
-pub type TPEF_R = crate::BitReader<TPEFR_A>;
 #[doc = "Tamper event flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TPEFR_A {
@@ -133,6 +131,8 @@ impl From<TPEFR_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TPEF` reader - Tamper event flag"]
+pub type TPEF_R = crate::BitReader<TPEFR_A>;
 impl TPEF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -170,8 +170,6 @@ where
         self.variant(TPEFR_A::Event)
     }
 }
-#[doc = "Field `TPIF` reader - Tamper interrupt flag"]
-pub type TPIF_R = crate::BitReader<TPIFR_A>;
 #[doc = "Tamper interrupt flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TPIFR_A {
@@ -186,6 +184,8 @@ impl From<TPIFR_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TPIF` reader - Tamper interrupt flag"]
+pub type TPIF_R = crate::BitReader<TPIFR_A>;
 impl TPIF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -251,7 +251,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CTRLSTS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -285,16 +285,6 @@ impl W {
     pub fn tpif(&mut self) -> TPIF_W<CTRLSTS_SPEC> {
         TPIF_W::new(self, 9)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "BPR control/status register (BPR_CTRLSTS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrlsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrlsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRLSTS_SPEC;
@@ -305,10 +295,11 @@ impl crate::RegisterSpec for CTRLSTS_SPEC {
 impl crate::Readable for CTRLSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlsts::W`](W) writer structure"]
 impl crate::Writable for CTRLSTS_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0x03;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x03;
 }
 #[doc = "`reset()` method sets CTRLSTS to value 0"]
 impl crate::Resettable for CTRLSTS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

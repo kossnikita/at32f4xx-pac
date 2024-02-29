@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GNPTXSTS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "OTGHS non-periodic transmit FIFO/queue status register (OTGHS_GNPTXSTS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gnptxsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -52,5 +52,5 @@ impl crate::RegisterSpec for GNPTXSTS_SPEC {
 impl crate::Readable for GNPTXSTS_SPEC {}
 #[doc = "`reset()` method sets GNPTXSTS to value 0x0008_0200"]
 impl crate::Resettable for GNPTXSTS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0008_0200;
+    const RESET_VALUE: u32 = 0x0008_0200;
 }

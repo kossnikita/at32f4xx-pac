@@ -1,7 +1,5 @@
 #[doc = "Register `RFI` reader"]
 pub type R = crate::R<RFI_SPEC>;
-#[doc = "Field `FRI` reader - Receive FIFO frame type indication"]
-pub type FRI_R = crate::BitReader<FRI_A>;
 #[doc = "Receive FIFO frame type indication\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FRI_A {
@@ -16,6 +14,8 @@ impl From<FRI_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `FRI` reader - Receive FIFO frame type indication"]
+pub type FRI_R = crate::BitReader<FRI_A>;
 impl FRI_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -36,8 +36,6 @@ impl FRI_R {
         *self == FRI_A::Remote
     }
 }
-#[doc = "Field `IDI` reader - Receive FIFO identifier type indication"]
-pub type IDI_R = crate::BitReader<IDI_A>;
 #[doc = "Receive FIFO identifier type indication\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IDI_A {
@@ -52,6 +50,8 @@ impl From<IDI_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `IDI` reader - Receive FIFO identifier type indication"]
+pub type IDI_R = crate::BitReader<IDI_A>;
 impl IDI_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -110,7 +110,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<RFI_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Receive FIFO mailbox identifier register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -122,5 +122,5 @@ impl crate::RegisterSpec for RFI_SPEC {
 impl crate::Readable for RFI_SPEC {}
 #[doc = "`reset()` method sets RFI to value 0"]
 impl crate::Resettable for RFI_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

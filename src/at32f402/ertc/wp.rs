@@ -5,14 +5,7 @@ impl core::fmt::Debug for crate::generic::Reg<WP_SPEC> {
         write!(f, "(not readable)")
     }
 }
-impl W {
-    #[doc = "Writes raw bits to the register."]
-    #[inline(always)]
-    pub fn bits(&mut self, bits: u8) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "write protection register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wp::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WP_SPEC;
 impl crate::RegisterSpec for WP_SPEC {
@@ -20,10 +13,11 @@ impl crate::RegisterSpec for WP_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`wp::W`](W) writer structure"]
 impl crate::Writable for WP_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Safe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets WP to value 0"]
 impl crate::Resettable for WP_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u8 = 0;
 }

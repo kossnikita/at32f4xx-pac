@@ -2,58 +2,58 @@
 pub type R = crate::R<IDEN_SPEC>;
 #[doc = "Register `IDEN` writer"]
 pub type W = crate::W<IDEN_SPEC>;
-#[doc = "Field `OVFIEN` reader - Overflow interrupt enable"]
-pub type OVFIEN_R = crate::BitReader<OVFIENR_A>;
 #[doc = "Overflow interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OVFIENR_A {
+pub enum Ovfienr {
     #[doc = "0: Overflow interrupt is disabled"]
     Disabled = 0,
     #[doc = "1: Overflow interrupt is enabled"]
     Enabled = 1,
 }
-impl From<OVFIENR_A> for bool {
+impl From<Ovfienr> for bool {
     #[inline(always)]
-    fn from(variant: OVFIENR_A) -> Self {
+    fn from(variant: Ovfienr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `OVFIEN` reader - Overflow interrupt enable"]
+pub type OVFIEN_R = crate::BitReader<Ovfienr>;
 impl OVFIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> OVFIENR_A {
+    pub const fn variant(&self) -> Ovfienr {
         match self.bits {
-            false => OVFIENR_A::Disabled,
-            true => OVFIENR_A::Enabled,
+            false => Ovfienr::Disabled,
+            true => Ovfienr::Enabled,
         }
     }
     #[doc = "Overflow interrupt is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == OVFIENR_A::Disabled
+        *self == Ovfienr::Disabled
     }
     #[doc = "Overflow interrupt is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == OVFIENR_A::Enabled
+        *self == Ovfienr::Enabled
     }
 }
 #[doc = "Overflow interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OVFIENW_AW {
+pub enum OvfienwWO {
     #[doc = "0: Overflow interrupt disable"]
     Disable = 0,
     #[doc = "1: Overflow interrupt enable"]
     Enable = 1,
 }
-impl From<OVFIENW_AW> for bool {
+impl From<OvfienwWO> for bool {
     #[inline(always)]
-    fn from(variant: OVFIENW_AW) -> Self {
+    fn from(variant: OvfienwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OVFIEN` writer - Overflow interrupt enable"]
-pub type OVFIEN_W<'a, REG> = crate::BitWriter<'a, REG, OVFIENW_AW>;
+pub type OVFIEN_W<'a, REG> = crate::BitWriter<'a, REG, OvfienwWO>;
 impl<'a, REG> OVFIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,66 +61,66 @@ where
     #[doc = "Overflow interrupt disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(OVFIENW_AW::Disable)
+        self.variant(OvfienwWO::Disable)
     }
     #[doc = "Overflow interrupt enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(OVFIENW_AW::Enable)
+        self.variant(OvfienwWO::Enable)
     }
 }
-#[doc = "Field `OVFDEN` reader - Overflow DMA request enable"]
-pub type OVFDEN_R = crate::BitReader<OVFDENR_A>;
 #[doc = "Overflow DMA request enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OVFDENR_A {
+pub enum Ovfdenr {
     #[doc = "0: Overflow event DMA request is disabled"]
     Disabled = 0,
     #[doc = "1: Overflow event DMA request is enabled"]
     Enabled = 1,
 }
-impl From<OVFDENR_A> for bool {
+impl From<Ovfdenr> for bool {
     #[inline(always)]
-    fn from(variant: OVFDENR_A) -> Self {
+    fn from(variant: Ovfdenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `OVFDEN` reader - Overflow DMA request enable"]
+pub type OVFDEN_R = crate::BitReader<Ovfdenr>;
 impl OVFDEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> OVFDENR_A {
+    pub const fn variant(&self) -> Ovfdenr {
         match self.bits {
-            false => OVFDENR_A::Disabled,
-            true => OVFDENR_A::Enabled,
+            false => Ovfdenr::Disabled,
+            true => Ovfdenr::Enabled,
         }
     }
     #[doc = "Overflow event DMA request is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == OVFDENR_A::Disabled
+        *self == Ovfdenr::Disabled
     }
     #[doc = "Overflow event DMA request is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == OVFDENR_A::Enabled
+        *self == Ovfdenr::Enabled
     }
 }
 #[doc = "Overflow DMA request enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OVFDENW_AW {
+pub enum OvfdenwWO {
     #[doc = "0: Overflow event DMA request disable"]
     Disable = 0,
     #[doc = "1: Overflow event DMA request enable"]
     Enable = 1,
 }
-impl From<OVFDENW_AW> for bool {
+impl From<OvfdenwWO> for bool {
     #[inline(always)]
-    fn from(variant: OVFDENW_AW) -> Self {
+    fn from(variant: OvfdenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OVFDEN` writer - Overflow DMA request enable"]
-pub type OVFDEN_W<'a, REG> = crate::BitWriter<'a, REG, OVFDENW_AW>;
+pub type OVFDEN_W<'a, REG> = crate::BitWriter<'a, REG, OvfdenwWO>;
 impl<'a, REG> OVFDEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -128,12 +128,12 @@ where
     #[doc = "Overflow event DMA request disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(OVFDENW_AW::Disable)
+        self.variant(OvfdenwWO::Disable)
     }
     #[doc = "Overflow event DMA request enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(OVFDENW_AW::Enable)
+        self.variant(OvfdenwWO::Enable)
     }
 }
 impl R {
@@ -158,7 +158,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<IDEN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -174,16 +174,6 @@ impl W {
     pub fn ovfden(&mut self) -> OVFDEN_W<IDEN_SPEC> {
         OVFDEN_W::new(self, 8)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt/DMA enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iden::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iden::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IDEN_SPEC;
@@ -194,10 +184,11 @@ impl crate::RegisterSpec for IDEN_SPEC {
 impl crate::Readable for IDEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`iden::W`](W) writer structure"]
 impl crate::Writable for IDEN_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IDEN to value 0"]
 impl crate::Resettable for IDEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

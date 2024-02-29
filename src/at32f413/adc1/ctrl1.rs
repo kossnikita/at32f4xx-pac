@@ -6,58 +6,58 @@ pub type W = crate::W<CTRL1_SPEC>;
 pub type VMCSEL_R = crate::FieldReader;
 #[doc = "Field `VMCSEL` writer - Voltage monitoring channel select"]
 pub type VMCSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
-#[doc = "Field `CCEIEN` reader - Channel conversion end interrupt enable"]
-pub type CCEIEN_R = crate::BitReader<CCEIENR_A>;
 #[doc = "Channel conversion end interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CCEIENR_A {
+pub enum Cceienr {
     #[doc = "0: Channel conversion end interrupt is disabled"]
     Disabled = 0,
     #[doc = "1: Channel conversion end interrupt is enabled"]
     Enabled = 1,
 }
-impl From<CCEIENR_A> for bool {
+impl From<Cceienr> for bool {
     #[inline(always)]
-    fn from(variant: CCEIENR_A) -> Self {
+    fn from(variant: Cceienr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CCEIEN` reader - Channel conversion end interrupt enable"]
+pub type CCEIEN_R = crate::BitReader<Cceienr>;
 impl CCEIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CCEIENR_A {
+    pub const fn variant(&self) -> Cceienr {
         match self.bits {
-            false => CCEIENR_A::Disabled,
-            true => CCEIENR_A::Enabled,
+            false => Cceienr::Disabled,
+            true => Cceienr::Enabled,
         }
     }
     #[doc = "Channel conversion end interrupt is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == CCEIENR_A::Disabled
+        *self == Cceienr::Disabled
     }
     #[doc = "Channel conversion end interrupt is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == CCEIENR_A::Enabled
+        *self == Cceienr::Enabled
     }
 }
 #[doc = "Channel conversion end interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CCEIENW_AW {
+pub enum CceienwWO {
     #[doc = "0: Channel conversion end interrupt disable"]
     Disable = 0,
     #[doc = "1: Channel conversion end interrupt enable"]
     Enable = 1,
 }
-impl From<CCEIENW_AW> for bool {
+impl From<CceienwWO> for bool {
     #[inline(always)]
-    fn from(variant: CCEIENW_AW) -> Self {
+    fn from(variant: CceienwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CCEIEN` writer - Channel conversion end interrupt enable"]
-pub type CCEIEN_W<'a, REG> = crate::BitWriter<'a, REG, CCEIENW_AW>;
+pub type CCEIEN_W<'a, REG> = crate::BitWriter<'a, REG, CceienwWO>;
 impl<'a, REG> CCEIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -65,66 +65,66 @@ where
     #[doc = "Channel conversion end interrupt disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(CCEIENW_AW::Disable)
+        self.variant(CceienwWO::Disable)
     }
     #[doc = "Channel conversion end interrupt enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(CCEIENW_AW::Enable)
+        self.variant(CceienwWO::Enable)
     }
 }
-#[doc = "Field `VMORIEN` reader - Voltage monitoring out of range interrupt enable"]
-pub type VMORIEN_R = crate::BitReader<VMORIENR_A>;
 #[doc = "Voltage monitoring out of range interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum VMORIENR_A {
+pub enum Vmorienr {
     #[doc = "0: Voltage monitoring out of range interrupt is disabled"]
     Disabled = 0,
     #[doc = "1: Voltage monitoring out of range interrupt is enabled"]
     Enabled = 1,
 }
-impl From<VMORIENR_A> for bool {
+impl From<Vmorienr> for bool {
     #[inline(always)]
-    fn from(variant: VMORIENR_A) -> Self {
+    fn from(variant: Vmorienr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `VMORIEN` reader - Voltage monitoring out of range interrupt enable"]
+pub type VMORIEN_R = crate::BitReader<Vmorienr>;
 impl VMORIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> VMORIENR_A {
+    pub const fn variant(&self) -> Vmorienr {
         match self.bits {
-            false => VMORIENR_A::Disabled,
-            true => VMORIENR_A::Enabled,
+            false => Vmorienr::Disabled,
+            true => Vmorienr::Enabled,
         }
     }
     #[doc = "Voltage monitoring out of range interrupt is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == VMORIENR_A::Disabled
+        *self == Vmorienr::Disabled
     }
     #[doc = "Voltage monitoring out of range interrupt is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == VMORIENR_A::Enabled
+        *self == Vmorienr::Enabled
     }
 }
 #[doc = "Voltage monitoring out of range interrupt enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum VMORIENW_AW {
+pub enum VmorienwWO {
     #[doc = "0: Voltage monitoring out of range interrupt disable"]
     Disable = 0,
     #[doc = "1: Voltage monitoring out of range interrupt enable"]
     Enable = 1,
 }
-impl From<VMORIENW_AW> for bool {
+impl From<VmorienwWO> for bool {
     #[inline(always)]
-    fn from(variant: VMORIENW_AW) -> Self {
+    fn from(variant: VmorienwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `VMORIEN` writer - Voltage monitoring out of range interrupt enable"]
-pub type VMORIEN_W<'a, REG> = crate::BitWriter<'a, REG, VMORIENW_AW>;
+pub type VMORIEN_W<'a, REG> = crate::BitWriter<'a, REG, VmorienwWO>;
 impl<'a, REG> VMORIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -132,70 +132,70 @@ where
     #[doc = "Voltage monitoring out of range interrupt disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(VMORIENW_AW::Disable)
+        self.variant(VmorienwWO::Disable)
     }
     #[doc = "Voltage monitoring out of range interrupt enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(VMORIENW_AW::Enable)
+        self.variant(VmorienwWO::Enable)
     }
 }
 #[doc = "Field `PCCEIEN` reader - Conversion end interrupt enable for preempted channels"]
 pub use CCEIEN_R as PCCEIEN_R;
 #[doc = "Field `PCCEIEN` writer - Conversion end interrupt enable for preempted channels"]
 pub use CCEIEN_W as PCCEIEN_W;
-#[doc = "Field `SQEN` reader - Sequence mode enable"]
-pub type SQEN_R = crate::BitReader<SQENR_A>;
 #[doc = "Sequence mode enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum SQENR_A {
+pub enum Sqenr {
     #[doc = "0: Sequence mode is disabled"]
     Disabled = 0,
     #[doc = "1: Sequence mode is enabled"]
     Enabled = 1,
 }
-impl From<SQENR_A> for bool {
+impl From<Sqenr> for bool {
     #[inline(always)]
-    fn from(variant: SQENR_A) -> Self {
+    fn from(variant: Sqenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `SQEN` reader - Sequence mode enable"]
+pub type SQEN_R = crate::BitReader<Sqenr>;
 impl SQEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> SQENR_A {
+    pub const fn variant(&self) -> Sqenr {
         match self.bits {
-            false => SQENR_A::Disabled,
-            true => SQENR_A::Enabled,
+            false => Sqenr::Disabled,
+            true => Sqenr::Enabled,
         }
     }
     #[doc = "Sequence mode is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == SQENR_A::Disabled
+        *self == Sqenr::Disabled
     }
     #[doc = "Sequence mode is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == SQENR_A::Enabled
+        *self == Sqenr::Enabled
     }
 }
 #[doc = "Sequence mode enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum SQENW_AW {
+pub enum SqenwWO {
     #[doc = "0: Sequence mode disable"]
     Disable = 0,
     #[doc = "1: Sequence mode enable"]
     Enable = 1,
 }
-impl From<SQENW_AW> for bool {
+impl From<SqenwWO> for bool {
     #[inline(always)]
-    fn from(variant: SQENW_AW) -> Self {
+    fn from(variant: SqenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `SQEN` writer - Sequence mode enable"]
-pub type SQEN_W<'a, REG> = crate::BitWriter<'a, REG, SQENW_AW>;
+pub type SQEN_W<'a, REG> = crate::BitWriter<'a, REG, SqenwWO>;
 impl<'a, REG> SQEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -203,16 +203,14 @@ where
     #[doc = "Sequence mode disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(SQENW_AW::Disable)
+        self.variant(SqenwWO::Disable)
     }
     #[doc = "Sequence mode enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(SQENW_AW::Enable)
+        self.variant(SqenwWO::Enable)
     }
 }
-#[doc = "Field `VMSGEN` reader - Voltage monitoring enable on a single channel"]
-pub type VMSGEN_R = crate::BitReader<VMSGEN_A>;
 #[doc = "Voltage monitoring enable on a single channel\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum VMSGEN_A {
@@ -227,6 +225,8 @@ impl From<VMSGEN_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `VMSGEN` reader - Voltage monitoring enable on a single channel"]
+pub type VMSGEN_R = crate::BitReader<VMSGEN_A>;
 impl VMSGEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -264,58 +264,58 @@ where
         self.variant(VMSGEN_A::Single)
     }
 }
-#[doc = "Field `PCAUTOEN` reader - Preempted group automatic conversion enable after ordinary group"]
-pub type PCAUTOEN_R = crate::BitReader<PCAUTOENR_A>;
 #[doc = "Preempted group automatic conversion enable after ordinary group\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PCAUTOENR_A {
+pub enum Pcautoenr {
     #[doc = "0: Preempted group automatic conversion is disabled"]
     Disabled = 0,
     #[doc = "1: Preempted group automatic conversion is enabled"]
     Enabled = 1,
 }
-impl From<PCAUTOENR_A> for bool {
+impl From<Pcautoenr> for bool {
     #[inline(always)]
-    fn from(variant: PCAUTOENR_A) -> Self {
+    fn from(variant: Pcautoenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `PCAUTOEN` reader - Preempted group automatic conversion enable after ordinary group"]
+pub type PCAUTOEN_R = crate::BitReader<Pcautoenr>;
 impl PCAUTOEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> PCAUTOENR_A {
+    pub const fn variant(&self) -> Pcautoenr {
         match self.bits {
-            false => PCAUTOENR_A::Disabled,
-            true => PCAUTOENR_A::Enabled,
+            false => Pcautoenr::Disabled,
+            true => Pcautoenr::Enabled,
         }
     }
     #[doc = "Preempted group automatic conversion is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == PCAUTOENR_A::Disabled
+        *self == Pcautoenr::Disabled
     }
     #[doc = "Preempted group automatic conversion is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == PCAUTOENR_A::Enabled
+        *self == Pcautoenr::Enabled
     }
 }
 #[doc = "Preempted group automatic conversion enable after ordinary group\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PCAUTOENW_AW {
+pub enum PcautoenwWO {
     #[doc = "0: Preempted group automatic conversion disable"]
     Disable = 0,
     #[doc = "1: Preempted group automatic conversion enable"]
     Enable = 1,
 }
-impl From<PCAUTOENW_AW> for bool {
+impl From<PcautoenwWO> for bool {
     #[inline(always)]
-    fn from(variant: PCAUTOENW_AW) -> Self {
+    fn from(variant: PcautoenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `PCAUTOEN` writer - Preempted group automatic conversion enable after ordinary group"]
-pub type PCAUTOEN_W<'a, REG> = crate::BitWriter<'a, REG, PCAUTOENW_AW>;
+pub type PCAUTOEN_W<'a, REG> = crate::BitWriter<'a, REG, PcautoenwWO>;
 impl<'a, REG> PCAUTOEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -323,66 +323,66 @@ where
     #[doc = "Preempted group automatic conversion disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(PCAUTOENW_AW::Disable)
+        self.variant(PcautoenwWO::Disable)
     }
     #[doc = "Preempted group automatic conversion enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(PCAUTOENW_AW::Enable)
+        self.variant(PcautoenwWO::Enable)
     }
 }
-#[doc = "Field `OCPEN` reader - Partitioned mode enable on ordinary channels"]
-pub type OCPEN_R = crate::BitReader<OCPENR_A>;
 #[doc = "Partitioned mode enable on ordinary channels\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OCPENR_A {
+pub enum Ocpenr {
     #[doc = "0: Partitioned mode on channels is disabled"]
     Disabled = 0,
     #[doc = "1: Partitioned mode on channels is enabled"]
     Enabled = 1,
 }
-impl From<OCPENR_A> for bool {
+impl From<Ocpenr> for bool {
     #[inline(always)]
-    fn from(variant: OCPENR_A) -> Self {
+    fn from(variant: Ocpenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `OCPEN` reader - Partitioned mode enable on ordinary channels"]
+pub type OCPEN_R = crate::BitReader<Ocpenr>;
 impl OCPEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> OCPENR_A {
+    pub const fn variant(&self) -> Ocpenr {
         match self.bits {
-            false => OCPENR_A::Disabled,
-            true => OCPENR_A::Enabled,
+            false => Ocpenr::Disabled,
+            true => Ocpenr::Enabled,
         }
     }
     #[doc = "Partitioned mode on channels is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == OCPENR_A::Disabled
+        *self == Ocpenr::Disabled
     }
     #[doc = "Partitioned mode on channels is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == OCPENR_A::Enabled
+        *self == Ocpenr::Enabled
     }
 }
 #[doc = "Partitioned mode enable on ordinary channels\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OCPENW_AW {
+pub enum OcpenwWO {
     #[doc = "0: Partitioned mode on channels disable"]
     Disable = 0,
     #[doc = "1: Partitioned mode on channels enable"]
     Enable = 1,
 }
-impl From<OCPENW_AW> for bool {
+impl From<OcpenwWO> for bool {
     #[inline(always)]
-    fn from(variant: OCPENW_AW) -> Self {
+    fn from(variant: OcpenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OCPEN` writer - Partitioned mode enable on ordinary channels"]
-pub type OCPEN_W<'a, REG> = crate::BitWriter<'a, REG, OCPENW_AW>;
+pub type OCPEN_W<'a, REG> = crate::BitWriter<'a, REG, OcpenwWO>;
 impl<'a, REG> OCPEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -390,12 +390,12 @@ where
     #[doc = "Partitioned mode on channels disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(OCPENW_AW::Disable)
+        self.variant(OcpenwWO::Disable)
     }
     #[doc = "Partitioned mode on channels enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(OCPENW_AW::Enable)
+        self.variant(OcpenwWO::Enable)
     }
 }
 #[doc = "Field `PCPEN` reader - Partitioned mode enable on preempted channels"]
@@ -410,58 +410,58 @@ pub type OCPCNT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 pub type MSSEL_R = crate::FieldReader;
 #[doc = "Field `MSSEL` writer - Master slave mode select"]
 pub type MSSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `PCVMEN` reader - Voltage monitoring enable on preempted channels"]
-pub type PCVMEN_R = crate::BitReader<PCVMENR_A>;
 #[doc = "Voltage monitoring enable on preempted channels\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PCVMENR_A {
+pub enum Pcvmenr {
     #[doc = "0: Voltage monitoring is disabled"]
     Disabled = 0,
     #[doc = "1: Voltage monitoring is enabled"]
     Enabled = 1,
 }
-impl From<PCVMENR_A> for bool {
+impl From<Pcvmenr> for bool {
     #[inline(always)]
-    fn from(variant: PCVMENR_A) -> Self {
+    fn from(variant: Pcvmenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `PCVMEN` reader - Voltage monitoring enable on preempted channels"]
+pub type PCVMEN_R = crate::BitReader<Pcvmenr>;
 impl PCVMEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> PCVMENR_A {
+    pub const fn variant(&self) -> Pcvmenr {
         match self.bits {
-            false => PCVMENR_A::Disabled,
-            true => PCVMENR_A::Enabled,
+            false => Pcvmenr::Disabled,
+            true => Pcvmenr::Enabled,
         }
     }
     #[doc = "Voltage monitoring is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == PCVMENR_A::Disabled
+        *self == Pcvmenr::Disabled
     }
     #[doc = "Voltage monitoring is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == PCVMENR_A::Enabled
+        *self == Pcvmenr::Enabled
     }
 }
 #[doc = "Voltage monitoring enable on preempted channels\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum PCVMENW_AW {
+pub enum PcvmenwWO {
     #[doc = "0: Voltage monitoring disable"]
     Disable = 0,
     #[doc = "1: Voltage monitoring enable"]
     Enable = 1,
 }
-impl From<PCVMENW_AW> for bool {
+impl From<PcvmenwWO> for bool {
     #[inline(always)]
-    fn from(variant: PCVMENW_AW) -> Self {
+    fn from(variant: PcvmenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `PCVMEN` writer - Voltage monitoring enable on preempted channels"]
-pub type PCVMEN_W<'a, REG> = crate::BitWriter<'a, REG, PCVMENW_AW>;
+pub type PCVMEN_W<'a, REG> = crate::BitWriter<'a, REG, PcvmenwWO>;
 impl<'a, REG> PCVMEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -469,12 +469,12 @@ where
     #[doc = "Voltage monitoring disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(PCVMENW_AW::Disable)
+        self.variant(PcvmenwWO::Disable)
     }
     #[doc = "Voltage monitoring enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(PCVMENW_AW::Enable)
+        self.variant(PcvmenwWO::Enable)
     }
 }
 #[doc = "Field `OCVMEN` reader - Voltage monitoring enable on ordinary channels"]
@@ -569,7 +569,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -651,16 +651,6 @@ impl W {
     pub fn ocvmen(&mut self) -> OCVMEN_W<CTRL1_SPEC> {
         OCVMEN_W::new(self, 23)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL1_SPEC;
@@ -671,10 +661,11 @@ impl crate::RegisterSpec for CTRL1_SPEC {
 impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0"]
 impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

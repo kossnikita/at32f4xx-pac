@@ -1,7 +1,5 @@
 #[doc = "Register `STS` reader"]
 pub type R = crate::R<STS_SPEC>;
-#[doc = "Field `DIVF` reader - Division value update complete flag"]
-pub type DIVF_R = crate::BitReader<DIVF_A>;
 #[doc = "Division value update complete flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DIVF_A {
@@ -16,6 +14,8 @@ impl From<DIVF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `DIVF` reader - Division value update complete flag"]
+pub type DIVF_R = crate::BitReader<DIVF_A>;
 impl DIVF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -36,8 +36,6 @@ impl DIVF_R {
         *self == DIVF_A::InProgress
     }
 }
-#[doc = "Field `RLDF` reader - Reload value update complete flag"]
-pub type RLDF_R = crate::BitReader<RLDF_A>;
 #[doc = "Reload value update complete flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum RLDF_A {
@@ -52,6 +50,8 @@ impl From<RLDF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RLDF` reader - Reload value update complete flag"]
+pub type RLDF_R = crate::BitReader<RLDF_A>;
 impl RLDF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -72,8 +72,6 @@ impl RLDF_R {
         *self == RLDF_A::InProgress
     }
 }
-#[doc = "Field `WINF` reader - Window value update complete flag"]
-pub type WINF_R = crate::BitReader<WINF_A>;
 #[doc = "Window value update complete flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WINF_A {
@@ -88,6 +86,8 @@ impl From<WINF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `WINF` reader - Window value update complete flag"]
+pub type WINF_R = crate::BitReader<WINF_A>;
 impl WINF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -136,7 +136,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -148,5 +148,5 @@ impl crate::RegisterSpec for STS_SPEC {
 impl crate::Readable for STS_SPEC {}
 #[doc = "`reset()` method sets STS to value 0"]
 impl crate::Resettable for STS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

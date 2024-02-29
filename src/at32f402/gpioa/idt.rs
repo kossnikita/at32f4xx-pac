@@ -1,7 +1,5 @@
 #[doc = "Register `IDT` reader"]
 pub type R = crate::R<IDT_SPEC>;
-#[doc = "Field `IDT[0-15]` reader - Port input data"]
-pub type IDT_R = crate::BitReader<IDT0_A>;
 #[doc = "Port input data\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IDT0_A {
@@ -16,6 +14,8 @@ impl From<IDT0_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `IDT(0-15)` reader - Port input data"]
+pub type IDT_R = crate::BitReader<IDT0_A>;
 impl IDT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -37,11 +37,20 @@ impl IDT_R {
     }
 }
 impl R {
-    #[doc = "Port input data\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Port input data"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IDT0` field"]
     #[inline(always)]
     pub fn idt(&self, n: u8) -> IDT_R {
-        assert!(n < 16);
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         IDT_R::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Port input data"]
+    #[inline(always)]
+    pub fn idt_iter(&self) -> impl Iterator<Item = IDT_R> + '_ {
+        (0..16).map(move |n| IDT_R::new(((self.bits >> n) & 1) != 0))
     }
     #[doc = "Bit 0 - Port input data"]
     #[inline(always)]
@@ -148,7 +157,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<IDT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "GPIO input data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -160,5 +169,5 @@ impl crate::RegisterSpec for IDT_SPEC {
 impl crate::Readable for IDT_SPEC {}
 #[doc = "`reset()` method sets IDT to value 0"]
 impl crate::Resettable for IDT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

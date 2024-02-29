@@ -18,7 +18,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<RSPCMD_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SDIO command register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rspcmd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -30,5 +30,5 @@ impl crate::RegisterSpec for RSPCMD_SPEC {
 impl crate::Readable for RSPCMD_SPEC {}
 #[doc = "`reset()` method sets RSPCMD to value 0"]
 impl crate::Resettable for RSPCMD_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

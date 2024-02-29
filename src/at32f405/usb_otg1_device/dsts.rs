@@ -42,7 +42,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<DSTS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "OTGFS device status register (OTGFS_DSTS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -54,5 +54,5 @@ impl crate::RegisterSpec for DSTS_SPEC {
 impl crate::Readable for DSTS_SPEC {}
 #[doc = "`reset()` method sets DSTS to value 0x10"]
 impl crate::Resettable for DSTS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x10;
+    const RESET_VALUE: u32 = 0x10;
 }

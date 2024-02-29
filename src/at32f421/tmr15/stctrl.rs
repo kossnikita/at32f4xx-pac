@@ -2,8 +2,6 @@
 pub type R = crate::R<STCTRL_SPEC>;
 #[doc = "Register `STCTRL` writer"]
 pub type W = crate::W<STCTRL_SPEC>;
-#[doc = "Field `SMSEL` reader - Subordinate TMR mode selection"]
-pub type SMSEL_R = crate::FieldReader<SMSEL_A>;
 #[doc = "Subordinate TMR mode selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -34,6 +32,8 @@ impl From<SMSEL_A> for u8 {
 impl crate::FieldSpec for SMSEL_A {
     type Ux = u8;
 }
+#[doc = "Field `SMSEL` reader - Subordinate TMR mode selection"]
+pub type SMSEL_R = crate::FieldReader<SMSEL_A>;
 impl SMSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -139,8 +139,6 @@ where
         self.variant(SMSEL_A::External)
     }
 }
-#[doc = "Field `STIS` reader - Subordinate TMR input selection"]
-pub type STIS_R = crate::FieldReader<STIS_A>;
 #[doc = "Subordinate TMR input selection\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -171,6 +169,8 @@ impl From<STIS_A> for u8 {
 impl crate::FieldSpec for STIS_A {
     type Ux = u8;
 }
+#[doc = "Field `STIS` reader - Subordinate TMR input selection"]
+pub type STIS_R = crate::FieldReader<STIS_A>;
 impl STIS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -276,58 +276,58 @@ where
         self.variant(STIS_A::Ext)
     }
 }
-#[doc = "Field `STS` reader - Subordinate TMR synchronization"]
-pub type STS_R = crate::BitReader<STSR_A>;
 #[doc = "Subordinate TMR synchronization\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum STSR_A {
+pub enum Stsr {
     #[doc = "0: Subordinate TMR synchronization is disabled"]
     Disabled = 0,
     #[doc = "1: Subordinate TMR synchronization is disabled"]
     Enabled = 1,
 }
-impl From<STSR_A> for bool {
+impl From<Stsr> for bool {
     #[inline(always)]
-    fn from(variant: STSR_A) -> Self {
+    fn from(variant: Stsr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `STS` reader - Subordinate TMR synchronization"]
+pub type STS_R = crate::BitReader<Stsr>;
 impl STS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> STSR_A {
+    pub const fn variant(&self) -> Stsr {
         match self.bits {
-            false => STSR_A::Disabled,
-            true => STSR_A::Enabled,
+            false => Stsr::Disabled,
+            true => Stsr::Enabled,
         }
     }
     #[doc = "Subordinate TMR synchronization is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == STSR_A::Disabled
+        *self == Stsr::Disabled
     }
     #[doc = "Subordinate TMR synchronization is disabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == STSR_A::Enabled
+        *self == Stsr::Enabled
     }
 }
 #[doc = "Subordinate TMR synchronization\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum STSW_AW {
+pub enum StswWO {
     #[doc = "0: Subordinate TMR synchronization disable"]
     Disable = 0,
     #[doc = "1: Subordinate TMR synchronization enable"]
     Enable = 1,
 }
-impl From<STSW_AW> for bool {
+impl From<StswWO> for bool {
     #[inline(always)]
-    fn from(variant: STSW_AW) -> Self {
+    fn from(variant: StswWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `STS` writer - Subordinate TMR synchronization"]
-pub type STS_W<'a, REG> = crate::BitWriter<'a, REG, STSW_AW>;
+pub type STS_W<'a, REG> = crate::BitWriter<'a, REG, StswWO>;
 impl<'a, REG> STS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -335,12 +335,12 @@ where
     #[doc = "Subordinate TMR synchronization disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(STSW_AW::Disable)
+        self.variant(StswWO::Disable)
     }
     #[doc = "Subordinate TMR synchronization enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(STSW_AW::Enable)
+        self.variant(StswWO::Enable)
     }
 }
 impl R {
@@ -371,7 +371,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STCTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -393,16 +393,6 @@ impl W {
     pub fn sts(&mut self) -> STS_W<STCTRL_SPEC> {
         STS_W::new(self, 7)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Subordinate TMR control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`stctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STCTRL_SPEC;
@@ -413,10 +403,11 @@ impl crate::RegisterSpec for STCTRL_SPEC {
 impl crate::Readable for STCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stctrl::W`](W) writer structure"]
 impl crate::Writable for STCTRL_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STCTRL to value 0"]
 impl crate::Resettable for STCTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -1,3 +1,4 @@
+# ${env:RUST_LOG}="warn"
 New-item -ItemType Directory . -Name svd -ErrorAction Ignore | Out-Null
 Get-ChildItem ./PACKs/Keil5/ -Filter *.pack | 
 Foreach-Object -Parallel {
@@ -26,7 +27,7 @@ Foreach-Object -Parallel {
     Copy-Item $svd -Destination ./$dirName/$svd_name
     Push-Location ./$dirName
     cargo init -q
-    svd2rust -m -g -s --const_generic --pascal_enum_values --max_cluster_size --atomics --atomics_feature atomics --impl_debug -l warn -i $svd_name
+    svd2rust -m -g -s --reexport-core-peripherals --reexport-interrupt -f peripheral::c: -f peripheral_singleton::c: -f register::c: -f register_spec::c:_SPEC -f field_reader::c:_R -f field_writer::c:_W -f interrupt::c: -f enum_name::c:_A -f enum_value::p: --max_cluster_size --atomics --atomics_feature atomics --impl_debug -l warn -i $svd_name
     if ($LastExitCode) {
         Pop-Location
         return;
@@ -38,7 +39,9 @@ Foreach-Object -Parallel {
     Copy-Item device.x -Destination src
     Rename-Item -Path src/lib.rs -NewName mod.rs
     $path = ("../src/" + $dirName)
-    Remove-Item $path -Recurse
+    if (Test-Path $path) {
+        Remove-Item $path -Recurse
+    }
     Copy-Item -Path src -Destination $path -Recurse
     Pop-Location
     Remove-Item ./$dirName -Recurse -Force

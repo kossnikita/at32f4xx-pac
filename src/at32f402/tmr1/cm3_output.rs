@@ -2,8 +2,6 @@
 pub type R = crate::R<CM3_OUTPUT_SPEC>;
 #[doc = "Register `CM3_OUTPUT` writer"]
 pub type W = crate::W<CM3_OUTPUT_SPEC>;
-#[doc = "Field `COIEN[5-5]` reader - Channel %s output immediately enable"]
-pub type COIEN_R = crate::BitReader<C5OIEN_A>;
 #[doc = "Channel %s output immediately enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum C5OIEN_A {
@@ -18,6 +16,8 @@ impl From<C5OIEN_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `COIEN(5-5)` reader - Channel %s output immediately enable"]
+pub type COIEN_R = crate::BitReader<C5OIEN_A>;
 impl COIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -38,7 +38,7 @@ impl COIEN_R {
         *self == C5OIEN_A::Immediately
     }
 }
-#[doc = "Field `COIEN[5-5]` writer - Channel %s output immediately enable"]
+#[doc = "Field `COIEN(5-5)` writer - Channel %s output immediately enable"]
 pub type COIEN_W<'a, REG> = crate::BitWriter<'a, REG, C5OIEN_A>;
 impl<'a, REG> COIEN_W<'a, REG>
 where
@@ -55,58 +55,58 @@ where
         self.variant(C5OIEN_A::Immediately)
     }
 }
-#[doc = "Field `COBEN[5-5]` reader - Channel %s output buffer enable"]
-pub type COBEN_R = crate::BitReader<C5OBENR_A>;
 #[doc = "Channel %s output buffer enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum C5OBENR_A {
+pub enum C5obenr {
     #[doc = "0: Channel output buffer is disabled"]
     Disabled = 0,
     #[doc = "1: Channel output buffer is enabled"]
     Enabled = 1,
 }
-impl From<C5OBENR_A> for bool {
+impl From<C5obenr> for bool {
     #[inline(always)]
-    fn from(variant: C5OBENR_A) -> Self {
+    fn from(variant: C5obenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `COBEN(5-5)` reader - Channel %s output buffer enable"]
+pub type COBEN_R = crate::BitReader<C5obenr>;
 impl COBEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> C5OBENR_A {
+    pub const fn variant(&self) -> C5obenr {
         match self.bits {
-            false => C5OBENR_A::Disabled,
-            true => C5OBENR_A::Enabled,
+            false => C5obenr::Disabled,
+            true => C5obenr::Enabled,
         }
     }
     #[doc = "Channel output buffer is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == C5OBENR_A::Disabled
+        *self == C5obenr::Disabled
     }
     #[doc = "Channel output buffer is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == C5OBENR_A::Enabled
+        *self == C5obenr::Enabled
     }
 }
 #[doc = "Channel %s output buffer enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum C5OBENW_AW {
+pub enum C5obenwWO {
     #[doc = "0: Channel output buffer disable"]
     Disable = 0,
     #[doc = "1: Channel output buffer enable"]
     Enable = 1,
 }
-impl From<C5OBENW_AW> for bool {
+impl From<C5obenwWO> for bool {
     #[inline(always)]
-    fn from(variant: C5OBENW_AW) -> Self {
+    fn from(variant: C5obenwWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `COBEN[5-5]` writer - Channel %s output buffer enable"]
-pub type COBEN_W<'a, REG> = crate::BitWriter<'a, REG, C5OBENW_AW>;
+#[doc = "Field `COBEN(5-5)` writer - Channel %s output buffer enable"]
+pub type COBEN_W<'a, REG> = crate::BitWriter<'a, REG, C5obenwWO>;
 impl<'a, REG> COBEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -114,16 +114,14 @@ where
     #[doc = "Channel output buffer disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(C5OBENW_AW::Disable)
+        self.variant(C5obenwWO::Disable)
     }
     #[doc = "Channel output buffer enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(C5OBENW_AW::Enable)
+        self.variant(C5obenwWO::Enable)
     }
 }
-#[doc = "Field `COCTRL[5-5]` reader - Channel %s output control"]
-pub type COCTRL_R = crate::FieldReader<COCTRL_A>;
 #[doc = "Channel %s output control\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -154,6 +152,8 @@ impl From<COCTRL_A> for u8 {
 impl crate::FieldSpec for COCTRL_A {
     type Ux = u8;
 }
+#[doc = "Field `COCTRL(5-5)` reader - Channel %s output control"]
+pub type COCTRL_R = crate::FieldReader<COCTRL_A>;
 impl COCTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -211,7 +211,7 @@ impl COCTRL_R {
         *self == COCTRL_A::PwmB
     }
 }
-#[doc = "Field `COCTRL[5-5]` writer - Channel %s output control"]
+#[doc = "Field `COCTRL(5-5)` writer - Channel %s output control"]
 pub type COCTRL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, COCTRL_A>;
 impl<'a, REG> COCTRL_W<'a, REG>
 where
@@ -259,58 +259,58 @@ where
         self.variant(COCTRL_A::PwmB)
     }
 }
-#[doc = "Field `COSEN[5-5]` reader - Channel %s output switch enable"]
-pub type COSEN_R = crate::BitReader<C5OSENR_A>;
 #[doc = "Channel %s output switch enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum C5OSENR_A {
+pub enum C5osenr {
     #[doc = "0: CxORAW is not affected by EXT input"]
     Disabled = 0,
     #[doc = "1: Once a high level is detect on EXT input, clear CxORAW"]
     Enabled = 1,
 }
-impl From<C5OSENR_A> for bool {
+impl From<C5osenr> for bool {
     #[inline(always)]
-    fn from(variant: C5OSENR_A) -> Self {
+    fn from(variant: C5osenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `COSEN(5-5)` reader - Channel %s output switch enable"]
+pub type COSEN_R = crate::BitReader<C5osenr>;
 impl COSEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> C5OSENR_A {
+    pub const fn variant(&self) -> C5osenr {
         match self.bits {
-            false => C5OSENR_A::Disabled,
-            true => C5OSENR_A::Enabled,
+            false => C5osenr::Disabled,
+            true => C5osenr::Enabled,
         }
     }
     #[doc = "CxORAW is not affected by EXT input"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == C5OSENR_A::Disabled
+        *self == C5osenr::Disabled
     }
     #[doc = "Once a high level is detect on EXT input, clear CxORAW"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == C5OSENR_A::Enabled
+        *self == C5osenr::Enabled
     }
 }
 #[doc = "Channel %s output switch enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum C5OSENW_AW {
+pub enum C5osenwWO {
     #[doc = "0: CxORAW is not affected by EXT input"]
     Disable = 0,
     #[doc = "1: Once a high level is detect on EXT input, clear CxORAW"]
     Enable = 1,
 }
-impl From<C5OSENW_AW> for bool {
+impl From<C5osenwWO> for bool {
     #[inline(always)]
-    fn from(variant: C5OSENW_AW) -> Self {
+    fn from(variant: C5osenwWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `COSEN[5-5]` writer - Channel %s output switch enable"]
-pub type COSEN_W<'a, REG> = crate::BitWriter<'a, REG, C5OSENW_AW>;
+#[doc = "Field `COSEN(5-5)` writer - Channel %s output switch enable"]
+pub type COSEN_W<'a, REG> = crate::BitWriter<'a, REG, C5osenwWO>;
 impl<'a, REG> COSEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -318,57 +318,89 @@ where
     #[doc = "CxORAW is not affected by EXT input"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(C5OSENW_AW::Disable)
+        self.variant(C5osenwWO::Disable)
     }
     #[doc = "Once a high level is detect on EXT input, clear CxORAW"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(C5OSENW_AW::Enable)
+        self.variant(C5osenwWO::Enable)
     }
 }
 impl R {
-    #[doc = "Channel [5-5]
-output immediately enable\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (5-5) output immediately enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C5OIEN` field"]
     #[inline(always)]
     pub fn coien(&self, n: u8) -> COIEN_R {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         COIEN_R::new(((self.bits >> (n * 0 + 2)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (5-5) output immediately enable"]
+    #[inline(always)]
+    pub fn coien_iter(&self) -> impl Iterator<Item = COIEN_R> + '_ {
+        (0..1).map(move |n| COIEN_R::new(((self.bits >> (n * 0 + 2)) & 1) != 0))
     }
     #[doc = "Bit 2 - Channel 5 output immediately enable"]
     #[inline(always)]
     pub fn c5oien(&self) -> COIEN_R {
         COIEN_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Channel [5-5]
-output buffer enable\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (5-5) output buffer enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C5OBEN` field"]
     #[inline(always)]
     pub fn coben(&self, n: u8) -> COBEN_R {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         COBEN_R::new(((self.bits >> (n * 0 + 3)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (5-5) output buffer enable"]
+    #[inline(always)]
+    pub fn coben_iter(&self) -> impl Iterator<Item = COBEN_R> + '_ {
+        (0..1).map(move |n| COBEN_R::new(((self.bits >> (n * 0 + 3)) & 1) != 0))
     }
     #[doc = "Bit 3 - Channel 5 output buffer enable"]
     #[inline(always)]
     pub fn c5oben(&self) -> COBEN_R {
         COBEN_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Channel [5-5]
-output control\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (5-5) output control"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C5OCTRL` field"]
     #[inline(always)]
     pub fn coctrl(&self, n: u8) -> COCTRL_R {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         COCTRL_R::new(((self.bits >> (n * 0 + 4)) & 7) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (5-5) output control"]
+    #[inline(always)]
+    pub fn coctrl_iter(&self) -> impl Iterator<Item = COCTRL_R> + '_ {
+        (0..1).map(move |n| COCTRL_R::new(((self.bits >> (n * 0 + 4)) & 7) as u8))
     }
     #[doc = "Bits 4:6 - Channel 5 output control"]
     #[inline(always)]
     pub fn c5octrl(&self) -> COCTRL_R {
         COCTRL_R::new(((self.bits >> 4) & 7) as u8)
     }
-    #[doc = "Channel [5-5]
-output switch enable\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (5-5) output switch enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C5OSEN` field"]
     #[inline(always)]
     pub fn cosen(&self, n: u8) -> COSEN_R {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         COSEN_R::new(((self.bits >> (n * 0 + 7)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (5-5) output switch enable"]
+    #[inline(always)]
+    pub fn cosen_iter(&self) -> impl Iterator<Item = COSEN_R> + '_ {
+        (0..1).map(move |n| COSEN_R::new(((self.bits >> (n * 0 + 7)) & 1) != 0))
     }
     #[doc = "Bit 7 - Channel 5 output switch enable"]
     #[inline(always)]
@@ -388,16 +420,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CM3_OUTPUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Channel [5-5]
-output immediately enable"]
+    #[doc = "Channel (5-5) output immediately enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C5OIEN` field"]
     #[inline(always)]
     #[must_use]
     pub fn coien(&mut self, n: u8) -> COIEN_W<CM3_OUTPUT_SPEC> {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         COIEN_W::new(self, n * 0 + 2)
     }
     #[doc = "Bit 2 - Channel 5 output immediately enable"]
@@ -406,12 +440,14 @@ output immediately enable"]
     pub fn c5oien(&mut self) -> COIEN_W<CM3_OUTPUT_SPEC> {
         COIEN_W::new(self, 2)
     }
-    #[doc = "Channel [5-5]
-output buffer enable"]
+    #[doc = "Channel (5-5) output buffer enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C5OBEN` field"]
     #[inline(always)]
     #[must_use]
     pub fn coben(&mut self, n: u8) -> COBEN_W<CM3_OUTPUT_SPEC> {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         COBEN_W::new(self, n * 0 + 3)
     }
     #[doc = "Bit 3 - Channel 5 output buffer enable"]
@@ -420,12 +456,14 @@ output buffer enable"]
     pub fn c5oben(&mut self) -> COBEN_W<CM3_OUTPUT_SPEC> {
         COBEN_W::new(self, 3)
     }
-    #[doc = "Channel [5-5]
-output control"]
+    #[doc = "Channel (5-5) output control"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C5OCTRL` field"]
     #[inline(always)]
     #[must_use]
     pub fn coctrl(&mut self, n: u8) -> COCTRL_W<CM3_OUTPUT_SPEC> {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         COCTRL_W::new(self, n * 0 + 4)
     }
     #[doc = "Bits 4:6 - Channel 5 output control"]
@@ -434,12 +472,14 @@ output control"]
     pub fn c5octrl(&mut self) -> COCTRL_W<CM3_OUTPUT_SPEC> {
         COCTRL_W::new(self, 4)
     }
-    #[doc = "Channel [5-5]
-output switch enable"]
+    #[doc = "Channel (5-5) output switch enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C5OSEN` field"]
     #[inline(always)]
     #[must_use]
     pub fn cosen(&mut self, n: u8) -> COSEN_W<CM3_OUTPUT_SPEC> {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         COSEN_W::new(self, n * 0 + 7)
     }
     #[doc = "Bit 7 - Channel 5 output switch enable"]
@@ -447,16 +487,6 @@ output switch enable"]
     #[must_use]
     pub fn c5osen(&mut self) -> COSEN_W<CM3_OUTPUT_SPEC> {
         COSEN_W::new(self, 7)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
     }
 }
 #[doc = "Channel output mode register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cm3_output::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cm3_output::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -468,10 +498,11 @@ impl crate::RegisterSpec for CM3_OUTPUT_SPEC {
 impl crate::Readable for CM3_OUTPUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cm3_output::W`](W) writer structure"]
 impl crate::Writable for CM3_OUTPUT_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CM3_OUTPUT to value 0"]
 impl crate::Resettable for CM3_OUTPUT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -261,7 +261,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>HICKSTBLR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotReady</name>
                   <description>Not ready</description>
@@ -337,7 +336,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>HEXTSTBLR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotReady</name>
                   <description>Not ready</description>
@@ -463,7 +461,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>PLLSTBLR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotReady</name>
                   <description>Not ready</description>
@@ -495,7 +492,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>SCLKSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>HICK</name>
                   <description>System clock from HICK</description>
@@ -521,7 +517,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>SCLKSTS</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>HICK</name>
                   <description>System clock from HICK</description>
@@ -547,7 +542,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>AHBDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>SCLK</name>
                   <description>The SCLK is used as AHB clock</description>
@@ -603,7 +597,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>APB1DIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>HCLK</name>
                   <description>The divided HCLK is used as APB clock</description>
@@ -661,7 +654,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>PLLHEXTDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>HEXT</name>
                   <description>HEXT</description>
@@ -1589,7 +1581,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>IOMC0</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Input</name>
                   <description>Input mode</description>
@@ -1633,7 +1624,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OM0</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>PushPull</name>
                   <description>Push-pull</description>
@@ -1667,7 +1657,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>ODRV0</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Normal</name>
                   <description>Normal sourcing/sinking strength</description>
@@ -1701,7 +1690,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>PULL0</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoPull</name>
                   <description>No pull-up/pull-down</description>
@@ -1740,7 +1728,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>IDT0</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>Input is logic low</description>
@@ -1823,7 +1810,6 @@
               <modifiedWriteValues>oneToSet</modifiedWriteValues>
               <enumeratedValues>
                 <name>IOSB0W</name>
-                <usage>write</usage>
                 <enumeratedValue>
                   <name>Set</name>
                   <description>Set the corresponding ODT bit</description>
@@ -1842,7 +1828,6 @@
               <modifiedWriteValues>oneToClear</modifiedWriteValues>
               <enumeratedValues>
                 <name>IOCB0W</name>
-                <usage>write</usage>
                 <enumeratedValue>
                   <name>Clear</name>
                   <description>Clear the corresponding ODT bit</description>
@@ -1906,7 +1891,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>WPSEQ</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Clear</name>
                   <description>Clear</description>
@@ -1993,7 +1977,6 @@
               <modifiedWriteValues>oneToClear</modifiedWriteValues>
               <enumeratedValues>
                 <name>IOCB0W</name>
-                <usage>write</usage>
                 <enumeratedValue>
                   <name>Clear</name>
                   <description>Clear the corresponding ODT bit</description>
@@ -2995,7 +2978,6 @@
                 <bitWidth>1</bitWidth>
                 <enumeratedValues>
                   <name>DTD</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>Peripherals</name>
                     <description>Read from peripherals</description>
@@ -3117,7 +3099,6 @@
                 <bitWidth>2</bitWidth>
                 <enumeratedValues>
                   <name>PWIDTH</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>bit8</name>
                     <description>8 bits</description>
@@ -3142,7 +3123,6 @@
                 <bitWidth>2</bitWidth>
                 <enumeratedValues>
                   <name>MWIDTH</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>bit8</name>
                     <description>8 bits</description>
@@ -3167,7 +3147,6 @@
                 <bitWidth>2</bitWidth>
                 <enumeratedValues>
                   <name>CHPL</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>Low</name>
                     <description>Low</description>
@@ -3371,7 +3350,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>AMPM</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>AM</name>
                   <description>AM</description>
@@ -3498,7 +3476,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>WK</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Monday</name>
                   <description>Monday</description>
@@ -3636,7 +3613,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>OUTSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Disabled</name>
                   <value>0</value>
@@ -3660,7 +3636,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OUTP</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>High</description>
@@ -3680,7 +3655,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>CALOSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Hz512</name>
                   <description>512Hz</description>
@@ -3892,7 +3866,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>HM</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>hour24</name>
                   <description>24-hour format</description>
@@ -3980,7 +3953,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>TSEDG</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Rising</name>
                   <description>Rising edge</description>
@@ -4169,7 +4141,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>MASK4</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoMask</name>
                   <description>Date/week day is not masked</description>
@@ -4189,7 +4160,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>WKSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Date</name>
                   <description>Date</description>
@@ -4233,7 +4203,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>MASK3</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoMask</name>
                   <description>No hour mask</description>
@@ -4253,7 +4222,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>AMPM</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>AM</name>
                   <description>AM</description>
@@ -4297,7 +4265,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>MASK2</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoMask</name>
                   <description>No minute mask</description>
@@ -4341,7 +4308,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>MASK1</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoMask</name>
                   <description>No second mask</description>
@@ -4713,7 +4679,6 @@
               <bitWidth>16</bitWidth>
               <enumeratedValues>
                 <name>CMD</name>
-                <usage>write</usage>
                 <enumeratedValue>
                   <name>Unlock</name>
                   <description>Unlock write-protected WDT_DIV and WDT_RLD</description>
@@ -4749,7 +4714,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>DIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>div4</name>
                   <description>LICK divided by 4</description>
@@ -4833,7 +4797,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>DIVF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Complete</name>
                   <description>Division value update complete</description>
@@ -4853,7 +4816,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>RLDF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Complete</name>
                   <description>Reload value update complete</description>
@@ -4873,7 +4835,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>WINF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Complete</name>
                   <description>Reload value update complete</description>
@@ -5010,7 +4971,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>DIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>div4096</name>
                   <description>PCLK1 divided by 4096</description>
@@ -5149,7 +5109,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>CLKDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoDiv</name>
                   <description>No division, fDTS=fCK_INT</description>
@@ -5209,7 +5168,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>TWCMSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>OneWay</name>
                   <description>One-way counting mode, depending on the OWCDIR bit</description>
@@ -5239,7 +5197,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OWCDIR</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Up</name>
                   <description>Up</description>
@@ -5259,7 +5216,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OCMEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continuous</name>
                   <description>The counter does not stop at an update event</description>
@@ -5279,7 +5235,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OVFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Any</name>
                   <description>Counter overflow, setting the OVFSWTR bit or overflow event generated by slave timer controller</description>
@@ -5381,7 +5336,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1IOS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>After dead-time state is low</description>
@@ -5404,7 +5358,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1CIOS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>After dead-time state is low</description>
@@ -5424,7 +5377,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1INSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>CH1</name>
                   <description>CH1 pin is connected to C1IRAW input</description>
@@ -5444,7 +5396,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>PTOS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Reset</name>
                   <description>Reset</description>
@@ -5494,7 +5445,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>DRS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>CaptureCompare</name>
                   <description>Capture/compare event</description>
@@ -5514,7 +5464,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>CCFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Hall</name>
                   <description>Control bits are updated by setting the HALL bit</description>
@@ -5579,7 +5528,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>ESP</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>High or rising edge</description>
@@ -5633,7 +5581,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>ESDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Normal</name>
                   <description>Normal</description>
@@ -5663,7 +5610,6 @@
               <bitWidth>4</bitWidth>
               <enumeratedValues>
                 <name>ESF</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoFilter</name>
                   <description>No filter, sampling is done at f_DTS</description>
@@ -5787,7 +5733,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>STIS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>IS0</name>
                   <description>Internal selection 0</description>
@@ -5837,7 +5782,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>SMSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Disabled</name>
                   <description>Slave mode is disabled</description>
@@ -6419,7 +6363,6 @@
               <modifiedWriteValues>oneToSet</modifiedWriteValues>
               <enumeratedValues>
                 <name>BRKSWTRW</name>
-                <usage>write</usage>
                 <enumeratedValue>
                   <name>Event</name>
                   <description>Generate a break event</description>
@@ -6451,7 +6394,6 @@
               <modifiedWriteValues>oneToSet</modifiedWriteValues>
               <enumeratedValues>
                 <name>HALLSWTRW</name>
-                <usage>write</usage>
                 <enumeratedValue>
                   <name>Event</name>
                   <description>Generate a HALL event</description>
@@ -6552,7 +6494,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>COCTRL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Disconnected</name>
                   <description>Disconnected. CxORAW is disconnected from CxOUT</description>
@@ -6642,7 +6583,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -6662,7 +6602,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C2C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C2IN channel is configured as output</description>
@@ -6692,7 +6631,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C1IN channel is configured as output</description>
@@ -6737,7 +6675,6 @@
               <bitWidth>4</bitWidth>
               <enumeratedValues>
                 <name>CDF</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoFilter</name>
                   <description>No filter, sampling is done at f_DTS</description>
@@ -6830,7 +6767,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -6860,7 +6796,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C2C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C2IN channel is configured as output</description>
@@ -6890,7 +6825,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C1IN channel is configured as output</description>
@@ -6971,7 +6905,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>COCTRL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Disconnected</name>
                   <description>Disconnected. CxORAW is disconnected from CxOUT</description>
@@ -7061,7 +6994,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C3OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -7081,7 +7013,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C4C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C4IN channel is configured as output</description>
@@ -7111,7 +7042,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C3C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C3IN channel is configured as output</description>
@@ -7156,7 +7086,6 @@
               <bitWidth>4</bitWidth>
               <enumeratedValues>
                 <name>CDF</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoFilter</name>
                   <description>No filter, sampling is done at f_DTS</description>
@@ -7249,7 +7178,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C3IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -7279,7 +7207,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C4C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C4IN channel is configured as output</description>
@@ -7309,7 +7236,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C3C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C3IN channel is configured as output</description>
@@ -7354,7 +7280,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1P</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>Output active high or Input active rising edge</description>
@@ -7496,7 +7421,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>1-4</dimIndex>
           <name>C%sDT</name>
-          <displayName>C1DT</displayName>
+          <displayName>C%sDT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
           <size>0x10</size>
@@ -7593,7 +7518,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>BRKV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>Break input is active low</description>
@@ -7717,7 +7641,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>WPC</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoProtect</name>
                   <description>Write protection is OFF</description>
@@ -7846,7 +7769,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>CLKDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoDiv</name>
                   <description>No division, fDTS=fCK_INT</description>
@@ -7906,7 +7828,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>TWCMSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>OneWay</name>
                   <description>One-way counting mode, depending on the OWCDIR bit</description>
@@ -7936,7 +7857,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OWCDIR</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Up</name>
                   <description>Up</description>
@@ -7956,7 +7876,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OCMEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continuous</name>
                   <description>The counter does not stop at an update event</description>
@@ -7976,7 +7895,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OVFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Any</name>
                   <description>Counter overflow, setting the OVFSWTR bit or overflow event generated by slave timer controller</description>
@@ -8075,7 +7993,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1INSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>CH1</name>
                   <description>CH1 pin is connected to C1IRAW input</description>
@@ -8095,7 +8012,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>PTOS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Reset</name>
                   <description>Reset</description>
@@ -8145,7 +8061,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>DRS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>CaptureCompare</name>
                   <description>Capture/compare event</description>
@@ -8176,7 +8091,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>ESP</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>High or rising edge</description>
@@ -8230,7 +8144,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>ESDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Normal</name>
                   <description>Normal</description>
@@ -8260,7 +8173,6 @@
               <bitWidth>4</bitWidth>
               <enumeratedValues>
                 <name>ESF</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoFilter</name>
                   <description>No filter, sampling is done at f_DTS</description>
@@ -8384,7 +8296,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>STIS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>IS0</name>
                   <description>Internal selection 0</description>
@@ -8434,7 +8345,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>SMSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Disabled</name>
                   <description>Slave mode is disabled</description>
@@ -8973,7 +8883,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -8993,7 +8902,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C2C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C2IN channel is configured as output</description>
@@ -9023,7 +8931,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C1IN channel is configured as output</description>
@@ -9077,7 +8984,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -9107,7 +9013,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C2C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C2IN channel is configured as output</description>
@@ -9137,7 +9042,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C1IN channel is configured as output</description>
@@ -9264,7 +9168,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C3OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -9284,7 +9187,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C4C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C4IN channel is configured as output</description>
@@ -9314,7 +9216,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C3C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C3IN channel is configured as output</description>
@@ -9368,7 +9269,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C3IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -9398,7 +9298,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C4C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C4IN channel is configured as output</description>
@@ -9428,7 +9327,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C3C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C3IN channel is configured as output</description>
@@ -9473,7 +9371,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1P</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>Output active high or Input active rising edge</description>
@@ -9575,7 +9472,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>1-4</dimIndex>
           <name>C%sDT</name>
-          <displayName>C1DT</displayName>
+          <displayName>C%sDT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
           <size>0x10</size>
@@ -9680,7 +9577,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>CLKDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoDiv</name>
                   <description>No division, fDTS=fCK_INT</description>
@@ -9740,7 +9636,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>TWCMSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>OneWay</name>
                   <description>One-way counting mode, depending on the OWCDIR bit</description>
@@ -9770,7 +9665,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OWCDIR</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Up</name>
                   <description>Up</description>
@@ -9790,7 +9684,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OCMEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continuous</name>
                   <description>The counter does not stop at an update event</description>
@@ -9810,7 +9703,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OVFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Any</name>
                   <description>Counter overflow, setting the OVFSWTR bit or overflow event generated by slave timer controller</description>
@@ -9909,7 +9801,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1INSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>CH1</name>
                   <description>CH1 pin is connected to C1IRAW input</description>
@@ -9929,7 +9820,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>PTOS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Reset</name>
                   <description>Reset</description>
@@ -9979,7 +9869,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>DRS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>CaptureCompare</name>
                   <description>Capture/compare event</description>
@@ -10010,7 +9899,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>ESP</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>High or rising edge</description>
@@ -10064,7 +9952,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>ESDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Normal</name>
                   <description>Normal</description>
@@ -10094,7 +9981,6 @@
               <bitWidth>4</bitWidth>
               <enumeratedValues>
                 <name>ESF</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoFilter</name>
                   <description>No filter, sampling is done at f_DTS</description>
@@ -10218,7 +10104,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>STIS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>IS0</name>
                   <description>Internal selection 0</description>
@@ -10268,7 +10153,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>SMSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Disabled</name>
                   <description>Slave mode is disabled</description>
@@ -10807,7 +10691,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -10827,7 +10710,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C2C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C2IN channel is configured as output</description>
@@ -10857,7 +10739,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C1IN channel is configured as output</description>
@@ -10911,7 +10792,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -10941,7 +10821,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C2C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C2IN channel is configured as output</description>
@@ -10971,7 +10850,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C1IN channel is configured as output</description>
@@ -11098,7 +10976,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C3OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -11118,7 +10995,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C4C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C4IN channel is configured as output</description>
@@ -11148,7 +11024,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C3C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C3IN channel is configured as output</description>
@@ -11202,7 +11077,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C3IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -11232,7 +11106,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C4C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C4IN channel is configured as output</description>
@@ -11262,7 +11135,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C3C</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Output</name>
                   <description>C3IN channel is configured as output</description>
@@ -11307,7 +11179,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1P</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>Output active high or Input active rising edge</description>
@@ -11409,7 +11280,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>1-4</dimIndex>
           <name>C%sDT</name>
-          <displayName>C1DT</displayName>
+          <displayName>C%sDT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
           <size>0x10</size>
@@ -11548,7 +11419,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OCMEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continuous</name>
                   <description>The counter does not stop at an update event</description>
@@ -11568,7 +11438,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OVFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Any</name>
                   <description>Counter overflow, setting the OVFSWTR bit or overflow event generated by slave timer controller</description>
@@ -11667,7 +11536,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>PTOS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Reset</name>
                   <description>Reset</description>
@@ -11947,7 +11815,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>CLKDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoDiv</name>
                   <description>No division, fDTS=fCK_INT</description>
@@ -12006,7 +11873,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OCMEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continuous</name>
                   <description>The counter does not stop at an update event</description>
@@ -12026,7 +11892,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OVFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Any</name>
                   <description>Counter overflow, setting the OVFSWTR bit or overflow event generated by slave timer controller</description>
@@ -12409,7 +12274,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -12459,7 +12323,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -12520,7 +12383,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1P</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>Output active high or Input active rising edge</description>
@@ -12622,7 +12484,7 @@
           <dimIncrement>0x2</dimIncrement>
           <dimIndex>1-1</dimIndex>
           <name>C%sDT</name>
-          <displayName>C1DT</displayName>
+          <displayName>C%sDT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
           <size>0x10</size>
@@ -12669,7 +12531,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>CLKDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoDiv</name>
                   <description>No division, fDTS=fCK_INT</description>
@@ -12728,7 +12589,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OVFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Any</name>
                   <description>Counter overflow, setting the OVFSWTR bit or overflow event generated by slave timer controller</description>
@@ -13111,7 +12971,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -13161,7 +13020,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -13222,7 +13080,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1P</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>Output active high or Input active rising edge</description>
@@ -13324,7 +13181,7 @@
           <dimIncrement>0x2</dimIncrement>
           <dimIndex>1-1</dimIndex>
           <name>C%sDT</name>
-          <displayName>C1DT</displayName>
+          <displayName>C%sDT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
           <size>0x10</size>
@@ -13388,7 +13245,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>CLKDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoDiv</name>
                   <description>No division, fDTS=fCK_INT</description>
@@ -13447,7 +13303,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OCMEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continuous</name>
                   <description>The counter does not stop at an update event</description>
@@ -13467,7 +13322,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OVFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Any</name>
                   <description>Counter overflow, setting the OVFSWTR bit or overflow event generated by slave timer controller</description>
@@ -13584,7 +13438,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>PTOS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Reset</name>
                   <description>Reset</description>
@@ -13725,7 +13578,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>STIS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>IS0</name>
                   <description>Internal selection 0</description>
@@ -13775,7 +13627,6 @@
               <bitWidth>3</bitWidth>
               <enumeratedValues>
                 <name>SMSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Disabled</name>
                   <description>Slave mode is disabled</description>
@@ -14325,7 +14176,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -14387,7 +14237,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -14444,7 +14293,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1P</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>Output active high or Input active rising edge</description>
@@ -14579,7 +14427,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>1-2</dimIndex>
           <name>C%sDT</name>
-          <displayName>C1DT</displayName>
+          <displayName>C%sDT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
           <size>0x10</size>
@@ -14745,7 +14593,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>CLKDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoDiv</name>
                   <description>No division, fDTS=fCK_INT</description>
@@ -14804,7 +14651,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OCMEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continuous</name>
                   <description>The counter does not stop at an update event</description>
@@ -14824,7 +14670,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>OVFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Any</name>
                   <description>Counter overflow, setting the OVFSWTR bit or overflow event generated by slave timer controller</description>
@@ -14935,7 +14780,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>DRS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>CaptureCompare</name>
                   <description>Capture/compare event</description>
@@ -14955,7 +14799,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>CCFS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Hall</name>
                   <description>Control bits are updated by setting the HALL bit</description>
@@ -15541,7 +15384,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1OIEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Compare</name>
                   <description>Need to compare the CVAL with CxDT before generating an output</description>
@@ -15591,7 +15433,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>C1IDIV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Every</name>
                   <description>No divider. An input capture is generated at each active edge.</description>
@@ -15658,7 +15499,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>C1P</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>High</name>
                   <description>Output active high or Input active rising edge</description>
@@ -15777,7 +15617,7 @@
           <dimIncrement>0x2</dimIncrement>
           <dimIndex>1-1</dimIndex>
           <name>C%sDT</name>
-          <displayName>C1DT</displayName>
+          <displayName>C%sDT</displayName>
           <description>Channel data register</description>
           <addressOffset>0x34</addressOffset>
           <size>0x10</size>
@@ -15874,7 +15714,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>BRKV</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>Break input is active low</description>
@@ -15998,7 +15837,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>WPC</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoProtect</name>
                   <description>Write protection is OFF</description>
@@ -16777,7 +16615,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>PTD</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Work</name>
                   <description>Transmission works during debug</description>
@@ -16963,7 +16800,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>MDRSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Previous</name>
                   <description>The previous message is discarded</description>
@@ -16983,7 +16819,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>MMSSR</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>SmallestIdentifer</name>
                   <description>The message with the smallest identifier is first transmitted</description>
@@ -17082,7 +16917,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>REALRX</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>Low</description>
@@ -17103,7 +16937,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>LSAMPRX</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>Low</description>
@@ -17124,7 +16957,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>CURS</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Idle</name>
                   <description>No reception occurs</description>
@@ -17145,7 +16977,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>CUSS</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Idle</name>
                   <description>No transmit occurs</description>
@@ -17259,7 +17090,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>DZC</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotSleep</name>
                   <description>The CAN is not in Sleep mode</description>
@@ -17280,7 +17110,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>FZC</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotFreeze</name>
                   <description>The CAN is not in Freeze mode</description>
@@ -17314,7 +17143,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>TM0LPF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotLowest</name>
                   <description>Mailbox is not given the lowest priority</description>
@@ -17338,7 +17166,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>TM0EF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotEmpty</name>
                   <description>Transmission is pending in the mailbox</description>
@@ -17541,7 +17368,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>0-1</dimIndex>
           <name>RF%s</name>
-          <displayName>RF0</displayName>
+          <displayName>RF%s</displayName>
           <description>Receive FIFO %s register</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
@@ -18091,7 +17918,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>ETR</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoError</name>
                   <description>No error</description>
@@ -18142,7 +17968,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>BOF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotEntered</name>
                   <description>Bus-off state is not entered</description>
@@ -18163,7 +17988,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>EPF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotEntered</name>
                   <description>Error passive state is not entered</description>
@@ -18184,7 +18008,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>EAF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotEntered</name>
                   <description>Error active state is not entered</description>
@@ -18373,7 +18196,6 @@
                 <bitWidth>1</bitWidth>
                 <enumeratedValues>
                   <name>IDSEL</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>Standard</name>
                     <description>Standard identifier</description>
@@ -18393,7 +18215,6 @@
                 <bitWidth>1</bitWidth>
                 <enumeratedValues>
                   <name>FRSEL</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>Data</name>
                     <description>Data frame</description>
@@ -18547,7 +18368,7 @@
                 <dimIncrement>0x8</dimIncrement>
                 <dimIndex>4-7</dimIndex>
                 <name>TMDT%s</name>
-                <description>Transmit mailbox data byte 4</description>
+                <description>Transmit mailbox data byte %s</description>
                 <bitOffset>0</bitOffset>
                 <bitWidth>8</bitWidth>
                 <writeConstraint>
@@ -18607,7 +18428,6 @@
                 <bitWidth>1</bitWidth>
                 <enumeratedValues>
                   <name>IDI</name>
-                  <usage>read</usage>
                   <enumeratedValue>
                     <name>Standard</name>
                     <description>Standard identifier</description>
@@ -18627,7 +18447,6 @@
                 <bitWidth>1</bitWidth>
                 <enumeratedValues>
                   <name>FRI</name>
-                  <usage>read</usage>
                   <enumeratedValue>
                     <name>Data</name>
                     <description>Data frame</description>
@@ -18729,7 +18548,7 @@
                 <dimIncrement>0x8</dimIncrement>
                 <dimIndex>4-7</dimIndex>
                 <name>RFDT%s</name>
-                <description>Receive FIFO data byte 4</description>
+                <description>Receive FIFO data byte %s</description>
                 <bitOffset>0</bitOffset>
                 <bitWidth>8</bitWidth>
                 <writeConstraint>
@@ -18758,7 +18577,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>FCS</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Active</name>
                   <description>Filter bank is active</description>
@@ -18792,7 +18610,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>SEL0</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Mask</name>
                   <description>Identifier mask mode</description>
@@ -18826,7 +18643,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>SEL0</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Dual</name>
                   <description>Dual 16-bit</description>
@@ -18860,7 +18676,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>SEL0</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Dual</name>
                   <description>Associated with FIFO0</description>
@@ -18935,8 +18750,8 @@
             <dimIncrement>0x4</dimIncrement>
             <dimIndex>1-2</dimIndex>
             <name>FFB%s</name>
-            <displayName>F0FB1</displayName>
-            <description>CAN filter bank filter bit register</description>
+            <displayName>F0FB%s</displayName>
+            <description>CAN filter bank filter bit register %s</description>
             <addressOffset>0x0</addressOffset>
             <size>0x20</size>
             <access>read-write</access>
@@ -18984,7 +18799,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>RSLOST</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NotLost</name>
                   <description>Reference Signal is not lost</description>
@@ -19005,7 +18819,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>CALRDY</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NotReady</name>
                   <description>Interal 8MHz oscillator calibration is not ready</description>
@@ -19119,7 +18932,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>ENTRIM</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>HICKCAL</name>
                   <description>HICKCAL is calibrated</description>
@@ -19315,7 +19127,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>SLBTD</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Receive</name>
                   <description>Receive-only mode</description>
@@ -19369,7 +19180,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>NTC</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Normal</name>
                   <description>Next transmitted data is the normal value</description>
@@ -19389,7 +19199,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>FBN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>bit8</name>
                   <description>8-bit data frame</description>
@@ -19409,7 +19218,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>ORA</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>RxTx</name>
                   <description>Transmission and reception</description>
@@ -19463,7 +19271,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>SWCSIL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>Low level</description>
@@ -19483,7 +19290,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>LTF</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>MSB</name>
                   <description>Most significant bit first</description>
@@ -19549,7 +19355,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>MSTEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Slave</name>
                   <description>Master is disabled (Slave)"</description>
@@ -19569,7 +19374,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>CLKPOL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>Low level</description>
@@ -19589,7 +19393,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>CLKPHA</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>First</name>
                   <description>Data capture starts from the first clock edge</description>
@@ -19866,7 +19669,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>BF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Idle</name>
                   <description>SPI is not busy</description>
@@ -19887,7 +19689,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>ROERR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NoError</name>
                   <description>No overflow error</description>
@@ -19908,7 +19709,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>MMERR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NoError</name>
                   <description>No mode error</description>
@@ -19960,7 +19760,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>TUERR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NoError</name>
                   <description>No underload error</description>
@@ -19981,7 +19780,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>ACS</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>Left</name>
                   <description>Left channel</description>
@@ -20002,7 +19800,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>TDBE</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotEmpty</name>
                   <description>Transmit data buffer is not empty</description>
@@ -20023,7 +19820,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>RDBF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotFull</name>
                   <description>Transmit data buffer is not full</description>
@@ -20102,7 +19898,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>MSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>SPI</name>
                   <description>SPI mode</description>
@@ -20156,7 +19951,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>OPERSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>SlaveTrasmission</name>
                   <description>Slave transmission</description>
@@ -20186,7 +19980,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>PCMFSSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Short</name>
                   <description>Short frame synchronization</description>
@@ -20206,7 +19999,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>STDSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Philips</name>
                   <description>Philips standard</description>
@@ -20236,7 +20028,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>CLKPOL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>Low</description>
@@ -20256,7 +20047,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>DBN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>bit16</name>
                   <description>16-bit wide</description>
@@ -20281,7 +20071,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>CBN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>bit16</name>
                   <description>16-bit wide</description>
@@ -20358,7 +20147,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>ODD</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Double</name>
                   <description>Actual divider factor = DIV*2</description>
@@ -20500,7 +20288,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>TDBE</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NotEmpty</name>
                   <description>Data is not transferred to the shift register</description>
@@ -20583,7 +20370,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>IDLEF</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NoIdle</name>
                   <description>No idle line is detected</description>
@@ -20604,7 +20390,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>ROERR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NoError</name>
                   <description>No overflow error</description>
@@ -20625,7 +20410,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>NERR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NoNoise</name>
                   <description>No noise is detected</description>
@@ -20646,7 +20430,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>FERR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NoError</name>
                   <description>No framing error is detected</description>
@@ -20667,7 +20450,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>PERR</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NoError</name>
                   <description>No parity error occurs</description>
@@ -20786,7 +20568,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>WUM</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Idle</name>
                   <description>Waken up by idle line</description>
@@ -20840,7 +20621,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>PSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Even</name>
                   <description>Even parity</description>
@@ -21098,7 +20878,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>RM</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Active</name>
                   <description>Receiver is in active mode</description>
@@ -21209,7 +20988,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>STOPBN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>bit1</name>
                   <description>1 stop bit</description>
@@ -21273,7 +21051,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>CLKPOL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Low</name>
                   <description>Clock output low</description>
@@ -21293,7 +21070,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>CLKPHA</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>First</name>
                   <description>Data capture is done on the first clock edge</description>
@@ -21381,7 +21157,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>BFBN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>bit10</name>
                   <description>10-bit break frame</description>
@@ -21870,7 +21645,7 @@
       </interrupt>
     </peripheral>
     <peripheral>
-      <name>ADC</name>
+      <name>ADC1</name>
       <description>Analog to digital converter</description>
       <groupName>ADC</groupName>
       <baseAddress>0x40012400</baseAddress>
@@ -22166,7 +21941,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>VMSGEN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>All</name>
                   <description>Voltage monitoring enabled on all channels</description>
@@ -22329,7 +22103,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>PCSWTRG</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NotTriggered</name>
                   <description>Conversion of ordinary channels not triggered</description>
@@ -22380,7 +22153,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>DTALIGN</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Right</name>
                   <description>Right alignment</description>
@@ -22584,7 +22356,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>1-4</dimIndex>
           <name>PCDTO%s</name>
-          <displayName>PCDTO1</displayName>
+          <displayName>PCDTO%s</displayName>
           <description>Data offset for Preempted channel %s</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
@@ -22610,7 +22382,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>H,L</dimIndex>
           <name>VM%sB</name>
-          <displayName>VMHB</displayName>
+          <displayName>VM%sB</displayName>
           <description>Voltage monitoring %s boundary register</description>
           <addressOffset>0x24</addressOffset>
           <size>0x20</size>
@@ -22764,7 +22536,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>1-4</dimIndex>
           <name>PDT%s</name>
-          <displayName>PDT1</displayName>
+          <displayName>PDT%s</displayName>
           <description>Preempted data register %s</description>
           <addressOffset>0x3C</addressOffset>
           <size>0x20</size>
@@ -23237,7 +23009,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>WDT_PAUSE</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continue</name>
                   <description>The counter clock of TMRx is fed even if the core is halted</description>
@@ -23257,7 +23028,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>WWDT_PAUSE</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continue</name>
                   <description>The counter clock of TMRx is fed even if the core is halted</description>
@@ -23277,7 +23047,6 @@
               <bitWidth>1</bitWidth>
               <enumeratedValues>
                 <name>TMR1_PAUSE</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Continue</name>
                   <description>The counter clock of TMRx is fed even if the core is halted</description>
@@ -23379,6 +23148,29 @@
             </field>
           </fields>
         </register>
+        <register>
+          <name>SER_ID</name>
+          <displayName>SER_ID</displayName>
+          <description>SERIES ID</description>
+          <addressOffset>0x20</addressOffset>
+          <size>0x20</size>
+          <access>read-only</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>REV_ID</name>
+              <description>version ID</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+            </field>
+            <field>
+              <name>SER_ID</name>
+              <description>series ID</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
       </registers>
     </peripheral>
     <peripheral>
@@ -23462,7 +23254,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>POLY_SIZE</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>bits32</name>
                   <description>32 bits</description>
@@ -23492,7 +23283,6 @@
               <bitWidth>2</bitWidth>
               <enumeratedValues>
                 <name>REVID</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>NoEffect</name>
                   <description>No effect</description>
@@ -23523,7 +23313,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>REVOD</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>NoEffect</name>
                   <description>No effect</description>

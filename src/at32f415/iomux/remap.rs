@@ -6,8 +6,6 @@ pub type W = crate::W<REMAP_SPEC>;
 pub type SPI1_MUX0_R = crate::BitReader;
 #[doc = "Field `SPI1_MUX0` writer - SPI1 muxing bit0"]
 pub type SPI1_MUX0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2C1_MUX` reader - I2C1 muxing"]
-pub type I2C1_MUX_R = crate::BitReader<I2C1_MUX_A>;
 #[doc = "I2C1 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum I2C1_MUX_A {
@@ -22,6 +20,8 @@ impl From<I2C1_MUX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `I2C1_MUX` reader - I2C1 muxing"]
+pub type I2C1_MUX_R = crate::BitReader<I2C1_MUX_A>;
 impl I2C1_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -59,8 +59,6 @@ where
         self.variant(I2C1_MUX_A::Mux1)
     }
 }
-#[doc = "Field `USART1_MUX` reader - USART1 muxing"]
-pub type USART1_MUX_R = crate::BitReader<USART1_MUX_A>;
 #[doc = "USART1 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum USART1_MUX_A {
@@ -75,6 +73,8 @@ impl From<USART1_MUX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `USART1_MUX` reader - USART1 muxing"]
+pub type USART1_MUX_R = crate::BitReader<USART1_MUX_A>;
 impl USART1_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -112,8 +112,6 @@ where
         self.variant(USART1_MUX_A::Mux1)
     }
 }
-#[doc = "Field `USART3_MUX` reader - USART3 muxing"]
-pub type USART3_MUX_R = crate::FieldReader<USART3_MUX_A>;
 #[doc = "USART3 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -134,6 +132,8 @@ impl From<USART3_MUX_A> for u8 {
 impl crate::FieldSpec for USART3_MUX_A {
     type Ux = u8;
 }
+#[doc = "Field `USART3_MUX` reader - USART3 muxing"]
+pub type USART3_MUX_R = crate::FieldReader<USART3_MUX_A>;
 impl USART3_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -184,8 +184,6 @@ where
         self.variant(USART3_MUX_A::Mux2)
     }
 }
-#[doc = "Field `TMR1_MUX` reader - TMR1 muxing"]
-pub type TMR1_MUX_R = crate::FieldReader<TMR1_MUX_A>;
 #[doc = "TMR1 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -204,6 +202,8 @@ impl From<TMR1_MUX_A> for u8 {
 impl crate::FieldSpec for TMR1_MUX_A {
     type Ux = u8;
 }
+#[doc = "Field `TMR1_MUX` reader - TMR1 muxing"]
+pub type TMR1_MUX_R = crate::FieldReader<TMR1_MUX_A>;
 impl TMR1_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -243,8 +243,6 @@ where
         self.variant(TMR1_MUX_A::Mux1)
     }
 }
-#[doc = "Field `TMR2_MUX` reader - TMR2 muxing"]
-pub type TMR2_MUX_R = crate::FieldReader<TMR2_MUX_A>;
 #[doc = "TMR2 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -267,6 +265,8 @@ impl From<TMR2_MUX_A> for u8 {
 impl crate::FieldSpec for TMR2_MUX_A {
     type Ux = u8;
 }
+#[doc = "Field `TMR2_MUX` reader - TMR2 muxing"]
+pub type TMR2_MUX_R = crate::FieldReader<TMR2_MUX_A>;
 impl TMR2_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -328,8 +328,6 @@ where
         self.variant(TMR2_MUX_A::Mux3)
     }
 }
-#[doc = "Field `TMR3_MUX` reader - TMR3 muxing"]
-pub type TMR3_MUX_R = crate::FieldReader<TMR3_MUX_A>;
 #[doc = "TMR3 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -350,6 +348,8 @@ impl From<TMR3_MUX_A> for u8 {
 impl crate::FieldSpec for TMR3_MUX_A {
     type Ux = u8;
 }
+#[doc = "Field `TMR3_MUX` reader - TMR3 muxing"]
+pub type TMR3_MUX_R = crate::FieldReader<TMR3_MUX_A>;
 impl TMR3_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -400,8 +400,6 @@ where
         self.variant(TMR3_MUX_A::Mux3)
     }
 }
-#[doc = "Field `CAN_MUX` reader - CAN1 muxing"]
-pub type CAN_MUX_R = crate::FieldReader<CAN_MUX_A>;
 #[doc = "CAN1 muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -420,6 +418,8 @@ impl From<CAN_MUX_A> for u8 {
 impl crate::FieldSpec for CAN_MUX_A {
     type Ux = u8;
 }
+#[doc = "Field `CAN_MUX` reader - CAN1 muxing"]
+pub type CAN_MUX_R = crate::FieldReader<CAN_MUX_A>;
 impl CAN_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -459,8 +459,6 @@ where
         self.variant(CAN_MUX_A::Mux2)
     }
 }
-#[doc = "Field `PD01_MUX` reader - PD0/PD1 muxing on OSCIN/OSCOUT"]
-pub type PD01_MUX_R = crate::BitReader<PD01_MUX_A>;
 #[doc = "PD0/PD1 muxing on OSCIN/OSCOUT\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PD01_MUX_A {
@@ -475,6 +473,8 @@ impl From<PD01_MUX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `PD01_MUX` reader - PD0/PD1 muxing on OSCIN/OSCOUT"]
+pub type PD01_MUX_R = crate::BitReader<PD01_MUX_A>;
 impl PD01_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -512,8 +512,6 @@ where
         self.variant(PD01_MUX_A::Hext)
     }
 }
-#[doc = "Field `TMR5CH4_MUX` reader - TMR5 channel4 internal muxing"]
-pub type TMR5CH4_MUX_R = crate::BitReader<TMR5CH4_MUX_A>;
 #[doc = "TMR5 channel4 internal muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TMR5CH4_MUX_A {
@@ -528,6 +526,8 @@ impl From<TMR5CH4_MUX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TMR5CH4_MUX` reader - TMR5 channel4 internal muxing"]
+pub type TMR5CH4_MUX_R = crate::BitReader<TMR5CH4_MUX_A>;
 impl TMR5CH4_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -565,8 +565,6 @@ where
         self.variant(TMR5CH4_MUX_A::Lick)
     }
 }
-#[doc = "Field `ADC1_ETP_MUX` reader - ADC1 external trigger preempted conversion muxing"]
-pub type ADC1_ETP_MUX_R = crate::BitReader<ADC1_ETP_MUX_A>;
 #[doc = "ADC1 external trigger preempted conversion muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ADC1_ETP_MUX_A {
@@ -581,6 +579,8 @@ impl From<ADC1_ETP_MUX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ADC1_ETP_MUX` reader - ADC1 external trigger preempted conversion muxing"]
+pub type ADC1_ETP_MUX_R = crate::BitReader<ADC1_ETP_MUX_A>;
 impl ADC1_ETP_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -618,8 +618,6 @@ where
         self.variant(ADC1_ETP_MUX_A::Tmr1ch4)
     }
 }
-#[doc = "Field `ADC1_ETO_MUX` reader - ADC1 external trigger ordinary conversion muxing"]
-pub type ADC1_ETO_MUX_R = crate::BitReader<ADC1_ETO_MUX_A>;
 #[doc = "ADC1 external trigger ordinary conversion muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ADC1_ETO_MUX_A {
@@ -634,6 +632,8 @@ impl From<ADC1_ETO_MUX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ADC1_ETO_MUX` reader - ADC1 external trigger ordinary conversion muxing"]
+pub type ADC1_ETO_MUX_R = crate::BitReader<ADC1_ETO_MUX_A>;
 impl ADC1_ETO_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -671,8 +671,6 @@ where
         self.variant(ADC1_ETO_MUX_A::Tmr1Trgo)
     }
 }
-#[doc = "Field `SWJTAG_MUX` reader - SWD JTAG muxing"]
-pub type SWJTAG_MUX_R = crate::FieldReader<SWJTAG_MUX_A>;
 #[doc = "SWD JTAG muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -695,6 +693,8 @@ impl From<SWJTAG_MUX_A> for u8 {
 impl crate::FieldSpec for SWJTAG_MUX_A {
     type Ux = u8;
 }
+#[doc = "Field `SWJTAG_MUX` reader - SWD JTAG muxing"]
+pub type SWJTAG_MUX_R = crate::FieldReader<SWJTAG_MUX_A>;
 impl SWJTAG_MUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -756,8 +756,6 @@ where
         self.variant(SWJTAG_MUX_A::Disable)
     }
 }
-#[doc = "Field `SPI1_MUX1` reader - SPI1 muxing bit1"]
-pub type SPI1_MUX1_R = crate::BitReader<SPI1_MUX1_A>;
 #[doc = "SPI1 muxing bit1\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SPI1_MUX1_A {
@@ -772,6 +770,8 @@ impl From<SPI1_MUX1_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `SPI1_MUX1` reader - SPI1 muxing bit1"]
+pub type SPI1_MUX1_R = crate::BitReader<SPI1_MUX1_A>;
 impl SPI1_MUX1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -909,7 +909,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<REMAP_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -997,16 +997,6 @@ impl W {
     pub fn spi1_mux1(&mut self) -> SPI1_MUX1_W<REMAP_SPEC> {
         SPI1_MUX1_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "IO MUX remap register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP_SPEC;
@@ -1017,10 +1007,11 @@ impl crate::RegisterSpec for REMAP_SPEC {
 impl crate::Readable for REMAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap::W`](W) writer structure"]
 impl crate::Writable for REMAP_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP to value 0"]
 impl crate::Resettable for REMAP_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

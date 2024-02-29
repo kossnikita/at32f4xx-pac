@@ -10,8 +10,6 @@ pub type SU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 pub type ST_R = crate::FieldReader;
 #[doc = "Field `ST` writer - Second tens"]
 pub type ST_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
-#[doc = "Field `MASK1` reader - Seconds mask"]
-pub type MASK1_R = crate::BitReader<MASK1_A>;
 #[doc = "Seconds mask\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MASK1_A {
@@ -26,6 +24,8 @@ impl From<MASK1_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `MASK1` reader - Seconds mask"]
+pub type MASK1_R = crate::BitReader<MASK1_A>;
 impl MASK1_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -71,8 +71,6 @@ pub type MU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 pub type MT_R = crate::FieldReader;
 #[doc = "Field `MT` writer - Minute tens"]
 pub type MT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
-#[doc = "Field `MASK2` reader - Minutes mask"]
-pub type MASK2_R = crate::BitReader<MASK2_A>;
 #[doc = "Minutes mask\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MASK2_A {
@@ -87,6 +85,8 @@ impl From<MASK2_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `MASK2` reader - Minutes mask"]
+pub type MASK2_R = crate::BitReader<MASK2_A>;
 impl MASK2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -132,8 +132,6 @@ pub type HU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 pub type HT_R = crate::FieldReader;
 #[doc = "Field `HT` writer - Hour tens"]
 pub type HT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
-#[doc = "Field `AMPM` reader - AM/PM"]
-pub type AMPM_R = crate::BitReader<AMPM_A>;
 #[doc = "AM/PM\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum AMPM_A {
@@ -148,6 +146,8 @@ impl From<AMPM_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `AMPM` reader - AM/PM"]
+pub type AMPM_R = crate::BitReader<AMPM_A>;
 impl AMPM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -185,8 +185,6 @@ where
         self.variant(AMPM_A::Pm)
     }
 }
-#[doc = "Field `MASK3` reader - Hours mask"]
-pub type MASK3_R = crate::BitReader<MASK3_A>;
 #[doc = "Hours mask\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MASK3_A {
@@ -201,6 +199,8 @@ impl From<MASK3_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `MASK3` reader - Hours mask"]
+pub type MASK3_R = crate::BitReader<MASK3_A>;
 impl MASK3_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -246,8 +246,6 @@ pub type DU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 pub type DT_R = crate::FieldReader;
 #[doc = "Field `DT` writer - Date tens"]
 pub type DT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
-#[doc = "Field `WKSEL` reader - Date/week mode select"]
-pub type WKSEL_R = crate::BitReader<WKSEL_A>;
 #[doc = "Date/week mode select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WKSEL_A {
@@ -262,6 +260,8 @@ impl From<WKSEL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `WKSEL` reader - Date/week mode select"]
+pub type WKSEL_R = crate::BitReader<WKSEL_A>;
 impl WKSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -299,8 +299,6 @@ where
         self.variant(WKSEL_A::WeekDay)
     }
 }
-#[doc = "Field `MASK4` reader - Date/week mask"]
-pub type MASK4_R = crate::BitReader<MASK4_A>;
 #[doc = "Date/week mask\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MASK4_A {
@@ -315,6 +313,8 @@ impl From<MASK4_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `MASK4` reader - Date/week mask"]
+pub type MASK4_R = crate::BitReader<MASK4_A>;
 impl MASK4_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -446,7 +446,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<ALA_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -534,16 +534,6 @@ impl W {
     pub fn mask4(&mut self) -> MASK4_W<ALA_SPEC> {
         MASK4_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Alarm A register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ala::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ala::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ALA_SPEC;
@@ -554,10 +544,11 @@ impl crate::RegisterSpec for ALA_SPEC {
 impl crate::Readable for ALA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ala::W`](W) writer structure"]
 impl crate::Writable for ALA_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ALA to value 0"]
 impl crate::Resettable for ALA_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

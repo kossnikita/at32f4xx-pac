@@ -2,8 +2,6 @@
 pub type R = crate::R<CM1_INPUT_SPEC>;
 #[doc = "Register `CM1_INPUT` writer"]
 pub type W = crate::W<CM1_INPUT_SPEC>;
-#[doc = "Field `C1C` reader - Channel 1 configure"]
-pub type C1C_R = crate::FieldReader<C1C_A>;
 #[doc = "Channel 1 configure\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -22,6 +20,8 @@ impl From<C1C_A> for u8 {
 impl crate::FieldSpec for C1C_A {
     type Ux = u8;
 }
+#[doc = "Field `C1C` reader - Channel 1 configure"]
+pub type C1C_R = crate::FieldReader<C1C_A>;
 impl C1C_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -61,8 +61,6 @@ where
         self.variant(C1C_A::Input)
     }
 }
-#[doc = "Field `CIDIV[1-1]` reader - Channel %s input divider"]
-pub type CIDIV_R = crate::FieldReader<C1IDIV_A>;
 #[doc = "Channel %s input divider\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -85,6 +83,8 @@ impl From<C1IDIV_A> for u8 {
 impl crate::FieldSpec for C1IDIV_A {
     type Ux = u8;
 }
+#[doc = "Field `CIDIV(1-1)` reader - Channel %s input divider"]
+pub type CIDIV_R = crate::FieldReader<C1IDIV_A>;
 impl CIDIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -118,7 +118,7 @@ impl CIDIV_R {
         *self == C1IDIV_A::Div8
     }
 }
-#[doc = "Field `CIDIV[1-1]` writer - Channel %s input divider"]
+#[doc = "Field `CIDIV(1-1)` writer - Channel %s input divider"]
 pub type CIDIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C1IDIV_A>;
 impl<'a, REG> CIDIV_W<'a, REG>
 where
@@ -146,9 +146,9 @@ where
         self.variant(C1IDIV_A::Div8)
     }
 }
-#[doc = "Field `CDF[1-1]` reader - Channel %s digital filter"]
+#[doc = "Field `CDF(1-1)` reader - Channel %s digital filter"]
 pub type CDF_R = crate::FieldReader;
-#[doc = "Field `CDF[1-1]` writer - Channel %s digital filter"]
+#[doc = "Field `CDF(1-1)` writer - Channel %s digital filter"]
 pub type CDF_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:1 - Channel 1 configure"]
@@ -156,24 +156,40 @@ impl R {
     pub fn c1c(&self) -> C1C_R {
         C1C_R::new((self.bits & 3) as u8)
     }
-    #[doc = "Channel [1-1]
-input divider\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (1-1) input divider"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IDIV` field"]
     #[inline(always)]
     pub fn cidiv(&self, n: u8) -> CIDIV_R {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         CIDIV_R::new(((self.bits >> (n * 0 + 2)) & 3) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (1-1) input divider"]
+    #[inline(always)]
+    pub fn cidiv_iter(&self) -> impl Iterator<Item = CIDIV_R> + '_ {
+        (0..1).map(move |n| CIDIV_R::new(((self.bits >> (n * 0 + 2)) & 3) as u8))
     }
     #[doc = "Bits 2:3 - Channel 1 input divider"]
     #[inline(always)]
     pub fn c1idiv(&self) -> CIDIV_R {
         CIDIV_R::new(((self.bits >> 2) & 3) as u8)
     }
-    #[doc = "Channel [1-1]
-digital filter\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (1-1) digital filter"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1DF` field"]
     #[inline(always)]
     pub fn cdf(&self, n: u8) -> CDF_R {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         CDF_R::new(((self.bits >> (n * 0 + 4)) & 0x0f) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (1-1) digital filter"]
+    #[inline(always)]
+    pub fn cdf_iter(&self) -> impl Iterator<Item = CDF_R> + '_ {
+        (0..1).map(move |n| CDF_R::new(((self.bits >> (n * 0 + 4)) & 0x0f) as u8))
     }
     #[doc = "Bits 4:7 - Channel 1 digital filter"]
     #[inline(always)]
@@ -192,7 +208,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CM1_INPUT_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -202,12 +218,14 @@ impl W {
     pub fn c1c(&mut self) -> C1C_W<CM1_INPUT_SPEC> {
         C1C_W::new(self, 0)
     }
-    #[doc = "Channel [1-1]
-input divider"]
+    #[doc = "Channel (1-1) input divider"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IDIV` field"]
     #[inline(always)]
     #[must_use]
     pub fn cidiv(&mut self, n: u8) -> CIDIV_W<CM1_INPUT_SPEC> {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         CIDIV_W::new(self, n * 0 + 2)
     }
     #[doc = "Bits 2:3 - Channel 1 input divider"]
@@ -216,12 +234,14 @@ input divider"]
     pub fn c1idiv(&mut self) -> CIDIV_W<CM1_INPUT_SPEC> {
         CIDIV_W::new(self, 2)
     }
-    #[doc = "Channel [1-1]
-digital filter"]
+    #[doc = "Channel (1-1) digital filter"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1DF` field"]
     #[inline(always)]
     #[must_use]
     pub fn cdf(&mut self, n: u8) -> CDF_W<CM1_INPUT_SPEC> {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         CDF_W::new(self, n * 0 + 4)
     }
     #[doc = "Bits 4:7 - Channel 1 digital filter"]
@@ -229,16 +249,6 @@ digital filter"]
     #[must_use]
     pub fn c1df(&mut self) -> CDF_W<CM1_INPUT_SPEC> {
         CDF_W::new(self, 4)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
     }
 }
 #[doc = "Channel input mode register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cm1_input::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cm1_input::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -250,10 +260,11 @@ impl crate::RegisterSpec for CM1_INPUT_SPEC {
 impl crate::Readable for CM1_INPUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cm1_input::W`](W) writer structure"]
 impl crate::Writable for CM1_INPUT_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CM1_INPUT to value 0"]
 impl crate::Resettable for CM1_INPUT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

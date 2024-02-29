@@ -2,8 +2,6 @@
 pub type R = crate::R<REMAP7_SPEC>;
 #[doc = "Register `REMAP7` writer"]
 pub type W = crate::W<REMAP7_SPEC>;
-#[doc = "Field `ADC1_ETP_GMUX` reader - ADC1 external trigger preempted conversion muxing"]
-pub type ADC1_ETP_GMUX_R = crate::BitReader<ADC1_ETP_GMUX_A>;
 #[doc = "ADC1 external trigger preempted conversion muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ADC1_ETP_GMUX_A {
@@ -18,6 +16,8 @@ impl From<ADC1_ETP_GMUX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ADC1_ETP_GMUX` reader - ADC1 external trigger preempted conversion muxing"]
+pub type ADC1_ETP_GMUX_R = crate::BitReader<ADC1_ETP_GMUX_A>;
 impl ADC1_ETP_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -55,8 +55,6 @@ where
         self.variant(ADC1_ETP_GMUX_A::Tmr1ch4)
     }
 }
-#[doc = "Field `ADC1_ETO_GMUX` reader - ADC1 external trigger ordinary conversion muxing"]
-pub type ADC1_ETO_GMUX_R = crate::BitReader<ADC1_ETO_GMUX_A>;
 #[doc = "ADC1 external trigger ordinary conversion muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ADC1_ETO_GMUX_A {
@@ -71,6 +69,8 @@ impl From<ADC1_ETO_GMUX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ADC1_ETO_GMUX` reader - ADC1 external trigger ordinary conversion muxing"]
+pub type ADC1_ETO_GMUX_R = crate::BitReader<ADC1_ETO_GMUX_A>;
 impl ADC1_ETO_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -108,8 +108,6 @@ where
         self.variant(ADC1_ETO_GMUX_A::Tmr1Trgo)
     }
 }
-#[doc = "Field `SWJTAG_GMUX` reader - Serial wire JTAG muxing"]
-pub type SWJTAG_GMUX_R = crate::FieldReader<SWJTAG_GMUX_A>;
 #[doc = "Serial wire JTAG muxing\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -132,6 +130,8 @@ impl From<SWJTAG_GMUX_A> for u8 {
 impl crate::FieldSpec for SWJTAG_GMUX_A {
     type Ux = u8;
 }
+#[doc = "Field `SWJTAG_GMUX` reader - Serial wire JTAG muxing"]
+pub type SWJTAG_GMUX_R = crate::FieldReader<SWJTAG_GMUX_A>;
 impl SWJTAG_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -193,8 +193,6 @@ where
         self.variant(SWJTAG_GMUX_A::Disable)
     }
 }
-#[doc = "Field `PD01_GMUX` reader - PortD0/PortD1 muxing on OSC_IN/OSC_OUT"]
-pub type PD01_GMUX_R = crate::BitReader<PD01_GMUX_A>;
 #[doc = "PortD0/PortD1 muxing on OSC_IN/OSC_OUT\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PD01_GMUX_A {
@@ -209,6 +207,8 @@ impl From<PD01_GMUX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `PD01_GMUX` reader - PortD0/PortD1 muxing on OSC_IN/OSC_OUT"]
+pub type PD01_GMUX_R = crate::BitReader<PD01_GMUX_A>;
 impl PD01_GMUX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -289,7 +289,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<REMAP7_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -317,16 +317,6 @@ impl W {
     pub fn pd01_gmux(&mut self) -> PD01_GMUX_W<REMAP7_SPEC> {
         PD01_GMUX_W::new(self, 20)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "IO MUX remap register 7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP7_SPEC;
@@ -337,10 +327,11 @@ impl crate::RegisterSpec for REMAP7_SPEC {
 impl crate::Readable for REMAP7_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap7::W`](W) writer structure"]
 impl crate::Writable for REMAP7_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP7 to value 0"]
 impl crate::Resettable for REMAP7_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

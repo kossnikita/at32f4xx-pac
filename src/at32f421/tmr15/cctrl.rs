@@ -2,58 +2,58 @@
 pub type R = crate::R<CCTRL_SPEC>;
 #[doc = "Register `CCTRL` writer"]
 pub type W = crate::W<CCTRL_SPEC>;
-#[doc = "Field `CEN[1-2]` reader - Channel %s enable"]
-pub type CEN_R = crate::BitReader<C1ENR_A>;
 #[doc = "Channel %s enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum C1ENR_A {
+pub enum C1enr {
     #[doc = "0: Channel is disabled"]
     Disabled = 0,
     #[doc = "1: Channel is enabled"]
     Enabled = 1,
 }
-impl From<C1ENR_A> for bool {
+impl From<C1enr> for bool {
     #[inline(always)]
-    fn from(variant: C1ENR_A) -> Self {
+    fn from(variant: C1enr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CEN(1-2)` reader - Channel %s enable"]
+pub type CEN_R = crate::BitReader<C1enr>;
 impl CEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> C1ENR_A {
+    pub const fn variant(&self) -> C1enr {
         match self.bits {
-            false => C1ENR_A::Disabled,
-            true => C1ENR_A::Enabled,
+            false => C1enr::Disabled,
+            true => C1enr::Enabled,
         }
     }
     #[doc = "Channel is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == C1ENR_A::Disabled
+        *self == C1enr::Disabled
     }
     #[doc = "Channel is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == C1ENR_A::Enabled
+        *self == C1enr::Enabled
     }
 }
 #[doc = "Channel %s enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum C1ENW_AW {
+pub enum C1enwWO {
     #[doc = "0: Channel disable"]
     Disable = 0,
     #[doc = "1: Channel enable"]
     Enable = 1,
 }
-impl From<C1ENW_AW> for bool {
+impl From<C1enwWO> for bool {
     #[inline(always)]
-    fn from(variant: C1ENW_AW) -> Self {
+    fn from(variant: C1enwWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CEN[1-2]` writer - Channel %s enable"]
-pub type CEN_W<'a, REG> = crate::BitWriter<'a, REG, C1ENW_AW>;
+#[doc = "Field `CEN(1-2)` writer - Channel %s enable"]
+pub type CEN_W<'a, REG> = crate::BitWriter<'a, REG, C1enwWO>;
 impl<'a, REG> CEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,16 +61,14 @@ where
     #[doc = "Channel disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(C1ENW_AW::Disable)
+        self.variant(C1enwWO::Disable)
     }
     #[doc = "Channel enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(C1ENW_AW::Enable)
+        self.variant(C1enwWO::Enable)
     }
 }
-#[doc = "Field `CP[1-2]` reader - Channel %s polarity"]
-pub type CP_R = crate::BitReader<C1P_A>;
 #[doc = "Channel %s polarity\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum C1P_A {
@@ -85,6 +83,8 @@ impl From<C1P_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CP(1-2)` reader - Channel %s polarity"]
+pub type CP_R = crate::BitReader<C1P_A>;
 impl CP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -105,7 +105,7 @@ impl CP_R {
         *self == C1P_A::Low
     }
 }
-#[doc = "Field `CP[1-2]` writer - Channel %s polarity"]
+#[doc = "Field `CP(1-2)` writer - Channel %s polarity"]
 pub type CP_W<'a, REG> = crate::BitWriter<'a, REG, C1P_A>;
 impl<'a, REG> CP_W<'a, REG>
 where
@@ -126,17 +126,25 @@ where
 pub type C1CEN_R = crate::BitReader;
 #[doc = "Field `C1CEN` writer - Channel 1 complementary enable"]
 pub type C1CEN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CCP[1-1]` reader - Channel %s complementary polarity"]
+#[doc = "Field `CCP(1-1)` reader - Channel %s complementary polarity"]
 pub use CP_R as CCP_R;
-#[doc = "Field `CCP[1-1]` writer - Channel %s complementary polarity"]
+#[doc = "Field `CCP(1-1)` writer - Channel %s complementary polarity"]
 pub use CP_W as CCP_W;
 impl R {
-    #[doc = "Channel [1-2]
-enable\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (1-2) enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1EN` field"]
     #[inline(always)]
     pub fn cen(&self, n: u8) -> CEN_R {
-        assert!(n < 2);
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CEN_R::new(((self.bits >> (n * 4)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (1-2) enable"]
+    #[inline(always)]
+    pub fn cen_iter(&self) -> impl Iterator<Item = CEN_R> + '_ {
+        (0..2).map(move |n| CEN_R::new(((self.bits >> (n * 4)) & 1) != 0))
     }
     #[doc = "Bit 0 - Channel 1 enable"]
     #[inline(always)]
@@ -148,12 +156,20 @@ enable\n\nNOTE: `n` is number of field in register starting from 0"]
     pub fn c2en(&self) -> CEN_R {
         CEN_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Channel [1-2]
-polarity\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (1-2) polarity"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1P` field"]
     #[inline(always)]
     pub fn cp(&self, n: u8) -> CP_R {
-        assert!(n < 2);
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CP_R::new(((self.bits >> (n * 4 + 1)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (1-2) polarity"]
+    #[inline(always)]
+    pub fn cp_iter(&self) -> impl Iterator<Item = CP_R> + '_ {
+        (0..2).map(move |n| CP_R::new(((self.bits >> (n * 4 + 1)) & 1) != 0))
     }
     #[doc = "Bit 1 - Channel 1 polarity"]
     #[inline(always)]
@@ -170,12 +186,20 @@ polarity\n\nNOTE: `n` is number of field in register starting from 0"]
     pub fn c1cen(&self) -> C1CEN_R {
         C1CEN_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Channel [1-1]
-complementary polarity\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Channel (1-1) complementary polarity"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1CP` field"]
     #[inline(always)]
     pub fn ccp(&self, n: u8) -> CCP_R {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         CCP_R::new(((self.bits >> (n * 0 + 3)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Channel (1-1) complementary polarity"]
+    #[inline(always)]
+    pub fn ccp_iter(&self) -> impl Iterator<Item = CCP_R> + '_ {
+        (0..1).map(move |n| CCP_R::new(((self.bits >> (n * 0 + 3)) & 1) != 0))
     }
     #[doc = "Bit 3 - Channel 1 complementary polarity"]
     #[inline(always)]
@@ -197,16 +221,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CCTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Channel [1-2]
-enable"]
+    #[doc = "Channel (1-2) enable"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1EN` field"]
     #[inline(always)]
     #[must_use]
     pub fn cen(&mut self, n: u8) -> CEN_W<CCTRL_SPEC> {
-        assert!(n < 2);
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CEN_W::new(self, n * 4)
     }
     #[doc = "Bit 0 - Channel 1 enable"]
@@ -221,12 +247,14 @@ enable"]
     pub fn c2en(&mut self) -> CEN_W<CCTRL_SPEC> {
         CEN_W::new(self, 4)
     }
-    #[doc = "Channel [1-2]
-polarity"]
+    #[doc = "Channel (1-2) polarity"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1P` field"]
     #[inline(always)]
     #[must_use]
     pub fn cp(&mut self, n: u8) -> CP_W<CCTRL_SPEC> {
-        assert!(n < 2);
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
         CP_W::new(self, n * 4 + 1)
     }
     #[doc = "Bit 1 - Channel 1 polarity"]
@@ -247,12 +275,14 @@ polarity"]
     pub fn c1cen(&mut self) -> C1CEN_W<CCTRL_SPEC> {
         C1CEN_W::new(self, 2)
     }
-    #[doc = "Channel [1-1]
-complementary polarity"]
+    #[doc = "Channel (1-1) complementary polarity"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1CP` field"]
     #[inline(always)]
     #[must_use]
     pub fn ccp(&mut self, n: u8) -> CCP_W<CCTRL_SPEC> {
-        assert!(n < 1);
+        #[allow(clippy::no_effect)]
+        [(); 1][n as usize];
         CCP_W::new(self, n * 0 + 3)
     }
     #[doc = "Bit 3 - Channel 1 complementary polarity"]
@@ -260,16 +290,6 @@ complementary polarity"]
     #[must_use]
     pub fn c1cp(&mut self) -> CCP_W<CCTRL_SPEC> {
         CCP_W::new(self, 3)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
     }
 }
 #[doc = "Channel control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -281,10 +301,11 @@ impl crate::RegisterSpec for CCTRL_SPEC {
 impl crate::Readable for CCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cctrl::W`](W) writer structure"]
 impl crate::Writable for CCTRL_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CCTRL to value 0"]
 impl crate::Resettable for CCTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

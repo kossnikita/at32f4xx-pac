@@ -2,56 +2,56 @@
 pub type R = crate::R<INTSTS_SPEC>;
 #[doc = "Register `INTSTS` writer"]
 pub type W = crate::W<INTSTS_SPEC>;
-#[doc = "Field `LINE[0-22]` reader - Line %s status bit"]
-pub type LINE_R = crate::BitReader<LINE0R_A>;
 #[doc = "Line %s status bit\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LINE0R_A {
+pub enum Line0r {
     #[doc = "0: No interrupt occurred"]
     NoInterrupt = 0,
     #[doc = "1: Interrupt occurred"]
     Interrupt = 1,
 }
-impl From<LINE0R_A> for bool {
+impl From<Line0r> for bool {
     #[inline(always)]
-    fn from(variant: LINE0R_A) -> Self {
+    fn from(variant: Line0r) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `LINE(0-22)` reader - Line %s status bit"]
+pub type LINE_R = crate::BitReader<Line0r>;
 impl LINE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> LINE0R_A {
+    pub const fn variant(&self) -> Line0r {
         match self.bits {
-            false => LINE0R_A::NoInterrupt,
-            true => LINE0R_A::Interrupt,
+            false => Line0r::NoInterrupt,
+            true => Line0r::Interrupt,
         }
     }
     #[doc = "No interrupt occurred"]
     #[inline(always)]
     pub fn is_no_interrupt(&self) -> bool {
-        *self == LINE0R_A::NoInterrupt
+        *self == Line0r::NoInterrupt
     }
     #[doc = "Interrupt occurred"]
     #[inline(always)]
     pub fn is_interrupt(&self) -> bool {
-        *self == LINE0R_A::Interrupt
+        *self == Line0r::Interrupt
     }
 }
 #[doc = "Line %s status bit\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LINE0W_AW {
+pub enum Line0wWO {
     #[doc = "1: Clear status flag"]
     Clear = 1,
 }
-impl From<LINE0W_AW> for bool {
+impl From<Line0wWO> for bool {
     #[inline(always)]
-    fn from(variant: LINE0W_AW) -> Self {
+    fn from(variant: Line0wWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `LINE[0-22]` writer - Line %s status bit"]
-pub type LINE_W<'a, REG> = crate::BitWriter1C<'a, REG, LINE0W_AW>;
+#[doc = "Field `LINE(0-22)` writer - Line %s status bit"]
+pub type LINE_W<'a, REG> = crate::BitWriter1C<'a, REG, Line0wWO>;
 impl<'a, REG> LINE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -59,16 +59,24 @@ where
     #[doc = "Clear status flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(LINE0W_AW::Clear)
+        self.variant(Line0wWO::Clear)
     }
 }
 impl R {
-    #[doc = "Line [0-22]
-status bit\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Line (0-22) status bit"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `LINE0` field"]
     #[inline(always)]
     pub fn line(&self, n: u8) -> LINE_R {
-        assert!(n < 23);
+        #[allow(clippy::no_effect)]
+        [(); 23][n as usize];
         LINE_R::new(((self.bits >> n) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Line (0-22) status bit"]
+    #[inline(always)]
+    pub fn line_iter(&self) -> impl Iterator<Item = LINE_R> + '_ {
+        (0..23).map(move |n| LINE_R::new(((self.bits >> n) & 1) != 0))
     }
     #[doc = "Bit 0 - Line 0 status bit"]
     #[inline(always)]
@@ -217,16 +225,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<INTSTS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Line [0-22]
-status bit"]
+    #[doc = "Line (0-22) status bit"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `LINE0` field"]
     #[inline(always)]
     #[must_use]
     pub fn line(&mut self, n: u8) -> LINE_W<INTSTS_SPEC> {
-        assert!(n < 23);
+        #[allow(clippy::no_effect)]
+        [(); 23][n as usize];
         LINE_W::new(self, n)
     }
     #[doc = "Bit 0 - Line 0 status bit"]
@@ -367,16 +377,6 @@ status bit"]
     pub fn line22(&mut self) -> LINE_W<INTSTS_SPEC> {
         LINE_W::new(self, 22)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTSTS_SPEC;
@@ -387,10 +387,11 @@ impl crate::RegisterSpec for INTSTS_SPEC {
 impl crate::Readable for INTSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intsts::W`](W) writer structure"]
 impl crate::Writable for INTSTS_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0x01;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
 }
 #[doc = "`reset()` method sets INTSTS to value 0"]
 impl crate::Resettable for INTSTS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

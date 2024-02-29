@@ -134,16 +134,6 @@ impl W {
     pub fn iotb15(&mut self) -> IOTB15_W<TOGR_SPEC> {
         IOTB15_W::new(self, 15)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "GPIO bit toggle register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`togr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TOGR_SPEC;
@@ -152,10 +142,11 @@ impl crate::RegisterSpec for TOGR_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`togr::W`](W) writer structure"]
 impl crate::Writable for TOGR_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TOGR to value 0"]
 impl crate::Resettable for TOGR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

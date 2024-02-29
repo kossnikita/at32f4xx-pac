@@ -26,8 +26,6 @@ pub type HU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
 pub type HT_R = crate::FieldReader;
 #[doc = "Field `HT` writer - Hour tens"]
 pub type HT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
-#[doc = "Field `AMPM` reader - AM/PM notation"]
-pub type AMPM_R = crate::BitReader<AMPM_A>;
 #[doc = "AM/PM notation\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum AMPM_A {
@@ -42,6 +40,8 @@ impl From<AMPM_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `AMPM` reader - AM/PM notation"]
+pub type AMPM_R = crate::BitReader<AMPM_A>;
 impl AMPM_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -131,7 +131,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<TIME_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -177,16 +177,6 @@ impl W {
     pub fn ampm(&mut self) -> AMPM_W<TIME_SPEC> {
         AMPM_W::new(self, 22)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "time register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`time::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIME_SPEC;
@@ -197,10 +187,11 @@ impl crate::RegisterSpec for TIME_SPEC {
 impl crate::Readable for TIME_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`time::W`](W) writer structure"]
 impl crate::Writable for TIME_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIME to value 0"]
 impl crate::Resettable for TIME_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

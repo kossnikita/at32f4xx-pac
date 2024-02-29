@@ -6,8 +6,6 @@ pub type W = crate::W<CFG_SPEC>;
 pub type WIN_R = crate::FieldReader;
 #[doc = "Field `WIN` writer - Window value"]
 pub type WIN_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
-#[doc = "Field `DIV` reader - Clock division value"]
-pub type DIV_R = crate::FieldReader<DIV_A>;
 #[doc = "Clock division value\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -30,6 +28,8 @@ impl From<DIV_A> for u8 {
 impl crate::FieldSpec for DIV_A {
     type Ux = u8;
 }
+#[doc = "Field `DIV` reader - Clock division value"]
+pub type DIV_R = crate::FieldReader<DIV_A>;
 impl DIV_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -91,58 +91,58 @@ where
         self.variant(DIV_A::Div32768)
     }
 }
-#[doc = "Field `RLDIEN` reader - Reload counter interrupt"]
-pub type RLDIEN_R = crate::BitReader<RLDIENR_A>;
 #[doc = "Reload counter interrupt\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RLDIENR_A {
+pub enum Rldienr {
     #[doc = "0: Disabled"]
     Disabled = 0,
     #[doc = "1: Enabled"]
     Enabled = 1,
 }
-impl From<RLDIENR_A> for bool {
+impl From<Rldienr> for bool {
     #[inline(always)]
-    fn from(variant: RLDIENR_A) -> Self {
+    fn from(variant: Rldienr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RLDIEN` reader - Reload counter interrupt"]
+pub type RLDIEN_R = crate::BitReader<Rldienr>;
 impl RLDIEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RLDIENR_A {
+    pub const fn variant(&self) -> Rldienr {
         match self.bits {
-            false => RLDIENR_A::Disabled,
-            true => RLDIENR_A::Enabled,
+            false => Rldienr::Disabled,
+            true => Rldienr::Enabled,
         }
     }
     #[doc = "Disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == RLDIENR_A::Disabled
+        *self == Rldienr::Disabled
     }
     #[doc = "Enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == RLDIENR_A::Enabled
+        *self == Rldienr::Enabled
     }
 }
 #[doc = "Reload counter interrupt\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RLDIENW_AW {
+pub enum RldienwWO {
     #[doc = "0: Disable"]
     Disable = 0,
     #[doc = "1: Enable"]
     Enable = 1,
 }
-impl From<RLDIENW_AW> for bool {
+impl From<RldienwWO> for bool {
     #[inline(always)]
-    fn from(variant: RLDIENW_AW) -> Self {
+    fn from(variant: RldienwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RLDIEN` writer - Reload counter interrupt"]
-pub type RLDIEN_W<'a, REG> = crate::BitWriter<'a, REG, RLDIENW_AW>;
+pub type RLDIEN_W<'a, REG> = crate::BitWriter<'a, REG, RldienwWO>;
 impl<'a, REG> RLDIEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -150,12 +150,12 @@ where
     #[doc = "Disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(RLDIENW_AW::Disable)
+        self.variant(RldienwWO::Disable)
     }
     #[doc = "Enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(RLDIENW_AW::Enable)
+        self.variant(RldienwWO::Enable)
     }
 }
 impl R {
@@ -186,7 +186,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CFG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -208,16 +208,6 @@ impl W {
     pub fn rldien(&mut self) -> RLDIEN_W<CFG_SPEC> {
         RLDIEN_W::new(self, 9)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG_SPEC;
@@ -228,10 +218,11 @@ impl crate::RegisterSpec for CFG_SPEC {
 impl crate::Readable for CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg::W`](W) writer structure"]
 impl crate::Writable for CFG_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG to value 0x7f"]
 impl crate::Resettable for CFG_SPEC {
-    const RESET_VALUE: Self::Ux = 0x7f;
+    const RESET_VALUE: u32 = 0x7f;
 }

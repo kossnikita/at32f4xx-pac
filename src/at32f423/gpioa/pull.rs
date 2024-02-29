@@ -2,8 +2,6 @@
 pub type R = crate::R<PULL_SPEC>;
 #[doc = "Register `PULL` writer"]
 pub type W = crate::W<PULL_SPEC>;
-#[doc = "Field `PULL[0-15]` reader - GPIOx pin %s pull configuration"]
-pub type PULL_R = crate::FieldReader<PULL0_A>;
 #[doc = "GPIOx pin %s pull configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -24,6 +22,8 @@ impl From<PULL0_A> for u8 {
 impl crate::FieldSpec for PULL0_A {
     type Ux = u8;
 }
+#[doc = "Field `PULL(0-15)` reader - GPIOx pin %s pull configuration"]
+pub type PULL_R = crate::FieldReader<PULL0_A>;
 impl PULL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -51,7 +51,7 @@ impl PULL_R {
         *self == PULL0_A::PullDown
     }
 }
-#[doc = "Field `PULL[0-15]` writer - GPIOx pin %s pull configuration"]
+#[doc = "Field `PULL(0-15)` writer - GPIOx pin %s pull configuration"]
 pub type PULL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, PULL0_A>;
 impl<'a, REG> PULL_W<'a, REG>
 where
@@ -75,12 +75,20 @@ where
     }
 }
 impl R {
-    #[doc = "GPIOx pin [0-15]
-pull configuration\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "GPIOx pin (0-15) pull configuration"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `PULL0` field"]
     #[inline(always)]
     pub fn pull(&self, n: u8) -> PULL_R {
-        assert!(n < 16);
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         PULL_R::new(((self.bits >> (n * 2)) & 3) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "GPIOx pin (0-15) pull configuration"]
+    #[inline(always)]
+    pub fn pull_iter(&self) -> impl Iterator<Item = PULL_R> + '_ {
+        (0..16).map(move |n| PULL_R::new(((self.bits >> (n * 2)) & 3) as u8))
     }
     #[doc = "Bits 0:1 - GPIOx pin 0 pull configuration"]
     #[inline(always)]
@@ -187,16 +195,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<PULL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "GPIOx pin [0-15]
-pull configuration"]
+    #[doc = "GPIOx pin (0-15) pull configuration"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `PULL0` field"]
     #[inline(always)]
     #[must_use]
     pub fn pull(&mut self, n: u8) -> PULL_W<PULL_SPEC> {
-        assert!(n < 16);
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         PULL_W::new(self, n * 2)
     }
     #[doc = "Bits 0:1 - GPIOx pin 0 pull configuration"]
@@ -295,16 +305,6 @@ pull configuration"]
     pub fn pull15(&mut self) -> PULL_W<PULL_SPEC> {
         PULL_W::new(self, 30)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "GPIO pull-up/pull-down register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pull::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pull::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PULL_SPEC;
@@ -315,10 +315,11 @@ impl crate::RegisterSpec for PULL_SPEC {
 impl crate::Readable for PULL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pull::W`](W) writer structure"]
 impl crate::Writable for PULL_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PULL to value 0"]
 impl crate::Resettable for PULL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

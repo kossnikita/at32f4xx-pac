@@ -2,56 +2,56 @@
 pub type R = crate::R<STS_SPEC>;
 #[doc = "Register `STS` writer"]
 pub type W = crate::W<STS_SPEC>;
-#[doc = "Field `RLDF` reader - Reload counter interrupt flag"]
-pub type RLDF_R = crate::BitReader<RLDFR_A>;
 #[doc = "Reload counter interrupt flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RLDFR_A {
+pub enum Rldfr {
     #[doc = "0: Downcounter doesn't reached 0x40"]
     NotReached = 0,
     #[doc = "1: Downcounter reached 0x40"]
     Reached = 1,
 }
-impl From<RLDFR_A> for bool {
+impl From<Rldfr> for bool {
     #[inline(always)]
-    fn from(variant: RLDFR_A) -> Self {
+    fn from(variant: Rldfr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RLDF` reader - Reload counter interrupt flag"]
+pub type RLDF_R = crate::BitReader<Rldfr>;
 impl RLDF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RLDFR_A {
+    pub const fn variant(&self) -> Rldfr {
         match self.bits {
-            false => RLDFR_A::NotReached,
-            true => RLDFR_A::Reached,
+            false => Rldfr::NotReached,
+            true => Rldfr::Reached,
         }
     }
     #[doc = "Downcounter doesn't reached 0x40"]
     #[inline(always)]
     pub fn is_not_reached(&self) -> bool {
-        *self == RLDFR_A::NotReached
+        *self == Rldfr::NotReached
     }
     #[doc = "Downcounter reached 0x40"]
     #[inline(always)]
     pub fn is_reached(&self) -> bool {
-        *self == RLDFR_A::Reached
+        *self == Rldfr::Reached
     }
 }
 #[doc = "Reload counter interrupt flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RLDFW_AW {
+pub enum RldfwWO {
     #[doc = "0: Clear flag"]
     Clear = 0,
 }
-impl From<RLDFW_AW> for bool {
+impl From<RldfwWO> for bool {
     #[inline(always)]
-    fn from(variant: RLDFW_AW) -> Self {
+    fn from(variant: RldfwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RLDF` writer - Reload counter interrupt flag"]
-pub type RLDF_W<'a, REG> = crate::BitWriter0C<'a, REG, RLDFW_AW>;
+pub type RLDF_W<'a, REG> = crate::BitWriter0C<'a, REG, RldfwWO>;
 impl<'a, REG> RLDF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -59,7 +59,7 @@ where
     #[doc = "Clear flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(RLDFW_AW::Clear)
+        self.variant(RldfwWO::Clear)
     }
 }
 impl R {
@@ -78,7 +78,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -87,16 +87,6 @@ impl W {
     #[must_use]
     pub fn rldf(&mut self) -> RLDF_W<STS_SPEC> {
         RLDF_W::new(self, 0)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
     }
 }
 #[doc = "Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -108,10 +98,11 @@ impl crate::RegisterSpec for STS_SPEC {
 impl crate::Readable for STS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts::W`](W) writer structure"]
 impl crate::Writable for STS_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0x01;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0"]
 impl crate::Resettable for STS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -37,9 +37,10 @@ CAN?:
       description: "Filter Bank %s"
       F?FB1,F??FB1:
         name: FFB1
-        description: "CAN filter bank filter bit register"
+        description: "CAN filter bank filter bit register 1"
       F?FB2,F??FB2:
         name: FFB2
+        description: "CAN filter bank filter bit register 2"
 
   _clusters:
     Mailbox%s:
@@ -197,7 +198,8 @@ CAN?:
       High: [1, "High"]
   TSTS:
     _array:
-      TM?TCF: {}
+      TM?TCF:
+        description: Transmit mailbox %s transmission complete flag
       TM?TSF: {}
       TM?ALF: {}
       TM?TEF: {}

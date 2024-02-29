@@ -2,8 +2,6 @@
 pub type R = crate::R<CFGR_SPEC>;
 #[doc = "Register `CFGR` writer"]
 pub type W = crate::W<CFGR_SPEC>;
-#[doc = "Field `IOMC[0-15]` reader - GPIOx pin %s mode configurate"]
-pub type IOMC_R = crate::FieldReader<IOMC0_A>;
 #[doc = "GPIOx pin %s mode configurate\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -26,6 +24,8 @@ impl From<IOMC0_A> for u8 {
 impl crate::FieldSpec for IOMC0_A {
     type Ux = u8;
 }
+#[doc = "Field `IOMC(0-15)` reader - GPIOx pin %s mode configurate"]
+pub type IOMC_R = crate::FieldReader<IOMC0_A>;
 impl IOMC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -59,7 +59,7 @@ impl IOMC_R {
         *self == IOMC0_A::Analog
     }
 }
-#[doc = "Field `IOMC[0-15]` writer - GPIOx pin %s mode configurate"]
+#[doc = "Field `IOMC(0-15)` writer - GPIOx pin %s mode configurate"]
 pub type IOMC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, IOMC0_A>;
 impl<'a, REG> IOMC_W<'a, REG>
 where
@@ -88,12 +88,20 @@ where
     }
 }
 impl R {
-    #[doc = "GPIOx pin [0-15]
-mode configurate\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "GPIOx pin (0-15) mode configurate"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOMC0` field"]
     #[inline(always)]
     pub fn iomc(&self, n: u8) -> IOMC_R {
-        assert!(n < 16);
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         IOMC_R::new(((self.bits >> (n * 2)) & 3) as u8)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "GPIOx pin (0-15) mode configurate"]
+    #[inline(always)]
+    pub fn iomc_iter(&self) -> impl Iterator<Item = IOMC_R> + '_ {
+        (0..16).map(move |n| IOMC_R::new(((self.bits >> (n * 2)) & 3) as u8))
     }
     #[doc = "Bits 0:1 - GPIOx pin 0 mode configurate"]
     #[inline(always)]
@@ -200,16 +208,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CFGR_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "GPIOx pin [0-15]
-mode configurate"]
+    #[doc = "GPIOx pin (0-15) mode configurate"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOMC0` field"]
     #[inline(always)]
     #[must_use]
     pub fn iomc(&mut self, n: u8) -> IOMC_W<CFGR_SPEC> {
-        assert!(n < 16);
+        #[allow(clippy::no_effect)]
+        [(); 16][n as usize];
         IOMC_W::new(self, n * 2)
     }
     #[doc = "Bits 0:1 - GPIOx pin 0 mode configurate"]
@@ -308,16 +318,6 @@ mode configurate"]
     pub fn iomc15(&mut self) -> IOMC_W<CFGR_SPEC> {
         IOMC_W::new(self, 30)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "GPIO configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFGR_SPEC;
@@ -328,10 +328,11 @@ impl crate::RegisterSpec for CFGR_SPEC {
 impl crate::Readable for CFGR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfgr::W`](W) writer structure"]
 impl crate::Writable for CFGR_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFGR to value 0"]
 impl crate::Resettable for CFGR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

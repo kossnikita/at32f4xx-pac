@@ -2,56 +2,56 @@
 pub type R = crate::R<TSTS_SPEC>;
 #[doc = "Register `TSTS` writer"]
 pub type W = crate::W<TSTS_SPEC>;
-#[doc = "Field `TMTCF[0-2]` reader - Transmit mailbox %s transmission complete flag"]
-pub type TMTCF_R = crate::BitReader<TM0TCFR_A>;
 #[doc = "Transmit mailbox %s transmission complete flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0TCFR_A {
+pub enum Tm0tcfr {
     #[doc = "0: Transmission in progress"]
     InProgress = 0,
     #[doc = "1: Transmission completed"]
     Completed = 1,
 }
-impl From<TM0TCFR_A> for bool {
+impl From<Tm0tcfr> for bool {
     #[inline(always)]
-    fn from(variant: TM0TCFR_A) -> Self {
+    fn from(variant: Tm0tcfr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TMTCF(0-2)` reader - Transmit mailbox %s transmission complete flag"]
+pub type TMTCF_R = crate::BitReader<Tm0tcfr>;
 impl TMTCF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> TM0TCFR_A {
+    pub const fn variant(&self) -> Tm0tcfr {
         match self.bits {
-            false => TM0TCFR_A::InProgress,
-            true => TM0TCFR_A::Completed,
+            false => Tm0tcfr::InProgress,
+            true => Tm0tcfr::Completed,
         }
     }
     #[doc = "Transmission in progress"]
     #[inline(always)]
     pub fn is_in_progress(&self) -> bool {
-        *self == TM0TCFR_A::InProgress
+        *self == Tm0tcfr::InProgress
     }
     #[doc = "Transmission completed"]
     #[inline(always)]
     pub fn is_completed(&self) -> bool {
-        *self == TM0TCFR_A::Completed
+        *self == Tm0tcfr::Completed
     }
 }
 #[doc = "Transmit mailbox %s transmission complete flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0TCFW_AW {
+pub enum Tm0tcfwWO {
     #[doc = "1: Clear transmission completed flag"]
     Clear = 1,
 }
-impl From<TM0TCFW_AW> for bool {
+impl From<Tm0tcfwWO> for bool {
     #[inline(always)]
-    fn from(variant: TM0TCFW_AW) -> Self {
+    fn from(variant: Tm0tcfwWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TMTCF[0-2]` writer - Transmit mailbox %s transmission complete flag"]
-pub type TMTCF_W<'a, REG> = crate::BitWriter1C<'a, REG, TM0TCFW_AW>;
+#[doc = "Field `TMTCF(0-2)` writer - Transmit mailbox %s transmission complete flag"]
+pub type TMTCF_W<'a, REG> = crate::BitWriter1C<'a, REG, Tm0tcfwWO>;
 impl<'a, REG> TMTCF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -59,59 +59,59 @@ where
     #[doc = "Clear transmission completed flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(TM0TCFW_AW::Clear)
+        self.variant(Tm0tcfwWO::Clear)
     }
 }
-#[doc = "Field `TMTSF[0-2]` reader - Transmit mailbox %s transmission success flag"]
-pub type TMTSF_R = crate::BitReader<TM0TSFR_A>;
 #[doc = "Transmit mailbox %s transmission success flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0TSFR_A {
+pub enum Tm0tsfr {
     #[doc = "0: Transmission in progress"]
     Failed = 0,
     #[doc = "1: Transmission was successful"]
     Successful = 1,
 }
-impl From<TM0TSFR_A> for bool {
+impl From<Tm0tsfr> for bool {
     #[inline(always)]
-    fn from(variant: TM0TSFR_A) -> Self {
+    fn from(variant: Tm0tsfr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TMTSF(0-2)` reader - Transmit mailbox %s transmission success flag"]
+pub type TMTSF_R = crate::BitReader<Tm0tsfr>;
 impl TMTSF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> TM0TSFR_A {
+    pub const fn variant(&self) -> Tm0tsfr {
         match self.bits {
-            false => TM0TSFR_A::Failed,
-            true => TM0TSFR_A::Successful,
+            false => Tm0tsfr::Failed,
+            true => Tm0tsfr::Successful,
         }
     }
     #[doc = "Transmission in progress"]
     #[inline(always)]
     pub fn is_failed(&self) -> bool {
-        *self == TM0TSFR_A::Failed
+        *self == Tm0tsfr::Failed
     }
     #[doc = "Transmission was successful"]
     #[inline(always)]
     pub fn is_successful(&self) -> bool {
-        *self == TM0TSFR_A::Successful
+        *self == Tm0tsfr::Successful
     }
 }
 #[doc = "Transmit mailbox %s transmission success flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0TSFW_AW {
+pub enum Tm0tsfwWO {
     #[doc = "1: Clear transmission success flag"]
     Clear = 1,
 }
-impl From<TM0TSFW_AW> for bool {
+impl From<Tm0tsfwWO> for bool {
     #[inline(always)]
-    fn from(variant: TM0TSFW_AW) -> Self {
+    fn from(variant: Tm0tsfwWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TMTSF[0-2]` writer - Transmit mailbox %s transmission success flag"]
-pub type TMTSF_W<'a, REG> = crate::BitWriter1C<'a, REG, TM0TSFW_AW>;
+#[doc = "Field `TMTSF(0-2)` writer - Transmit mailbox %s transmission success flag"]
+pub type TMTSF_W<'a, REG> = crate::BitWriter1C<'a, REG, Tm0tsfwWO>;
 impl<'a, REG> TMTSF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -119,59 +119,59 @@ where
     #[doc = "Clear transmission success flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(TM0TSFW_AW::Clear)
+        self.variant(Tm0tsfwWO::Clear)
     }
 }
-#[doc = "Field `TMALF[0-2]` reader - Transmit mailbox %s arbitration lost flag"]
-pub type TMALF_R = crate::BitReader<TM0ALFR_A>;
 #[doc = "Transmit mailbox %s arbitration lost flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0ALFR_A {
+pub enum Tm0alfr {
     #[doc = "0: No arbitration lost"]
     NoLost = 0,
     #[doc = "1: Transmit mailbox arbitration lost"]
     Lost = 1,
 }
-impl From<TM0ALFR_A> for bool {
+impl From<Tm0alfr> for bool {
     #[inline(always)]
-    fn from(variant: TM0ALFR_A) -> Self {
+    fn from(variant: Tm0alfr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TMALF(0-2)` reader - Transmit mailbox %s arbitration lost flag"]
+pub type TMALF_R = crate::BitReader<Tm0alfr>;
 impl TMALF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> TM0ALFR_A {
+    pub const fn variant(&self) -> Tm0alfr {
         match self.bits {
-            false => TM0ALFR_A::NoLost,
-            true => TM0ALFR_A::Lost,
+            false => Tm0alfr::NoLost,
+            true => Tm0alfr::Lost,
         }
     }
     #[doc = "No arbitration lost"]
     #[inline(always)]
     pub fn is_no_lost(&self) -> bool {
-        *self == TM0ALFR_A::NoLost
+        *self == Tm0alfr::NoLost
     }
     #[doc = "Transmit mailbox arbitration lost"]
     #[inline(always)]
     pub fn is_lost(&self) -> bool {
-        *self == TM0ALFR_A::Lost
+        *self == Tm0alfr::Lost
     }
 }
 #[doc = "Transmit mailbox %s arbitration lost flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0ALFW_AW {
+pub enum Tm0alfwWO {
     #[doc = "1: Clear arbitration lost flag"]
     Clear = 1,
 }
-impl From<TM0ALFW_AW> for bool {
+impl From<Tm0alfwWO> for bool {
     #[inline(always)]
-    fn from(variant: TM0ALFW_AW) -> Self {
+    fn from(variant: Tm0alfwWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TMALF[0-2]` writer - Transmit mailbox %s arbitration lost flag"]
-pub type TMALF_W<'a, REG> = crate::BitWriter1C<'a, REG, TM0ALFW_AW>;
+#[doc = "Field `TMALF(0-2)` writer - Transmit mailbox %s arbitration lost flag"]
+pub type TMALF_W<'a, REG> = crate::BitWriter1C<'a, REG, Tm0alfwWO>;
 impl<'a, REG> TMALF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -179,59 +179,59 @@ where
     #[doc = "Clear arbitration lost flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(TM0ALFW_AW::Clear)
+        self.variant(Tm0alfwWO::Clear)
     }
 }
-#[doc = "Field `TMTEF[0-2]` reader - Transmit mailbox %s transmission error flag"]
-pub type TMTEF_R = crate::BitReader<TM0TEFR_A>;
 #[doc = "Transmit mailbox %s transmission error flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0TEFR_A {
+pub enum Tm0tefr {
     #[doc = "0: No error"]
     NoError = 0,
     #[doc = "1: Mailbox transmission error"]
     Error = 1,
 }
-impl From<TM0TEFR_A> for bool {
+impl From<Tm0tefr> for bool {
     #[inline(always)]
-    fn from(variant: TM0TEFR_A) -> Self {
+    fn from(variant: Tm0tefr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TMTEF(0-2)` reader - Transmit mailbox %s transmission error flag"]
+pub type TMTEF_R = crate::BitReader<Tm0tefr>;
 impl TMTEF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> TM0TEFR_A {
+    pub const fn variant(&self) -> Tm0tefr {
         match self.bits {
-            false => TM0TEFR_A::NoError,
-            true => TM0TEFR_A::Error,
+            false => Tm0tefr::NoError,
+            true => Tm0tefr::Error,
         }
     }
     #[doc = "No error"]
     #[inline(always)]
     pub fn is_no_error(&self) -> bool {
-        *self == TM0TEFR_A::NoError
+        *self == Tm0tefr::NoError
     }
     #[doc = "Mailbox transmission error"]
     #[inline(always)]
     pub fn is_error(&self) -> bool {
-        *self == TM0TEFR_A::Error
+        *self == Tm0tefr::Error
     }
 }
 #[doc = "Transmit mailbox %s transmission error flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0TEFW_AW {
+pub enum Tm0tefwWO {
     #[doc = "1: Clear transmission error flag"]
     Clear = 1,
 }
-impl From<TM0TEFW_AW> for bool {
+impl From<Tm0tefwWO> for bool {
     #[inline(always)]
-    fn from(variant: TM0TEFW_AW) -> Self {
+    fn from(variant: Tm0tefwWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TMTEF[0-2]` writer - Transmit mailbox %s transmission error flag"]
-pub type TMTEF_W<'a, REG> = crate::BitWriter1C<'a, REG, TM0TEFW_AW>;
+#[doc = "Field `TMTEF(0-2)` writer - Transmit mailbox %s transmission error flag"]
+pub type TMTEF_W<'a, REG> = crate::BitWriter1C<'a, REG, Tm0tefwWO>;
 impl<'a, REG> TMTEF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -239,59 +239,59 @@ where
     #[doc = "Clear transmission error flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(TM0TEFW_AW::Clear)
+        self.variant(Tm0tefwWO::Clear)
     }
 }
-#[doc = "Field `TMCT[0-2]` reader - Transmit mailbox %s cancel transmission"]
-pub type TMCT_R = crate::BitReader<TM0CTR_A>;
 #[doc = "Transmit mailbox %s cancel transmission\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0CTR_A {
+pub enum Tm0ctr {
     #[doc = "0: No effect"]
     NoCancelling = 0,
     #[doc = "1: Mailbox cancel transmit"]
     Cancelling = 1,
 }
-impl From<TM0CTR_A> for bool {
+impl From<Tm0ctr> for bool {
     #[inline(always)]
-    fn from(variant: TM0CTR_A) -> Self {
+    fn from(variant: Tm0ctr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TMCT(0-2)` reader - Transmit mailbox %s cancel transmission"]
+pub type TMCT_R = crate::BitReader<Tm0ctr>;
 impl TMCT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> TM0CTR_A {
+    pub const fn variant(&self) -> Tm0ctr {
         match self.bits {
-            false => TM0CTR_A::NoCancelling,
-            true => TM0CTR_A::Cancelling,
+            false => Tm0ctr::NoCancelling,
+            true => Tm0ctr::Cancelling,
         }
     }
     #[doc = "No effect"]
     #[inline(always)]
     pub fn is_no_cancelling(&self) -> bool {
-        *self == TM0CTR_A::NoCancelling
+        *self == Tm0ctr::NoCancelling
     }
     #[doc = "Mailbox cancel transmit"]
     #[inline(always)]
     pub fn is_cancelling(&self) -> bool {
-        *self == TM0CTR_A::Cancelling
+        *self == Tm0ctr::Cancelling
     }
 }
 #[doc = "Transmit mailbox %s cancel transmission\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TM0CTW_AW {
+pub enum Tm0ctwWO {
     #[doc = "1: Mailbox cancel transmit"]
     Abort = 1,
 }
-impl From<TM0CTW_AW> for bool {
+impl From<Tm0ctwWO> for bool {
     #[inline(always)]
-    fn from(variant: TM0CTW_AW) -> Self {
+    fn from(variant: Tm0ctwWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TMCT[0-2]` writer - Transmit mailbox %s cancel transmission"]
-pub type TMCT_W<'a, REG> = crate::BitWriter1S<'a, REG, TM0CTW_AW>;
+#[doc = "Field `TMCT(0-2)` writer - Transmit mailbox %s cancel transmission"]
+pub type TMCT_W<'a, REG> = crate::BitWriter1S<'a, REG, Tm0ctwWO>;
 impl<'a, REG> TMCT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -299,13 +299,11 @@ where
     #[doc = "Mailbox cancel transmit"]
     #[inline(always)]
     pub fn abort(self) -> &'a mut crate::W<REG> {
-        self.variant(TM0CTW_AW::Abort)
+        self.variant(Tm0ctwWO::Abort)
     }
 }
 #[doc = "Field `TMNR` reader - Transmit Mailbox number record"]
 pub type TMNR_R = crate::FieldReader;
-#[doc = "Field `TMEF[0-2]` reader - Transmit mailbox %s empty flag"]
-pub type TMEF_R = crate::BitReader<TM0EF_A>;
 #[doc = "Transmit mailbox %s empty flag\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TM0EF_A {
@@ -320,6 +318,8 @@ impl From<TM0EF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TMEF(0-2)` reader - Transmit mailbox %s empty flag"]
+pub type TMEF_R = crate::BitReader<TM0EF_A>;
 impl TMEF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -340,8 +340,6 @@ impl TMEF_R {
         *self == TM0EF_A::Empty
     }
 }
-#[doc = "Field `TMLPF[0-2]` reader - Transmit mailbox %s lowest priority flag"]
-pub type TMLPF_R = crate::BitReader<TM0LPF_A>;
 #[doc = "Transmit mailbox %s lowest priority flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TM0LPF_A {
@@ -356,6 +354,8 @@ impl From<TM0LPF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TMLPF(0-2)` reader - Transmit mailbox %s lowest priority flag"]
+pub type TMLPF_R = crate::BitReader<TM0LPF_A>;
 impl TMLPF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -377,12 +377,20 @@ impl TMLPF_R {
     }
 }
 impl R {
-    #[doc = "Transmit mailbox [0-2]
-transmission complete flag\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Transmit mailbox (0-2) transmission complete flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TCF` field"]
     #[inline(always)]
     pub fn tmtcf(&self, n: u8) -> TMTCF_R {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMTCF_R::new(((self.bits >> (n * 8)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Transmit mailbox (0-2) transmission complete flag"]
+    #[inline(always)]
+    pub fn tmtcf_iter(&self) -> impl Iterator<Item = TMTCF_R> + '_ {
+        (0..3).map(move |n| TMTCF_R::new(((self.bits >> (n * 8)) & 1) != 0))
     }
     #[doc = "Bit 0 - Transmit mailbox 0 transmission complete flag"]
     #[inline(always)]
@@ -399,12 +407,20 @@ transmission complete flag\n\nNOTE: `n` is number of field in register starting 
     pub fn tm2tcf(&self) -> TMTCF_R {
         TMTCF_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Transmit mailbox [0-2]
-transmission success flag\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Transmit mailbox (0-2) transmission success flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TSF` field"]
     #[inline(always)]
     pub fn tmtsf(&self, n: u8) -> TMTSF_R {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMTSF_R::new(((self.bits >> (n * 8 + 1)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Transmit mailbox (0-2) transmission success flag"]
+    #[inline(always)]
+    pub fn tmtsf_iter(&self) -> impl Iterator<Item = TMTSF_R> + '_ {
+        (0..3).map(move |n| TMTSF_R::new(((self.bits >> (n * 8 + 1)) & 1) != 0))
     }
     #[doc = "Bit 1 - Transmit mailbox 0 transmission success flag"]
     #[inline(always)]
@@ -421,12 +437,20 @@ transmission success flag\n\nNOTE: `n` is number of field in register starting f
     pub fn tm2tsf(&self) -> TMTSF_R {
         TMTSF_R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Transmit mailbox [0-2]
-arbitration lost flag\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Transmit mailbox (0-2) arbitration lost flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0ALF` field"]
     #[inline(always)]
     pub fn tmalf(&self, n: u8) -> TMALF_R {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMALF_R::new(((self.bits >> (n * 8 + 2)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Transmit mailbox (0-2) arbitration lost flag"]
+    #[inline(always)]
+    pub fn tmalf_iter(&self) -> impl Iterator<Item = TMALF_R> + '_ {
+        (0..3).map(move |n| TMALF_R::new(((self.bits >> (n * 8 + 2)) & 1) != 0))
     }
     #[doc = "Bit 2 - Transmit mailbox 0 arbitration lost flag"]
     #[inline(always)]
@@ -443,12 +467,20 @@ arbitration lost flag\n\nNOTE: `n` is number of field in register starting from 
     pub fn tm2alf(&self) -> TMALF_R {
         TMALF_R::new(((self.bits >> 18) & 1) != 0)
     }
-    #[doc = "Transmit mailbox [0-2]
-transmission error flag\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Transmit mailbox (0-2) transmission error flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TEF` field"]
     #[inline(always)]
     pub fn tmtef(&self, n: u8) -> TMTEF_R {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMTEF_R::new(((self.bits >> (n * 8 + 3)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Transmit mailbox (0-2) transmission error flag"]
+    #[inline(always)]
+    pub fn tmtef_iter(&self) -> impl Iterator<Item = TMTEF_R> + '_ {
+        (0..3).map(move |n| TMTEF_R::new(((self.bits >> (n * 8 + 3)) & 1) != 0))
     }
     #[doc = "Bit 3 - Transmit mailbox 0 transmission error flag"]
     #[inline(always)]
@@ -465,12 +497,20 @@ transmission error flag\n\nNOTE: `n` is number of field in register starting fro
     pub fn tm2tef(&self) -> TMTEF_R {
         TMTEF_R::new(((self.bits >> 19) & 1) != 0)
     }
-    #[doc = "Transmit mailbox [0-2]
-cancel transmission\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Transmit mailbox (0-2) cancel transmission"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0CT` field"]
     #[inline(always)]
     pub fn tmct(&self, n: u8) -> TMCT_R {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMCT_R::new(((self.bits >> (n * 8 + 7)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Transmit mailbox (0-2) cancel transmission"]
+    #[inline(always)]
+    pub fn tmct_iter(&self) -> impl Iterator<Item = TMCT_R> + '_ {
+        (0..3).map(move |n| TMCT_R::new(((self.bits >> (n * 8 + 7)) & 1) != 0))
     }
     #[doc = "Bit 7 - Transmit mailbox 0 cancel transmission"]
     #[inline(always)]
@@ -492,12 +532,20 @@ cancel transmission\n\nNOTE: `n` is number of field in register starting from 0"
     pub fn tmnr(&self) -> TMNR_R {
         TMNR_R::new(((self.bits >> 24) & 3) as u8)
     }
-    #[doc = "Transmit mailbox [0-2]
-empty flag\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Transmit mailbox (0-2) empty flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0EF` field"]
     #[inline(always)]
     pub fn tmef(&self, n: u8) -> TMEF_R {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMEF_R::new(((self.bits >> (n + 26)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Transmit mailbox (0-2) empty flag"]
+    #[inline(always)]
+    pub fn tmef_iter(&self) -> impl Iterator<Item = TMEF_R> + '_ {
+        (0..3).map(move |n| TMEF_R::new(((self.bits >> (n + 26)) & 1) != 0))
     }
     #[doc = "Bit 26 - Transmit mailbox 0 empty flag"]
     #[inline(always)]
@@ -514,12 +562,20 @@ empty flag\n\nNOTE: `n` is number of field in register starting from 0"]
     pub fn tm2ef(&self) -> TMEF_R {
         TMEF_R::new(((self.bits >> 28) & 1) != 0)
     }
-    #[doc = "Transmit mailbox [0-2]
-lowest priority flag\n\nNOTE: `n` is number of field in register starting from 0"]
+    #[doc = "Transmit mailbox (0-2) lowest priority flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0LPF` field"]
     #[inline(always)]
     pub fn tmlpf(&self, n: u8) -> TMLPF_R {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMLPF_R::new(((self.bits >> (n + 29)) & 1) != 0)
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "Transmit mailbox (0-2) lowest priority flag"]
+    #[inline(always)]
+    pub fn tmlpf_iter(&self) -> impl Iterator<Item = TMLPF_R> + '_ {
+        (0..3).map(move |n| TMLPF_R::new(((self.bits >> (n + 29)) & 1) != 0))
     }
     #[doc = "Bit 29 - Transmit mailbox 0 lowest priority flag"]
     #[inline(always)]
@@ -567,16 +623,18 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<TSTS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Transmit mailbox [0-2]
-transmission complete flag"]
+    #[doc = "Transmit mailbox (0-2) transmission complete flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TCF` field"]
     #[inline(always)]
     #[must_use]
     pub fn tmtcf(&mut self, n: u8) -> TMTCF_W<TSTS_SPEC> {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMTCF_W::new(self, n * 8)
     }
     #[doc = "Bit 0 - Transmit mailbox 0 transmission complete flag"]
@@ -597,12 +655,14 @@ transmission complete flag"]
     pub fn tm2tcf(&mut self) -> TMTCF_W<TSTS_SPEC> {
         TMTCF_W::new(self, 16)
     }
-    #[doc = "Transmit mailbox [0-2]
-transmission success flag"]
+    #[doc = "Transmit mailbox (0-2) transmission success flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TSF` field"]
     #[inline(always)]
     #[must_use]
     pub fn tmtsf(&mut self, n: u8) -> TMTSF_W<TSTS_SPEC> {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMTSF_W::new(self, n * 8 + 1)
     }
     #[doc = "Bit 1 - Transmit mailbox 0 transmission success flag"]
@@ -623,12 +683,14 @@ transmission success flag"]
     pub fn tm2tsf(&mut self) -> TMTSF_W<TSTS_SPEC> {
         TMTSF_W::new(self, 17)
     }
-    #[doc = "Transmit mailbox [0-2]
-arbitration lost flag"]
+    #[doc = "Transmit mailbox (0-2) arbitration lost flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0ALF` field"]
     #[inline(always)]
     #[must_use]
     pub fn tmalf(&mut self, n: u8) -> TMALF_W<TSTS_SPEC> {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMALF_W::new(self, n * 8 + 2)
     }
     #[doc = "Bit 2 - Transmit mailbox 0 arbitration lost flag"]
@@ -649,12 +711,14 @@ arbitration lost flag"]
     pub fn tm2alf(&mut self) -> TMALF_W<TSTS_SPEC> {
         TMALF_W::new(self, 18)
     }
-    #[doc = "Transmit mailbox [0-2]
-transmission error flag"]
+    #[doc = "Transmit mailbox (0-2) transmission error flag"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TEF` field"]
     #[inline(always)]
     #[must_use]
     pub fn tmtef(&mut self, n: u8) -> TMTEF_W<TSTS_SPEC> {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMTEF_W::new(self, n * 8 + 3)
     }
     #[doc = "Bit 3 - Transmit mailbox 0 transmission error flag"]
@@ -675,12 +739,14 @@ transmission error flag"]
     pub fn tm2tef(&mut self) -> TMTEF_W<TSTS_SPEC> {
         TMTEF_W::new(self, 19)
     }
-    #[doc = "Transmit mailbox [0-2]
-cancel transmission"]
+    #[doc = "Transmit mailbox (0-2) cancel transmission"]
+    #[doc = ""]
+    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0CT` field"]
     #[inline(always)]
     #[must_use]
     pub fn tmct(&mut self, n: u8) -> TMCT_W<TSTS_SPEC> {
-        assert!(n < 3);
+        #[allow(clippy::no_effect)]
+        [(); 3][n as usize];
         TMCT_W::new(self, n * 8 + 7)
     }
     #[doc = "Bit 7 - Transmit mailbox 0 cancel transmission"]
@@ -701,16 +767,6 @@ cancel transmission"]
     pub fn tm2ct(&mut self) -> TMCT_W<TSTS_SPEC> {
         TMCT_W::new(self, 23)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Transmit status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TSTS_SPEC;
@@ -721,10 +777,11 @@ impl crate::RegisterSpec for TSTS_SPEC {
 impl crate::Readable for TSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tsts::W`](W) writer structure"]
 impl crate::Writable for TSTS_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0x8f;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x8f;
 }
 #[doc = "`reset()` method sets TSTS to value 0x1c00_0000"]
 impl crate::Resettable for TSTS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x1c00_0000;
+    const RESET_VALUE: u32 = 0x1c00_0000;
 }

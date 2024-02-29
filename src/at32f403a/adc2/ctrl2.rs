@@ -2,58 +2,58 @@
 pub type R = crate::R<CTRL2_SPEC>;
 #[doc = "Register `CTRL2` writer"]
 pub type W = crate::W<CTRL2_SPEC>;
-#[doc = "Field `ADCEN` reader - A/D converter enable"]
-pub type ADCEN_R = crate::BitReader<ADCENR_A>;
 #[doc = "A/D converter enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ADCENR_A {
+pub enum Adcenr {
     #[doc = "0: ADC is disabled"]
     Disabled = 0,
     #[doc = "1: ADC is enabled"]
     Enabled = 1,
 }
-impl From<ADCENR_A> for bool {
+impl From<Adcenr> for bool {
     #[inline(always)]
-    fn from(variant: ADCENR_A) -> Self {
+    fn from(variant: Adcenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ADCEN` reader - A/D converter enable"]
+pub type ADCEN_R = crate::BitReader<Adcenr>;
 impl ADCEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> ADCENR_A {
+    pub const fn variant(&self) -> Adcenr {
         match self.bits {
-            false => ADCENR_A::Disabled,
-            true => ADCENR_A::Enabled,
+            false => Adcenr::Disabled,
+            true => Adcenr::Enabled,
         }
     }
     #[doc = "ADC is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == ADCENR_A::Disabled
+        *self == Adcenr::Disabled
     }
     #[doc = "ADC is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == ADCENR_A::Enabled
+        *self == Adcenr::Enabled
     }
 }
 #[doc = "A/D converter enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ADCENW_AW {
+pub enum AdcenwWO {
     #[doc = "0: ADC disable"]
     Disable = 0,
     #[doc = "1: ADC enable"]
     Enable = 1,
 }
-impl From<ADCENW_AW> for bool {
+impl From<AdcenwWO> for bool {
     #[inline(always)]
-    fn from(variant: ADCENW_AW) -> Self {
+    fn from(variant: AdcenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `ADCEN` writer - A/D converter enable"]
-pub type ADCEN_W<'a, REG> = crate::BitWriter<'a, REG, ADCENW_AW>;
+pub type ADCEN_W<'a, REG> = crate::BitWriter<'a, REG, AdcenwWO>;
 impl<'a, REG> ADCEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,66 +61,66 @@ where
     #[doc = "ADC disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(ADCENW_AW::Disable)
+        self.variant(AdcenwWO::Disable)
     }
     #[doc = "ADC enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(ADCENW_AW::Enable)
+        self.variant(AdcenwWO::Enable)
     }
 }
-#[doc = "Field `RPEN` reader - Repeat mode enable"]
-pub type RPEN_R = crate::BitReader<RPENR_A>;
 #[doc = "Repeat mode enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RPENR_A {
+pub enum Rpenr {
     #[doc = "0: Repetition mode is disabled"]
     Disabled = 0,
     #[doc = "1: Repetition mode is enabled"]
     Enabled = 1,
 }
-impl From<RPENR_A> for bool {
+impl From<Rpenr> for bool {
     #[inline(always)]
-    fn from(variant: RPENR_A) -> Self {
+    fn from(variant: Rpenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RPEN` reader - Repeat mode enable"]
+pub type RPEN_R = crate::BitReader<Rpenr>;
 impl RPEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RPENR_A {
+    pub const fn variant(&self) -> Rpenr {
         match self.bits {
-            false => RPENR_A::Disabled,
-            true => RPENR_A::Enabled,
+            false => Rpenr::Disabled,
+            true => Rpenr::Enabled,
         }
     }
     #[doc = "Repetition mode is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == RPENR_A::Disabled
+        *self == Rpenr::Disabled
     }
     #[doc = "Repetition mode is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == RPENR_A::Enabled
+        *self == Rpenr::Enabled
     }
 }
 #[doc = "Repeat mode enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RPENW_AW {
+pub enum RpenwWO {
     #[doc = "0: Repetition mode disable"]
     Disable = 0,
     #[doc = "1: Repetition mode enable"]
     Enable = 1,
 }
-impl From<RPENW_AW> for bool {
+impl From<RpenwWO> for bool {
     #[inline(always)]
-    fn from(variant: RPENW_AW) -> Self {
+    fn from(variant: RpenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RPEN` writer - Repeat mode enable"]
-pub type RPEN_W<'a, REG> = crate::BitWriter<'a, REG, RPENW_AW>;
+pub type RPEN_W<'a, REG> = crate::BitWriter<'a, REG, RpenwWO>;
 impl<'a, REG> RPEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -128,64 +128,64 @@ where
     #[doc = "Repetition mode disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(RPENW_AW::Disable)
+        self.variant(RpenwWO::Disable)
     }
     #[doc = "Repetition mode enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(RPENW_AW::Enable)
+        self.variant(RpenwWO::Enable)
     }
 }
-#[doc = "Field `ADCAL` reader - A/D Calibration"]
-pub type ADCAL_R = crate::BitReader<ADCALR_A>;
 #[doc = "A/D Calibration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ADCALR_A {
+pub enum Adcalr {
     #[doc = "0: Calibration completed"]
     Completed = 0,
     #[doc = "1: Calibration is in process"]
     InProgress = 1,
 }
-impl From<ADCALR_A> for bool {
+impl From<Adcalr> for bool {
     #[inline(always)]
-    fn from(variant: ADCALR_A) -> Self {
+    fn from(variant: Adcalr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ADCAL` reader - A/D Calibration"]
+pub type ADCAL_R = crate::BitReader<Adcalr>;
 impl ADCAL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> ADCALR_A {
+    pub const fn variant(&self) -> Adcalr {
         match self.bits {
-            false => ADCALR_A::Completed,
-            true => ADCALR_A::InProgress,
+            false => Adcalr::Completed,
+            true => Adcalr::InProgress,
         }
     }
     #[doc = "Calibration completed"]
     #[inline(always)]
     pub fn is_completed(&self) -> bool {
-        *self == ADCALR_A::Completed
+        *self == Adcalr::Completed
     }
     #[doc = "Calibration is in process"]
     #[inline(always)]
     pub fn is_in_progress(&self) -> bool {
-        *self == ADCALR_A::InProgress
+        *self == Adcalr::InProgress
     }
 }
 #[doc = "A/D Calibration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ADCALW_AW {
+pub enum AdcalwWO {
     #[doc = "1: Enable calibration"]
     Calibrate = 1,
 }
-impl From<ADCALW_AW> for bool {
+impl From<AdcalwWO> for bool {
     #[inline(always)]
-    fn from(variant: ADCALW_AW) -> Self {
+    fn from(variant: AdcalwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `ADCAL` writer - A/D Calibration"]
-pub type ADCAL_W<'a, REG> = crate::BitWriter<'a, REG, ADCALW_AW>;
+pub type ADCAL_W<'a, REG> = crate::BitWriter<'a, REG, AdcalwWO>;
 impl<'a, REG> ADCAL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -193,59 +193,59 @@ where
     #[doc = "Enable calibration"]
     #[inline(always)]
     pub fn calibrate(self) -> &'a mut crate::W<REG> {
-        self.variant(ADCALW_AW::Calibrate)
+        self.variant(AdcalwWO::Calibrate)
     }
 }
-#[doc = "Field `ADCALINIT` reader - initialize A/D calibration"]
-pub type ADCALINIT_R = crate::BitReader<ADCALINITR_A>;
 #[doc = "initialize A/D calibration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ADCALINITR_A {
+pub enum Adcalinitr {
     #[doc = "0: Initialization completed"]
     Completed = 0,
     #[doc = "1: Initialization is in process"]
     InProgress = 1,
 }
-impl From<ADCALINITR_A> for bool {
+impl From<Adcalinitr> for bool {
     #[inline(always)]
-    fn from(variant: ADCALINITR_A) -> Self {
+    fn from(variant: Adcalinitr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ADCALINIT` reader - initialize A/D calibration"]
+pub type ADCALINIT_R = crate::BitReader<Adcalinitr>;
 impl ADCALINIT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> ADCALINITR_A {
+    pub const fn variant(&self) -> Adcalinitr {
         match self.bits {
-            false => ADCALINITR_A::Completed,
-            true => ADCALINITR_A::InProgress,
+            false => Adcalinitr::Completed,
+            true => Adcalinitr::InProgress,
         }
     }
     #[doc = "Initialization completed"]
     #[inline(always)]
     pub fn is_completed(&self) -> bool {
-        *self == ADCALINITR_A::Completed
+        *self == Adcalinitr::Completed
     }
     #[doc = "Initialization is in process"]
     #[inline(always)]
     pub fn is_in_progress(&self) -> bool {
-        *self == ADCALINITR_A::InProgress
+        *self == Adcalinitr::InProgress
     }
 }
 #[doc = "initialize A/D calibration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ADCALINITW_AW {
+pub enum AdcalinitwWO {
     #[doc = "1: Enable initialization"]
     Init = 1,
 }
-impl From<ADCALINITW_AW> for bool {
+impl From<AdcalinitwWO> for bool {
     #[inline(always)]
-    fn from(variant: ADCALINITW_AW) -> Self {
+    fn from(variant: AdcalinitwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `ADCALINIT` writer - initialize A/D calibration"]
-pub type ADCALINIT_W<'a, REG> = crate::BitWriter<'a, REG, ADCALINITW_AW>;
+pub type ADCALINIT_W<'a, REG> = crate::BitWriter<'a, REG, AdcalinitwWO>;
 impl<'a, REG> ADCALINIT_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -253,11 +253,9 @@ where
     #[doc = "Enable initialization"]
     #[inline(always)]
     pub fn init(self) -> &'a mut crate::W<REG> {
-        self.variant(ADCALINITW_AW::Init)
+        self.variant(AdcalinitwWO::Init)
     }
 }
-#[doc = "Field `DTALIGN` reader - Data alignment"]
-pub type DTALIGN_R = crate::BitReader<DTALIGN_A>;
 #[doc = "Data alignment\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DTALIGN_A {
@@ -272,6 +270,8 @@ impl From<DTALIGN_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `DTALIGN` reader - Data alignment"]
+pub type DTALIGN_R = crate::BitReader<DTALIGN_A>;
 impl DTALIGN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -325,8 +325,6 @@ pub type OCTESEL_L_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 pub type OCTEN_R = crate::BitReader;
 #[doc = "Field `OCTEN` writer - Trigger mode enable for ordinary channels conversion"]
 pub type OCTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PCSWTRG` reader - Conversion trigger by software of preempted channels"]
-pub type PCSWTRG_R = crate::BitReader<PCSWTRG_A>;
 #[doc = "Conversion trigger by software of preempted channels\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PCSWTRG_A {
@@ -341,6 +339,8 @@ impl From<PCSWTRG_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `PCSWTRG` reader - Conversion trigger by software of preempted channels"]
+pub type PCSWTRG_R = crate::BitReader<PCSWTRG_A>;
 impl PCSWTRG_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -478,7 +478,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -560,16 +560,6 @@ impl W {
     pub fn octesel_h(&mut self) -> OCTESEL_H_W<CTRL2_SPEC> {
         OCTESEL_H_W::new(self, 25)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
@@ -580,10 +570,11 @@ impl crate::RegisterSpec for CTRL2_SPEC {
 impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
 impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

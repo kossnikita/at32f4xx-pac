@@ -4,56 +4,56 @@ pub type R = crate::R<RF_SPEC>;
 pub type W = crate::W<RF_SPEC>;
 #[doc = "Field `MN` reader - Receive FIFO message num"]
 pub type MN_R = crate::FieldReader;
-#[doc = "Field `FF` reader - Receive FIFO full flag"]
-pub type FF_R = crate::BitReader<FFR_A>;
 #[doc = "Receive FIFO full flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum FFR_A {
+pub enum Ffr {
     #[doc = "0: Receive FIFO is not full"]
     NotFull = 0,
     #[doc = "1: Receive FIFO is full"]
     Full = 1,
 }
-impl From<FFR_A> for bool {
+impl From<Ffr> for bool {
     #[inline(always)]
-    fn from(variant: FFR_A) -> Self {
+    fn from(variant: Ffr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `FF` reader - Receive FIFO full flag"]
+pub type FF_R = crate::BitReader<Ffr>;
 impl FF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> FFR_A {
+    pub const fn variant(&self) -> Ffr {
         match self.bits {
-            false => FFR_A::NotFull,
-            true => FFR_A::Full,
+            false => Ffr::NotFull,
+            true => Ffr::Full,
         }
     }
     #[doc = "Receive FIFO is not full"]
     #[inline(always)]
     pub fn is_not_full(&self) -> bool {
-        *self == FFR_A::NotFull
+        *self == Ffr::NotFull
     }
     #[doc = "Receive FIFO is full"]
     #[inline(always)]
     pub fn is_full(&self) -> bool {
-        *self == FFR_A::Full
+        *self == Ffr::Full
     }
 }
 #[doc = "Receive FIFO full flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum FFW_AW {
+pub enum FfwWO {
     #[doc = "1: Clear full flag"]
     Clear = 1,
 }
-impl From<FFW_AW> for bool {
+impl From<FfwWO> for bool {
     #[inline(always)]
-    fn from(variant: FFW_AW) -> Self {
+    fn from(variant: FfwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `FF` writer - Receive FIFO full flag"]
-pub type FF_W<'a, REG> = crate::BitWriter1C<'a, REG, FFW_AW>;
+pub type FF_W<'a, REG> = crate::BitWriter1C<'a, REG, FfwWO>;
 impl<'a, REG> FF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -61,59 +61,59 @@ where
     #[doc = "Clear full flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(FFW_AW::Clear)
+        self.variant(FfwWO::Clear)
     }
 }
-#[doc = "Field `OF` reader - Receive FIFO overflow flag"]
-pub type OF_R = crate::BitReader<OFR_A>;
 #[doc = "Receive FIFO overflow flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OFR_A {
+pub enum Ofr {
     #[doc = "0: No overflow"]
     NoOverflow = 0,
     #[doc = "1: Receive FIFO overflow"]
     Overflow = 1,
 }
-impl From<OFR_A> for bool {
+impl From<Ofr> for bool {
     #[inline(always)]
-    fn from(variant: OFR_A) -> Self {
+    fn from(variant: Ofr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `OF` reader - Receive FIFO overflow flag"]
+pub type OF_R = crate::BitReader<Ofr>;
 impl OF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> OFR_A {
+    pub const fn variant(&self) -> Ofr {
         match self.bits {
-            false => OFR_A::NoOverflow,
-            true => OFR_A::Overflow,
+            false => Ofr::NoOverflow,
+            true => Ofr::Overflow,
         }
     }
     #[doc = "No overflow"]
     #[inline(always)]
     pub fn is_no_overflow(&self) -> bool {
-        *self == OFR_A::NoOverflow
+        *self == Ofr::NoOverflow
     }
     #[doc = "Receive FIFO overflow"]
     #[inline(always)]
     pub fn is_overflow(&self) -> bool {
-        *self == OFR_A::Overflow
+        *self == Ofr::Overflow
     }
 }
 #[doc = "Receive FIFO overflow flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum OFW_AW {
+pub enum OfwWO {
     #[doc = "1: Clear overflow flag"]
     Clear = 1,
 }
-impl From<OFW_AW> for bool {
+impl From<OfwWO> for bool {
     #[inline(always)]
-    fn from(variant: OFW_AW) -> Self {
+    fn from(variant: OfwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `OF` writer - Receive FIFO overflow flag"]
-pub type OF_W<'a, REG> = crate::BitWriter1C<'a, REG, OFW_AW>;
+pub type OF_W<'a, REG> = crate::BitWriter1C<'a, REG, OfwWO>;
 impl<'a, REG> OF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -121,59 +121,59 @@ where
     #[doc = "Clear overflow flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(OFW_AW::Clear)
+        self.variant(OfwWO::Clear)
     }
 }
-#[doc = "Field `R` reader - Receive FIFO release"]
-pub type R_R = crate::BitReader<RR_A>;
 #[doc = "Receive FIFO release\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RR_A {
+pub enum Rr {
     #[doc = "0: FIFO is released"]
     Released = 0,
     #[doc = "1: FIFO release in progress"]
     Releasing = 1,
 }
-impl From<RR_A> for bool {
+impl From<Rr> for bool {
     #[inline(always)]
-    fn from(variant: RR_A) -> Self {
+    fn from(variant: Rr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R` reader - Receive FIFO release"]
+pub type R_R = crate::BitReader<Rr>;
 impl R_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RR_A {
+    pub const fn variant(&self) -> Rr {
         match self.bits {
-            false => RR_A::Released,
-            true => RR_A::Releasing,
+            false => Rr::Released,
+            true => Rr::Releasing,
         }
     }
     #[doc = "FIFO is released"]
     #[inline(always)]
     pub fn is_released(&self) -> bool {
-        *self == RR_A::Released
+        *self == Rr::Released
     }
     #[doc = "FIFO release in progress"]
     #[inline(always)]
     pub fn is_releasing(&self) -> bool {
-        *self == RR_A::Releasing
+        *self == Rr::Releasing
     }
 }
 #[doc = "Receive FIFO release\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RW_AW {
+pub enum RwWO {
     #[doc = "1: Release FIFO"]
     Release = 1,
 }
-impl From<RW_AW> for bool {
+impl From<RwWO> for bool {
     #[inline(always)]
-    fn from(variant: RW_AW) -> Self {
+    fn from(variant: RwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `R` writer - Receive FIFO release"]
-pub type R_W<'a, REG> = crate::BitWriter1S<'a, REG, RW_AW>;
+pub type R_W<'a, REG> = crate::BitWriter1S<'a, REG, RwWO>;
 impl<'a, REG> R_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -181,7 +181,7 @@ where
     #[doc = "Release FIFO"]
     #[inline(always)]
     pub fn release(self) -> &'a mut crate::W<REG> {
-        self.variant(RW_AW::Release)
+        self.variant(RwWO::Release)
     }
 }
 impl R {
@@ -218,7 +218,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<RF_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -240,16 +240,6 @@ impl W {
     pub fn r(&mut self) -> R_W<RF_SPEC> {
         R_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Receive FIFO %s register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RF_SPEC;
@@ -260,10 +250,11 @@ impl crate::RegisterSpec for RF_SPEC {
 impl crate::Readable for RF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rf::W`](W) writer structure"]
 impl crate::Writable for RF_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0x38;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x38;
 }
 #[doc = "`reset()` method sets RF%s to value 0"]
 impl crate::Resettable for RF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

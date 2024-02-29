@@ -222,7 +222,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<APB1LPEN_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -352,16 +352,6 @@ impl W {
     pub fn uart8lpen(&mut self) -> UART8LPEN_W<APB1LPEN_SPEC> {
         UART8LPEN_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "APB1 peripheral Low-power clock enable register (CRM_APB1LPEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb1lpen::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb1lpen::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB1LPEN_SPEC;
@@ -372,10 +362,11 @@ impl crate::RegisterSpec for APB1LPEN_SPEC {
 impl crate::Readable for APB1LPEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb1lpen::W`](W) writer structure"]
 impl crate::Writable for APB1LPEN_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB1LPEN to value 0xf6fe_e9ff"]
 impl crate::Resettable for APB1LPEN_SPEC {
-    const RESET_VALUE: Self::Ux = 0xf6fe_e9ff;
+    const RESET_VALUE: u32 = 0xf6fe_e9ff;
 }

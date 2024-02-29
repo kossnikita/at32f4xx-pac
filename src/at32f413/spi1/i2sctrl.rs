@@ -2,8 +2,6 @@
 pub type R = crate::R<I2SCTRL_SPEC>;
 #[doc = "Register `I2SCTRL` writer"]
 pub type W = crate::W<I2SCTRL_SPEC>;
-#[doc = "Field `CBN` reader - I2S channel bit num"]
-pub type CBN_R = crate::BitReader<CBN_A>;
 #[doc = "I2S channel bit num\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CBN_A {
@@ -18,6 +16,8 @@ impl From<CBN_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CBN` reader - I2S channel bit num"]
+pub type CBN_R = crate::BitReader<CBN_A>;
 impl CBN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -55,8 +55,6 @@ where
         self.variant(CBN_A::Bit32)
     }
 }
-#[doc = "Field `DBN` reader - I2S data bit num"]
-pub type DBN_R = crate::FieldReader<DBN_A>;
 #[doc = "I2S data bit num\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -77,6 +75,8 @@ impl From<DBN_A> for u8 {
 impl crate::FieldSpec for DBN_A {
     type Ux = u8;
 }
+#[doc = "Field `DBN` reader - I2S data bit num"]
+pub type DBN_R = crate::FieldReader<DBN_A>;
 impl DBN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -127,8 +127,6 @@ where
         self.variant(DBN_A::Bit32)
     }
 }
-#[doc = "Field `CLKPOL` reader - I2S clock polarity"]
-pub type CLKPOL_R = crate::BitReader<CLKPOL_A>;
 #[doc = "I2S clock polarity\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CLKPOL_A {
@@ -143,6 +141,8 @@ impl From<CLKPOL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CLKPOL` reader - I2S clock polarity"]
+pub type CLKPOL_R = crate::BitReader<CLKPOL_A>;
 impl CLKPOL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -180,8 +180,6 @@ where
         self.variant(CLKPOL_A::High)
     }
 }
-#[doc = "Field `STDSEL` reader - I2S standard select"]
-pub type STDSEL_R = crate::FieldReader<STDSEL_A>;
 #[doc = "I2S standard select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -204,6 +202,8 @@ impl From<STDSEL_A> for u8 {
 impl crate::FieldSpec for STDSEL_A {
     type Ux = u8;
 }
+#[doc = "Field `STDSEL` reader - I2S standard select"]
+pub type STDSEL_R = crate::FieldReader<STDSEL_A>;
 impl STDSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -265,8 +265,6 @@ where
         self.variant(STDSEL_A::Pcm)
     }
 }
-#[doc = "Field `PCMFSSEL` reader - PCM frame synchronization select"]
-pub type PCMFSSEL_R = crate::BitReader<PCMFSSEL_A>;
 #[doc = "PCM frame synchronization select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PCMFSSEL_A {
@@ -281,6 +279,8 @@ impl From<PCMFSSEL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `PCMFSSEL` reader - PCM frame synchronization select"]
+pub type PCMFSSEL_R = crate::BitReader<PCMFSSEL_A>;
 impl PCMFSSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -318,8 +318,6 @@ where
         self.variant(PCMFSSEL_A::Long)
     }
 }
-#[doc = "Field `OPERSEL` reader - I2S operation select"]
-pub type OPERSEL_R = crate::FieldReader<OPERSEL_A>;
 #[doc = "I2S operation select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -342,6 +340,8 @@ impl From<OPERSEL_A> for u8 {
 impl crate::FieldSpec for OPERSEL_A {
     type Ux = u8;
 }
+#[doc = "Field `OPERSEL` reader - I2S operation select"]
+pub type OPERSEL_R = crate::FieldReader<OPERSEL_A>;
 impl OPERSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -403,58 +403,58 @@ where
         self.variant(OPERSEL_A::MasterReception)
     }
 }
-#[doc = "Field `EN` reader - I2S Enable"]
-pub type EN_R = crate::BitReader<ENR_A>;
 #[doc = "I2S Enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ENR_A {
+pub enum Enr {
     #[doc = "0: I2S is disabled"]
     Disabled = 0,
     #[doc = "1: I2S is enabled"]
     Enabled = 1,
 }
-impl From<ENR_A> for bool {
+impl From<Enr> for bool {
     #[inline(always)]
-    fn from(variant: ENR_A) -> Self {
+    fn from(variant: Enr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `EN` reader - I2S Enable"]
+pub type EN_R = crate::BitReader<Enr>;
 impl EN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> ENR_A {
+    pub const fn variant(&self) -> Enr {
         match self.bits {
-            false => ENR_A::Disabled,
-            true => ENR_A::Enabled,
+            false => Enr::Disabled,
+            true => Enr::Enabled,
         }
     }
     #[doc = "I2S is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == ENR_A::Disabled
+        *self == Enr::Disabled
     }
     #[doc = "I2S is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == ENR_A::Enabled
+        *self == Enr::Enabled
     }
 }
 #[doc = "I2S Enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum ENW_AW {
+pub enum EnwWO {
     #[doc = "0: I2S disable"]
     Disable = 0,
     #[doc = "1: I2S enable"]
     Enable = 1,
 }
-impl From<ENW_AW> for bool {
+impl From<EnwWO> for bool {
     #[inline(always)]
-    fn from(variant: ENW_AW) -> Self {
+    fn from(variant: EnwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `EN` writer - I2S Enable"]
-pub type EN_W<'a, REG> = crate::BitWriter<'a, REG, ENW_AW>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG, EnwWO>;
 impl<'a, REG> EN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -462,16 +462,14 @@ where
     #[doc = "I2S disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(ENW_AW::Disable)
+        self.variant(EnwWO::Disable)
     }
     #[doc = "I2S enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(ENW_AW::Enable)
+        self.variant(EnwWO::Enable)
     }
 }
-#[doc = "Field `MSEL` reader - I2S mode select"]
-pub type MSEL_R = crate::BitReader<MSEL_A>;
 #[doc = "I2S mode select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MSEL_A {
@@ -486,6 +484,8 @@ impl From<MSEL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `MSEL` reader - I2S mode select"]
+pub type MSEL_R = crate::BitReader<MSEL_A>;
 impl MSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -581,7 +581,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<I2SCTRL_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -633,16 +633,6 @@ impl W {
     pub fn msel(&mut self) -> MSEL_W<I2SCTRL_SPEC> {
         MSEL_W::new(self, 11)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "I2S control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2sctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2sctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2SCTRL_SPEC;
@@ -653,10 +643,11 @@ impl crate::RegisterSpec for I2SCTRL_SPEC {
 impl crate::Readable for I2SCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2sctrl::W`](W) writer structure"]
 impl crate::Writable for I2SCTRL_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets I2SCTRL to value 0"]
 impl crate::Resettable for I2SCTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

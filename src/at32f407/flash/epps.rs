@@ -18,7 +18,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<EPPS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Erase/program protection status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`epps::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -30,5 +30,5 @@ impl crate::RegisterSpec for EPPS_SPEC {
 impl crate::Readable for EPPS_SPEC {}
 #[doc = "`reset()` method sets EPPS to value 0xffff_ffff"]
 impl crate::Resettable for EPPS_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+    const RESET_VALUE: u32 = 0xffff_ffff;
 }

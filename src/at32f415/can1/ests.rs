@@ -2,8 +2,6 @@
 pub type R = crate::R<ESTS_SPEC>;
 #[doc = "Register `ESTS` writer"]
 pub type W = crate::W<ESTS_SPEC>;
-#[doc = "Field `EAF` reader - Error active flag"]
-pub type EAF_R = crate::BitReader<EAF_A>;
 #[doc = "Error active flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EAF_A {
@@ -18,6 +16,8 @@ impl From<EAF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `EAF` reader - Error active flag"]
+pub type EAF_R = crate::BitReader<EAF_A>;
 impl EAF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -38,8 +38,6 @@ impl EAF_R {
         *self == EAF_A::Entered
     }
 }
-#[doc = "Field `EPF` reader - Error passive flag"]
-pub type EPF_R = crate::BitReader<EPF_A>;
 #[doc = "Error passive flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum EPF_A {
@@ -54,6 +52,8 @@ impl From<EPF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `EPF` reader - Error passive flag"]
+pub type EPF_R = crate::BitReader<EPF_A>;
 impl EPF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -74,8 +74,6 @@ impl EPF_R {
         *self == EPF_A::Entered
     }
 }
-#[doc = "Field `BOF` reader - Bus-off flag"]
-pub type BOF_R = crate::BitReader<BOF_A>;
 #[doc = "Bus-off flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BOF_A {
@@ -90,6 +88,8 @@ impl From<BOF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `BOF` reader - Bus-off flag"]
+pub type BOF_R = crate::BitReader<BOF_A>;
 impl BOF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -110,8 +110,6 @@ impl BOF_R {
         *self == BOF_A::Entered
     }
 }
-#[doc = "Field `ETR` reader - Error type record"]
-pub type ETR_R = crate::FieldReader<ETR_A>;
 #[doc = "Error type record\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -142,6 +140,8 @@ impl From<ETR_A> for u8 {
 impl crate::FieldSpec for ETR_A {
     type Ux = u8;
 }
+#[doc = "Field `ETR` reader - Error type record"]
+pub type ETR_R = crate::FieldReader<ETR_A>;
 impl ETR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -297,7 +297,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<ESTS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -306,16 +306,6 @@ impl W {
     #[must_use]
     pub fn etr(&mut self) -> ETR_W<ESTS_SPEC> {
         ETR_W::new(self, 4)
-    }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
     }
 }
 #[doc = "Error status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ests::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ests::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -327,10 +317,11 @@ impl crate::RegisterSpec for ESTS_SPEC {
 impl crate::Readable for ESTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ests::W`](W) writer structure"]
 impl crate::Writable for ESTS_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ESTS to value 0"]
 impl crate::Resettable for ESTS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

@@ -26,7 +26,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<FIFOSTS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "FIFO Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifosts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
@@ -38,5 +38,5 @@ impl crate::RegisterSpec for FIFOSTS_SPEC {
 impl crate::Readable for FIFOSTS_SPEC {}
 #[doc = "`reset()` method sets FIFOSTS to value 0x01"]
 impl crate::Resettable for FIFOSTS_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

@@ -2,8 +2,6 @@
 pub type R = crate::R<STS_SPEC>;
 #[doc = "Register `STS` writer"]
 pub type W = crate::W<STS_SPEC>;
-#[doc = "Field `PERR` reader - Parity error"]
-pub type PERR_R = crate::BitReader<PERR_A>;
 #[doc = "Parity error\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum PERR_A {
@@ -18,6 +16,8 @@ impl From<PERR_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `PERR` reader - Parity error"]
+pub type PERR_R = crate::BitReader<PERR_A>;
 impl PERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -38,8 +38,6 @@ impl PERR_R {
         *self == PERR_A::Error
     }
 }
-#[doc = "Field `FERR` reader - Framing error"]
-pub type FERR_R = crate::BitReader<FERR_A>;
 #[doc = "Framing error\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum FERR_A {
@@ -54,6 +52,8 @@ impl From<FERR_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `FERR` reader - Framing error"]
+pub type FERR_R = crate::BitReader<FERR_A>;
 impl FERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -74,8 +74,6 @@ impl FERR_R {
         *self == FERR_A::Error
     }
 }
-#[doc = "Field `NERR` reader - Noise error"]
-pub type NERR_R = crate::BitReader<NERR_A>;
 #[doc = "Noise error\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NERR_A {
@@ -90,6 +88,8 @@ impl From<NERR_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `NERR` reader - Noise error"]
+pub type NERR_R = crate::BitReader<NERR_A>;
 impl NERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -110,8 +110,6 @@ impl NERR_R {
         *self == NERR_A::Noise
     }
 }
-#[doc = "Field `ROERR` reader - Receiver overflow error"]
-pub type ROERR_R = crate::BitReader<ROERR_A>;
 #[doc = "Receiver overflow error\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ROERR_A {
@@ -126,6 +124,8 @@ impl From<ROERR_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ROERR` reader - Receiver overflow error"]
+pub type ROERR_R = crate::BitReader<ROERR_A>;
 impl ROERR_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -146,8 +146,6 @@ impl ROERR_R {
         *self == ROERR_A::Overflow
     }
 }
-#[doc = "Field `IDLEF` reader - IDLE flag"]
-pub type IDLEF_R = crate::BitReader<IDLEF_A>;
 #[doc = "IDLE flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum IDLEF_A {
@@ -162,6 +160,8 @@ impl From<IDLEF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `IDLEF` reader - IDLE flag"]
+pub type IDLEF_R = crate::BitReader<IDLEF_A>;
 impl IDLEF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -182,56 +182,56 @@ impl IDLEF_R {
         *self == IDLEF_A::Idle
     }
 }
-#[doc = "Field `RDBF` reader - Receive data buffer full"]
-pub type RDBF_R = crate::BitReader<RDBFR_A>;
 #[doc = "Receive data buffer full\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RDBFR_A {
+pub enum Rdbfr {
     #[doc = "0: Data is not received"]
     NotFull = 0,
     #[doc = "1: Data is received"]
     Full = 1,
 }
-impl From<RDBFR_A> for bool {
+impl From<Rdbfr> for bool {
     #[inline(always)]
-    fn from(variant: RDBFR_A) -> Self {
+    fn from(variant: Rdbfr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RDBF` reader - Receive data buffer full"]
+pub type RDBF_R = crate::BitReader<Rdbfr>;
 impl RDBF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> RDBFR_A {
+    pub const fn variant(&self) -> Rdbfr {
         match self.bits {
-            false => RDBFR_A::NotFull,
-            true => RDBFR_A::Full,
+            false => Rdbfr::NotFull,
+            true => Rdbfr::Full,
         }
     }
     #[doc = "Data is not received"]
     #[inline(always)]
     pub fn is_not_full(&self) -> bool {
-        *self == RDBFR_A::NotFull
+        *self == Rdbfr::NotFull
     }
     #[doc = "Data is received"]
     #[inline(always)]
     pub fn is_full(&self) -> bool {
-        *self == RDBFR_A::Full
+        *self == Rdbfr::Full
     }
 }
 #[doc = "Receive data buffer full\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum RDBFW_AW {
+pub enum RdbfwWO {
     #[doc = "0: Clear receive buffer full flag"]
     Clear = 0,
 }
-impl From<RDBFW_AW> for bool {
+impl From<RdbfwWO> for bool {
     #[inline(always)]
-    fn from(variant: RDBFW_AW) -> Self {
+    fn from(variant: RdbfwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `RDBF` writer - Receive data buffer full"]
-pub type RDBF_W<'a, REG> = crate::BitWriter0C<'a, REG, RDBFW_AW>;
+pub type RDBF_W<'a, REG> = crate::BitWriter0C<'a, REG, RdbfwWO>;
 impl<'a, REG> RDBF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -239,59 +239,59 @@ where
     #[doc = "Clear receive buffer full flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(RDBFW_AW::Clear)
+        self.variant(RdbfwWO::Clear)
     }
 }
-#[doc = "Field `TDC` reader - Transmit data complete"]
-pub type TDC_R = crate::BitReader<TDCR_A>;
 #[doc = "Transmit data complete\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TDCR_A {
+pub enum Tdcr {
     #[doc = "0: Transmission is not completed"]
     NotCompleted = 0,
     #[doc = "1: Transmission is completed"]
     Completed = 1,
 }
-impl From<TDCR_A> for bool {
+impl From<Tdcr> for bool {
     #[inline(always)]
-    fn from(variant: TDCR_A) -> Self {
+    fn from(variant: Tdcr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TDC` reader - Transmit data complete"]
+pub type TDC_R = crate::BitReader<Tdcr>;
 impl TDC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> TDCR_A {
+    pub const fn variant(&self) -> Tdcr {
         match self.bits {
-            false => TDCR_A::NotCompleted,
-            true => TDCR_A::Completed,
+            false => Tdcr::NotCompleted,
+            true => Tdcr::Completed,
         }
     }
     #[doc = "Transmission is not completed"]
     #[inline(always)]
     pub fn is_not_completed(&self) -> bool {
-        *self == TDCR_A::NotCompleted
+        *self == Tdcr::NotCompleted
     }
     #[doc = "Transmission is completed"]
     #[inline(always)]
     pub fn is_completed(&self) -> bool {
-        *self == TDCR_A::Completed
+        *self == Tdcr::Completed
     }
 }
 #[doc = "Transmit data complete\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum TDCW_AW {
+pub enum TdcwWO {
     #[doc = "0: Clear transmit data complete flag"]
     Clear = 0,
 }
-impl From<TDCW_AW> for bool {
+impl From<TdcwWO> for bool {
     #[inline(always)]
-    fn from(variant: TDCW_AW) -> Self {
+    fn from(variant: TdcwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `TDC` writer - Transmit data complete"]
-pub type TDC_W<'a, REG> = crate::BitWriter0C<'a, REG, TDCW_AW>;
+pub type TDC_W<'a, REG> = crate::BitWriter0C<'a, REG, TdcwWO>;
 impl<'a, REG> TDC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -299,11 +299,9 @@ where
     #[doc = "Clear transmit data complete flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(TDCW_AW::Clear)
+        self.variant(TdcwWO::Clear)
     }
 }
-#[doc = "Field `TDBE` reader - Transmit data buffer empty"]
-pub type TDBE_R = crate::BitReader<TDBE_A>;
 #[doc = "Transmit data buffer empty\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum TDBE_A {
@@ -318,6 +316,8 @@ impl From<TDBE_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TDBE` reader - Transmit data buffer empty"]
+pub type TDBE_R = crate::BitReader<TDBE_A>;
 impl TDBE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -338,56 +338,56 @@ impl TDBE_R {
         *self == TDBE_A::Empty
     }
 }
-#[doc = "Field `BFF` reader - Break frame flag"]
-pub type BFF_R = crate::BitReader<BFFR_A>;
 #[doc = "Break frame flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum BFFR_A {
+pub enum Bffr {
     #[doc = "0: Break frame is not detected"]
     NoBreak = 0,
     #[doc = "1: Break frame is detected"]
     Break = 1,
 }
-impl From<BFFR_A> for bool {
+impl From<Bffr> for bool {
     #[inline(always)]
-    fn from(variant: BFFR_A) -> Self {
+    fn from(variant: Bffr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `BFF` reader - Break frame flag"]
+pub type BFF_R = crate::BitReader<Bffr>;
 impl BFF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> BFFR_A {
+    pub const fn variant(&self) -> Bffr {
         match self.bits {
-            false => BFFR_A::NoBreak,
-            true => BFFR_A::Break,
+            false => Bffr::NoBreak,
+            true => Bffr::Break,
         }
     }
     #[doc = "Break frame is not detected"]
     #[inline(always)]
     pub fn is_no_break(&self) -> bool {
-        *self == BFFR_A::NoBreak
+        *self == Bffr::NoBreak
     }
     #[doc = "Break frame is detected"]
     #[inline(always)]
     pub fn is_break(&self) -> bool {
-        *self == BFFR_A::Break
+        *self == Bffr::Break
     }
 }
 #[doc = "Break frame flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum BFFW_AW {
+pub enum BffwWO {
     #[doc = "0: Clear break frame flag"]
     Clear = 0,
 }
-impl From<BFFW_AW> for bool {
+impl From<BffwWO> for bool {
     #[inline(always)]
-    fn from(variant: BFFW_AW) -> Self {
+    fn from(variant: BffwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `BFF` writer - Break frame flag"]
-pub type BFF_W<'a, REG> = crate::BitWriter0C<'a, REG, BFFW_AW>;
+pub type BFF_W<'a, REG> = crate::BitWriter0C<'a, REG, BffwWO>;
 impl<'a, REG> BFF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -395,59 +395,59 @@ where
     #[doc = "Clear break frame flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(BFFW_AW::Clear)
+        self.variant(BffwWO::Clear)
     }
 }
-#[doc = "Field `CTSCF` reader - CTS change flag"]
-pub type CTSCF_R = crate::BitReader<CTSCFR_A>;
 #[doc = "CTS change flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CTSCFR_A {
+pub enum Ctscfr {
     #[doc = "0: No change on the CTS status line"]
     NoChange = 0,
     #[doc = "1: A change occurs on the CTS status line"]
     Change = 1,
 }
-impl From<CTSCFR_A> for bool {
+impl From<Ctscfr> for bool {
     #[inline(always)]
-    fn from(variant: CTSCFR_A) -> Self {
+    fn from(variant: Ctscfr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CTSCF` reader - CTS change flag"]
+pub type CTSCF_R = crate::BitReader<Ctscfr>;
 impl CTSCF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> CTSCFR_A {
+    pub const fn variant(&self) -> Ctscfr {
         match self.bits {
-            false => CTSCFR_A::NoChange,
-            true => CTSCFR_A::Change,
+            false => Ctscfr::NoChange,
+            true => Ctscfr::Change,
         }
     }
     #[doc = "No change on the CTS status line"]
     #[inline(always)]
     pub fn is_no_change(&self) -> bool {
-        *self == CTSCFR_A::NoChange
+        *self == Ctscfr::NoChange
     }
     #[doc = "A change occurs on the CTS status line"]
     #[inline(always)]
     pub fn is_change(&self) -> bool {
-        *self == CTSCFR_A::Change
+        *self == Ctscfr::Change
     }
 }
 #[doc = "CTS change flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CTSCFW_AW {
+pub enum CtscfwWO {
     #[doc = "0: Clear CTS change flag"]
     Clear = 0,
 }
-impl From<CTSCFW_AW> for bool {
+impl From<CtscfwWO> for bool {
     #[inline(always)]
-    fn from(variant: CTSCFW_AW) -> Self {
+    fn from(variant: CtscfwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `CTSCF` writer - CTS change flag"]
-pub type CTSCF_W<'a, REG> = crate::BitWriter0C<'a, REG, CTSCFW_AW>;
+pub type CTSCF_W<'a, REG> = crate::BitWriter0C<'a, REG, CtscfwWO>;
 impl<'a, REG> CTSCF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -455,7 +455,7 @@ where
     #[doc = "Clear CTS change flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(CTSCFW_AW::Clear)
+        self.variant(CtscfwWO::Clear)
     }
 }
 impl R {
@@ -528,7 +528,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -556,16 +556,6 @@ impl W {
     pub fn ctscf(&mut self) -> CTSCF_W<STS_SPEC> {
         CTSCF_W::new(self, 9)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
@@ -576,10 +566,11 @@ impl crate::RegisterSpec for STS_SPEC {
 impl crate::Readable for STS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts::W`](W) writer structure"]
 impl crate::Writable for STS_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0x0360;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0360;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0xc0"]
 impl crate::Resettable for STS_SPEC {
-    const RESET_VALUE: Self::Ux = 0xc0;
+    const RESET_VALUE: u32 = 0xc0;
 }

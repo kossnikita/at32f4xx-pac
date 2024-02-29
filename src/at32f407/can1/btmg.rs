@@ -18,58 +18,58 @@ pub type BTS2_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
 pub type RSAW_R = crate::FieldReader;
 #[doc = "Field `RSAW` writer - Resynchronization adjust width"]
 pub type RSAW_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
-#[doc = "Field `LBEN` reader - Loop back mode"]
-pub type LBEN_R = crate::BitReader<LBENR_A>;
 #[doc = "Loop back mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LBENR_A {
+pub enum Lbenr {
     #[doc = "0: Loop back mode is disabled"]
     Disabled = 0,
     #[doc = "1: Loop back mode is enabled"]
     Enabled = 1,
 }
-impl From<LBENR_A> for bool {
+impl From<Lbenr> for bool {
     #[inline(always)]
-    fn from(variant: LBENR_A) -> Self {
+    fn from(variant: Lbenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `LBEN` reader - Loop back mode"]
+pub type LBEN_R = crate::BitReader<Lbenr>;
 impl LBEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> LBENR_A {
+    pub const fn variant(&self) -> Lbenr {
         match self.bits {
-            false => LBENR_A::Disabled,
-            true => LBENR_A::Enabled,
+            false => Lbenr::Disabled,
+            true => Lbenr::Enabled,
         }
     }
     #[doc = "Loop back mode is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == LBENR_A::Disabled
+        *self == Lbenr::Disabled
     }
     #[doc = "Loop back mode is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == LBENR_A::Enabled
+        *self == Lbenr::Enabled
     }
 }
 #[doc = "Loop back mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LBENW_AW {
+pub enum LbenwWO {
     #[doc = "0: Loop back mode disable"]
     Disable = 0,
     #[doc = "1: Loop back mode enable"]
     Enable = 1,
 }
-impl From<LBENW_AW> for bool {
+impl From<LbenwWO> for bool {
     #[inline(always)]
-    fn from(variant: LBENW_AW) -> Self {
+    fn from(variant: LbenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LBEN` writer - Loop back mode"]
-pub type LBEN_W<'a, REG> = crate::BitWriter<'a, REG, LBENW_AW>;
+pub type LBEN_W<'a, REG> = crate::BitWriter<'a, REG, LbenwWO>;
 impl<'a, REG> LBEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -77,66 +77,66 @@ where
     #[doc = "Loop back mode disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(LBENW_AW::Disable)
+        self.variant(LbenwWO::Disable)
     }
     #[doc = "Loop back mode enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(LBENW_AW::Enable)
+        self.variant(LbenwWO::Enable)
     }
 }
-#[doc = "Field `LOEN` reader - Listen-Only mode"]
-pub type LOEN_R = crate::BitReader<LOENR_A>;
 #[doc = "Listen-Only mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LOENR_A {
+pub enum Loenr {
     #[doc = "0: Listen-Only mode is disabled"]
     Disabled = 0,
     #[doc = "1: Listen-Only mode is enabled"]
     Enabled = 1,
 }
-impl From<LOENR_A> for bool {
+impl From<Loenr> for bool {
     #[inline(always)]
-    fn from(variant: LOENR_A) -> Self {
+    fn from(variant: Loenr) -> Self {
         variant as u8 != 0
     }
 }
+#[doc = "Field `LOEN` reader - Listen-Only mode"]
+pub type LOEN_R = crate::BitReader<Loenr>;
 impl LOEN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> LOENR_A {
+    pub const fn variant(&self) -> Loenr {
         match self.bits {
-            false => LOENR_A::Disabled,
-            true => LOENR_A::Enabled,
+            false => Loenr::Disabled,
+            true => Loenr::Enabled,
         }
     }
     #[doc = "Listen-Only mode is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
-        *self == LOENR_A::Disabled
+        *self == Loenr::Disabled
     }
     #[doc = "Listen-Only mode is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
-        *self == LOENR_A::Enabled
+        *self == Loenr::Enabled
     }
 }
 #[doc = "Listen-Only mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LOENW_AW {
+pub enum LoenwWO {
     #[doc = "0: Listen-Only mode disable"]
     Disable = 0,
     #[doc = "1: Listen-Only mode enable"]
     Enable = 1,
 }
-impl From<LOENW_AW> for bool {
+impl From<LoenwWO> for bool {
     #[inline(always)]
-    fn from(variant: LOENW_AW) -> Self {
+    fn from(variant: LoenwWO) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `LOEN` writer - Listen-Only mode"]
-pub type LOEN_W<'a, REG> = crate::BitWriter<'a, REG, LOENW_AW>;
+pub type LOEN_W<'a, REG> = crate::BitWriter<'a, REG, LoenwWO>;
 impl<'a, REG> LOEN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -144,12 +144,12 @@ where
     #[doc = "Listen-Only mode disable"]
     #[inline(always)]
     pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(LOENW_AW::Disable)
+        self.variant(LoenwWO::Disable)
     }
     #[doc = "Listen-Only mode enable"]
     #[inline(always)]
     pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(LOENW_AW::Enable)
+        self.variant(LoenwWO::Enable)
     }
 }
 impl R {
@@ -198,7 +198,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<BTMG_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -238,16 +238,6 @@ impl W {
     pub fn loen(&mut self) -> LOEN_W<BTMG_SPEC> {
         LOEN_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Bit timing register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`btmg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`btmg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BTMG_SPEC;
@@ -258,10 +248,11 @@ impl crate::RegisterSpec for BTMG_SPEC {
 impl crate::Readable for BTMG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`btmg::W`](W) writer structure"]
 impl crate::Writable for BTMG_SPEC {
-    const ZEROS_BITMAP: Self::Ux = 0;
-    const ONES_BITMAP: Self::Ux = 0;
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BTMG to value 0"]
 impl crate::Resettable for BTMG_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }
