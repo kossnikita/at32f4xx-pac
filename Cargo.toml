@@ -15,6 +15,7 @@ exclude = [
     "html/**",
     "svd/**",
     ".vscode/**",
+    "PACKs/**",
 ]
 
 [package.metadata.docs.rs]
@@ -26,7 +27,22 @@ targets = []
 path = "src/lib.rs"
 
 [workspace]
-exclude = ["at32a403a", "at32f402", "at32f403", "at32f403a", "at32f405", "at32f407", "at32f413", "at32f421", "at32f423", "at32f425", "at32f435", "at32f437", "at32wb415", "at32f415"]
+exclude = [
+    "at32a403a",
+    "at32f402",
+    "at32f403",
+    "at32f403a",
+    "at32f405",
+    "at32f407",
+    "at32f413",
+    "at32f421",
+    "at32f423",
+    "at32f425",
+    "at32f435",
+    "at32f437",
+    "at32wb415",
+    "at32f415",
+]
 
 [dependencies]
 cortex-m = "0.7"
