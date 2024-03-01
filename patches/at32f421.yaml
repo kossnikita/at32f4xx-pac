@@ -2,8 +2,6 @@ _svd: "../svd/AT32F421.svd"
 
 _modify:
   name: AT32F421
-  ADC:
-    name: ADC1
 
 CRM:
   AHBEN:
@@ -23,6 +21,8 @@ _include:
   - common/ertc/common.yaml
   - common/flash/common.yaml
   - common/gpio/gpio-v2.yaml
+  - common/adc/adc1.yaml
+  - common/adc/occe.yaml
   - common/adc/common.yaml
   - common/adc/odt.yaml
   - common/dma/common.yaml

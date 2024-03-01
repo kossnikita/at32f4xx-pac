@@ -64,68 +64,68 @@ where
 }
 #[doc = "Channels conversion end flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum Ccer {
+pub enum Occer {
     #[doc = "0: Conversion is not complete"]
     NotComplete = 0,
     #[doc = "1: Conversion is complete"]
     Complete = 1,
 }
-impl From<Ccer> for bool {
+impl From<Occer> for bool {
     #[inline(always)]
-    fn from(variant: Ccer) -> Self {
+    fn from(variant: Occer) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CCE` reader - Channels conversion end flag"]
-pub type CCE_R = crate::BitReader<Ccer>;
-impl CCE_R {
+#[doc = "Field `OCCE` reader - Channels conversion end flag"]
+pub type OCCE_R = crate::BitReader<Occer>;
+impl OCCE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> Ccer {
+    pub const fn variant(&self) -> Occer {
         match self.bits {
-            false => Ccer::NotComplete,
-            true => Ccer::Complete,
+            false => Occer::NotComplete,
+            true => Occer::Complete,
         }
     }
     #[doc = "Conversion is not complete"]
     #[inline(always)]
     pub fn is_not_complete(&self) -> bool {
-        *self == Ccer::NotComplete
+        *self == Occer::NotComplete
     }
     #[doc = "Conversion is complete"]
     #[inline(always)]
     pub fn is_complete(&self) -> bool {
-        *self == Ccer::Complete
+        *self == Occer::Complete
     }
 }
 #[doc = "Channels conversion end flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum CcewWO {
+pub enum OccewWO {
     #[doc = "0: Clear flag"]
     Clear = 0,
 }
-impl From<CcewWO> for bool {
+impl From<OccewWO> for bool {
     #[inline(always)]
-    fn from(variant: CcewWO) -> Self {
+    fn from(variant: OccewWO) -> Self {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CCE` writer - Channels conversion end flag"]
-pub type CCE_W<'a, REG> = crate::BitWriter0C<'a, REG, CcewWO>;
-impl<'a, REG> CCE_W<'a, REG>
+#[doc = "Field `OCCE` writer - Channels conversion end flag"]
+pub type OCCE_W<'a, REG> = crate::BitWriter0C<'a, REG, OccewWO>;
+impl<'a, REG> OCCE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
     #[doc = "Clear flag"]
     #[inline(always)]
     pub fn clear(self) -> &'a mut crate::W<REG> {
-        self.variant(CcewWO::Clear)
+        self.variant(OccewWO::Clear)
     }
 }
 #[doc = "Field `PCCE` reader - Preempted channels conversion end flag"]
-pub use CCE_R as PCCE_R;
+pub use OCCE_R as PCCE_R;
 #[doc = "Field `PCCE` writer - Preempted channels conversion end flag"]
-pub use CCE_W as PCCE_W;
+pub use OCCE_W as PCCE_W;
 #[doc = "Preempted channel conversion start flag\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Pccsr {
@@ -198,8 +198,8 @@ impl R {
     }
     #[doc = "Bit 1 - Channels conversion end flag"]
     #[inline(always)]
-    pub fn cce(&self) -> CCE_R {
-        CCE_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn occe(&self) -> OCCE_R {
+        OCCE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Preempted channels conversion end flag"]
     #[inline(always)]
@@ -222,7 +222,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("STS")
             .field("pccs", &format_args!("{}", self.pccs().bit()))
             .field("occs", &format_args!("{}", self.occs().bit()))
-            .field("cce", &format_args!("{}", self.cce().bit()))
+            .field("occe", &format_args!("{}", self.occe().bit()))
             .field("pcce", &format_args!("{}", self.pcce().bit()))
             .field("vmor", &format_args!("{}", self.vmor().bit()))
             .finish()
@@ -243,8 +243,8 @@ impl W {
     #[doc = "Bit 1 - Channels conversion end flag"]
     #[inline(always)]
     #[must_use]
-    pub fn cce(&mut self) -> CCE_W<STS_SPEC> {
-        CCE_W::new(self, 1)
+    pub fn occe(&mut self) -> OCCE_W<STS_SPEC> {
+        OCCE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Preempted channels conversion end flag"]
     #[inline(always)]

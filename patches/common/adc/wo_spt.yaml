@@ -1,4 +1,4 @@
-ADC,ADC?:
+ADC?:
   _array:
     PCDTO?:
       description: Data offset for Preempted channel %s
@@ -28,13 +28,13 @@ ADC,ADC?:
         OutOfRange: [1, "Voltage is outside the value programmed"]
       _W0C:
         Clear: [0, "Clear flag"]
-    CCE,?CCE:
+    "?CCE":
       _read:
         NotComplete: [0, "Conversion is not complete"]
         Complete: [1, "Conversion is complete"]
       _W0C:
         Clear: [0, "Clear flag"]
-    CCS,?CCS:
+    "?CCS":
       _read:
         Idle: [0, "No channel conversion started"]
         Started: [1, "Channel conversion has started"]

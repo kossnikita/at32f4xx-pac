@@ -1,3 +1,3 @@
-ADC,ADC?:
+ADC?:
   ODT:
     "*ODT": [0, 0xFFFF]

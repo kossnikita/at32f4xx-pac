@@ -11,6 +11,7 @@ _include:
   - common/gpio/gpio-v1.yaml
   - common/gpio/hdrv.yaml
   - common/adc/common.yaml
+  - common/adc/occe.yaml
   - common/can/common.yaml
   - common/exint/common.yaml
   - common/dma/common.yaml

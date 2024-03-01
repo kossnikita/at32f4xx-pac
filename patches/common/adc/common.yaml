@@ -1,7 +1,7 @@
 _include:
   - wo_spt.yaml
 
-ADC,ADC?:
+ADC?:
   SPT?:
     _array:
       CSPT*:

@@ -8,6 +8,7 @@ _include:
   - common/crm/pllhextdiv.yaml
   - common/flash/common.yaml
   - common/gpio/gpio-v1.yaml
+  - common/adc/occe.yaml
   - common/adc/common.yaml
   - common/can/common.yaml
   - common/exint/common.yaml

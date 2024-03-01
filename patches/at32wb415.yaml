@@ -29,6 +29,7 @@ _include:
   - common/flash/common.yaml
   - common/gpio/gpio-v1.yaml
   - common/adc/wo_spt.yaml
+  - common/adc/occe.yaml
   - common/adc/odt.yaml
   - common/usart/common.yaml
   - common/spi/wo_i2s.yaml

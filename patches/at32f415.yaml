@@ -199,6 +199,7 @@ _include:
   - common/ertc/wat.yaml
   - common/flash/common.yaml
   - common/gpio/gpio-v1.yaml
+  - common/adc/occe.yaml
   - common/adc/common.yaml
   - common/adc/odt.yaml
   - common/can/common.yaml

@@ -18505,13 +18505,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>CCE</name>
+              <name>OCCE</name>
               <description>Channels conversion end flag</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <modifiedWriteValues>zeroToClear</modifiedWriteValues>
               <enumeratedValues>
-                <name>CCER</name>
+                <name>OCCER</name>
                 <usage>read</usage>
                 <enumeratedValue>
                   <name>NotComplete</name>
@@ -18525,7 +18525,7 @@
                 </enumeratedValue>
               </enumeratedValues>
               <enumeratedValues>
-                <name>CCEW</name>
+                <name>OCCEW</name>
                 <usage>write</usage>
                 <enumeratedValue>
                   <name>Clear</name>
@@ -18540,10 +18540,10 @@
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <modifiedWriteValues>zeroToClear</modifiedWriteValues>
-              <enumeratedValues derivedFrom="CCER">
+              <enumeratedValues derivedFrom="OCCER">
                 <usage>read</usage>
               </enumeratedValues>
-              <enumeratedValues derivedFrom="CCEW">
+              <enumeratedValues derivedFrom="OCCEW">
                 <usage>write</usage>
               </enumeratedValues>
             </field>
@@ -19461,13 +19461,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>CCE</name>
+              <name>OCCE</name>
               <description>Channels conversion end flag</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <modifiedWriteValues>zeroToClear</modifiedWriteValues>
               <enumeratedValues>
-                <name>CCER</name>
+                <name>OCCER</name>
                 <usage>read</usage>
                 <enumeratedValue>
                   <name>NotComplete</name>
@@ -19481,7 +19481,7 @@
                 </enumeratedValue>
               </enumeratedValues>
               <enumeratedValues>
-                <name>CCEW</name>
+                <name>OCCEW</name>
                 <usage>write</usage>
                 <enumeratedValue>
                   <name>Clear</name>
@@ -19496,10 +19496,10 @@
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <modifiedWriteValues>zeroToClear</modifiedWriteValues>
-              <enumeratedValues derivedFrom="CCER">
+              <enumeratedValues derivedFrom="OCCER">
                 <usage>read</usage>
               </enumeratedValues>
-              <enumeratedValues derivedFrom="CCEW">
+              <enumeratedValues derivedFrom="OCCEW">
                 <usage>write</usage>
               </enumeratedValues>
             </field>
@@ -20393,13 +20393,13 @@
               </enumeratedValues>
             </field>
             <field>
-              <name>CCE</name>
+              <name>OCCE</name>
               <description>Channels conversion end flag</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <modifiedWriteValues>zeroToClear</modifiedWriteValues>
               <enumeratedValues>
-                <name>CCER</name>
+                <name>OCCER</name>
                 <usage>read</usage>
                 <enumeratedValue>
                   <name>NotComplete</name>
@@ -20413,7 +20413,7 @@
                 </enumeratedValue>
               </enumeratedValues>
               <enumeratedValues>
-                <name>CCEW</name>
+                <name>OCCEW</name>
                 <usage>write</usage>
                 <enumeratedValue>
                   <name>Clear</name>
@@ -20428,10 +20428,10 @@
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <modifiedWriteValues>zeroToClear</modifiedWriteValues>
-              <enumeratedValues derivedFrom="CCER">
+              <enumeratedValues derivedFrom="OCCER">
                 <usage>read</usage>
               </enumeratedValues>
-              <enumeratedValues derivedFrom="CCEW">
+              <enumeratedValues derivedFrom="OCCEW">
                 <usage>write</usage>
               </enumeratedValues>
             </field>

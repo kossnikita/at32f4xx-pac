@@ -1,4 +1,4 @@
-# ${env:RUST_LOG}="warn"
+${env:RUST_LOG}="warn"
 New-item -ItemType Directory . -Name svd -ErrorAction Ignore | Out-Null
 Get-ChildItem ./PACKs/Keil5/ -Filter *.pack | 
 Foreach-Object -Parallel {
@@ -54,4 +54,4 @@ $index = "./html/original/index.html"
 (Get-Content $index).replace('comparisons.html', 'comparison/index.html') | Set-Content $index
 $index = "./html/index.html"
 (Get-Content $index).replace('comparisons.html', 'comparison/index.html') | Set-Content $index
-# Remove-Item svd -Recurse
+Remove-Item svd -Recurse

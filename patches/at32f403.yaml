@@ -9,6 +9,7 @@ _include:
   - common/flash/common.yaml
   - common/gpio/gpio-v1.yaml
   - common/adc/common.yaml
+  - common/adc/occe.yaml
   - common/dma/common.yaml
   - common/can/common.yaml
   - common/bpr/common.yaml
