@@ -16085,9 +16085,8 @@
         <usage>registers</usage>
       </addressBlock>
       <interrupt>
-        <name>ADC1_2</name>
-        <description>ADC1 and ADC2 global interrupt</description>
-        <value>18</value>
+        <name>ADC_CMP</name>
+        <value>12</value>
       </interrupt>
       <registers>
         <register>

@@ -15,6 +15,15 @@ CRM:
       ADCEN:
         name: ADC1EN
 
+ADC1:
+  _delete:
+    _interrupts:
+      - ADC1_2
+  _add:
+    _interrupts:
+      ADC_CMP:
+        value: 12
+
 _include:
   - common/crm/common.yaml
   - common/crm/pllhextdiv.yaml

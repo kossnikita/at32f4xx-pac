@@ -14,7 +14,6 @@ PROVIDE(TMR1_BRK_OVF_TRG_HALL = DefaultHandler);
 PROVIDE(TMR1_CH = DefaultHandler);
 PROVIDE(TMR3 = DefaultHandler);
 PROVIDE(TMR6 = DefaultHandler);
-PROVIDE(ADC1_2 = DefaultHandler);
 PROVIDE(TMR14 = DefaultHandler);
 PROVIDE(TMR15 = DefaultHandler);
 PROVIDE(TMR16 = DefaultHandler);

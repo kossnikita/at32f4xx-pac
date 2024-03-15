@@ -28,7 +28,6 @@ extern "C" {
     fn TMR1_CH();
     fn TMR3();
     fn TMR6();
-    fn ADC1_2();
     fn TMR14();
     fn TMR15();
     fn TMR16();
@@ -85,7 +84,7 @@ pub static __INTERRUPTS: [Vector; 37] = [
     Vector { _reserved: 0 },
     Vector { _handler: TMR3 },
     Vector { _handler: TMR6 },
-    Vector { _handler: ADC1_2 },
+    Vector { _reserved: 0 },
     Vector { _handler: TMR14 },
     Vector { _handler: TMR15 },
     Vector { _handler: TMR16 },
@@ -141,8 +140,6 @@ pub enum Interrupt {
     TMR3 = 16,
     #[doc = "17 - TMR6 global interrupt"]
     TMR6 = 17,
-    #[doc = "18 - ADC1 and ADC2 global interrupt"]
-    ADC1_2 = 18,
     #[doc = "19 - TMR14 global interrupt"]
     TMR14 = 19,
     #[doc = "20 - TMR15 global interrupt"]
