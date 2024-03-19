@@ -5,7 +5,7 @@ pub type W = crate::W<DT_SPEC>;
 #[doc = "Field `DT` reader - data register"]
 pub type DT_R = crate::FieldReader;
 #[doc = "Field `DT` writer - data register"]
-pub type DT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+pub type DT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
 impl R {
     #[doc = "Bits 0:7 - data register"]
     #[inline(always)]

@@ -15,6 +15,8 @@ _include:
   - common/bpr/common.yaml
   - common/crc/common.yaml
   - common/crc/poly.yaml
+  - common/i2c/common.yaml
+  - common/i2c/v1.yaml
   - common/tmr/common.yaml
   - common/iomux/common.yaml
   - common/iomux/iomux_gpioe.yaml

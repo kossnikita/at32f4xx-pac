@@ -33,6 +33,8 @@ _include:
   - common/adc/odt.yaml
   - common/usart/common.yaml
   - common/spi/wo_i2s.yaml
+  - common/i2c/common.yaml
+  - common/i2c/v1.yaml
   - common/tmr/common.yaml
   - common/tmr/tmr10.yaml
   - common/iomux/common.yaml

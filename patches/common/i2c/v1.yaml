@@ -1,0 +1,218 @@
+I2C?:
+  CTRL1:
+    PERMODE:
+      I2C: [0, "I2C mode"]
+      SMBus: [1, "SMBus mode"]
+    SMBMODE:
+      Slave: [0, "SMBus slave"]
+      Host: [1, "SMBus host"]
+    ARPEN:
+      _read:
+        Disabled: [0, "SMBus address resolution protocol is disabled"]
+        Enabled: [1, "SMBus address resolution protocol is enabled"]
+      _write:
+        Disable: [0, "Disable SMBus address resolution protocol"]
+        Enable: [1, "Enable SMBus address resolution protocol"]
+    PECEN:
+      _read:
+        Disabled: [0, "PEC calculation is disabled"]
+        Enabled: [1, "PEC calculation is enabled"]
+      _write:
+        Disable: [0, "Disable PEC calculation"]
+        Enable: [1, "Enable PEC calculation"]
+    GCAEN:
+      _read:
+        Disabled: [0, "General call address is disabled"]
+        Enabled: [1, "General call address is enabled"]
+      _write:
+        Disable: [0, "Disable general call address"]
+        Enable: [1, "Enable general call address"]
+    STRETCH:
+      _read:
+        Disabled: [0, "Clock stretching mode is disabled"]
+        Enabled: [1, "Clock stretching mode is enabled"]
+      _write:
+        Disable: [0, "Disable clock stretching mode"]
+        Enable: [1, "Enable clock stretching mode"]
+    ACKEN:
+      _read:
+        Disabled: [0, "No acknowledge returned"]
+        Enabled:
+          [
+            1,
+            "Acknowledge returned after a byte is received (matched address or data)",
+          ]
+      _write:
+        Disable: [0, "Disable acknowledge"]
+        Enable: [1, "Enable acknowledge"]
+    GENSTART:
+      NoStart: [0, "No Start generation"]
+      Start:
+        [
+          1,
+          "In master mode: stop generation after current byte/start, in slave mode: release SCL and SDA after current byte",
+        ]
+    GENSTOP:
+      NoStop: [0, "No Stop generation"]
+      Stop:
+        [
+          1,
+          "In master mode: repeated start generation, in slave mode: start generation when bus is free",
+        ]
+    MACKCTRL:
+      Current:
+        [0, "ACKEN bit controls ACK of the current byte being transferred"]
+      Next: [1, "ACKEN bit controls ACK of the next byte to be transferred"]
+    PECTEN:
+      _read:
+        Disabled: [0, "PEC transfer is disabled"]
+        Enabled: [1, "PEC transfer is enabled"]
+      _write:
+        Disable: [0, "Disable PEC transfer"]
+        Enable: [1, "Enable PEC transfer"]
+    SMBALERT:
+      High: [0, "SMBus alert pin high"]
+      Low: [1, "SMBus alert pin low"]
+    RESET:
+      NotReset: [0, "I2C peripheral not under reset"]
+      Reset: [1, "I2C peripheral under reset"]
+  CTRL2:
+    CLKFREQ: [2, 120]
+    ERRIEN:
+      _read:
+        Disabled: [0, "Error interrupt is disabled"]
+        Enabled: [1, "Error interrupt is enabled"]
+      _write:
+        Disable: [0, "Disable Error interrupt"]
+        Enable: [1, "Enable Error interrupt"]
+    EVTIEN:
+      _read:
+        Disabled: [0, "Event interrupt is disabled"]
+        Enabled: [1, "Event interrupt is enabled"]
+      _write:
+        Disable: [0, "Disable Event interrupt"]
+        Enable: [1, "Enable Event interrupt"]
+    DATAIEN:
+      _read:
+        Disabled: [0, "Data transfer interrupt is disabled"]
+        Enabled: [1, "Data transfer interrupt is enabled"]
+      _write:
+        Disable: [0, "Disable Data transfer interrupt"]
+        Enable: [1, "Enable Data transfer interrupt"]
+    DMAEN:
+      _read:
+        Disabled: [0, "DMA transfer is disabled"]
+        Enabled: [1, "DMA transfer is enabled"]
+      _write:
+        Disable: [0, "Disable DMA transfer"]
+        Enable: [1, "Enable DMA transfer"]
+    DMAEND:
+      NotLast: [0, "Next DMA EOT is not the last transfer"]
+      Last: [1, "Next DMA EOT is the last transfer"]
+  OADDR1:
+    ADDR1MODE:
+      ADD7: [0, "7-bit slave address"]
+      ADD10: [1, "10-bit slave address"]
+  OADDR2:
+    ADDR2EN:
+      Single: [0, "Single addressing mode"]
+      Dual: [1, "Dual addressing mode"]
+  DT:
+    DT: [0, 0xFF]
+  STS1:
+    STARTF:
+      NoStart: [0, "No Start condition"]
+      Start: [1, "Start condition generated"]
+    ADDR7F:
+      NotMatch: [0, "Adress mismatched or not received"]
+      Match: [1, "Received slave address matched with one of the enabled slave addresses"]
+    TDC:
+      NotFinished: [0, "Data byte transfer not done"]
+      Finished: [1, "Data byte transfer successful"]
+    ADDRHF:
+      NotMatch: [0, "Master 9~8 bit address head mismatch"]
+      Match: [1, "Master 9~8 bit address head match"]
+    STOPF:
+      NoStop: [0, "No Stop condition detected"]
+      Stop: [1, "Stop condition detected"]
+    RDBF:
+      Empty: [0, "Data register empty"]
+      NotEmpty: [1, "Data register not empty"]
+    TDBE:
+      NotEmpty: [0, "Data register not empty"]
+      Empty: [1, "Data register empty"]
+    BUSERR:
+      _read:
+        NoError: [0, "No misplaced Start or Stop condition"]
+        Error: [1, "Misplaced Start or Stop condition"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+    ARLOST:
+      _read:
+        NoLost: [0, "No Arbitration Lost detected"]
+        Lost: [1, "Arbitration Lost detected"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+    ACKFAIL:
+      _read:
+        NoFailure: [0, "No acknowledge failure"]
+        Failure: [1, "Acknowledge failure"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+    OUF:
+      _read:
+        NoOverrun: [0, "No overrun/underrun occured"]
+        Overrun: [1, "Overrun/underrun occured"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+    PECERR:
+      _read:
+        NoError: [0, "no PEC error: receiver returns ACK after PEC reception (if ACK=1)"]
+        Error: [1, "PEC error: receiver returns NACK after PEC reception (whatever ACK)"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+    TMOUT:
+      _read:
+        NoTimeout: [0, "No Timeout error"]
+        Timeout: [1, "SCL remained LOW for 25 ms"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+    ALERTF:
+      _read:
+        NoAlert: [0, "No SMBALERT occured"]
+        Alert: [1, "SMBALERT occurred"]
+      _W0C:
+        Clear: [0, "Clear flag"]
+  STS2:
+    TRMODE:
+      Slave: [0, "Slave mode"]
+      Master: [1, "Master mode"]
+    BUSYF:
+      Idle: [0, "Bus idle"]
+      Busy: [1, "Bus busy"]
+    DIRF:
+      Reception: [0, "Data reception"]
+      Transmission: [1, "Data transmission"]
+    GCADDRF:
+      NotReceived: [0, "General call address is not received"]
+      Received: [1, "General call address is received"]
+    DEVADDRF:
+      NotReceived: [0, "SMBus device address is not received"]
+      Received: [1, "SMBus device address is received"]
+    HOSTADDRF:
+      NotReceived: [0, "SMBus host address is not received"]
+      Received: [1, "SMBus host address is received"]
+    ADDR2F:
+      OADDR1: [0, "Received address matches the contents of OADDR1"]
+      OADDR2: [1, "Received address matches the contents of OADDR2"]
+    PECVAL: [0, 0xFF]
+  CLKCTRL:
+    SPEED: [0, 0xFFF]
+    DUTYMODE:
+      Duty2_1: [0, "The ratio of low to high is 2:1"]
+      Duty16_9: [1, "The ratio of low to high is 16:9"]
+    SPEEDMODE:
+      Standard: [0, "Standard mode (up to 100 kHz)"]
+      Fast: [1, "Fast mode (up to 400 kHz)"]
+  TMRISE:
+    RISETIME: [0, 0x3F]

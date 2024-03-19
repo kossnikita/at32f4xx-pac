@@ -1,0 +1,3 @@
+I2C?:
+  RXDT, TXDT:
+    DT: [0, 0xFF]

@@ -2,10 +2,73 @@
 pub type R = crate::R<CTRL1_SPEC>;
 #[doc = "Register `CTRL1` writer"]
 pub type W = crate::W<CTRL1_SPEC>;
+#[doc = "I2C peripheral enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum I2cenr {
+    #[doc = "0: I2C peripheral is disabled"]
+    Disabled = 0,
+    #[doc = "1: I2C peripheral is enabled"]
+    Enabled = 1,
+}
+impl From<I2cenr> for bool {
+    #[inline(always)]
+    fn from(variant: I2cenr) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `I2CEN` reader - I2C peripheral enable"]
-pub type I2CEN_R = crate::BitReader;
+pub type I2CEN_R = crate::BitReader<I2cenr>;
+impl I2CEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> I2cenr {
+        match self.bits {
+            false => I2cenr::Disabled,
+            true => I2cenr::Enabled,
+        }
+    }
+    #[doc = "I2C peripheral is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == I2cenr::Disabled
+    }
+    #[doc = "I2C peripheral is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == I2cenr::Enabled
+    }
+}
+#[doc = "I2C peripheral enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum I2cenwWO {
+    #[doc = "0: Disable I2C peripheral"]
+    Disable = 0,
+    #[doc = "1: Enable I2C peripheral"]
+    Enable = 1,
+}
+impl From<I2cenwWO> for bool {
+    #[inline(always)]
+    fn from(variant: I2cenwWO) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `I2CEN` writer - I2C peripheral enable"]
-pub type I2CEN_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type I2CEN_W<'a, REG> = crate::BitWriter<'a, REG, I2cenwWO>;
+impl<'a, REG> I2CEN_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disable I2C peripheral"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(I2cenwWO::Disable)
+    }
+    #[doc = "Enable I2C peripheral"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(I2cenwWO::Enable)
+    }
+}
 #[doc = "Field `TDIEN` reader - Transmit data interrupt enable"]
 pub type TDIEN_R = crate::BitReader;
 #[doc = "Field `TDIEN` writer - Transmit data interrupt enable"]

@@ -1,0 +1,13 @@
+I2C?:
+  CTRL1:
+    I2CEN:
+      _read:
+        Disabled: [0, "I2C peripheral is disabled"]
+        Enabled: [1, "I2C peripheral is enabled"]
+      _write:
+        Disable: [0, "Disable I2C peripheral"]
+        Enable: [1, "Enable I2C peripheral"]
+  OADDR1:
+    ADDR1: [0, 0x3FF]
+  OADDR2:
+    ADDR2: [0, 0x7F]

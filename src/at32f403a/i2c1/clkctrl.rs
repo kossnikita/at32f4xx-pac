@@ -5,15 +5,113 @@ pub type W = crate::W<CLKCTRL_SPEC>;
 #[doc = "Field `SPEED` reader - I2C bus speed config"]
 pub type SPEED_R = crate::FieldReader<u16>;
 #[doc = "Field `SPEED` writer - I2C bus speed config"]
-pub type SPEED_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
+pub type SPEED_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 12, u16>;
+#[doc = "Fast mode duty cycle\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum DUTYMODE_A {
+    #[doc = "0: The ratio of low to high is 2:1"]
+    Duty2_1 = 0,
+    #[doc = "1: The ratio of low to high is 16:9"]
+    Duty16_9 = 1,
+}
+impl From<DUTYMODE_A> for bool {
+    #[inline(always)]
+    fn from(variant: DUTYMODE_A) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `DUTYMODE` reader - Fast mode duty cycle"]
-pub type DUTYMODE_R = crate::BitReader;
+pub type DUTYMODE_R = crate::BitReader<DUTYMODE_A>;
+impl DUTYMODE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> DUTYMODE_A {
+        match self.bits {
+            false => DUTYMODE_A::Duty2_1,
+            true => DUTYMODE_A::Duty16_9,
+        }
+    }
+    #[doc = "The ratio of low to high is 2:1"]
+    #[inline(always)]
+    pub fn is_duty2_1(&self) -> bool {
+        *self == DUTYMODE_A::Duty2_1
+    }
+    #[doc = "The ratio of low to high is 16:9"]
+    #[inline(always)]
+    pub fn is_duty16_9(&self) -> bool {
+        *self == DUTYMODE_A::Duty16_9
+    }
+}
 #[doc = "Field `DUTYMODE` writer - Fast mode duty cycle"]
-pub type DUTYMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type DUTYMODE_W<'a, REG> = crate::BitWriter<'a, REG, DUTYMODE_A>;
+impl<'a, REG> DUTYMODE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "The ratio of low to high is 2:1"]
+    #[inline(always)]
+    pub fn duty2_1(self) -> &'a mut crate::W<REG> {
+        self.variant(DUTYMODE_A::Duty2_1)
+    }
+    #[doc = "The ratio of low to high is 16:9"]
+    #[inline(always)]
+    pub fn duty16_9(self) -> &'a mut crate::W<REG> {
+        self.variant(DUTYMODE_A::Duty16_9)
+    }
+}
+#[doc = "Speed mode selection\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum SPEEDMODE_A {
+    #[doc = "0: Standard mode (up to 100 kHz)"]
+    Standard = 0,
+    #[doc = "1: Fast mode (up to 400 kHz)"]
+    Fast = 1,
+}
+impl From<SPEEDMODE_A> for bool {
+    #[inline(always)]
+    fn from(variant: SPEEDMODE_A) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `SPEEDMODE` reader - Speed mode selection"]
-pub type SPEEDMODE_R = crate::BitReader;
+pub type SPEEDMODE_R = crate::BitReader<SPEEDMODE_A>;
+impl SPEEDMODE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> SPEEDMODE_A {
+        match self.bits {
+            false => SPEEDMODE_A::Standard,
+            true => SPEEDMODE_A::Fast,
+        }
+    }
+    #[doc = "Standard mode (up to 100 kHz)"]
+    #[inline(always)]
+    pub fn is_standard(&self) -> bool {
+        *self == SPEEDMODE_A::Standard
+    }
+    #[doc = "Fast mode (up to 400 kHz)"]
+    #[inline(always)]
+    pub fn is_fast(&self) -> bool {
+        *self == SPEEDMODE_A::Fast
+    }
+}
 #[doc = "Field `SPEEDMODE` writer - Speed mode selection"]
-pub type SPEEDMODE_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type SPEEDMODE_W<'a, REG> = crate::BitWriter<'a, REG, SPEEDMODE_A>;
+impl<'a, REG> SPEEDMODE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Standard mode (up to 100 kHz)"]
+    #[inline(always)]
+    pub fn standard(self) -> &'a mut crate::W<REG> {
+        self.variant(SPEEDMODE_A::Standard)
+    }
+    #[doc = "Fast mode (up to 400 kHz)"]
+    #[inline(always)]
+    pub fn fast(self) -> &'a mut crate::W<REG> {
+        self.variant(SPEEDMODE_A::Fast)
+    }
+}
 impl R {
     #[doc = "Bits 0:11 - I2C bus speed config"]
     #[inline(always)]

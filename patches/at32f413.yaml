@@ -18,6 +18,8 @@ _include:
   - common/crc/poly.yaml
   - common/usart/common.yaml
   - common/spi/common.yaml
+  - common/i2c/common.yaml
+  - common/i2c/v1.yaml
   - common/tmr/common.yaml
   - common/tmr/tmr2_32.yaml
   - common/tmr/tmr10.yaml

@@ -2,14 +2,63 @@
 pub type R = crate::R<OADDR2_SPEC>;
 #[doc = "Register `OADDR2` writer"]
 pub type W = crate::W<OADDR2_SPEC>;
+#[doc = "Own address 2 enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ADDR2EN_A {
+    #[doc = "0: Single addressing mode"]
+    Single = 0,
+    #[doc = "1: Dual addressing mode"]
+    Dual = 1,
+}
+impl From<ADDR2EN_A> for bool {
+    #[inline(always)]
+    fn from(variant: ADDR2EN_A) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `ADDR2EN` reader - Own address 2 enable"]
-pub type ADDR2EN_R = crate::BitReader;
+pub type ADDR2EN_R = crate::BitReader<ADDR2EN_A>;
+impl ADDR2EN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> ADDR2EN_A {
+        match self.bits {
+            false => ADDR2EN_A::Single,
+            true => ADDR2EN_A::Dual,
+        }
+    }
+    #[doc = "Single addressing mode"]
+    #[inline(always)]
+    pub fn is_single(&self) -> bool {
+        *self == ADDR2EN_A::Single
+    }
+    #[doc = "Dual addressing mode"]
+    #[inline(always)]
+    pub fn is_dual(&self) -> bool {
+        *self == ADDR2EN_A::Dual
+    }
+}
 #[doc = "Field `ADDR2EN` writer - Own address 2 enable"]
-pub type ADDR2EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ADDR2EN_W<'a, REG> = crate::BitWriter<'a, REG, ADDR2EN_A>;
+impl<'a, REG> ADDR2EN_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Single addressing mode"]
+    #[inline(always)]
+    pub fn single(self) -> &'a mut crate::W<REG> {
+        self.variant(ADDR2EN_A::Single)
+    }
+    #[doc = "Dual addressing mode"]
+    #[inline(always)]
+    pub fn dual(self) -> &'a mut crate::W<REG> {
+        self.variant(ADDR2EN_A::Dual)
+    }
+}
 #[doc = "Field `ADDR2` reader - Own address 2"]
 pub type ADDR2_R = crate::FieldReader;
 #[doc = "Field `ADDR2` writer - Own address 2"]
-pub type ADDR2_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
+pub type ADDR2_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
 impl R {
     #[doc = "Bit 0 - Own address 2 enable"]
     #[inline(always)]

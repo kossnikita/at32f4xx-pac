@@ -5,11 +5,60 @@ pub type W = crate::W<OADDR1_SPEC>;
 #[doc = "Field `ADDR1` reader - Own address 1"]
 pub type ADDR1_R = crate::FieldReader<u16>;
 #[doc = "Field `ADDR1` writer - Own address 1"]
-pub type ADDR1_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
+pub type ADDR1_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 10, u16>;
+#[doc = "Address mode\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum ADDR1MODE_A {
+    #[doc = "0: 7-bit slave address"]
+    Add7 = 0,
+    #[doc = "1: 10-bit slave address"]
+    Add10 = 1,
+}
+impl From<ADDR1MODE_A> for bool {
+    #[inline(always)]
+    fn from(variant: ADDR1MODE_A) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `ADDR1MODE` reader - Address mode"]
-pub type ADDR1MODE_R = crate::BitReader;
+pub type ADDR1MODE_R = crate::BitReader<ADDR1MODE_A>;
+impl ADDR1MODE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> ADDR1MODE_A {
+        match self.bits {
+            false => ADDR1MODE_A::Add7,
+            true => ADDR1MODE_A::Add10,
+        }
+    }
+    #[doc = "7-bit slave address"]
+    #[inline(always)]
+    pub fn is_add7(&self) -> bool {
+        *self == ADDR1MODE_A::Add7
+    }
+    #[doc = "10-bit slave address"]
+    #[inline(always)]
+    pub fn is_add10(&self) -> bool {
+        *self == ADDR1MODE_A::Add10
+    }
+}
 #[doc = "Field `ADDR1MODE` writer - Address mode"]
-pub type ADDR1MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ADDR1MODE_W<'a, REG> = crate::BitWriter<'a, REG, ADDR1MODE_A>;
+impl<'a, REG> ADDR1MODE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "7-bit slave address"]
+    #[inline(always)]
+    pub fn add7(self) -> &'a mut crate::W<REG> {
+        self.variant(ADDR1MODE_A::Add7)
+    }
+    #[doc = "10-bit slave address"]
+    #[inline(always)]
+    pub fn add10(self) -> &'a mut crate::W<REG> {
+        self.variant(ADDR1MODE_A::Add10)
+    }
+}
 impl R {
     #[doc = "Bits 0:9 - Own address 1"]
     #[inline(always)]
