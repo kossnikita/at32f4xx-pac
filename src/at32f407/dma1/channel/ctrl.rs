@@ -544,6 +544,7 @@ impl From<PWIDTH_A> for u8 {
 impl crate::FieldSpec for PWIDTH_A {
     type Ux = u8;
 }
+impl crate::IsEnum for PWIDTH_A {}
 #[doc = "Field `PWIDTH` reader - Peripheral data bit width"]
 pub type PWIDTH_R = crate::FieldReader<PWIDTH_A>;
 impl PWIDTH_R {
@@ -616,6 +617,7 @@ impl From<MWIDTH_A> for u8 {
 impl crate::FieldSpec for MWIDTH_A {
     type Ux = u8;
 }
+impl crate::IsEnum for MWIDTH_A {}
 #[doc = "Field `MWIDTH` reader - Memory data bit width"]
 pub type MWIDTH_R = crate::FieldReader<MWIDTH_A>;
 impl MWIDTH_R {
@@ -690,6 +692,7 @@ impl From<CHPL_A> for u8 {
 impl crate::FieldSpec for CHPL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for CHPL_A {}
 #[doc = "Field `CHPL` reader - Channel Priority level"]
 pub type CHPL_R = crate::FieldReader<CHPL_A>;
 impl CHPL_R {
@@ -726,7 +729,7 @@ impl CHPL_R {
     }
 }
 #[doc = "Field `CHPL` writer - Channel Priority level"]
-pub type CHPL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, CHPL_A>;
+pub type CHPL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, CHPL_A, crate::Safe>;
 impl<'a, REG> CHPL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -885,24 +888,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("chen", &format_args!("{}", self.chen().bit()))
-            .field("fdtien", &format_args!("{}", self.fdtien().bit()))
-            .field("hdtien", &format_args!("{}", self.hdtien().bit()))
-            .field("dterrien", &format_args!("{}", self.dterrien().bit()))
-            .field("dtd", &format_args!("{}", self.dtd().bit()))
-            .field("lm", &format_args!("{}", self.lm().bit()))
-            .field("pincm", &format_args!("{}", self.pincm().bit()))
-            .field("mincm", &format_args!("{}", self.mincm().bit()))
-            .field("pwidth", &format_args!("{}", self.pwidth().bits()))
-            .field("mwidth", &format_args!("{}", self.mwidth().bits()))
-            .field("chpl", &format_args!("{}", self.chpl().bits()))
-            .field("m2m", &format_args!("{}", self.m2m().bit()))
+            .field("chen", &self.chen())
+            .field("fdtien", &self.fdtien())
+            .field("hdtien", &self.hdtien())
+            .field("dterrien", &self.dterrien())
+            .field("dtd", &self.dtd())
+            .field("lm", &self.lm())
+            .field("pincm", &self.pincm())
+            .field("mincm", &self.mincm())
+            .field("pwidth", &self.pwidth())
+            .field("mwidth", &self.mwidth())
+            .field("chpl", &self.chpl())
+            .field("m2m", &self.m2m())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -979,7 +977,7 @@ impl W {
         M2M_W::new(self, 14)
     }
 }
-#[doc = "DMA channel configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA channel configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

@@ -9,11 +9,11 @@ pub type PSN_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `PCLEN` reader - Preempted conversion sequence length"]
 pub type PCLEN_R = crate::FieldReader;
 #[doc = "Field `PCLEN` writer - Preempted conversion sequence length"]
-pub type PCLEN_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
+pub type PCLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 impl R {
     #[doc = "Number of (1-4) conversion in preempted sequence"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `PSN1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `PSN1` field.</div>"]
     #[inline(always)]
     pub fn psn(&self, n: u8) -> PSN_R {
         #[allow(clippy::no_effect)]
@@ -55,23 +55,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PSQ")
-            .field("pclen", &format_args!("{}", self.pclen().bits()))
-            .field("psn1", &format_args!("{}", self.psn1().bits()))
-            .field("psn2", &format_args!("{}", self.psn2().bits()))
-            .field("psn3", &format_args!("{}", self.psn3().bits()))
-            .field("psn4", &format_args!("{}", self.psn4().bits()))
+            .field("pclen", &self.pclen())
+            .field("psn1", &self.psn1())
+            .field("psn2", &self.psn2())
+            .field("psn3", &self.psn3())
+            .field("psn4", &self.psn4())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<PSQ_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Number of (1-4) conversion in preempted sequence"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `PSN1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `PSN1` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn psn(&mut self, n: u8) -> PSN_W<PSQ_SPEC> {
@@ -110,7 +105,7 @@ impl W {
         PCLEN_W::new(self, 20)
     }
 }
-#[doc = "Preempted sequence register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`psq::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`psq::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Preempted sequence register\n\nYou can [`read`](crate::Reg::read) this register and get [`psq::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`psq::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PSQ_SPEC;
 impl crate::RegisterSpec for PSQ_SPEC {
     type Ux = u32;

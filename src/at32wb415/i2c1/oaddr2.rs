@@ -58,7 +58,7 @@ where
 #[doc = "Field `ADDR2` reader - Own address 2"]
 pub type ADDR2_R = crate::FieldReader;
 #[doc = "Field `ADDR2` writer - Own address 2"]
-pub type ADDR2_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
+pub type ADDR2_W<'a, REG> = crate::FieldWriter<'a, REG, 7, u8, crate::Safe>;
 impl R {
     #[doc = "Bit 0 - Own address 2 enable"]
     #[inline(always)]
@@ -74,14 +74,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OADDR2")
-            .field("addr2", &format_args!("{}", self.addr2().bits()))
-            .field("addr2en", &format_args!("{}", self.addr2en().bit()))
+            .field("addr2", &self.addr2())
+            .field("addr2en", &self.addr2en())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<OADDR2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -98,7 +93,7 @@ impl W {
         ADDR2_W::new(self, 1)
     }
 }
-#[doc = "Own address register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`oaddr2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`oaddr2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Own address register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`oaddr2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`oaddr2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OADDR2_SPEC;
 impl crate::RegisterSpec for OADDR2_SPEC {
     type Ux = u32;

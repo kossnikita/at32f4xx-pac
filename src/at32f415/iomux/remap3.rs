@@ -20,6 +20,7 @@ impl From<TMR9_GMUX_A> for u8 {
 impl crate::FieldSpec for TMR9_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR9_GMUX_A {}
 #[doc = "Field `TMR9_GMUX` reader - TMR9 muxing"]
 pub type TMR9_GMUX_R = crate::FieldReader<TMR9_GMUX_A>;
 impl TMR9_GMUX_R {
@@ -79,6 +80,7 @@ impl From<TMR10_GMUX_A> for u8 {
 impl crate::FieldSpec for TMR10_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR10_GMUX_A {}
 #[doc = "Field `TMR10_GMUX` reader - TMR10 muxing"]
 pub type TMR10_GMUX_R = crate::FieldReader<TMR10_GMUX_A>;
 impl TMR10_GMUX_R {
@@ -138,6 +140,7 @@ impl From<TMR11_GMUX_A> for u8 {
 impl crate::FieldSpec for TMR11_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR11_GMUX_A {}
 #[doc = "Field `TMR11_GMUX` reader - TMR11 muxing"]
 pub type TMR11_GMUX_R = crate::FieldReader<TMR11_GMUX_A>;
 impl TMR11_GMUX_R {
@@ -199,15 +202,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP3")
-            .field("tmr11_gmux", &format_args!("{}", self.tmr11_gmux().bits()))
-            .field("tmr10_gmux", &format_args!("{}", self.tmr10_gmux().bits()))
-            .field("tmr9_gmux", &format_args!("{}", self.tmr9_gmux().bits()))
+            .field("tmr11_gmux", &self.tmr11_gmux())
+            .field("tmr10_gmux", &self.tmr10_gmux())
+            .field("tmr9_gmux", &self.tmr9_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -230,7 +228,7 @@ impl W {
         TMR11_GMUX_W::new(self, 8)
     }
 }
-#[doc = "IO MUX remap register 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 3\n\nYou can [`read`](crate::Reg::read) this register and get [`remap3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP3_SPEC;
 impl crate::RegisterSpec for REMAP3_SPEC {
     type Ux = u32;

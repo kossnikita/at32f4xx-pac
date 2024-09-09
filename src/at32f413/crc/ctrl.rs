@@ -65,6 +65,7 @@ impl From<POLY_SIZE_A> for u8 {
 impl crate::FieldSpec for POLY_SIZE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for POLY_SIZE_A {}
 #[doc = "Field `POLY_SIZE` reader - Polynomial size"]
 pub type POLY_SIZE_R = crate::FieldReader<POLY_SIZE_A>;
 impl POLY_SIZE_R {
@@ -101,7 +102,7 @@ impl POLY_SIZE_R {
     }
 }
 #[doc = "Field `POLY_SIZE` writer - Polynomial size"]
-pub type POLY_SIZE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, POLY_SIZE_A>;
+pub type POLY_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, POLY_SIZE_A, crate::Safe>;
 impl<'a, REG> POLY_SIZE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -150,6 +151,7 @@ impl From<REVID_A> for u8 {
 impl crate::FieldSpec for REVID_A {
     type Ux = u8;
 }
+impl crate::IsEnum for REVID_A {}
 #[doc = "Field `REVID` reader - Reverse input data"]
 pub type REVID_R = crate::FieldReader<REVID_A>;
 impl REVID_R {
@@ -186,7 +188,7 @@ impl REVID_R {
     }
 }
 #[doc = "Field `REVID` writer - Reverse input data"]
-pub type REVID_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, REVID_A>;
+pub type REVID_W<'a, REG> = crate::FieldWriter<'a, REG, 2, REVID_A, crate::Safe>;
 impl<'a, REG> REVID_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -274,16 +276,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("rst", &format_args!("{}", self.rst().bit()))
-            .field("poly_size", &format_args!("{}", self.poly_size().bits()))
-            .field("revid", &format_args!("{}", self.revid().bits()))
-            .field("revod", &format_args!("{}", self.revod().bit()))
+            .field("rst", &self.rst())
+            .field("poly_size", &self.poly_size())
+            .field("revid", &self.revid())
+            .field("revod", &self.revod())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -306,7 +303,7 @@ impl W {
         REVID_W::new(self, 5)
     }
 }
-#[doc = "Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

@@ -20,6 +20,7 @@ impl From<CMP_MUX_A> for u8 {
 impl crate::FieldSpec for CMP_MUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for CMP_MUX_A {}
 #[doc = "Field `CMP_MUX` writer - CMP internal muxing"]
 pub type CMP_MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2, CMP_MUX_A>;
 impl<'a, REG> CMP_MUX_W<'a, REG>
@@ -56,7 +57,7 @@ impl W {
         CMP_MUX_W::new(self, 26)
     }
 }
-#[doc = "IO MUX remap register 2\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap2::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 2\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap2::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP2_SPEC;
 impl crate::RegisterSpec for REMAP2_SPEC {
     type Ux = u32;

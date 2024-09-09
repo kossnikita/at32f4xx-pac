@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("clkdiv", &format_args!("{}", self.clkdiv().bits()))
-            .field("sckmode", &format_args!("{}", self.sckmode().bit()))
-            .field("xipidle", &format_args!("{}", self.xipidle().bit()))
-            .field("abort", &format_args!("{}", self.abort().bit()))
-            .field("busy", &format_args!("{}", self.busy().bits()))
-            .field("xiprcmdf", &format_args!("{}", self.xiprcmdf().bit()))
-            .field("xipsel", &format_args!("{}", self.xipsel().bit()))
-            .field("keyen", &format_args!("{}", self.keyen().bit()))
+            .field("clkdiv", &self.clkdiv())
+            .field("sckmode", &self.sckmode())
+            .field("xipidle", &self.xipidle())
+            .field("abort", &self.abort())
+            .field("busy", &self.busy())
+            .field("xiprcmdf", &self.xiprcmdf())
+            .field("xipsel", &self.xipsel())
+            .field("keyen", &self.keyen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         KEYEN_W::new(self, 21)
     }
 }
-#[doc = "Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

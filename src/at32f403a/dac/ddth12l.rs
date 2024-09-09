@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DDTH12L")
-            .field("dd1dt12l", &format_args!("{}", self.dd1dt12l().bits()))
-            .field("dd2dt12l", &format_args!("{}", self.dd2dt12l().bits()))
+            .field("dd1dt12l", &self.dd1dt12l())
+            .field("dd2dt12l", &self.dd2dt12l())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DDTH12L_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         DD2DT12L_W::new(self, 20)
     }
 }
-#[doc = "DUAL DAC 12-bit left aligned data holding register (DAC_DDTH12L), Bits 19:16 Reserved, Bits 3:0 Reserved\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ddth12l::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ddth12l::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DUAL DAC 12-bit left aligned data holding register (DAC_DDTH12L), Bits 19:16 Reserved, Bits 3:0 Reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`ddth12l::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ddth12l::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DDTH12L_SPEC;
 impl crate::RegisterSpec for DDTH12L_SPEC {
     type Ux = u32;

@@ -12,16 +12,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HAINT")
-            .field("haint", &format_args!("{}", self.haint().bits()))
+            .field("haint", &self.haint())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<HAINT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "OTGFS Host all channels interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`haint::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS Host all channels interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`haint::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HAINT_SPEC;
 impl crate::RegisterSpec for HAINT_SPEC {
     type Ux = u32;

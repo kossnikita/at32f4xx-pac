@@ -11,17 +11,10 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("EPPS0")
-            .field("epps", &format_args!("{}", self.epps().bits()))
-            .finish()
+        f.debug_struct("EPPS0").field("epps", &self.epps()).finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<EPPS0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Erase/program protection status register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`epps0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Erase/program protection status register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`epps0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EPPS0_SPEC;
 impl crate::RegisterSpec for EPPS0_SPEC {
     type Ux = u32;

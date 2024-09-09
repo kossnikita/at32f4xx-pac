@@ -243,15 +243,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRLSTS")
-            .field("tpien", &format_args!("{}", self.tpien().bit()))
-            .field("tpef", &format_args!("{}", self.tpef().bit()))
-            .field("tpif", &format_args!("{}", self.tpif().bit()))
+            .field("tpien", &self.tpien())
+            .field("tpef", &self.tpef())
+            .field("tpif", &self.tpif())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRLSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -286,7 +281,7 @@ impl W {
         TPIF_W::new(self, 9)
     }
 }
-#[doc = "BPR control/status register (BPR_CTRLSTS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrlsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrlsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "BPR control/status register (BPR_CTRLSTS)\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrlsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrlsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRLSTS_SPEC;
 impl crate::RegisterSpec for CTRLSTS_SPEC {
     type Ux = u32;

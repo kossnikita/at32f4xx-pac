@@ -11,17 +11,10 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("BUFCNT")
-            .field("cnt", &format_args!("{}", self.cnt().bits()))
-            .finish()
+        f.debug_struct("BUFCNT").field("cnt", &self.cnt()).finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<BUFCNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Bits 23:0 = BUFCOUNT: Remaining number of words to be written to or read from the FIFO\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bufcnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Bits 23:0 = BUFCOUNT: Remaining number of words to be written to or read from the FIFO\n\nYou can [`read`](crate::Reg::read) this register and get [`bufcnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUFCNT_SPEC;
 impl crate::RegisterSpec for BUFCNT_SPEC {
     type Ux = u32;

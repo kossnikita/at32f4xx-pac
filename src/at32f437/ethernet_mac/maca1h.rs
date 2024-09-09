@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MACA1H")
-            .field("ma1h", &format_args!("{}", self.ma1h().bits()))
-            .field("mbc", &format_args!("{}", self.mbc().bits()))
-            .field("sa", &format_args!("{}", self.sa().bit()))
-            .field("ae", &format_args!("{}", self.ae().bit()))
+            .field("ma1h", &self.ma1h())
+            .field("mbc", &self.mbc())
+            .field("sa", &self.sa())
+            .field("ae", &self.ae())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MACA1H_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         AE_W::new(self, 31)
     }
 }
-#[doc = "Ethernet MAC address 1 high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`maca1h::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`maca1h::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet MAC address 1 high register\n\nYou can [`read`](crate::Reg::read) this register and get [`maca1h::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`maca1h::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MACA1H_SPEC;
 impl crate::RegisterSpec for MACA1H_SPEC {
     type Ux = u32;

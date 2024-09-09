@@ -23,7 +23,7 @@ impl W {
         SET_SLIB_STRT_W::new(self, 31)
     }
 }
-#[doc = "Configure sLib range register 1\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slib_set_range1::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Configure sLib range register 1\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slib_set_range1::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLIB_SET_RANGE1_SPEC;
 impl crate::RegisterSpec for SLIB_SET_RANGE1_SPEC {
     type Ux = u32;

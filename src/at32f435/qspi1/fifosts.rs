@@ -19,17 +19,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFOSTS")
-            .field("txfifordy", &format_args!("{}", self.txfifordy().bit()))
-            .field("rxfifordy", &format_args!("{}", self.rxfifordy().bit()))
+            .field("txfifordy", &self.txfifordy())
+            .field("rxfifordy", &self.rxfifordy())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<FIFOSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "FIFO Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifosts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "FIFO Status register\n\nYou can [`read`](crate::Reg::read) this register and get [`fifosts::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFOSTS_SPEC;
 impl crate::RegisterSpec for FIFOSTS_SPEC {
     type Ux = u32;

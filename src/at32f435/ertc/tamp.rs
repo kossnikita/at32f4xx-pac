@@ -124,25 +124,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TAMP")
-            .field("outtype", &format_args!("{}", self.outtype().bit()))
-            .field("tspin", &format_args!("{}", self.tspin().bit()))
-            .field("tp1pin", &format_args!("{}", self.tp1pin().bit()))
-            .field("tppu", &format_args!("{}", self.tppu().bit()))
-            .field("tppr", &format_args!("{}", self.tppr().bits()))
-            .field("tpflt", &format_args!("{}", self.tpflt().bits()))
-            .field("tpfreq", &format_args!("{}", self.tpfreq().bits()))
-            .field("tptsen", &format_args!("{}", self.tptsen().bit()))
-            .field("tp2edg", &format_args!("{}", self.tp2edg().bit()))
-            .field("tp2en", &format_args!("{}", self.tp2en().bit()))
-            .field("tpien", &format_args!("{}", self.tpien().bit()))
-            .field("tp1edg", &format_args!("{}", self.tp1edg().bit()))
-            .field("tp1en", &format_args!("{}", self.tp1en().bit()))
+            .field("outtype", &self.outtype())
+            .field("tspin", &self.tspin())
+            .field("tp1pin", &self.tp1pin())
+            .field("tppu", &self.tppu())
+            .field("tppr", &self.tppr())
+            .field("tpflt", &self.tpflt())
+            .field("tpfreq", &self.tpfreq())
+            .field("tptsen", &self.tptsen())
+            .field("tp2edg", &self.tp2edg())
+            .field("tp2en", &self.tp2en())
+            .field("tpien", &self.tpien())
+            .field("tp1edg", &self.tp1edg())
+            .field("tp1en", &self.tp1en())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<TAMP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -225,7 +220,7 @@ impl W {
         OUTTYPE_W::new(self, 18)
     }
 }
-#[doc = "tamper and alternate function configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tamp::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tamp::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "tamper and alternate function configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`tamp::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tamp::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TAMP_SPEC;
 impl crate::RegisterSpec for TAMP_SPEC {
     type Ux = u32;

@@ -5,7 +5,7 @@ pub type W = crate::W<I2SCLK_SPEC>;
 #[doc = "Field `DIV7_0` reader - I2S division bit7 to bit0"]
 pub type DIV7_0_R = crate::FieldReader;
 #[doc = "Field `DIV7_0` writer - I2S division bit7 to bit0"]
-pub type DIV7_0_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
+pub type DIV7_0_W<'a, REG> = crate::FieldWriter<'a, REG, 8, u8, crate::Safe>;
 #[doc = "Odd result for I2S division\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ODD_A {
@@ -129,7 +129,7 @@ where
 #[doc = "Field `DIV9_8` reader - I2S division bit9 and bit8"]
 pub type DIV9_8_R = crate::FieldReader;
 #[doc = "Field `DIV9_8` writer - I2S division bit9 and bit8"]
-pub type DIV9_8_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
+pub type DIV9_8_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 impl R {
     #[doc = "Bits 0:7 - I2S division bit7 to bit0"]
     #[inline(always)]
@@ -155,16 +155,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2SCLK")
-            .field("div9_8", &format_args!("{}", self.div9_8().bits()))
-            .field("mclkoe", &format_args!("{}", self.mclkoe().bit()))
-            .field("odd", &format_args!("{}", self.odd().bit()))
-            .field("div7_0", &format_args!("{}", self.div7_0().bits()))
+            .field("div9_8", &self.div9_8())
+            .field("mclkoe", &self.mclkoe())
+            .field("odd", &self.odd())
+            .field("div7_0", &self.div7_0())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<I2SCLK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -193,7 +188,7 @@ impl W {
         DIV9_8_W::new(self, 10)
     }
 }
-#[doc = "I2S clock register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2sclk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2sclk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2S clock register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2sclk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2sclk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2SCLK_SPEC;
 impl crate::RegisterSpec for I2SCLK_SPEC {
     type Ux = u32;

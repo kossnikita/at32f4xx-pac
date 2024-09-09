@@ -101,19 +101,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RFI")
-            .field("sid", &format_args!("{}", self.sid().bits()))
-            .field("eid", &format_args!("{}", self.eid().bits()))
-            .field("idi", &format_args!("{}", self.idi().bit()))
-            .field("fri", &format_args!("{}", self.fri().bit()))
+            .field("sid", &self.sid())
+            .field("eid", &self.eid())
+            .field("idi", &self.idi())
+            .field("fri", &self.fri())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<RFI_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Receive FIFO mailbox identifier register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive FIFO mailbox identifier register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfi::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFI_SPEC;
 impl crate::RegisterSpec for RFI_SPEC {
     type Ux = u32;

@@ -964,32 +964,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
-            .field("dbn1", &format_args!("{}", self.dbn1().bit()))
-            .field("rtoden", &format_args!("{}", self.rtoden().bit()))
-            .field("retodie", &format_args!("{}", self.retodie().bit()))
-            .field("tsdt", &format_args!("{}", self.tsdt().bits()))
-            .field("tcdt", &format_args!("{}", self.tcdt().bits()))
-            .field("cmdie", &format_args!("{}", self.cmdie().bit()))
-            .field("uen", &format_args!("{}", self.uen().bit()))
-            .field("dbn0", &format_args!("{}", self.dbn0().bit()))
-            .field("wum", &format_args!("{}", self.wum().bit()))
-            .field("pen", &format_args!("{}", self.pen().bit()))
-            .field("psel", &format_args!("{}", self.psel().bit()))
-            .field("perrien", &format_args!("{}", self.perrien().bit()))
-            .field("tdbeien", &format_args!("{}", self.tdbeien().bit()))
-            .field("tdcien", &format_args!("{}", self.tdcien().bit()))
-            .field("rdbfien", &format_args!("{}", self.rdbfien().bit()))
-            .field("idleien", &format_args!("{}", self.idleien().bit()))
-            .field("ten", &format_args!("{}", self.ten().bit()))
-            .field("ren", &format_args!("{}", self.ren().bit()))
-            .field("rm", &format_args!("{}", self.rm().bit()))
-            .field("sbf", &format_args!("{}", self.sbf().bit()))
+            .field("dbn1", &self.dbn1())
+            .field("rtoden", &self.rtoden())
+            .field("retodie", &self.retodie())
+            .field("tsdt", &self.tsdt())
+            .field("tcdt", &self.tcdt())
+            .field("cmdie", &self.cmdie())
+            .field("uen", &self.uen())
+            .field("dbn0", &self.dbn0())
+            .field("wum", &self.wum())
+            .field("pen", &self.pen())
+            .field("psel", &self.psel())
+            .field("perrien", &self.perrien())
+            .field("tdbeien", &self.tdbeien())
+            .field("tdcien", &self.tdcien())
+            .field("rdbfien", &self.rdbfien())
+            .field("idleien", &self.idleien())
+            .field("ten", &self.ten())
+            .field("ren", &self.ren())
+            .field("rm", &self.rm())
+            .field("sbf", &self.sbf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -1114,7 +1109,7 @@ impl W {
         DBN1_W::new(self, 28)
     }
 }
-#[doc = "Control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL1_SPEC;
 impl crate::RegisterSpec for CTRL1_SPEC {
     type Ux = u32;

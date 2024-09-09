@@ -88,21 +88,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPCTL7")
-            .field("mps", &format_args!("{}", self.mps().bits()))
-            .field("usbacept", &format_args!("{}", self.usbacept().bit()))
-            .field("dpid", &format_args!("{}", self.dpid().bit()))
-            .field("naksts", &format_args!("{}", self.naksts().bit()))
-            .field("eptype", &format_args!("{}", self.eptype().bits()))
-            .field("snp", &format_args!("{}", self.snp().bit()))
-            .field("stall", &format_args!("{}", self.stall().bit()))
-            .field("eptdis", &format_args!("{}", self.eptdis().bit()))
-            .field("eptena", &format_args!("{}", self.eptena().bit()))
+            .field("mps", &self.mps())
+            .field("usbacept", &self.usbacept())
+            .field("dpid", &self.dpid())
+            .field("naksts", &self.naksts())
+            .field("eptype", &self.eptype())
+            .field("snp", &self.snp())
+            .field("stall", &self.stall())
+            .field("eptdis", &self.eptdis())
+            .field("eptena", &self.eptena())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DOEPCTL7_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -161,7 +156,7 @@ impl W {
         EPTENA_W::new(self, 31)
     }
 }
-#[doc = "OTGFS device OUT endpoint-7 control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS device OUT endpoint-7 control register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepctl7::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepctl7::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEPCTL7_SPEC;
 impl crate::RegisterSpec for DOEPCTL7_SPEC {
     type Ux = u32;

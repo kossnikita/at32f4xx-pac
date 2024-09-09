@@ -263,7 +263,7 @@ where
 #[doc = "Field `STEP` reader - Calibrated step"]
 pub type STEP_R = crate::FieldReader;
 #[doc = "Field `STEP` writer - Calibrated step"]
-pub type STEP_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type STEP_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 impl R {
     #[doc = "Bit 0 - Calibration on"]
     #[inline(always)]
@@ -299,18 +299,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
-            .field("step", &format_args!("{}", self.step().bits()))
-            .field("calrdyien", &format_args!("{}", self.calrdyien().bit()))
-            .field("eien", &format_args!("{}", self.eien().bit()))
-            .field("sofsel", &format_args!("{}", self.sofsel().bit()))
-            .field("entrim", &format_args!("{}", self.entrim().bit()))
-            .field("calon", &format_args!("{}", self.calon().bit()))
+            .field("step", &self.step())
+            .field("calrdyien", &self.calrdyien())
+            .field("eien", &self.eien())
+            .field("sofsel", &self.sofsel())
+            .field("entrim", &self.entrim())
+            .field("calon", &self.calon())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -351,7 +346,7 @@ impl W {
         STEP_W::new(self, 8)
     }
 }
-#[doc = "control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL1_SPEC;
 impl crate::RegisterSpec for CTRL1_SPEC {
     type Ux = u32;

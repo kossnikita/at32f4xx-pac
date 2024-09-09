@@ -5,7 +5,7 @@ pub type W = crate::W<TMC_SPEC>;
 #[doc = "Field `DTBL` reader - Transmit mailbox data byte length"]
 pub type DTBL_R = crate::FieldReader;
 #[doc = "Field `DTBL` writer - Transmit mailbox data byte length"]
-pub type DTBL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type DTBL_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Transmit mailbox time stamp transmit enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Tstenr {
@@ -76,7 +76,7 @@ where
 #[doc = "Field `TS` reader - Transmit mailbox time stamp"]
 pub type TS_R = crate::FieldReader<u16>;
 #[doc = "Field `TS` writer - Transmit mailbox time stamp"]
-pub type TS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 16, u16>;
+pub type TS_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16, crate::Safe>;
 impl R {
     #[doc = "Bits 0:3 - Transmit mailbox data byte length"]
     #[inline(always)]
@@ -97,15 +97,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TMC")
-            .field("ts", &format_args!("{}", self.ts().bits()))
-            .field("tsten", &format_args!("{}", self.tsten().bit()))
-            .field("dtbl", &format_args!("{}", self.dtbl().bits()))
+            .field("ts", &self.ts())
+            .field("tsten", &self.tsten())
+            .field("dtbl", &self.dtbl())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<TMC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -128,7 +123,7 @@ impl W {
         TS_W::new(self, 16)
     }
 }
-#[doc = "Transmit mailbox data length and time stamp register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tmc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tmc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transmit mailbox data length and time stamp register\n\nYou can [`read`](crate::Reg::read) this register and get [`tmc::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tmc::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TMC_SPEC;
 impl crate::RegisterSpec for TMC_SPEC {
     type Ux = u32;

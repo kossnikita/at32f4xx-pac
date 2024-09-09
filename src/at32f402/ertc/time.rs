@@ -5,27 +5,27 @@ pub type W = crate::W<TIME_SPEC>;
 #[doc = "Field `SU` reader - Second units"]
 pub type SU_R = crate::FieldReader;
 #[doc = "Field `SU` writer - Second units"]
-pub type SU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type SU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `ST` reader - Second tens"]
 pub type ST_R = crate::FieldReader;
 #[doc = "Field `ST` writer - Second tens"]
-pub type ST_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type ST_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Field `MU` reader - Minute units"]
 pub type MU_R = crate::FieldReader;
 #[doc = "Field `MU` writer - Minute units"]
-pub type MU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type MU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `MT` reader - Minute tens"]
 pub type MT_R = crate::FieldReader;
 #[doc = "Field `MT` writer - Minute tens"]
-pub type MT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type MT_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Field `HU` reader - Hour units"]
 pub type HU_R = crate::FieldReader;
 #[doc = "Field `HU` writer - Hour units"]
-pub type HU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type HU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `HT` reader - Hour tens"]
 pub type HT_R = crate::FieldReader;
 #[doc = "Field `HT` writer - Hour tens"]
-pub type HT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
+pub type HT_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 #[doc = "AM/PM notation\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum AMPM_A {
@@ -119,19 +119,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIME")
-            .field("ampm", &format_args!("{}", self.ampm().bit()))
-            .field("ht", &format_args!("{}", self.ht().bits()))
-            .field("hu", &format_args!("{}", self.hu().bits()))
-            .field("mt", &format_args!("{}", self.mt().bits()))
-            .field("mu", &format_args!("{}", self.mu().bits()))
-            .field("st", &format_args!("{}", self.st().bits()))
-            .field("su", &format_args!("{}", self.su().bits()))
+            .field("ampm", &self.ampm())
+            .field("ht", &self.ht())
+            .field("hu", &self.hu())
+            .field("mt", &self.mt())
+            .field("mu", &self.mu())
+            .field("st", &self.st())
+            .field("su", &self.su())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<TIME_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -178,7 +173,7 @@ impl W {
         AMPM_W::new(self, 22)
     }
 }
-#[doc = "time register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`time::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "time register\n\nYou can [`read`](crate::Reg::read) this register and get [`time::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`time::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIME_SPEC;
 impl crate::RegisterSpec for TIME_SPEC {
     type Ux = u32;

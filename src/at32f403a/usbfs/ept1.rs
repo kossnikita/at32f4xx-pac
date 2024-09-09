@@ -97,22 +97,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EPT1")
-            .field("eptaddr", &format_args!("{}", self.eptaddr().bits()))
-            .field("txsts", &format_args!("{}", self.txsts().bits()))
-            .field("txdts", &format_args!("{}", self.txdts().bit()))
-            .field("txtc", &format_args!("{}", self.txtc().bit()))
-            .field("exf", &format_args!("{}", self.exf().bit()))
-            .field("trans_type", &format_args!("{}", self.trans_type().bits()))
-            .field("setuptc", &format_args!("{}", self.setuptc().bit()))
-            .field("rxsts", &format_args!("{}", self.rxsts().bits()))
-            .field("rxdts", &format_args!("{}", self.rxdts().bit()))
-            .field("rxtc", &format_args!("{}", self.rxtc().bit()))
+            .field("eptaddr", &self.eptaddr())
+            .field("txsts", &self.txsts())
+            .field("txdts", &self.txdts())
+            .field("txtc", &self.txtc())
+            .field("exf", &self.exf())
+            .field("trans_type", &self.trans_type())
+            .field("setuptc", &self.setuptc())
+            .field("rxsts", &self.rxsts())
+            .field("rxdts", &self.rxdts())
+            .field("rxtc", &self.rxtc())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<EPT1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -177,7 +172,7 @@ impl W {
         RXTC_W::new(self, 15)
     }
 }
-#[doc = "endpoint 1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ept1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ept1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "endpoint 1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`ept1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ept1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EPT1_SPEC;
 impl crate::RegisterSpec for EPT1_SPEC {
     type Ux = u32;

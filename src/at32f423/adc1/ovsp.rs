@@ -61,18 +61,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OVSP")
-            .field("oosrsel", &format_args!("{}", self.oosrsel().bit()))
-            .field("oostren", &format_args!("{}", self.oostren().bit()))
-            .field("osssel", &format_args!("{}", self.osssel().bits()))
-            .field("osrsel", &format_args!("{}", self.osrsel().bits()))
-            .field("posen", &format_args!("{}", self.posen().bit()))
-            .field("oosen", &format_args!("{}", self.oosen().bit()))
+            .field("oosrsel", &self.oosrsel())
+            .field("oostren", &self.oostren())
+            .field("osssel", &self.osssel())
+            .field("osrsel", &self.osrsel())
+            .field("posen", &self.posen())
+            .field("oosen", &self.oosen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<OVSP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -113,7 +108,7 @@ impl W {
         OOSRSEL_W::new(self, 10)
     }
 }
-#[doc = "oversampling register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ovsp::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ovsp::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "oversampling register\n\nYou can [`read`](crate::Reg::read) this register and get [`ovsp::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ovsp::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OVSP_SPEC;
 impl crate::RegisterSpec for OVSP_SPEC {
     type Ux = u32;

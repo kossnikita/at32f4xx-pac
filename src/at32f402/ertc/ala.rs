@@ -5,11 +5,11 @@ pub type W = crate::W<ALA_SPEC>;
 #[doc = "Field `SU` reader - Second units"]
 pub type SU_R = crate::FieldReader;
 #[doc = "Field `SU` writer - Second units"]
-pub type SU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type SU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `ST` reader - Second tens"]
 pub type ST_R = crate::FieldReader;
 #[doc = "Field `ST` writer - Second tens"]
-pub type ST_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type ST_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Seconds mask\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MASK1_A {
@@ -66,11 +66,11 @@ where
 #[doc = "Field `MU` reader - Minute units"]
 pub type MU_R = crate::FieldReader;
 #[doc = "Field `MU` writer - Minute units"]
-pub type MU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type MU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `MT` reader - Minute tens"]
 pub type MT_R = crate::FieldReader;
 #[doc = "Field `MT` writer - Minute tens"]
-pub type MT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type MT_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Minutes mask\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum MASK2_A {
@@ -127,11 +127,11 @@ where
 #[doc = "Field `HU` reader - Hour units"]
 pub type HU_R = crate::FieldReader;
 #[doc = "Field `HU` writer - Hour units"]
-pub type HU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type HU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `HT` reader - Hour tens"]
 pub type HT_R = crate::FieldReader;
 #[doc = "Field `HT` writer - Hour tens"]
-pub type HT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
+pub type HT_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 #[doc = "AM/PM\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum AMPM_A {
@@ -241,11 +241,11 @@ where
 #[doc = "Field `DU` reader - Date units"]
 pub type DU_R = crate::FieldReader;
 #[doc = "Field `DU` writer - Date units"]
-pub type DU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type DU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `DT` reader - Date tens"]
 pub type DT_R = crate::FieldReader;
 #[doc = "Field `DT` writer - Date tens"]
-pub type DT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
+pub type DT_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 #[doc = "Date/week mode select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum WKSEL_A {
@@ -427,26 +427,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ALA")
-            .field("mask4", &format_args!("{}", self.mask4().bit()))
-            .field("wksel", &format_args!("{}", self.wksel().bit()))
-            .field("dt", &format_args!("{}", self.dt().bits()))
-            .field("du", &format_args!("{}", self.du().bits()))
-            .field("mask3", &format_args!("{}", self.mask3().bit()))
-            .field("ampm", &format_args!("{}", self.ampm().bit()))
-            .field("ht", &format_args!("{}", self.ht().bits()))
-            .field("hu", &format_args!("{}", self.hu().bits()))
-            .field("mask2", &format_args!("{}", self.mask2().bit()))
-            .field("mt", &format_args!("{}", self.mt().bits()))
-            .field("mu", &format_args!("{}", self.mu().bits()))
-            .field("mask1", &format_args!("{}", self.mask1().bit()))
-            .field("st", &format_args!("{}", self.st().bits()))
-            .field("su", &format_args!("{}", self.su().bits()))
+            .field("mask4", &self.mask4())
+            .field("wksel", &self.wksel())
+            .field("dt", &self.dt())
+            .field("du", &self.du())
+            .field("mask3", &self.mask3())
+            .field("ampm", &self.ampm())
+            .field("ht", &self.ht())
+            .field("hu", &self.hu())
+            .field("mask2", &self.mask2())
+            .field("mt", &self.mt())
+            .field("mu", &self.mu())
+            .field("mask1", &self.mask1())
+            .field("st", &self.st())
+            .field("su", &self.su())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<ALA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -535,7 +530,7 @@ impl W {
         MASK4_W::new(self, 31)
     }
 }
-#[doc = "Alarm A register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ala::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ala::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Alarm A register\n\nYou can [`read`](crate::Reg::read) this register and get [`ala::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ala::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ALA_SPEC;
 impl crate::RegisterSpec for ALA_SPEC {
     type Ux = u32;

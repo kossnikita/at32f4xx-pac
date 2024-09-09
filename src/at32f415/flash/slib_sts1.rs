@@ -26,21 +26,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLIB_STS1")
-            .field("slib_ss", &format_args!("{}", self.slib_ss().bits()))
-            .field(
-                "slib_dat_ss",
-                &format_args!("{}", self.slib_dat_ss().bits()),
-            )
-            .field("slib_es", &format_args!("{}", self.slib_es().bits()))
+            .field("slib_ss", &self.slib_ss())
+            .field("slib_dat_ss", &self.slib_dat_ss())
+            .field("slib_es", &self.slib_es())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<SLIB_STS1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "sLib status 1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slib_sts1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "sLib status 1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`slib_sts1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLIB_STS1_SPEC;
 impl crate::RegisterSpec for SLIB_STS1_SPEC {
     type Ux = u32;

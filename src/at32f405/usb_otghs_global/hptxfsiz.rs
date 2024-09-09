@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HPTXFSIZ")
-            .field("ptxfstaddr", &format_args!("{}", self.ptxfstaddr().bits()))
-            .field("ptxfsize", &format_args!("{}", self.ptxfsize().bits()))
+            .field("ptxfstaddr", &self.ptxfstaddr())
+            .field("ptxfsize", &self.ptxfsize())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HPTXFSIZ_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         PTXFSIZE_W::new(self, 16)
     }
 }
-#[doc = "OTGHS Host periodic transmit FIFO size register (OTGHS_HPTXFSIZ)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hptxfsiz::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hptxfsiz::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS Host periodic transmit FIFO size register (OTGHS_HPTXFSIZ)\n\nYou can [`read`](crate::Reg::read) this register and get [`hptxfsiz::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hptxfsiz::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HPTXFSIZ_SPEC;
 impl crate::RegisterSpec for HPTXFSIZ_SPEC {
     type Ux = u32;

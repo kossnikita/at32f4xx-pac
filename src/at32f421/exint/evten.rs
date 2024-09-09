@@ -80,7 +80,7 @@ pub use EVTEN_W as EVTEN21_W;
 impl R {
     #[doc = "Event enable or disable on line (0-17)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EVTEN0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `EVTEN0` field.</div>"]
     #[inline(always)]
     pub fn evten(&self, n: u8) -> EVTEN_R {
         #[allow(clippy::no_effect)]
@@ -197,38 +197,33 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EVTEN")
-            .field("evten0", &format_args!("{}", self.evten0().bit()))
-            .field("evten1", &format_args!("{}", self.evten1().bit()))
-            .field("evten2", &format_args!("{}", self.evten2().bit()))
-            .field("evten3", &format_args!("{}", self.evten3().bit()))
-            .field("evten4", &format_args!("{}", self.evten4().bit()))
-            .field("evten5", &format_args!("{}", self.evten5().bit()))
-            .field("evten6", &format_args!("{}", self.evten6().bit()))
-            .field("evten7", &format_args!("{}", self.evten7().bit()))
-            .field("evten8", &format_args!("{}", self.evten8().bit()))
-            .field("evten9", &format_args!("{}", self.evten9().bit()))
-            .field("evten10", &format_args!("{}", self.evten10().bit()))
-            .field("evten11", &format_args!("{}", self.evten11().bit()))
-            .field("evten12", &format_args!("{}", self.evten12().bit()))
-            .field("evten13", &format_args!("{}", self.evten13().bit()))
-            .field("evten14", &format_args!("{}", self.evten14().bit()))
-            .field("evten15", &format_args!("{}", self.evten15().bit()))
-            .field("evten16", &format_args!("{}", self.evten16().bit()))
-            .field("evten17", &format_args!("{}", self.evten17().bit()))
-            .field("evten19", &format_args!("{}", self.evten19().bit()))
-            .field("evten21", &format_args!("{}", self.evten21().bit()))
+            .field("evten0", &self.evten0())
+            .field("evten1", &self.evten1())
+            .field("evten2", &self.evten2())
+            .field("evten3", &self.evten3())
+            .field("evten4", &self.evten4())
+            .field("evten5", &self.evten5())
+            .field("evten6", &self.evten6())
+            .field("evten7", &self.evten7())
+            .field("evten8", &self.evten8())
+            .field("evten9", &self.evten9())
+            .field("evten10", &self.evten10())
+            .field("evten11", &self.evten11())
+            .field("evten12", &self.evten12())
+            .field("evten13", &self.evten13())
+            .field("evten14", &self.evten14())
+            .field("evten15", &self.evten15())
+            .field("evten16", &self.evten16())
+            .field("evten17", &self.evten17())
+            .field("evten19", &self.evten19())
+            .field("evten21", &self.evten21())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<EVTEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Event enable or disable on line (0-17)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EVTEN0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `EVTEN0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn evten(&mut self, n: u8) -> EVTEN_W<EVTEN_SPEC> {
@@ -357,7 +352,7 @@ impl W {
         EVTEN21_W::new(self, 21)
     }
 }
-#[doc = "Event enable register (EXTINT_EVTEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evten::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evten::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Event enable register (EXTINT_EVTEN)\n\nYou can [`read`](crate::Reg::read) this register and get [`evten::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evten::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EVTEN_SPEC;
 impl crate::RegisterSpec for EVTEN_SPEC {
     type Ux = u32;

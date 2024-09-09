@@ -133,7 +133,7 @@ pub use CP_W as CCP_W;
 impl R {
     #[doc = "Channel (1-4) enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1EN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1EN` field.</div>"]
     #[inline(always)]
     pub fn cen(&self, n: u8) -> CEN_R {
         #[allow(clippy::no_effect)]
@@ -168,7 +168,7 @@ impl R {
     }
     #[doc = "Channel (1-4) polarity"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1P` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1P` field.</div>"]
     #[inline(always)]
     pub fn cp(&self, n: u8) -> CP_R {
         #[allow(clippy::no_effect)]
@@ -203,7 +203,7 @@ impl R {
     }
     #[doc = "Channel (1-3) complementary enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1CEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1CEN` field.</div>"]
     #[inline(always)]
     pub fn ccen(&self, n: u8) -> CCEN_R {
         #[allow(clippy::no_effect)]
@@ -233,7 +233,7 @@ impl R {
     }
     #[doc = "Channel (1-3) complementary polarity"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1CP` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1CP` field.</div>"]
     #[inline(always)]
     pub fn ccp(&self, n: u8) -> CCP_R {
         #[allow(clippy::no_effect)]
@@ -265,32 +265,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CCTRL")
-            .field("c1p", &format_args!("{}", self.c1p().bit()))
-            .field("c2p", &format_args!("{}", self.c2p().bit()))
-            .field("c3p", &format_args!("{}", self.c3p().bit()))
-            .field("c4p", &format_args!("{}", self.c4p().bit()))
-            .field("c1en", &format_args!("{}", self.c1en().bit()))
-            .field("c2en", &format_args!("{}", self.c2en().bit()))
-            .field("c3en", &format_args!("{}", self.c3en().bit()))
-            .field("c4en", &format_args!("{}", self.c4en().bit()))
-            .field("c1cp", &format_args!("{}", self.c1cp().bit()))
-            .field("c2cp", &format_args!("{}", self.c2cp().bit()))
-            .field("c3cp", &format_args!("{}", self.c3cp().bit()))
-            .field("c1cen", &format_args!("{}", self.c1cen().bit()))
-            .field("c2cen", &format_args!("{}", self.c2cen().bit()))
-            .field("c3cen", &format_args!("{}", self.c3cen().bit()))
+            .field("c1p", &self.c1p())
+            .field("c2p", &self.c2p())
+            .field("c3p", &self.c3p())
+            .field("c4p", &self.c4p())
+            .field("c1en", &self.c1en())
+            .field("c2en", &self.c2en())
+            .field("c3en", &self.c3en())
+            .field("c4en", &self.c4en())
+            .field("c1cp", &self.c1cp())
+            .field("c2cp", &self.c2cp())
+            .field("c3cp", &self.c3cp())
+            .field("c1cen", &self.c1cen())
+            .field("c2cen", &self.c2cen())
+            .field("c3cen", &self.c3cen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Channel (1-4) enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1EN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1EN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cen(&mut self, n: u8) -> CEN_W<CCTRL_SPEC> {
@@ -324,7 +319,7 @@ impl W {
     }
     #[doc = "Channel (1-4) polarity"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1P` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1P` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cp(&mut self, n: u8) -> CP_W<CCTRL_SPEC> {
@@ -358,7 +353,7 @@ impl W {
     }
     #[doc = "Channel (1-3) complementary enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1CEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1CEN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ccen(&mut self, n: u8) -> CCEN_W<CCTRL_SPEC> {
@@ -386,7 +381,7 @@ impl W {
     }
     #[doc = "Channel (1-3) complementary polarity"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1CP` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1CP` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ccp(&mut self, n: u8) -> CCP_W<CCTRL_SPEC> {
@@ -413,7 +408,7 @@ impl W {
         CCP_W::new(self, 11)
     }
 }
-#[doc = "Channel control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel control register\n\nYou can [`read`](crate::Reg::read) this register and get [`cctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CCTRL_SPEC;
 impl crate::RegisterSpec for CCTRL_SPEC {
     type Ux = u32;

@@ -19,17 +19,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DAINT")
-            .field("ineptint", &format_args!("{}", self.ineptint().bits()))
-            .field("outeptint", &format_args!("{}", self.outeptint().bits()))
+            .field("ineptint", &self.ineptint())
+            .field("outeptint", &self.outeptint())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<DAINT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "OTGFS device all endpoints interrupt register (OTGFS_DAINT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`daint::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS device all endpoints interrupt register (OTGFS_DAINT)\n\nYou can [`read`](crate::Reg::read) this register and get [`daint::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DAINT_SPEC;
 impl crate::RegisterSpec for DAINT_SPEC {
     type Ux = u32;

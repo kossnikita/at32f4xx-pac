@@ -32,6 +32,7 @@ impl From<SMSEL_A> for u8 {
 impl crate::FieldSpec for SMSEL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SMSEL_A {}
 #[doc = "Field `SMSEL` reader - Subordinate TMR mode selection"]
 pub type SMSEL_R = crate::FieldReader<SMSEL_A>;
 impl SMSEL_R {
@@ -92,7 +93,7 @@ impl SMSEL_R {
     }
 }
 #[doc = "Field `SMSEL` writer - Subordinate TMR mode selection"]
-pub type SMSEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, SMSEL_A>;
+pub type SMSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3, SMSEL_A, crate::Safe>;
 impl<'a, REG> SMSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -169,6 +170,7 @@ impl From<STIS_A> for u8 {
 impl crate::FieldSpec for STIS_A {
     type Ux = u8;
 }
+impl crate::IsEnum for STIS_A {}
 #[doc = "Field `STIS` reader - Subordinate TMR input selection"]
 pub type STIS_R = crate::FieldReader<STIS_A>;
 impl STIS_R {
@@ -229,7 +231,7 @@ impl STIS_R {
     }
 }
 #[doc = "Field `STIS` writer - Subordinate TMR input selection"]
-pub type STIS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, STIS_A>;
+pub type STIS_W<'a, REG> = crate::FieldWriter<'a, REG, 3, STIS_A, crate::Safe>;
 impl<'a, REG> STIS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -363,15 +365,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STCTRL")
-            .field("sts", &format_args!("{}", self.sts().bit()))
-            .field("stis", &format_args!("{}", self.stis().bits()))
-            .field("smsel", &format_args!("{}", self.smsel().bits()))
+            .field("sts", &self.sts())
+            .field("stis", &self.stis())
+            .field("smsel", &self.smsel())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<STCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -394,7 +391,7 @@ impl W {
         STS_W::new(self, 7)
     }
 }
-#[doc = "Subordinate TMR control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`stctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`stctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Subordinate TMR control register\n\nYou can [`read`](crate::Reg::read) this register and get [`stctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`stctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STCTRL_SPEC;
 impl crate::RegisterSpec for STCTRL_SPEC {
     type Ux = u32;

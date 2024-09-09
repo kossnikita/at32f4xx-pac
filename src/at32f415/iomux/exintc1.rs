@@ -26,6 +26,7 @@ impl From<EXINT0_A> for u8 {
 impl crate::FieldSpec for EXINT0_A {
     type Ux = u8;
 }
+impl crate::IsEnum for EXINT0_A {}
 #[doc = "Field `EXINT(0-3)` reader - Select the input source for EXINT%s external interrupt"]
 pub type EXINT_R = crate::FieldReader<EXINT0_A>;
 impl EXINT_R {
@@ -103,7 +104,7 @@ where
 impl R {
     #[doc = "Select the input source for EXINT(0-3) external interrupt"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EXINT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `EXINT0` field.</div>"]
     #[inline(always)]
     pub fn exint(&self, n: u8) -> EXINT_R {
         #[allow(clippy::no_effect)]
@@ -140,22 +141,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXINTC1")
-            .field("exint0", &format_args!("{}", self.exint0().bits()))
-            .field("exint1", &format_args!("{}", self.exint1().bits()))
-            .field("exint2", &format_args!("{}", self.exint2().bits()))
-            .field("exint3", &format_args!("{}", self.exint3().bits()))
+            .field("exint0", &self.exint0())
+            .field("exint1", &self.exint1())
+            .field("exint2", &self.exint2())
+            .field("exint3", &self.exint3())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<EXINTC1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Select the input source for EXINT(0-3) external interrupt"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EXINT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `EXINT0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn exint(&mut self, n: u8) -> EXINT_W<EXINTC1_SPEC> {
@@ -188,7 +184,7 @@ impl W {
         EXINT_W::new(self, 12)
     }
 }
-#[doc = "External interrupt configuration register 1 (IOMUX_EXINTC1)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`exintc1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`exintc1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "External interrupt configuration register 1 (IOMUX_EXINTC1)\n\nYou can [`read`](crate::Reg::read) this register and get [`exintc1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`exintc1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXINTC1_SPEC;
 impl crate::RegisterSpec for EXINTC1_SPEC {
     type Ux = u32;

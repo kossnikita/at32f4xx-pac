@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2SCTRL")
-            .field("i2sfdupen", &format_args!("{}", self.i2sfdupen().bit()))
-            .field("i2sen", &format_args!("{}", self.i2sen().bit()))
-            .field("opersel", &format_args!("{}", self.opersel().bits()))
-            .field("pcmfssel", &format_args!("{}", self.pcmfssel().bit()))
-            .field("stdsel", &format_args!("{}", self.stdsel().bits()))
-            .field("i2sclkpol", &format_args!("{}", self.i2sclkpol().bit()))
-            .field("i2sdbn", &format_args!("{}", self.i2sdbn().bits()))
-            .field("i2scbn", &format_args!("{}", self.i2scbn().bit()))
+            .field("i2sfdupen", &self.i2sfdupen())
+            .field("i2sen", &self.i2sen())
+            .field("opersel", &self.opersel())
+            .field("pcmfssel", &self.pcmfssel())
+            .field("stdsel", &self.stdsel())
+            .field("i2sclkpol", &self.i2sclkpol())
+            .field("i2sdbn", &self.i2sdbn())
+            .field("i2scbn", &self.i2scbn())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<I2SCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         I2SFDUPEN_W::new(self, 13)
     }
 }
-#[doc = "I2S control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2sctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2sctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2S control register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2sctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2sctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2SCTRL_SPEC;
 impl crate::RegisterSpec for I2SCTRL_SPEC {
     type Ux = u32;

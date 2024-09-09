@@ -41,16 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS3")
-            .field("obf", &format_args!("{}", self.obf().bit()))
-            .field("prgmerr", &format_args!("{}", self.prgmerr().bit()))
-            .field("epperr", &format_args!("{}", self.epperr().bit()))
-            .field("odf", &format_args!("{}", self.odf().bit()))
+            .field("obf", &self.obf())
+            .field("prgmerr", &self.prgmerr())
+            .field("epperr", &self.epperr())
+            .field("odf", &self.odf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<STS3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -73,7 +68,7 @@ impl W {
         ODF_W::new(self, 5)
     }
 }
-#[doc = "Status 3 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Status 3 register\n\nYou can [`read`](crate::Reg::read) this register and get [`sts3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sts3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS3_SPEC;
 impl crate::RegisterSpec for STS3_SPEC {
     type Ux = u32;

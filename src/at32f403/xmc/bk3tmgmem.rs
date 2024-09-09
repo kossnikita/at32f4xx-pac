@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BK3TMGMEM")
-            .field("rgdhizt", &format_args!("{}", self.rgdhizt().bits()))
-            .field("rght", &format_args!("{}", self.rght().bits()))
-            .field("rgwt", &format_args!("{}", self.rgwt().bits()))
-            .field("rgst", &format_args!("{}", self.rgst().bits()))
+            .field("rgdhizt", &self.rgdhizt())
+            .field("rght", &self.rght())
+            .field("rgwt", &self.rgwt())
+            .field("rgst", &self.rgst())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<BK3TMGMEM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         RGDHIZT_W::new(self, 24)
     }
 }
-#[doc = "Regular memory space timing register 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bk3tmgmem::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bk3tmgmem::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Regular memory space timing register 3\n\nYou can [`read`](crate::Reg::read) this register and get [`bk3tmgmem::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bk3tmgmem::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BK3TMGMEM_SPEC;
 impl crate::RegisterSpec for BK3TMGMEM_SPEC {
     type Ux = u32;

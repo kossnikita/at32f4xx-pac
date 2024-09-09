@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HCTSIZ15")
-            .field("xfersize", &format_args!("{}", self.xfersize().bits()))
-            .field("pktcnt", &format_args!("{}", self.pktcnt().bits()))
-            .field("pid", &format_args!("{}", self.pid().bits()))
-            .field("dopng", &format_args!("{}", self.dopng().bit()))
+            .field("xfersize", &self.xfersize())
+            .field("pktcnt", &self.pktcnt())
+            .field("pid", &self.pid())
+            .field("dopng", &self.dopng())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HCTSIZ15_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         DOPNG_W::new(self, 31)
     }
 }
-#[doc = "OTGHS host channel-15 transfer size register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hctsiz15::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hctsiz15::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS host channel-15 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`hctsiz15::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hctsiz15::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCTSIZ15_SPEC;
 impl crate::RegisterSpec for HCTSIZ15_SPEC {
     type Ux = u32;

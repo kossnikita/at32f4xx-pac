@@ -12,16 +12,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMDSTS")
-            .field("cmdsts", &format_args!("{}", self.cmdsts().bit()))
+            .field("cmdsts", &self.cmdsts())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<CMDSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "CMD status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmdsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CMD status register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdsts::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CMDSTS_SPEC;
 impl crate::RegisterSpec for CMDSTS_SPEC {
     type Ux = u32;

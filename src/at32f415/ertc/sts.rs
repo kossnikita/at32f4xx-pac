@@ -130,27 +130,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS")
-            .field("alawf", &format_args!("{}", self.alawf().bit()))
-            .field("albwf", &format_args!("{}", self.albwf().bit()))
-            .field("watwf", &format_args!("{}", self.watwf().bit()))
-            .field("tadjf", &format_args!("{}", self.tadjf().bit()))
-            .field("initf", &format_args!("{}", self.initf().bit()))
-            .field("updf", &format_args!("{}", self.updf().bit()))
-            .field("imf", &format_args!("{}", self.imf().bit()))
-            .field("imen", &format_args!("{}", self.imen().bit()))
-            .field("alaf", &format_args!("{}", self.alaf().bit()))
-            .field("albf", &format_args!("{}", self.albf().bit()))
-            .field("watf", &format_args!("{}", self.watf().bit()))
-            .field("tsf", &format_args!("{}", self.tsf().bit()))
-            .field("tsof", &format_args!("{}", self.tsof().bit()))
-            .field("tp1f", &format_args!("{}", self.tp1f().bit()))
-            .field("calupdf", &format_args!("{}", self.calupdf().bit()))
+            .field("alawf", &self.alawf())
+            .field("albwf", &self.albwf())
+            .field("watwf", &self.watwf())
+            .field("tadjf", &self.tadjf())
+            .field("initf", &self.initf())
+            .field("updf", &self.updf())
+            .field("imf", &self.imf())
+            .field("imen", &self.imen())
+            .field("alaf", &self.alaf())
+            .field("albf", &self.albf())
+            .field("watf", &self.watf())
+            .field("tsf", &self.tsf())
+            .field("tsof", &self.tsof())
+            .field("tp1f", &self.tp1f())
+            .field("calupdf", &self.calupdf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -209,7 +204,7 @@ impl W {
         TP1F_W::new(self, 13)
     }
 }
-#[doc = "initialization and status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "initialization and status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
 impl crate::RegisterSpec for STS_SPEC {
     type Ux = u32;

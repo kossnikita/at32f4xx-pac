@@ -201,39 +201,31 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GINTSTS")
-            .field("curmod", &format_args!("{}", self.curmod().bit()))
-            .field("modemis", &format_args!("{}", self.modemis().bit()))
-            .field("otgint", &format_args!("{}", self.otgint().bit()))
-            .field("sof", &format_args!("{}", self.sof().bit()))
-            .field("rxflvl", &format_args!("{}", self.rxflvl().bit()))
-            .field("nptxfemp", &format_args!("{}", self.nptxfemp().bit()))
-            .field("ginnakeff", &format_args!("{}", self.ginnakeff().bit()))
-            .field("goutnakeff", &format_args!("{}", self.goutnakeff().bit()))
-            .field("erlysusp", &format_args!("{}", self.erlysusp().bit()))
-            .field("usbsusp", &format_args!("{}", self.usbsusp().bit()))
-            .field("usbrst", &format_args!("{}", self.usbrst().bit()))
-            .field("enumdone", &format_args!("{}", self.enumdone().bit()))
-            .field("isooutdrop", &format_args!("{}", self.isooutdrop().bit()))
-            .field("eopf", &format_args!("{}", self.eopf().bit()))
-            .field("ieptint", &format_args!("{}", self.ieptint().bit()))
-            .field("oeptint", &format_args!("{}", self.oeptint().bit()))
-            .field("incompisoin", &format_args!("{}", self.incompisoin().bit()))
-            .field(
-                "incompip_incompisoout",
-                &format_args!("{}", self.incompip_incompisoout().bit()),
-            )
-            .field("prtint", &format_args!("{}", self.prtint().bit()))
-            .field("hchint", &format_args!("{}", self.hchint().bit()))
-            .field("ptxfemp", &format_args!("{}", self.ptxfemp().bit()))
-            .field("conidschg", &format_args!("{}", self.conidschg().bit()))
-            .field("disconint", &format_args!("{}", self.disconint().bit()))
-            .field("wkupint", &format_args!("{}", self.wkupint().bit()))
+            .field("curmod", &self.curmod())
+            .field("modemis", &self.modemis())
+            .field("otgint", &self.otgint())
+            .field("sof", &self.sof())
+            .field("rxflvl", &self.rxflvl())
+            .field("nptxfemp", &self.nptxfemp())
+            .field("ginnakeff", &self.ginnakeff())
+            .field("goutnakeff", &self.goutnakeff())
+            .field("erlysusp", &self.erlysusp())
+            .field("usbsusp", &self.usbsusp())
+            .field("usbrst", &self.usbrst())
+            .field("enumdone", &self.enumdone())
+            .field("isooutdrop", &self.isooutdrop())
+            .field("eopf", &self.eopf())
+            .field("ieptint", &self.ieptint())
+            .field("oeptint", &self.oeptint())
+            .field("incompisoin", &self.incompisoin())
+            .field("incompip_incompisoout", &self.incompip_incompisoout())
+            .field("prtint", &self.prtint())
+            .field("hchint", &self.hchint())
+            .field("ptxfemp", &self.ptxfemp())
+            .field("conidschg", &self.conidschg())
+            .field("disconint", &self.disconint())
+            .field("wkupint", &self.wkupint())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GINTSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -316,7 +308,7 @@ impl W {
         WKUPINT_W::new(self, 31)
     }
 }
-#[doc = "OTGFS core interrupt register (OTGFS_GINTSTS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gintsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gintsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS core interrupt register (OTGFS_GINTSTS)\n\nYou can [`read`](crate::Reg::read) this register and get [`gintsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gintsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GINTSTS_SPEC;
 impl crate::RegisterSpec for GINTSTS_SPEC {
     type Ux = u32;

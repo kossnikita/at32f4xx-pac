@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BK4CTRL")
-            .field("eccpgs", &format_args!("{}", self.eccpgs().bits()))
-            .field("tar", &format_args!("{}", self.tar().bits()))
-            .field("tcr", &format_args!("{}", self.tcr().bits()))
-            .field("eccen", &format_args!("{}", self.eccen().bit()))
-            .field("extmdbw", &format_args!("{}", self.extmdbw().bits()))
-            .field("dev", &format_args!("{}", self.dev().bit()))
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field("nwen", &format_args!("{}", self.nwen().bit()))
+            .field("eccpgs", &self.eccpgs())
+            .field("tar", &self.tar())
+            .field("tcr", &self.tcr())
+            .field("eccen", &self.eccen())
+            .field("extmdbw", &self.extmdbw())
+            .field("dev", &self.dev())
+            .field("en", &self.en())
+            .field("nwen", &self.nwen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<BK4CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         ECCPGS_W::new(self, 17)
     }
 }
-#[doc = "PC Card/NAND Flash control register 4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bk4ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bk4ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PC Card/NAND Flash control register 4\n\nYou can [`read`](crate::Reg::read) this register and get [`bk4ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bk4ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BK4CTRL_SPEC;
 impl crate::RegisterSpec for BK4CTRL_SPEC {
     type Ux = u32;

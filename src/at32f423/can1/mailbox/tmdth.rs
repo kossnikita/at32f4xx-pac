@@ -5,11 +5,11 @@ pub type W = crate::W<TMDTH_SPEC>;
 #[doc = "Field `TMDT(4-7)` reader - Transmit mailbox data byte %s"]
 pub type TMDT_R = crate::FieldReader;
 #[doc = "Field `TMDT(4-7)` writer - Transmit mailbox data byte %s"]
-pub type TMDT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
+pub type TMDT_W<'a, REG> = crate::FieldWriter<'a, REG, 8, u8, crate::Safe>;
 impl R {
     #[doc = "Transmit mailbox data byte (4-7)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TMDT4` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TMDT4` field.</div>"]
     #[inline(always)]
     pub fn tmdt(&self, n: u8) -> TMDT_R {
         #[allow(clippy::no_effect)]
@@ -46,22 +46,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TMDTH")
-            .field("tmdt4", &format_args!("{}", self.tmdt4().bits()))
-            .field("tmdt5", &format_args!("{}", self.tmdt5().bits()))
-            .field("tmdt6", &format_args!("{}", self.tmdt6().bits()))
-            .field("tmdt7", &format_args!("{}", self.tmdt7().bits()))
+            .field("tmdt4", &self.tmdt4())
+            .field("tmdt5", &self.tmdt5())
+            .field("tmdt6", &self.tmdt6())
+            .field("tmdt7", &self.tmdt7())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<TMDTH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Transmit mailbox data byte (4-7)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TMDT4` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TMDT4` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn tmdt(&mut self, n: u8) -> TMDT_W<TMDTH_SPEC> {
@@ -94,7 +89,7 @@ impl W {
         TMDT_W::new(self, 24)
     }
 }
-#[doc = "Transmit mailbox data high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tmdth::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tmdth::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transmit mailbox data high register\n\nYou can [`read`](crate::Reg::read) this register and get [`tmdth::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tmdth::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TMDTH_SPEC;
 impl crate::RegisterSpec for TMDTH_SPEC {
     type Ux = u32;

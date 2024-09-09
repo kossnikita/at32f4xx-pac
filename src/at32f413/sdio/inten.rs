@@ -214,47 +214,30 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTEN")
-            .field("cmdfailien", &format_args!("{}", self.cmdfailien().bit()))
-            .field("dtfailien", &format_args!("{}", self.dtfailien().bit()))
-            .field(
-                "cmdtimeoutien",
-                &format_args!("{}", self.cmdtimeoutien().bit()),
-            )
-            .field(
-                "dttimeoutien",
-                &format_args!("{}", self.dttimeoutien().bit()),
-            )
-            .field("txerruien", &format_args!("{}", self.txerruien().bit()))
-            .field("rxerruien", &format_args!("{}", self.rxerruien().bit()))
-            .field(
-                "cmdrspcmplien",
-                &format_args!("{}", self.cmdrspcmplien().bit()),
-            )
-            .field("cmdcmplien", &format_args!("{}", self.cmdcmplien().bit()))
-            .field("dtcmplien", &format_args!("{}", self.dtcmplien().bit()))
-            .field("sbiterrien", &format_args!("{}", self.sbiterrien().bit()))
-            .field(
-                "dtblkcmplien",
-                &format_args!("{}", self.dtblkcmplien().bit()),
-            )
-            .field("docmdien", &format_args!("{}", self.docmdien().bit()))
-            .field("dotxien", &format_args!("{}", self.dotxien().bit()))
-            .field("dorxien", &format_args!("{}", self.dorxien().bit()))
-            .field("txbufhien", &format_args!("{}", self.txbufhien().bit()))
-            .field("rxbufhien", &format_args!("{}", self.rxbufhien().bit()))
-            .field("txbuffien", &format_args!("{}", self.txbuffien().bit()))
-            .field("rxbuffien", &format_args!("{}", self.rxbuffien().bit()))
-            .field("txbufeien", &format_args!("{}", self.txbufeien().bit()))
-            .field("rxbufeien", &format_args!("{}", self.rxbufeien().bit()))
-            .field("txbufien", &format_args!("{}", self.txbufien().bit()))
-            .field("rxbufien", &format_args!("{}", self.rxbufien().bit()))
-            .field("ioifien", &format_args!("{}", self.ioifien().bit()))
+            .field("cmdfailien", &self.cmdfailien())
+            .field("dtfailien", &self.dtfailien())
+            .field("cmdtimeoutien", &self.cmdtimeoutien())
+            .field("dttimeoutien", &self.dttimeoutien())
+            .field("txerruien", &self.txerruien())
+            .field("rxerruien", &self.rxerruien())
+            .field("cmdrspcmplien", &self.cmdrspcmplien())
+            .field("cmdcmplien", &self.cmdcmplien())
+            .field("dtcmplien", &self.dtcmplien())
+            .field("sbiterrien", &self.sbiterrien())
+            .field("dtblkcmplien", &self.dtblkcmplien())
+            .field("docmdien", &self.docmdien())
+            .field("dotxien", &self.dotxien())
+            .field("dorxien", &self.dorxien())
+            .field("txbufhien", &self.txbufhien())
+            .field("rxbufhien", &self.rxbufhien())
+            .field("txbuffien", &self.txbuffien())
+            .field("rxbuffien", &self.rxbuffien())
+            .field("txbufeien", &self.txbufeien())
+            .field("rxbufeien", &self.rxbufeien())
+            .field("txbufien", &self.txbufien())
+            .field("rxbufien", &self.rxbufien())
+            .field("ioifien", &self.ioifien())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<INTEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -397,7 +380,7 @@ impl W {
         IOIFIEN_W::new(self, 22)
     }
 }
-#[doc = "SDIO mask register (SDIO_INTEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inten::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inten::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SDIO mask register (SDIO_INTEN)\n\nYou can [`read`](crate::Reg::read) this register and get [`inten::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inten::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTEN_SPEC;
 impl crate::RegisterSpec for INTEN_SPEC {
     type Ux = u32;

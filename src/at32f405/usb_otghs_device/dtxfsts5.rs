@@ -12,16 +12,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DTXFSTS5")
-            .field("ineptxfsav", &format_args!("{}", self.ineptxfsav().bits()))
+            .field("ineptxfsav", &self.ineptxfsav())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<DTXFSTS5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "OTGHS device IN endpoint-5 transmit FIFO status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dtxfsts5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS device IN endpoint-5 transmit FIFO status register\n\nYou can [`read`](crate::Reg::read) this register and get [`dtxfsts5::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DTXFSTS5_SPEC;
 impl crate::RegisterSpec for DTXFSTS5_SPEC {
     type Ux = u32;

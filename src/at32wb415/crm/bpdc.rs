@@ -59,18 +59,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BPDC")
-            .field("lexten", &format_args!("{}", self.lexten().bit()))
-            .field("lextstbl", &format_args!("{}", self.lextstbl().bit()))
-            .field("lextbyps", &format_args!("{}", self.lextbyps().bit()))
-            .field("ertcsel", &format_args!("{}", self.ertcsel().bits()))
-            .field("ertcen", &format_args!("{}", self.ertcen().bit()))
-            .field("bpdrst", &format_args!("{}", self.bpdrst().bit()))
+            .field("lexten", &self.lexten())
+            .field("lextstbl", &self.lextstbl())
+            .field("lextbyps", &self.lextbyps())
+            .field("ertcsel", &self.ertcsel())
+            .field("ertcen", &self.ertcen())
+            .field("bpdrst", &self.bpdrst())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<BPDC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -105,7 +100,7 @@ impl W {
         BPDRST_W::new(self, 16)
     }
 }
-#[doc = "Battery powered domain control register (CRM_BPDC)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bpdc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bpdc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Battery powered domain control register (CRM_BPDC)\n\nYou can [`read`](crate::Reg::read) this register and get [`bpdc::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bpdc::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BPDC_SPEC;
 impl crate::RegisterSpec for BPDC_SPEC {
     type Ux = u32;

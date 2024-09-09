@@ -24,6 +24,7 @@ impl From<C1C_A> for u8 {
 impl crate::FieldSpec for C1C_A {
     type Ux = u8;
 }
+impl crate::IsEnum for C1C_A {}
 #[doc = "Field `C1C` reader - Channel 1 configure"]
 pub type C1C_R = crate::FieldReader<C1C_A>;
 impl C1C_R {
@@ -60,7 +61,7 @@ impl C1C_R {
     }
 }
 #[doc = "Field `C1C` writer - Channel 1 configure"]
-pub type C1C_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C1C_A>;
+pub type C1C_W<'a, REG> = crate::FieldWriter<'a, REG, 2, C1C_A, crate::Safe>;
 impl<'a, REG> C1C_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -109,6 +110,7 @@ impl From<C1IDIV_A> for u8 {
 impl crate::FieldSpec for C1IDIV_A {
     type Ux = u8;
 }
+impl crate::IsEnum for C1IDIV_A {}
 #[doc = "Field `CIDIV(1-2)` reader - Channel %s input divider"]
 pub type CIDIV_R = crate::FieldReader<C1IDIV_A>;
 impl CIDIV_R {
@@ -145,7 +147,7 @@ impl CIDIV_R {
     }
 }
 #[doc = "Field `CIDIV(1-2)` writer - Channel %s input divider"]
-pub type CIDIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C1IDIV_A>;
+pub type CIDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 2, C1IDIV_A, crate::Safe>;
 impl<'a, REG> CIDIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -218,6 +220,7 @@ impl From<CDF_A> for u8 {
 impl crate::FieldSpec for CDF_A {
     type Ux = u8;
 }
+impl crate::IsEnum for CDF_A {}
 #[doc = "Field `CDF(1-2)` reader - Channel %s digital filter"]
 pub type CDF_R = crate::FieldReader<CDF_A>;
 impl CDF_R {
@@ -326,7 +329,7 @@ impl CDF_R {
     }
 }
 #[doc = "Field `CDF(1-2)` writer - Channel %s digital filter"]
-pub type CDF_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4, CDF_A>;
+pub type CDF_W<'a, REG> = crate::FieldWriter<'a, REG, 4, CDF_A, crate::Safe>;
 impl<'a, REG> CDF_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -435,6 +438,7 @@ impl From<C2C_A> for u8 {
 impl crate::FieldSpec for C2C_A {
     type Ux = u8;
 }
+impl crate::IsEnum for C2C_A {}
 #[doc = "Field `C2C` reader - Channel 2 configure"]
 pub type C2C_R = crate::FieldReader<C2C_A>;
 impl C2C_R {
@@ -471,7 +475,7 @@ impl C2C_R {
     }
 }
 #[doc = "Field `C2C` writer - Channel 2 configure"]
-pub type C2C_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C2C_A>;
+pub type C2C_W<'a, REG> = crate::FieldWriter<'a, REG, 2, C2C_A, crate::Safe>;
 impl<'a, REG> C2C_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -506,7 +510,7 @@ impl R {
     }
     #[doc = "Channel (1-2) input divider"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IDIV` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IDIV` field.</div>"]
     #[inline(always)]
     pub fn cidiv(&self, n: u8) -> CIDIV_R {
         #[allow(clippy::no_effect)]
@@ -531,7 +535,7 @@ impl R {
     }
     #[doc = "Channel (1-2) digital filter"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1DF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1DF` field.</div>"]
     #[inline(always)]
     pub fn cdf(&self, n: u8) -> CDF_R {
         #[allow(clippy::no_effect)]
@@ -563,18 +567,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CM1_INPUT")
-            .field("c1df", &format_args!("{}", self.c1df().bits()))
-            .field("c2df", &format_args!("{}", self.c2df().bits()))
-            .field("c1idiv", &format_args!("{}", self.c1idiv().bits()))
-            .field("c2idiv", &format_args!("{}", self.c2idiv().bits()))
-            .field("c2c", &format_args!("{}", self.c2c().bits()))
-            .field("c1c", &format_args!("{}", self.c1c().bits()))
+            .field("c1df", &self.c1df())
+            .field("c2df", &self.c2df())
+            .field("c1idiv", &self.c1idiv())
+            .field("c2idiv", &self.c2idiv())
+            .field("c2c", &self.c2c())
+            .field("c1c", &self.c1c())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CM1_INPUT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -586,7 +585,7 @@ impl W {
     }
     #[doc = "Channel (1-2) input divider"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IDIV` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IDIV` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cidiv(&mut self, n: u8) -> CIDIV_W<CM1_INPUT_SPEC> {
@@ -608,7 +607,7 @@ impl W {
     }
     #[doc = "Channel (1-2) digital filter"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1DF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1DF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cdf(&mut self, n: u8) -> CDF_W<CM1_INPUT_SPEC> {
@@ -635,7 +634,7 @@ impl W {
         C2C_W::new(self, 8)
     }
 }
-#[doc = "Channel input mode register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cm1_input::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cm1_input::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel input mode register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`cm1_input::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cm1_input::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CM1_INPUT_SPEC;
 impl crate::RegisterSpec for CM1_INPUT_SPEC {
     type Ux = u32;

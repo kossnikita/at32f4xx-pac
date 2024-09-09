@@ -5,7 +5,7 @@ pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `CNT` reader - Decrement counter"]
 pub type CNT_R = crate::FieldReader;
 #[doc = "Field `CNT` writer - Decrement counter"]
-pub type CNT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
+pub type CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 7, u8, crate::Safe>;
 #[doc = "Window watchdog enable\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Wwdtenr {
@@ -81,14 +81,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("cnt", &format_args!("{}", self.cnt().bits()))
-            .field("wwdten", &format_args!("{}", self.wwdten().bit()))
+            .field("cnt", &self.cnt())
+            .field("wwdten", &self.wwdten())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -105,7 +100,7 @@ impl W {
         WWDTEN_W::new(self, 7)
     }
 }
-#[doc = "Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

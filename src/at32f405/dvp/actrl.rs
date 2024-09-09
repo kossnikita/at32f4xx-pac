@@ -106,23 +106,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ACTRL")
-            .field("vseid", &format_args!("{}", self.vseid().bit()))
-            .field("hseid", &format_args!("{}", self.hseid().bit()))
-            .field("dmabt", &format_args!("{}", self.dmabt().bit()))
-            .field("idus", &format_args!("{}", self.idus().bit()))
-            .field("idun", &format_args!("{}", self.idun().bits()))
-            .field("efdm", &format_args!("{}", self.efdm().bit()))
-            .field("efdf", &format_args!("{}", self.efdf().bits()))
-            .field("pcdes", &format_args!("{}", self.pcdes().bit()))
-            .field("mibe", &format_args!("{}", self.mibe().bit()))
-            .field("efrce", &format_args!("{}", self.efrce().bit()))
-            .field("eisre", &format_args!("{}", self.eisre().bit()))
+            .field("vseid", &self.vseid())
+            .field("hseid", &self.hseid())
+            .field("dmabt", &self.dmabt())
+            .field("idus", &self.idus())
+            .field("idun", &self.idun())
+            .field("efdm", &self.efdm())
+            .field("efdf", &self.efdf())
+            .field("pcdes", &self.pcdes())
+            .field("mibe", &self.mibe())
+            .field("efrce", &self.efrce())
+            .field("eisre", &self.eisre())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<ACTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -193,7 +188,7 @@ impl W {
         VSEID_W::new(self, 17)
     }
 }
-#[doc = "Advanced Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`actrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`actrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Advanced Control register\n\nYou can [`read`](crate::Reg::read) this register and get [`actrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`actrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ACTRL_SPEC;
 impl crate::RegisterSpec for ACTRL_SPEC {
     type Ux = u32;

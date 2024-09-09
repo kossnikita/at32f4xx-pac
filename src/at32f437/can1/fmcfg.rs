@@ -58,7 +58,7 @@ where
 impl R {
     #[doc = "Filter mode select"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `SEL0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SEL0` field.</div>"]
     #[inline(always)]
     pub fn sel(&self, n: u8) -> SEL_R {
         #[allow(clippy::no_effect)]
@@ -215,46 +215,41 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FMCFG")
-            .field("sel0", &format_args!("{}", self.sel0().bit()))
-            .field("sel1", &format_args!("{}", self.sel1().bit()))
-            .field("sel2", &format_args!("{}", self.sel2().bit()))
-            .field("sel3", &format_args!("{}", self.sel3().bit()))
-            .field("sel4", &format_args!("{}", self.sel4().bit()))
-            .field("sel5", &format_args!("{}", self.sel5().bit()))
-            .field("sel6", &format_args!("{}", self.sel6().bit()))
-            .field("sel7", &format_args!("{}", self.sel7().bit()))
-            .field("sel8", &format_args!("{}", self.sel8().bit()))
-            .field("sel9", &format_args!("{}", self.sel9().bit()))
-            .field("sel10", &format_args!("{}", self.sel10().bit()))
-            .field("sel11", &format_args!("{}", self.sel11().bit()))
-            .field("sel12", &format_args!("{}", self.sel12().bit()))
-            .field("sel13", &format_args!("{}", self.sel13().bit()))
-            .field("sel14", &format_args!("{}", self.sel14().bit()))
-            .field("sel15", &format_args!("{}", self.sel15().bit()))
-            .field("sel16", &format_args!("{}", self.sel16().bit()))
-            .field("sel17", &format_args!("{}", self.sel17().bit()))
-            .field("sel18", &format_args!("{}", self.sel18().bit()))
-            .field("sel19", &format_args!("{}", self.sel19().bit()))
-            .field("sel20", &format_args!("{}", self.sel20().bit()))
-            .field("sel21", &format_args!("{}", self.sel21().bit()))
-            .field("sel22", &format_args!("{}", self.sel22().bit()))
-            .field("sel23", &format_args!("{}", self.sel23().bit()))
-            .field("sel24", &format_args!("{}", self.sel24().bit()))
-            .field("sel25", &format_args!("{}", self.sel25().bit()))
-            .field("sel26", &format_args!("{}", self.sel26().bit()))
-            .field("sel27", &format_args!("{}", self.sel27().bit()))
+            .field("sel0", &self.sel0())
+            .field("sel1", &self.sel1())
+            .field("sel2", &self.sel2())
+            .field("sel3", &self.sel3())
+            .field("sel4", &self.sel4())
+            .field("sel5", &self.sel5())
+            .field("sel6", &self.sel6())
+            .field("sel7", &self.sel7())
+            .field("sel8", &self.sel8())
+            .field("sel9", &self.sel9())
+            .field("sel10", &self.sel10())
+            .field("sel11", &self.sel11())
+            .field("sel12", &self.sel12())
+            .field("sel13", &self.sel13())
+            .field("sel14", &self.sel14())
+            .field("sel15", &self.sel15())
+            .field("sel16", &self.sel16())
+            .field("sel17", &self.sel17())
+            .field("sel18", &self.sel18())
+            .field("sel19", &self.sel19())
+            .field("sel20", &self.sel20())
+            .field("sel21", &self.sel21())
+            .field("sel22", &self.sel22())
+            .field("sel23", &self.sel23())
+            .field("sel24", &self.sel24())
+            .field("sel25", &self.sel25())
+            .field("sel26", &self.sel26())
+            .field("sel27", &self.sel27())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<FMCFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Filter mode select"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `SEL0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SEL0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn sel(&mut self, n: u8) -> SEL_W<FMCFG_SPEC> {
@@ -431,7 +426,7 @@ impl W {
         SEL_W::new(self, 27)
     }
 }
-#[doc = "Filter mode config register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fmcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fmcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Filter mode config register\n\nYou can [`read`](crate::Reg::read) this register and get [`fmcfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fmcfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FMCFG_SPEC;
 impl crate::RegisterSpec for FMCFG_SPEC {
     type Ux = u32;

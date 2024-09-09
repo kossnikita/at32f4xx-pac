@@ -61,29 +61,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USD")
-            .field("usderr", &format_args!("{}", self.usderr().bit()))
-            .field("fap", &format_args!("{}", self.fap().bit()))
-            .field(
-                "n_wdt_ato_en",
-                &format_args!("{}", self.n_wdt_ato_en().bit()),
-            )
-            .field(
-                "n_depslp_rst",
-                &format_args!("{}", self.n_depslp_rst().bit()),
-            )
-            .field("n_stdby_rst", &format_args!("{}", self.n_stdby_rst().bit()))
-            .field("btopt", &format_args!("{}", self.btopt().bit()))
-            .field("user_d0", &format_args!("{}", self.user_d0().bits()))
-            .field("user_d1", &format_args!("{}", self.user_d1().bits()))
+            .field("usderr", &self.usderr())
+            .field("fap", &self.fap())
+            .field("n_wdt_ato_en", &self.n_wdt_ato_en())
+            .field("n_depslp_rst", &self.n_depslp_rst())
+            .field("n_stdby_rst", &self.n_stdby_rst())
+            .field("btopt", &self.btopt())
+            .field("user_d0", &self.user_d0())
+            .field("user_d1", &self.user_d1())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<USD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "User system data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`usd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "User system data register\n\nYou can [`read`](crate::Reg::read) this register and get [`usd::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct USD_SPEC;
 impl crate::RegisterSpec for USD_SPEC {
     type Ux = u32;

@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BRK")
-            .field("oen", &format_args!("{}", self.oen().bit()))
-            .field("aoen", &format_args!("{}", self.aoen().bit()))
-            .field("brkv", &format_args!("{}", self.brkv().bit()))
-            .field("brken", &format_args!("{}", self.brken().bit()))
-            .field("fcsoen", &format_args!("{}", self.fcsoen().bit()))
-            .field("fcsodis", &format_args!("{}", self.fcsodis().bit()))
-            .field("wpc", &format_args!("{}", self.wpc().bits()))
-            .field("dtc", &format_args!("{}", self.dtc().bits()))
+            .field("oen", &self.oen())
+            .field("aoen", &self.aoen())
+            .field("brkv", &self.brkv())
+            .field("brken", &self.brken())
+            .field("fcsoen", &self.fcsoen())
+            .field("fcsodis", &self.fcsodis())
+            .field("wpc", &self.wpc())
+            .field("dtc", &self.dtc())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<BRK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         OEN_W::new(self, 15)
     }
 }
-#[doc = "Brake register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`brk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`brk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Brake register\n\nYou can [`read`](crate::Reg::read) this register and get [`brk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`brk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BRK_SPEC;
 impl crate::RegisterSpec for BRK_SPEC {
     type Ux = u32;

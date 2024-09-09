@@ -5,19 +5,19 @@ pub type W = crate::W<BTMG_SPEC>;
 #[doc = "Field `BRDIV` reader - Baud rate division"]
 pub type BRDIV_R = crate::FieldReader<u16>;
 #[doc = "Field `BRDIV` writer - Baud rate division"]
-pub type BRDIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 12, u16>;
+pub type BRDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16, crate::Safe>;
 #[doc = "Field `BTS1` reader - Bit time segment 1"]
 pub type BTS1_R = crate::FieldReader;
 #[doc = "Field `BTS1` writer - Bit time segment 1"]
-pub type BTS1_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type BTS1_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `BTS2` reader - Bit time segment 2"]
 pub type BTS2_R = crate::FieldReader;
 #[doc = "Field `BTS2` writer - Bit time segment 2"]
-pub type BTS2_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type BTS2_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Field `RSAW` reader - Resynchronization adjust width"]
 pub type RSAW_R = crate::FieldReader;
 #[doc = "Field `RSAW` writer - Resynchronization adjust width"]
-pub type RSAW_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
+pub type RSAW_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 #[doc = "Loop back mode\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Lbenr {
@@ -187,18 +187,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BTMG")
-            .field("loen", &format_args!("{}", self.loen().bit()))
-            .field("lben", &format_args!("{}", self.lben().bit()))
-            .field("rsaw", &format_args!("{}", self.rsaw().bits()))
-            .field("bts2", &format_args!("{}", self.bts2().bits()))
-            .field("bts1", &format_args!("{}", self.bts1().bits()))
-            .field("brdiv", &format_args!("{}", self.brdiv().bits()))
+            .field("loen", &self.loen())
+            .field("lben", &self.lben())
+            .field("rsaw", &self.rsaw())
+            .field("bts2", &self.bts2())
+            .field("bts1", &self.bts1())
+            .field("brdiv", &self.brdiv())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<BTMG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -239,7 +234,7 @@ impl W {
         LOEN_W::new(self, 31)
     }
 }
-#[doc = "Bit timing register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`btmg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`btmg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Bit timing register\n\nYou can [`read`](crate::Reg::read) this register and get [`btmg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`btmg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BTMG_SPEC;
 impl crate::RegisterSpec for BTMG_SPEC {
     type Ux = u32;

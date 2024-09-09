@@ -496,29 +496,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field("octesel_h", &format_args!("{}", self.octesel_h().bit()))
-            .field("pcswtrg", &format_args!("{}", self.pcswtrg().bit()))
-            .field("ocswtrg", &format_args!("{}", self.ocswtrg().bit()))
-            .field("ocete", &format_args!("{}", self.ocete().bits()))
-            .field("octesel_l", &format_args!("{}", self.octesel_l().bits()))
-            .field("pctesel_h", &format_args!("{}", self.pctesel_h().bit()))
-            .field("pcete", &format_args!("{}", self.pcete().bits()))
-            .field("pctesel_l", &format_args!("{}", self.pctesel_l().bits()))
-            .field("dtalign", &format_args!("{}", self.dtalign().bit()))
-            .field("eocsfen", &format_args!("{}", self.eocsfen().bit()))
-            .field("ocdrcen", &format_args!("{}", self.ocdrcen().bit()))
-            .field("ocdmaen", &format_args!("{}", self.ocdmaen().bit()))
-            .field("adabrt", &format_args!("{}", self.adabrt().bit()))
-            .field("adcalinit", &format_args!("{}", self.adcalinit().bit()))
-            .field("adcal", &format_args!("{}", self.adcal().bit()))
-            .field("rpen", &format_args!("{}", self.rpen().bit()))
-            .field("adcen", &format_args!("{}", self.adcen().bit()))
+            .field("octesel_h", &self.octesel_h())
+            .field("pcswtrg", &self.pcswtrg())
+            .field("ocswtrg", &self.ocswtrg())
+            .field("ocete", &self.ocete())
+            .field("octesel_l", &self.octesel_l())
+            .field("pctesel_h", &self.pctesel_h())
+            .field("pcete", &self.pcete())
+            .field("pctesel_l", &self.pctesel_l())
+            .field("dtalign", &self.dtalign())
+            .field("eocsfen", &self.eocsfen())
+            .field("ocdrcen", &self.ocdrcen())
+            .field("ocdmaen", &self.ocdmaen())
+            .field("adabrt", &self.adabrt())
+            .field("adcalinit", &self.adcalinit())
+            .field("adcal", &self.adcal())
+            .field("rpen", &self.rpen())
+            .field("adcen", &self.adcen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -625,7 +620,7 @@ impl W {
         OCTESEL_H_W::new(self, 31)
     }
 }
-#[doc = "control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;

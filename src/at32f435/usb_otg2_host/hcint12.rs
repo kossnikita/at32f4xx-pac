@@ -88,21 +88,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HCINT12")
-            .field("xferc", &format_args!("{}", self.xferc().bit()))
-            .field("chhltd", &format_args!("{}", self.chhltd().bit()))
-            .field("stall", &format_args!("{}", self.stall().bit()))
-            .field("nak", &format_args!("{}", self.nak().bit()))
-            .field("ack", &format_args!("{}", self.ack().bit()))
-            .field("xacterr", &format_args!("{}", self.xacterr().bit()))
-            .field("bblerr", &format_args!("{}", self.bblerr().bit()))
-            .field("frmovrun", &format_args!("{}", self.frmovrun().bit()))
-            .field("dtglerr", &format_args!("{}", self.dtglerr().bit()))
+            .field("xferc", &self.xferc())
+            .field("chhltd", &self.chhltd())
+            .field("stall", &self.stall())
+            .field("nak", &self.nak())
+            .field("ack", &self.ack())
+            .field("xacterr", &self.xacterr())
+            .field("bblerr", &self.bblerr())
+            .field("frmovrun", &self.frmovrun())
+            .field("dtglerr", &self.dtglerr())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HCINT12_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -161,7 +156,7 @@ impl W {
         DTGLERR_W::new(self, 10)
     }
 }
-#[doc = "OTGFS host channel-12 interrupt register (OTGFS_HCINT12)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcint12::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcint12::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS host channel-12 interrupt register (OTGFS_HCINT12)\n\nYou can [`read`](crate::Reg::read) this register and get [`hcint12::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hcint12::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCINT12_SPEC;
 impl crate::RegisterSpec for HCINT12_SPEC {
     type Ux = u32;

@@ -70,19 +70,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPMSK")
-            .field("xfercmsk", &format_args!("{}", self.xfercmsk().bit()))
-            .field("eptdismsk", &format_args!("{}", self.eptdismsk().bit()))
-            .field("setupmsk", &format_args!("{}", self.setupmsk().bit()))
-            .field("outtepdmsk", &format_args!("{}", self.outtepdmsk().bit()))
-            .field("b2bsetupmsk", &format_args!("{}", self.b2bsetupmsk().bit()))
-            .field("outperrmsk", &format_args!("{}", self.outperrmsk().bit()))
-            .field("bnaoutmsk", &format_args!("{}", self.bnaoutmsk().bit()))
+            .field("xfercmsk", &self.xfercmsk())
+            .field("eptdismsk", &self.eptdismsk())
+            .field("setupmsk", &self.setupmsk())
+            .field("outtepdmsk", &self.outtepdmsk())
+            .field("b2bsetupmsk", &self.b2bsetupmsk())
+            .field("outperrmsk", &self.outperrmsk())
+            .field("bnaoutmsk", &self.bnaoutmsk())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DOEPMSK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -129,7 +124,7 @@ impl W {
         BNAOUTMSK_W::new(self, 9)
     }
 }
-#[doc = "OTGFS device OUT endpoint common interrupt mask register (OTGFS_DOEPMSK)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepmsk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepmsk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS device OUT endpoint common interrupt mask register (OTGFS_DOEPMSK)\n\nYou can [`read`](crate::Reg::read) this register and get [`doepmsk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepmsk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEPMSK_SPEC;
 impl crate::RegisterSpec for DOEPMSK_SPEC {
     type Ux = u32;

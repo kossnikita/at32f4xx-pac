@@ -16,16 +16,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RMP")
-            .field(
-                "tmr14_ch1_irmp",
-                &format_args!("{}", self.tmr14_ch1_irmp().bits()),
-            )
+            .field("tmr14_ch1_irmp", &self.tmr14_ch1_irmp())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<RMP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,7 +28,7 @@ impl W {
         TMR14_CH1_IRMP_W::new(self, 6)
     }
 }
-#[doc = "TMR14 channel 1 input remap\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rmp::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rmp::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TMR14 channel 1 input remap\n\nYou can [`read`](crate::Reg::read) this register and get [`rmp::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rmp::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RMP_SPEC;
 impl crate::RegisterSpec for RMP_SPEC {
     type Ux = u32;

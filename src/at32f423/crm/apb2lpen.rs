@@ -97,22 +97,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB2LPEN")
-            .field("tmr1lpen", &format_args!("{}", self.tmr1lpen().bit()))
-            .field("usart1lpen", &format_args!("{}", self.usart1lpen().bit()))
-            .field("usart6lpen", &format_args!("{}", self.usart6lpen().bit()))
-            .field("adclpen", &format_args!("{}", self.adclpen().bit()))
-            .field("spi1lpen", &format_args!("{}", self.spi1lpen().bit()))
-            .field("scfglpen", &format_args!("{}", self.scfglpen().bit()))
-            .field("tmr9lpen", &format_args!("{}", self.tmr9lpen().bit()))
-            .field("tmr10lpen", &format_args!("{}", self.tmr10lpen().bit()))
-            .field("tmr11lpen", &format_args!("{}", self.tmr11lpen().bit()))
-            .field("acclpen", &format_args!("{}", self.acclpen().bit()))
+            .field("tmr1lpen", &self.tmr1lpen())
+            .field("usart1lpen", &self.usart1lpen())
+            .field("usart6lpen", &self.usart6lpen())
+            .field("adclpen", &self.adclpen())
+            .field("spi1lpen", &self.spi1lpen())
+            .field("scfglpen", &self.scfglpen())
+            .field("tmr9lpen", &self.tmr9lpen())
+            .field("tmr10lpen", &self.tmr10lpen())
+            .field("tmr11lpen", &self.tmr11lpen())
+            .field("acclpen", &self.acclpen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<APB2LPEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -177,7 +172,7 @@ impl W {
         ACCLPEN_W::new(self, 29)
     }
 }
-#[doc = "APB2 peripheral Low-power clock enable register (CRM_APB2LPEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2lpen::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb2lpen::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APB2 peripheral Low-power clock enable register (CRM_APB2LPEN)\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2lpen::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb2lpen::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB2LPEN_SPEC;
 impl crate::RegisterSpec for APB2LPEN_SPEC {
     type Ux = u32;

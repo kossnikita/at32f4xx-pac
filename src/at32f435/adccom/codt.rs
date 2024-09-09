@@ -19,17 +19,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CODT")
-            .field("codth", &format_args!("{}", self.codth().bits()))
-            .field("codtl", &format_args!("{}", self.codtl().bits()))
+            .field("codth", &self.codth())
+            .field("codtl", &self.codtl())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<CODT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Common Ordinary data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`codt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Common Ordinary data register\n\nYou can [`read`](crate::Reg::read) this register and get [`codt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CODT_SPEC;
 impl crate::RegisterSpec for CODT_SPEC {
     type Ux = u32;

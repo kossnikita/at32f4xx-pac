@@ -24,6 +24,7 @@ impl From<IOMC0_A> for u8 {
 impl crate::FieldSpec for IOMC0_A {
     type Ux = u8;
 }
+impl crate::IsEnum for IOMC0_A {}
 #[doc = "Field `IOMC(0-15)` reader - GPIOx pin %s mode configurate"]
 pub type IOMC_R = crate::FieldReader<IOMC0_A>;
 impl IOMC_R {
@@ -60,7 +61,7 @@ impl IOMC_R {
     }
 }
 #[doc = "Field `IOMC(0-15)` writer - GPIOx pin %s mode configurate"]
-pub type IOMC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, IOMC0_A>;
+pub type IOMC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, IOMC0_A, crate::Safe>;
 impl<'a, REG> IOMC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -90,7 +91,7 @@ where
 impl R {
     #[doc = "GPIOx pin (0-15) mode configurate"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOMC0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOMC0` field.</div>"]
     #[inline(always)]
     pub fn iomc(&self, n: u8) -> IOMC_R {
         #[allow(clippy::no_effect)]
@@ -187,34 +188,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFGR")
-            .field("iomc0", &format_args!("{}", self.iomc0().bits()))
-            .field("iomc1", &format_args!("{}", self.iomc1().bits()))
-            .field("iomc2", &format_args!("{}", self.iomc2().bits()))
-            .field("iomc3", &format_args!("{}", self.iomc3().bits()))
-            .field("iomc4", &format_args!("{}", self.iomc4().bits()))
-            .field("iomc5", &format_args!("{}", self.iomc5().bits()))
-            .field("iomc6", &format_args!("{}", self.iomc6().bits()))
-            .field("iomc7", &format_args!("{}", self.iomc7().bits()))
-            .field("iomc8", &format_args!("{}", self.iomc8().bits()))
-            .field("iomc9", &format_args!("{}", self.iomc9().bits()))
-            .field("iomc10", &format_args!("{}", self.iomc10().bits()))
-            .field("iomc11", &format_args!("{}", self.iomc11().bits()))
-            .field("iomc12", &format_args!("{}", self.iomc12().bits()))
-            .field("iomc13", &format_args!("{}", self.iomc13().bits()))
-            .field("iomc14", &format_args!("{}", self.iomc14().bits()))
-            .field("iomc15", &format_args!("{}", self.iomc15().bits()))
+            .field("iomc0", &self.iomc0())
+            .field("iomc1", &self.iomc1())
+            .field("iomc2", &self.iomc2())
+            .field("iomc3", &self.iomc3())
+            .field("iomc4", &self.iomc4())
+            .field("iomc5", &self.iomc5())
+            .field("iomc6", &self.iomc6())
+            .field("iomc7", &self.iomc7())
+            .field("iomc8", &self.iomc8())
+            .field("iomc9", &self.iomc9())
+            .field("iomc10", &self.iomc10())
+            .field("iomc11", &self.iomc11())
+            .field("iomc12", &self.iomc12())
+            .field("iomc13", &self.iomc13())
+            .field("iomc14", &self.iomc14())
+            .field("iomc15", &self.iomc15())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CFGR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "GPIOx pin (0-15) mode configurate"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOMC0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOMC0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn iomc(&mut self, n: u8) -> IOMC_W<CFGR_SPEC> {
@@ -319,7 +315,7 @@ impl W {
         IOMC_W::new(self, 30)
     }
 }
-#[doc = "GPIO configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFGR_SPEC;
 impl crate::RegisterSpec for CFGR_SPEC {
     type Ux = u32;

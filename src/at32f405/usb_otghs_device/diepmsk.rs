@@ -97,31 +97,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPMSK")
-            .field("xfercmsk", &format_args!("{}", self.xfercmsk().bit()))
-            .field("eptdismsk", &format_args!("{}", self.eptdismsk().bit()))
-            .field("ahberrmsk", &format_args!("{}", self.ahberrmsk().bit()))
-            .field("timeoutmsk", &format_args!("{}", self.timeoutmsk().bit()))
-            .field(
-                "intkntxfempmsk",
-                &format_args!("{}", self.intkntxfempmsk().bit()),
-            )
-            .field(
-                "intkneptmismsk",
-                &format_args!("{}", self.intkneptmismsk().bit()),
-            )
-            .field("ineptnakmsk", &format_args!("{}", self.ineptnakmsk().bit()))
-            .field(
-                "txfifoudrmsk",
-                &format_args!("{}", self.txfifoudrmsk().bit()),
-            )
-            .field("bnainmsk", &format_args!("{}", self.bnainmsk().bit()))
-            .field("nakmsk", &format_args!("{}", self.nakmsk().bit()))
+            .field("xfercmsk", &self.xfercmsk())
+            .field("eptdismsk", &self.eptdismsk())
+            .field("ahberrmsk", &self.ahberrmsk())
+            .field("timeoutmsk", &self.timeoutmsk())
+            .field("intkntxfempmsk", &self.intkntxfempmsk())
+            .field("intkneptmismsk", &self.intkneptmismsk())
+            .field("ineptnakmsk", &self.ineptnakmsk())
+            .field("txfifoudrmsk", &self.txfifoudrmsk())
+            .field("bnainmsk", &self.bnainmsk())
+            .field("nakmsk", &self.nakmsk())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DIEPMSK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -186,7 +172,7 @@ impl W {
         NAKMSK_W::new(self, 13)
     }
 }
-#[doc = "OTGHS device IN endpoint common interrupt mask register (OTGHS_DIEPMSK)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepmsk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepmsk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS device IN endpoint common interrupt mask register (OTGHS_DIEPMSK)\n\nYou can [`read`](crate::Reg::read) this register and get [`diepmsk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepmsk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPMSK_SPEC;
 impl crate::RegisterSpec for DIEPMSK_SPEC {
     type Ux = u32;

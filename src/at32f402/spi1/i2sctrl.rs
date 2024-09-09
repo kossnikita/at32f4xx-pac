@@ -75,6 +75,7 @@ impl From<DBN_A> for u8 {
 impl crate::FieldSpec for DBN_A {
     type Ux = u8;
 }
+impl crate::IsEnum for DBN_A {}
 #[doc = "Field `DBN` reader - I2S data bit num"]
 pub type DBN_R = crate::FieldReader<DBN_A>;
 impl DBN_R {
@@ -202,6 +203,7 @@ impl From<STDSEL_A> for u8 {
 impl crate::FieldSpec for STDSEL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for STDSEL_A {}
 #[doc = "Field `STDSEL` reader - I2S standard select"]
 pub type STDSEL_R = crate::FieldReader<STDSEL_A>;
 impl STDSEL_R {
@@ -238,7 +240,7 @@ impl STDSEL_R {
     }
 }
 #[doc = "Field `STDSEL` writer - I2S standard select"]
-pub type STDSEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, STDSEL_A>;
+pub type STDSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, STDSEL_A, crate::Safe>;
 impl<'a, REG> STDSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -340,6 +342,7 @@ impl From<OPERSEL_A> for u8 {
 impl crate::FieldSpec for OPERSEL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for OPERSEL_A {}
 #[doc = "Field `OPERSEL` reader - I2S operation select"]
 pub type OPERSEL_R = crate::FieldReader<OPERSEL_A>;
 impl OPERSEL_R {
@@ -376,7 +379,7 @@ impl OPERSEL_R {
     }
 }
 #[doc = "Field `OPERSEL` writer - I2S operation select"]
-pub type OPERSEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, OPERSEL_A>;
+pub type OPERSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, OPERSEL_A, crate::Safe>;
 impl<'a, REG> OPERSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -568,20 +571,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2SCTRL")
-            .field("msel", &format_args!("{}", self.msel().bit()))
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field("opersel", &format_args!("{}", self.opersel().bits()))
-            .field("pcmfssel", &format_args!("{}", self.pcmfssel().bit()))
-            .field("stdsel", &format_args!("{}", self.stdsel().bits()))
-            .field("clkpol", &format_args!("{}", self.clkpol().bit()))
-            .field("dbn", &format_args!("{}", self.dbn().bits()))
-            .field("cbn", &format_args!("{}", self.cbn().bit()))
+            .field("msel", &self.msel())
+            .field("en", &self.en())
+            .field("opersel", &self.opersel())
+            .field("pcmfssel", &self.pcmfssel())
+            .field("stdsel", &self.stdsel())
+            .field("clkpol", &self.clkpol())
+            .field("dbn", &self.dbn())
+            .field("cbn", &self.cbn())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<I2SCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -634,7 +632,7 @@ impl W {
         MSEL_W::new(self, 11)
     }
 }
-#[doc = "I2S control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2sctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2sctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2S control register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2sctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2sctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2SCTRL_SPEC;
 impl crate::RegisterSpec for I2SCTRL_SPEC {
     type Ux = u32;

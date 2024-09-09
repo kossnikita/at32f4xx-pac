@@ -70,19 +70,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field("mdiv3", &format_args!("{}", self.mdiv3().bit()))
-            .field("tdbeie", &format_args!("{}", self.tdbeie().bit()))
-            .field("rdbfie", &format_args!("{}", self.rdbfie().bit()))
-            .field("errie", &format_args!("{}", self.errie().bit()))
-            .field("hwcsoe", &format_args!("{}", self.hwcsoe().bit()))
-            .field("dmaten", &format_args!("{}", self.dmaten().bit()))
-            .field("dmaren", &format_args!("{}", self.dmaren().bit()))
+            .field("mdiv3", &self.mdiv3())
+            .field("tdbeie", &self.tdbeie())
+            .field("rdbfie", &self.rdbfie())
+            .field("errie", &self.errie())
+            .field("hwcsoe", &self.hwcsoe())
+            .field("dmaten", &self.dmaten())
+            .field("dmaren", &self.dmaren())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -129,7 +124,7 @@ impl W {
         MDIV3_W::new(self, 8)
     }
 }
-#[doc = "control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;

@@ -87,17 +87,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS")
-            .field("calrdy", &format_args!("{}", self.calrdy().bit()))
-            .field("rslost", &format_args!("{}", self.rslost().bit()))
+            .field("calrdy", &self.calrdy())
+            .field("rslost", &self.rslost())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
 impl crate::RegisterSpec for STS_SPEC {
     type Ux = u32;

@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BK4TMGIO")
-            .field("iodhizt", &format_args!("{}", self.iodhizt().bits()))
-            .field("ioht", &format_args!("{}", self.ioht().bits()))
-            .field("iowt", &format_args!("{}", self.iowt().bits()))
-            .field("iost", &format_args!("{}", self.iost().bits()))
+            .field("iodhizt", &self.iodhizt())
+            .field("ioht", &self.ioht())
+            .field("iowt", &self.iowt())
+            .field("iost", &self.iost())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<BK4TMGIO_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         IODHIZT_W::new(self, 24)
     }
 }
-#[doc = "special IO space timing register 4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bk4tmgio::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bk4tmgio::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "special IO space timing register 4\n\nYou can [`read`](crate::Reg::read) this register and get [`bk4tmgio::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bk4tmgio::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BK4TMGIO_SPEC;
 impl crate::RegisterSpec for BK4TMGIO_SPEC {
     type Ux = u32;

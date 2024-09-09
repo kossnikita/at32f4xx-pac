@@ -187,32 +187,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHBLPEN1")
-            .field("gpioalp", &format_args!("{}", self.gpioalp().bit()))
-            .field("gpioblp", &format_args!("{}", self.gpioblp().bit()))
-            .field("gpioclp", &format_args!("{}", self.gpioclp().bit()))
-            .field("gpiodlp", &format_args!("{}", self.gpiodlp().bit()))
-            .field("gpioelp", &format_args!("{}", self.gpioelp().bit()))
-            .field("gpioflp", &format_args!("{}", self.gpioflp().bit()))
-            .field("gpioglp", &format_args!("{}", self.gpioglp().bit()))
-            .field("gpiohlp", &format_args!("{}", self.gpiohlp().bit()))
-            .field("crclp", &format_args!("{}", self.crclp().bit()))
-            .field("flashlp", &format_args!("{}", self.flashlp().bit()))
-            .field("sram1lp", &format_args!("{}", self.sram1lp().bit()))
-            .field("sram2lp", &format_args!("{}", self.sram2lp().bit()))
-            .field("edmalp", &format_args!("{}", self.edmalp().bit()))
-            .field("dma1lp", &format_args!("{}", self.dma1lp().bit()))
-            .field("dma2lp", &format_args!("{}", self.dma2lp().bit()))
-            .field("emaclp", &format_args!("{}", self.emaclp().bit()))
-            .field("emactxlp", &format_args!("{}", self.emactxlp().bit()))
-            .field("emacrxlp", &format_args!("{}", self.emacrxlp().bit()))
-            .field("emacptplp", &format_args!("{}", self.emacptplp().bit()))
-            .field("otgfs2lp", &format_args!("{}", self.otgfs2lp().bit()))
+            .field("gpioalp", &self.gpioalp())
+            .field("gpioblp", &self.gpioblp())
+            .field("gpioclp", &self.gpioclp())
+            .field("gpiodlp", &self.gpiodlp())
+            .field("gpioelp", &self.gpioelp())
+            .field("gpioflp", &self.gpioflp())
+            .field("gpioglp", &self.gpioglp())
+            .field("gpiohlp", &self.gpiohlp())
+            .field("crclp", &self.crclp())
+            .field("flashlp", &self.flashlp())
+            .field("sram1lp", &self.sram1lp())
+            .field("sram2lp", &self.sram2lp())
+            .field("edmalp", &self.edmalp())
+            .field("dma1lp", &self.dma1lp())
+            .field("dma2lp", &self.dma2lp())
+            .field("emaclp", &self.emaclp())
+            .field("emactxlp", &self.emactxlp())
+            .field("emacrxlp", &self.emacrxlp())
+            .field("emacptplp", &self.emacptplp())
+            .field("otgfs2lp", &self.otgfs2lp())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<AHBLPEN1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -337,7 +332,7 @@ impl W {
         OTGFS2LP_W::new(self, 29)
     }
 }
-#[doc = "AHB Low-power Peripheral Clock enable register 1 (CRM_AHBLPEN1)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahblpen1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahblpen1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "AHB Low-power Peripheral Clock enable register 1 (CRM_AHBLPEN1)\n\nYou can [`read`](crate::Reg::read) this register and get [`ahblpen1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahblpen1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AHBLPEN1_SPEC;
 impl crate::RegisterSpec for AHBLPEN1_SPEC {
     type Ux = u32;

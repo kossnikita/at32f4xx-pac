@@ -25,20 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPTXF0")
-            .field(
-                "inept0txstaddr",
-                &format_args!("{}", self.inept0txstaddr().bits()),
-            )
-            .field(
-                "inept0txdep",
-                &format_args!("{}", self.inept0txdep().bits()),
-            )
+            .field("inept0txstaddr", &self.inept0txstaddr())
+            .field("inept0txdep", &self.inept0txdep())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DIEPTXF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -55,7 +44,7 @@ impl W {
         INEPT0TXDEP_W::new(self, 16)
     }
 }
-#[doc = "IN Endpoint TxFIFO 0 transmit FIFO size register (Device mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptxf0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptxf0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IN Endpoint TxFIFO 0 transmit FIFO size register (Device mode)\n\nYou can [`read`](crate::Reg::read) this register and get [`dieptxf0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dieptxf0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPTXF0_SPEC;
 impl crate::RegisterSpec for DIEPTXF0_SPEC {
     type Ux = u32;

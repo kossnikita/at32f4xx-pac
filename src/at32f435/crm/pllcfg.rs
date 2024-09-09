@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PLLCFG")
-            .field("pll_ms", &format_args!("{}", self.pll_ms().bits()))
-            .field("pll_ns", &format_args!("{}", self.pll_ns().bits()))
-            .field("pll_fr", &format_args!("{}", self.pll_fr().bits()))
-            .field("pllrcs", &format_args!("{}", self.pllrcs().bit()))
+            .field("pll_ms", &self.pll_ms())
+            .field("pll_ns", &self.pll_ns())
+            .field("pll_fr", &self.pll_fr())
+            .field("pllrcs", &self.pllrcs())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<PLLCFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         PLLRCS_W::new(self, 22)
     }
 }
-#[doc = "PLL configuration register (CRM_PLLCFG)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pllcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pllcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PLL configuration register (CRM_PLLCFG)\n\nYou can [`read`](crate::Reg::read) this register and get [`pllcfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pllcfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PLLCFG_SPEC;
 impl crate::RegisterSpec for PLLCFG_SPEC {
     type Ux = u32;

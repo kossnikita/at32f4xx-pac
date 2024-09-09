@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LLCTRL")
-            .field("s1llen", &format_args!("{}", self.s1llen().bit()))
-            .field("s2llen", &format_args!("{}", self.s2llen().bit()))
-            .field("s3llen", &format_args!("{}", self.s3llen().bit()))
-            .field("s4llen", &format_args!("{}", self.s4llen().bit()))
-            .field("s5llen", &format_args!("{}", self.s5llen().bit()))
-            .field("s6llen", &format_args!("{}", self.s6llen().bit()))
-            .field("s7llen", &format_args!("{}", self.s7llen().bit()))
-            .field("s8llen", &format_args!("{}", self.s8llen().bit()))
+            .field("s1llen", &self.s1llen())
+            .field("s2llen", &self.s2llen())
+            .field("s3llen", &self.s3llen())
+            .field("s4llen", &self.s4llen())
+            .field("s5llen", &self.s5llen())
+            .field("s6llen", &self.s6llen())
+            .field("s7llen", &self.s7llen())
+            .field("s8llen", &self.s8llen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<LLCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         S8LLEN_W::new(self, 7)
     }
 }
-#[doc = "DMA Link List Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`llctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`llctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA Link List Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`llctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`llctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LLCTRL_SPEC;
 impl crate::RegisterSpec for LLCTRL_SPEC {
     type Ux = u32;

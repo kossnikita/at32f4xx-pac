@@ -1,3 +1,11 @@
 I2C?:
+  CTRL1:
+    TDIEN:
+      _read:
+        Disabled: [0, "Data transmit data interrupt is disabled"]
+        Enabled: [1, "Data transmit data interrupt is enabled"]
+      _write:
+        Disable: [0, "Disable Data transmit data interrupt"]
+        Enable: [1, "Enable Data transmit data interrupt"]
   RXDT, TXDT:
     DT: [0, 0xFF]

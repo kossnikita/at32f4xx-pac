@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CCTRL")
-            .field("msdmasel_h", &format_args!("{}", self.msdmasel_h().bit()))
-            .field("itsrven", &format_args!("{}", self.itsrven().bit()))
-            .field("vbaten", &format_args!("{}", self.vbaten().bit()))
-            .field("adcdiv", &format_args!("{}", self.adcdiv().bits()))
-            .field("msdmasel_l", &format_args!("{}", self.msdmasel_l().bits()))
-            .field("msdrcen", &format_args!("{}", self.msdrcen().bit()))
-            .field("asisel", &format_args!("{}", self.asisel().bits()))
-            .field("mssel", &format_args!("{}", self.mssel().bits()))
+            .field("msdmasel_h", &self.msdmasel_h())
+            .field("itsrven", &self.itsrven())
+            .field("vbaten", &self.vbaten())
+            .field("adcdiv", &self.adcdiv())
+            .field("msdmasel_l", &self.msdmasel_l())
+            .field("msdrcen", &self.msdrcen())
+            .field("asisel", &self.asisel())
+            .field("mssel", &self.mssel())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         MSDMASEL_H_W::new(self, 28)
     }
 }
-#[doc = "Common control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Common control register\n\nYou can [`read`](crate::Reg::read) this register and get [`cctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CCTRL_SPEC;
 impl crate::RegisterSpec for CCTRL_SPEC {
     type Ux = u32;

@@ -46,17 +46,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRLSTS")
-            .field("swef", &format_args!("{}", self.swef().bit()))
-            .field("sef", &format_args!("{}", self.sef().bit()))
-            .field("pvmof", &format_args!("{}", self.pvmof().bit()))
-            .field("swpen1", &format_args!("{}", self.swpen1().bit()))
-            .field("swpen2", &format_args!("{}", self.swpen2().bit()))
+            .field("swef", &self.swef())
+            .field("sef", &self.sef())
+            .field("pvmof", &self.pvmof())
+            .field("swpen1", &self.swpen1())
+            .field("swpen2", &self.swpen2())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRLSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -73,7 +68,7 @@ impl W {
         SWPEN2_W::new(self, 9)
     }
 }
-#[doc = "Power control and status register (PWC_CTRLSTS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrlsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrlsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Power control and status register (PWC_CTRLSTS)\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrlsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrlsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRLSTS_SPEC;
 impl crate::RegisterSpec for CTRLSTS_SPEC {
     type Ux = u32;

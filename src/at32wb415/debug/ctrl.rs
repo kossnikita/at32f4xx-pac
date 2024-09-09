@@ -496,38 +496,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("sleep_debug", &format_args!("{}", self.sleep_debug().bit()))
-            .field(
-                "deepsleep_debug",
-                &format_args!("{}", self.deepsleep_debug().bit()),
-            )
-            .field(
-                "standby_debug",
-                &format_args!("{}", self.standby_debug().bit()),
-            )
-            .field("trace_ioen", &format_args!("{}", self.trace_ioen().bit()))
-            .field("trace_mode", &format_args!("{}", self.trace_mode().bits()))
-            .field("wdt_pause", &format_args!("{}", self.wdt_pause().bit()))
-            .field("wwdt_pause", &format_args!("{}", self.wwdt_pause().bit()))
-            .field("tmr1_pause", &format_args!("{}", self.tmr1_pause().bit()))
-            .field("tmr2_pause", &format_args!("{}", self.tmr2_pause().bit()))
-            .field("tmr3_pause", &format_args!("{}", self.tmr3_pause().bit()))
-            .field("tmr4_pause", &format_args!("{}", self.tmr4_pause().bit()))
-            .field("can1_pause", &format_args!("{}", self.can1_pause().bit()))
-            .field(
-                "i2c1_smbus_timeout",
-                &format_args!("{}", self.i2c1_smbus_timeout().bit()),
-            )
-            .field("tmr5_pause", &format_args!("{}", self.tmr5_pause().bit()))
-            .field("tmr9_pause", &format_args!("{}", self.tmr9_pause().bit()))
-            .field("tmr10_pause", &format_args!("{}", self.tmr10_pause().bit()))
-            .field("tmr11_pause", &format_args!("{}", self.tmr11_pause().bit()))
+            .field("sleep_debug", &self.sleep_debug())
+            .field("deepsleep_debug", &self.deepsleep_debug())
+            .field("standby_debug", &self.standby_debug())
+            .field("trace_ioen", &self.trace_ioen())
+            .field("trace_mode", &self.trace_mode())
+            .field("wdt_pause", &self.wdt_pause())
+            .field("wwdt_pause", &self.wwdt_pause())
+            .field("tmr1_pause", &self.tmr1_pause())
+            .field("tmr2_pause", &self.tmr2_pause())
+            .field("tmr3_pause", &self.tmr3_pause())
+            .field("tmr4_pause", &self.tmr4_pause())
+            .field("can1_pause", &self.can1_pause())
+            .field("i2c1_smbus_timeout", &self.i2c1_smbus_timeout())
+            .field("tmr5_pause", &self.tmr5_pause())
+            .field("tmr9_pause", &self.tmr9_pause())
+            .field("tmr10_pause", &self.tmr10_pause())
+            .field("tmr11_pause", &self.tmr11_pause())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -634,7 +620,7 @@ impl W {
         TMR11_PAUSE_W::new(self, 30)
     }
 }
-#[doc = "MCUDBG_CTRL\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MCUDBG_CTRL\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

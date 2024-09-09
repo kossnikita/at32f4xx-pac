@@ -115,27 +115,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPEACHMSK1")
-            .field("xfercmsk", &format_args!("{}", self.xfercmsk().bit()))
-            .field("eptdismsk", &format_args!("{}", self.eptdismsk().bit()))
-            .field("ahberrmsk", &format_args!("{}", self.ahberrmsk().bit()))
-            .field("setupmsk", &format_args!("{}", self.setupmsk().bit()))
-            .field("outtepdmsk", &format_args!("{}", self.outtepdmsk().bit()))
-            .field(
-                "stsphsercvdmsk",
-                &format_args!("{}", self.stsphsercvdmsk().bit()),
-            )
-            .field("b2bsetupmsk", &format_args!("{}", self.b2bsetupmsk().bit()))
-            .field("outperrmsk", &format_args!("{}", self.outperrmsk().bit()))
-            .field("bnaoutmsk", &format_args!("{}", self.bnaoutmsk().bit()))
-            .field("bbleerrmsk", &format_args!("{}", self.bbleerrmsk().bit()))
-            .field("nakmsk", &format_args!("{}", self.nakmsk().bit()))
-            .field("nyetmsk", &format_args!("{}", self.nyetmsk().bit()))
+            .field("xfercmsk", &self.xfercmsk())
+            .field("eptdismsk", &self.eptdismsk())
+            .field("ahberrmsk", &self.ahberrmsk())
+            .field("setupmsk", &self.setupmsk())
+            .field("outtepdmsk", &self.outtepdmsk())
+            .field("stsphsercvdmsk", &self.stsphsercvdmsk())
+            .field("b2bsetupmsk", &self.b2bsetupmsk())
+            .field("outperrmsk", &self.outperrmsk())
+            .field("bnaoutmsk", &self.bnaoutmsk())
+            .field("bbleerrmsk", &self.bbleerrmsk())
+            .field("nakmsk", &self.nakmsk())
+            .field("nyetmsk", &self.nyetmsk())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DOEPEACHMSK1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -212,7 +204,7 @@ impl W {
         NYETMSK_W::new(self, 14)
     }
 }
-#[doc = "Device Each OUT Endpoint 1 Interrupt Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepeachmsk1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepeachmsk1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Device Each OUT Endpoint 1 Interrupt Register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepeachmsk1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepeachmsk1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEPEACHMSK1_SPEC;
 impl crate::RegisterSpec for DOEPEACHMSK1_SPEC {
     type Ux = u32;

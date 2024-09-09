@@ -151,28 +151,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("d1en", &format_args!("{}", self.d1en().bit()))
-            .field("d1obdis", &format_args!("{}", self.d1obdis().bit()))
-            .field("d1trgen", &format_args!("{}", self.d1trgen().bit()))
-            .field("d1trgsel", &format_args!("{}", self.d1trgsel().bits()))
-            .field("d1nm", &format_args!("{}", self.d1nm().bits()))
-            .field("d1nbsel", &format_args!("{}", self.d1nbsel().bits()))
-            .field("d1dmaen", &format_args!("{}", self.d1dmaen().bit()))
-            .field("d1dmaudrien", &format_args!("{}", self.d1dmaudrien().bit()))
-            .field("d2en", &format_args!("{}", self.d2en().bit()))
-            .field("d2obdis", &format_args!("{}", self.d2obdis().bit()))
-            .field("d2trgen", &format_args!("{}", self.d2trgen().bit()))
-            .field("d2trgsel", &format_args!("{}", self.d2trgsel().bits()))
-            .field("d2nm", &format_args!("{}", self.d2nm().bits()))
-            .field("d2nbsel", &format_args!("{}", self.d2nbsel().bits()))
-            .field("d2dmaen", &format_args!("{}", self.d2dmaen().bit()))
-            .field("d2dmaudrien", &format_args!("{}", self.d2dmaudrien().bit()))
+            .field("d1en", &self.d1en())
+            .field("d1obdis", &self.d1obdis())
+            .field("d1trgen", &self.d1trgen())
+            .field("d1trgsel", &self.d1trgsel())
+            .field("d1nm", &self.d1nm())
+            .field("d1nbsel", &self.d1nbsel())
+            .field("d1dmaen", &self.d1dmaen())
+            .field("d1dmaudrien", &self.d1dmaudrien())
+            .field("d2en", &self.d2en())
+            .field("d2obdis", &self.d2obdis())
+            .field("d2trgen", &self.d2trgen())
+            .field("d2trgsel", &self.d2trgsel())
+            .field("d2nm", &self.d2nm())
+            .field("d2nbsel", &self.d2nbsel())
+            .field("d2dmaen", &self.d2dmaen())
+            .field("d2dmaudrien", &self.d2dmaudrien())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -273,7 +268,7 @@ impl W {
         D2DMAUDRIEN_W::new(self, 29)
     }
 }
-#[doc = "Control register (DAC_CTRL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register (DAC_CTRL)\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

@@ -132,6 +132,7 @@ impl From<USART3_MUX_A> for u8 {
 impl crate::FieldSpec for USART3_MUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for USART3_MUX_A {}
 #[doc = "Field `USART3_MUX` reader - USART3 muxing"]
 pub type USART3_MUX_R = crate::FieldReader<USART3_MUX_A>;
 impl USART3_MUX_R {
@@ -202,6 +203,7 @@ impl From<TMR1_MUX_A> for u8 {
 impl crate::FieldSpec for TMR1_MUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR1_MUX_A {}
 #[doc = "Field `TMR1_MUX` reader - TMR1 muxing"]
 pub type TMR1_MUX_R = crate::FieldReader<TMR1_MUX_A>;
 impl TMR1_MUX_R {
@@ -265,6 +267,7 @@ impl From<TMR2_MUX_A> for u8 {
 impl crate::FieldSpec for TMR2_MUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR2_MUX_A {}
 #[doc = "Field `TMR2_MUX` reader - TMR2 muxing"]
 pub type TMR2_MUX_R = crate::FieldReader<TMR2_MUX_A>;
 impl TMR2_MUX_R {
@@ -301,7 +304,7 @@ impl TMR2_MUX_R {
     }
 }
 #[doc = "Field `TMR2_MUX` writer - TMR2 muxing"]
-pub type TMR2_MUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR2_MUX_A>;
+pub type TMR2_MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 2, TMR2_MUX_A, crate::Safe>;
 impl<'a, REG> TMR2_MUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -348,6 +351,7 @@ impl From<TMR3_MUX_A> for u8 {
 impl crate::FieldSpec for TMR3_MUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR3_MUX_A {}
 #[doc = "Field `TMR3_MUX` reader - TMR3 muxing"]
 pub type TMR3_MUX_R = crate::FieldReader<TMR3_MUX_A>;
 impl TMR3_MUX_R {
@@ -418,6 +422,7 @@ impl From<CAN_MUX_A> for u8 {
 impl crate::FieldSpec for CAN_MUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for CAN_MUX_A {}
 #[doc = "Field `CAN_MUX` reader - CAN1 muxing"]
 pub type CAN_MUX_R = crate::FieldReader<CAN_MUX_A>;
 impl CAN_MUX_R {
@@ -693,6 +698,7 @@ impl From<SWJTAG_MUX_A> for u8 {
 impl crate::FieldSpec for SWJTAG_MUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SWJTAG_MUX_A {}
 #[doc = "Field `SWJTAG_MUX` reader - SWD JTAG muxing"]
 pub type SWJTAG_MUX_R = crate::FieldReader<SWJTAG_MUX_A>;
 impl SWJTAG_MUX_R {
@@ -884,32 +890,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP")
-            .field("spi1_mux0", &format_args!("{}", self.spi1_mux0().bit()))
-            .field("i2c1_mux", &format_args!("{}", self.i2c1_mux().bit()))
-            .field("usart1_mux", &format_args!("{}", self.usart1_mux().bit()))
-            .field("usart3_mux", &format_args!("{}", self.usart3_mux().bits()))
-            .field("tmr1_mux", &format_args!("{}", self.tmr1_mux().bits()))
-            .field("tmr2_mux", &format_args!("{}", self.tmr2_mux().bits()))
-            .field("tmr3_mux", &format_args!("{}", self.tmr3_mux().bits()))
-            .field("can_mux", &format_args!("{}", self.can_mux().bits()))
-            .field("pd01_mux", &format_args!("{}", self.pd01_mux().bit()))
-            .field("tmr5ch4_mux", &format_args!("{}", self.tmr5ch4_mux().bit()))
-            .field(
-                "adc1_etp_mux",
-                &format_args!("{}", self.adc1_etp_mux().bit()),
-            )
-            .field(
-                "adc1_eto_mux",
-                &format_args!("{}", self.adc1_eto_mux().bit()),
-            )
-            .field("swjtag_mux", &format_args!("{}", self.swjtag_mux().bits()))
-            .field("spi1_mux1", &format_args!("{}", self.spi1_mux1().bit()))
+            .field("spi1_mux0", &self.spi1_mux0())
+            .field("i2c1_mux", &self.i2c1_mux())
+            .field("usart1_mux", &self.usart1_mux())
+            .field("usart3_mux", &self.usart3_mux())
+            .field("tmr1_mux", &self.tmr1_mux())
+            .field("tmr2_mux", &self.tmr2_mux())
+            .field("tmr3_mux", &self.tmr3_mux())
+            .field("can_mux", &self.can_mux())
+            .field("pd01_mux", &self.pd01_mux())
+            .field("tmr5ch4_mux", &self.tmr5ch4_mux())
+            .field("adc1_etp_mux", &self.adc1_etp_mux())
+            .field("adc1_eto_mux", &self.adc1_eto_mux())
+            .field("swjtag_mux", &self.swjtag_mux())
+            .field("spi1_mux1", &self.spi1_mux1())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -998,7 +993,7 @@ impl W {
         SPI1_MUX1_W::new(self, 31)
     }
 }
-#[doc = "IO MUX remap register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register\n\nYou can [`read`](crate::Reg::read) this register and get [`remap::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP_SPEC;
 impl crate::RegisterSpec for REMAP_SPEC {
     type Ux = u32;

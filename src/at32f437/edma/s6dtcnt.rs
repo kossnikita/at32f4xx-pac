@@ -15,14 +15,7 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("S6DTCNT")
-            .field("cnt", &format_args!("{}", self.cnt().bits()))
-            .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<S6DTCNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+        f.debug_struct("S6DTCNT").field("cnt", &self.cnt()).finish()
     }
 }
 impl W {
@@ -33,7 +26,7 @@ impl W {
         CNT_W::new(self, 0)
     }
 }
-#[doc = "stream 6 number of data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`s6dtcnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`s6dtcnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "stream 6 number of data register\n\nYou can [`read`](crate::Reg::read) this register and get [`s6dtcnt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`s6dtcnt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct S6DTCNT_SPEC;
 impl crate::RegisterSpec for S6DTCNT_SPEC {
     type Ux = u32;

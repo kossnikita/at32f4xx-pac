@@ -134,7 +134,7 @@ impl W {
     }
     #[doc = "Channel (1-4) event triggered by software"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1SWTR` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1SWTR` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cswtr(&mut self, n: u8) -> CSWTR_W<SWEVT_SPEC> {
@@ -185,7 +185,7 @@ impl W {
         BRKSWTR_W::new(self, 7)
     }
 }
-#[doc = "Software event register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swevt::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Software event register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`swevt::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SWEVT_SPEC;
 impl crate::RegisterSpec for SWEVT_SPEC {
     type Ux = u32;

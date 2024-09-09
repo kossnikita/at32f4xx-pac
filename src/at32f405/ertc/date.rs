@@ -5,15 +5,15 @@ pub type W = crate::W<DATE_SPEC>;
 #[doc = "Field `DU` reader - Date units"]
 pub type DU_R = crate::FieldReader;
 #[doc = "Field `DU` writer - Date units"]
-pub type DU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type DU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `DT` reader - Date tens"]
 pub type DT_R = crate::FieldReader;
 #[doc = "Field `DT` writer - Date tens"]
-pub type DT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
+pub type DT_W<'a, REG> = crate::FieldWriter<'a, REG, 2, u8, crate::Safe>;
 #[doc = "Field `MU` reader - Month units"]
 pub type MU_R = crate::FieldReader;
 #[doc = "Field `MU` writer - Month units"]
-pub type MU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type MU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `MT` reader - Month tens"]
 pub type MT_R = crate::BitReader;
 #[doc = "Field `MT` writer - Month tens"]
@@ -46,6 +46,7 @@ impl From<WK_A> for u8 {
 impl crate::FieldSpec for WK_A {
     type Ux = u8;
 }
+impl crate::IsEnum for WK_A {}
 #[doc = "Field `WK` reader - Week"]
 pub type WK_R = crate::FieldReader<WK_A>;
 impl WK_R {
@@ -145,11 +146,11 @@ where
 #[doc = "Field `YU` reader - Year units"]
 pub type YU_R = crate::FieldReader;
 #[doc = "Field `YU` writer - Year units"]
-pub type YU_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type YU_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Field `YT` reader - Year tens"]
 pub type YT_R = crate::FieldReader;
 #[doc = "Field `YT` writer - Year tens"]
-pub type YT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type YT_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 impl R {
     #[doc = "Bits 0:3 - Date units"]
     #[inline(always)]
@@ -190,19 +191,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATE")
-            .field("yt", &format_args!("{}", self.yt().bits()))
-            .field("yu", &format_args!("{}", self.yu().bits()))
-            .field("wk", &format_args!("{}", self.wk().bits()))
-            .field("mt", &format_args!("{}", self.mt().bit()))
-            .field("mu", &format_args!("{}", self.mu().bits()))
-            .field("dt", &format_args!("{}", self.dt().bits()))
-            .field("du", &format_args!("{}", self.du().bits()))
+            .field("yt", &self.yt())
+            .field("yu", &self.yu())
+            .field("wk", &self.wk())
+            .field("mt", &self.mt())
+            .field("mu", &self.mu())
+            .field("dt", &self.dt())
+            .field("du", &self.du())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -249,7 +245,7 @@ impl W {
         YT_W::new(self, 20)
     }
 }
-#[doc = "date register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "date register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DATE_SPEC;
 impl crate::RegisterSpec for DATE_SPEC {
     type Ux = u32;

@@ -115,24 +115,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAOPM")
-            .field("ssr", &format_args!("{}", self.ssr().bit()))
-            .field("osf", &format_args!("{}", self.osf().bit()))
-            .field("rtc", &format_args!("{}", self.rtc().bits()))
-            .field("fugf", &format_args!("{}", self.fugf().bit()))
-            .field("fef", &format_args!("{}", self.fef().bit()))
-            .field("sstc", &format_args!("{}", self.sstc().bit()))
-            .field("ttc", &format_args!("{}", self.ttc().bits()))
-            .field("ftf", &format_args!("{}", self.ftf().bit()))
-            .field("tsf", &format_args!("{}", self.tsf().bit()))
-            .field("dfrf", &format_args!("{}", self.dfrf().bit()))
-            .field("rsf", &format_args!("{}", self.rsf().bit()))
-            .field("dt", &format_args!("{}", self.dt().bit()))
+            .field("ssr", &self.ssr())
+            .field("osf", &self.osf())
+            .field("rtc", &self.rtc())
+            .field("fugf", &self.fugf())
+            .field("fef", &self.fef())
+            .field("sstc", &self.sstc())
+            .field("ttc", &self.ttc())
+            .field("ftf", &self.ftf())
+            .field("tsf", &self.tsf())
+            .field("dfrf", &self.dfrf())
+            .field("rsf", &self.rsf())
+            .field("dt", &self.dt())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DMAOPM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -209,7 +204,7 @@ impl W {
         DT_W::new(self, 26)
     }
 }
-#[doc = "Ethernet DMA operation mode register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmaopm::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmaopm::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet DMA operation mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`dmaopm::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmaopm::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMAOPM_SPEC;
 impl crate::RegisterSpec for DMAOPM_SPEC {
     type Ux = u32;

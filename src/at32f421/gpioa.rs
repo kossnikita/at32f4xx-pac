@@ -78,62 +78,62 @@ impl RegisterBlock {
         &self.hdrv
     }
 }
-#[doc = "CFGR (rw) register accessor: GPIO configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfgr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfgr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr`]
+#[doc = "CFGR (rw) register accessor: GPIO configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`cfgr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfgr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfgr`]
 module"]
 pub type CFGR = crate::Reg<cfgr::CFGR_SPEC>;
 #[doc = "GPIO configuration register"]
 pub mod cfgr;
-#[doc = "OMODE (rw) register accessor: GPIO output mode register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`omode::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`omode::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@omode`]
+#[doc = "OMODE (rw) register accessor: GPIO output mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`omode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`omode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@omode`]
 module"]
 pub type OMODE = crate::Reg<omode::OMODE_SPEC>;
 #[doc = "GPIO output mode register"]
 pub mod omode;
-#[doc = "ODRVR (rw) register accessor: GPIO drive capability register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`odrvr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`odrvr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@odrvr`]
+#[doc = "ODRVR (rw) register accessor: GPIO drive capability register\n\nYou can [`read`](crate::Reg::read) this register and get [`odrvr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`odrvr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@odrvr`]
 module"]
 pub type ODRVR = crate::Reg<odrvr::ODRVR_SPEC>;
 #[doc = "GPIO drive capability register"]
 pub mod odrvr;
-#[doc = "PULL (rw) register accessor: GPIO pull-up/pull-down register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pull::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pull::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pull`]
+#[doc = "PULL (rw) register accessor: GPIO pull-up/pull-down register\n\nYou can [`read`](crate::Reg::read) this register and get [`pull::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pull::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pull`]
 module"]
 pub type PULL = crate::Reg<pull::PULL_SPEC>;
 #[doc = "GPIO pull-up/pull-down register"]
 pub mod pull;
-#[doc = "IDT (r) register accessor: GPIO input data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idt::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@idt`]
+#[doc = "IDT (r) register accessor: GPIO input data register\n\nYou can [`read`](crate::Reg::read) this register and get [`idt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@idt`]
 module"]
 pub type IDT = crate::Reg<idt::IDT_SPEC>;
 #[doc = "GPIO input data register"]
 pub mod idt;
-#[doc = "ODT (rw) register accessor: GPIO output data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`odt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`odt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@odt`]
+#[doc = "ODT (rw) register accessor: GPIO output data register\n\nYou can [`read`](crate::Reg::read) this register and get [`odt::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`odt::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@odt`]
 module"]
 pub type ODT = crate::Reg<odt::ODT_SPEC>;
 #[doc = "GPIO output data register"]
 pub mod odt;
-#[doc = "SCR (w) register accessor: Port bit set/clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scr`]
+#[doc = "SCR (w) register accessor: Port bit set/clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scr`]
 module"]
 pub type SCR = crate::Reg<scr::SCR_SPEC>;
 #[doc = "Port bit set/clear register"]
 pub mod scr;
-#[doc = "WPR (rw) register accessor: Port write protect register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wpr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wpr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wpr`]
+#[doc = "WPR (rw) register accessor: Port write protect register\n\nYou can [`read`](crate::Reg::read) this register and get [`wpr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wpr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wpr`]
 module"]
 pub type WPR = crate::Reg<wpr::WPR_SPEC>;
 #[doc = "Port write protect register"]
 pub mod wpr;
-#[doc = "MUXL (rw) register accessor: GPIO muxing function low register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`muxl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`muxl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@muxl`]
+#[doc = "MUXL (rw) register accessor: GPIO muxing function low register\n\nYou can [`read`](crate::Reg::read) this register and get [`muxl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`muxl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@muxl`]
 module"]
 pub type MUXL = crate::Reg<muxl::MUXL_SPEC>;
 #[doc = "GPIO muxing function low register"]
 pub mod muxl;
-#[doc = "MUXH (rw) register accessor: GPIO muxing function high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`muxh::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`muxh::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@muxh`]
+#[doc = "MUXH (rw) register accessor: GPIO muxing function high register\n\nYou can [`read`](crate::Reg::read) this register and get [`muxh::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`muxh::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@muxh`]
 module"]
 pub type MUXH = crate::Reg<muxh::MUXH_SPEC>;
 #[doc = "GPIO muxing function high register"]
 pub mod muxh;
-#[doc = "CLR (w) register accessor: GPIO bit reset register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clr`]
+#[doc = "CLR (w) register accessor: GPIO bit reset register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clr`]
 module"]
 pub type CLR = crate::Reg<clr::CLR_SPEC>;
 #[doc = "GPIO bit reset register"]
 pub mod clr;
-#[doc = "HDRV (rw) register accessor: Huge current driver\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hdrv::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hdrv::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hdrv`]
+#[doc = "HDRV (rw) register accessor: Huge current driver\n\nYou can [`read`](crate::Reg::read) this register and get [`hdrv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hdrv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hdrv`]
 module"]
 pub type HDRV = crate::Reg<hdrv::HDRV_SPEC>;
 #[doc = "Huge current driver"]

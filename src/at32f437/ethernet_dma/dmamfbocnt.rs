@@ -33,19 +33,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAMFBOCNT")
-            .field("mfc", &format_args!("{}", self.mfc().bits()))
-            .field("obmfc", &format_args!("{}", self.obmfc().bit()))
-            .field("ofc", &format_args!("{}", self.ofc().bits()))
-            .field("obfoc", &format_args!("{}", self.obfoc().bit()))
+            .field("mfc", &self.mfc())
+            .field("obmfc", &self.obmfc())
+            .field("ofc", &self.ofc())
+            .field("obfoc", &self.obfoc())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<DMAMFBOCNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Ethernet DMA missed frame and buffer overflow counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmamfbocnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet DMA missed frame and buffer overflow counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`dmamfbocnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMAMFBOCNT_SPEC;
 impl crate::RegisterSpec for DMAMFBOCNT_SPEC {
     type Ux = u32;

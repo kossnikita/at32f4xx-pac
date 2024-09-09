@@ -93,22 +93,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCTL")
-            .field("rwkupsig", &format_args!("{}", self.rwkupsig().bit()))
-            .field("sftdiscon", &format_args!("{}", self.sftdiscon().bit()))
-            .field("gnpinnaksts", &format_args!("{}", self.gnpinnaksts().bit()))
-            .field("goutnaksts", &format_args!("{}", self.goutnaksts().bit()))
-            .field("tstctl", &format_args!("{}", self.tstctl().bits()))
-            .field("sgnpinnak", &format_args!("{}", self.sgnpinnak().bit()))
-            .field("cgnpinnak", &format_args!("{}", self.cgnpinnak().bit()))
-            .field("sgoutnak", &format_args!("{}", self.sgoutnak().bit()))
-            .field("cgoutnak", &format_args!("{}", self.cgoutnak().bit()))
-            .field("pwroprgdne", &format_args!("{}", self.pwroprgdne().bit()))
+            .field("rwkupsig", &self.rwkupsig())
+            .field("sftdiscon", &self.sftdiscon())
+            .field("gnpinnaksts", &self.gnpinnaksts())
+            .field("goutnaksts", &self.goutnaksts())
+            .field("tstctl", &self.tstctl())
+            .field("sgnpinnak", &self.sgnpinnak())
+            .field("cgnpinnak", &self.cgnpinnak())
+            .field("sgoutnak", &self.sgoutnak())
+            .field("cgoutnak", &self.cgoutnak())
+            .field("pwroprgdne", &self.pwroprgdne())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DCTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -161,7 +156,7 @@ impl W {
         PWROPRGDNE_W::new(self, 11)
     }
 }
-#[doc = "OTGFS device control register (OTGFS_DCTL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS device control register (OTGFS_DCTL)\n\nYou can [`read`](crate::Reg::read) this register and get [`dctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DCTL_SPEC;
 impl crate::RegisterSpec for DCTL_SPEC {
     type Ux = u32;

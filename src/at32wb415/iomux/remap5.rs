@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP5")
-            .field("spi2_gmux", &format_args!("{}", self.spi2_gmux().bits()))
-            .field("i2c1_gmux", &format_args!("{}", self.i2c1_gmux().bits()))
+            .field("spi2_gmux", &self.spi2_gmux())
+            .field("i2c1_gmux", &self.i2c1_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         SPI2_GMUX_W::new(self, 20)
     }
 }
-#[doc = "IO MUX remap register 5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap5::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap5::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 5\n\nYou can [`read`](crate::Reg::read) this register and get [`remap5::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap5::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP5_SPEC;
 impl crate::RegisterSpec for REMAP5_SPEC {
     type Ux = u32;

@@ -5,7 +5,7 @@ pub type W = crate::W<BRK_SPEC>;
 #[doc = "Field `DTC` reader - Dead-time configuration"]
 pub type DTC_R = crate::FieldReader;
 #[doc = "Field `DTC` writer - Dead-time configuration"]
-pub type DTC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
+pub type DTC_W<'a, REG> = crate::FieldWriter<'a, REG, 8, u8, crate::Safe>;
 #[doc = "Write protected configuration\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -28,6 +28,7 @@ impl From<WPC_A> for u8 {
 impl crate::FieldSpec for WPC_A {
     type Ux = u8;
 }
+impl crate::IsEnum for WPC_A {}
 #[doc = "Field `WPC` reader - Write protected configuration"]
 pub type WPC_R = crate::FieldReader<WPC_A>;
 impl WPC_R {
@@ -64,7 +65,7 @@ impl WPC_R {
     }
 }
 #[doc = "Field `WPC` writer - Write protected configuration"]
-pub type WPC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, WPC_A>;
+pub type WPC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, WPC_A, crate::Safe>;
 impl<'a, REG> WPC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -533,21 +534,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BRK")
-            .field("bkf", &format_args!("{}", self.bkf().bits()))
-            .field("oen", &format_args!("{}", self.oen().bit()))
-            .field("aoen", &format_args!("{}", self.aoen().bit()))
-            .field("brkv", &format_args!("{}", self.brkv().bit()))
-            .field("brken", &format_args!("{}", self.brken().bit()))
-            .field("fcsoen", &format_args!("{}", self.fcsoen().bit()))
-            .field("fcsodis", &format_args!("{}", self.fcsodis().bit()))
-            .field("wpc", &format_args!("{}", self.wpc().bits()))
-            .field("dtc", &format_args!("{}", self.dtc().bits()))
+            .field("bkf", &self.bkf())
+            .field("oen", &self.oen())
+            .field("aoen", &self.aoen())
+            .field("brkv", &self.brkv())
+            .field("brken", &self.brken())
+            .field("fcsoen", &self.fcsoen())
+            .field("fcsodis", &self.fcsodis())
+            .field("wpc", &self.wpc())
+            .field("dtc", &self.dtc())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<BRK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -606,7 +602,7 @@ impl W {
         BKF_W::new(self, 16)
     }
 }
-#[doc = "Brake register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`brk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`brk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Brake register\n\nYou can [`read`](crate::Reg::read) this register and get [`brk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`brk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BRK_SPEC;
 impl crate::RegisterSpec for BRK_SPEC {
     type Ux = u32;

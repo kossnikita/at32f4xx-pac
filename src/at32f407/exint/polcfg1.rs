@@ -72,7 +72,7 @@ where
 impl R {
     #[doc = "Rising polarity configuration bit on line (0-19)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `RP0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RP0` field.</div>"]
     #[inline(always)]
     pub fn rp(&self, n: u8) -> RP_R {
         #[allow(clippy::no_effect)]
@@ -189,38 +189,33 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POLCFG1")
-            .field("rp0", &format_args!("{}", self.rp0().bit()))
-            .field("rp1", &format_args!("{}", self.rp1().bit()))
-            .field("rp2", &format_args!("{}", self.rp2().bit()))
-            .field("rp3", &format_args!("{}", self.rp3().bit()))
-            .field("rp4", &format_args!("{}", self.rp4().bit()))
-            .field("rp5", &format_args!("{}", self.rp5().bit()))
-            .field("rp6", &format_args!("{}", self.rp6().bit()))
-            .field("rp7", &format_args!("{}", self.rp7().bit()))
-            .field("rp8", &format_args!("{}", self.rp8().bit()))
-            .field("rp9", &format_args!("{}", self.rp9().bit()))
-            .field("rp10", &format_args!("{}", self.rp10().bit()))
-            .field("rp11", &format_args!("{}", self.rp11().bit()))
-            .field("rp12", &format_args!("{}", self.rp12().bit()))
-            .field("rp13", &format_args!("{}", self.rp13().bit()))
-            .field("rp14", &format_args!("{}", self.rp14().bit()))
-            .field("rp15", &format_args!("{}", self.rp15().bit()))
-            .field("rp16", &format_args!("{}", self.rp16().bit()))
-            .field("rp17", &format_args!("{}", self.rp17().bit()))
-            .field("rp18", &format_args!("{}", self.rp18().bit()))
-            .field("rp19", &format_args!("{}", self.rp19().bit()))
+            .field("rp0", &self.rp0())
+            .field("rp1", &self.rp1())
+            .field("rp2", &self.rp2())
+            .field("rp3", &self.rp3())
+            .field("rp4", &self.rp4())
+            .field("rp5", &self.rp5())
+            .field("rp6", &self.rp6())
+            .field("rp7", &self.rp7())
+            .field("rp8", &self.rp8())
+            .field("rp9", &self.rp9())
+            .field("rp10", &self.rp10())
+            .field("rp11", &self.rp11())
+            .field("rp12", &self.rp12())
+            .field("rp13", &self.rp13())
+            .field("rp14", &self.rp14())
+            .field("rp15", &self.rp15())
+            .field("rp16", &self.rp16())
+            .field("rp17", &self.rp17())
+            .field("rp18", &self.rp18())
+            .field("rp19", &self.rp19())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<POLCFG1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Rising polarity configuration bit on line (0-19)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `RP0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RP0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn rp(&mut self, n: u8) -> RP_W<POLCFG1_SPEC> {
@@ -349,7 +344,7 @@ impl W {
         RP_W::new(self, 19)
     }
 }
-#[doc = "Rising polarity configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`polcfg1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`polcfg1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Rising polarity configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`polcfg1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`polcfg1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POLCFG1_SPEC;
 impl crate::RegisterSpec for POLCFG1_SPEC {
     type Ux = u32;

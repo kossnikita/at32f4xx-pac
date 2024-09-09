@@ -448,21 +448,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MSTS")
-            .field("realrx", &format_args!("{}", self.realrx().bit()))
-            .field("lsamprx", &format_args!("{}", self.lsamprx().bit()))
-            .field("curs", &format_args!("{}", self.curs().bit()))
-            .field("cuss", &format_args!("{}", self.cuss().bit()))
-            .field("edzif", &format_args!("{}", self.edzif().bit()))
-            .field("qdzif", &format_args!("{}", self.qdzif().bit()))
-            .field("eoif", &format_args!("{}", self.eoif().bit()))
-            .field("dzc", &format_args!("{}", self.dzc().bit()))
-            .field("fzc", &format_args!("{}", self.fzc().bit()))
+            .field("realrx", &self.realrx())
+            .field("lsamprx", &self.lsamprx())
+            .field("curs", &self.curs())
+            .field("cuss", &self.cuss())
+            .field("edzif", &self.edzif())
+            .field("qdzif", &self.qdzif())
+            .field("eoif", &self.eoif())
+            .field("dzc", &self.dzc())
+            .field("fzc", &self.fzc())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -485,7 +480,7 @@ impl W {
         EDZIF_W::new(self, 4)
     }
 }
-#[doc = "Main status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`msts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`msts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Main status register\n\nYou can [`read`](crate::Reg::read) this register and get [`msts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`msts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MSTS_SPEC;
 impl crate::RegisterSpec for MSTS_SPEC {
     type Ux = u32;

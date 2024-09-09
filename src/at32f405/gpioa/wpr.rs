@@ -118,14 +118,14 @@ where
     }
     #[doc = "Set"]
     #[inline(always)]
-    pub fn set(self) -> &'a mut crate::W<REG> {
+    pub fn set_(self) -> &'a mut crate::W<REG> {
         self.variant(WPSEQ_A::Set)
     }
 }
 impl R {
     #[doc = "Write protect enable (0-15)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `WPEN0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `WPEN0` field.</div>"]
     #[inline(always)]
     pub fn wpen(&self, n: u8) -> WPEN_R {
         #[allow(clippy::no_effect)]
@@ -227,35 +227,30 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WPR")
-            .field("wpen0", &format_args!("{}", self.wpen0().bit()))
-            .field("wpen1", &format_args!("{}", self.wpen1().bit()))
-            .field("wpen2", &format_args!("{}", self.wpen2().bit()))
-            .field("wpen3", &format_args!("{}", self.wpen3().bit()))
-            .field("wpen4", &format_args!("{}", self.wpen4().bit()))
-            .field("wpen5", &format_args!("{}", self.wpen5().bit()))
-            .field("wpen6", &format_args!("{}", self.wpen6().bit()))
-            .field("wpen7", &format_args!("{}", self.wpen7().bit()))
-            .field("wpen8", &format_args!("{}", self.wpen8().bit()))
-            .field("wpen9", &format_args!("{}", self.wpen9().bit()))
-            .field("wpen10", &format_args!("{}", self.wpen10().bit()))
-            .field("wpen11", &format_args!("{}", self.wpen11().bit()))
-            .field("wpen12", &format_args!("{}", self.wpen12().bit()))
-            .field("wpen13", &format_args!("{}", self.wpen13().bit()))
-            .field("wpen14", &format_args!("{}", self.wpen14().bit()))
-            .field("wpen15", &format_args!("{}", self.wpen15().bit()))
-            .field("wpseq", &format_args!("{}", self.wpseq().bit()))
+            .field("wpen0", &self.wpen0())
+            .field("wpen1", &self.wpen1())
+            .field("wpen2", &self.wpen2())
+            .field("wpen3", &self.wpen3())
+            .field("wpen4", &self.wpen4())
+            .field("wpen5", &self.wpen5())
+            .field("wpen6", &self.wpen6())
+            .field("wpen7", &self.wpen7())
+            .field("wpen8", &self.wpen8())
+            .field("wpen9", &self.wpen9())
+            .field("wpen10", &self.wpen10())
+            .field("wpen11", &self.wpen11())
+            .field("wpen12", &self.wpen12())
+            .field("wpen13", &self.wpen13())
+            .field("wpen14", &self.wpen14())
+            .field("wpen15", &self.wpen15())
+            .field("wpseq", &self.wpseq())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<WPR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Write protect enable (0-15)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `WPEN0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `WPEN0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn wpen(&mut self, n: u8) -> WPEN_W<WPR_SPEC> {
@@ -366,7 +361,7 @@ impl W {
         WPSEQ_W::new(self, 16)
     }
 }
-#[doc = "Port write protect register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wpr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wpr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Port write protect register\n\nYou can [`read`](crate::Reg::read) this register and get [`wpr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wpr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WPR_SPEC;
 impl crate::RegisterSpec for WPR_SPEC {
     type Ux = u32;

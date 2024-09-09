@@ -20,7 +20,7 @@ where
 {
     #[doc = "Set the corresponding ODT bit"]
     #[inline(always)]
-    pub fn set(self) -> &'a mut crate::W<REG> {
+    pub fn set_(self) -> &'a mut crate::W<REG> {
         self.variant(IOSB0W_A::Set)
     }
 }
@@ -56,7 +56,7 @@ impl core::fmt::Debug for crate::generic::Reg<SCR_SPEC> {
 impl W {
     #[doc = "Set bit (0-15)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOSB0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOSB0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn iosb(&mut self, n: u8) -> IOSB_W<SCR_SPEC> {
@@ -162,7 +162,7 @@ impl W {
     }
     #[doc = "Clear bit (0-15)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOCB0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOCB0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn iocb(&mut self, n: u8) -> IOCB_W<SCR_SPEC> {
@@ -267,7 +267,7 @@ impl W {
         IOCB_W::new(self, 31)
     }
 }
-#[doc = "Port bit set/clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Port bit set/clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SCR_SPEC;
 impl crate::RegisterSpec for SCR_SPEC {
     type Ux = u32;

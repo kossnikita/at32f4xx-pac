@@ -39,7 +39,7 @@ impl IDT_R {
 impl R {
     #[doc = "Port input data"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IDT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IDT0` field.</div>"]
     #[inline(always)]
     pub fn idt(&self, n: u8) -> IDT_R {
         #[allow(clippy::no_effect)]
@@ -136,31 +136,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IDT")
-            .field("idt0", &format_args!("{}", self.idt0().bit()))
-            .field("idt1", &format_args!("{}", self.idt1().bit()))
-            .field("idt2", &format_args!("{}", self.idt2().bit()))
-            .field("idt3", &format_args!("{}", self.idt3().bit()))
-            .field("idt4", &format_args!("{}", self.idt4().bit()))
-            .field("idt5", &format_args!("{}", self.idt5().bit()))
-            .field("idt6", &format_args!("{}", self.idt6().bit()))
-            .field("idt7", &format_args!("{}", self.idt7().bit()))
-            .field("idt8", &format_args!("{}", self.idt8().bit()))
-            .field("idt9", &format_args!("{}", self.idt9().bit()))
-            .field("idt10", &format_args!("{}", self.idt10().bit()))
-            .field("idt11", &format_args!("{}", self.idt11().bit()))
-            .field("idt12", &format_args!("{}", self.idt12().bit()))
-            .field("idt13", &format_args!("{}", self.idt13().bit()))
-            .field("idt14", &format_args!("{}", self.idt14().bit()))
-            .field("idt15", &format_args!("{}", self.idt15().bit()))
+            .field("idt0", &self.idt0())
+            .field("idt1", &self.idt1())
+            .field("idt2", &self.idt2())
+            .field("idt3", &self.idt3())
+            .field("idt4", &self.idt4())
+            .field("idt5", &self.idt5())
+            .field("idt6", &self.idt6())
+            .field("idt7", &self.idt7())
+            .field("idt8", &self.idt8())
+            .field("idt9", &self.idt9())
+            .field("idt10", &self.idt10())
+            .field("idt11", &self.idt11())
+            .field("idt12", &self.idt12())
+            .field("idt13", &self.idt13())
+            .field("idt14", &self.idt14())
+            .field("idt15", &self.idt15())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<IDT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "GPIO input data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO input data register\n\nYou can [`read`](crate::Reg::read) this register and get [`idt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IDT_SPEC;
 impl crate::RegisterSpec for IDT_SPEC {
     type Ux = u32;

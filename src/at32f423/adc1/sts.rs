@@ -236,19 +236,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS")
-            .field("rdy", &format_args!("{}", self.rdy().bit()))
-            .field("occo", &format_args!("{}", self.occo().bit()))
-            .field("pccs", &format_args!("{}", self.pccs().bit()))
-            .field("occs", &format_args!("{}", self.occs().bit()))
-            .field("occe", &format_args!("{}", self.occe().bit()))
-            .field("pcce", &format_args!("{}", self.pcce().bit()))
-            .field("vmor", &format_args!("{}", self.vmor().bit()))
+            .field("rdy", &self.rdy())
+            .field("occo", &self.occo())
+            .field("pccs", &self.pccs())
+            .field("occs", &self.occs())
+            .field("occe", &self.occe())
+            .field("pcce", &self.pcce())
+            .field("vmor", &self.vmor())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -289,7 +284,7 @@ impl W {
         OCCO_W::new(self, 5)
     }
 }
-#[doc = "status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
 impl crate::RegisterSpec for STS_SPEC {
     type Ux = u32;

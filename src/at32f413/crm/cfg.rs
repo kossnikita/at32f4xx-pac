@@ -22,6 +22,7 @@ impl From<SCLKSEL_A> for u8 {
 impl crate::FieldSpec for SCLKSEL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SCLKSEL_A {}
 #[doc = "Field `SCLKSEL` reader - System clock select"]
 pub type SCLKSEL_R = crate::FieldReader<SCLKSEL_A>;
 impl SCLKSEL_R {
@@ -94,6 +95,7 @@ impl From<SCLKSTS_A> for u8 {
 impl crate::FieldSpec for SCLKSTS_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SCLKSTS_A {}
 #[doc = "Field `SCLKSTS` reader - System Clock select Status"]
 pub type SCLKSTS_R = crate::FieldReader<SCLKSTS_A>;
 impl SCLKSTS_R {
@@ -155,6 +157,7 @@ impl From<AHBDIV_A> for u8 {
 impl crate::FieldSpec for AHBDIV_A {
     type Ux = u8;
 }
+impl crate::IsEnum for AHBDIV_A {}
 #[doc = "Field `AHBDIV` reader - AHB division"]
 pub type AHBDIV_R = crate::FieldReader<AHBDIV_A>;
 impl AHBDIV_R {
@@ -297,6 +300,7 @@ impl From<APB1DIV_A> for u8 {
 impl crate::FieldSpec for APB1DIV_A {
     type Ux = u8;
 }
+impl crate::IsEnum for APB1DIV_A {}
 #[doc = "Field `APB1DIV` reader - APB1 division"]
 pub type APB1DIV_R = crate::FieldReader<APB1DIV_A>;
 impl APB1DIV_R {
@@ -544,27 +548,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG")
-            .field("sclksel", &format_args!("{}", self.sclksel().bits()))
-            .field("sclksts", &format_args!("{}", self.sclksts().bits()))
-            .field("ahbdiv", &format_args!("{}", self.ahbdiv().bits()))
-            .field("apb1div", &format_args!("{}", self.apb1div().bits()))
-            .field("apb2div", &format_args!("{}", self.apb2div().bits()))
-            .field("adcdiv1_0", &format_args!("{}", self.adcdiv1_0().bits()))
-            .field("pllrcs", &format_args!("{}", self.pllrcs().bit()))
-            .field("pllhextdiv", &format_args!("{}", self.pllhextdiv().bit()))
-            .field("pllmult3_0", &format_args!("{}", self.pllmult3_0().bits()))
-            .field("usbdiv1_0", &format_args!("{}", self.usbdiv1_0().bits()))
-            .field("clkout_sel", &format_args!("{}", self.clkout_sel().bits()))
-            .field("usbdiv2", &format_args!("{}", self.usbdiv2().bit()))
-            .field("adcdiv2", &format_args!("{}", self.adcdiv2().bit()))
-            .field("pllmult5_4", &format_args!("{}", self.pllmult5_4().bits()))
-            .field("pllrange", &format_args!("{}", self.pllrange().bit()))
+            .field("sclksel", &self.sclksel())
+            .field("sclksts", &self.sclksts())
+            .field("ahbdiv", &self.ahbdiv())
+            .field("apb1div", &self.apb1div())
+            .field("apb2div", &self.apb2div())
+            .field("adcdiv1_0", &self.adcdiv1_0())
+            .field("pllrcs", &self.pllrcs())
+            .field("pllhextdiv", &self.pllhextdiv())
+            .field("pllmult3_0", &self.pllmult3_0())
+            .field("usbdiv1_0", &self.usbdiv1_0())
+            .field("clkout_sel", &self.clkout_sel())
+            .field("usbdiv2", &self.usbdiv2())
+            .field("adcdiv2", &self.adcdiv2())
+            .field("pllmult5_4", &self.pllmult5_4())
+            .field("pllrange", &self.pllrange())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -653,7 +652,7 @@ impl W {
         PLLRANGE_W::new(self, 31)
     }
 }
-#[doc = "Clock configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Clock configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG_SPEC;
 impl crate::RegisterSpec for CFG_SPEC {
     type Ux = u32;

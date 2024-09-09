@@ -86,21 +86,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRLSTS")
-            .field("licken", &format_args!("{}", self.licken().bit()))
-            .field("lickstbl", &format_args!("{}", self.lickstbl().bit()))
-            .field("rstfc", &format_args!("{}", self.rstfc().bit()))
-            .field("nrstf", &format_args!("{}", self.nrstf().bit()))
-            .field("porrstf", &format_args!("{}", self.porrstf().bit()))
-            .field("swrstf", &format_args!("{}", self.swrstf().bit()))
-            .field("wdtrstf", &format_args!("{}", self.wdtrstf().bit()))
-            .field("wwdtrstf", &format_args!("{}", self.wwdtrstf().bit()))
-            .field("lprstf", &format_args!("{}", self.lprstf().bit()))
+            .field("licken", &self.licken())
+            .field("lickstbl", &self.lickstbl())
+            .field("rstfc", &self.rstfc())
+            .field("nrstf", &self.nrstf())
+            .field("porrstf", &self.porrstf())
+            .field("swrstf", &self.swrstf())
+            .field("wdtrstf", &self.wdtrstf())
+            .field("wwdtrstf", &self.wwdtrstf())
+            .field("lprstf", &self.lprstf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRLSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -153,7 +148,7 @@ impl W {
         LPRSTF_W::new(self, 31)
     }
 }
-#[doc = "Control/status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrlsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrlsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control/status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrlsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrlsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRLSTS_SPEC;
 impl crate::RegisterSpec for CTRLSTS_SPEC {
     type Ux = u32;

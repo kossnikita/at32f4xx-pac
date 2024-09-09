@@ -26,6 +26,10 @@ pub type TITE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type ARU_R = crate::BitReader;
 #[doc = "Field `ARU` writer - Addend register update"]
 pub type ARU_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ATDS` reader - Alternate dma descriptor size"]
+pub type ATDS_R = crate::BitReader;
+#[doc = "Field `ATDS` writer - Alternate dma descriptor size"]
+pub type ATDS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ETAF` reader - Enable timestamp for all frames"]
 pub type ETAF_R = crate::BitReader;
 #[doc = "Field `ETAF` writer - Enable timestamp for all frames"]
@@ -97,6 +101,11 @@ impl R {
     pub fn aru(&self) -> ARU_R {
         ARU_R::new(((self.bits >> 5) & 1) != 0)
     }
+    #[doc = "Bit 7 - Alternate dma descriptor size"]
+    #[inline(always)]
+    pub fn atds(&self) -> ATDS_R {
+        ATDS_R::new(((self.bits >> 7) & 1) != 0)
+    }
     #[doc = "Bit 8 - Enable timestamp for all frames"]
     #[inline(always)]
     pub fn etaf(&self) -> ETAF_R {
@@ -151,28 +160,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PTPTSCTRL")
-            .field("te", &format_args!("{}", self.te().bit()))
-            .field("tfcu", &format_args!("{}", self.tfcu().bit()))
-            .field("ti", &format_args!("{}", self.ti().bit()))
-            .field("tu", &format_args!("{}", self.tu().bit()))
-            .field("tite", &format_args!("{}", self.tite().bit()))
-            .field("aru", &format_args!("{}", self.aru().bit()))
-            .field("etaf", &format_args!("{}", self.etaf().bit()))
-            .field("tdbrc", &format_args!("{}", self.tdbrc().bit()))
-            .field("eppv2f", &format_args!("{}", self.eppv2f().bit()))
-            .field("eppef", &format_args!("{}", self.eppef().bit()))
-            .field("eppfsip6u", &format_args!("{}", self.eppfsip6u().bit()))
-            .field("eppfsip4u", &format_args!("{}", self.eppfsip4u().bit()))
-            .field("etsfem", &format_args!("{}", self.etsfem().bit()))
-            .field("esfmrtm", &format_args!("{}", self.esfmrtm().bit()))
-            .field("sppfts", &format_args!("{}", self.sppfts().bits()))
-            .field("emafpff", &format_args!("{}", self.emafpff().bit()))
+            .field("te", &self.te())
+            .field("tfcu", &self.tfcu())
+            .field("ti", &self.ti())
+            .field("tu", &self.tu())
+            .field("tite", &self.tite())
+            .field("aru", &self.aru())
+            .field("atds", &self.atds())
+            .field("etaf", &self.etaf())
+            .field("tdbrc", &self.tdbrc())
+            .field("eppv2f", &self.eppv2f())
+            .field("eppef", &self.eppef())
+            .field("eppfsip6u", &self.eppfsip6u())
+            .field("eppfsip4u", &self.eppfsip4u())
+            .field("etsfem", &self.etsfem())
+            .field("esfmrtm", &self.esfmrtm())
+            .field("sppfts", &self.sppfts())
+            .field("emafpff", &self.emafpff())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<PTPTSCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -211,6 +216,12 @@ impl W {
     #[must_use]
     pub fn aru(&mut self) -> ARU_W<PTPTSCTRL_SPEC> {
         ARU_W::new(self, 5)
+    }
+    #[doc = "Bit 7 - Alternate dma descriptor size"]
+    #[inline(always)]
+    #[must_use]
+    pub fn atds(&mut self) -> ATDS_W<PTPTSCTRL_SPEC> {
+        ATDS_W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable timestamp for all frames"]
     #[inline(always)]
@@ -273,7 +284,7 @@ impl W {
         EMAFPFF_W::new(self, 18)
     }
 }
-#[doc = "Ethernet PTP time stamp control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptptsctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ptptsctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet PTP time stamp control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ptptsctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ptptsctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PTPTSCTRL_SPEC;
 impl crate::RegisterSpec for PTPTSCTRL_SPEC {
     type Ux = u32;

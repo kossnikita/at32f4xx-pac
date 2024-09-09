@@ -33,19 +33,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GRXSTSR_Host")
-            .field("chnum", &format_args!("{}", self.chnum().bits()))
-            .field("bcnt", &format_args!("{}", self.bcnt().bits()))
-            .field("dpid", &format_args!("{}", self.dpid().bits()))
-            .field("pktsts", &format_args!("{}", self.pktsts().bits()))
+            .field("chnum", &self.chnum())
+            .field("bcnt", &self.bcnt())
+            .field("dpid", &self.dpid())
+            .field("pktsts", &self.pktsts())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<GRXSTSR_HOST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "OTGFS Receive status debug read(Host mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grxstsr_host::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS Receive status debug read(Host mode)\n\nYou can [`read`](crate::Reg::read) this register and get [`grxstsr_host::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GRXSTSR_HOST_SPEC;
 impl crate::RegisterSpec for GRXSTSR_HOST_SPEC {
     type Ux = u32;

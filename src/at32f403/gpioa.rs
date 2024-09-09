@@ -47,37 +47,37 @@ impl RegisterBlock {
         &self.wpr
     }
 }
-#[doc = "CFGLR (rw) register accessor: GPIO function configurate low register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfglr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfglr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfglr`]
+#[doc = "CFGLR (rw) register accessor: GPIO function configurate low register\n\nYou can [`read`](crate::Reg::read) this register and get [`cfglr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfglr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfglr`]
 module"]
 pub type CFGLR = crate::Reg<cfglr::CFGLR_SPEC>;
 #[doc = "GPIO function configurate low register"]
 pub mod cfglr;
-#[doc = "CFGHR (rw) register accessor: GPIO function configurate high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfghr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfghr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfghr`]
+#[doc = "CFGHR (rw) register accessor: GPIO function configurate high register\n\nYou can [`read`](crate::Reg::read) this register and get [`cfghr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfghr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfghr`]
 module"]
 pub type CFGHR = crate::Reg<cfghr::CFGHR_SPEC>;
 #[doc = "GPIO function configurate high register"]
 pub mod cfghr;
-#[doc = "IDT (r) register accessor: Port input data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idt::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@idt`]
+#[doc = "IDT (r) register accessor: Port input data register\n\nYou can [`read`](crate::Reg::read) this register and get [`idt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@idt`]
 module"]
 pub type IDT = crate::Reg<idt::IDT_SPEC>;
 #[doc = "Port input data register"]
 pub mod idt;
-#[doc = "ODT (rw) register accessor: Port output data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`odt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`odt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@odt`]
+#[doc = "ODT (rw) register accessor: Port output data register\n\nYou can [`read`](crate::Reg::read) this register and get [`odt::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`odt::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@odt`]
 module"]
 pub type ODT = crate::Reg<odt::ODT_SPEC>;
 #[doc = "Port output data register"]
 pub mod odt;
-#[doc = "SCR (w) register accessor: Port bit set/clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scr`]
+#[doc = "SCR (w) register accessor: Port bit set/clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@scr`]
 module"]
 pub type SCR = crate::Reg<scr::SCR_SPEC>;
 #[doc = "Port bit set/clear register"]
 pub mod scr;
-#[doc = "CLR (w) register accessor: Port bit reset register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clr`]
+#[doc = "CLR (w) register accessor: Port bit reset register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clr`]
 module"]
 pub type CLR = crate::Reg<clr::CLR_SPEC>;
 #[doc = "Port bit reset register"]
 pub mod clr;
-#[doc = "WPR (rw) register accessor: Port write protect register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wpr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wpr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wpr`]
+#[doc = "WPR (rw) register accessor: Port write protect register\n\nYou can [`read`](crate::Reg::read) this register and get [`wpr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wpr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wpr`]
 module"]
 pub type WPR = crate::Reg<wpr::WPR_SPEC>;
 #[doc = "Port write protect register"]

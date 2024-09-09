@@ -844,28 +844,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL3")
-            .field("lpwum", &format_args!("{}", self.lpwum().bits()))
-            .field("dep", &format_args!("{}", self.dep().bit()))
-            .field("rs485en", &format_args!("{}", self.rs485en().bit()))
-            .field("lpwufie", &format_args!("{}", self.lpwufie().bit()))
-            .field("smusen", &format_args!("{}", self.smusen().bit()))
-            .field("ctscfien", &format_args!("{}", self.ctscfien().bit()))
-            .field("ctsen", &format_args!("{}", self.ctsen().bit()))
-            .field("rtsen", &format_args!("{}", self.rtsen().bit()))
-            .field("dmaten", &format_args!("{}", self.dmaten().bit()))
-            .field("dmaren", &format_args!("{}", self.dmaren().bit()))
-            .field("scmen", &format_args!("{}", self.scmen().bit()))
-            .field("scnacken", &format_args!("{}", self.scnacken().bit()))
-            .field("slben", &format_args!("{}", self.slben().bit()))
-            .field("irdalp", &format_args!("{}", self.irdalp().bit()))
-            .field("irdaen", &format_args!("{}", self.irdaen().bit()))
-            .field("errien", &format_args!("{}", self.errien().bit()))
+            .field("lpwum", &self.lpwum())
+            .field("dep", &self.dep())
+            .field("rs485en", &self.rs485en())
+            .field("lpwufie", &self.lpwufie())
+            .field("smusen", &self.smusen())
+            .field("ctscfien", &self.ctscfien())
+            .field("ctsen", &self.ctsen())
+            .field("rtsen", &self.rtsen())
+            .field("dmaten", &self.dmaten())
+            .field("dmaren", &self.dmaren())
+            .field("scmen", &self.scmen())
+            .field("scnacken", &self.scnacken())
+            .field("slben", &self.slben())
+            .field("irdalp", &self.irdalp())
+            .field("irdaen", &self.irdaen())
+            .field("errien", &self.errien())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -966,7 +961,7 @@ impl W {
         LPWUM_W::new(self, 16)
     }
 }
-#[doc = "Control register 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 3\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL3_SPEC;
 impl crate::RegisterSpec for CTRL3_SPEC {
     type Ux = u32;

@@ -166,38 +166,33 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS")
-            .field("cmdfail", &format_args!("{}", self.cmdfail().bit()))
-            .field("dtfail", &format_args!("{}", self.dtfail().bit()))
-            .field("cmdtimeout", &format_args!("{}", self.cmdtimeout().bit()))
-            .field("dttimeout", &format_args!("{}", self.dttimeout().bit()))
-            .field("txerru", &format_args!("{}", self.txerru().bit()))
-            .field("rxerro", &format_args!("{}", self.rxerro().bit()))
-            .field("cmdrspcmpl", &format_args!("{}", self.cmdrspcmpl().bit()))
-            .field("cmdcmpl", &format_args!("{}", self.cmdcmpl().bit()))
-            .field("dtcmpl", &format_args!("{}", self.dtcmpl().bit()))
-            .field("sbiterr", &format_args!("{}", self.sbiterr().bit()))
-            .field("dtblkcmpl", &format_args!("{}", self.dtblkcmpl().bit()))
-            .field("docmd", &format_args!("{}", self.docmd().bit()))
-            .field("dotx", &format_args!("{}", self.dotx().bit()))
-            .field("dorx", &format_args!("{}", self.dorx().bit()))
-            .field("txbufh", &format_args!("{}", self.txbufh().bit()))
-            .field("rxbufh", &format_args!("{}", self.rxbufh().bit()))
-            .field("txbuff", &format_args!("{}", self.txbuff().bit()))
-            .field("rxbuff", &format_args!("{}", self.rxbuff().bit()))
-            .field("txbufe", &format_args!("{}", self.txbufe().bit()))
-            .field("rxbufe", &format_args!("{}", self.rxbufe().bit()))
-            .field("txbuf", &format_args!("{}", self.txbuf().bit()))
-            .field("rxbuf", &format_args!("{}", self.rxbuf().bit()))
-            .field("ioif", &format_args!("{}", self.ioif().bit()))
+            .field("cmdfail", &self.cmdfail())
+            .field("dtfail", &self.dtfail())
+            .field("cmdtimeout", &self.cmdtimeout())
+            .field("dttimeout", &self.dttimeout())
+            .field("txerru", &self.txerru())
+            .field("rxerro", &self.rxerro())
+            .field("cmdrspcmpl", &self.cmdrspcmpl())
+            .field("cmdcmpl", &self.cmdcmpl())
+            .field("dtcmpl", &self.dtcmpl())
+            .field("sbiterr", &self.sbiterr())
+            .field("dtblkcmpl", &self.dtblkcmpl())
+            .field("docmd", &self.docmd())
+            .field("dotx", &self.dotx())
+            .field("dorx", &self.dorx())
+            .field("txbufh", &self.txbufh())
+            .field("rxbufh", &self.rxbufh())
+            .field("txbuff", &self.txbuff())
+            .field("rxbuff", &self.rxbuff())
+            .field("txbufe", &self.txbufe())
+            .field("rxbufe", &self.rxbufe())
+            .field("txbuf", &self.txbuf())
+            .field("rxbuf", &self.rxbuf())
+            .field("ioif", &self.ioif())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "SDIO status register (SDIO_STS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SDIO status register (SDIO_STS)\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
 impl crate::RegisterSpec for STS_SPEC {
     type Ux = u32;

@@ -5,11 +5,11 @@ pub type W = crate::W<GDIV_SPEC>;
 #[doc = "Field `ISDIV` reader - IrDA/smartcard division value"]
 pub type ISDIV_R = crate::FieldReader;
 #[doc = "Field `ISDIV` writer - IrDA/smartcard division value"]
-pub type ISDIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
+pub type ISDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8, u8, crate::Safe>;
 #[doc = "Field `SCGT` reader - Smart card guard time value"]
 pub type SCGT_R = crate::FieldReader;
 #[doc = "Field `SCGT` writer - Smart card guard time value"]
-pub type SCGT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
+pub type SCGT_W<'a, REG> = crate::FieldWriter<'a, REG, 8, u8, crate::Safe>;
 impl R {
     #[doc = "Bits 0:7 - IrDA/smartcard division value"]
     #[inline(always)]
@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GDIV")
-            .field("scgt", &format_args!("{}", self.scgt().bits()))
-            .field("isdiv", &format_args!("{}", self.isdiv().bits()))
+            .field("scgt", &self.scgt())
+            .field("isdiv", &self.isdiv())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GDIV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         SCGT_W::new(self, 8)
     }
 }
-#[doc = "Guard time and division register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gdiv::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gdiv::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Guard time and division register\n\nYou can [`read`](crate::Reg::read) this register and get [`gdiv::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gdiv::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GDIV_SPEC;
 impl crate::RegisterSpec for GDIV_SPEC {
     type Ux = u32;

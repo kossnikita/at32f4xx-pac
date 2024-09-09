@@ -11,17 +11,10 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("ODT")
-            .field("odt", &format_args!("{}", self.odt().bits()))
-            .finish()
+        f.debug_struct("ODT").field("odt", &self.odt()).finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<ODT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Ordinary data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`odt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ordinary data register\n\nYou can [`read`](crate::Reg::read) this register and get [`odt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ODT_SPEC;
 impl crate::RegisterSpec for ODT_SPEC {
     type Ux = u32;

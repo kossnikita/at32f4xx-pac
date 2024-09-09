@@ -142,27 +142,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BK1CTRL2")
-            .field("mwmc", &format_args!("{}", self.mwmc().bit()))
-            .field("crpgs", &format_args!("{}", self.crpgs().bits()))
-            .field("nwasen", &format_args!("{}", self.nwasen().bit()))
-            .field("rwtd", &format_args!("{}", self.rwtd().bit()))
-            .field("nwsen", &format_args!("{}", self.nwsen().bit()))
-            .field("wen", &format_args!("{}", self.wen().bit()))
-            .field("nwtcfg", &format_args!("{}", self.nwtcfg().bit()))
-            .field("wrapen", &format_args!("{}", self.wrapen().bit()))
-            .field("nwpol", &format_args!("{}", self.nwpol().bit()))
-            .field("syncben", &format_args!("{}", self.syncben().bit()))
-            .field("noren", &format_args!("{}", self.noren().bit()))
-            .field("extmdbw", &format_args!("{}", self.extmdbw().bits()))
-            .field("dev", &format_args!("{}", self.dev().bits()))
-            .field("admuxen", &format_args!("{}", self.admuxen().bit()))
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("mwmc", &self.mwmc())
+            .field("crpgs", &self.crpgs())
+            .field("nwasen", &self.nwasen())
+            .field("rwtd", &self.rwtd())
+            .field("nwsen", &self.nwsen())
+            .field("wen", &self.wen())
+            .field("nwtcfg", &self.nwtcfg())
+            .field("wrapen", &self.wrapen())
+            .field("nwpol", &self.nwpol())
+            .field("syncben", &self.syncben())
+            .field("noren", &self.noren())
+            .field("extmdbw", &self.extmdbw())
+            .field("dev", &self.dev())
+            .field("admuxen", &self.admuxen())
+            .field("en", &self.en())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<BK1CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -257,7 +252,7 @@ impl W {
         MWMC_W::new(self, 19)
     }
 }
-#[doc = "SRAM/NOR-Flash chip-select control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bk1ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bk1ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SRAM/NOR-Flash chip-select control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`bk1ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bk1ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BK1CTRL2_SPEC;
 impl crate::RegisterSpec for BK1CTRL2_SPEC {
     type Ux = u32;

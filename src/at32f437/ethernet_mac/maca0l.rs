@@ -16,13 +16,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MACA0L")
-            .field("ma0l", &format_args!("{}", self.ma0l().bits()))
+            .field("ma0l", &self.ma0l())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MACA0L_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -33,7 +28,7 @@ impl W {
         MA0L_W::new(self, 0)
     }
 }
-#[doc = "Ethernet MAC address 0 low register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`maca0l::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`maca0l::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet MAC address 0 low register\n\nYou can [`read`](crate::Reg::read) this register and get [`maca0l::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`maca0l::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MACA0L_SPEC;
 impl crate::RegisterSpec for MACA0L_SPEC {
     type Ux = u32;

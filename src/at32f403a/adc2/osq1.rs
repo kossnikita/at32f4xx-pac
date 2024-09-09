@@ -9,11 +9,11 @@ pub type OSN_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `OCLEN` reader - Ordinary conversion sequence length"]
 pub type OCLEN_R = crate::FieldReader;
 #[doc = "Field `OCLEN` writer - Ordinary conversion sequence length"]
-pub type OCLEN_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type OCLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 impl R {
     #[doc = "Number of (13-16)th conversion in ordinary sequence"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `OSN13` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OSN13` field.</div>"]
     #[inline(always)]
     pub fn osn(&self, n: u8) -> OSN_R {
         #[allow(clippy::no_effect)]
@@ -55,23 +55,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OSQ1")
-            .field("oclen", &format_args!("{}", self.oclen().bits()))
-            .field("osn13", &format_args!("{}", self.osn13().bits()))
-            .field("osn14", &format_args!("{}", self.osn14().bits()))
-            .field("osn15", &format_args!("{}", self.osn15().bits()))
-            .field("osn16", &format_args!("{}", self.osn16().bits()))
+            .field("oclen", &self.oclen())
+            .field("osn13", &self.osn13())
+            .field("osn14", &self.osn14())
+            .field("osn15", &self.osn15())
+            .field("osn16", &self.osn16())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<OSQ1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Number of (13-16)th conversion in ordinary sequence"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `OSN13` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OSN13` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn osn(&mut self, n: u8) -> OSN_W<OSQ1_SPEC> {
@@ -110,7 +105,7 @@ impl W {
         OCLEN_W::new(self, 20)
     }
 }
-#[doc = "Ordinary sequence register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`osq1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`osq1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ordinary sequence register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`osq1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OSQ1_SPEC;
 impl crate::RegisterSpec for OSQ1_SPEC {
     type Ux = u32;

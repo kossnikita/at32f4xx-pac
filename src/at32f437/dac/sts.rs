@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS")
-            .field("dmaudr1", &format_args!("{}", self.dmaudr1().bit()))
-            .field("dmaudr2", &format_args!("{}", self.dmaudr2().bit()))
+            .field("dmaudr1", &self.dmaudr1())
+            .field("dmaudr2", &self.dmaudr2())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         DMAUDR2_W::new(self, 29)
     }
 }
-#[doc = "DAC2 status register (DAC_STS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DAC2 status register (DAC_STS)\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
 impl crate::RegisterSpec for STS_SPEC {
     type Ux = u32;

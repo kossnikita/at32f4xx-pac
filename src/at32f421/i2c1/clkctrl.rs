@@ -5,7 +5,7 @@ pub type W = crate::W<CLKCTRL_SPEC>;
 #[doc = "Field `SPEED` reader - I2C bus speed config"]
 pub type SPEED_R = crate::FieldReader<u16>;
 #[doc = "Field `SPEED` writer - I2C bus speed config"]
-pub type SPEED_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 12, u16>;
+pub type SPEED_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16, crate::Safe>;
 #[doc = "Fast mode duty cycle\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DUTYMODE_A {
@@ -132,15 +132,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKCTRL")
-            .field("speedmode", &format_args!("{}", self.speedmode().bit()))
-            .field("dutymode", &format_args!("{}", self.dutymode().bit()))
-            .field("speed", &format_args!("{}", self.speed().bits()))
+            .field("speedmode", &self.speedmode())
+            .field("dutymode", &self.dutymode())
+            .field("speed", &self.speed())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CLKCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -163,7 +158,7 @@ impl W {
         SPEEDMODE_W::new(self, 15)
     }
 }
-#[doc = "Clock control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Clock control register\n\nYou can [`read`](crate::Reg::read) this register and get [`clkctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clkctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLKCTRL_SPEC;
 impl crate::RegisterSpec for CLKCTRL_SPEC {
     type Ux = u32;

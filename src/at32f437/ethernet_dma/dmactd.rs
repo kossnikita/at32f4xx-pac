@@ -12,16 +12,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMACTD")
-            .field("htdap", &format_args!("{}", self.htdap().bits()))
+            .field("htdap", &self.htdap())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<DMACTD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Ethernet DMA current host transmit descriptor register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmactd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet DMA current host transmit descriptor register\n\nYou can [`read`](crate::Reg::read) this register and get [`dmactd::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMACTD_SPEC;
 impl crate::RegisterSpec for DMACTD_SPEC {
     type Ux = u32;

@@ -61,18 +61,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKCTRL")
-            .field("scll", &format_args!("{}", self.scll().bits()))
-            .field("sclh", &format_args!("{}", self.sclh().bits()))
-            .field("sdad", &format_args!("{}", self.sdad().bits()))
-            .field("scld", &format_args!("{}", self.scld().bits()))
-            .field("divh", &format_args!("{}", self.divh().bits()))
-            .field("divl", &format_args!("{}", self.divl().bits()))
+            .field("scll", &self.scll())
+            .field("sclh", &self.sclh())
+            .field("sdad", &self.sdad())
+            .field("scld", &self.scld())
+            .field("divh", &self.divh())
+            .field("divl", &self.divl())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CLKCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -113,7 +108,7 @@ impl W {
         DIVL_W::new(self, 28)
     }
 }
-#[doc = "Clock contorl register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Clock contorl register\n\nYou can [`read`](crate::Reg::read) this register and get [`clkctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clkctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLKCTRL_SPEC;
 impl crate::RegisterSpec for CLKCTRL_SPEC {
     type Ux = u32;

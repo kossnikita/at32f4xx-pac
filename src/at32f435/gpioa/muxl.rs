@@ -5,11 +5,11 @@ pub type W = crate::W<MUXL_SPEC>;
 #[doc = "Field `MUX(0-7)` reader - GPIOx pin %s muxing"]
 pub type MUX_R = crate::FieldReader;
 #[doc = "Field `MUX(0-7)` writer - GPIOx pin %s muxing"]
-pub type MUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type MUX_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 impl R {
     #[doc = "GPIOx pin (0-7) muxing"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `MUX0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `MUX0` field.</div>"]
     #[inline(always)]
     pub fn mux(&self, n: u8) -> MUX_R {
         #[allow(clippy::no_effect)]
@@ -66,26 +66,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MUXL")
-            .field("mux0", &format_args!("{}", self.mux0().bits()))
-            .field("mux1", &format_args!("{}", self.mux1().bits()))
-            .field("mux2", &format_args!("{}", self.mux2().bits()))
-            .field("mux3", &format_args!("{}", self.mux3().bits()))
-            .field("mux4", &format_args!("{}", self.mux4().bits()))
-            .field("mux5", &format_args!("{}", self.mux5().bits()))
-            .field("mux6", &format_args!("{}", self.mux6().bits()))
-            .field("mux7", &format_args!("{}", self.mux7().bits()))
+            .field("mux0", &self.mux0())
+            .field("mux1", &self.mux1())
+            .field("mux2", &self.mux2())
+            .field("mux3", &self.mux3())
+            .field("mux4", &self.mux4())
+            .field("mux5", &self.mux5())
+            .field("mux6", &self.mux6())
+            .field("mux7", &self.mux7())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MUXL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "GPIOx pin (0-7) muxing"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `MUX0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `MUX0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn mux(&mut self, n: u8) -> MUX_W<MUXL_SPEC> {
@@ -142,7 +137,7 @@ impl W {
         MUX_W::new(self, 28)
     }
 }
-#[doc = "GPIO muxing function low register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`muxl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`muxl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO muxing function low register\n\nYou can [`read`](crate::Reg::read) this register and get [`muxl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`muxl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MUXL_SPEC;
 impl crate::RegisterSpec for MUXL_SPEC {
     type Ux = u32;

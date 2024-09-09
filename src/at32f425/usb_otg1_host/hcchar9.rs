@@ -97,22 +97,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HCCHAR9")
-            .field("mps", &format_args!("{}", self.mps().bits()))
-            .field("eptnum", &format_args!("{}", self.eptnum().bits()))
-            .field("eptdir", &format_args!("{}", self.eptdir().bit()))
-            .field("lspddev", &format_args!("{}", self.lspddev().bit()))
-            .field("eptype", &format_args!("{}", self.eptype().bits()))
-            .field("mc", &format_args!("{}", self.mc().bits()))
-            .field("devaddr", &format_args!("{}", self.devaddr().bits()))
-            .field("oddfrm", &format_args!("{}", self.oddfrm().bit()))
-            .field("chdis", &format_args!("{}", self.chdis().bit()))
-            .field("chena", &format_args!("{}", self.chena().bit()))
+            .field("mps", &self.mps())
+            .field("eptnum", &self.eptnum())
+            .field("eptdir", &self.eptdir())
+            .field("lspddev", &self.lspddev())
+            .field("eptype", &self.eptype())
+            .field("mc", &self.mc())
+            .field("devaddr", &self.devaddr())
+            .field("oddfrm", &self.oddfrm())
+            .field("chdis", &self.chdis())
+            .field("chena", &self.chena())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HCCHAR9_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -177,7 +172,7 @@ impl W {
         CHENA_W::new(self, 31)
     }
 }
-#[doc = "OTGFS host channel-9 characteristics register (OTGFS_HCCHAR9)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcchar9::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcchar9::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS host channel-9 characteristics register (OTGFS_HCCHAR9)\n\nYou can [`read`](crate::Reg::read) this register and get [`hcchar9::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hcchar9::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCCHAR9_SPEC;
 impl crate::RegisterSpec for HCCHAR9_SPEC {
     type Ux = u32;

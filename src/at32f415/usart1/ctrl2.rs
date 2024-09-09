@@ -388,6 +388,7 @@ impl From<STOPBN_A> for u8 {
 impl crate::FieldSpec for STOPBN_A {
     type Ux = u8;
 }
+impl crate::IsEnum for STOPBN_A {}
 #[doc = "Field `STOPBN` reader - STOP bit num"]
 pub type STOPBN_R = crate::FieldReader<STOPBN_A>;
 impl STOPBN_R {
@@ -424,7 +425,7 @@ impl STOPBN_R {
     }
 }
 #[doc = "Field `STOPBN` writer - STOP bit num"]
-pub type STOPBN_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, STOPBN_A>;
+pub type STOPBN_W<'a, REG> = crate::FieldWriter<'a, REG, 2, STOPBN_A, crate::Safe>;
 impl<'a, REG> STOPBN_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -568,21 +569,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field("linen", &format_args!("{}", self.linen().bit()))
-            .field("stopbn", &format_args!("{}", self.stopbn().bits()))
-            .field("clken", &format_args!("{}", self.clken().bit()))
-            .field("clkpol", &format_args!("{}", self.clkpol().bit()))
-            .field("clkpha", &format_args!("{}", self.clkpha().bit()))
-            .field("lbcp", &format_args!("{}", self.lbcp().bit()))
-            .field("bfien", &format_args!("{}", self.bfien().bit()))
-            .field("bfbn", &format_args!("{}", self.bfbn().bit()))
-            .field("id", &format_args!("{}", self.id().bits()))
+            .field("linen", &self.linen())
+            .field("stopbn", &self.stopbn())
+            .field("clken", &self.clken())
+            .field("clkpol", &self.clkpol())
+            .field("clkpha", &self.clkpha())
+            .field("lbcp", &self.lbcp())
+            .field("bfien", &self.bfien())
+            .field("bfbn", &self.bfbn())
+            .field("id", &self.id())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -641,7 +637,7 @@ impl W {
         LINEN_W::new(self, 14)
     }
 }
-#[doc = "Control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;

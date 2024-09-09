@@ -58,7 +58,7 @@ where
 impl R {
     #[doc = "GPIOx pin (0-15) outpu mode configurate"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `OM0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OM0` field.</div>"]
     #[inline(always)]
     pub fn om(&self, n: u8) -> OM_R {
         #[allow(clippy::no_effect)]
@@ -155,34 +155,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OMODE")
-            .field("om0", &format_args!("{}", self.om0().bit()))
-            .field("om1", &format_args!("{}", self.om1().bit()))
-            .field("om2", &format_args!("{}", self.om2().bit()))
-            .field("om3", &format_args!("{}", self.om3().bit()))
-            .field("om4", &format_args!("{}", self.om4().bit()))
-            .field("om5", &format_args!("{}", self.om5().bit()))
-            .field("om6", &format_args!("{}", self.om6().bit()))
-            .field("om7", &format_args!("{}", self.om7().bit()))
-            .field("om8", &format_args!("{}", self.om8().bit()))
-            .field("om9", &format_args!("{}", self.om9().bit()))
-            .field("om10", &format_args!("{}", self.om10().bit()))
-            .field("om11", &format_args!("{}", self.om11().bit()))
-            .field("om12", &format_args!("{}", self.om12().bit()))
-            .field("om13", &format_args!("{}", self.om13().bit()))
-            .field("om14", &format_args!("{}", self.om14().bit()))
-            .field("om15", &format_args!("{}", self.om15().bit()))
+            .field("om0", &self.om0())
+            .field("om1", &self.om1())
+            .field("om2", &self.om2())
+            .field("om3", &self.om3())
+            .field("om4", &self.om4())
+            .field("om5", &self.om5())
+            .field("om6", &self.om6())
+            .field("om7", &self.om7())
+            .field("om8", &self.om8())
+            .field("om9", &self.om9())
+            .field("om10", &self.om10())
+            .field("om11", &self.om11())
+            .field("om12", &self.om12())
+            .field("om13", &self.om13())
+            .field("om14", &self.om14())
+            .field("om15", &self.om15())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<OMODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "GPIOx pin (0-15) outpu mode configurate"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `OM0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OM0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn om(&mut self, n: u8) -> OM_W<OMODE_SPEC> {
@@ -287,7 +282,7 @@ impl W {
         OM_W::new(self, 15)
     }
 }
-#[doc = "GPIO output mode register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`omode::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`omode::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO output mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`omode::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`omode::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OMODE_SPEC;
 impl crate::RegisterSpec for OMODE_SPEC {
     type Ux = u32;

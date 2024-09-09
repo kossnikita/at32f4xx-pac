@@ -8399,7 +8399,7 @@
             </field>
             <field>
               <name>CCFS</name>
-              <description>Channel control bit flash select</description>
+              <description>Channel control bit refresh select</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <enumeratedValues>
@@ -14799,7 +14799,7 @@
             </field>
             <field>
               <name>CCFS</name>
-              <description>Channel control bit flash select</description>
+              <description>Channel control bit refresh select</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -15958,7 +15958,7 @@
             </field>
             <field>
               <name>CCFS</name>
-              <description>Channel control bit flash select</description>
+              <description>Channel control bit refresh select</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -17508,6 +17508,34 @@
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <name>TDIENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Data transmit data interrupt is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Data transmit data interrupt is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>TDIENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Disable Data transmit data interrupt</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Enable Data transmit data interrupt</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>RDIEN</name>
@@ -21676,13 +21704,13 @@
           <addressOffset>0x24</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
-          <resetValue>0x00000FFF</resetValue>
+          <resetValue>0x0000FFFF</resetValue>
           <fields>
             <field>
               <name>VMB</name>
               <description>Voltage monitoring high boundary</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
+              <bitWidth>16</bitWidth>
               <writeConstraint>
                 <range>
                   <minimum>0</minimum>

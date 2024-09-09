@@ -171,11 +171,11 @@ where
 #[doc = "Field `EID` reader - Ttransmit mailbox extended identifier"]
 pub type EID_R = crate::FieldReader<u32>;
 #[doc = "Field `EID` writer - Ttransmit mailbox extended identifier"]
-pub type EID_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 18, u32>;
+pub type EID_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32, crate::Safe>;
 #[doc = "Field `SID` reader - Transmit mailbox standard identifier or extended identifier high bytes"]
 pub type SID_R = crate::FieldReader<u16>;
 #[doc = "Field `SID` writer - Transmit mailbox standard identifier or extended identifier high bytes"]
-pub type SID_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 11, u16>;
+pub type SID_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16, crate::Safe>;
 impl R {
     #[doc = "Bit 0 - Transmit mailbox send request"]
     #[inline(always)]
@@ -206,17 +206,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TMI")
-            .field("sid", &format_args!("{}", self.sid().bits()))
-            .field("eid", &format_args!("{}", self.eid().bits()))
-            .field("idsel", &format_args!("{}", self.idsel().bit()))
-            .field("frsel", &format_args!("{}", self.frsel().bit()))
-            .field("sr", &format_args!("{}", self.sr().bit()))
+            .field("sid", &self.sid())
+            .field("eid", &self.eid())
+            .field("idsel", &self.idsel())
+            .field("frsel", &self.frsel())
+            .field("sr", &self.sr())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<TMI_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -251,7 +246,7 @@ impl W {
         SID_W::new(self, 21)
     }
 }
-#[doc = "Transmit mailbox identifier register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tmi::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tmi::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transmit mailbox identifier register\n\nYou can [`read`](crate::Reg::read) this register and get [`tmi::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tmi::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TMI_SPEC;
 impl crate::RegisterSpec for TMI_SPEC {
     type Ux = u32;

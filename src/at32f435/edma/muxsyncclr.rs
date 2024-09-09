@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MUXSYNCCLR")
-            .field("syncovfc1", &format_args!("{}", self.syncovfc1().bit()))
-            .field("syncovfc2", &format_args!("{}", self.syncovfc2().bit()))
-            .field("syncovfc3", &format_args!("{}", self.syncovfc3().bit()))
-            .field("syncovfc4", &format_args!("{}", self.syncovfc4().bit()))
-            .field("syncovfc5", &format_args!("{}", self.syncovfc5().bit()))
-            .field("syncovfc6", &format_args!("{}", self.syncovfc6().bit()))
-            .field("syncovfc7", &format_args!("{}", self.syncovfc7().bit()))
-            .field("syncovfc8", &format_args!("{}", self.syncovfc8().bit()))
+            .field("syncovfc1", &self.syncovfc1())
+            .field("syncovfc2", &self.syncovfc2())
+            .field("syncovfc3", &self.syncovfc3())
+            .field("syncovfc4", &self.syncovfc4())
+            .field("syncovfc5", &self.syncovfc5())
+            .field("syncovfc6", &self.syncovfc6())
+            .field("syncovfc7", &self.syncovfc7())
+            .field("syncovfc8", &self.syncovfc8())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MUXSYNCCLR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         SYNCOVFC8_W::new(self, 7)
     }
 }
-#[doc = "Channel Interrupt Clear Flag Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`muxsyncclr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`muxsyncclr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel Interrupt Clear Flag Register\n\nYou can [`read`](crate::Reg::read) this register and get [`muxsyncclr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`muxsyncclr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MUXSYNCCLR_SPEC;
 impl crate::RegisterSpec for MUXSYNCCLR_SPEC {
     type Ux = u32;

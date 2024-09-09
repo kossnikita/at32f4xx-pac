@@ -70,4 +70,6 @@ PROVIDE(DMA2_CHANNEL6_7 = DefaultHandler);
 PROVIDE(USART6 = DefaultHandler);
 PROVIDE(UART7 = DefaultHandler);
 PROVIDE(UART8 = DefaultHandler);
+PROVIDE(EMAC = DefaultHandler);
+PROVIDE(EMAC_WKUP = DefaultHandler);
 

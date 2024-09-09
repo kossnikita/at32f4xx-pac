@@ -16,16 +16,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIGH_PULSE")
-            .field(
-                "h_pulse_cnt",
-                &format_args!("{}", self.h_pulse_cnt().bits()),
-            )
+            .field("h_pulse_cnt", &self.h_pulse_cnt())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HIGH_PULSE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -36,7 +28,7 @@ impl W {
         H_PULSE_CNT_W::new(self, 0)
     }
 }
-#[doc = "HIGH_PULSE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`high_pulse::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`high_pulse::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HIGH_PULSE\n\nYou can [`read`](crate::Reg::read) this register and get [`high_pulse::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`high_pulse::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HIGH_PULSE_SPEC;
 impl crate::RegisterSpec for HIGH_PULSE_SPEC {
     type Ux = u32;

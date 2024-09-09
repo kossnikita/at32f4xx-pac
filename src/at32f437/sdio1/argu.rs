@@ -15,14 +15,7 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("ARGU")
-            .field("argu", &format_args!("{}", self.argu().bits()))
-            .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<ARGU_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+        f.debug_struct("ARGU").field("argu", &self.argu()).finish()
     }
 }
 impl W {
@@ -33,7 +26,7 @@ impl W {
         ARGU_W::new(self, 0)
     }
 }
-#[doc = "Bits 31:0 = : Command argument\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`argu::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`argu::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Bits 31:0 = : Command argument\n\nYou can [`read`](crate::Reg::read) this register and get [`argu::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`argu::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ARGU_SPEC;
 impl crate::RegisterSpec for ARGU_SPEC {
     type Ux = u32;

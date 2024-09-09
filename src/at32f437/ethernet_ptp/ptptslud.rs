@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PTPTSLUD")
-            .field("tss", &format_args!("{}", self.tss().bits()))
-            .field("ast", &format_args!("{}", self.ast().bit()))
+            .field("tss", &self.tss())
+            .field("ast", &self.ast())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<PTPTSLUD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         AST_W::new(self, 31)
     }
 }
-#[doc = "Ethernet PTP time stamp low update register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ptptslud::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ptptslud::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet PTP time stamp low update register\n\nYou can [`read`](crate::Reg::read) this register and get [`ptptslud::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ptptslud::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PTPTSLUD_SPEC;
 impl crate::RegisterSpec for PTPTSLUD_SPEC {
     type Ux = u32;

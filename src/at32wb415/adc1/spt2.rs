@@ -5,27 +5,27 @@ pub type W = crate::W<SPT2_SPEC>;
 #[doc = "Field `CSPT0` reader - Selection sample time of channel ADC_IN0"]
 pub type CSPT0_R = crate::FieldReader;
 #[doc = "Field `CSPT0` writer - Selection sample time of channel ADC_IN0"]
-pub type CSPT0_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type CSPT0_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Field `CSPT1` reader - Selection sample time of channel ADC_IN1"]
 pub type CSPT1_R = crate::FieldReader;
 #[doc = "Field `CSPT1` writer - Selection sample time of channel ADC_IN1"]
-pub type CSPT1_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type CSPT1_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Field `CSPT2` reader - Selection sample time of channel ADC_IN2"]
 pub type CSPT2_R = crate::FieldReader;
 #[doc = "Field `CSPT2` writer - Selection sample time of channel ADC_IN2"]
-pub type CSPT2_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type CSPT2_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Field `CSPT3` reader - Selection sample time of channel ADC_IN3"]
 pub type CSPT3_R = crate::FieldReader;
 #[doc = "Field `CSPT3` writer - Selection sample time of channel ADC_IN3"]
-pub type CSPT3_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type CSPT3_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Field `CSPT4` reader - Selection sample time of channel ADC_IN4"]
 pub type CSPT4_R = crate::FieldReader;
 #[doc = "Field `CSPT4` writer - Selection sample time of channel ADC_IN4"]
-pub type CSPT4_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type CSPT4_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Field `CSPT5` reader - Selection sample time of channel ADC_IN5"]
 pub type CSPT5_R = crate::FieldReader;
 #[doc = "Field `CSPT5` writer - Selection sample time of channel ADC_IN5"]
-pub type CSPT5_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type CSPT5_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 impl R {
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN0"]
     #[inline(always)]
@@ -61,18 +61,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPT2")
-            .field("cspt5", &format_args!("{}", self.cspt5().bits()))
-            .field("cspt4", &format_args!("{}", self.cspt4().bits()))
-            .field("cspt3", &format_args!("{}", self.cspt3().bits()))
-            .field("cspt2", &format_args!("{}", self.cspt2().bits()))
-            .field("cspt1", &format_args!("{}", self.cspt1().bits()))
-            .field("cspt0", &format_args!("{}", self.cspt0().bits()))
+            .field("cspt5", &self.cspt5())
+            .field("cspt4", &self.cspt4())
+            .field("cspt3", &self.cspt3())
+            .field("cspt2", &self.cspt2())
+            .field("cspt1", &self.cspt1())
+            .field("cspt0", &self.cspt0())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<SPT2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -113,7 +108,7 @@ impl W {
         CSPT5_W::new(self, 15)
     }
 }
-#[doc = "sample time register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spt2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spt2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "sample time register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`spt2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spt2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPT2_SPEC;
 impl crate::RegisterSpec for SPT2_SPEC {
     type Ux = u32;

@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PICLKS")
-            .field("usart1sel", &format_args!("{}", self.usart1sel().bits()))
-            .field("usart2sel", &format_args!("{}", self.usart2sel().bits()))
-            .field("usart3sel", &format_args!("{}", self.usart3sel().bits()))
-            .field("i2c1sel", &format_args!("{}", self.i2c1sel().bits()))
+            .field("usart1sel", &self.usart1sel())
+            .field("usart2sel", &self.usart2sel())
+            .field("usart3sel", &self.usart3sel())
+            .field("i2c1sel", &self.i2c1sel())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<PICLKS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         I2C1SEL_W::new(self, 12)
     }
 }
-#[doc = "Peripheral independent clock register (CRM_PICLKS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`piclks::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`piclks::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Peripheral independent clock register (CRM_PICLKS)\n\nYou can [`read`](crate::Reg::read) this register and get [`piclks::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`piclks::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PICLKS_SPEC;
 impl crate::RegisterSpec for PICLKS_SPEC {
     type Ux = u32;

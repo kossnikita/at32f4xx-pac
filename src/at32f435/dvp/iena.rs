@@ -52,17 +52,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IENA")
-            .field("hsie", &format_args!("{}", self.hsie().bit()))
-            .field("vsie", &format_args!("{}", self.vsie().bit()))
-            .field("eseie", &format_args!("{}", self.eseie().bit()))
-            .field("ovrie", &format_args!("{}", self.ovrie().bit()))
-            .field("cfdie", &format_args!("{}", self.cfdie().bit()))
+            .field("hsie", &self.hsie())
+            .field("vsie", &self.vsie())
+            .field("eseie", &self.eseie())
+            .field("ovrie", &self.ovrie())
+            .field("cfdie", &self.cfdie())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<IENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -97,7 +92,7 @@ impl W {
         HSIE_W::new(self, 4)
     }
 }
-#[doc = "interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`iena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IENA_SPEC;
 impl crate::RegisterSpec for IENA_SPEC {
     type Ux = u32;

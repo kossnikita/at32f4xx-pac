@@ -115,24 +115,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPINT1")
-            .field("xferc", &format_args!("{}", self.xferc().bit()))
-            .field("eptdisd", &format_args!("{}", self.eptdisd().bit()))
-            .field("setup", &format_args!("{}", self.setup().bit()))
-            .field("outtepd", &format_args!("{}", self.outtepd().bit()))
-            .field("b2bstup", &format_args!("{}", self.b2bstup().bit()))
-            .field("outpkterr", &format_args!("{}", self.outpkterr().bit()))
-            .field("bnaintr", &format_args!("{}", self.bnaintr().bit()))
-            .field("pktdrpsts", &format_args!("{}", self.pktdrpsts().bit()))
-            .field("bbleerr", &format_args!("{}", self.bbleerr().bit()))
-            .field("nakintpt", &format_args!("{}", self.nakintpt().bit()))
-            .field("nyetintpt", &format_args!("{}", self.nyetintpt().bit()))
-            .field("stuppktrcvd", &format_args!("{}", self.stuppktrcvd().bit()))
+            .field("xferc", &self.xferc())
+            .field("eptdisd", &self.eptdisd())
+            .field("setup", &self.setup())
+            .field("outtepd", &self.outtepd())
+            .field("b2bstup", &self.b2bstup())
+            .field("outpkterr", &self.outpkterr())
+            .field("bnaintr", &self.bnaintr())
+            .field("pktdrpsts", &self.pktdrpsts())
+            .field("bbleerr", &self.bbleerr())
+            .field("nakintpt", &self.nakintpt())
+            .field("nyetintpt", &self.nyetintpt())
+            .field("stuppktrcvd", &self.stuppktrcvd())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DOEPINT1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -209,7 +204,7 @@ impl W {
         STUPPKTRCVD_W::new(self, 15)
     }
 }
-#[doc = "OTGHS device OUT endpoint-1 interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepint1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepint1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS device OUT endpoint-1 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepint1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepint1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEPINT1_SPEC;
 impl crate::RegisterSpec for DOEPINT1_SPEC {
     type Ux = u32;

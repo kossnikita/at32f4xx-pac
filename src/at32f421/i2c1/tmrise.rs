@@ -5,7 +5,7 @@ pub type W = crate::W<TMRISE_SPEC>;
 #[doc = "Field `RISETIME` reader - I2C bus rise time"]
 pub type RISETIME_R = crate::FieldReader;
 #[doc = "Field `RISETIME` writer - I2C bus rise time"]
-pub type RISETIME_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 6>;
+pub type RISETIME_W<'a, REG> = crate::FieldWriter<'a, REG, 6, u8, crate::Safe>;
 impl R {
     #[doc = "Bits 0:5 - I2C bus rise time"]
     #[inline(always)]
@@ -16,13 +16,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TMRISE")
-            .field("risetime", &format_args!("{}", self.risetime().bits()))
+            .field("risetime", &self.risetime())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<TMRISE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -33,7 +28,7 @@ impl W {
         RISETIME_W::new(self, 0)
     }
 }
-#[doc = "TRISE register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tmrise::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tmrise::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TRISE register\n\nYou can [`read`](crate::Reg::read) this register and get [`tmrise::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tmrise::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TMRISE_SPEC;
 impl crate::RegisterSpec for TMRISE_SPEC {
     type Ux = u32;

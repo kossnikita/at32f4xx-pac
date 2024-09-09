@@ -142,27 +142,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("lcds", &format_args!("{}", self.lcds().bit()))
-            .field("lcdc", &format_args!("{}", self.lcdc().bit()))
-            .field("pcds", &format_args!("{}", self.pcds().bit()))
-            .field("pcdc", &format_args!("{}", self.pcdc().bits()))
-            .field("ena", &format_args!("{}", self.ena().bit()))
-            .field("pdl", &format_args!("{}", self.pdl().bits()))
-            .field("bfrc", &format_args!("{}", self.bfrc().bits()))
-            .field("vsp", &format_args!("{}", self.vsp().bit()))
-            .field("hsp", &format_args!("{}", self.hsp().bit()))
-            .field("ckp", &format_args!("{}", self.ckp().bit()))
-            .field("sm", &format_args!("{}", self.sm().bit()))
-            .field("jpeg", &format_args!("{}", self.jpeg().bit()))
-            .field("crp", &format_args!("{}", self.crp().bit()))
-            .field("cfm", &format_args!("{}", self.cfm().bit()))
-            .field("cap", &format_args!("{}", self.cap().bit()))
+            .field("lcds", &self.lcds())
+            .field("lcdc", &self.lcdc())
+            .field("pcds", &self.pcds())
+            .field("pcdc", &self.pcdc())
+            .field("ena", &self.ena())
+            .field("pdl", &self.pdl())
+            .field("bfrc", &self.bfrc())
+            .field("vsp", &self.vsp())
+            .field("hsp", &self.hsp())
+            .field("ckp", &self.ckp())
+            .field("sm", &self.sm())
+            .field("jpeg", &self.jpeg())
+            .field("crp", &self.crp())
+            .field("cfm", &self.cfm())
+            .field("cap", &self.cap())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -257,7 +252,7 @@ impl W {
         LCDS_W::new(self, 20)
     }
 }
-#[doc = "Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

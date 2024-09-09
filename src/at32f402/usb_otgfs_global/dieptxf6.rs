@@ -25,17 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPTXF6")
-            .field(
-                "ineptxfstaddr",
-                &format_args!("{}", self.ineptxfstaddr().bits()),
-            )
-            .field("ineptxfdep", &format_args!("{}", self.ineptxfdep().bits()))
+            .field("ineptxfstaddr", &self.ineptxfstaddr())
+            .field("ineptxfdep", &self.ineptxfdep())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DIEPTXF6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -52,7 +44,7 @@ impl W {
         INEPTXFDEP_W::new(self, 16)
     }
 }
-#[doc = "OTGFS device IN endpoint transmit FIFO size register (OTGFS_DIEPTXF6)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptxf6::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptxf6::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS device IN endpoint transmit FIFO size register (OTGFS_DIEPTXF6)\n\nYou can [`read`](crate::Reg::read) this register and get [`dieptxf6::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dieptxf6::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPTXF6_SPEC;
 impl crate::RegisterSpec for DIEPTXF6_SPEC {
     type Ux = u32;

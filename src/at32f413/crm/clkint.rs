@@ -106,23 +106,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKINT")
-            .field("lickstblf", &format_args!("{}", self.lickstblf().bit()))
-            .field("lextstblf", &format_args!("{}", self.lextstblf().bit()))
-            .field("hickstblf", &format_args!("{}", self.hickstblf().bit()))
-            .field("hextstblf", &format_args!("{}", self.hextstblf().bit()))
-            .field("pllstblf", &format_args!("{}", self.pllstblf().bit()))
-            .field("cfdf", &format_args!("{}", self.cfdf().bit()))
-            .field("lickstblien", &format_args!("{}", self.lickstblien().bit()))
-            .field("lextstblien", &format_args!("{}", self.lextstblien().bit()))
-            .field("hickstblien", &format_args!("{}", self.hickstblien().bit()))
-            .field("hextstblien", &format_args!("{}", self.hextstblien().bit()))
-            .field("pllstblien", &format_args!("{}", self.pllstblien().bit()))
+            .field("lickstblf", &self.lickstblf())
+            .field("lextstblf", &self.lextstblf())
+            .field("hickstblf", &self.hickstblf())
+            .field("hextstblf", &self.hextstblf())
+            .field("pllstblf", &self.pllstblf())
+            .field("cfdf", &self.cfdf())
+            .field("lickstblien", &self.lickstblien())
+            .field("lextstblien", &self.lextstblien())
+            .field("hickstblien", &self.hickstblien())
+            .field("hextstblien", &self.hextstblien())
+            .field("pllstblien", &self.pllstblien())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CLKINT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -193,7 +188,7 @@ impl W {
         CFDFC_W::new(self, 23)
     }
 }
-#[doc = "Clock interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkint::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkint::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Clock interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`clkint::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clkint::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLKINT_SPEC;
 impl crate::RegisterSpec for CLKINT_SPEC {
     type Ux = u32;

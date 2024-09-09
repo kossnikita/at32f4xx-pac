@@ -28,25 +28,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HPTXSTS")
-            .field(
-                "ptxfspcavail",
-                &format_args!("{}", self.ptxfspcavail().bits()),
-            )
-            .field(
-                "ptxqspcavail",
-                &format_args!("{}", self.ptxqspcavail().bits()),
-            )
-            .field("ptxqtop", &format_args!("{}", self.ptxqtop().bits()))
+            .field("ptxfspcavail", &self.ptxfspcavail())
+            .field("ptxqspcavail", &self.ptxqspcavail())
+            .field("ptxqtop", &self.ptxqtop())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<HPTXSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 impl W {}
-#[doc = "OTGHS_Host periodic transmit FIFO/queue status register (OTGHS_HPTXSTS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hptxsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hptxsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS_Host periodic transmit FIFO/queue status register (OTGHS_HPTXSTS)\n\nYou can [`read`](crate::Reg::read) this register and get [`hptxsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hptxsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HPTXSTS_SPEC;
 impl crate::RegisterSpec for HPTXSTS_SPEC {
     type Ux = u32;

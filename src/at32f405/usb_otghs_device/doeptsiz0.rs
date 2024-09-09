@@ -34,15 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPTSIZ0")
-            .field("xfersize", &format_args!("{}", self.xfersize().bits()))
-            .field("pktcnt", &format_args!("{}", self.pktcnt().bit()))
-            .field("setupcnt", &format_args!("{}", self.setupcnt().bits()))
+            .field("xfersize", &self.xfersize())
+            .field("pktcnt", &self.pktcnt())
+            .field("setupcnt", &self.setupcnt())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DOEPTSIZ0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -65,7 +60,7 @@ impl W {
         SETUPCNT_W::new(self, 29)
     }
 }
-#[doc = "OTGHS device OUT endpoint-0 transfer size register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doeptsiz0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doeptsiz0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS device OUT endpoint-0 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`doeptsiz0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doeptsiz0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEPTSIZ0_SPEC;
 impl crate::RegisterSpec for DOEPTSIZ0_SPEC {
     type Ux = u32;

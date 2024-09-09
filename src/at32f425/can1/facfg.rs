@@ -72,7 +72,7 @@ where
 impl R {
     #[doc = "Filter activate enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EN0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `EN0` field.</div>"]
     #[inline(always)]
     pub fn en(&self, n: u8) -> EN_R {
         #[allow(clippy::no_effect)]
@@ -159,32 +159,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FACFG")
-            .field("en0", &format_args!("{}", self.en0().bit()))
-            .field("en1", &format_args!("{}", self.en1().bit()))
-            .field("en2", &format_args!("{}", self.en2().bit()))
-            .field("en3", &format_args!("{}", self.en3().bit()))
-            .field("en4", &format_args!("{}", self.en4().bit()))
-            .field("en5", &format_args!("{}", self.en5().bit()))
-            .field("en6", &format_args!("{}", self.en6().bit()))
-            .field("en7", &format_args!("{}", self.en7().bit()))
-            .field("en8", &format_args!("{}", self.en8().bit()))
-            .field("en9", &format_args!("{}", self.en9().bit()))
-            .field("en10", &format_args!("{}", self.en10().bit()))
-            .field("en11", &format_args!("{}", self.en11().bit()))
-            .field("en12", &format_args!("{}", self.en12().bit()))
-            .field("en13", &format_args!("{}", self.en13().bit()))
+            .field("en0", &self.en0())
+            .field("en1", &self.en1())
+            .field("en2", &self.en2())
+            .field("en3", &self.en3())
+            .field("en4", &self.en4())
+            .field("en5", &self.en5())
+            .field("en6", &self.en6())
+            .field("en7", &self.en7())
+            .field("en8", &self.en8())
+            .field("en9", &self.en9())
+            .field("en10", &self.en10())
+            .field("en11", &self.en11())
+            .field("en12", &self.en12())
+            .field("en13", &self.en13())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<FACFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Filter activate enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `EN0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `EN0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn en(&mut self, n: u8) -> EN_W<FACFG_SPEC> {
@@ -277,7 +272,7 @@ impl W {
         EN_W::new(self, 13)
     }
 }
-#[doc = "Filter activate configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`facfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`facfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Filter activate configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`facfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`facfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FACFG_SPEC;
 impl crate::RegisterSpec for FACFG_SPEC {
     type Ux = u32;

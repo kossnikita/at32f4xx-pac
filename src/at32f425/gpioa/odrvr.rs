@@ -20,6 +20,7 @@ impl From<ODRV0_A> for u8 {
 impl crate::FieldSpec for ODRV0_A {
     type Ux = u8;
 }
+impl crate::IsEnum for ODRV0_A {}
 #[doc = "Field `ODRV(0-15)` reader - GPIOx pin %s output drive capability"]
 pub type ODRV_R = crate::FieldReader<ODRV0_A>;
 impl ODRV_R {
@@ -64,7 +65,7 @@ where
 impl R {
     #[doc = "GPIOx pin (0-15) output drive capability"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `ODRV0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `ODRV0` field.</div>"]
     #[inline(always)]
     pub fn odrv(&self, n: u8) -> ODRV_R {
         #[allow(clippy::no_effect)]
@@ -161,34 +162,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ODRVR")
-            .field("odrv0", &format_args!("{}", self.odrv0().bits()))
-            .field("odrv1", &format_args!("{}", self.odrv1().bits()))
-            .field("odrv2", &format_args!("{}", self.odrv2().bits()))
-            .field("odrv3", &format_args!("{}", self.odrv3().bits()))
-            .field("odrv4", &format_args!("{}", self.odrv4().bits()))
-            .field("odrv5", &format_args!("{}", self.odrv5().bits()))
-            .field("odrv6", &format_args!("{}", self.odrv6().bits()))
-            .field("odrv7", &format_args!("{}", self.odrv7().bits()))
-            .field("odrv8", &format_args!("{}", self.odrv8().bits()))
-            .field("odrv9", &format_args!("{}", self.odrv9().bits()))
-            .field("odrv10", &format_args!("{}", self.odrv10().bits()))
-            .field("odrv11", &format_args!("{}", self.odrv11().bits()))
-            .field("odrv12", &format_args!("{}", self.odrv12().bits()))
-            .field("odrv13", &format_args!("{}", self.odrv13().bits()))
-            .field("odrv14", &format_args!("{}", self.odrv14().bits()))
-            .field("odrv15", &format_args!("{}", self.odrv15().bits()))
+            .field("odrv0", &self.odrv0())
+            .field("odrv1", &self.odrv1())
+            .field("odrv2", &self.odrv2())
+            .field("odrv3", &self.odrv3())
+            .field("odrv4", &self.odrv4())
+            .field("odrv5", &self.odrv5())
+            .field("odrv6", &self.odrv6())
+            .field("odrv7", &self.odrv7())
+            .field("odrv8", &self.odrv8())
+            .field("odrv9", &self.odrv9())
+            .field("odrv10", &self.odrv10())
+            .field("odrv11", &self.odrv11())
+            .field("odrv12", &self.odrv12())
+            .field("odrv13", &self.odrv13())
+            .field("odrv14", &self.odrv14())
+            .field("odrv15", &self.odrv15())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<ODRVR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "GPIOx pin (0-15) output drive capability"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `ODRV0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `ODRV0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn odrv(&mut self, n: u8) -> ODRV_W<ODRVR_SPEC> {
@@ -293,7 +289,7 @@ impl W {
         ODRV_W::new(self, 30)
     }
 }
-#[doc = "GPIO drive capability register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`odrvr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`odrvr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO drive capability register\n\nYou can [`read`](crate::Reg::read) this register and get [`odrvr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`odrvr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ODRVR_SPEC;
 impl crate::RegisterSpec for ODRVR_SPEC {
     type Ux = u32;

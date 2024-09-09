@@ -52,17 +52,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPINT6")
-            .field("xferc", &format_args!("{}", self.xferc().bit()))
-            .field("eptdisd", &format_args!("{}", self.eptdisd().bit()))
-            .field("setup", &format_args!("{}", self.setup().bit()))
-            .field("outtepd", &format_args!("{}", self.outtepd().bit()))
-            .field("b2bstup", &format_args!("{}", self.b2bstup().bit()))
+            .field("xferc", &self.xferc())
+            .field("eptdisd", &self.eptdisd())
+            .field("setup", &self.setup())
+            .field("outtepd", &self.outtepd())
+            .field("b2bstup", &self.b2bstup())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DOEPINT6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -97,7 +92,7 @@ impl W {
         B2BSTUP_W::new(self, 6)
     }
 }
-#[doc = "OTGFS device OUT endpoint-6 interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepint6::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepint6::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS device OUT endpoint-6 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`doepint6::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepint6::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DOEPINT6_SPEC;
 impl crate::RegisterSpec for DOEPINT6_SPEC {
     type Ux = u32;

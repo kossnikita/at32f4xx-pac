@@ -52,17 +52,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SOFRNUM")
-            .field("sofnum", &format_args!("{}", self.sofnum().bits()))
-            .field("lsofnum", &format_args!("{}", self.lsofnum().bits()))
-            .field("clck", &format_args!("{}", self.clck().bit()))
-            .field("dmsts", &format_args!("{}", self.dmsts().bit()))
-            .field("dpsts", &format_args!("{}", self.dpsts().bit()))
+            .field("sofnum", &self.sofnum())
+            .field("lsofnum", &self.lsofnum())
+            .field("clck", &self.clck())
+            .field("dmsts", &self.dmsts())
+            .field("dpsts", &self.dpsts())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<SOFRNUM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -97,7 +92,7 @@ impl W {
         DPSTS_W::new(self, 15)
     }
 }
-#[doc = "frame number register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sofrnum::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sofrnum::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "frame number register\n\nYou can [`read`](crate::Reg::read) this register and get [`sofrnum::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sofrnum::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SOFRNUM_SPEC;
 impl crate::RegisterSpec for SOFRNUM_SPEC {
     type Ux = u32;

@@ -362,18 +362,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field("dmaend", &format_args!("{}", self.dmaend().bit()))
-            .field("dmaen", &format_args!("{}", self.dmaen().bit()))
-            .field("dataien", &format_args!("{}", self.dataien().bit()))
-            .field("evtien", &format_args!("{}", self.evtien().bit()))
-            .field("errien", &format_args!("{}", self.errien().bit()))
-            .field("clkfreq", &format_args!("{}", self.clkfreq().bits()))
+            .field("dmaend", &self.dmaend())
+            .field("dmaen", &self.dmaen())
+            .field("dataien", &self.dataien())
+            .field("evtien", &self.evtien())
+            .field("errien", &self.errien())
+            .field("clkfreq", &self.clkfreq())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -414,7 +409,7 @@ impl W {
         DMAEND_W::new(self, 12)
     }
 }
-#[doc = "Control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;

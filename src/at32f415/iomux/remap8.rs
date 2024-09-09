@@ -24,6 +24,7 @@ impl From<TMR1_BK1_CMP_GMUX_A> for u8 {
 impl crate::FieldSpec for TMR1_BK1_CMP_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR1_BK1_CMP_GMUX_A {}
 #[doc = "Field `TMR1_BK1_CMP_GMUX` reader - TMR1 BK1 CMP muxing"]
 pub type TMR1_BK1_CMP_GMUX_R = crate::FieldReader<TMR1_BK1_CMP_GMUX_A>;
 impl TMR1_BK1_CMP_GMUX_R {
@@ -60,7 +61,8 @@ impl TMR1_BK1_CMP_GMUX_R {
     }
 }
 #[doc = "Field `TMR1_BK1_CMP_GMUX` writer - TMR1 BK1 CMP muxing"]
-pub type TMR1_BK1_CMP_GMUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR1_BK1_CMP_GMUX_A>;
+pub type TMR1_BK1_CMP_GMUX_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2, TMR1_BK1_CMP_GMUX_A, crate::Safe>;
 impl<'a, REG> TMR1_BK1_CMP_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -109,6 +111,7 @@ impl From<TMR1_CH1_CMP_GMUX_A> for u8 {
 impl crate::FieldSpec for TMR1_CH1_CMP_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR1_CH1_CMP_GMUX_A {}
 #[doc = "Field `TMR1_CH1_CMP_GMUX` reader - TMR1 CH1 CMP muxing"]
 pub type TMR1_CH1_CMP_GMUX_R = crate::FieldReader<TMR1_CH1_CMP_GMUX_A>;
 impl TMR1_CH1_CMP_GMUX_R {
@@ -145,7 +148,8 @@ impl TMR1_CH1_CMP_GMUX_R {
     }
 }
 #[doc = "Field `TMR1_CH1_CMP_GMUX` writer - TMR1 CH1 CMP muxing"]
-pub type TMR1_CH1_CMP_GMUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR1_CH1_CMP_GMUX_A>;
+pub type TMR1_CH1_CMP_GMUX_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2, TMR1_CH1_CMP_GMUX_A, crate::Safe>;
 impl<'a, REG> TMR1_CH1_CMP_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -194,6 +198,7 @@ impl From<TMR2_CH4_CMP_GMUX_A> for u8 {
 impl crate::FieldSpec for TMR2_CH4_CMP_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR2_CH4_CMP_GMUX_A {}
 #[doc = "Field `TMR2_CH4_CMP_GMUX` reader - TMR2 CH4 CMP muxing"]
 pub type TMR2_CH4_CMP_GMUX_R = crate::FieldReader<TMR2_CH4_CMP_GMUX_A>;
 impl TMR2_CH4_CMP_GMUX_R {
@@ -230,7 +235,8 @@ impl TMR2_CH4_CMP_GMUX_R {
     }
 }
 #[doc = "Field `TMR2_CH4_CMP_GMUX` writer - TMR2 CH4 CMP muxing"]
-pub type TMR2_CH4_CMP_GMUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR2_CH4_CMP_GMUX_A>;
+pub type TMR2_CH4_CMP_GMUX_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2, TMR2_CH4_CMP_GMUX_A, crate::Safe>;
 impl<'a, REG> TMR2_CH4_CMP_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -279,6 +285,7 @@ impl From<TMR3_CH1_CMP_GMUX_A> for u8 {
 impl crate::FieldSpec for TMR3_CH1_CMP_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMR3_CH1_CMP_GMUX_A {}
 #[doc = "Field `TMR3_CH1_CMP_GMUX` reader - TMR3 CH1 CMP muxing"]
 pub type TMR3_CH1_CMP_GMUX_R = crate::FieldReader<TMR3_CH1_CMP_GMUX_A>;
 impl TMR3_CH1_CMP_GMUX_R {
@@ -315,7 +322,8 @@ impl TMR3_CH1_CMP_GMUX_R {
     }
 }
 #[doc = "Field `TMR3_CH1_CMP_GMUX` writer - TMR3 CH1 CMP muxing"]
-pub type TMR3_CH1_CMP_GMUX_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMR3_CH1_CMP_GMUX_A>;
+pub type TMR3_CH1_CMP_GMUX_W<'a, REG> =
+    crate::FieldWriter<'a, REG, 2, TMR3_CH1_CMP_GMUX_A, crate::Safe>;
 impl<'a, REG> TMR3_CH1_CMP_GMUX_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -367,28 +375,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP8")
-            .field(
-                "tmr3_ch1_cmp_gmux",
-                &format_args!("{}", self.tmr3_ch1_cmp_gmux().bits()),
-            )
-            .field(
-                "tmr2_ch4_cmp_gmux",
-                &format_args!("{}", self.tmr2_ch4_cmp_gmux().bits()),
-            )
-            .field(
-                "tmr1_ch1_cmp_gmux",
-                &format_args!("{}", self.tmr1_ch1_cmp_gmux().bits()),
-            )
-            .field(
-                "tmr1_bk1_cmp_gmux",
-                &format_args!("{}", self.tmr1_bk1_cmp_gmux().bits()),
-            )
+            .field("tmr3_ch1_cmp_gmux", &self.tmr3_ch1_cmp_gmux())
+            .field("tmr2_ch4_cmp_gmux", &self.tmr2_ch4_cmp_gmux())
+            .field("tmr1_ch1_cmp_gmux", &self.tmr1_ch1_cmp_gmux())
+            .field("tmr1_bk1_cmp_gmux", &self.tmr1_bk1_cmp_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP8_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -417,7 +408,7 @@ impl W {
         TMR3_CH1_CMP_GMUX_W::new(self, 6)
     }
 }
-#[doc = "IO MUX remap register 8\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap8::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap8::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 8\n\nYou can [`read`](crate::Reg::read) this register and get [`remap8::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap8::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP8_SPEC;
 impl crate::RegisterSpec for REMAP8_SPEC {
     type Ux = u32;

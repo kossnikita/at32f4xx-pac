@@ -10869,6 +10869,41 @@
     <peripheral derivedFrom="DMA1">
       <name>DMA2</name>
       <baseAddress>0x40026600</baseAddress>
+      <interrupt>
+        <name>DMA2_CHANNEL1</name>
+        <description>DMA2 Channel1 global interrupt</description>
+        <value>108</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_CHANNEL2</name>
+        <description>DMA2 Channel2 global interrupt</description>
+        <value>109</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_CHANNEL3</name>
+        <description>DMA2 Channel3 global interrupt</description>
+        <value>110</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_CHANNEL4</name>
+        <description>DMA2 Channel4 global interrupt</description>
+        <value>111</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_CHANNEL5</name>
+        <description>DMA2 Channel5 global interrupt</description>
+        <value>112</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_CHANNEL6</name>
+        <description>DMA2 Channel6 global interrupt</description>
+        <value>113</value>
+      </interrupt>
+      <interrupt>
+        <name>DMA2_CHANNEL7</name>
+        <description>DMA2 Channel7 global interrupt</description>
+        <value>114</value>
+      </interrupt>
     </peripheral>
     <peripheral>
       <name>SDIO1</name>
@@ -13937,7 +13972,7 @@
             </field>
             <field>
               <name>CCFS</name>
-              <description>Channel control bit flash select</description>
+              <description>Channel control bit refresh select</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <enumeratedValues>
@@ -22560,6 +22595,34 @@
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+              <enumeratedValues>
+                <name>TDIENR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Disabled</name>
+                  <description>Data transmit data interrupt is disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enabled</name>
+                  <description>Data transmit data interrupt is enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>TDIENW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Disable</name>
+                  <description>Disable Data transmit data interrupt</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Enable</name>
+                  <description>Enable Data transmit data interrupt</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>RDIEN</name>
@@ -26583,13 +26646,13 @@
           <addressOffset>0x24</addressOffset>
           <size>0x20</size>
           <access>read-write</access>
-          <resetValue>0x00000FFF</resetValue>
+          <resetValue>0x0000FFFF</resetValue>
           <fields>
             <field>
               <name>VMB</name>
               <description>Voltage monitoring high boundary</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>12</bitWidth>
+              <bitWidth>16</bitWidth>
               <writeConstraint>
                 <range>
                   <minimum>0</minimum>
@@ -49955,6 +50018,23 @@
           </fields>
         </register>
         <register>
+          <name>CTRL3</name>
+          <displayName>CTRL3</displayName>
+          <description>control register 3</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <access>read-write</access>
+          <resetValue>0x00000000</resetValue>
+          <fields>
+            <field>
+              <name>ISPC</name>
+              <description>Input sampling phase correction enable</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
           <name>REV</name>
           <displayName>REV</displayName>
           <description>Revision</description>
@@ -51018,6 +51098,12 @@
               <name>ARU</name>
               <description>Addend register update</description>
               <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>ATDS</name>
+              <description>Alternate dma descriptor size</description>
+              <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>

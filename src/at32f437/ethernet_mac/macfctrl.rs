@@ -70,19 +70,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MACFCTRL")
-            .field("fcb_bpa", &format_args!("{}", self.fcb_bpa().bit()))
-            .field("etf", &format_args!("{}", self.etf().bit()))
-            .field("erf", &format_args!("{}", self.erf().bit()))
-            .field("dup", &format_args!("{}", self.dup().bit()))
-            .field("plt", &format_args!("{}", self.plt().bits()))
-            .field("dzqp", &format_args!("{}", self.dzqp().bit()))
-            .field("pt", &format_args!("{}", self.pt().bits()))
+            .field("fcb_bpa", &self.fcb_bpa())
+            .field("etf", &self.etf())
+            .field("erf", &self.erf())
+            .field("dup", &self.dup())
+            .field("plt", &self.plt())
+            .field("dzqp", &self.dzqp())
+            .field("pt", &self.pt())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MACFCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -129,7 +124,7 @@ impl W {
         PT_W::new(self, 16)
     }
 }
-#[doc = "Ethernet MAC flow control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`macfctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`macfctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet MAC flow control register\n\nYou can [`read`](crate::Reg::read) this register and get [`macfctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`macfctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MACFCTRL_SPEC;
 impl crate::RegisterSpec for MACFCTRL_SPEC {
     type Ux = u32;

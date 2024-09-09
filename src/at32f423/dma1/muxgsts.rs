@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MUXGSTS")
-            .field("trgovf1", &format_args!("{}", self.trgovf1().bit()))
-            .field("trgovf2", &format_args!("{}", self.trgovf2().bit()))
-            .field("trgovf3", &format_args!("{}", self.trgovf3().bit()))
-            .field("trgovf4", &format_args!("{}", self.trgovf4().bit()))
+            .field("trgovf1", &self.trgovf1())
+            .field("trgovf2", &self.trgovf2())
+            .field("trgovf3", &self.trgovf3())
+            .field("trgovf4", &self.trgovf4())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MUXGSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         TRGOVF4_W::new(self, 3)
     }
 }
-#[doc = "Generator Interrupt Status Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`muxgsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`muxgsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Generator Interrupt Status Register\n\nYou can [`read`](crate::Reg::read) this register and get [`muxgsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`muxgsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MUXGSTS_SPEC;
 impl crate::RegisterSpec for MUXGSTS_SPEC {
     type Ux = u32;

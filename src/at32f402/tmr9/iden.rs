@@ -176,7 +176,7 @@ impl R {
     }
     #[doc = "Channel (1-2) interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IEN` field.</div>"]
     #[inline(always)]
     pub fn cien(&self, n: u8) -> CIEN_R {
         #[allow(clippy::no_effect)]
@@ -243,23 +243,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IDEN")
-            .field("tden", &format_args!("{}", self.tden().bit()))
-            .field("hallde", &format_args!("{}", self.hallde().bit()))
-            .field("c2den", &format_args!("{}", self.c2den().bit()))
-            .field("c1den", &format_args!("{}", self.c1den().bit()))
-            .field("ovfden", &format_args!("{}", self.ovfden().bit()))
-            .field("brkie", &format_args!("{}", self.brkie().bit()))
-            .field("tien", &format_args!("{}", self.tien().bit()))
-            .field("hallien", &format_args!("{}", self.hallien().bit()))
-            .field("c1ien", &format_args!("{}", self.c1ien().bit()))
-            .field("c2ien", &format_args!("{}", self.c2ien().bit()))
-            .field("ovfien", &format_args!("{}", self.ovfien().bit()))
+            .field("tden", &self.tden())
+            .field("hallde", &self.hallde())
+            .field("c2den", &self.c2den())
+            .field("c1den", &self.c1den())
+            .field("ovfden", &self.ovfden())
+            .field("brkie", &self.brkie())
+            .field("tien", &self.tien())
+            .field("hallien", &self.hallien())
+            .field("c1ien", &self.c1ien())
+            .field("c2ien", &self.c2ien())
+            .field("ovfien", &self.ovfien())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<IDEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -271,7 +266,7 @@ impl W {
     }
     #[doc = "Channel (1-2) interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IEN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cien(&mut self, n: u8) -> CIEN_W<IDEN_SPEC> {
@@ -340,7 +335,7 @@ impl W {
         TDEN_W::new(self, 14)
     }
 }
-#[doc = "Interrupt/DMA enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`iden::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`iden::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt/DMA enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`iden::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iden::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IDEN_SPEC;
 impl crate::RegisterSpec for IDEN_SPEC {
     type Ux = u32;

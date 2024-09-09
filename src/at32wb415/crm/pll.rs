@@ -52,17 +52,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PLL")
-            .field("pll_fr", &format_args!("{}", self.pll_fr().bits()))
-            .field("pll_ms", &format_args!("{}", self.pll_ms().bits()))
-            .field("pll_ns", &format_args!("{}", self.pll_ns().bits()))
-            .field("pll_fref", &format_args!("{}", self.pll_fref().bits()))
-            .field("pllcfgen", &format_args!("{}", self.pllcfgen().bit()))
+            .field("pll_fr", &self.pll_fr())
+            .field("pll_ms", &self.pll_ms())
+            .field("pll_ns", &self.pll_ns())
+            .field("pll_fref", &self.pll_fref())
+            .field("pllcfgen", &self.pllcfgen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<PLL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -97,7 +92,7 @@ impl W {
         PLLCFGEN_W::new(self, 31)
     }
 }
-#[doc = "PLL configuration register (RCC_PLL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pll::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pll::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PLL configuration register (RCC_PLL)\n\nYou can [`read`](crate::Reg::read) this register and get [`pll::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pll::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PLL_SPEC;
 impl crate::RegisterSpec for PLL_SPEC {
     type Ux = u32;

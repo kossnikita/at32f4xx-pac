@@ -5,12 +5,7 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<SBS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "sub second register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sbs::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "sub second register\n\nYou can [`read`](crate::Reg::read) this register and get [`sbs::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SBS_SPEC;
 impl crate::RegisterSpec for SBS_SPEC {
     type Ux = u16;

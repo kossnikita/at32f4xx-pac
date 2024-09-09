@@ -201,43 +201,38 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS")
-            .field("gf1", &format_args!("{}", self.gf1().bit()))
-            .field("gf2", &format_args!("{}", self.gf2().bit()))
-            .field("gf3", &format_args!("{}", self.gf3().bit()))
-            .field("gf4", &format_args!("{}", self.gf4().bit()))
-            .field("gf5", &format_args!("{}", self.gf5().bit()))
-            .field("gf6", &format_args!("{}", self.gf6().bit()))
-            .field("gf7", &format_args!("{}", self.gf7().bit()))
-            .field("fdtf1", &format_args!("{}", self.fdtf1().bit()))
-            .field("fdtf2", &format_args!("{}", self.fdtf2().bit()))
-            .field("fdtf3", &format_args!("{}", self.fdtf3().bit()))
-            .field("fdtf4", &format_args!("{}", self.fdtf4().bit()))
-            .field("fdtf5", &format_args!("{}", self.fdtf5().bit()))
-            .field("fdtf6", &format_args!("{}", self.fdtf6().bit()))
-            .field("fdtf7", &format_args!("{}", self.fdtf7().bit()))
-            .field("hdtf1", &format_args!("{}", self.hdtf1().bit()))
-            .field("hdtf2", &format_args!("{}", self.hdtf2().bit()))
-            .field("hdtf3", &format_args!("{}", self.hdtf3().bit()))
-            .field("hdtf4", &format_args!("{}", self.hdtf4().bit()))
-            .field("hdtf5", &format_args!("{}", self.hdtf5().bit()))
-            .field("hdtf6", &format_args!("{}", self.hdtf6().bit()))
-            .field("hdtf7", &format_args!("{}", self.hdtf7().bit()))
-            .field("dterrf1", &format_args!("{}", self.dterrf1().bit()))
-            .field("dterrf2", &format_args!("{}", self.dterrf2().bit()))
-            .field("dterrf3", &format_args!("{}", self.dterrf3().bit()))
-            .field("dterrf4", &format_args!("{}", self.dterrf4().bit()))
-            .field("dterrf5", &format_args!("{}", self.dterrf5().bit()))
-            .field("dterrf6", &format_args!("{}", self.dterrf6().bit()))
-            .field("dterrf7", &format_args!("{}", self.dterrf7().bit()))
+            .field("gf1", &self.gf1())
+            .field("gf2", &self.gf2())
+            .field("gf3", &self.gf3())
+            .field("gf4", &self.gf4())
+            .field("gf5", &self.gf5())
+            .field("gf6", &self.gf6())
+            .field("gf7", &self.gf7())
+            .field("fdtf1", &self.fdtf1())
+            .field("fdtf2", &self.fdtf2())
+            .field("fdtf3", &self.fdtf3())
+            .field("fdtf4", &self.fdtf4())
+            .field("fdtf5", &self.fdtf5())
+            .field("fdtf6", &self.fdtf6())
+            .field("fdtf7", &self.fdtf7())
+            .field("hdtf1", &self.hdtf1())
+            .field("hdtf2", &self.hdtf2())
+            .field("hdtf3", &self.hdtf3())
+            .field("hdtf4", &self.hdtf4())
+            .field("hdtf5", &self.hdtf5())
+            .field("hdtf6", &self.hdtf6())
+            .field("hdtf7", &self.hdtf7())
+            .field("dterrf1", &self.dterrf1())
+            .field("dterrf2", &self.dterrf2())
+            .field("dterrf3", &self.dterrf3())
+            .field("dterrf4", &self.dterrf4())
+            .field("dterrf5", &self.dterrf5())
+            .field("dterrf6", &self.dterrf6())
+            .field("dterrf7", &self.dterrf7())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "DMA interrupt status register (DMA_STS)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA interrupt status register (DMA_STS)\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
 impl crate::RegisterSpec for STS_SPEC {
     type Ux = u32;

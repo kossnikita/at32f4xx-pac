@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT2")
-            .field("buslatw2w", &format_args!("{}", self.buslatw2w().bits()))
-            .field("buslatr2r", &format_args!("{}", self.buslatr2r().bits()))
+            .field("buslatw2w", &self.buslatw2w())
+            .field("buslatr2r", &self.buslatr2r())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<EXT2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         BUSLATR2R_W::new(self, 8)
     }
 }
-#[doc = "externl timeing register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ext2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ext2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "externl timeing register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ext2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ext2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXT2_SPEC;
 impl crate::RegisterSpec for EXT2_SPEC {
     type Ux = u32;

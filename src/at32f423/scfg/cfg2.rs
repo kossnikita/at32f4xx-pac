@@ -34,15 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG2")
-            .field("lockup_lk", &format_args!("{}", self.lockup_lk().bit()))
-            .field("pvm_lk", &format_args!("{}", self.pvm_lk().bit()))
-            .field("i2s_fd", &format_args!("{}", self.i2s_fd().bits()))
+            .field("lockup_lk", &self.lockup_lk())
+            .field("pvm_lk", &self.pvm_lk())
+            .field("i2s_fd", &self.i2s_fd())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CFG2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -65,7 +60,7 @@ impl W {
         I2S_FD_W::new(self, 30)
     }
 }
-#[doc = "configuration register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "configuration register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG2_SPEC;
 impl crate::RegisterSpec for CFG2_SPEC {
     type Ux = u32;

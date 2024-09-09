@@ -366,21 +366,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS")
-            .field("cspas", &format_args!("{}", self.cspas().bit()))
-            .field("bf", &format_args!("{}", self.bf().bit()))
-            .field("roerr", &format_args!("{}", self.roerr().bit()))
-            .field("mmerr", &format_args!("{}", self.mmerr().bit()))
-            .field("ccerr", &format_args!("{}", self.ccerr().bit()))
-            .field("tuerr", &format_args!("{}", self.tuerr().bit()))
-            .field("acs", &format_args!("{}", self.acs().bit()))
-            .field("tdbe", &format_args!("{}", self.tdbe().bit()))
-            .field("rdbf", &format_args!("{}", self.rdbf().bit()))
+            .field("cspas", &self.cspas())
+            .field("bf", &self.bf())
+            .field("roerr", &self.roerr())
+            .field("mmerr", &self.mmerr())
+            .field("ccerr", &self.ccerr())
+            .field("tuerr", &self.tuerr())
+            .field("acs", &self.acs())
+            .field("tdbe", &self.tdbe())
+            .field("rdbf", &self.rdbf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -391,7 +386,7 @@ impl W {
         CCERR_W::new(self, 4)
     }
 }
-#[doc = "status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
 impl crate::RegisterSpec for STS_SPEC {
     type Ux = u32;

@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("S8_STRIDE")
-            .field("srcstd", &format_args!("{}", self.srcstd().bits()))
-            .field("dststd", &format_args!("{}", self.dststd().bits()))
+            .field("srcstd", &self.srcstd())
+            .field("dststd", &self.dststd())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<S8_STRIDE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         DSTSTD_W::new(self, 16)
     }
 }
-#[doc = "Stream 8 2D Transfer Stride\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`s8_stride::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`s8_stride::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Stream 8 2D Transfer Stride\n\nYou can [`read`](crate::Reg::read) this register and get [`s8_stride::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`s8_stride::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct S8_STRIDE_SPEC;
 impl crate::RegisterSpec for S8_STRIDE_SPEC {
     type Ux = u32;

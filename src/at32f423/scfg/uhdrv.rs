@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UHDRV")
-            .field("pd13_uh", &format_args!("{}", self.pd13_uh().bit()))
-            .field("pd12_uh", &format_args!("{}", self.pd12_uh().bit()))
-            .field("pb8_uh", &format_args!("{}", self.pb8_uh().bit()))
-            .field("pb9_uh", &format_args!("{}", self.pb9_uh().bit()))
+            .field("pd13_uh", &self.pd13_uh())
+            .field("pd12_uh", &self.pd12_uh())
+            .field("pb8_uh", &self.pb8_uh())
+            .field("pb9_uh", &self.pb9_uh())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<UHDRV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         PD13_UH_W::new(self, 6)
     }
 }
-#[doc = "Ultra high drive register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`uhdrv::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uhdrv::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ultra high drive register\n\nYou can [`read`](crate::Reg::read) this register and get [`uhdrv::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uhdrv::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UHDRV_SPEC;
 impl crate::RegisterSpec for UHDRV_SPEC {
     type Ux = u32;

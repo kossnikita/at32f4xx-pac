@@ -59,18 +59,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRLL")
-            .field("tsf", &format_args!("{}", self.tsf().bit()))
-            .field("taf", &format_args!("{}", self.taf().bit()))
-            .field("ovff", &format_args!("{}", self.ovff().bit()))
-            .field("updf", &format_args!("{}", self.updf().bit()))
-            .field("cfgen", &format_args!("{}", self.cfgen().bit()))
-            .field("cfgf", &format_args!("{}", self.cfgf().bit()))
+            .field("tsf", &self.tsf())
+            .field("taf", &self.taf())
+            .field("ovff", &self.ovff())
+            .field("updf", &self.updf())
+            .field("cfgen", &self.cfgen())
+            .field("cfgf", &self.cfgf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRLL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -105,7 +100,7 @@ impl W {
         CFGEN_W::new(self, 4)
     }
 }
-#[doc = "RTC Control Register Low\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrll::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrll::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTC Control Register Low\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrll::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrll::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRLL_SPEC;
 impl crate::RegisterSpec for CTRLL_SPEC {
     type Ux = u32;

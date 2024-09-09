@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKCTRL")
-            .field("clkdiv", &format_args!("{}", self.clkdiv().bits()))
-            .field("clkoen", &format_args!("{}", self.clkoen().bit()))
-            .field("pwrsven", &format_args!("{}", self.pwrsven().bit()))
-            .field("bypsen", &format_args!("{}", self.bypsen().bit()))
-            .field("busws", &format_args!("{}", self.busws().bits()))
-            .field("clkeds", &format_args!("{}", self.clkeds().bit()))
-            .field("hfcen", &format_args!("{}", self.hfcen().bit()))
-            .field("clkdiv98", &format_args!("{}", self.clkdiv98().bits()))
+            .field("clkdiv", &self.clkdiv())
+            .field("clkoen", &self.clkoen())
+            .field("pwrsven", &self.pwrsven())
+            .field("bypsen", &self.bypsen())
+            .field("busws", &self.busws())
+            .field("clkeds", &self.clkeds())
+            .field("hfcen", &self.hfcen())
+            .field("clkdiv98", &self.clkdiv98())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CLKCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         CLKDIV98_W::new(self, 15)
     }
 }
-#[doc = "SD clock control register (SDIO_CLKCTRL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clkctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SD clock control register (SDIO_CLKCTRL)\n\nYou can [`read`](crate::Reg::read) this register and get [`clkctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clkctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLKCTRL_SPEC;
 impl crate::RegisterSpec for CLKCTRL_SPEC {
     type Ux = u32;

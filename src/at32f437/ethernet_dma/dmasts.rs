@@ -184,33 +184,28 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMASTS")
-            .field("ti", &format_args!("{}", self.ti().bit()))
-            .field("tps", &format_args!("{}", self.tps().bit()))
-            .field("tbu", &format_args!("{}", self.tbu().bit()))
-            .field("tjt", &format_args!("{}", self.tjt().bit()))
-            .field("ovf", &format_args!("{}", self.ovf().bit()))
-            .field("unf", &format_args!("{}", self.unf().bit()))
-            .field("ri", &format_args!("{}", self.ri().bit()))
-            .field("rbu", &format_args!("{}", self.rbu().bit()))
-            .field("rps", &format_args!("{}", self.rps().bit()))
-            .field("rwt", &format_args!("{}", self.rwt().bit()))
-            .field("eti", &format_args!("{}", self.eti().bit()))
-            .field("fbei", &format_args!("{}", self.fbei().bit()))
-            .field("eri", &format_args!("{}", self.eri().bit()))
-            .field("ais", &format_args!("{}", self.ais().bit()))
-            .field("nis", &format_args!("{}", self.nis().bit()))
-            .field("rs", &format_args!("{}", self.rs().bits()))
-            .field("ts", &format_args!("{}", self.ts().bits()))
-            .field("eb", &format_args!("{}", self.eb().bits()))
-            .field("mmi", &format_args!("{}", self.mmi().bit()))
-            .field("mpi", &format_args!("{}", self.mpi().bit()))
-            .field("tti", &format_args!("{}", self.tti().bit()))
+            .field("ti", &self.ti())
+            .field("tps", &self.tps())
+            .field("tbu", &self.tbu())
+            .field("tjt", &self.tjt())
+            .field("ovf", &self.ovf())
+            .field("unf", &self.unf())
+            .field("ri", &self.ri())
+            .field("rbu", &self.rbu())
+            .field("rps", &self.rps())
+            .field("rwt", &self.rwt())
+            .field("eti", &self.eti())
+            .field("fbei", &self.fbei())
+            .field("eri", &self.eri())
+            .field("ais", &self.ais())
+            .field("nis", &self.nis())
+            .field("rs", &self.rs())
+            .field("ts", &self.ts())
+            .field("eb", &self.eb())
+            .field("mmi", &self.mmi())
+            .field("mpi", &self.mpi())
+            .field("tti", &self.tti())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DMASTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -305,7 +300,7 @@ impl W {
         NIS_W::new(self, 16)
     }
 }
-#[doc = "Ethernet DMA status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmasts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmasts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet DMA status register\n\nYou can [`read`](crate::Reg::read) this register and get [`dmasts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmasts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMASTS_SPEC;
 impl crate::RegisterSpec for DMASTS_SPEC {
     type Ux = u32;

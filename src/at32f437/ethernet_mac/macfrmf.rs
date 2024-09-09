@@ -106,23 +106,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MACFRMF")
-            .field("pr", &format_args!("{}", self.pr().bit()))
-            .field("huc", &format_args!("{}", self.huc().bit()))
-            .field("hmc", &format_args!("{}", self.hmc().bit()))
-            .field("daif", &format_args!("{}", self.daif().bit()))
-            .field("pmc", &format_args!("{}", self.pmc().bit()))
-            .field("dbf", &format_args!("{}", self.dbf().bit()))
-            .field("pcf", &format_args!("{}", self.pcf().bits()))
-            .field("saif", &format_args!("{}", self.saif().bit()))
-            .field("saf", &format_args!("{}", self.saf().bit()))
-            .field("hpf", &format_args!("{}", self.hpf().bit()))
-            .field("ra", &format_args!("{}", self.ra().bit()))
+            .field("pr", &self.pr())
+            .field("huc", &self.huc())
+            .field("hmc", &self.hmc())
+            .field("daif", &self.daif())
+            .field("pmc", &self.pmc())
+            .field("dbf", &self.dbf())
+            .field("pcf", &self.pcf())
+            .field("saif", &self.saif())
+            .field("saf", &self.saf())
+            .field("hpf", &self.hpf())
+            .field("ra", &self.ra())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MACFRMF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -193,7 +188,7 @@ impl W {
         RA_W::new(self, 31)
     }
 }
-#[doc = "Ethernet MAC frame filter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`macfrmf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`macfrmf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet MAC frame filter register\n\nYou can [`read`](crate::Reg::read) this register and get [`macfrmf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`macfrmf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MACFRMF_SPEC;
 impl crate::RegisterSpec for MACFRMF_SPEC {
     type Ux = u32;

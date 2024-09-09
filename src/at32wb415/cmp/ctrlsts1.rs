@@ -165,30 +165,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRLSTS1")
-            .field("cmp1en", &format_args!("{}", self.cmp1en().bit()))
-            .field("cmp1is", &format_args!("{}", self.cmp1is().bit()))
-            .field("cmp1ssel", &format_args!("{}", self.cmp1ssel().bits()))
-            .field("cmp1invsel", &format_args!("{}", self.cmp1invsel().bits()))
-            .field("cmp1tag", &format_args!("{}", self.cmp1tag().bits()))
-            .field("cmp1p", &format_args!("{}", self.cmp1p().bit()))
-            .field("cmp1hyst", &format_args!("{}", self.cmp1hyst().bits()))
-            .field("cmp1value", &format_args!("{}", self.cmp1value().bit()))
-            .field("cmp1wp", &format_args!("{}", self.cmp1wp().bit()))
-            .field("cmp2en", &format_args!("{}", self.cmp2en().bit()))
-            .field("cmp2ssel", &format_args!("{}", self.cmp2ssel().bits()))
-            .field("cmp2invsel", &format_args!("{}", self.cmp2invsel().bits()))
-            .field("dcmpen", &format_args!("{}", self.dcmpen().bit()))
-            .field("cmp2tag", &format_args!("{}", self.cmp2tag().bits()))
-            .field("cmp2p", &format_args!("{}", self.cmp2p().bit()))
-            .field("cmp2hyst", &format_args!("{}", self.cmp2hyst().bits()))
-            .field("cmp2value", &format_args!("{}", self.cmp2value().bit()))
-            .field("cmp2wp", &format_args!("{}", self.cmp2wp().bit()))
+            .field("cmp1en", &self.cmp1en())
+            .field("cmp1is", &self.cmp1is())
+            .field("cmp1ssel", &self.cmp1ssel())
+            .field("cmp1invsel", &self.cmp1invsel())
+            .field("cmp1tag", &self.cmp1tag())
+            .field("cmp1p", &self.cmp1p())
+            .field("cmp1hyst", &self.cmp1hyst())
+            .field("cmp1value", &self.cmp1value())
+            .field("cmp1wp", &self.cmp1wp())
+            .field("cmp2en", &self.cmp2en())
+            .field("cmp2ssel", &self.cmp2ssel())
+            .field("cmp2invsel", &self.cmp2invsel())
+            .field("dcmpen", &self.dcmpen())
+            .field("cmp2tag", &self.cmp2tag())
+            .field("cmp2p", &self.cmp2p())
+            .field("cmp2hyst", &self.cmp2hyst())
+            .field("cmp2value", &self.cmp2value())
+            .field("cmp2wp", &self.cmp2wp())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRLSTS1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -289,7 +284,7 @@ impl W {
         CMP2WP_W::new(self, 31)
     }
 }
-#[doc = "CMP control/status register1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrlsts1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrlsts1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CMP control/status register1\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrlsts1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrlsts1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRLSTS1_SPEC;
 impl crate::RegisterSpec for CTRLSTS1_SPEC {
     type Ux = u32;

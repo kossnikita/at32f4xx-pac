@@ -31,7 +31,7 @@ impl W {
         CRC_STRT_W::new(self, 14)
     }
 }
-#[doc = "Flash CRC controler register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`crc_ctrl::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Flash CRC controler register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`crc_ctrl::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CRC_CTRL_SPEC;
 impl crate::RegisterSpec for CRC_CTRL_SPEC {
     type Ux = u32;

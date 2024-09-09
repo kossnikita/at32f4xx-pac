@@ -34,21 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP6")
-            .field(
-                "usart3_gmux",
-                &format_args!("{}", self.usart3_gmux().bits()),
-            )
-            .field(
-                "usart1_gmux",
-                &format_args!("{}", self.usart1_gmux().bits()),
-            )
-            .field("can1_gmux", &format_args!("{}", self.can1_gmux().bits()))
+            .field("usart3_gmux", &self.usart3_gmux())
+            .field("usart1_gmux", &self.usart1_gmux())
+            .field("can1_gmux", &self.can1_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -71,7 +60,7 @@ impl W {
         USART3_GMUX_W::new(self, 24)
     }
 }
-#[doc = "IO MUX remap register 6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap6::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap6::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 6\n\nYou can [`read`](crate::Reg::read) this register and get [`remap6::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap6::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP6_SPEC;
 impl crate::RegisterSpec for REMAP6_SPEC {
     type Ux = u32;

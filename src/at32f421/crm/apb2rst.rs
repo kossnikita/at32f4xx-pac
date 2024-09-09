@@ -88,21 +88,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB2RST")
-            .field("scfgcmp", &format_args!("{}", self.scfgcmp().bit()))
-            .field("exint", &format_args!("{}", self.exint().bit()))
-            .field("adc", &format_args!("{}", self.adc().bit()))
-            .field("tmr1", &format_args!("{}", self.tmr1().bit()))
-            .field("spi1", &format_args!("{}", self.spi1().bit()))
-            .field("usart1", &format_args!("{}", self.usart1().bit()))
-            .field("tmr15", &format_args!("{}", self.tmr15().bit()))
-            .field("tmr16", &format_args!("{}", self.tmr16().bit()))
-            .field("tmr17", &format_args!("{}", self.tmr17().bit()))
+            .field("scfgcmp", &self.scfgcmp())
+            .field("exint", &self.exint())
+            .field("adc", &self.adc())
+            .field("tmr1", &self.tmr1())
+            .field("spi1", &self.spi1())
+            .field("usart1", &self.usart1())
+            .field("tmr15", &self.tmr15())
+            .field("tmr16", &self.tmr16())
+            .field("tmr17", &self.tmr17())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<APB2RST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -161,7 +156,7 @@ impl W {
         TMR17_W::new(self, 18)
     }
 }
-#[doc = "APB2 peripheral reset register (CRM_APB2RST)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2rst::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb2rst::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APB2 peripheral reset register (CRM_APB2RST)\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2rst::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb2rst::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB2RST_SPEC;
 impl crate::RegisterSpec for APB2RST_SPEC {
     type Ux = u32;

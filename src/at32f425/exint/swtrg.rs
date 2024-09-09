@@ -65,7 +65,7 @@ where
 impl R {
     #[doc = "Software trigger on line (0-20)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `SWT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SWT0` field.</div>"]
     #[inline(always)]
     pub fn swt(&self, n: u8) -> SWT_R {
         #[allow(clippy::no_effect)]
@@ -187,39 +187,34 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SWTRG")
-            .field("swt0", &format_args!("{}", self.swt0().bit()))
-            .field("swt1", &format_args!("{}", self.swt1().bit()))
-            .field("swt2", &format_args!("{}", self.swt2().bit()))
-            .field("swt3", &format_args!("{}", self.swt3().bit()))
-            .field("swt4", &format_args!("{}", self.swt4().bit()))
-            .field("swt5", &format_args!("{}", self.swt5().bit()))
-            .field("swt6", &format_args!("{}", self.swt6().bit()))
-            .field("swt7", &format_args!("{}", self.swt7().bit()))
-            .field("swt8", &format_args!("{}", self.swt8().bit()))
-            .field("swt9", &format_args!("{}", self.swt9().bit()))
-            .field("swt10", &format_args!("{}", self.swt10().bit()))
-            .field("swt11", &format_args!("{}", self.swt11().bit()))
-            .field("swt12", &format_args!("{}", self.swt12().bit()))
-            .field("swt13", &format_args!("{}", self.swt13().bit()))
-            .field("swt14", &format_args!("{}", self.swt14().bit()))
-            .field("swt15", &format_args!("{}", self.swt15().bit()))
-            .field("swt16", &format_args!("{}", self.swt16().bit()))
-            .field("swt17", &format_args!("{}", self.swt17().bit()))
-            .field("swt18", &format_args!("{}", self.swt18().bit()))
-            .field("swt19", &format_args!("{}", self.swt19().bit()))
-            .field("swt20", &format_args!("{}", self.swt20().bit()))
+            .field("swt0", &self.swt0())
+            .field("swt1", &self.swt1())
+            .field("swt2", &self.swt2())
+            .field("swt3", &self.swt3())
+            .field("swt4", &self.swt4())
+            .field("swt5", &self.swt5())
+            .field("swt6", &self.swt6())
+            .field("swt7", &self.swt7())
+            .field("swt8", &self.swt8())
+            .field("swt9", &self.swt9())
+            .field("swt10", &self.swt10())
+            .field("swt11", &self.swt11())
+            .field("swt12", &self.swt12())
+            .field("swt13", &self.swt13())
+            .field("swt14", &self.swt14())
+            .field("swt15", &self.swt15())
+            .field("swt16", &self.swt16())
+            .field("swt17", &self.swt17())
+            .field("swt18", &self.swt18())
+            .field("swt19", &self.swt19())
+            .field("swt20", &self.swt20())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<SWTRG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Software trigger on line (0-20)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `SWT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SWT0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn swt(&mut self, n: u8) -> SWT_W<SWTRG_SPEC> {
@@ -354,7 +349,7 @@ impl W {
         SWT_W::new(self, 20)
     }
 }
-#[doc = "Software triggle register (EXTINT_SWIE)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`swtrg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swtrg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Software triggle register (EXTINT_SWIE)\n\nYou can [`read`](crate::Reg::read) this register and get [`swtrg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`swtrg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SWTRG_SPEC;
 impl crate::RegisterSpec for SWTRG_SPEC {
     type Ux = u32;

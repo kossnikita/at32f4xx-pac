@@ -11,17 +11,10 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PDT")
-            .field("pdt", &format_args!("{}", self.pdt().bits()))
-            .finish()
+        f.debug_struct("PDT").field("pdt", &self.pdt()).finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<PDT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Preempted data register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pdt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Preempted data register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`pdt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PDT_SPEC;
 impl crate::RegisterSpec for PDT_SPEC {
     type Ux = u32;

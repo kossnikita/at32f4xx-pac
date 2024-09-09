@@ -250,7 +250,7 @@ impl R {
     }
     #[doc = "Channel (1-4) interrupt flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IF` field.</div>"]
     #[inline(always)]
     pub fn cif(&self, n: u8) -> CIF_R {
         #[allow(clippy::no_effect)]
@@ -290,7 +290,7 @@ impl R {
     }
     #[doc = "Channel (1-4) recapture flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1RF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1RF` field.</div>"]
     #[inline(always)]
     pub fn crf(&self, n: u8) -> CRF_R {
         #[allow(clippy::no_effect)]
@@ -327,22 +327,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ISTS")
-            .field("c1rf", &format_args!("{}", self.c1rf().bit()))
-            .field("c2rf", &format_args!("{}", self.c2rf().bit()))
-            .field("c3rf", &format_args!("{}", self.c3rf().bit()))
-            .field("c4rf", &format_args!("{}", self.c4rf().bit()))
-            .field("trgif", &format_args!("{}", self.trgif().bit()))
-            .field("c1if", &format_args!("{}", self.c1if().bit()))
-            .field("c2if", &format_args!("{}", self.c2if().bit()))
-            .field("c3if", &format_args!("{}", self.c3if().bit()))
-            .field("c4if", &format_args!("{}", self.c4if().bit()))
-            .field("ovfif", &format_args!("{}", self.ovfif().bit()))
+            .field("c1rf", &self.c1rf())
+            .field("c2rf", &self.c2rf())
+            .field("c3rf", &self.c3rf())
+            .field("c4rf", &self.c4rf())
+            .field("trgif", &self.trgif())
+            .field("c1if", &self.c1if())
+            .field("c2if", &self.c2if())
+            .field("c3if", &self.c3if())
+            .field("c4if", &self.c4if())
+            .field("ovfif", &self.ovfif())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<ISTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -354,7 +349,7 @@ impl W {
     }
     #[doc = "Channel (1-4) interrupt flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cif(&mut self, n: u8) -> CIF_W<ISTS_SPEC> {
@@ -394,7 +389,7 @@ impl W {
     }
     #[doc = "Channel (1-4) recapture flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1RF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1RF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn crf(&mut self, n: u8) -> CRF_W<ISTS_SPEC> {
@@ -427,7 +422,7 @@ impl W {
         CRF_W::new(self, 12)
     }
 }
-#[doc = "Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ists::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ists::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ists::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ists::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ISTS_SPEC;
 impl crate::RegisterSpec for ISTS_SPEC {
     type Ux = u32;

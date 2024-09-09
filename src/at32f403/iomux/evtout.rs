@@ -5,7 +5,7 @@ pub type W = crate::W<EVTOUT_SPEC>;
 #[doc = "Field `SELPIN` reader - Select pin"]
 pub type SELPIN_R = crate::FieldReader;
 #[doc = "Field `SELPIN` writer - Select pin"]
-pub type SELPIN_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 4>;
+pub type SELPIN_W<'a, REG> = crate::FieldWriter<'a, REG, 4, u8, crate::Safe>;
 #[doc = "Select port\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
@@ -34,6 +34,7 @@ impl From<SELPORT_A> for u8 {
 impl crate::FieldSpec for SELPORT_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SELPORT_A {}
 #[doc = "Field `SELPORT` reader - Select port"]
 pub type SELPORT_R = crate::FieldReader<SELPORT_A>;
 impl SELPORT_R {
@@ -203,15 +204,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EVTOUT")
-            .field("selpin", &format_args!("{}", self.selpin().bits()))
-            .field("selport", &format_args!("{}", self.selport().bits()))
-            .field("evoen", &format_args!("{}", self.evoen().bit()))
+            .field("selpin", &self.selpin())
+            .field("selport", &self.selport())
+            .field("evoen", &self.evoen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<EVTOUT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -234,7 +230,7 @@ impl W {
         EVOEN_W::new(self, 7)
     }
 }
-#[doc = "Event output register (IOMUX_EVTOUT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`evtout::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evtout::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Event output register (IOMUX_EVTOUT)\n\nYou can [`read`](crate::Reg::read) this register and get [`evtout::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evtout::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EVTOUT_SPEC;
 impl crate::RegisterSpec for EVTOUT_SPEC {
     type Ux = u32;

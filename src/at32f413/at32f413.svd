@@ -5948,7 +5948,7 @@
             </field>
             <field>
               <name>CCFS</name>
-              <description>Channel control bit flash select</description>
+              <description>Channel control bit refresh select</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <enumeratedValues>

@@ -40,20 +40,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ISTS")
-            .field("hsis", &format_args!("{}", self.hsis().bit()))
-            .field("vsis", &format_args!("{}", self.vsis().bit()))
-            .field("eseis", &format_args!("{}", self.eseis().bit()))
-            .field("ovris", &format_args!("{}", self.ovris().bit()))
-            .field("cfdis", &format_args!("{}", self.cfdis().bit()))
+            .field("hsis", &self.hsis())
+            .field("vsis", &self.vsis())
+            .field("eseis", &self.eseis())
+            .field("ovris", &self.ovris())
+            .field("cfdis", &self.cfdis())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<ISTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ists::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ists::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ISTS_SPEC;
 impl crate::RegisterSpec for ISTS_SPEC {
     type Ux = u32;

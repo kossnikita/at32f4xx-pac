@@ -66,19 +66,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PSR")
-            .field("wtcyc", &format_args!("{}", self.wtcyc().bits()))
-            .field("hfcyc_en", &format_args!("{}", self.hfcyc_en().bit()))
-            .field("pft_en", &format_args!("{}", self.pft_en().bit()))
-            .field("pft_enf", &format_args!("{}", self.pft_enf().bit()))
-            .field("pft_en2", &format_args!("{}", self.pft_en2().bit()))
-            .field("pft_enf2", &format_args!("{}", self.pft_enf2().bit()))
-            .field("pft_lat_dis", &format_args!("{}", self.pft_lat_dis().bit()))
+            .field("wtcyc", &self.wtcyc())
+            .field("hfcyc_en", &self.hfcyc_en())
+            .field("pft_en", &self.pft_en())
+            .field("pft_enf", &self.pft_enf())
+            .field("pft_en2", &self.pft_en2())
+            .field("pft_enf2", &self.pft_enf2())
+            .field("pft_lat_dis", &self.pft_lat_dis())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<PSR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -113,7 +108,7 @@ impl W {
         PFT_LAT_DIS_W::new(self, 8)
     }
 }
-#[doc = "Performance selection register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`psr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`psr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Performance selection register\n\nYou can [`read`](crate::Reg::read) this register and get [`psr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`psr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PSR_SPEC;
 impl crate::RegisterSpec for PSR_SPEC {
     type Ux = u32;

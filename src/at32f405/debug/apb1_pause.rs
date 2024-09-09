@@ -142,39 +142,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB1_PAUSE")
-            .field("tmr2_pause", &format_args!("{}", self.tmr2_pause().bit()))
-            .field("tmr3_pause", &format_args!("{}", self.tmr3_pause().bit()))
-            .field("tmr4_pause", &format_args!("{}", self.tmr4_pause().bit()))
-            .field("tmr6_pause", &format_args!("{}", self.tmr6_pause().bit()))
-            .field("tmr7_pause", &format_args!("{}", self.tmr7_pause().bit()))
-            .field("tmr13_pause", &format_args!("{}", self.tmr13_pause().bit()))
-            .field("tmr14_pause", &format_args!("{}", self.tmr14_pause().bit()))
-            .field("ertc_pause", &format_args!("{}", self.ertc_pause().bit()))
-            .field("wwdt_pause", &format_args!("{}", self.wwdt_pause().bit()))
-            .field("wdt_pause", &format_args!("{}", self.wdt_pause().bit()))
-            .field(
-                "ertc512_pause",
-                &format_args!("{}", self.ertc512_pause().bit()),
-            )
-            .field(
-                "i2c1_smbus_timeout",
-                &format_args!("{}", self.i2c1_smbus_timeout().bit()),
-            )
-            .field("can1_pause", &format_args!("{}", self.can1_pause().bit()))
-            .field(
-                "i2c2_smbus_timeout",
-                &format_args!("{}", self.i2c2_smbus_timeout().bit()),
-            )
-            .field(
-                "i2c3_smbus_timeout",
-                &format_args!("{}", self.i2c3_smbus_timeout().bit()),
-            )
+            .field("tmr2_pause", &self.tmr2_pause())
+            .field("tmr3_pause", &self.tmr3_pause())
+            .field("tmr4_pause", &self.tmr4_pause())
+            .field("tmr6_pause", &self.tmr6_pause())
+            .field("tmr7_pause", &self.tmr7_pause())
+            .field("tmr13_pause", &self.tmr13_pause())
+            .field("tmr14_pause", &self.tmr14_pause())
+            .field("ertc_pause", &self.ertc_pause())
+            .field("wwdt_pause", &self.wwdt_pause())
+            .field("wdt_pause", &self.wdt_pause())
+            .field("ertc512_pause", &self.ertc512_pause())
+            .field("i2c1_smbus_timeout", &self.i2c1_smbus_timeout())
+            .field("can1_pause", &self.can1_pause())
+            .field("i2c2_smbus_timeout", &self.i2c2_smbus_timeout())
+            .field("i2c3_smbus_timeout", &self.i2c3_smbus_timeout())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<APB1_PAUSE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -269,7 +252,7 @@ impl W {
         I2C3_SMBUS_TIMEOUT_W::new(self, 28)
     }
 }
-#[doc = "DEBUG APB1 PAUSE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb1_pause::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb1_pause::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DEBUG APB1 PAUSE\n\nYou can [`read`](crate::Reg::read) this register and get [`apb1_pause::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb1_pause::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB1_PAUSE_SPEC;
 impl crate::RegisterSpec for APB1_PAUSE_SPEC {
     type Ux = u32;

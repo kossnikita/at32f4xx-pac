@@ -116,25 +116,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HPRT")
-            .field("prtconsts", &format_args!("{}", self.prtconsts().bit()))
-            .field("prtcondet", &format_args!("{}", self.prtcondet().bit()))
-            .field("prtena", &format_args!("{}", self.prtena().bit()))
-            .field("prtenchng", &format_args!("{}", self.prtenchng().bit()))
-            .field("prtovrcact", &format_args!("{}", self.prtovrcact().bit()))
-            .field("prtovrcchng", &format_args!("{}", self.prtovrcchng().bit()))
-            .field("prtres", &format_args!("{}", self.prtres().bit()))
-            .field("prtsusp", &format_args!("{}", self.prtsusp().bit()))
-            .field("prtrst", &format_args!("{}", self.prtrst().bit()))
-            .field("prtlnsts", &format_args!("{}", self.prtlnsts().bits()))
-            .field("prtpwr", &format_args!("{}", self.prtpwr().bit()))
-            .field("prttstctl", &format_args!("{}", self.prttstctl().bits()))
-            .field("prtspd", &format_args!("{}", self.prtspd().bits()))
+            .field("prtconsts", &self.prtconsts())
+            .field("prtcondet", &self.prtcondet())
+            .field("prtena", &self.prtena())
+            .field("prtenchng", &self.prtenchng())
+            .field("prtovrcact", &self.prtovrcact())
+            .field("prtovrcchng", &self.prtovrcchng())
+            .field("prtres", &self.prtres())
+            .field("prtsusp", &self.prtsusp())
+            .field("prtrst", &self.prtrst())
+            .field("prtlnsts", &self.prtlnsts())
+            .field("prtpwr", &self.prtpwr())
+            .field("prttstctl", &self.prttstctl())
+            .field("prtspd", &self.prtspd())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HPRT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -193,7 +188,7 @@ impl W {
         PRTTSTCTL_W::new(self, 13)
     }
 }
-#[doc = "OTGFS host port control and status register (OTGFS_HPRT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hprt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hprt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS host port control and status register (OTGFS_HPRT)\n\nYou can [`read`](crate::Reg::read) this register and get [`hprt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hprt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HPRT_SPEC;
 impl crate::RegisterSpec for HPRT_SPEC {
     type Ux = u32;

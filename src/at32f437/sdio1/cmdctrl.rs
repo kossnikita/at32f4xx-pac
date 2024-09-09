@@ -61,18 +61,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMDCTRL")
-            .field("cmdidx", &format_args!("{}", self.cmdidx().bits()))
-            .field("rspwt", &format_args!("{}", self.rspwt().bits()))
-            .field("intwt", &format_args!("{}", self.intwt().bit()))
-            .field("pndwt", &format_args!("{}", self.pndwt().bit()))
-            .field("ccsmen", &format_args!("{}", self.ccsmen().bit()))
-            .field("iosusp", &format_args!("{}", self.iosusp().bit()))
+            .field("cmdidx", &self.cmdidx())
+            .field("rspwt", &self.rspwt())
+            .field("intwt", &self.intwt())
+            .field("pndwt", &self.pndwt())
+            .field("ccsmen", &self.ccsmen())
+            .field("iosusp", &self.iosusp())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CMDCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -113,7 +108,7 @@ impl W {
         IOSUSP_W::new(self, 11)
     }
 }
-#[doc = "SDIO command control register (SDIO_CMDCTRL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmdctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cmdctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SDIO command control register (SDIO_CMDCTRL)\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CMDCTRL_SPEC;
 impl crate::RegisterSpec for CMDCTRL_SPEC {
     type Ux = u32;

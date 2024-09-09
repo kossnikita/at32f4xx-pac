@@ -72,7 +72,7 @@ where
 impl R {
     #[doc = "Port output data"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `ODT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `ODT0` field.</div>"]
     #[inline(always)]
     pub fn odt(&self, n: u8) -> ODT_R {
         #[allow(clippy::no_effect)]
@@ -169,34 +169,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ODT")
-            .field("odt0", &format_args!("{}", self.odt0().bit()))
-            .field("odt1", &format_args!("{}", self.odt1().bit()))
-            .field("odt2", &format_args!("{}", self.odt2().bit()))
-            .field("odt3", &format_args!("{}", self.odt3().bit()))
-            .field("odt4", &format_args!("{}", self.odt4().bit()))
-            .field("odt5", &format_args!("{}", self.odt5().bit()))
-            .field("odt6", &format_args!("{}", self.odt6().bit()))
-            .field("odt7", &format_args!("{}", self.odt7().bit()))
-            .field("odt8", &format_args!("{}", self.odt8().bit()))
-            .field("odt9", &format_args!("{}", self.odt9().bit()))
-            .field("odt10", &format_args!("{}", self.odt10().bit()))
-            .field("odt11", &format_args!("{}", self.odt11().bit()))
-            .field("odt12", &format_args!("{}", self.odt12().bit()))
-            .field("odt13", &format_args!("{}", self.odt13().bit()))
-            .field("odt14", &format_args!("{}", self.odt14().bit()))
-            .field("odt15", &format_args!("{}", self.odt15().bit()))
+            .field("odt0", &self.odt0())
+            .field("odt1", &self.odt1())
+            .field("odt2", &self.odt2())
+            .field("odt3", &self.odt3())
+            .field("odt4", &self.odt4())
+            .field("odt5", &self.odt5())
+            .field("odt6", &self.odt6())
+            .field("odt7", &self.odt7())
+            .field("odt8", &self.odt8())
+            .field("odt9", &self.odt9())
+            .field("odt10", &self.odt10())
+            .field("odt11", &self.odt11())
+            .field("odt12", &self.odt12())
+            .field("odt13", &self.odt13())
+            .field("odt14", &self.odt14())
+            .field("odt15", &self.odt15())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<ODT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Port output data"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `ODT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `ODT0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn odt(&mut self, n: u8) -> ODT_W<ODT_SPEC> {
@@ -301,7 +296,7 @@ impl W {
         ODT_W::new(self, 15)
     }
 }
-#[doc = "GPIO output data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`odt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`odt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO output data register\n\nYou can [`read`](crate::Reg::read) this register and get [`odt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`odt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ODT_SPEC;
 impl crate::RegisterSpec for ODT_SPEC {
     type Ux = u32;

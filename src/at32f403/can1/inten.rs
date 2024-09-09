@@ -747,7 +747,7 @@ impl R {
     }
     #[doc = "FIFO (0-1) receive message interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `RF0MIEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RF0MIEN` field.</div>"]
     #[inline(always)]
     pub fn rfmien(&self, n: u8) -> RFMIEN_R {
         #[allow(clippy::no_effect)]
@@ -772,7 +772,7 @@ impl R {
     }
     #[doc = "Receive FIFO (0-1) full interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `RF0FIEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RF0FIEN` field.</div>"]
     #[inline(always)]
     pub fn rffien(&self, n: u8) -> RFFIEN_R {
         #[allow(clippy::no_effect)]
@@ -797,7 +797,7 @@ impl R {
     }
     #[doc = "Receive FIFO (0-1) overflow interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `RF0OIEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RF0OIEN` field.</div>"]
     #[inline(always)]
     pub fn rfoien(&self, n: u8) -> RFOIEN_R {
         #[allow(clippy::no_effect)]
@@ -859,26 +859,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTEN")
-            .field("edzien", &format_args!("{}", self.edzien().bit()))
-            .field("qdzien", &format_args!("{}", self.qdzien().bit()))
-            .field("eoien", &format_args!("{}", self.eoien().bit()))
-            .field("etrien", &format_args!("{}", self.etrien().bit()))
-            .field("boien", &format_args!("{}", self.boien().bit()))
-            .field("epien", &format_args!("{}", self.epien().bit()))
-            .field("eaien", &format_args!("{}", self.eaien().bit()))
-            .field("rf0oien", &format_args!("{}", self.rf0oien().bit()))
-            .field("rf1oien", &format_args!("{}", self.rf1oien().bit()))
-            .field("rf0fien", &format_args!("{}", self.rf0fien().bit()))
-            .field("rf1fien", &format_args!("{}", self.rf1fien().bit()))
-            .field("rf0mien", &format_args!("{}", self.rf0mien().bit()))
-            .field("rf1mien", &format_args!("{}", self.rf1mien().bit()))
-            .field("tcien", &format_args!("{}", self.tcien().bit()))
+            .field("edzien", &self.edzien())
+            .field("qdzien", &self.qdzien())
+            .field("eoien", &self.eoien())
+            .field("etrien", &self.etrien())
+            .field("boien", &self.boien())
+            .field("epien", &self.epien())
+            .field("eaien", &self.eaien())
+            .field("rf0oien", &self.rf0oien())
+            .field("rf1oien", &self.rf1oien())
+            .field("rf0fien", &self.rf0fien())
+            .field("rf1fien", &self.rf1fien())
+            .field("rf0mien", &self.rf0mien())
+            .field("rf1mien", &self.rf1mien())
+            .field("tcien", &self.tcien())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<INTEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -890,7 +885,7 @@ impl W {
     }
     #[doc = "FIFO (0-1) receive message interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `RF0MIEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RF0MIEN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn rfmien(&mut self, n: u8) -> RFMIEN_W<INTEN_SPEC> {
@@ -912,7 +907,7 @@ impl W {
     }
     #[doc = "Receive FIFO (0-1) full interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `RF0FIEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RF0FIEN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn rffien(&mut self, n: u8) -> RFFIEN_W<INTEN_SPEC> {
@@ -934,7 +929,7 @@ impl W {
     }
     #[doc = "Receive FIFO (0-1) overflow interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `RF0OIEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RF0OIEN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn rfoien(&mut self, n: u8) -> RFOIEN_W<INTEN_SPEC> {
@@ -997,7 +992,7 @@ impl W {
         EDZIEN_W::new(self, 17)
     }
 }
-#[doc = "Interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inten::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inten::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`inten::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inten::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTEN_SPEC;
 impl crate::RegisterSpec for INTEN_SPEC {
     type Ux = u32;

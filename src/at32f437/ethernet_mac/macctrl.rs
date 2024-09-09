@@ -142,27 +142,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MACCTRL")
-            .field("re", &format_args!("{}", self.re().bit()))
-            .field("te", &format_args!("{}", self.te().bit()))
-            .field("dc", &format_args!("{}", self.dc().bit()))
-            .field("bl", &format_args!("{}", self.bl().bits()))
-            .field("acs", &format_args!("{}", self.acs().bit()))
-            .field("dr", &format_args!("{}", self.dr().bit()))
-            .field("ipc", &format_args!("{}", self.ipc().bit()))
-            .field("dm", &format_args!("{}", self.dm().bit()))
-            .field("lm", &format_args!("{}", self.lm().bit()))
-            .field("dro", &format_args!("{}", self.dro().bit()))
-            .field("fes", &format_args!("{}", self.fes().bit()))
-            .field("dcs", &format_args!("{}", self.dcs().bit()))
-            .field("ifg", &format_args!("{}", self.ifg().bits()))
-            .field("jd", &format_args!("{}", self.jd().bit()))
-            .field("wd", &format_args!("{}", self.wd().bit()))
+            .field("re", &self.re())
+            .field("te", &self.te())
+            .field("dc", &self.dc())
+            .field("bl", &self.bl())
+            .field("acs", &self.acs())
+            .field("dr", &self.dr())
+            .field("ipc", &self.ipc())
+            .field("dm", &self.dm())
+            .field("lm", &self.lm())
+            .field("dro", &self.dro())
+            .field("fes", &self.fes())
+            .field("dcs", &self.dcs())
+            .field("ifg", &self.ifg())
+            .field("jd", &self.jd())
+            .field("wd", &self.wd())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MACCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -257,7 +252,7 @@ impl W {
         WD_W::new(self, 23)
     }
 }
-#[doc = "Ethernet MAC configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`macctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`macctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet MAC configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`macctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`macctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MACCTRL_SPEC;
 impl crate::RegisterSpec for MACCTRL_SPEC {
     type Ux = u32;

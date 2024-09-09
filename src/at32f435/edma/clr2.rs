@@ -187,32 +187,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLR2")
-            .field("fdtfc8", &format_args!("{}", self.fdtfc8().bit()))
-            .field("hdtfc8", &format_args!("{}", self.hdtfc8().bit()))
-            .field("dterrfc8", &format_args!("{}", self.dterrfc8().bit()))
-            .field("dmerrfc8", &format_args!("{}", self.dmerrfc8().bit()))
-            .field("ferrfc8", &format_args!("{}", self.ferrfc8().bit()))
-            .field("fdtfc7", &format_args!("{}", self.fdtfc7().bit()))
-            .field("hdtfc7", &format_args!("{}", self.hdtfc7().bit()))
-            .field("dterrfc7", &format_args!("{}", self.dterrfc7().bit()))
-            .field("dmerrfc7", &format_args!("{}", self.dmerrfc7().bit()))
-            .field("ferrfc7", &format_args!("{}", self.ferrfc7().bit()))
-            .field("fdtfc6", &format_args!("{}", self.fdtfc6().bit()))
-            .field("hdtfc6", &format_args!("{}", self.hdtfc6().bit()))
-            .field("dterrfc6", &format_args!("{}", self.dterrfc6().bit()))
-            .field("dmerrfc6", &format_args!("{}", self.dmerrfc6().bit()))
-            .field("ferrfc6", &format_args!("{}", self.ferrfc6().bit()))
-            .field("fdtfc5", &format_args!("{}", self.fdtfc5().bit()))
-            .field("hdtfc5", &format_args!("{}", self.hdtfc5().bit()))
-            .field("dterrfc5", &format_args!("{}", self.dterrfc5().bit()))
-            .field("dmerrfc5", &format_args!("{}", self.dmerrfc5().bit()))
-            .field("ferrfc5", &format_args!("{}", self.ferrfc5().bit()))
+            .field("fdtfc8", &self.fdtfc8())
+            .field("hdtfc8", &self.hdtfc8())
+            .field("dterrfc8", &self.dterrfc8())
+            .field("dmerrfc8", &self.dmerrfc8())
+            .field("ferrfc8", &self.ferrfc8())
+            .field("fdtfc7", &self.fdtfc7())
+            .field("hdtfc7", &self.hdtfc7())
+            .field("dterrfc7", &self.dterrfc7())
+            .field("dmerrfc7", &self.dmerrfc7())
+            .field("ferrfc7", &self.ferrfc7())
+            .field("fdtfc6", &self.fdtfc6())
+            .field("hdtfc6", &self.hdtfc6())
+            .field("dterrfc6", &self.dterrfc6())
+            .field("dmerrfc6", &self.dmerrfc6())
+            .field("ferrfc6", &self.ferrfc6())
+            .field("fdtfc5", &self.fdtfc5())
+            .field("hdtfc5", &self.hdtfc5())
+            .field("dterrfc5", &self.dterrfc5())
+            .field("dmerrfc5", &self.dmerrfc5())
+            .field("ferrfc5", &self.ferrfc5())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CLR2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -337,7 +332,7 @@ impl W {
         FDTFC8_W::new(self, 27)
     }
 }
-#[doc = "Interrupt flag clear register2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clr2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clr2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt flag clear register2\n\nYou can [`read`](crate::Reg::read) this register and get [`clr2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLR2_SPEC;
 impl crate::RegisterSpec for CLR2_SPEC {
     type Ux = u32;

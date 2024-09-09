@@ -88,21 +88,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DTCTRL")
-            .field("tfren", &format_args!("{}", self.tfren().bit()))
-            .field("tfrdir", &format_args!("{}", self.tfrdir().bit()))
-            .field("tfrmode", &format_args!("{}", self.tfrmode().bit()))
-            .field("dmaen", &format_args!("{}", self.dmaen().bit()))
-            .field("blksize", &format_args!("{}", self.blksize().bits()))
-            .field("rdwtstart", &format_args!("{}", self.rdwtstart().bit()))
-            .field("rdwtstop", &format_args!("{}", self.rdwtstop().bit()))
-            .field("rdwtmode", &format_args!("{}", self.rdwtmode().bit()))
-            .field("ioen", &format_args!("{}", self.ioen().bit()))
+            .field("tfren", &self.tfren())
+            .field("tfrdir", &self.tfrdir())
+            .field("tfrmode", &self.tfrmode())
+            .field("dmaen", &self.dmaen())
+            .field("blksize", &self.blksize())
+            .field("rdwtstart", &self.rdwtstart())
+            .field("rdwtstop", &self.rdwtstop())
+            .field("rdwtmode", &self.rdwtmode())
+            .field("ioen", &self.ioen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DTCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -161,7 +156,7 @@ impl W {
         IOEN_W::new(self, 11)
     }
 }
-#[doc = "SDIO data control register (SDIO_DCTRL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dtctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dtctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SDIO data control register (SDIO_DCTRL)\n\nYou can [`read`](crate::Reg::read) this register and get [`dtctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dtctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DTCTRL_SPEC;
 impl crate::RegisterSpec for DTCTRL_SPEC {
     type Ux = u32;

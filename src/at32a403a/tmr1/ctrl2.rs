@@ -69,7 +69,7 @@ where
         self.variant(CbctrlwWO::Enable)
     }
 }
-#[doc = "Channel control bit flash select\n\nValue on reset: 0"]
+#[doc = "Channel control bit refresh select\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum CCFS_A {
     #[doc = "0: Control bits are updated by setting the HALL bit"]
@@ -83,7 +83,7 @@ impl From<CCFS_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `CCFS` reader - Channel control bit flash select"]
+#[doc = "Field `CCFS` reader - Channel control bit refresh select"]
 pub type CCFS_R = crate::BitReader<CCFS_A>;
 impl CCFS_R {
     #[doc = "Get enumerated values variant"]
@@ -105,7 +105,7 @@ impl CCFS_R {
         *self == CCFS_A::Trgin
     }
 }
-#[doc = "Field `CCFS` writer - Channel control bit flash select"]
+#[doc = "Field `CCFS` writer - Channel control bit refresh select"]
 pub type CCFS_W<'a, REG> = crate::BitWriter<'a, REG, CCFS_A>;
 impl<'a, REG> CCFS_W<'a, REG>
 where
@@ -205,6 +205,7 @@ impl From<PTOS_A> for u8 {
 impl crate::FieldSpec for PTOS_A {
     type Ux = u8;
 }
+impl crate::IsEnum for PTOS_A {}
 #[doc = "Field `PTOS` reader - Primary TMR output selection"]
 pub type PTOS_R = crate::FieldReader<PTOS_A>;
 impl PTOS_R {
@@ -265,7 +266,7 @@ impl PTOS_R {
     }
 }
 #[doc = "Field `PTOS` writer - Primary TMR output selection"]
-pub type PTOS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, PTOS_A>;
+pub type PTOS_W<'a, REG> = crate::FieldWriter<'a, REG, 3, PTOS_A, crate::Safe>;
 impl<'a, REG> PTOS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -477,7 +478,7 @@ impl R {
     pub fn cbctrl(&self) -> CBCTRL_R {
         CBCTRL_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 2 - Channel control bit flash select"]
+    #[doc = "Bit 2 - Channel control bit refresh select"]
     #[inline(always)]
     pub fn ccfs(&self) -> CCFS_R {
         CCFS_R::new(((self.bits >> 2) & 1) != 0)
@@ -499,7 +500,7 @@ impl R {
     }
     #[doc = "Channel (1-4) idle output state"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IOS` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IOS` field.</div>"]
     #[inline(always)]
     pub fn cios(&self, n: u8) -> CIOS_R {
         #[allow(clippy::no_effect)]
@@ -534,7 +535,7 @@ impl R {
     }
     #[doc = "Channel (1-3) complementary idle output state"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1CIOS` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1CIOS` field.</div>"]
     #[inline(always)]
     pub fn ccios(&self, n: u8) -> CCIOS_R {
         #[allow(clippy::no_effect)]
@@ -566,24 +567,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field("c1ios", &format_args!("{}", self.c1ios().bit()))
-            .field("c2ios", &format_args!("{}", self.c2ios().bit()))
-            .field("c3ios", &format_args!("{}", self.c3ios().bit()))
-            .field("c4ios", &format_args!("{}", self.c4ios().bit()))
-            .field("c1cios", &format_args!("{}", self.c1cios().bit()))
-            .field("c2cios", &format_args!("{}", self.c2cios().bit()))
-            .field("c3cios", &format_args!("{}", self.c3cios().bit()))
-            .field("c1insel", &format_args!("{}", self.c1insel().bit()))
-            .field("ptos", &format_args!("{}", self.ptos().bits()))
-            .field("drs", &format_args!("{}", self.drs().bit()))
-            .field("ccfs", &format_args!("{}", self.ccfs().bit()))
-            .field("cbctrl", &format_args!("{}", self.cbctrl().bit()))
+            .field("c1ios", &self.c1ios())
+            .field("c2ios", &self.c2ios())
+            .field("c3ios", &self.c3ios())
+            .field("c4ios", &self.c4ios())
+            .field("c1cios", &self.c1cios())
+            .field("c2cios", &self.c2cios())
+            .field("c3cios", &self.c3cios())
+            .field("c1insel", &self.c1insel())
+            .field("ptos", &self.ptos())
+            .field("drs", &self.drs())
+            .field("ccfs", &self.ccfs())
+            .field("cbctrl", &self.cbctrl())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -593,7 +589,7 @@ impl W {
     pub fn cbctrl(&mut self) -> CBCTRL_W<CTRL2_SPEC> {
         CBCTRL_W::new(self, 0)
     }
-    #[doc = "Bit 2 - Channel control bit flash select"]
+    #[doc = "Bit 2 - Channel control bit refresh select"]
     #[inline(always)]
     #[must_use]
     pub fn ccfs(&mut self) -> CCFS_W<CTRL2_SPEC> {
@@ -619,7 +615,7 @@ impl W {
     }
     #[doc = "Channel (1-4) idle output state"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IOS` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IOS` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cios(&mut self, n: u8) -> CIOS_W<CTRL2_SPEC> {
@@ -653,7 +649,7 @@ impl W {
     }
     #[doc = "Channel (1-3) complementary idle output state"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1CIOS` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1CIOS` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ccios(&mut self, n: u8) -> CCIOS_W<CTRL2_SPEC> {
@@ -680,7 +676,7 @@ impl W {
         CCIOS_W::new(self, 13)
     }
 }
-#[doc = "Control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;

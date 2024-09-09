@@ -32,6 +32,7 @@ impl From<PTOS_A> for u8 {
 impl crate::FieldSpec for PTOS_A {
     type Ux = u8;
 }
+impl crate::IsEnum for PTOS_A {}
 #[doc = "Field `PTOS` reader - Primary TMR output selection"]
 pub type PTOS_R = crate::FieldReader<PTOS_A>;
 impl PTOS_R {
@@ -92,7 +93,7 @@ impl PTOS_R {
     }
 }
 #[doc = "Field `PTOS` writer - Primary TMR output selection"]
-pub type PTOS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, PTOS_A>;
+pub type PTOS_W<'a, REG> = crate::FieldWriter<'a, REG, 3, PTOS_A, crate::Safe>;
 impl<'a, REG> PTOS_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -148,14 +149,7 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CTRL2")
-            .field("ptos", &format_args!("{}", self.ptos().bits()))
-            .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+        f.debug_struct("CTRL2").field("ptos", &self.ptos()).finish()
     }
 }
 impl W {
@@ -166,7 +160,7 @@ impl W {
         PTOS_W::new(self, 4)
     }
 }
-#[doc = "Control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;

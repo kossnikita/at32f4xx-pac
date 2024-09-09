@@ -27,7 +27,7 @@ impl FilterBank {
         self.ffb(1)
     }
 }
-#[doc = "FFB (rw) register accessor: CAN filter bank filter bit register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ffb::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ffb::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ffb`]
+#[doc = "FFB (rw) register accessor: CAN filter bank filter bit register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`ffb::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ffb::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ffb`]
 module"]
 pub type FFB = crate::Reg<ffb::FFB_SPEC>;
 #[doc = "CAN filter bank filter bit register %s"]

@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2SCLK")
-            .field("i2sdiv9_8", &format_args!("{}", self.i2sdiv9_8().bits()))
-            .field("i2smclkoe", &format_args!("{}", self.i2smclkoe().bit()))
-            .field("i2sodd", &format_args!("{}", self.i2sodd().bit()))
-            .field("i2sdiv7_0", &format_args!("{}", self.i2sdiv7_0().bits()))
+            .field("i2sdiv9_8", &self.i2sdiv9_8())
+            .field("i2smclkoe", &self.i2smclkoe())
+            .field("i2sodd", &self.i2sodd())
+            .field("i2sdiv7_0", &self.i2sdiv7_0())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<I2SCLK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         I2SDIV9_8_W::new(self, 10)
     }
 }
-#[doc = "I2S clock register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2sclk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2sclk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2S clock register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2sclk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2sclk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct I2SCLK_SPEC;
 impl crate::RegisterSpec for I2SCLK_SPEC {
     type Ux = u32;

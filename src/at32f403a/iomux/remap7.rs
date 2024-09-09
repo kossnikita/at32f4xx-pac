@@ -97,46 +97,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP7")
-            .field(
-                "ext_spim_gmux",
-                &format_args!("{}", self.ext_spim_gmux().bits()),
-            )
-            .field(
-                "ext_spim_gen",
-                &format_args!("{}", self.ext_spim_gen().bit()),
-            )
-            .field(
-                "adc1_etp_gmux",
-                &format_args!("{}", self.adc1_etp_gmux().bit()),
-            )
-            .field(
-                "adc1_eto_gmux",
-                &format_args!("{}", self.adc1_eto_gmux().bit()),
-            )
-            .field(
-                "adc2_etp_gmux",
-                &format_args!("{}", self.adc2_etp_gmux().bit()),
-            )
-            .field(
-                "adc2_eto_gmux",
-                &format_args!("{}", self.adc2_eto_gmux().bit()),
-            )
-            .field(
-                "swjtag_gmux",
-                &format_args!("{}", self.swjtag_gmux().bits()),
-            )
-            .field("pd01_gmux", &format_args!("{}", self.pd01_gmux().bit()))
-            .field("xmc_gmux", &format_args!("{}", self.xmc_gmux().bits()))
-            .field(
-                "xmc_nadv_gmux",
-                &format_args!("{}", self.xmc_nadv_gmux().bit()),
-            )
+            .field("ext_spim_gmux", &self.ext_spim_gmux())
+            .field("ext_spim_gen", &self.ext_spim_gen())
+            .field("adc1_etp_gmux", &self.adc1_etp_gmux())
+            .field("adc1_eto_gmux", &self.adc1_eto_gmux())
+            .field("adc2_etp_gmux", &self.adc2_etp_gmux())
+            .field("adc2_eto_gmux", &self.adc2_eto_gmux())
+            .field("swjtag_gmux", &self.swjtag_gmux())
+            .field("pd01_gmux", &self.pd01_gmux())
+            .field("xmc_gmux", &self.xmc_gmux())
+            .field("xmc_nadv_gmux", &self.xmc_nadv_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP7_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -201,7 +172,7 @@ impl W {
         XMC_NADV_GMUX_W::new(self, 27)
     }
 }
-#[doc = "IO MUX remap register 7 (IOMUX_REMAP7)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 7 (IOMUX_REMAP7)\n\nYou can [`read`](crate::Reg::read) this register and get [`remap7::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap7::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP7_SPEC;
 impl crate::RegisterSpec for REMAP7_SPEC {
     type Ux = u32;

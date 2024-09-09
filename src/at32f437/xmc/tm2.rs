@@ -70,19 +70,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TM2")
-            .field("tmrd", &format_args!("{}", self.tmrd().bits()))
-            .field("txsr", &format_args!("{}", self.txsr().bits()))
-            .field("tras", &format_args!("{}", self.tras().bits()))
-            .field("trc", &format_args!("{}", self.trc().bits()))
-            .field("twr", &format_args!("{}", self.twr().bits()))
-            .field("trp", &format_args!("{}", self.trp().bits()))
-            .field("trcd", &format_args!("{}", self.trcd().bits()))
+            .field("tmrd", &self.tmrd())
+            .field("txsr", &self.txsr())
+            .field("tras", &self.tras())
+            .field("trc", &self.trc())
+            .field("twr", &self.twr())
+            .field("trp", &self.trp())
+            .field("trcd", &self.trcd())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<TM2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -129,7 +124,7 @@ impl W {
         TRCD_W::new(self, 24)
     }
 }
-#[doc = "SDRAM Timing register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tm2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tm2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SDRAM Timing register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`tm2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tm2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TM2_SPEC;
 impl crate::RegisterSpec for TM2_SPEC {
     type Ux = u32;

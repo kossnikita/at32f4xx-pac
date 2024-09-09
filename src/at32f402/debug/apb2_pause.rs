@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB2_PAUSE")
-            .field("tmr1_pause", &format_args!("{}", self.tmr1_pause().bit()))
-            .field("tmr9_pause", &format_args!("{}", self.tmr9_pause().bit()))
-            .field("tmr10_pause", &format_args!("{}", self.tmr10_pause().bit()))
-            .field("tmr11_pause", &format_args!("{}", self.tmr11_pause().bit()))
+            .field("tmr1_pause", &self.tmr1_pause())
+            .field("tmr9_pause", &self.tmr9_pause())
+            .field("tmr10_pause", &self.tmr10_pause())
+            .field("tmr11_pause", &self.tmr11_pause())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<APB2_PAUSE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         TMR11_PAUSE_W::new(self, 18)
     }
 }
-#[doc = "DEBUG APB2 PAUSE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2_pause::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb2_pause::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DEBUG APB2 PAUSE\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2_pause::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb2_pause::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB2_PAUSE_SPEC;
 impl crate::RegisterSpec for APB2_PAUSE_SPEC {
     type Ux = u32;

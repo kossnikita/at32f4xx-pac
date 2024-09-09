@@ -97,22 +97,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTSTS")
-            .field("ept_num", &format_args!("{}", self.ept_num().bits()))
-            .field("inout", &format_args!("{}", self.inout().bit()))
-            .field("lsof", &format_args!("{}", self.lsof().bit()))
-            .field("sof", &format_args!("{}", self.sof().bit()))
-            .field("rst", &format_args!("{}", self.rst().bit()))
-            .field("sp", &format_args!("{}", self.sp().bit()))
-            .field("wk", &format_args!("{}", self.wk().bit()))
-            .field("be", &format_args!("{}", self.be().bit()))
-            .field("ucfor", &format_args!("{}", self.ucfor().bit()))
-            .field("tc", &format_args!("{}", self.tc().bit()))
+            .field("ept_num", &self.ept_num())
+            .field("inout", &self.inout())
+            .field("lsof", &self.lsof())
+            .field("sof", &self.sof())
+            .field("rst", &self.rst())
+            .field("sp", &self.sp())
+            .field("wk", &self.wk())
+            .field("be", &self.be())
+            .field("ucfor", &self.ucfor())
+            .field("tc", &self.tc())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<INTSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -177,7 +172,7 @@ impl W {
         TC_W::new(self, 15)
     }
 }
-#[doc = "interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`intsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTSTS_SPEC;
 impl crate::RegisterSpec for INTSTS_SPEC {
     type Ux = u32;

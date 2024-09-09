@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_SRC_SEL1")
-            .field("ch5_src", &format_args!("{}", self.ch5_src().bits()))
-            .field("ch6_src", &format_args!("{}", self.ch6_src().bits()))
-            .field("ch7_src", &format_args!("{}", self.ch7_src().bits()))
-            .field("dma_flex_en", &format_args!("{}", self.dma_flex_en().bit()))
+            .field("ch5_src", &self.ch5_src())
+            .field("ch6_src", &self.ch6_src())
+            .field("ch7_src", &self.ch7_src())
+            .field("dma_flex_en", &self.dma_flex_en())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DMA_SRC_SEL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         DMA_FLEX_EN_W::new(self, 24)
     }
 }
-#[doc = "DMA channel source assignment register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_src_sel1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_src_sel1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA channel source assignment register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_src_sel1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_src_sel1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_SRC_SEL1_SPEC;
 impl crate::RegisterSpec for DMA_SRC_SEL1_SPEC {
     type Ux = u32;

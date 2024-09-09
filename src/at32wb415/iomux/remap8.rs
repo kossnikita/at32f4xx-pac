@@ -43,28 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP8")
-            .field(
-                "tmr3_ch1_cmp_gmux",
-                &format_args!("{}", self.tmr3_ch1_cmp_gmux().bits()),
-            )
-            .field(
-                "tmr2_ch4_cmp_gmux",
-                &format_args!("{}", self.tmr2_ch4_cmp_gmux().bits()),
-            )
-            .field(
-                "tmr1_ch1_cmp_gmux",
-                &format_args!("{}", self.tmr1_ch1_cmp_gmux().bits()),
-            )
-            .field(
-                "tmr1_bk1_cmp_gmux",
-                &format_args!("{}", self.tmr1_bk1_cmp_gmux().bits()),
-            )
+            .field("tmr3_ch1_cmp_gmux", &self.tmr3_ch1_cmp_gmux())
+            .field("tmr2_ch4_cmp_gmux", &self.tmr2_ch4_cmp_gmux())
+            .field("tmr1_ch1_cmp_gmux", &self.tmr1_ch1_cmp_gmux())
+            .field("tmr1_bk1_cmp_gmux", &self.tmr1_bk1_cmp_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP8_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -93,7 +76,7 @@ impl W {
         TMR3_CH1_CMP_GMUX_W::new(self, 6)
     }
 }
-#[doc = "IO MUX remap register 8\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap8::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap8::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 8\n\nYou can [`read`](crate::Reg::read) this register and get [`remap8::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap8::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP8_SPEC;
 impl crate::RegisterSpec for REMAP8_SPEC {
     type Ux = u32;

@@ -232,37 +232,32 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB1EN")
-            .field("tmr2", &format_args!("{}", self.tmr2().bit()))
-            .field("tmr3", &format_args!("{}", self.tmr3().bit()))
-            .field("tmr4", &format_args!("{}", self.tmr4().bit()))
-            .field("tmr5", &format_args!("{}", self.tmr5().bit()))
-            .field("tmr6", &format_args!("{}", self.tmr6().bit()))
-            .field("tmr7", &format_args!("{}", self.tmr7().bit()))
-            .field("tmr12", &format_args!("{}", self.tmr12().bit()))
-            .field("tmr13", &format_args!("{}", self.tmr13().bit()))
-            .field("tmr14", &format_args!("{}", self.tmr14().bit()))
-            .field("wwdt", &format_args!("{}", self.wwdt().bit()))
-            .field("spi2", &format_args!("{}", self.spi2().bit()))
-            .field("spi3", &format_args!("{}", self.spi3().bit()))
-            .field("spi4", &format_args!("{}", self.spi4().bit()))
-            .field("usart2", &format_args!("{}", self.usart2().bit()))
-            .field("usart3", &format_args!("{}", self.usart3().bit()))
-            .field("uart4", &format_args!("{}", self.uart4().bit()))
-            .field("uart5", &format_args!("{}", self.uart5().bit()))
-            .field("i2c1", &format_args!("{}", self.i2c1().bit()))
-            .field("i2c2", &format_args!("{}", self.i2c2().bit()))
-            .field("usb", &format_args!("{}", self.usb().bit()))
-            .field("can1", &format_args!("{}", self.can1().bit()))
-            .field("i2c3", &format_args!("{}", self.i2c3().bit()))
-            .field("bpr", &format_args!("{}", self.bpr().bit()))
-            .field("pwc", &format_args!("{}", self.pwc().bit()))
-            .field("dac", &format_args!("{}", self.dac().bit()))
+            .field("tmr2", &self.tmr2())
+            .field("tmr3", &self.tmr3())
+            .field("tmr4", &self.tmr4())
+            .field("tmr5", &self.tmr5())
+            .field("tmr6", &self.tmr6())
+            .field("tmr7", &self.tmr7())
+            .field("tmr12", &self.tmr12())
+            .field("tmr13", &self.tmr13())
+            .field("tmr14", &self.tmr14())
+            .field("wwdt", &self.wwdt())
+            .field("spi2", &self.spi2())
+            .field("spi3", &self.spi3())
+            .field("spi4", &self.spi4())
+            .field("usart2", &self.usart2())
+            .field("usart3", &self.usart3())
+            .field("uart4", &self.uart4())
+            .field("uart5", &self.uart5())
+            .field("i2c1", &self.i2c1())
+            .field("i2c2", &self.i2c2())
+            .field("usb", &self.usb())
+            .field("can1", &self.can1())
+            .field("i2c3", &self.i2c3())
+            .field("bpr", &self.bpr())
+            .field("pwc", &self.pwc())
+            .field("dac", &self.dac())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<APB1EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -417,7 +412,7 @@ impl W {
         DAC_W::new(self, 29)
     }
 }
-#[doc = "APB1 peripheral clock enable register (CRM_APB1EN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb1en::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb1en::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APB1 peripheral clock enable register (CRM_APB1EN)\n\nYou can [`read`](crate::Reg::read) this register and get [`apb1en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb1en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB1EN_SPEC;
 impl crate::RegisterSpec for APB1EN_SPEC {
     type Ux = u32;

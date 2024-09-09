@@ -196,33 +196,28 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB1LPEN")
-            .field("tmr2lpen", &format_args!("{}", self.tmr2lpen().bit()))
-            .field("tmr3lpen", &format_args!("{}", self.tmr3lpen().bit()))
-            .field("tmr4lpen", &format_args!("{}", self.tmr4lpen().bit()))
-            .field("tmr6lpen", &format_args!("{}", self.tmr6lpen().bit()))
-            .field("tmr7lpen", &format_args!("{}", self.tmr7lpen().bit()))
-            .field("tmr13lpen", &format_args!("{}", self.tmr13lpen().bit()))
-            .field("tmr14lpen", &format_args!("{}", self.tmr14lpen().bit()))
-            .field("wwdtlpen", &format_args!("{}", self.wwdtlpen().bit()))
-            .field("spi2lpen", &format_args!("{}", self.spi2lpen().bit()))
-            .field("spi3lpen", &format_args!("{}", self.spi3lpen().bit()))
-            .field("usart2lpen", &format_args!("{}", self.usart2lpen().bit()))
-            .field("usart3lpen", &format_args!("{}", self.usart3lpen().bit()))
-            .field("usart4lpen", &format_args!("{}", self.usart4lpen().bit()))
-            .field("usart5lpen", &format_args!("{}", self.usart5lpen().bit()))
-            .field("i2c1cpen", &format_args!("{}", self.i2c1cpen().bit()))
-            .field("i2c2cpen", &format_args!("{}", self.i2c2cpen().bit()))
-            .field("i2c3cpen", &format_args!("{}", self.i2c3cpen().bit()))
-            .field("can1lpen", &format_args!("{}", self.can1lpen().bit()))
-            .field("pwclpen", &format_args!("{}", self.pwclpen().bit()))
-            .field("uart7lpen", &format_args!("{}", self.uart7lpen().bit()))
-            .field("uart8lpen", &format_args!("{}", self.uart8lpen().bit()))
+            .field("tmr2lpen", &self.tmr2lpen())
+            .field("tmr3lpen", &self.tmr3lpen())
+            .field("tmr4lpen", &self.tmr4lpen())
+            .field("tmr6lpen", &self.tmr6lpen())
+            .field("tmr7lpen", &self.tmr7lpen())
+            .field("tmr13lpen", &self.tmr13lpen())
+            .field("tmr14lpen", &self.tmr14lpen())
+            .field("wwdtlpen", &self.wwdtlpen())
+            .field("spi2lpen", &self.spi2lpen())
+            .field("spi3lpen", &self.spi3lpen())
+            .field("usart2lpen", &self.usart2lpen())
+            .field("usart3lpen", &self.usart3lpen())
+            .field("usart4lpen", &self.usart4lpen())
+            .field("usart5lpen", &self.usart5lpen())
+            .field("i2c1cpen", &self.i2c1cpen())
+            .field("i2c2cpen", &self.i2c2cpen())
+            .field("i2c3cpen", &self.i2c3cpen())
+            .field("can1lpen", &self.can1lpen())
+            .field("pwclpen", &self.pwclpen())
+            .field("uart7lpen", &self.uart7lpen())
+            .field("uart8lpen", &self.uart8lpen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<APB1LPEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -353,7 +348,7 @@ impl W {
         UART8LPEN_W::new(self, 31)
     }
 }
-#[doc = "APB1 peripheral Low-power clock enable register (CRM_APB1LPEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb1lpen::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb1lpen::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APB1 peripheral Low-power clock enable register (CRM_APB1LPEN)\n\nYou can [`read`](crate::Reg::read) this register and get [`apb1lpen::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb1lpen::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB1LPEN_SPEC;
 impl crate::RegisterSpec for APB1LPEN_SPEC {
     type Ux = u32;

@@ -5,11 +5,11 @@ pub type W = crate::W<SPT2_SPEC>;
 #[doc = "Field `CSPT(0-9)` reader - Selection sample time of channel ADC_IN%s"]
 pub type CSPT_R = crate::FieldReader;
 #[doc = "Field `CSPT(0-9)` writer - Selection sample time of channel ADC_IN%s"]
-pub type CSPT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type CSPT_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 impl R {
     #[doc = "Selection sample time of channel ADC_IN(0-9)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CSPT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CSPT0` field.</div>"]
     #[inline(always)]
     pub fn cspt(&self, n: u8) -> CSPT_R {
         #[allow(clippy::no_effect)]
@@ -76,28 +76,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPT2")
-            .field("cspt0", &format_args!("{}", self.cspt0().bits()))
-            .field("cspt1", &format_args!("{}", self.cspt1().bits()))
-            .field("cspt2", &format_args!("{}", self.cspt2().bits()))
-            .field("cspt3", &format_args!("{}", self.cspt3().bits()))
-            .field("cspt4", &format_args!("{}", self.cspt4().bits()))
-            .field("cspt5", &format_args!("{}", self.cspt5().bits()))
-            .field("cspt6", &format_args!("{}", self.cspt6().bits()))
-            .field("cspt7", &format_args!("{}", self.cspt7().bits()))
-            .field("cspt8", &format_args!("{}", self.cspt8().bits()))
-            .field("cspt9", &format_args!("{}", self.cspt9().bits()))
+            .field("cspt0", &self.cspt0())
+            .field("cspt1", &self.cspt1())
+            .field("cspt2", &self.cspt2())
+            .field("cspt3", &self.cspt3())
+            .field("cspt4", &self.cspt4())
+            .field("cspt5", &self.cspt5())
+            .field("cspt6", &self.cspt6())
+            .field("cspt7", &self.cspt7())
+            .field("cspt8", &self.cspt8())
+            .field("cspt9", &self.cspt9())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<SPT2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Selection sample time of channel ADC_IN(0-9)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CSPT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CSPT0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cspt(&mut self, n: u8) -> CSPT_W<SPT2_SPEC> {
@@ -166,7 +161,7 @@ impl W {
         CSPT_W::new(self, 27)
     }
 }
-#[doc = "sample time register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spt2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spt2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "sample time register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`spt2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spt2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPT2_SPEC;
 impl crate::RegisterSpec for SPT2_SPEC {
     type Ux = u32;

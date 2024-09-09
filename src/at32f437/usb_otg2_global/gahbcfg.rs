@@ -34,15 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GAHBCFG")
-            .field("glbintmsk", &format_args!("{}", self.glbintmsk().bit()))
-            .field("nptxfemplvl", &format_args!("{}", self.nptxfemplvl().bit()))
-            .field("ptxfemplvl", &format_args!("{}", self.ptxfemplvl().bit()))
+            .field("glbintmsk", &self.glbintmsk())
+            .field("nptxfemplvl", &self.nptxfemplvl())
+            .field("ptxfemplvl", &self.ptxfemplvl())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GAHBCFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -65,7 +60,7 @@ impl W {
         PTXFEMPLVL_W::new(self, 8)
     }
 }
-#[doc = "OTGFS AHB configuration register (OTGFS_GAHBCFG)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gahbcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gahbcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS AHB configuration register (OTGFS_GAHBCFG)\n\nYou can [`read`](crate::Reg::read) this register and get [`gahbcfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gahbcfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GAHBCFG_SPEC;
 impl crate::RegisterSpec for GAHBCFG_SPEC {
     type Ux = u32;

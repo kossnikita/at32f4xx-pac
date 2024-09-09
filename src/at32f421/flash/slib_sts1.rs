@@ -34,18 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLIB_STS1")
-            .field("slib_ss", &format_args!("{}", self.slib_ss().bits()))
-            .field(
-                "slib_inst_ss",
-                &format_args!("{}", self.slib_inst_ss().bits()),
-            )
-            .field("slib_es", &format_args!("{}", self.slib_es().bits()))
+            .field("slib_ss", &self.slib_ss())
+            .field("slib_inst_ss", &self.slib_inst_ss())
+            .field("slib_es", &self.slib_es())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<SLIB_STS1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -68,7 +60,7 @@ impl W {
         SLIB_ES_W::new(self, 22)
     }
 }
-#[doc = "sLib status 1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slib_sts1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slib_sts1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "sLib status 1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`slib_sts1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slib_sts1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLIB_STS1_SPEC;
 impl crate::RegisterSpec for SLIB_STS1_SPEC {
     type Ux = u32;

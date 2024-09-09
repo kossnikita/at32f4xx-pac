@@ -5,7 +5,7 @@ pub type W = crate::W<DMADT_SPEC>;
 #[doc = "Field `DMADT` reader - DMA data register"]
 pub type DMADT_R = crate::FieldReader<u16>;
 #[doc = "Field `DMADT` writer - DMA data register"]
-pub type DMADT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 16, u16>;
+pub type DMADT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16, crate::Safe>;
 impl R {
     #[doc = "Bits 0:15 - DMA data register"]
     #[inline(always)]
@@ -16,13 +16,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMADT")
-            .field("dmadt", &format_args!("{}", self.dmadt().bits()))
+            .field("dmadt", &self.dmadt())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DMADT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -33,7 +28,7 @@ impl W {
         DMADT_W::new(self, 0)
     }
 }
-#[doc = "DMA data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmadt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmadt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA data register\n\nYou can [`read`](crate::Reg::read) this register and get [`dmadt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmadt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMADT_SPEC;
 impl crate::RegisterSpec for DMADT_SPEC {
     type Ux = u32;

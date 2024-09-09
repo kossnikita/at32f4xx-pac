@@ -749,26 +749,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS1")
-            .field("alertf", &format_args!("{}", self.alertf().bit()))
-            .field("tmout", &format_args!("{}", self.tmout().bit()))
-            .field("pecerr", &format_args!("{}", self.pecerr().bit()))
-            .field("ouf", &format_args!("{}", self.ouf().bit()))
-            .field("ackfail", &format_args!("{}", self.ackfail().bit()))
-            .field("arlost", &format_args!("{}", self.arlost().bit()))
-            .field("buserr", &format_args!("{}", self.buserr().bit()))
-            .field("tdbe", &format_args!("{}", self.tdbe().bit()))
-            .field("rdbf", &format_args!("{}", self.rdbf().bit()))
-            .field("stopf", &format_args!("{}", self.stopf().bit()))
-            .field("addrhf", &format_args!("{}", self.addrhf().bit()))
-            .field("tdc", &format_args!("{}", self.tdc().bit()))
-            .field("addr7f", &format_args!("{}", self.addr7f().bit()))
-            .field("startf", &format_args!("{}", self.startf().bit()))
+            .field("alertf", &self.alertf())
+            .field("tmout", &self.tmout())
+            .field("pecerr", &self.pecerr())
+            .field("ouf", &self.ouf())
+            .field("ackfail", &self.ackfail())
+            .field("arlost", &self.arlost())
+            .field("buserr", &self.buserr())
+            .field("tdbe", &self.tdbe())
+            .field("rdbf", &self.rdbf())
+            .field("stopf", &self.stopf())
+            .field("addrhf", &self.addrhf())
+            .field("tdc", &self.tdc())
+            .field("addr7f", &self.addr7f())
+            .field("startf", &self.startf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<STS1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -815,7 +810,7 @@ impl W {
         ALERTF_W::new(self, 15)
     }
 }
-#[doc = "Status register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Status register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`sts1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sts1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS1_SPEC;
 impl crate::RegisterSpec for STS1_SPEC {
     type Ux = u32;

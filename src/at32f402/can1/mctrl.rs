@@ -678,22 +678,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MCTRL")
-            .field("ptd", &format_args!("{}", self.ptd().bit()))
-            .field("sprst", &format_args!("{}", self.sprst().bit()))
-            .field("ttcen", &format_args!("{}", self.ttcen().bit()))
-            .field("aeboen", &format_args!("{}", self.aeboen().bit()))
-            .field("aeden", &format_args!("{}", self.aeden().bit()))
-            .field("prsfen", &format_args!("{}", self.prsfen().bit()))
-            .field("mdrsel", &format_args!("{}", self.mdrsel().bit()))
-            .field("mmssr", &format_args!("{}", self.mmssr().bit()))
-            .field("dzen", &format_args!("{}", self.dzen().bit()))
-            .field("fzen", &format_args!("{}", self.fzen().bit()))
+            .field("ptd", &self.ptd())
+            .field("sprst", &self.sprst())
+            .field("ttcen", &self.ttcen())
+            .field("aeboen", &self.aeboen())
+            .field("aeden", &self.aeden())
+            .field("prsfen", &self.prsfen())
+            .field("mdrsel", &self.mdrsel())
+            .field("mmssr", &self.mmssr())
+            .field("dzen", &self.dzen())
+            .field("fzen", &self.fzen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -758,7 +753,7 @@ impl W {
         PTD_W::new(self, 16)
     }
 }
-#[doc = "Main control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Main control register\n\nYou can [`read`](crate::Reg::read) this register and get [`mctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MCTRL_SPEC;
 impl crate::RegisterSpec for MCTRL_SPEC {
     type Ux = u32;

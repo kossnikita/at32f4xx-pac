@@ -58,7 +58,7 @@ where
 impl R {
     #[doc = "Port hdrv bit (0-15)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `HDRV0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `HDRV0` field.</div>"]
     #[inline(always)]
     pub fn hdrv(&self, n: u8) -> HDRV_R {
         #[allow(clippy::no_effect)]
@@ -155,34 +155,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HDRV")
-            .field("hdrv0", &format_args!("{}", self.hdrv0().bit()))
-            .field("hdrv1", &format_args!("{}", self.hdrv1().bit()))
-            .field("hdrv2", &format_args!("{}", self.hdrv2().bit()))
-            .field("hdrv3", &format_args!("{}", self.hdrv3().bit()))
-            .field("hdrv4", &format_args!("{}", self.hdrv4().bit()))
-            .field("hdrv5", &format_args!("{}", self.hdrv5().bit()))
-            .field("hdrv6", &format_args!("{}", self.hdrv6().bit()))
-            .field("hdrv7", &format_args!("{}", self.hdrv7().bit()))
-            .field("hdrv8", &format_args!("{}", self.hdrv8().bit()))
-            .field("hdrv9", &format_args!("{}", self.hdrv9().bit()))
-            .field("hdrv10", &format_args!("{}", self.hdrv10().bit()))
-            .field("hdrv11", &format_args!("{}", self.hdrv11().bit()))
-            .field("hdrv12", &format_args!("{}", self.hdrv12().bit()))
-            .field("hdrv13", &format_args!("{}", self.hdrv13().bit()))
-            .field("hdrv14", &format_args!("{}", self.hdrv14().bit()))
-            .field("hdrv15", &format_args!("{}", self.hdrv15().bit()))
+            .field("hdrv0", &self.hdrv0())
+            .field("hdrv1", &self.hdrv1())
+            .field("hdrv2", &self.hdrv2())
+            .field("hdrv3", &self.hdrv3())
+            .field("hdrv4", &self.hdrv4())
+            .field("hdrv5", &self.hdrv5())
+            .field("hdrv6", &self.hdrv6())
+            .field("hdrv7", &self.hdrv7())
+            .field("hdrv8", &self.hdrv8())
+            .field("hdrv9", &self.hdrv9())
+            .field("hdrv10", &self.hdrv10())
+            .field("hdrv11", &self.hdrv11())
+            .field("hdrv12", &self.hdrv12())
+            .field("hdrv13", &self.hdrv13())
+            .field("hdrv14", &self.hdrv14())
+            .field("hdrv15", &self.hdrv15())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HDRV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Port hdrv bit (0-15)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `HDRV0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `HDRV0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn hdrv(&mut self, n: u8) -> HDRV_W<HDRV_SPEC> {
@@ -287,7 +282,7 @@ impl W {
         HDRV_W::new(self, 15)
     }
 }
-#[doc = "Port configuration driver register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hdrv::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hdrv::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Port configuration driver register\n\nYou can [`read`](crate::Reg::read) this register and get [`hdrv::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hdrv::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HDRV_SPEC;
 impl crate::RegisterSpec for HDRV_SPEC {
     type Ux = u32;

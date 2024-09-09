@@ -52,17 +52,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HCSPLT5")
-            .field("prtaddr", &format_args!("{}", self.prtaddr().bits()))
-            .field("hubaddr", &format_args!("{}", self.hubaddr().bits()))
-            .field("xactpos", &format_args!("{}", self.xactpos().bits()))
-            .field("compsplt", &format_args!("{}", self.compsplt().bit()))
-            .field("spltena", &format_args!("{}", self.spltena().bit()))
+            .field("prtaddr", &self.prtaddr())
+            .field("hubaddr", &self.hubaddr())
+            .field("xactpos", &self.xactpos())
+            .field("compsplt", &self.compsplt())
+            .field("spltena", &self.spltena())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HCSPLT5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -97,7 +92,7 @@ impl W {
         SPLTENA_W::new(self, 31)
     }
 }
-#[doc = "Host Channel 5 Split Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcsplt5::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcsplt5::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Host Channel 5 Split Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`hcsplt5::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hcsplt5::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCSPLT5_SPEC;
 impl crate::RegisterSpec for HCSPLT5_SPEC {
     type Ux = u32;

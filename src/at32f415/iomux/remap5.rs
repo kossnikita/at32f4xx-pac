@@ -22,6 +22,7 @@ impl From<I2C1_GMUX_A> for u8 {
 impl crate::FieldSpec for I2C1_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for I2C1_GMUX_A {}
 #[doc = "Field `I2C1_GMUX` reader - I2C1 muxing"]
 pub type I2C1_GMUX_R = crate::FieldReader<I2C1_GMUX_A>;
 impl I2C1_GMUX_R {
@@ -96,6 +97,7 @@ impl From<I2C2_GMUX_A> for u8 {
 impl crate::FieldSpec for I2C2_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for I2C2_GMUX_A {}
 #[doc = "Field `I2C2_GMUX` reader - I2C2 muxing"]
 pub type I2C2_GMUX_R = crate::FieldReader<I2C2_GMUX_A>;
 impl I2C2_GMUX_R {
@@ -177,6 +179,7 @@ impl From<SPI1_GMUX_A> for u8 {
 impl crate::FieldSpec for SPI1_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SPI1_GMUX_A {}
 #[doc = "Field `SPI1_GMUX` reader - SPI1 muxing"]
 pub type SPI1_GMUX_R = crate::FieldReader<SPI1_GMUX_A>;
 impl SPI1_GMUX_R {
@@ -236,6 +239,7 @@ impl From<SPI2_GMUX_A> for u8 {
 impl crate::FieldSpec for SPI2_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SPI2_GMUX_A {}
 #[doc = "Field `SPI2_GMUX` reader - SPI2 muxing"]
 pub type SPI2_GMUX_R = crate::FieldReader<SPI2_GMUX_A>;
 impl SPI2_GMUX_R {
@@ -302,16 +306,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP5")
-            .field("spi2_gmux", &format_args!("{}", self.spi2_gmux().bits()))
-            .field("spi1_gmux", &format_args!("{}", self.spi1_gmux().bits()))
-            .field("i2c2_gmux", &format_args!("{}", self.i2c2_gmux().bits()))
-            .field("i2c1_gmux", &format_args!("{}", self.i2c1_gmux().bits()))
+            .field("spi2_gmux", &self.spi2_gmux())
+            .field("spi1_gmux", &self.spi1_gmux())
+            .field("i2c2_gmux", &self.i2c2_gmux())
+            .field("i2c1_gmux", &self.i2c1_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -340,7 +339,7 @@ impl W {
         SPI2_GMUX_W::new(self, 20)
     }
 }
-#[doc = "IO MUX remap register 5\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap5::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap5::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 5\n\nYou can [`read`](crate::Reg::read) this register and get [`remap5::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap5::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP5_SPEC;
 impl crate::RegisterSpec for REMAP5_SPEC {
     type Ux = u32;

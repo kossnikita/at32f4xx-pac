@@ -405,7 +405,7 @@ pub use OCPEN_W as PCPEN_W;
 #[doc = "Field `OCPCNT` reader - Partitioned mode conversion count of ordinary channels"]
 pub type OCPCNT_R = crate::FieldReader;
 #[doc = "Field `OCPCNT` writer - Partitioned mode conversion count of ordinary channels"]
-pub type OCPCNT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3>;
+pub type OCPCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 3, u8, crate::Safe>;
 #[doc = "Voltage monitoring enable on preempted channels\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Pcvmenr {
@@ -560,26 +560,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
-            .field("occoien", &format_args!("{}", self.occoien().bit()))
-            .field("crsel", &format_args!("{}", self.crsel().bits()))
-            .field("pcvmen", &format_args!("{}", self.pcvmen().bit()))
-            .field("ocvmen", &format_args!("{}", self.ocvmen().bit()))
-            .field("ocpcnt", &format_args!("{}", self.ocpcnt().bits()))
-            .field("ocpen", &format_args!("{}", self.ocpen().bit()))
-            .field("pcpen", &format_args!("{}", self.pcpen().bit()))
-            .field("pcautoen", &format_args!("{}", self.pcautoen().bit()))
-            .field("vmsgen", &format_args!("{}", self.vmsgen().bit()))
-            .field("sqen", &format_args!("{}", self.sqen().bit()))
-            .field("occeien", &format_args!("{}", self.occeien().bit()))
-            .field("pcceien", &format_args!("{}", self.pcceien().bit()))
-            .field("vmorien", &format_args!("{}", self.vmorien().bit()))
-            .field("vmcsel", &format_args!("{}", self.vmcsel().bits()))
+            .field("occoien", &self.occoien())
+            .field("crsel", &self.crsel())
+            .field("pcvmen", &self.pcvmen())
+            .field("ocvmen", &self.ocvmen())
+            .field("ocpcnt", &self.ocpcnt())
+            .field("ocpen", &self.ocpen())
+            .field("pcpen", &self.pcpen())
+            .field("pcautoen", &self.pcautoen())
+            .field("vmsgen", &self.vmsgen())
+            .field("sqen", &self.sqen())
+            .field("occeien", &self.occeien())
+            .field("pcceien", &self.pcceien())
+            .field("vmorien", &self.vmorien())
+            .field("vmcsel", &self.vmcsel())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -668,7 +663,7 @@ impl W {
         OCCOIEN_W::new(self, 26)
     }
 }
-#[doc = "control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL1_SPEC;
 impl crate::RegisterSpec for CTRL1_SPEC {
     type Ux = u32;

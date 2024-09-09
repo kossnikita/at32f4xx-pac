@@ -83,4 +83,11 @@ PROVIDE(TMR20_BRK = DefaultHandler);
 PROVIDE(TMR20_OVF = DefaultHandler);
 PROVIDE(TMR20_TRG_HALL = DefaultHandler);
 PROVIDE(TMR20_CH = DefaultHandler);
+PROVIDE(DMA2_CHANNEL1 = DefaultHandler);
+PROVIDE(DMA2_CHANNEL2 = DefaultHandler);
+PROVIDE(DMA2_CHANNEL3 = DefaultHandler);
+PROVIDE(DMA2_CHANNEL4 = DefaultHandler);
+PROVIDE(DMA2_CHANNEL5 = DefaultHandler);
+PROVIDE(DMA2_CHANNEL6 = DefaultHandler);
+PROVIDE(DMA2_CHANNEL7 = DefaultHandler);
 

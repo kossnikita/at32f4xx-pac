@@ -133,26 +133,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
-            .field("slben", &format_args!("{}", self.slben().bit()))
-            .field("slbtd", &format_args!("{}", self.slbtd().bit()))
-            .field("ccen", &format_args!("{}", self.ccen().bit()))
-            .field("ntc", &format_args!("{}", self.ntc().bit()))
-            .field("fbn", &format_args!("{}", self.fbn().bit()))
-            .field("ora", &format_args!("{}", self.ora().bit()))
-            .field("swcsen", &format_args!("{}", self.swcsen().bit()))
-            .field("swcsil", &format_args!("{}", self.swcsil().bit()))
-            .field("ltf", &format_args!("{}", self.ltf().bit()))
-            .field("spien", &format_args!("{}", self.spien().bit()))
-            .field("mdiv2_0", &format_args!("{}", self.mdiv2_0().bits()))
-            .field("msten", &format_args!("{}", self.msten().bit()))
-            .field("clkpol", &format_args!("{}", self.clkpol().bit()))
-            .field("clkpha", &format_args!("{}", self.clkpha().bit()))
+            .field("slben", &self.slben())
+            .field("slbtd", &self.slbtd())
+            .field("ccen", &self.ccen())
+            .field("ntc", &self.ntc())
+            .field("fbn", &self.fbn())
+            .field("ora", &self.ora())
+            .field("swcsen", &self.swcsen())
+            .field("swcsil", &self.swcsil())
+            .field("ltf", &self.ltf())
+            .field("spien", &self.spien())
+            .field("mdiv2_0", &self.mdiv2_0())
+            .field("msten", &self.msten())
+            .field("clkpol", &self.clkpol())
+            .field("clkpha", &self.clkpha())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -241,7 +236,7 @@ impl W {
         SLBEN_W::new(self, 15)
     }
 }
-#[doc = "control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL1_SPEC;
 impl crate::RegisterSpec for CTRL1_SPEC {
     type Ux = u32;

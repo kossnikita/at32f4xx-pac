@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field("fprgm", &format_args!("{}", self.fprgm().bit()))
-            .field("secers", &format_args!("{}", self.secers().bit()))
-            .field("bankers", &format_args!("{}", self.bankers().bit()))
-            .field("blkers", &format_args!("{}", self.blkers().bit()))
-            .field("erstr", &format_args!("{}", self.erstr().bit()))
-            .field("oplk", &format_args!("{}", self.oplk().bit()))
-            .field("errie", &format_args!("{}", self.errie().bit()))
-            .field("odfie", &format_args!("{}", self.odfie().bit()))
+            .field("fprgm", &self.fprgm())
+            .field("secers", &self.secers())
+            .field("bankers", &self.bankers())
+            .field("blkers", &self.blkers())
+            .field("erstr", &self.erstr())
+            .field("oplk", &self.oplk())
+            .field("errie", &self.errie())
+            .field("odfie", &self.odfie())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         ODFIE_W::new(self, 12)
     }
 }
-#[doc = "Control 2 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control 2 register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;

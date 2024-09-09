@@ -124,25 +124,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB2RST")
-            .field("tmr1", &format_args!("{}", self.tmr1().bit()))
-            .field("tmr8", &format_args!("{}", self.tmr8().bit()))
-            .field("usart1", &format_args!("{}", self.usart1().bit()))
-            .field("usart6", &format_args!("{}", self.usart6().bit()))
-            .field("adc", &format_args!("{}", self.adc().bit()))
-            .field("spi1", &format_args!("{}", self.spi1().bit()))
-            .field("spi4", &format_args!("{}", self.spi4().bit()))
-            .field("scfg", &format_args!("{}", self.scfg().bit()))
-            .field("tmr9", &format_args!("{}", self.tmr9().bit()))
-            .field("tmr10", &format_args!("{}", self.tmr10().bit()))
-            .field("tmr11", &format_args!("{}", self.tmr11().bit()))
-            .field("tmr20", &format_args!("{}", self.tmr20().bit()))
-            .field("acc", &format_args!("{}", self.acc().bit()))
+            .field("tmr1", &self.tmr1())
+            .field("tmr8", &self.tmr8())
+            .field("usart1", &self.usart1())
+            .field("usart6", &self.usart6())
+            .field("adc", &self.adc())
+            .field("spi1", &self.spi1())
+            .field("spi4", &self.spi4())
+            .field("scfg", &self.scfg())
+            .field("tmr9", &self.tmr9())
+            .field("tmr10", &self.tmr10())
+            .field("tmr11", &self.tmr11())
+            .field("tmr20", &self.tmr20())
+            .field("acc", &self.acc())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<APB2RST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -225,7 +220,7 @@ impl W {
         ACC_W::new(self, 29)
     }
 }
-#[doc = "APB2 peripheral reset register (CRM_APB2RST)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2rst::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb2rst::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APB2 peripheral reset register (CRM_APB2RST)\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2rst::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb2rst::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB2RST_SPEC;
 impl crate::RegisterSpec for APB2RST_SPEC {
     type Ux = u32;

@@ -34,15 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MMCTI")
-            .field("tscgfci", &format_args!("{}", self.tscgfci().bit()))
-            .field("tgfmsc", &format_args!("{}", self.tgfmsc().bit()))
-            .field("tgf", &format_args!("{}", self.tgf().bit()))
+            .field("tscgfci", &self.tscgfci())
+            .field("tgfmsc", &self.tgfmsc())
+            .field("tgf", &self.tgf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MMCTI_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -65,7 +60,7 @@ impl W {
         TGF_W::new(self, 21)
     }
 }
-#[doc = "Ethernet MMC transmit interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mmcti::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mmcti::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet MMC transmit interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`mmcti::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mmcti::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MMCTI_SPEC;
 impl crate::RegisterSpec for MMCTI_SPEC {
     type Ux = u32;

@@ -12,16 +12,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RSPCMD")
-            .field("rspcmd", &format_args!("{}", self.rspcmd().bits()))
+            .field("rspcmd", &self.rspcmd())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<RSPCMD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "SDIO command register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rspcmd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SDIO command register\n\nYou can [`read`](crate::Reg::read) this register and get [`rspcmd::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RSPCMD_SPEC;
 impl crate::RegisterSpec for RSPCMD_SPEC {
     type Ux = u32;

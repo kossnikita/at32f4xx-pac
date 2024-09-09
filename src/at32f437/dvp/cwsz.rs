@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CWSZ")
-            .field("cvnum", &format_args!("{}", self.cvnum().bits()))
-            .field("chnum", &format_args!("{}", self.chnum().bits()))
+            .field("cvnum", &self.cvnum())
+            .field("chnum", &self.chnum())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CWSZ_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         CVNUM_W::new(self, 16)
     }
 }
-#[doc = "Crop window size\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cwsz::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cwsz::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Crop window size\n\nYou can [`read`](crate::Reg::read) this register and get [`cwsz::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cwsz::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CWSZ_SPEC;
 impl crate::RegisterSpec for CWSZ_SPEC {
     type Ux = u32;

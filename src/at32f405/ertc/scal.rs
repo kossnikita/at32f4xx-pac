@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCAL")
-            .field("add", &format_args!("{}", self.add().bit()))
-            .field("cal8", &format_args!("{}", self.cal8().bit()))
-            .field("cal16", &format_args!("{}", self.cal16().bit()))
-            .field("dec", &format_args!("{}", self.dec().bits()))
+            .field("add", &self.add())
+            .field("cal8", &self.cal8())
+            .field("cal16", &self.cal16())
+            .field("dec", &self.dec())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<SCAL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         ADD_W::new(self, 15)
     }
 }
-#[doc = "calibration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scal::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scal::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "calibration register\n\nYou can [`read`](crate::Reg::read) this register and get [`scal::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scal::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SCAL_SPEC;
 impl crate::RegisterSpec for SCAL_SPEC {
     type Ux = u32;

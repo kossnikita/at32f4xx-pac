@@ -79,23 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG1")
-            .field(
-                "mem_map_sel",
-                &format_args!("{}", self.mem_map_sel().bits()),
-            )
-            .field("pa11_12_rmp", &format_args!("{}", self.pa11_12_rmp().bit()))
-            .field("ir_pol", &format_args!("{}", self.ir_pol().bit()))
-            .field("ir_src_sel", &format_args!("{}", self.ir_src_sel().bits()))
-            .field("pb14_uh", &format_args!("{}", self.pb14_uh().bit()))
-            .field("pb13_uh", &format_args!("{}", self.pb13_uh().bit()))
-            .field("pb9_uh", &format_args!("{}", self.pb9_uh().bit()))
-            .field("pb8_uh", &format_args!("{}", self.pb8_uh().bit()))
+            .field("mem_map_sel", &self.mem_map_sel())
+            .field("pa11_12_rmp", &self.pa11_12_rmp())
+            .field("ir_pol", &self.ir_pol())
+            .field("ir_src_sel", &self.ir_src_sel())
+            .field("pb14_uh", &self.pb14_uh())
+            .field("pb13_uh", &self.pb13_uh())
+            .field("pb9_uh", &self.pb9_uh())
+            .field("pb8_uh", &self.pb8_uh())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CFG1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -148,7 +140,7 @@ impl W {
         PB8_UH_W::new(self, 19)
     }
 }
-#[doc = "configuration register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "configuration register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG1_SPEC;
 impl crate::RegisterSpec for CFG1_SPEC {
     type Ux = u32;

@@ -34,21 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC2")
-            .field(
-                "auto_step_en",
-                &format_args!("{}", self.auto_step_en().bits()),
-            )
-            .field("hick_to_usb", &format_args!("{}", self.hick_to_usb().bit()))
-            .field(
-                "hick_to_sclk",
-                &format_args!("{}", self.hick_to_sclk().bit()),
-            )
+            .field("auto_step_en", &self.auto_step_en())
+            .field("hick_to_usb", &self.hick_to_usb())
+            .field("hick_to_sclk", &self.hick_to_sclk())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MISC2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -71,7 +60,7 @@ impl W {
         HICK_TO_SCLK_W::new(self, 9)
     }
 }
-#[doc = "Miscellaneous register2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`misc2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`misc2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Miscellaneous register2\n\nYou can [`read`](crate::Reg::read) this register and get [`misc2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`misc2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MISC2_SPEC;
 impl crate::RegisterSpec for MISC2_SPEC {
     type Ux = u32;

@@ -12,16 +12,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("D2ODT")
-            .field("d2odt", &format_args!("{}", self.d2odt().bits()))
+            .field("d2odt", &self.d2odt())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<D2ODT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "DAC2 data output register (DAC_D2ODT)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`d2odt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DAC2 data output register (DAC_D2ODT)\n\nYou can [`read`](crate::Reg::read) this register and get [`d2odt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct D2ODT_SPEC;
 impl crate::RegisterSpec for D2ODT_SPEC {
     type Ux = u32;

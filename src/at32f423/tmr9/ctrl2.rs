@@ -6,9 +6,9 @@ pub type W = crate::W<CTRL2_SPEC>;
 pub type CBCTRL_R = crate::BitReader;
 #[doc = "Field `CBCTRL` writer - Channel buffer control"]
 pub type CBCTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CCFS` reader - Channel control bit flash select"]
+#[doc = "Field `CCFS` reader - Channel control bit refresh select"]
 pub type CCFS_R = crate::BitReader;
-#[doc = "Field `CCFS` writer - Channel control bit flash select"]
+#[doc = "Field `CCFS` writer - Channel control bit refresh select"]
 pub type CCFS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DRS` reader - DMA request source"]
 pub type DRS_R = crate::BitReader;
@@ -40,7 +40,7 @@ impl R {
     pub fn cbctrl(&self) -> CBCTRL_R {
         CBCTRL_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 2 - Channel control bit flash select"]
+    #[doc = "Bit 2 - Channel control bit refresh select"]
     #[inline(always)]
     pub fn ccfs(&self) -> CCFS_R {
         CCFS_R::new(((self.bits >> 2) & 1) != 0)
@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field("c2cios", &format_args!("{}", self.c2cios().bit()))
-            .field("c2ios", &format_args!("{}", self.c2ios().bit()))
-            .field("c1cios", &format_args!("{}", self.c1cios().bit()))
-            .field("c1ios", &format_args!("{}", self.c1ios().bit()))
-            .field("ptos", &format_args!("{}", self.ptos().bits()))
-            .field("drs", &format_args!("{}", self.drs().bit()))
-            .field("ccfs", &format_args!("{}", self.ccfs().bit()))
-            .field("cbctrl", &format_args!("{}", self.cbctrl().bit()))
+            .field("c2cios", &self.c2cios())
+            .field("c2ios", &self.c2ios())
+            .field("c1cios", &self.c1cios())
+            .field("c1ios", &self.c1ios())
+            .field("ptos", &self.ptos())
+            .field("drs", &self.drs())
+            .field("ccfs", &self.ccfs())
+            .field("cbctrl", &self.cbctrl())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -102,7 +97,7 @@ impl W {
     pub fn cbctrl(&mut self) -> CBCTRL_W<CTRL2_SPEC> {
         CBCTRL_W::new(self, 0)
     }
-    #[doc = "Bit 2 - Channel control bit flash select"]
+    #[doc = "Bit 2 - Channel control bit refresh select"]
     #[inline(always)]
     #[must_use]
     pub fn ccfs(&mut self) -> CCFS_W<CTRL2_SPEC> {
@@ -145,7 +140,7 @@ impl W {
         C2CIOS_W::new(self, 11)
     }
 }
-#[doc = "Control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;

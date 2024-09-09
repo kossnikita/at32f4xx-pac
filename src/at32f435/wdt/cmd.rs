@@ -20,6 +20,7 @@ impl From<CMD_A> for u16 {
 impl crate::FieldSpec for CMD_A {
     type Ux = u16;
 }
+impl crate::IsEnum for CMD_A {}
 #[doc = "Field `CMD` writer - Command register"]
 pub type CMD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, CMD_A>;
 impl<'a, REG> CMD_W<'a, REG>
@@ -56,7 +57,7 @@ impl W {
         CMD_W::new(self, 0)
     }
 }
-#[doc = "Command register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cmd::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Command register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmd::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CMD_SPEC;
 impl crate::RegisterSpec for CMD_SPEC {
     type Ux = u32;

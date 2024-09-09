@@ -70,19 +70,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GUSBCFG")
-            .field("toutcal", &format_args!("{}", self.toutcal().bits()))
-            .field("phyif", &format_args!("{}", self.phyif().bit()))
-            .field("physel", &format_args!("{}", self.physel().bit()))
-            .field("usbtrdtim", &format_args!("{}", self.usbtrdtim().bits()))
-            .field("fhstmode", &format_args!("{}", self.fhstmode().bit()))
-            .field("fdevmode", &format_args!("{}", self.fdevmode().bit()))
-            .field("cotxpkt", &format_args!("{}", self.cotxpkt().bit()))
+            .field("toutcal", &self.toutcal())
+            .field("phyif", &self.phyif())
+            .field("physel", &self.physel())
+            .field("usbtrdtim", &self.usbtrdtim())
+            .field("fhstmode", &self.fhstmode())
+            .field("fdevmode", &self.fdevmode())
+            .field("cotxpkt", &self.cotxpkt())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GUSBCFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -129,7 +124,7 @@ impl W {
         COTXPKT_W::new(self, 31)
     }
 }
-#[doc = "USB configuration register (OTGHS_GUSBCFG)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gusbcfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gusbcfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "USB configuration register (OTGHS_GUSBCFG)\n\nYou can [`read`](crate::Reg::read) this register and get [`gusbcfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gusbcfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GUSBCFG_SPEC;
 impl crate::RegisterSpec for GUSBCFG_SPEC {
     type Ux = u32;

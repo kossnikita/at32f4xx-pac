@@ -106,23 +106,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field("pecten", &format_args!("{}", self.pecten().bit()))
-            .field("astopen", &format_args!("{}", self.astopen().bit()))
-            .field("rlden", &format_args!("{}", self.rlden().bit()))
-            .field("cnt", &format_args!("{}", self.cnt().bits()))
-            .field("nacken", &format_args!("{}", self.nacken().bit()))
-            .field("genstop", &format_args!("{}", self.genstop().bit()))
-            .field("genstart", &format_args!("{}", self.genstart().bit()))
-            .field("readh10", &format_args!("{}", self.readh10().bit()))
-            .field("addr10", &format_args!("{}", self.addr10().bit()))
-            .field("dir", &format_args!("{}", self.dir().bit()))
-            .field("saddr", &format_args!("{}", self.saddr().bits()))
+            .field("pecten", &self.pecten())
+            .field("astopen", &self.astopen())
+            .field("rlden", &self.rlden())
+            .field("cnt", &self.cnt())
+            .field("nacken", &self.nacken())
+            .field("genstop", &self.genstop())
+            .field("genstart", &self.genstart())
+            .field("readh10", &self.readh10())
+            .field("addr10", &self.addr10())
+            .field("dir", &self.dir())
+            .field("saddr", &self.saddr())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -193,7 +188,7 @@ impl W {
         PECTEN_W::new(self, 26)
     }
 }
-#[doc = "Control register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL2_SPEC;
 impl crate::RegisterSpec for CTRL2_SPEC {
     type Ux = u32;

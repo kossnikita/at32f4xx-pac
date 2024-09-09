@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("S7_2DCNT")
-            .field("xconut", &format_args!("{}", self.xconut().bits()))
-            .field("yconut", &format_args!("{}", self.yconut().bits()))
+            .field("xconut", &self.xconut())
+            .field("yconut", &self.yconut())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<S7_2DCNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         YCONUT_W::new(self, 16)
     }
 }
-#[doc = "Stream 7 2D Transfer Count\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`s7_2dcnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`s7_2dcnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Stream 7 2D Transfer Count\n\nYou can [`read`](crate::Reg::read) this register and get [`s7_2dcnt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`s7_2dcnt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct S7_2DCNT_SPEC;
 impl crate::RegisterSpec for S7_2DCNT_SPEC {
     type Ux = u32;

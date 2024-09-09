@@ -259,40 +259,35 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLR")
-            .field("gfc1", &format_args!("{}", self.gfc1().bit()))
-            .field("gfc2", &format_args!("{}", self.gfc2().bit()))
-            .field("gfc3", &format_args!("{}", self.gfc3().bit()))
-            .field("gfc4", &format_args!("{}", self.gfc4().bit()))
-            .field("gfc5", &format_args!("{}", self.gfc5().bit()))
-            .field("gfc6", &format_args!("{}", self.gfc6().bit()))
-            .field("gfc7", &format_args!("{}", self.gfc7().bit()))
-            .field("fdtfc1", &format_args!("{}", self.fdtfc1().bit()))
-            .field("fdtfc2", &format_args!("{}", self.fdtfc2().bit()))
-            .field("fdtfc3", &format_args!("{}", self.fdtfc3().bit()))
-            .field("fdtfc4", &format_args!("{}", self.fdtfc4().bit()))
-            .field("fdtfc5", &format_args!("{}", self.fdtfc5().bit()))
-            .field("fdtfc6", &format_args!("{}", self.fdtfc6().bit()))
-            .field("fdtfc7", &format_args!("{}", self.fdtfc7().bit()))
-            .field("hdtfc1", &format_args!("{}", self.hdtfc1().bit()))
-            .field("hdtfc2", &format_args!("{}", self.hdtfc2().bit()))
-            .field("hdtfc3", &format_args!("{}", self.hdtfc3().bit()))
-            .field("hdtfc4", &format_args!("{}", self.hdtfc4().bit()))
-            .field("hdtfc5", &format_args!("{}", self.hdtfc5().bit()))
-            .field("hdtfc6", &format_args!("{}", self.hdtfc6().bit()))
-            .field("hdtfc7", &format_args!("{}", self.hdtfc7().bit()))
-            .field("dterrfc1", &format_args!("{}", self.dterrfc1().bit()))
-            .field("dterrfc2", &format_args!("{}", self.dterrfc2().bit()))
-            .field("dterrfc3", &format_args!("{}", self.dterrfc3().bit()))
-            .field("dterrfc4", &format_args!("{}", self.dterrfc4().bit()))
-            .field("dterrfc5", &format_args!("{}", self.dterrfc5().bit()))
-            .field("dterrfc6", &format_args!("{}", self.dterrfc6().bit()))
-            .field("dterrfc7", &format_args!("{}", self.dterrfc7().bit()))
+            .field("gfc1", &self.gfc1())
+            .field("gfc2", &self.gfc2())
+            .field("gfc3", &self.gfc3())
+            .field("gfc4", &self.gfc4())
+            .field("gfc5", &self.gfc5())
+            .field("gfc6", &self.gfc6())
+            .field("gfc7", &self.gfc7())
+            .field("fdtfc1", &self.fdtfc1())
+            .field("fdtfc2", &self.fdtfc2())
+            .field("fdtfc3", &self.fdtfc3())
+            .field("fdtfc4", &self.fdtfc4())
+            .field("fdtfc5", &self.fdtfc5())
+            .field("fdtfc6", &self.fdtfc6())
+            .field("fdtfc7", &self.fdtfc7())
+            .field("hdtfc1", &self.hdtfc1())
+            .field("hdtfc2", &self.hdtfc2())
+            .field("hdtfc3", &self.hdtfc3())
+            .field("hdtfc4", &self.hdtfc4())
+            .field("hdtfc5", &self.hdtfc5())
+            .field("hdtfc6", &self.hdtfc6())
+            .field("hdtfc7", &self.hdtfc7())
+            .field("dterrfc1", &self.dterrfc1())
+            .field("dterrfc2", &self.dterrfc2())
+            .field("dterrfc3", &self.dterrfc3())
+            .field("dterrfc4", &self.dterrfc4())
+            .field("dterrfc5", &self.dterrfc5())
+            .field("dterrfc6", &self.dterrfc6())
+            .field("dterrfc7", &self.dterrfc7())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CLR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -465,7 +460,7 @@ impl W {
         DTERRFC7_W::new(self, 27)
     }
 }
-#[doc = "DMA flag clear register (DMA_CLR)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA flag clear register (DMA_CLR)\n\nYou can [`read`](crate::Reg::read) this register and get [`clr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLR_SPEC;
 impl crate::RegisterSpec for CLR_SPEC {
     type Ux = u32;

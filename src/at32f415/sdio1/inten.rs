@@ -214,35 +214,30 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTEN")
-            .field("cmdfail", &format_args!("{}", self.cmdfail().bit()))
-            .field("dtfail", &format_args!("{}", self.dtfail().bit()))
-            .field("cmdtimeout", &format_args!("{}", self.cmdtimeout().bit()))
-            .field("dttimeout", &format_args!("{}", self.dttimeout().bit()))
-            .field("txerru", &format_args!("{}", self.txerru().bit()))
-            .field("rxerru", &format_args!("{}", self.rxerru().bit()))
-            .field("cmdrspcmpl", &format_args!("{}", self.cmdrspcmpl().bit()))
-            .field("cmdcmpl", &format_args!("{}", self.cmdcmpl().bit()))
-            .field("dtcmpl", &format_args!("{}", self.dtcmpl().bit()))
-            .field("sbiterr", &format_args!("{}", self.sbiterr().bit()))
-            .field("dtblkcmpl", &format_args!("{}", self.dtblkcmpl().bit()))
-            .field("docmd", &format_args!("{}", self.docmd().bit()))
-            .field("dotx", &format_args!("{}", self.dotx().bit()))
-            .field("dorx", &format_args!("{}", self.dorx().bit()))
-            .field("txbuf_h", &format_args!("{}", self.txbuf_h().bit()))
-            .field("rxbuf_h", &format_args!("{}", self.rxbuf_h().bit()))
-            .field("txbuf_f", &format_args!("{}", self.txbuf_f().bit()))
-            .field("rxbuf_f", &format_args!("{}", self.rxbuf_f().bit()))
-            .field("txbuf_e", &format_args!("{}", self.txbuf_e().bit()))
-            .field("rxbuf_e", &format_args!("{}", self.rxbuf_e().bit()))
-            .field("txbuf", &format_args!("{}", self.txbuf().bit()))
-            .field("rxbuf", &format_args!("{}", self.rxbuf().bit()))
-            .field("sdioif", &format_args!("{}", self.sdioif().bit()))
+            .field("cmdfail", &self.cmdfail())
+            .field("dtfail", &self.dtfail())
+            .field("cmdtimeout", &self.cmdtimeout())
+            .field("dttimeout", &self.dttimeout())
+            .field("txerru", &self.txerru())
+            .field("rxerru", &self.rxerru())
+            .field("cmdrspcmpl", &self.cmdrspcmpl())
+            .field("cmdcmpl", &self.cmdcmpl())
+            .field("dtcmpl", &self.dtcmpl())
+            .field("sbiterr", &self.sbiterr())
+            .field("dtblkcmpl", &self.dtblkcmpl())
+            .field("docmd", &self.docmd())
+            .field("dotx", &self.dotx())
+            .field("dorx", &self.dorx())
+            .field("txbuf_h", &self.txbuf_h())
+            .field("rxbuf_h", &self.rxbuf_h())
+            .field("txbuf_f", &self.txbuf_f())
+            .field("rxbuf_f", &self.rxbuf_f())
+            .field("txbuf_e", &self.txbuf_e())
+            .field("rxbuf_e", &self.rxbuf_e())
+            .field("txbuf", &self.txbuf())
+            .field("rxbuf", &self.rxbuf())
+            .field("sdioif", &self.sdioif())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<INTEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -385,7 +380,7 @@ impl W {
         SDIOIF_W::new(self, 22)
     }
 }
-#[doc = "SDIO interrupt enable register (SDIO_INTEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inten::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inten::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SDIO interrupt enable register (SDIO_INTEN)\n\nYou can [`read`](crate::Reg::read) this register and get [`inten::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inten::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTEN_SPEC;
 impl crate::RegisterSpec for INTEN_SPEC {
     type Ux = u32;

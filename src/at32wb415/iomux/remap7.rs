@@ -43,25 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP7")
-            .field("pd01_gmux", &format_args!("{}", self.pd01_gmux().bit()))
-            .field(
-                "swjtag_gmux",
-                &format_args!("{}", self.swjtag_gmux().bits()),
-            )
-            .field(
-                "adc1_eto_gmux",
-                &format_args!("{}", self.adc1_eto_gmux().bit()),
-            )
-            .field(
-                "adc1_etp_gmux",
-                &format_args!("{}", self.adc1_etp_gmux().bit()),
-            )
+            .field("pd01_gmux", &self.pd01_gmux())
+            .field("swjtag_gmux", &self.swjtag_gmux())
+            .field("adc1_eto_gmux", &self.adc1_eto_gmux())
+            .field("adc1_etp_gmux", &self.adc1_etp_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP7_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -90,7 +76,7 @@ impl W {
         PD01_GMUX_W::new(self, 20)
     }
 }
-#[doc = "IO MUX remap register 7\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 7\n\nYou can [`read`](crate::Reg::read) this register and get [`remap7::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap7::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP7_SPEC;
 impl crate::RegisterSpec for REMAP7_SPEC {
     type Ux = u32;

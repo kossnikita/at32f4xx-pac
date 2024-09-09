@@ -16,13 +16,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HCDMA0")
-            .field("dmaaddr", &format_args!("{}", self.dmaaddr().bits()))
+            .field("dmaaddr", &self.dmaaddr())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HCDMA0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -33,7 +28,7 @@ impl W {
         DMAADDR_W::new(self, 0)
     }
 }
-#[doc = "Host channel 0 DMA address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcdma0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcdma0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Host channel 0 DMA address register\n\nYou can [`read`](crate::Reg::read) this register and get [`hcdma0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hcdma0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCDMA0_SPEC;
 impl crate::RegisterSpec for HCDMA0_SPEC {
     type Ux = u32;

@@ -104,7 +104,7 @@ impl R {
     }
     #[doc = "Channel (1-2) event triggered by software"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1SWTR` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1SWTR` field.</div>"]
     #[inline(always)]
     pub fn cswtr(&self, n: u8) -> CSWTR_R {
         #[allow(clippy::no_effect)]
@@ -146,18 +146,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SWEVT")
-            .field("brkswtr", &format_args!("{}", self.brkswtr().bit()))
-            .field("trgswtr", &format_args!("{}", self.trgswtr().bit()))
-            .field("hallswtr", &format_args!("{}", self.hallswtr().bit()))
-            .field("c1swtr", &format_args!("{}", self.c1swtr().bit()))
-            .field("c2swtr", &format_args!("{}", self.c2swtr().bit()))
-            .field("ovfswtr", &format_args!("{}", self.ovfswtr().bit()))
+            .field("brkswtr", &self.brkswtr())
+            .field("trgswtr", &self.trgswtr())
+            .field("hallswtr", &self.hallswtr())
+            .field("c1swtr", &self.c1swtr())
+            .field("c2swtr", &self.c2swtr())
+            .field("ovfswtr", &self.ovfswtr())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<SWEVT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -169,7 +164,7 @@ impl W {
     }
     #[doc = "Channel (1-2) event triggered by software"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1SWTR` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1SWTR` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cswtr(&mut self, n: u8) -> CSWTR_W<SWEVT_SPEC> {
@@ -208,7 +203,7 @@ impl W {
         BRKSWTR_W::new(self, 7)
     }
 }
-#[doc = "Software event register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`swevt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`swevt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Software event register\n\nYou can [`read`](crate::Reg::read) this register and get [`swevt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`swevt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SWEVT_SPEC;
 impl crate::RegisterSpec for SWEVT_SPEC {
     type Ux = u32;

@@ -5,7 +5,7 @@ pub type W = crate::W<RTCCAL_SPEC>;
 #[doc = "Field `CALVAL` reader - Calibration value"]
 pub type CALVAL_R = crate::FieldReader;
 #[doc = "Field `CALVAL` writer - Calibration value"]
-pub type CALVAL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 7>;
+pub type CALVAL_W<'a, REG> = crate::FieldWriter<'a, REG, 7, u8, crate::Safe>;
 #[doc = "Calibration Clock Output\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Caloutr {
@@ -211,16 +211,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTCCAL")
-            .field("calval", &format_args!("{}", self.calval().bits()))
-            .field("calout", &format_args!("{}", self.calout().bit()))
-            .field("outen", &format_args!("{}", self.outen().bit()))
-            .field("outsel", &format_args!("{}", self.outsel().bit()))
+            .field("calval", &self.calval())
+            .field("calout", &self.calout())
+            .field("outen", &self.outen())
+            .field("outsel", &self.outsel())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<RTCCAL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -249,7 +244,7 @@ impl W {
         OUTSEL_W::new(self, 9)
     }
 }
-#[doc = "RTC clock calibration register (BPR_RTCCAL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtccal::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtccal::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTC clock calibration register (BPR_RTCCAL)\n\nYou can [`read`](crate::Reg::read) this register and get [`rtccal::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtccal::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTCCAL_SPEC;
 impl crate::RegisterSpec for RTCCAL_SPEC {
     type Ux = u32;

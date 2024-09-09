@@ -379,7 +379,7 @@ impl TMLPF_R {
 impl R {
     #[doc = "Transmit mailbox (0-2) transmission complete flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TCF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0TCF` field.</div>"]
     #[inline(always)]
     pub fn tmtcf(&self, n: u8) -> TMTCF_R {
         #[allow(clippy::no_effect)]
@@ -409,7 +409,7 @@ impl R {
     }
     #[doc = "Transmit mailbox (0-2) transmission success flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TSF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0TSF` field.</div>"]
     #[inline(always)]
     pub fn tmtsf(&self, n: u8) -> TMTSF_R {
         #[allow(clippy::no_effect)]
@@ -439,7 +439,7 @@ impl R {
     }
     #[doc = "Transmit mailbox (0-2) arbitration lost flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0ALF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0ALF` field.</div>"]
     #[inline(always)]
     pub fn tmalf(&self, n: u8) -> TMALF_R {
         #[allow(clippy::no_effect)]
@@ -469,7 +469,7 @@ impl R {
     }
     #[doc = "Transmit mailbox (0-2) transmission error flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TEF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0TEF` field.</div>"]
     #[inline(always)]
     pub fn tmtef(&self, n: u8) -> TMTEF_R {
         #[allow(clippy::no_effect)]
@@ -499,7 +499,7 @@ impl R {
     }
     #[doc = "Transmit mailbox (0-2) cancel transmission"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0CT` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0CT` field.</div>"]
     #[inline(always)]
     pub fn tmct(&self, n: u8) -> TMCT_R {
         #[allow(clippy::no_effect)]
@@ -534,7 +534,7 @@ impl R {
     }
     #[doc = "Transmit mailbox (0-2) empty flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0EF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0EF` field.</div>"]
     #[inline(always)]
     pub fn tmef(&self, n: u8) -> TMEF_R {
         #[allow(clippy::no_effect)]
@@ -564,7 +564,7 @@ impl R {
     }
     #[doc = "Transmit mailbox (0-2) lowest priority flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0LPF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0LPF` field.</div>"]
     #[inline(always)]
     pub fn tmlpf(&self, n: u8) -> TMLPF_R {
         #[allow(clippy::no_effect)]
@@ -596,40 +596,35 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TSTS")
-            .field("tm0lpf", &format_args!("{}", self.tm0lpf().bit()))
-            .field("tm1lpf", &format_args!("{}", self.tm1lpf().bit()))
-            .field("tm2lpf", &format_args!("{}", self.tm2lpf().bit()))
-            .field("tm0ef", &format_args!("{}", self.tm0ef().bit()))
-            .field("tm1ef", &format_args!("{}", self.tm1ef().bit()))
-            .field("tm2ef", &format_args!("{}", self.tm2ef().bit()))
-            .field("tmnr", &format_args!("{}", self.tmnr().bits()))
-            .field("tm0ct", &format_args!("{}", self.tm0ct().bit()))
-            .field("tm1ct", &format_args!("{}", self.tm1ct().bit()))
-            .field("tm2ct", &format_args!("{}", self.tm2ct().bit()))
-            .field("tm0tef", &format_args!("{}", self.tm0tef().bit()))
-            .field("tm1tef", &format_args!("{}", self.tm1tef().bit()))
-            .field("tm2tef", &format_args!("{}", self.tm2tef().bit()))
-            .field("tm0alf", &format_args!("{}", self.tm0alf().bit()))
-            .field("tm1alf", &format_args!("{}", self.tm1alf().bit()))
-            .field("tm2alf", &format_args!("{}", self.tm2alf().bit()))
-            .field("tm0tsf", &format_args!("{}", self.tm0tsf().bit()))
-            .field("tm1tsf", &format_args!("{}", self.tm1tsf().bit()))
-            .field("tm2tsf", &format_args!("{}", self.tm2tsf().bit()))
-            .field("tm0tcf", &format_args!("{}", self.tm0tcf().bit()))
-            .field("tm1tcf", &format_args!("{}", self.tm1tcf().bit()))
-            .field("tm2tcf", &format_args!("{}", self.tm2tcf().bit()))
+            .field("tm0lpf", &self.tm0lpf())
+            .field("tm1lpf", &self.tm1lpf())
+            .field("tm2lpf", &self.tm2lpf())
+            .field("tm0ef", &self.tm0ef())
+            .field("tm1ef", &self.tm1ef())
+            .field("tm2ef", &self.tm2ef())
+            .field("tmnr", &self.tmnr())
+            .field("tm0ct", &self.tm0ct())
+            .field("tm1ct", &self.tm1ct())
+            .field("tm2ct", &self.tm2ct())
+            .field("tm0tef", &self.tm0tef())
+            .field("tm1tef", &self.tm1tef())
+            .field("tm2tef", &self.tm2tef())
+            .field("tm0alf", &self.tm0alf())
+            .field("tm1alf", &self.tm1alf())
+            .field("tm2alf", &self.tm2alf())
+            .field("tm0tsf", &self.tm0tsf())
+            .field("tm1tsf", &self.tm1tsf())
+            .field("tm2tsf", &self.tm2tsf())
+            .field("tm0tcf", &self.tm0tcf())
+            .field("tm1tcf", &self.tm1tcf())
+            .field("tm2tcf", &self.tm2tcf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<TSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Transmit mailbox (0-2) transmission complete flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TCF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0TCF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn tmtcf(&mut self, n: u8) -> TMTCF_W<TSTS_SPEC> {
@@ -657,7 +652,7 @@ impl W {
     }
     #[doc = "Transmit mailbox (0-2) transmission success flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TSF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0TSF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn tmtsf(&mut self, n: u8) -> TMTSF_W<TSTS_SPEC> {
@@ -685,7 +680,7 @@ impl W {
     }
     #[doc = "Transmit mailbox (0-2) arbitration lost flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0ALF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0ALF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn tmalf(&mut self, n: u8) -> TMALF_W<TSTS_SPEC> {
@@ -713,7 +708,7 @@ impl W {
     }
     #[doc = "Transmit mailbox (0-2) transmission error flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0TEF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0TEF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn tmtef(&mut self, n: u8) -> TMTEF_W<TSTS_SPEC> {
@@ -741,7 +736,7 @@ impl W {
     }
     #[doc = "Transmit mailbox (0-2) cancel transmission"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TM0CT` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0CT` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn tmct(&mut self, n: u8) -> TMCT_W<TSTS_SPEC> {
@@ -768,7 +763,7 @@ impl W {
         TMCT_W::new(self, 23)
     }
 }
-#[doc = "Transmit status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transmit status register\n\nYou can [`read`](crate::Reg::read) this register and get [`tsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TSTS_SPEC;
 impl crate::RegisterSpec for TSTS_SPEC {
     type Ux = u32;

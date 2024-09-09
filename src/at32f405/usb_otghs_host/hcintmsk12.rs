@@ -106,23 +106,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HCINTMSK12")
-            .field("xfercmsk", &format_args!("{}", self.xfercmsk().bit()))
-            .field("chhltdmsk", &format_args!("{}", self.chhltdmsk().bit()))
-            .field("ahberrmsk", &format_args!("{}", self.ahberrmsk().bit()))
-            .field("stallmsk", &format_args!("{}", self.stallmsk().bit()))
-            .field("nakmsk", &format_args!("{}", self.nakmsk().bit()))
-            .field("ackmsk", &format_args!("{}", self.ackmsk().bit()))
-            .field("nyetmsk", &format_args!("{}", self.nyetmsk().bit()))
-            .field("xacterrmsk", &format_args!("{}", self.xacterrmsk().bit()))
-            .field("bblerrmsk", &format_args!("{}", self.bblerrmsk().bit()))
-            .field("frmovrunmsk", &format_args!("{}", self.frmovrunmsk().bit()))
-            .field("dtglerrmsk", &format_args!("{}", self.dtglerrmsk().bit()))
+            .field("xfercmsk", &self.xfercmsk())
+            .field("chhltdmsk", &self.chhltdmsk())
+            .field("ahberrmsk", &self.ahberrmsk())
+            .field("stallmsk", &self.stallmsk())
+            .field("nakmsk", &self.nakmsk())
+            .field("ackmsk", &self.ackmsk())
+            .field("nyetmsk", &self.nyetmsk())
+            .field("xacterrmsk", &self.xacterrmsk())
+            .field("bblerrmsk", &self.bblerrmsk())
+            .field("frmovrunmsk", &self.frmovrunmsk())
+            .field("dtglerrmsk", &self.dtglerrmsk())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<HCINTMSK12_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -193,7 +188,7 @@ impl W {
         DTGLERRMSK_W::new(self, 10)
     }
 }
-#[doc = "OTGHS host channel-12 mask register (OTGHS_HCINTMSK12)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcintmsk12::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hcintmsk12::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS host channel-12 mask register (OTGHS_HCINTMSK12)\n\nYou can [`read`](crate::Reg::read) this register and get [`hcintmsk12::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hcintmsk12::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCINTMSK12_SPEC;
 impl crate::RegisterSpec for HCINTMSK12_SPEC {
     type Ux = u32;

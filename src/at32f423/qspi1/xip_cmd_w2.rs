@@ -61,18 +61,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XIP_CMD_W2")
-            .field("xipr_dcnt", &format_args!("{}", self.xipr_dcnt().bits()))
-            .field("xipr_tcnt", &format_args!("{}", self.xipr_tcnt().bits()))
-            .field("xipr_sel", &format_args!("{}", self.xipr_sel().bit()))
-            .field("xipw_dcnt", &format_args!("{}", self.xipw_dcnt().bits()))
-            .field("xipw_tcnt", &format_args!("{}", self.xipw_tcnt().bits()))
-            .field("xipw_sel", &format_args!("{}", self.xipw_sel().bit()))
+            .field("xipr_dcnt", &self.xipr_dcnt())
+            .field("xipr_tcnt", &self.xipr_tcnt())
+            .field("xipr_sel", &self.xipr_sel())
+            .field("xipw_dcnt", &self.xipw_dcnt())
+            .field("xipw_tcnt", &self.xipw_tcnt())
+            .field("xipw_sel", &self.xipw_sel())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<XIP_CMD_W2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -113,7 +108,7 @@ impl W {
         XIPW_SEL_W::new(self, 31)
     }
 }
-#[doc = "XIP command word 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`xip_cmd_w2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`xip_cmd_w2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "XIP command word 2\n\nYou can [`read`](crate::Reg::read) this register and get [`xip_cmd_w2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xip_cmd_w2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct XIP_CMD_W2_SPEC;
 impl crate::RegisterSpec for XIP_CMD_W2_SPEC {
     type Ux = u32;

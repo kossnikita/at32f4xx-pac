@@ -106,23 +106,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("fprgm", &format_args!("{}", self.fprgm().bit()))
-            .field("secers", &format_args!("{}", self.secers().bit()))
-            .field("bankers", &format_args!("{}", self.bankers().bit()))
-            .field("usdprgm", &format_args!("{}", self.usdprgm().bit()))
-            .field("usders", &format_args!("{}", self.usders().bit()))
-            .field("erstr", &format_args!("{}", self.erstr().bit()))
-            .field("oplk", &format_args!("{}", self.oplk().bit()))
-            .field("usdulks", &format_args!("{}", self.usdulks().bit()))
-            .field("errie", &format_args!("{}", self.errie().bit()))
-            .field("odfie", &format_args!("{}", self.odfie().bit()))
-            .field("fap_hl_dis", &format_args!("{}", self.fap_hl_dis().bit()))
+            .field("fprgm", &self.fprgm())
+            .field("secers", &self.secers())
+            .field("bankers", &self.bankers())
+            .field("usdprgm", &self.usdprgm())
+            .field("usders", &self.usders())
+            .field("erstr", &self.erstr())
+            .field("oplk", &self.oplk())
+            .field("usdulks", &self.usdulks())
+            .field("errie", &self.errie())
+            .field("odfie", &self.odfie())
+            .field("fap_hl_dis", &self.fap_hl_dis())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -193,7 +188,7 @@ impl W {
         FAP_HL_DIS_W::new(self, 16)
     }
 }
-#[doc = "Control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

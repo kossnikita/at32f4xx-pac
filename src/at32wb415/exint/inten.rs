@@ -72,7 +72,7 @@ where
 impl R {
     #[doc = "Interrupt enable or disable on line (0-22)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `INTEN0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `INTEN0` field.</div>"]
     #[inline(always)]
     pub fn inten(&self, n: u8) -> INTEN_R {
         #[allow(clippy::no_effect)]
@@ -204,41 +204,36 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTEN")
-            .field("inten0", &format_args!("{}", self.inten0().bit()))
-            .field("inten1", &format_args!("{}", self.inten1().bit()))
-            .field("inten2", &format_args!("{}", self.inten2().bit()))
-            .field("inten3", &format_args!("{}", self.inten3().bit()))
-            .field("inten4", &format_args!("{}", self.inten4().bit()))
-            .field("inten5", &format_args!("{}", self.inten5().bit()))
-            .field("inten6", &format_args!("{}", self.inten6().bit()))
-            .field("inten7", &format_args!("{}", self.inten7().bit()))
-            .field("inten8", &format_args!("{}", self.inten8().bit()))
-            .field("inten9", &format_args!("{}", self.inten9().bit()))
-            .field("inten10", &format_args!("{}", self.inten10().bit()))
-            .field("inten11", &format_args!("{}", self.inten11().bit()))
-            .field("inten12", &format_args!("{}", self.inten12().bit()))
-            .field("inten13", &format_args!("{}", self.inten13().bit()))
-            .field("inten14", &format_args!("{}", self.inten14().bit()))
-            .field("inten15", &format_args!("{}", self.inten15().bit()))
-            .field("inten16", &format_args!("{}", self.inten16().bit()))
-            .field("inten17", &format_args!("{}", self.inten17().bit()))
-            .field("inten18", &format_args!("{}", self.inten18().bit()))
-            .field("inten19", &format_args!("{}", self.inten19().bit()))
-            .field("inten20", &format_args!("{}", self.inten20().bit()))
-            .field("inten21", &format_args!("{}", self.inten21().bit()))
-            .field("inten22", &format_args!("{}", self.inten22().bit()))
+            .field("inten0", &self.inten0())
+            .field("inten1", &self.inten1())
+            .field("inten2", &self.inten2())
+            .field("inten3", &self.inten3())
+            .field("inten4", &self.inten4())
+            .field("inten5", &self.inten5())
+            .field("inten6", &self.inten6())
+            .field("inten7", &self.inten7())
+            .field("inten8", &self.inten8())
+            .field("inten9", &self.inten9())
+            .field("inten10", &self.inten10())
+            .field("inten11", &self.inten11())
+            .field("inten12", &self.inten12())
+            .field("inten13", &self.inten13())
+            .field("inten14", &self.inten14())
+            .field("inten15", &self.inten15())
+            .field("inten16", &self.inten16())
+            .field("inten17", &self.inten17())
+            .field("inten18", &self.inten18())
+            .field("inten19", &self.inten19())
+            .field("inten20", &self.inten20())
+            .field("inten21", &self.inten21())
+            .field("inten22", &self.inten22())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<INTEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Interrupt enable or disable on line (0-22)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `INTEN0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `INTEN0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn inten(&mut self, n: u8) -> INTEN_W<INTEN_SPEC> {
@@ -385,7 +380,7 @@ impl W {
         INTEN_W::new(self, 22)
     }
 }
-#[doc = "Interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inten::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inten::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`inten::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inten::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTEN_SPEC;
 impl crate::RegisterSpec for INTEN_SPEC {
     type Ux = u32;

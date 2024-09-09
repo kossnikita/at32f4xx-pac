@@ -52,17 +52,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MUXG3CTRL")
-            .field("sigsel", &format_args!("{}", self.sigsel().bits()))
-            .field("trgovien", &format_args!("{}", self.trgovien().bit()))
-            .field("gen", &format_args!("{}", self.gen().bit()))
-            .field("gpol", &format_args!("{}", self.gpol().bits()))
-            .field("greqcnt", &format_args!("{}", self.greqcnt().bits()))
+            .field("sigsel", &self.sigsel())
+            .field("trgovien", &self.trgovien())
+            .field("gen", &self.gen())
+            .field("gpol", &self.gpol())
+            .field("greqcnt", &self.greqcnt())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MUXG3CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -97,7 +92,7 @@ impl W {
         GREQCNT_W::new(self, 19)
     }
 }
-#[doc = "Generator 3 Configuration Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`muxg3ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`muxg3ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Generator 3 Configuration Register\n\nYou can [`read`](crate::Reg::read) this register and get [`muxg3ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`muxg3ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MUXG3CTRL_SPEC;
 impl crate::RegisterSpec for MUXG3CTRL_SPEC {
     type Ux = u32;

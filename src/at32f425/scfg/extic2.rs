@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXTIC2")
-            .field("extint7", &format_args!("{}", self.extint7().bits()))
-            .field("extint6", &format_args!("{}", self.extint6().bits()))
-            .field("extint5", &format_args!("{}", self.extint5().bits()))
-            .field("extint4", &format_args!("{}", self.extint4().bits()))
+            .field("extint7", &self.extint7())
+            .field("extint6", &self.extint6())
+            .field("extint5", &self.extint5())
+            .field("extint4", &self.extint4())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<EXTIC2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         EXTINT7_W::new(self, 12)
     }
 }
-#[doc = "external interrupt configuration register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`extic2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`extic2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "external interrupt configuration register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`extic2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`extic2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXTIC2_SPEC;
 impl crate::RegisterSpec for EXTIC2_SPEC {
     type Ux = u32;

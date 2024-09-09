@@ -69,10 +69,73 @@ where
         self.variant(I2cenwWO::Enable)
     }
 }
+#[doc = "Transmit data interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Tdienr {
+    #[doc = "0: Data transmit data interrupt is disabled"]
+    Disabled = 0,
+    #[doc = "1: Data transmit data interrupt is enabled"]
+    Enabled = 1,
+}
+impl From<Tdienr> for bool {
+    #[inline(always)]
+    fn from(variant: Tdienr) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `TDIEN` reader - Transmit data interrupt enable"]
-pub type TDIEN_R = crate::BitReader;
+pub type TDIEN_R = crate::BitReader<Tdienr>;
+impl TDIEN_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Tdienr {
+        match self.bits {
+            false => Tdienr::Disabled,
+            true => Tdienr::Enabled,
+        }
+    }
+    #[doc = "Data transmit data interrupt is disabled"]
+    #[inline(always)]
+    pub fn is_disabled(&self) -> bool {
+        *self == Tdienr::Disabled
+    }
+    #[doc = "Data transmit data interrupt is enabled"]
+    #[inline(always)]
+    pub fn is_enabled(&self) -> bool {
+        *self == Tdienr::Enabled
+    }
+}
+#[doc = "Transmit data interrupt enable\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum TdienwWO {
+    #[doc = "0: Disable Data transmit data interrupt"]
+    Disable = 0,
+    #[doc = "1: Enable Data transmit data interrupt"]
+    Enable = 1,
+}
+impl From<TdienwWO> for bool {
+    #[inline(always)]
+    fn from(variant: TdienwWO) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `TDIEN` writer - Transmit data interrupt enable"]
-pub type TDIEN_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TDIEN_W<'a, REG> = crate::BitWriter<'a, REG, TdienwWO>;
+impl<'a, REG> TDIEN_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "Disable Data transmit data interrupt"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut crate::W<REG> {
+        self.variant(TdienwWO::Disable)
+    }
+    #[doc = "Enable Data transmit data interrupt"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut crate::W<REG> {
+        self.variant(TdienwWO::Enable)
+    }
+}
 #[doc = "Field `RDIEN` reader - Receive data interrupt enable"]
 pub type RDIEN_R = crate::BitReader;
 #[doc = "Field `RDIEN` writer - Receive data interrupt enable"]
@@ -232,30 +295,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
-            .field("i2cen", &format_args!("{}", self.i2cen().bit()))
-            .field("tdien", &format_args!("{}", self.tdien().bit()))
-            .field("rdien", &format_args!("{}", self.rdien().bit()))
-            .field("addrien", &format_args!("{}", self.addrien().bit()))
-            .field("ackfailien", &format_args!("{}", self.ackfailien().bit()))
-            .field("stopien", &format_args!("{}", self.stopien().bit()))
-            .field("tdcien", &format_args!("{}", self.tdcien().bit()))
-            .field("errien", &format_args!("{}", self.errien().bit()))
-            .field("dflt", &format_args!("{}", self.dflt().bits()))
-            .field("dmaten", &format_args!("{}", self.dmaten().bit()))
-            .field("dmaren", &format_args!("{}", self.dmaren().bit()))
-            .field("sctrl", &format_args!("{}", self.sctrl().bit()))
-            .field("stretch", &format_args!("{}", self.stretch().bit()))
-            .field("gcaen", &format_args!("{}", self.gcaen().bit()))
-            .field("haddren", &format_args!("{}", self.haddren().bit()))
-            .field("devaddren", &format_args!("{}", self.devaddren().bit()))
-            .field("smbalert", &format_args!("{}", self.smbalert().bit()))
-            .field("pecen", &format_args!("{}", self.pecen().bit()))
+            .field("i2cen", &self.i2cen())
+            .field("tdien", &self.tdien())
+            .field("rdien", &self.rdien())
+            .field("addrien", &self.addrien())
+            .field("ackfailien", &self.ackfailien())
+            .field("stopien", &self.stopien())
+            .field("tdcien", &self.tdcien())
+            .field("errien", &self.errien())
+            .field("dflt", &self.dflt())
+            .field("dmaten", &self.dmaten())
+            .field("dmaren", &self.dmaren())
+            .field("sctrl", &self.sctrl())
+            .field("stretch", &self.stretch())
+            .field("gcaen", &self.gcaen())
+            .field("haddren", &self.haddren())
+            .field("devaddren", &self.devaddren())
+            .field("smbalert", &self.smbalert())
+            .field("pecen", &self.pecen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -368,7 +426,7 @@ impl W {
         PECEN_W::new(self, 23)
     }
 }
-#[doc = "Control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL1_SPEC;
 impl crate::RegisterSpec for CTRL1_SPEC {
     type Ux = u32;

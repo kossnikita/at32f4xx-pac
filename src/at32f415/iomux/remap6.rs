@@ -20,6 +20,7 @@ impl From<CAN1_GMUX_A> for u8 {
 impl crate::FieldSpec for CAN1_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for CAN1_GMUX_A {}
 #[doc = "Field `CAN1_GMUX` reader - CAN1 muxing"]
 pub type CAN1_GMUX_R = crate::FieldReader<CAN1_GMUX_A>;
 impl CAN1_GMUX_R {
@@ -85,6 +86,7 @@ impl From<SDIO1_GMUX_A> for u8 {
 impl crate::FieldSpec for SDIO1_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SDIO1_GMUX_A {}
 #[doc = "Field `SDIO1_GMUX` reader - SDIO1 muxing"]
 pub type SDIO1_GMUX_R = crate::FieldReader<SDIO1_GMUX_A>;
 impl SDIO1_GMUX_R {
@@ -177,6 +179,7 @@ impl From<USART1_GMUX_A> for u8 {
 impl crate::FieldSpec for USART1_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for USART1_GMUX_A {}
 #[doc = "Field `USART1_GMUX` reader - USART1 muxing"]
 pub type USART1_GMUX_R = crate::FieldReader<USART1_GMUX_A>;
 impl USART1_GMUX_R {
@@ -238,6 +241,7 @@ impl From<USART3_GMUX_A> for u8 {
 impl crate::FieldSpec for USART3_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for USART3_GMUX_A {}
 #[doc = "Field `USART3_GMUX` reader - USART3 muxing"]
 pub type USART3_GMUX_R = crate::FieldReader<USART3_GMUX_A>;
 impl USART3_GMUX_R {
@@ -308,6 +312,7 @@ impl From<UART4_GMUX_A> for u8 {
 impl crate::FieldSpec for UART4_GMUX_A {
     type Ux = u8;
 }
+impl crate::IsEnum for UART4_GMUX_A {}
 #[doc = "Field `UART4_GMUX` reader - UART4 muxing"]
 pub type UART4_GMUX_R = crate::FieldReader<UART4_GMUX_A>;
 impl UART4_GMUX_R {
@@ -379,23 +384,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP6")
-            .field("uart4_gmux", &format_args!("{}", self.uart4_gmux().bits()))
-            .field(
-                "usart3_gmux",
-                &format_args!("{}", self.usart3_gmux().bits()),
-            )
-            .field(
-                "usart1_gmux",
-                &format_args!("{}", self.usart1_gmux().bits()),
-            )
-            .field("sdio1_gmux", &format_args!("{}", self.sdio1_gmux().bits()))
-            .field("can1_gmux", &format_args!("{}", self.can1_gmux().bits()))
+            .field("uart4_gmux", &self.uart4_gmux())
+            .field("usart3_gmux", &self.usart3_gmux())
+            .field("usart1_gmux", &self.usart1_gmux())
+            .field("sdio1_gmux", &self.sdio1_gmux())
+            .field("can1_gmux", &self.can1_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -430,7 +424,7 @@ impl W {
         UART4_GMUX_W::new(self, 28)
     }
 }
-#[doc = "IO MUX remap register 6\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap6::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap6::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 6\n\nYou can [`read`](crate::Reg::read) this register and get [`remap6::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap6::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP6_SPEC;
 impl crate::RegisterSpec for REMAP6_SPEC {
     type Ux = u32;

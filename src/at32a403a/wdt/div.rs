@@ -32,6 +32,7 @@ impl From<DIV_A> for u8 {
 impl crate::FieldSpec for DIV_A {
     type Ux = u8;
 }
+impl crate::IsEnum for DIV_A {}
 #[doc = "Field `DIV` reader - Division divider"]
 pub type DIV_R = crate::FieldReader<DIV_A>;
 impl DIV_R {
@@ -92,7 +93,7 @@ impl DIV_R {
     }
 }
 #[doc = "Field `DIV` writer - Division divider"]
-pub type DIV_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, DIV_A>;
+pub type DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 3, DIV_A, crate::Safe>;
 impl<'a, REG> DIV_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -148,14 +149,7 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("DIV")
-            .field("div", &format_args!("{}", self.div().bits()))
-            .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DIV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+        f.debug_struct("DIV").field("div", &self.div()).finish()
     }
 }
 impl W {
@@ -166,7 +160,7 @@ impl W {
         DIV_W::new(self, 0)
     }
 }
-#[doc = "Division register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`div::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Division register\n\nYou can [`read`](crate::Reg::read) this register and get [`div::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`div::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIV_SPEC;
 impl crate::RegisterSpec for DIV_SPEC {
     type Ux = u32;

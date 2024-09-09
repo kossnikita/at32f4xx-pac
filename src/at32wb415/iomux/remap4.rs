@@ -52,20 +52,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAP4")
-            .field(
-                "tmr5ch4_gmux",
-                &format_args!("{}", self.tmr5ch4_gmux().bit()),
-            )
-            .field("tmr5_gmux", &format_args!("{}", self.tmr5_gmux().bits()))
-            .field("tmr3_gmux", &format_args!("{}", self.tmr3_gmux().bits()))
-            .field("tmr2_gmux", &format_args!("{}", self.tmr2_gmux().bits()))
-            .field("tmr1_gmux", &format_args!("{}", self.tmr1_gmux().bits()))
+            .field("tmr5ch4_gmux", &self.tmr5ch4_gmux())
+            .field("tmr5_gmux", &self.tmr5_gmux())
+            .field("tmr3_gmux", &self.tmr3_gmux())
+            .field("tmr2_gmux", &self.tmr2_gmux())
+            .field("tmr1_gmux", &self.tmr1_gmux())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<REMAP4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -100,7 +92,7 @@ impl W {
         TMR5CH4_GMUX_W::new(self, 19)
     }
 }
-#[doc = "IO MUX remap register 4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`remap4::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`remap4::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IO MUX remap register 4\n\nYou can [`read`](crate::Reg::read) this register and get [`remap4::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`remap4::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REMAP4_SPEC;
 impl crate::RegisterSpec for REMAP4_SPEC {
     type Ux = u32;

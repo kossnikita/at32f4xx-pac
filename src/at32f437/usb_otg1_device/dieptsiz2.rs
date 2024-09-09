@@ -34,15 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPTSIZ2")
-            .field("xfersize", &format_args!("{}", self.xfersize().bits()))
-            .field("pktcnt", &format_args!("{}", self.pktcnt().bits()))
-            .field("mc", &format_args!("{}", self.mc().bits()))
+            .field("xfersize", &self.xfersize())
+            .field("pktcnt", &self.pktcnt())
+            .field("mc", &self.mc())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DIEPTSIZ2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -65,7 +60,7 @@ impl W {
         MC_W::new(self, 29)
     }
 }
-#[doc = "OTGFS device IN endpoint-2 transfer size register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptsiz2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptsiz2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS device IN endpoint-2 transfer size register\n\nYou can [`read`](crate::Reg::read) this register and get [`dieptsiz2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dieptsiz2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPTSIZ2_SPEC;
 impl crate::RegisterSpec for DIEPTSIZ2_SPEC {
     type Ux = u32;

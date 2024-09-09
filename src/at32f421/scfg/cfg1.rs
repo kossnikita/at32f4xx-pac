@@ -88,36 +88,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG1")
-            .field(
-                "tmr17_dma_rmp",
-                &format_args!("{}", self.tmr17_dma_rmp().bit()),
-            )
-            .field(
-                "tmr16_dma_rmp",
-                &format_args!("{}", self.tmr16_dma_rmp().bit()),
-            )
-            .field(
-                "usart1_rx_dma_rmp",
-                &format_args!("{}", self.usart1_rx_dma_rmp().bit()),
-            )
-            .field(
-                "usart1_tx_dma_rmp",
-                &format_args!("{}", self.usart1_tx_dma_rmp().bit()),
-            )
-            .field("adc_dma_rmp", &format_args!("{}", self.adc_dma_rmp().bit()))
-            .field("ir_src_sel", &format_args!("{}", self.ir_src_sel().bits()))
-            .field("ir_pol", &format_args!("{}", self.ir_pol().bit()))
-            .field("pa11_12_rmp", &format_args!("{}", self.pa11_12_rmp().bit()))
-            .field(
-                "mem_map_sel",
-                &format_args!("{}", self.mem_map_sel().bits()),
-            )
+            .field("tmr17_dma_rmp", &self.tmr17_dma_rmp())
+            .field("tmr16_dma_rmp", &self.tmr16_dma_rmp())
+            .field("usart1_rx_dma_rmp", &self.usart1_rx_dma_rmp())
+            .field("usart1_tx_dma_rmp", &self.usart1_tx_dma_rmp())
+            .field("adc_dma_rmp", &self.adc_dma_rmp())
+            .field("ir_src_sel", &self.ir_src_sel())
+            .field("ir_pol", &self.ir_pol())
+            .field("pa11_12_rmp", &self.pa11_12_rmp())
+            .field("mem_map_sel", &self.mem_map_sel())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CFG1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -176,7 +156,7 @@ impl W {
         TMR17_DMA_RMP_W::new(self, 12)
     }
 }
-#[doc = "configuration register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "configuration register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFG1_SPEC;
 impl crate::RegisterSpec for CFG1_SPEC {
     type Ux = u32;

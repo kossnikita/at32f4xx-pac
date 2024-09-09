@@ -722,6 +722,7 @@ impl From<OUTSEL_A> for u8 {
 impl crate::FieldSpec for OUTSEL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for OUTSEL_A {}
 #[doc = "Field `OUTSEL` reader - Output source selection"]
 pub type OUTSEL_R = crate::FieldReader<OUTSEL_A>;
 impl OUTSEL_R {
@@ -921,27 +922,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("caloen", &format_args!("{}", self.caloen().bit()))
-            .field("outsel", &format_args!("{}", self.outsel().bits()))
-            .field("outp", &format_args!("{}", self.outp().bit()))
-            .field("calosel", &format_args!("{}", self.calosel().bit()))
-            .field("bpr", &format_args!("{}", self.bpr().bit()))
-            .field("dec1h", &format_args!("{}", self.dec1h().bit()))
-            .field("add1h", &format_args!("{}", self.add1h().bit()))
-            .field("tsien", &format_args!("{}", self.tsien().bit()))
-            .field("alaien", &format_args!("{}", self.alaien().bit()))
-            .field("tsen", &format_args!("{}", self.tsen().bit()))
-            .field("alaen", &format_args!("{}", self.alaen().bit()))
-            .field("hm", &format_args!("{}", self.hm().bit()))
-            .field("dren", &format_args!("{}", self.dren().bit()))
-            .field("rcden", &format_args!("{}", self.rcden().bit()))
-            .field("tsedg", &format_args!("{}", self.tsedg().bit()))
+            .field("caloen", &self.caloen())
+            .field("outsel", &self.outsel())
+            .field("outp", &self.outp())
+            .field("calosel", &self.calosel())
+            .field("bpr", &self.bpr())
+            .field("dec1h", &self.dec1h())
+            .field("add1h", &self.add1h())
+            .field("tsien", &self.tsien())
+            .field("alaien", &self.alaien())
+            .field("tsen", &self.tsen())
+            .field("alaen", &self.alaen())
+            .field("hm", &self.hm())
+            .field("dren", &self.dren())
+            .field("rcden", &self.rcden())
+            .field("tsedg", &self.tsedg())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -1036,7 +1032,7 @@ impl W {
         CALOEN_W::new(self, 23)
     }
 }
-#[doc = "control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

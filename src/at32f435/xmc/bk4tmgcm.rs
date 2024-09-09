@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BK4TMGCM")
-            .field("cmdhizt", &format_args!("{}", self.cmdhizt().bits()))
-            .field("cmht", &format_args!("{}", self.cmht().bits()))
-            .field("cmwt", &format_args!("{}", self.cmwt().bits()))
-            .field("cmst", &format_args!("{}", self.cmst().bits()))
+            .field("cmdhizt", &self.cmdhizt())
+            .field("cmht", &self.cmht())
+            .field("cmwt", &self.cmwt())
+            .field("cmst", &self.cmst())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<BK4TMGCM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         CMDHIZT_W::new(self, 24)
     }
 }
-#[doc = "Regular memory space timing register 4\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bk4tmgcm::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bk4tmgcm::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Regular memory space timing register 4\n\nYou can [`read`](crate::Reg::read) this register and get [`bk4tmgcm::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bk4tmgcm::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BK4TMGCM_SPEC;
 impl crate::RegisterSpec for BK4TMGCM_SPEC {
     type Ux = u32;

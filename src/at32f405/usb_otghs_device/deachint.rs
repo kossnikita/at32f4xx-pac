@@ -25,17 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEACHINT")
-            .field("echinepint", &format_args!("{}", self.echinepint().bits()))
-            .field(
-                "echoutepint",
-                &format_args!("{}", self.echoutepint().bits()),
-            )
+            .field("echinepint", &self.echinepint())
+            .field("echoutepint", &self.echoutepint())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DEACHINT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -52,7 +44,7 @@ impl W {
         ECHOUTEPINT_W::new(self, 16)
     }
 }
-#[doc = "Device Each Endpoints Interrupt Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`deachint::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`deachint::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Device Each Endpoints Interrupt Register\n\nYou can [`read`](crate::Reg::read) this register and get [`deachint::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`deachint::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DEACHINT_SPEC;
 impl crate::RegisterSpec for DEACHINT_SPEC {
     type Ux = u32;

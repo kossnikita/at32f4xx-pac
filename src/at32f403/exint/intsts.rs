@@ -178,31 +178,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTSTS")
-            .field("line0", &format_args!("{}", self.line0().bit()))
-            .field("line1", &format_args!("{}", self.line1().bit()))
-            .field("line2", &format_args!("{}", self.line2().bit()))
-            .field("line3", &format_args!("{}", self.line3().bit()))
-            .field("line4", &format_args!("{}", self.line4().bit()))
-            .field("line5", &format_args!("{}", self.line5().bit()))
-            .field("line6", &format_args!("{}", self.line6().bit()))
-            .field("line7", &format_args!("{}", self.line7().bit()))
-            .field("line8", &format_args!("{}", self.line8().bit()))
-            .field("line9", &format_args!("{}", self.line9().bit()))
-            .field("line10", &format_args!("{}", self.line10().bit()))
-            .field("line11", &format_args!("{}", self.line11().bit()))
-            .field("line12", &format_args!("{}", self.line12().bit()))
-            .field("line13", &format_args!("{}", self.line13().bit()))
-            .field("line14", &format_args!("{}", self.line14().bit()))
-            .field("line15", &format_args!("{}", self.line15().bit()))
-            .field("line16", &format_args!("{}", self.line16().bit()))
-            .field("line17", &format_args!("{}", self.line17().bit()))
-            .field("line18", &format_args!("{}", self.line18().bit()))
+            .field("line0", &self.line0())
+            .field("line1", &self.line1())
+            .field("line2", &self.line2())
+            .field("line3", &self.line3())
+            .field("line4", &self.line4())
+            .field("line5", &self.line5())
+            .field("line6", &self.line6())
+            .field("line7", &self.line7())
+            .field("line8", &self.line8())
+            .field("line9", &self.line9())
+            .field("line10", &self.line10())
+            .field("line11", &self.line11())
+            .field("line12", &self.line12())
+            .field("line13", &self.line13())
+            .field("line14", &self.line14())
+            .field("line15", &self.line15())
+            .field("line16", &self.line16())
+            .field("line17", &self.line17())
+            .field("line18", &self.line18())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<INTSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -321,7 +316,7 @@ impl W {
         LINE18_W::new(self, 18)
     }
 }
-#[doc = "Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`intsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTSTS_SPEC;
 impl crate::RegisterSpec for INTSTS_SPEC {
     type Ux = u32;

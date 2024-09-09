@@ -24,6 +24,7 @@ impl From<C1C_A> for u8 {
 impl crate::FieldSpec for C1C_A {
     type Ux = u8;
 }
+impl crate::IsEnum for C1C_A {}
 #[doc = "Field `C1C` reader - Channel 1 configure"]
 pub type C1C_R = crate::FieldReader<C1C_A>;
 impl C1C_R {
@@ -60,7 +61,7 @@ impl C1C_R {
     }
 }
 #[doc = "Field `C1C` writer - Channel 1 configure"]
-pub type C1C_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C1C_A>;
+pub type C1C_W<'a, REG> = crate::FieldWriter<'a, REG, 2, C1C_A, crate::Safe>;
 impl<'a, REG> C1C_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -237,6 +238,7 @@ impl From<COCTRL_A> for u8 {
 impl crate::FieldSpec for COCTRL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for COCTRL_A {}
 #[doc = "Field `COCTRL(1-2)` reader - Channel %s output control"]
 pub type COCTRL_R = crate::FieldReader<COCTRL_A>;
 impl COCTRL_R {
@@ -297,7 +299,7 @@ impl COCTRL_R {
     }
 }
 #[doc = "Field `COCTRL(1-2)` writer - Channel %s output control"]
-pub type COCTRL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, COCTRL_A>;
+pub type COCTRL_W<'a, REG> = crate::FieldWriter<'a, REG, 3, COCTRL_A, crate::Safe>;
 impl<'a, REG> COCTRL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -433,6 +435,7 @@ impl From<C2C_A> for u8 {
 impl crate::FieldSpec for C2C_A {
     type Ux = u8;
 }
+impl crate::IsEnum for C2C_A {}
 #[doc = "Field `C2C` reader - Channel 2 configure"]
 pub type C2C_R = crate::FieldReader<C2C_A>;
 impl C2C_R {
@@ -469,7 +472,7 @@ impl C2C_R {
     }
 }
 #[doc = "Field `C2C` writer - Channel 2 configure"]
-pub type C2C_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, C2C_A>;
+pub type C2C_W<'a, REG> = crate::FieldWriter<'a, REG, 2, C2C_A, crate::Safe>;
 impl<'a, REG> C2C_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -504,7 +507,7 @@ impl R {
     }
     #[doc = "Channel (1-2) output immediately enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1OIEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OIEN` field.</div>"]
     #[inline(always)]
     pub fn coien(&self, n: u8) -> COIEN_R {
         #[allow(clippy::no_effect)]
@@ -529,7 +532,7 @@ impl R {
     }
     #[doc = "Channel (1-2) output buffer enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1OBEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OBEN` field.</div>"]
     #[inline(always)]
     pub fn coben(&self, n: u8) -> COBEN_R {
         #[allow(clippy::no_effect)]
@@ -554,7 +557,7 @@ impl R {
     }
     #[doc = "Channel (1-2) output control"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1OCTRL` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OCTRL` field.</div>"]
     #[inline(always)]
     pub fn coctrl(&self, n: u8) -> COCTRL_R {
         #[allow(clippy::no_effect)]
@@ -579,7 +582,7 @@ impl R {
     }
     #[doc = "Channel (1-2) output switch enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1OSEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OSEN` field.</div>"]
     #[inline(always)]
     pub fn cosen(&self, n: u8) -> COSEN_R {
         #[allow(clippy::no_effect)]
@@ -611,22 +614,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CM1_OUTPUT")
-            .field("c1osen", &format_args!("{}", self.c1osen().bit()))
-            .field("c2osen", &format_args!("{}", self.c2osen().bit()))
-            .field("c1octrl", &format_args!("{}", self.c1octrl().bits()))
-            .field("c2octrl", &format_args!("{}", self.c2octrl().bits()))
-            .field("c1oben", &format_args!("{}", self.c1oben().bit()))
-            .field("c2oben", &format_args!("{}", self.c2oben().bit()))
-            .field("c1oien", &format_args!("{}", self.c1oien().bit()))
-            .field("c2oien", &format_args!("{}", self.c2oien().bit()))
-            .field("c2c", &format_args!("{}", self.c2c().bits()))
-            .field("c1c", &format_args!("{}", self.c1c().bits()))
+            .field("c1osen", &self.c1osen())
+            .field("c2osen", &self.c2osen())
+            .field("c1octrl", &self.c1octrl())
+            .field("c2octrl", &self.c2octrl())
+            .field("c1oben", &self.c1oben())
+            .field("c2oben", &self.c2oben())
+            .field("c1oien", &self.c1oien())
+            .field("c2oien", &self.c2oien())
+            .field("c2c", &self.c2c())
+            .field("c1c", &self.c1c())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CM1_OUTPUT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -638,7 +636,7 @@ impl W {
     }
     #[doc = "Channel (1-2) output immediately enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1OIEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OIEN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn coien(&mut self, n: u8) -> COIEN_W<CM1_OUTPUT_SPEC> {
@@ -660,7 +658,7 @@ impl W {
     }
     #[doc = "Channel (1-2) output buffer enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1OBEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OBEN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn coben(&mut self, n: u8) -> COBEN_W<CM1_OUTPUT_SPEC> {
@@ -682,7 +680,7 @@ impl W {
     }
     #[doc = "Channel (1-2) output control"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1OCTRL` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OCTRL` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn coctrl(&mut self, n: u8) -> COCTRL_W<CM1_OUTPUT_SPEC> {
@@ -704,7 +702,7 @@ impl W {
     }
     #[doc = "Channel (1-2) output switch enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1OSEN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OSEN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cosen(&mut self, n: u8) -> COSEN_W<CM1_OUTPUT_SPEC> {
@@ -731,7 +729,7 @@ impl W {
         C2C_W::new(self, 8)
     }
 }
-#[doc = "Channel output mode register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cm1_output::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cm1_output::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel output mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`cm1_output::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cm1_output::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CM1_OUTPUT_SPEC;
 impl crate::RegisterSpec for CM1_OUTPUT_SPEC {
     type Ux = u32;

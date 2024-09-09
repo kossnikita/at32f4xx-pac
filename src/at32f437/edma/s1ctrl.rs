@@ -169,30 +169,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("S1CTRL")
-            .field("mburst", &format_args!("{}", self.mburst().bits()))
-            .field("pburst", &format_args!("{}", self.pburst().bits()))
-            .field("cm", &format_args!("{}", self.cm().bit()))
-            .field("dmm", &format_args!("{}", self.dmm().bit()))
-            .field("spl", &format_args!("{}", self.spl().bits()))
-            .field("pincos", &format_args!("{}", self.pincos().bit()))
-            .field("mwidth", &format_args!("{}", self.mwidth().bits()))
-            .field("pwidth", &format_args!("{}", self.pwidth().bits()))
-            .field("mincm", &format_args!("{}", self.mincm().bit()))
-            .field("pincm", &format_args!("{}", self.pincm().bit()))
-            .field("lm", &format_args!("{}", self.lm().bit()))
-            .field("dtd", &format_args!("{}", self.dtd().bits()))
-            .field("pfctrl", &format_args!("{}", self.pfctrl().bit()))
-            .field("fdtien", &format_args!("{}", self.fdtien().bit()))
-            .field("hdtien", &format_args!("{}", self.hdtien().bit()))
-            .field("dterrien", &format_args!("{}", self.dterrien().bit()))
-            .field("dmerrien", &format_args!("{}", self.dmerrien().bit()))
-            .field("sen", &format_args!("{}", self.sen().bit()))
+            .field("mburst", &self.mburst())
+            .field("pburst", &self.pburst())
+            .field("cm", &self.cm())
+            .field("dmm", &self.dmm())
+            .field("spl", &self.spl())
+            .field("pincos", &self.pincos())
+            .field("mwidth", &self.mwidth())
+            .field("pwidth", &self.pwidth())
+            .field("mincm", &self.mincm())
+            .field("pincm", &self.pincm())
+            .field("lm", &self.lm())
+            .field("dtd", &self.dtd())
+            .field("pfctrl", &self.pfctrl())
+            .field("fdtien", &self.fdtien())
+            .field("hdtien", &self.hdtien())
+            .field("dterrien", &self.dterrien())
+            .field("dmerrien", &self.dmerrien())
+            .field("sen", &self.sen())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<S1CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -305,7 +300,7 @@ impl W {
         MBURST_W::new(self, 23)
     }
 }
-#[doc = "stream 1 control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`s1ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`s1ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "stream 1 control register\n\nYou can [`read`](crate::Reg::read) this register and get [`s1ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`s1ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct S1CTRL_SPEC;
 impl crate::RegisterSpec for S1CTRL_SPEC {
     type Ux = u32;

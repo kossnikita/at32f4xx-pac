@@ -133,26 +133,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHBRST1")
-            .field("gpioa", &format_args!("{}", self.gpioa().bit()))
-            .field("gpiob", &format_args!("{}", self.gpiob().bit()))
-            .field("gpioc", &format_args!("{}", self.gpioc().bit()))
-            .field("gpiod", &format_args!("{}", self.gpiod().bit()))
-            .field("gpioe", &format_args!("{}", self.gpioe().bit()))
-            .field("gpiof", &format_args!("{}", self.gpiof().bit()))
-            .field("gpiog", &format_args!("{}", self.gpiog().bit()))
-            .field("gpioh", &format_args!("{}", self.gpioh().bit()))
-            .field("crc", &format_args!("{}", self.crc().bit()))
-            .field("edma", &format_args!("{}", self.edma().bit()))
-            .field("dma1", &format_args!("{}", self.dma1().bit()))
-            .field("dma2", &format_args!("{}", self.dma2().bit()))
-            .field("emac", &format_args!("{}", self.emac().bit()))
-            .field("otgfs2", &format_args!("{}", self.otgfs2().bit()))
+            .field("gpioa", &self.gpioa())
+            .field("gpiob", &self.gpiob())
+            .field("gpioc", &self.gpioc())
+            .field("gpiod", &self.gpiod())
+            .field("gpioe", &self.gpioe())
+            .field("gpiof", &self.gpiof())
+            .field("gpiog", &self.gpiog())
+            .field("gpioh", &self.gpioh())
+            .field("crc", &self.crc())
+            .field("edma", &self.edma())
+            .field("dma1", &self.dma1())
+            .field("dma2", &self.dma2())
+            .field("emac", &self.emac())
+            .field("otgfs2", &self.otgfs2())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<AHBRST1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -241,7 +236,7 @@ impl W {
         OTGFS2_W::new(self, 29)
     }
 }
-#[doc = "AHB peripheral reset register1 (CRM_AHBRST1)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahbrst1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahbrst1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "AHB peripheral reset register1 (CRM_AHBRST1)\n\nYou can [`read`](crate::Reg::read) this register and get [`ahbrst1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahbrst1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AHBRST1_SPEC;
 impl crate::RegisterSpec for AHBRST1_SPEC {
     type Ux = u32;

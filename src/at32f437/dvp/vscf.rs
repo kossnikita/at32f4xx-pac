@@ -25,14 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VSCF")
-            .field("vsrtf", &format_args!("{}", self.vsrtf().bits()))
-            .field("vsrsf", &format_args!("{}", self.vsrsf().bits()))
+            .field("vsrtf", &self.vsrtf())
+            .field("vsrsf", &self.vsrsf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<VSCF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -49,7 +44,7 @@ impl W {
         VSRTF_W::new(self, 16)
     }
 }
-#[doc = "Vertical scaling control flow\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vscf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`vscf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Vertical scaling control flow\n\nYou can [`read`](crate::Reg::read) this register and get [`vscf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vscf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct VSCF_SPEC;
 impl crate::RegisterSpec for VSCF_SPEC {
     type Ux = u32;

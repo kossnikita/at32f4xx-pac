@@ -40,20 +40,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GRXSTSR_Device")
-            .field("eptnum", &format_args!("{}", self.eptnum().bits()))
-            .field("bcnt", &format_args!("{}", self.bcnt().bits()))
-            .field("dpid", &format_args!("{}", self.dpid().bits()))
-            .field("pktsts", &format_args!("{}", self.pktsts().bits()))
-            .field("fn_", &format_args!("{}", self.fn_().bits()))
+            .field("eptnum", &self.eptnum())
+            .field("bcnt", &self.bcnt())
+            .field("dpid", &self.dpid())
+            .field("pktsts", &self.pktsts())
+            .field("fn_", &self.fn_())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<GRXSTSR_DEVICE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "OTGHS Receive status debug read(Device mode)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grxstsr_device::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS Receive status debug read(Device mode)\n\nYou can [`read`](crate::Reg::read) this register and get [`grxstsr_device::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GRXSTSR_DEVICE_SPEC;
 impl crate::RegisterSpec for GRXSTSR_DEVICE_SPEC {
     type Ux = u32;

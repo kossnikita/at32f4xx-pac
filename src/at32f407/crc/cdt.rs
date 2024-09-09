@@ -5,7 +5,7 @@ pub type W = crate::W<CDT_SPEC>;
 #[doc = "Field `CDT` reader - Common Data"]
 pub type CDT_R = crate::FieldReader;
 #[doc = "Field `CDT` writer - Common Data"]
-pub type CDT_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
+pub type CDT_W<'a, REG> = crate::FieldWriter<'a, REG, 8, u8, crate::Safe>;
 impl R {
     #[doc = "Bits 0:7 - Common Data"]
     #[inline(always)]
@@ -15,14 +15,7 @@ impl R {
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("CDT")
-            .field("cdt", &format_args!("{}", self.cdt().bits()))
-            .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CDT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+        f.debug_struct("CDT").field("cdt", &self.cdt()).finish()
     }
 }
 impl W {
@@ -33,7 +26,7 @@ impl W {
         CDT_W::new(self, 0)
     }
 }
-#[doc = "Common data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cdt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cdt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Common data register\n\nYou can [`read`](crate::Reg::read) this register and get [`cdt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cdt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CDT_SPEC;
 impl crate::RegisterSpec for CDT_SPEC {
     type Ux = u32;

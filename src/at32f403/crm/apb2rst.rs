@@ -187,32 +187,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB2RST")
-            .field("iomux", &format_args!("{}", self.iomux().bit()))
-            .field("exint", &format_args!("{}", self.exint().bit()))
-            .field("gpioa", &format_args!("{}", self.gpioa().bit()))
-            .field("gpiob", &format_args!("{}", self.gpiob().bit()))
-            .field("gpioc", &format_args!("{}", self.gpioc().bit()))
-            .field("gpiod", &format_args!("{}", self.gpiod().bit()))
-            .field("gpioe", &format_args!("{}", self.gpioe().bit()))
-            .field("gpiof", &format_args!("{}", self.gpiof().bit()))
-            .field("gpiog", &format_args!("{}", self.gpiog().bit()))
-            .field("adc1", &format_args!("{}", self.adc1().bit()))
-            .field("adc2", &format_args!("{}", self.adc2().bit()))
-            .field("tmr1", &format_args!("{}", self.tmr1().bit()))
-            .field("spi1", &format_args!("{}", self.spi1().bit()))
-            .field("tmr8", &format_args!("{}", self.tmr8().bit()))
-            .field("usart1", &format_args!("{}", self.usart1().bit()))
-            .field("adc3", &format_args!("{}", self.adc3().bit()))
-            .field("tmr15", &format_args!("{}", self.tmr15().bit()))
-            .field("tmr9", &format_args!("{}", self.tmr9().bit()))
-            .field("tmr10", &format_args!("{}", self.tmr10().bit()))
-            .field("tmr11", &format_args!("{}", self.tmr11().bit()))
+            .field("iomux", &self.iomux())
+            .field("exint", &self.exint())
+            .field("gpioa", &self.gpioa())
+            .field("gpiob", &self.gpiob())
+            .field("gpioc", &self.gpioc())
+            .field("gpiod", &self.gpiod())
+            .field("gpioe", &self.gpioe())
+            .field("gpiof", &self.gpiof())
+            .field("gpiog", &self.gpiog())
+            .field("adc1", &self.adc1())
+            .field("adc2", &self.adc2())
+            .field("tmr1", &self.tmr1())
+            .field("spi1", &self.spi1())
+            .field("tmr8", &self.tmr8())
+            .field("usart1", &self.usart1())
+            .field("adc3", &self.adc3())
+            .field("tmr15", &self.tmr15())
+            .field("tmr9", &self.tmr9())
+            .field("tmr10", &self.tmr10())
+            .field("tmr11", &self.tmr11())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<APB2RST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -337,7 +332,7 @@ impl W {
         TMR11_W::new(self, 21)
     }
 }
-#[doc = "APB2 peripheral reset register (CRM_APB2RST)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2rst::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb2rst::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APB2 peripheral reset register (CRM_APB2RST)\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2rst::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb2rst::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB2RST_SPEC;
 impl crate::RegisterSpec for APB2RST_SPEC {
     type Ux = u32;

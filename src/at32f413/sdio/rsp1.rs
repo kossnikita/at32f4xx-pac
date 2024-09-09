@@ -12,16 +12,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RSP1")
-            .field("cardsts1", &format_args!("{}", self.cardsts1().bits()))
+            .field("cardsts1", &self.cardsts1())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<RSP1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Bits 31:0 = CARDSTATUS1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rsp1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Bits 31:0 = CARDSTATUS1\n\nYou can [`read`](crate::Reg::read) this register and get [`rsp1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RSP1_SPEC;
 impl crate::RegisterSpec for RSP1_SPEC {
     type Ux = u32;

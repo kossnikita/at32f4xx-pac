@@ -104,23 +104,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPINT2")
-            .field("xferc", &format_args!("{}", self.xferc().bit()))
-            .field("eptdisd", &format_args!("{}", self.eptdisd().bit()))
-            .field("ahberr", &format_args!("{}", self.ahberr().bit()))
-            .field("timeout", &format_args!("{}", self.timeout().bit()))
-            .field("intkntxfemp", &format_args!("{}", self.intkntxfemp().bit()))
-            .field("ineptnak", &format_args!("{}", self.ineptnak().bit()))
-            .field("txfemp", &format_args!("{}", self.txfemp().bit()))
-            .field("txfifoundrn", &format_args!("{}", self.txfifoundrn().bit()))
-            .field("pktdrpsts", &format_args!("{}", self.pktdrpsts().bit()))
-            .field("nakintpt", &format_args!("{}", self.nakintpt().bit()))
-            .field("nyetintpt", &format_args!("{}", self.nyetintpt().bit()))
+            .field("xferc", &self.xferc())
+            .field("eptdisd", &self.eptdisd())
+            .field("ahberr", &self.ahberr())
+            .field("timeout", &self.timeout())
+            .field("intkntxfemp", &self.intkntxfemp())
+            .field("ineptnak", &self.ineptnak())
+            .field("txfemp", &self.txfemp())
+            .field("txfifoundrn", &self.txfifoundrn())
+            .field("pktdrpsts", &self.pktdrpsts())
+            .field("nakintpt", &self.nakintpt())
+            .field("nyetintpt", &self.nyetintpt())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DIEPINT2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -185,7 +180,7 @@ impl W {
         NYETINTPT_W::new(self, 14)
     }
 }
-#[doc = "OTGHS device IN endpoint-2 interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepint2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepint2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS device IN endpoint-2 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepint2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepint2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPINT2_SPEC;
 impl crate::RegisterSpec for DIEPINT2_SPEC {
     type Ux = u32;

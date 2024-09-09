@@ -12,16 +12,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MMCRGUFCNT")
-            .field("rgufc", &format_args!("{}", self.rgufc().bits()))
+            .field("rgufc", &self.rgufc())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<MMCRGUFCNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "MMC received good unicast frames counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mmcrgufcnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MMC received good unicast frames counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`mmcrgufcnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MMCRGUFCNT_SPEC;
 impl crate::RegisterSpec for MMCRGUFCNT_SPEC {
     type Ux = u32;

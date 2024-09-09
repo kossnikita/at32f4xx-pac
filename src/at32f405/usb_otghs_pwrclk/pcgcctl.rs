@@ -23,14 +23,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PCGCCTL")
-            .field("stoppclk", &format_args!("{}", self.stoppclk().bit()))
-            .field("suspendm", &format_args!("{}", self.suspendm().bit()))
+            .field("stoppclk", &self.stoppclk())
+            .field("suspendm", &self.suspendm())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<PCGCCTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -41,7 +36,7 @@ impl W {
         STOPPCLK_W::new(self, 0)
     }
 }
-#[doc = "OTGHS power and clock gating control register (OTGHS_PCGCCTL)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcgcctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pcgcctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS power and clock gating control register (OTGHS_PCGCCTL)\n\nYou can [`read`](crate::Reg::read) this register and get [`pcgcctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pcgcctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PCGCCTL_SPEC;
 impl crate::RegisterSpec for PCGCCTL_SPEC {
     type Ux = u32;

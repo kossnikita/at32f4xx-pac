@@ -140,6 +140,7 @@ impl From<ETR_A> for u8 {
 impl crate::FieldSpec for ETR_A {
     type Ux = u8;
 }
+impl crate::IsEnum for ETR_A {}
 #[doc = "Field `ETR` reader - Error type record"]
 pub type ETR_R = crate::FieldReader<ETR_A>;
 impl ETR_R {
@@ -200,7 +201,7 @@ impl ETR_R {
     }
 }
 #[doc = "Field `ETR` writer - Error type record"]
-pub type ETR_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, ETR_A>;
+pub type ETR_W<'a, REG> = crate::FieldWriter<'a, REG, 3, ETR_A, crate::Safe>;
 impl<'a, REG> ETR_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -286,18 +287,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ESTS")
-            .field("rec", &format_args!("{}", self.rec().bits()))
-            .field("tec", &format_args!("{}", self.tec().bits()))
-            .field("etr", &format_args!("{}", self.etr().bits()))
-            .field("bof", &format_args!("{}", self.bof().bit()))
-            .field("epf", &format_args!("{}", self.epf().bit()))
-            .field("eaf", &format_args!("{}", self.eaf().bit()))
+            .field("rec", &self.rec())
+            .field("tec", &self.tec())
+            .field("etr", &self.etr())
+            .field("bof", &self.bof())
+            .field("epf", &self.epf())
+            .field("eaf", &self.eaf())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<ESTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -308,7 +304,7 @@ impl W {
         ETR_W::new(self, 4)
     }
 }
-#[doc = "Error status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ests::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ests::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Error status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ests::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ests::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ESTS_SPEC;
 impl crate::RegisterSpec for ESTS_SPEC {
     type Ux = u32;

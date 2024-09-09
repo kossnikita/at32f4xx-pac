@@ -198,7 +198,7 @@ impl R {
     }
     #[doc = "Channel (1-1) interrupt flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IF` field.</div>"]
     #[inline(always)]
     pub fn cif(&self, n: u8) -> CIF_R {
         #[allow(clippy::no_effect)]
@@ -228,7 +228,7 @@ impl R {
     }
     #[doc = "Channel (1-1) recapture flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1RF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1RF` field.</div>"]
     #[inline(always)]
     pub fn crf(&self, n: u8) -> CRF_R {
         #[allow(clippy::no_effect)]
@@ -250,17 +250,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ISTS")
-            .field("c1rf", &format_args!("{}", self.c1rf().bit()))
-            .field("brkif", &format_args!("{}", self.brkif().bit()))
-            .field("hallif", &format_args!("{}", self.hallif().bit()))
-            .field("c1if", &format_args!("{}", self.c1if().bit()))
-            .field("ovfif", &format_args!("{}", self.ovfif().bit()))
+            .field("c1rf", &self.c1rf())
+            .field("brkif", &self.brkif())
+            .field("hallif", &self.hallif())
+            .field("c1if", &self.c1if())
+            .field("ovfif", &self.ovfif())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<ISTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -272,7 +267,7 @@ impl W {
     }
     #[doc = "Channel (1-1) interrupt flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1IF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cif(&mut self, n: u8) -> CIF_W<ISTS_SPEC> {
@@ -300,7 +295,7 @@ impl W {
     }
     #[doc = "Channel (1-1) recapture flag"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `C1RF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1RF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn crf(&mut self, n: u8) -> CRF_W<ISTS_SPEC> {
@@ -315,7 +310,7 @@ impl W {
         CRF_W::new(self, 9)
     }
 }
-#[doc = "Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ists::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ists::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ists::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ists::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ISTS_SPEC;
 impl crate::RegisterSpec for ISTS_SPEC {
     type Ux = u32;

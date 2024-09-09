@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("S2DCTRL")
-            .field("s1_2den", &format_args!("{}", self.s1_2den().bit()))
-            .field("s2_2den", &format_args!("{}", self.s2_2den().bit()))
-            .field("s3_2den", &format_args!("{}", self.s3_2den().bit()))
-            .field("s4_2den", &format_args!("{}", self.s4_2den().bit()))
-            .field("s5_2den", &format_args!("{}", self.s5_2den().bit()))
-            .field("s6_2den", &format_args!("{}", self.s6_2den().bit()))
-            .field("s7_2den", &format_args!("{}", self.s7_2den().bit()))
-            .field("s8_2den", &format_args!("{}", self.s8_2den().bit()))
+            .field("s1_2den", &self.s1_2den())
+            .field("s2_2den", &self.s2_2den())
+            .field("s3_2den", &self.s3_2den())
+            .field("s4_2den", &self.s4_2den())
+            .field("s5_2den", &self.s5_2den())
+            .field("s6_2den", &self.s6_2den())
+            .field("s7_2den", &self.s7_2den())
+            .field("s8_2den", &self.s8_2den())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<S2DCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         S8_2DEN_W::new(self, 7)
     }
 }
-#[doc = "EDMA 2D Transfer Control Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`s2dctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`s2dctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "EDMA 2D Transfer Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`s2dctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`s2dctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct S2DCTRL_SPEC;
 impl crate::RegisterSpec for S2DCTRL_SPEC {
     type Ux = u32;

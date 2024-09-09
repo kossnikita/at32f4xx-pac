@@ -43,16 +43,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHBLPEN3")
-            .field("xmclp", &format_args!("{}", self.xmclp().bit()))
-            .field("qspi1lp", &format_args!("{}", self.qspi1lp().bit()))
-            .field("qspi2lp", &format_args!("{}", self.qspi2lp().bit()))
-            .field("sdio2lp", &format_args!("{}", self.sdio2lp().bit()))
+            .field("xmclp", &self.xmclp())
+            .field("qspi1lp", &self.qspi1lp())
+            .field("qspi2lp", &self.qspi2lp())
+            .field("sdio2lp", &self.sdio2lp())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<AHBLPEN3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -81,7 +76,7 @@ impl W {
         SDIO2LP_W::new(self, 15)
     }
 }
-#[doc = "AHB peripheral Low-power clock enable register 3 (CRM_AHBLPEN3)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahblpen3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahblpen3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "AHB peripheral Low-power clock enable register 3 (CRM_AHBLPEN3)\n\nYou can [`read`](crate::Reg::read) this register and get [`ahblpen3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahblpen3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AHBLPEN3_SPEC;
 impl crate::RegisterSpec for AHBLPEN3_SPEC {
     type Ux = u32;

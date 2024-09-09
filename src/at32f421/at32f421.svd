@@ -148,24 +148,6 @@
             </field>
           </fields>
         </register>
-        <register>
-          <name>CTRL2</name>
-          <displayName>CTRL2</displayName>
-          <description>Power control and status register2
-          (PWC_CTRL2)</description>
-          <addressOffset>0x20</addressOffset>
-          <size>0x20</size>
-          <resetValue>0x00000000</resetValue>
-          <fields>
-            <field>
-              <name>VREXLPEN</name>
-              <description>Voltage regulator extra low power mode enable</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
       </registers>
     </peripheral>
     <peripheral>
@@ -5185,7 +5167,7 @@
             </field>
             <field>
               <name>CCFS</name>
-              <description>Channel control bit fresh select</description>
+              <description>Channel control bit refresh select</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <enumeratedValues>
@@ -10243,7 +10225,7 @@
             </field>
             <field>
               <name>CCFS</name>
-              <description>Channel control bit fresh select</description>
+              <description>Channel control bit refresh select</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -11549,7 +11531,7 @@
             </field>
             <field>
               <name>CCFS</name>
-              <description>Channel control bit fresh select</description>
+              <description>Channel control bit refresh select</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <enumeratedValues>

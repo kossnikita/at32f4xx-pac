@@ -18,6 +18,10 @@ pub type HICK_TO_SCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type HEXTDIV_R = crate::FieldReader;
 #[doc = "Field `HEXTDIV` writer - HEXT division"]
 pub type HEXTDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `EMAC_PPS_SEL` reader - Ethernet pulse width Select"]
+pub type EMAC_PPS_SEL_R = crate::BitReader;
+#[doc = "Field `EMAC_PPS_SEL` writer - Ethernet pulse width Select"]
+pub type EMAC_PPS_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
@@ -39,26 +43,21 @@ impl R {
     pub fn hextdiv(&self) -> HEXTDIV_R {
         HEXTDIV_R::new(((self.bits >> 12) & 3) as u8)
     }
+    #[doc = "Bit 15 - Ethernet pulse width Select"]
+    #[inline(always)]
+    pub fn emac_pps_sel(&self) -> EMAC_PPS_SEL_R {
+        EMAC_PPS_SEL_R::new(((self.bits >> 15) & 1) != 0)
+    }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC3")
-            .field(
-                "auto_step_en",
-                &format_args!("{}", self.auto_step_en().bits()),
-            )
-            .field("hick_to_usb", &format_args!("{}", self.hick_to_usb().bit()))
-            .field(
-                "hick_to_sclk",
-                &format_args!("{}", self.hick_to_sclk().bit()),
-            )
-            .field("hextdiv", &format_args!("{}", self.hextdiv().bits()))
+            .field("auto_step_en", &self.auto_step_en())
+            .field("hick_to_usb", &self.hick_to_usb())
+            .field("hick_to_sclk", &self.hick_to_sclk())
+            .field("hextdiv", &self.hextdiv())
+            .field("emac_pps_sel", &self.emac_pps_sel())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MISC3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -86,8 +85,14 @@ impl W {
     pub fn hextdiv(&mut self) -> HEXTDIV_W<MISC3_SPEC> {
         HEXTDIV_W::new(self, 12)
     }
+    #[doc = "Bit 15 - Ethernet pulse width Select"]
+    #[inline(always)]
+    #[must_use]
+    pub fn emac_pps_sel(&mut self) -> EMAC_PPS_SEL_W<MISC3_SPEC> {
+        EMAC_PPS_SEL_W::new(self, 15)
+    }
 }
-#[doc = "Miscellaneous register3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`misc3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`misc3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Miscellaneous register3\n\nYou can [`read`](crate::Reg::read) this register and get [`misc3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`misc3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MISC3_SPEC;
 impl crate::RegisterSpec for MISC3_SPEC {
     type Ux = u32;

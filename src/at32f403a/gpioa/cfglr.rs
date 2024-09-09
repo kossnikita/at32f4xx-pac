@@ -24,6 +24,7 @@ impl From<IOMC0_A> for u8 {
 impl crate::FieldSpec for IOMC0_A {
     type Ux = u8;
 }
+impl crate::IsEnum for IOMC0_A {}
 #[doc = "Field `IOMC(0-7)` reader - Port n.%s mode configurate bits"]
 pub type IOMC_R = crate::FieldReader<IOMC0_A>;
 impl IOMC_R {
@@ -60,7 +61,7 @@ impl IOMC_R {
     }
 }
 #[doc = "Field `IOMC(0-7)` writer - Port n.%s mode configurate bits"]
-pub type IOMC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, IOMC0_A>;
+pub type IOMC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, IOMC0_A, crate::Safe>;
 impl<'a, REG> IOMC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -109,6 +110,7 @@ impl From<IOFC0_A> for u8 {
 impl crate::FieldSpec for IOFC0_A {
     type Ux = u8;
 }
+impl crate::IsEnum for IOFC0_A {}
 #[doc = "Field `IOFC(0-7)` reader - Port n.%s function configurate bits"]
 pub type IOFC_R = crate::FieldReader<IOFC0_A>;
 impl IOFC_R {
@@ -145,7 +147,7 @@ impl IOFC_R {
     }
 }
 #[doc = "Field `IOFC(0-7)` writer - Port n.%s function configurate bits"]
-pub type IOFC_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, IOFC0_A>;
+pub type IOFC_W<'a, REG> = crate::FieldWriter<'a, REG, 2, IOFC0_A, crate::Safe>;
 impl<'a, REG> IOFC_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -175,7 +177,7 @@ where
 impl R {
     #[doc = "Port n.(0-7) mode configurate bits"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOMC0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOMC0` field.</div>"]
     #[inline(always)]
     pub fn iomc(&self, n: u8) -> IOMC_R {
         #[allow(clippy::no_effect)]
@@ -230,7 +232,7 @@ impl R {
     }
     #[doc = "Port n.(0-7) function configurate bits"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOFC0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOFC0` field.</div>"]
     #[inline(always)]
     pub fn iofc(&self, n: u8) -> IOFC_R {
         #[allow(clippy::no_effect)]
@@ -287,34 +289,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFGLR")
-            .field("iomc0", &format_args!("{}", self.iomc0().bits()))
-            .field("iomc1", &format_args!("{}", self.iomc1().bits()))
-            .field("iomc2", &format_args!("{}", self.iomc2().bits()))
-            .field("iomc3", &format_args!("{}", self.iomc3().bits()))
-            .field("iomc4", &format_args!("{}", self.iomc4().bits()))
-            .field("iomc5", &format_args!("{}", self.iomc5().bits()))
-            .field("iomc6", &format_args!("{}", self.iomc6().bits()))
-            .field("iomc7", &format_args!("{}", self.iomc7().bits()))
-            .field("iofc0", &format_args!("{}", self.iofc0().bits()))
-            .field("iofc1", &format_args!("{}", self.iofc1().bits()))
-            .field("iofc2", &format_args!("{}", self.iofc2().bits()))
-            .field("iofc3", &format_args!("{}", self.iofc3().bits()))
-            .field("iofc4", &format_args!("{}", self.iofc4().bits()))
-            .field("iofc5", &format_args!("{}", self.iofc5().bits()))
-            .field("iofc6", &format_args!("{}", self.iofc6().bits()))
-            .field("iofc7", &format_args!("{}", self.iofc7().bits()))
+            .field("iomc0", &self.iomc0())
+            .field("iomc1", &self.iomc1())
+            .field("iomc2", &self.iomc2())
+            .field("iomc3", &self.iomc3())
+            .field("iomc4", &self.iomc4())
+            .field("iomc5", &self.iomc5())
+            .field("iomc6", &self.iomc6())
+            .field("iomc7", &self.iomc7())
+            .field("iofc0", &self.iofc0())
+            .field("iofc1", &self.iofc1())
+            .field("iofc2", &self.iofc2())
+            .field("iofc3", &self.iofc3())
+            .field("iofc4", &self.iofc4())
+            .field("iofc5", &self.iofc5())
+            .field("iofc6", &self.iofc6())
+            .field("iofc7", &self.iofc7())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CFGLR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
     #[doc = "Port n.(0-7) mode configurate bits"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOMC0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOMC0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn iomc(&mut self, n: u8) -> IOMC_W<CFGLR_SPEC> {
@@ -372,7 +369,7 @@ impl W {
     }
     #[doc = "Port n.(0-7) function configurate bits"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `IOFC0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOFC0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn iofc(&mut self, n: u8) -> IOFC_W<CFGLR_SPEC> {
@@ -429,7 +426,7 @@ impl W {
         IOFC_W::new(self, 30)
     }
 }
-#[doc = "GPIO function configurate low register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfglr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfglr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO function configurate low register\n\nYou can [`read`](crate::Reg::read) this register and get [`cfglr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfglr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CFGLR_SPEC;
 impl crate::RegisterSpec for CFGLR_SPEC {
     type Ux = u32;

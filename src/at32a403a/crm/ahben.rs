@@ -34,6 +34,22 @@ pub type SDIO1_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SDIO2_R = crate::BitReader;
 #[doc = "Field `SDIO2` writer - SDIO2 clock enable"]
 pub type SDIO2_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMAC` reader - EMACEN clock enable"]
+pub type EMAC_R = crate::BitReader;
+#[doc = "Field `EMAC` writer - EMACEN clock enable"]
+pub type EMAC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMACTX` reader - EMACEN Tx clock enable"]
+pub type EMACTX_R = crate::BitReader;
+#[doc = "Field `EMACTX` writer - EMACEN Tx clock enable"]
+pub type EMACTX_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMACRX` reader - EMACEN Rx clock enable"]
+pub type EMACRX_R = crate::BitReader;
+#[doc = "Field `EMACRX` writer - EMACEN Rx clock enable"]
+pub type EMACRX_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `EMACPTP` reader - EMACPTP clock enable"]
+pub type EMACPTP_R = crate::BitReader;
+#[doc = "Field `EMACPTP` writer - EMACPTP clock enable"]
+pub type EMACPTP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - DMA1 clock enable"]
     #[inline(always)]
@@ -75,24 +91,43 @@ impl R {
     pub fn sdio2(&self) -> SDIO2_R {
         SDIO2_R::new(((self.bits >> 11) & 1) != 0)
     }
+    #[doc = "Bit 14 - EMACEN clock enable"]
+    #[inline(always)]
+    pub fn emac(&self) -> EMAC_R {
+        EMAC_R::new(((self.bits >> 14) & 1) != 0)
+    }
+    #[doc = "Bit 15 - EMACEN Tx clock enable"]
+    #[inline(always)]
+    pub fn emactx(&self) -> EMACTX_R {
+        EMACTX_R::new(((self.bits >> 15) & 1) != 0)
+    }
+    #[doc = "Bit 16 - EMACEN Rx clock enable"]
+    #[inline(always)]
+    pub fn emacrx(&self) -> EMACRX_R {
+        EMACRX_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 28 - EMACPTP clock enable"]
+    #[inline(always)]
+    pub fn emacptp(&self) -> EMACPTP_R {
+        EMACPTP_R::new(((self.bits >> 28) & 1) != 0)
+    }
 }
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHBEN")
-            .field("dma1", &format_args!("{}", self.dma1().bit()))
-            .field("dma2", &format_args!("{}", self.dma2().bit()))
-            .field("sram", &format_args!("{}", self.sram().bit()))
-            .field("flash", &format_args!("{}", self.flash().bit()))
-            .field("crc", &format_args!("{}", self.crc().bit()))
-            .field("xmc", &format_args!("{}", self.xmc().bit()))
-            .field("sdio1", &format_args!("{}", self.sdio1().bit()))
-            .field("sdio2", &format_args!("{}", self.sdio2().bit()))
+            .field("dma1", &self.dma1())
+            .field("dma2", &self.dma2())
+            .field("sram", &self.sram())
+            .field("flash", &self.flash())
+            .field("crc", &self.crc())
+            .field("xmc", &self.xmc())
+            .field("sdio1", &self.sdio1())
+            .field("sdio2", &self.sdio2())
+            .field("emac", &self.emac())
+            .field("emactx", &self.emactx())
+            .field("emacrx", &self.emacrx())
+            .field("emacptp", &self.emacptp())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<AHBEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -144,8 +179,32 @@ impl W {
     pub fn sdio2(&mut self) -> SDIO2_W<AHBEN_SPEC> {
         SDIO2_W::new(self, 11)
     }
+    #[doc = "Bit 14 - EMACEN clock enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn emac(&mut self) -> EMAC_W<AHBEN_SPEC> {
+        EMAC_W::new(self, 14)
+    }
+    #[doc = "Bit 15 - EMACEN Tx clock enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn emactx(&mut self) -> EMACTX_W<AHBEN_SPEC> {
+        EMACTX_W::new(self, 15)
+    }
+    #[doc = "Bit 16 - EMACEN Rx clock enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn emacrx(&mut self) -> EMACRX_W<AHBEN_SPEC> {
+        EMACRX_W::new(self, 16)
+    }
+    #[doc = "Bit 28 - EMACPTP clock enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn emacptp(&mut self) -> EMACPTP_W<AHBEN_SPEC> {
+        EMACPTP_W::new(self, 28)
+    }
 }
-#[doc = "AHB Peripheral Clock enable register (CRM_AHBEN)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahben::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahben::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "AHB Peripheral Clock enable register (CRM_AHBEN)\n\nYou can [`read`](crate::Reg::read) this register and get [`ahben::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahben::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AHBEN_SPEC;
 impl crate::RegisterSpec for AHBEN_SPEC {
     type Ux = u32;

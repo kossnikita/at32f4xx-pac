@@ -70,19 +70,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MUXS4CTRL")
-            .field("reqsel", &format_args!("{}", self.reqsel().bits()))
-            .field("syncovien", &format_args!("{}", self.syncovien().bit()))
-            .field("evtgen", &format_args!("{}", self.evtgen().bit()))
-            .field("syncen", &format_args!("{}", self.syncen().bit()))
-            .field("syncpol", &format_args!("{}", self.syncpol().bits()))
-            .field("reqcnt", &format_args!("{}", self.reqcnt().bits()))
-            .field("syncsel", &format_args!("{}", self.syncsel().bits()))
+            .field("reqsel", &self.reqsel())
+            .field("syncovien", &self.syncovien())
+            .field("evtgen", &self.evtgen())
+            .field("syncen", &self.syncen())
+            .field("syncpol", &self.syncpol())
+            .field("reqcnt", &self.reqcnt())
+            .field("syncsel", &self.syncsel())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MUXS4CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -129,7 +124,7 @@ impl W {
         SYNCSEL_W::new(self, 24)
     }
 }
-#[doc = "Stream 4 Configuration Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`muxs4ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`muxs4ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Stream 4 Configuration Register\n\nYou can [`read`](crate::Reg::read) this register and get [`muxs4ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`muxs4ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MUXS4CTRL_SPEC;
 impl crate::RegisterSpec for MUXS4CTRL_SPEC {
     type Ux = u32;

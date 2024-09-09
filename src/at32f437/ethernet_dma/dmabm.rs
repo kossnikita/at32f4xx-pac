@@ -97,22 +97,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMABM")
-            .field("swr", &format_args!("{}", self.swr().bit()))
-            .field("da", &format_args!("{}", self.da().bit()))
-            .field("dsl", &format_args!("{}", self.dsl().bits()))
-            .field("pbl", &format_args!("{}", self.pbl().bits()))
-            .field("pr", &format_args!("{}", self.pr().bits()))
-            .field("fb", &format_args!("{}", self.fb().bit()))
-            .field("rdp", &format_args!("{}", self.rdp().bits()))
-            .field("usp", &format_args!("{}", self.usp().bit()))
-            .field("pblx8", &format_args!("{}", self.pblx8().bit()))
-            .field("aab", &format_args!("{}", self.aab().bit()))
+            .field("swr", &self.swr())
+            .field("da", &self.da())
+            .field("dsl", &self.dsl())
+            .field("pbl", &self.pbl())
+            .field("pr", &self.pr())
+            .field("fb", &self.fb())
+            .field("rdp", &self.rdp())
+            .field("usp", &self.usp())
+            .field("pblx8", &self.pblx8())
+            .field("aab", &self.aab())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DMABM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -177,7 +172,7 @@ impl W {
         AAB_W::new(self, 25)
     }
 }
-#[doc = "Ethernet DMA bus mode register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmabm::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmabm::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet DMA bus mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`dmabm::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmabm::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMABM_SPEC;
 impl crate::RegisterSpec for DMABM_SPEC {
     type Ux = u32;

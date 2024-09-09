@@ -130,29 +130,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STS")
-            .field("addr", &format_args!("{}", self.addr().bits()))
-            .field("sdir", &format_args!("{}", self.sdir().bit()))
-            .field("busyf", &format_args!("{}", self.busyf().bit()))
-            .field("alertf", &format_args!("{}", self.alertf().bit()))
-            .field("tmout", &format_args!("{}", self.tmout().bit()))
-            .field("pecerr", &format_args!("{}", self.pecerr().bit()))
-            .field("ouf", &format_args!("{}", self.ouf().bit()))
-            .field("arlost", &format_args!("{}", self.arlost().bit()))
-            .field("buserr", &format_args!("{}", self.buserr().bit()))
-            .field("tcrld", &format_args!("{}", self.tcrld().bit()))
-            .field("tdc", &format_args!("{}", self.tdc().bit()))
-            .field("stopf", &format_args!("{}", self.stopf().bit()))
-            .field("ackfail", &format_args!("{}", self.ackfail().bit()))
-            .field("addrf", &format_args!("{}", self.addrf().bit()))
-            .field("rdbf", &format_args!("{}", self.rdbf().bit()))
-            .field("tdis", &format_args!("{}", self.tdis().bit()))
-            .field("tdbe", &format_args!("{}", self.tdbe().bit()))
+            .field("addr", &self.addr())
+            .field("sdir", &self.sdir())
+            .field("busyf", &self.busyf())
+            .field("alertf", &self.alertf())
+            .field("tmout", &self.tmout())
+            .field("pecerr", &self.pecerr())
+            .field("ouf", &self.ouf())
+            .field("arlost", &self.arlost())
+            .field("buserr", &self.buserr())
+            .field("tcrld", &self.tcrld())
+            .field("tdc", &self.tdc())
+            .field("stopf", &self.stopf())
+            .field("ackfail", &self.ackfail())
+            .field("addrf", &self.addrf())
+            .field("rdbf", &self.rdbf())
+            .field("tdis", &self.tdis())
+            .field("tdbe", &self.tdbe())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<STS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -169,7 +164,7 @@ impl W {
         TDIS_W::new(self, 1)
     }
 }
-#[doc = "Interrupt and Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt and Status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STS_SPEC;
 impl crate::RegisterSpec for STS_SPEC {
     type Ux = u32;

@@ -317,6 +317,7 @@ impl From<TWCMSEL_A> for u8 {
 impl crate::FieldSpec for TWCMSEL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TWCMSEL_A {}
 #[doc = "Field `TWCMSEL` reader - Two-way count mode selection"]
 pub type TWCMSEL_R = crate::FieldReader<TWCMSEL_A>;
 impl TWCMSEL_R {
@@ -353,7 +354,7 @@ impl TWCMSEL_R {
     }
 }
 #[doc = "Field `TWCMSEL` writer - Two-way count mode selection"]
-pub type TWCMSEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TWCMSEL_A>;
+pub type TWCMSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 2, TWCMSEL_A, crate::Safe>;
 impl<'a, REG> TWCMSEL_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -467,6 +468,7 @@ impl From<CLKDIV_A> for u8 {
 impl crate::FieldSpec for CLKDIV_A {
     type Ux = u8;
 }
+impl crate::IsEnum for CLKDIV_A {}
 #[doc = "Field `CLKDIV` reader - Clock divider"]
 pub type CLKDIV_R = crate::FieldReader<CLKDIV_A>;
 impl CLKDIV_R {
@@ -564,20 +566,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
-            .field("clkdiv", &format_args!("{}", self.clkdiv().bits()))
-            .field("prben", &format_args!("{}", self.prben().bit()))
-            .field("twcmsel", &format_args!("{}", self.twcmsel().bits()))
-            .field("owcdir", &format_args!("{}", self.owcdir().bit()))
-            .field("ocmen", &format_args!("{}", self.ocmen().bit()))
-            .field("ovfs", &format_args!("{}", self.ovfs().bit()))
-            .field("ovfen", &format_args!("{}", self.ovfen().bit()))
-            .field("tmren", &format_args!("{}", self.tmren().bit()))
+            .field("clkdiv", &self.clkdiv())
+            .field("prben", &self.prben())
+            .field("twcmsel", &self.twcmsel())
+            .field("owcdir", &self.owcdir())
+            .field("ocmen", &self.ocmen())
+            .field("ovfs", &self.ovfs())
+            .field("ovfen", &self.ovfen())
+            .field("tmren", &self.tmren())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -630,7 +627,7 @@ impl W {
         CLKDIV_W::new(self, 8)
     }
 }
-#[doc = "Control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL1_SPEC;
 impl crate::RegisterSpec for CTRL1_SPEC {
     type Ux = u32;

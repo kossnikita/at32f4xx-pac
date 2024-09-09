@@ -25,20 +25,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEACHINTMSK")
-            .field(
-                "echinepintmsk",
-                &format_args!("{}", self.echinepintmsk().bits()),
-            )
-            .field(
-                "echoutepintmsk",
-                &format_args!("{}", self.echoutepintmsk().bits()),
-            )
+            .field("echinepintmsk", &self.echinepintmsk())
+            .field("echoutepintmsk", &self.echoutepintmsk())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DEACHINTMSK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -55,7 +44,7 @@ impl W {
         ECHOUTEPINTMSK_W::new(self, 16)
     }
 }
-#[doc = "Device Each Endpoints Interrupt Mask Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`deachintmsk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`deachintmsk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Device Each Endpoints Interrupt Mask Register\n\nYou can [`read`](crate::Reg::read) this register and get [`deachintmsk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`deachintmsk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DEACHINTMSK_SPEC;
 impl crate::RegisterSpec for DEACHINTMSK_SPEC {
     type Ux = u32;

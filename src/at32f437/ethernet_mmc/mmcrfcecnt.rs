@@ -12,16 +12,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MMCRFCECNT")
-            .field("rfcec", &format_args!("{}", self.rfcec().bits()))
+            .field("rfcec", &self.rfcec())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<MMCRFCECNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Ethernet MMC received frames with CRC error counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mmcrfcecnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet MMC received frames with CRC error counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`mmcrfcecnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MMCRFCECNT_SPEC;
 impl crate::RegisterSpec for MMCRFCECNT_SPEC {
     type Ux = u32;

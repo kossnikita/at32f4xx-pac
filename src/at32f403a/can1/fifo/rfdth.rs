@@ -5,7 +5,7 @@ pub type RFDT_R = crate::FieldReader;
 impl R {
     #[doc = "Receive FIFO data byte (4-7)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `RFDT4` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RFDT4` field.</div>"]
     #[inline(always)]
     pub fn rfdt(&self, n: u8) -> RFDT_R {
         #[allow(clippy::no_effect)]
@@ -42,19 +42,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RFDTH")
-            .field("rfdt4", &format_args!("{}", self.rfdt4().bits()))
-            .field("rfdt5", &format_args!("{}", self.rfdt5().bits()))
-            .field("rfdt6", &format_args!("{}", self.rfdt6().bits()))
-            .field("rfdt7", &format_args!("{}", self.rfdt7().bits()))
+            .field("rfdt4", &self.rfdt4())
+            .field("rfdt5", &self.rfdt5())
+            .field("rfdt6", &self.rfdt6())
+            .field("rfdt7", &self.rfdt7())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<RFDTH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Receive FIFO mailbox data high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfdth::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive FIFO mailbox data high register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfdth::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFDTH_SPEC;
 impl crate::RegisterSpec for RFDTH_SPEC {
     type Ux = u32;

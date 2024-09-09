@@ -122,28 +122,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRLSTS")
-            .field("cmpen", &format_args!("{}", self.cmpen().bit()))
-            .field("cmpis", &format_args!("{}", self.cmpis().bit()))
-            .field("cmpssel", &format_args!("{}", self.cmpssel().bits()))
-            .field("cmpinvsel", &format_args!("{}", self.cmpinvsel().bits()))
-            .field("cmpninvsel", &format_args!("{}", self.cmpninvsel().bits()))
-            .field("cmptag", &format_args!("{}", self.cmptag().bits()))
-            .field("cmpp", &format_args!("{}", self.cmpp().bit()))
-            .field("cmphyst", &format_args!("{}", self.cmphyst().bits()))
-            .field(
-                "cmpblanking",
-                &format_args!("{}", self.cmpblanking().bits()),
-            )
-            .field("brgen", &format_args!("{}", self.brgen().bit()))
-            .field("scalen", &format_args!("{}", self.scalen().bit()))
-            .field("cmpvalue", &format_args!("{}", self.cmpvalue().bit()))
-            .field("cmpwp", &format_args!("{}", self.cmpwp().bit()))
+            .field("cmpen", &self.cmpen())
+            .field("cmpis", &self.cmpis())
+            .field("cmpssel", &self.cmpssel())
+            .field("cmpinvsel", &self.cmpinvsel())
+            .field("cmpninvsel", &self.cmpninvsel())
+            .field("cmptag", &self.cmptag())
+            .field("cmpp", &self.cmpp())
+            .field("cmphyst", &self.cmphyst())
+            .field("cmpblanking", &self.cmpblanking())
+            .field("brgen", &self.brgen())
+            .field("scalen", &self.scalen())
+            .field("cmpvalue", &self.cmpvalue())
+            .field("cmpwp", &self.cmpwp())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRLSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -220,7 +212,7 @@ impl W {
         CMPWP_W::new(self, 31)
     }
 }
-#[doc = "CMP control/status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrlsts::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrlsts::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CMP control/status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrlsts::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrlsts::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRLSTS_SPEC;
 impl crate::RegisterSpec for CTRLSTS_SPEC {
     type Ux = u32;

@@ -26,18 +26,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RFC")
-            .field("ts", &format_args!("{}", self.ts().bits()))
-            .field("fmn", &format_args!("{}", self.fmn().bits()))
-            .field("dtl", &format_args!("{}", self.dtl().bits()))
+            .field("ts", &self.ts())
+            .field("fmn", &self.fmn())
+            .field("dtl", &self.dtl())
             .finish()
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<RFC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "Receive FIFO mailbox data length and time stamp register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rfc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive FIFO mailbox data length and time stamp register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RFC_SPEC;
 impl crate::RegisterSpec for RFC_SPEC {
     type Ux = u32;

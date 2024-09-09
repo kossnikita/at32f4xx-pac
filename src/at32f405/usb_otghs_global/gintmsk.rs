@@ -212,56 +212,30 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GINTMSK")
-            .field("modemismsk", &format_args!("{}", self.modemismsk().bit()))
-            .field("otgintmsk", &format_args!("{}", self.otgintmsk().bit()))
-            .field("sofmsk", &format_args!("{}", self.sofmsk().bit()))
-            .field("rxflvlmsk", &format_args!("{}", self.rxflvlmsk().bit()))
-            .field("nptxfempmsk", &format_args!("{}", self.nptxfempmsk().bit()))
-            .field(
-                "ginnakeffmsk",
-                &format_args!("{}", self.ginnakeffmsk().bit()),
-            )
-            .field(
-                "goutnakeffmsk",
-                &format_args!("{}", self.goutnakeffmsk().bit()),
-            )
-            .field("erlysuspmsk", &format_args!("{}", self.erlysuspmsk().bit()))
-            .field("usbsuspmsk", &format_args!("{}", self.usbsuspmsk().bit()))
-            .field("usbrstmsk", &format_args!("{}", self.usbrstmsk().bit()))
-            .field("enumdonemsk", &format_args!("{}", self.enumdonemsk().bit()))
-            .field(
-                "isooutdropmsk",
-                &format_args!("{}", self.isooutdropmsk().bit()),
-            )
-            .field("eopfmsk", &format_args!("{}", self.eopfmsk().bit()))
-            .field("ieptintmsk", &format_args!("{}", self.ieptintmsk().bit()))
-            .field("oeptintmsk", &format_args!("{}", self.oeptintmsk().bit()))
-            .field(
-                "incomisoinmsk",
-                &format_args!("{}", self.incomisoinmsk().bit()),
-            )
-            .field(
-                "incompip_incompisooutmsk",
-                &format_args!("{}", self.incompip_incompisooutmsk().bit()),
-            )
-            .field("prtintmsk", &format_args!("{}", self.prtintmsk().bit()))
-            .field("hchintmsk", &format_args!("{}", self.hchintmsk().bit()))
-            .field("ptxfempmsk", &format_args!("{}", self.ptxfempmsk().bit()))
-            .field(
-                "conidschgmsk",
-                &format_args!("{}", self.conidschgmsk().bit()),
-            )
-            .field(
-                "disconintmsk",
-                &format_args!("{}", self.disconintmsk().bit()),
-            )
-            .field("wkupintmsk", &format_args!("{}", self.wkupintmsk().bit()))
+            .field("modemismsk", &self.modemismsk())
+            .field("otgintmsk", &self.otgintmsk())
+            .field("sofmsk", &self.sofmsk())
+            .field("rxflvlmsk", &self.rxflvlmsk())
+            .field("nptxfempmsk", &self.nptxfempmsk())
+            .field("ginnakeffmsk", &self.ginnakeffmsk())
+            .field("goutnakeffmsk", &self.goutnakeffmsk())
+            .field("erlysuspmsk", &self.erlysuspmsk())
+            .field("usbsuspmsk", &self.usbsuspmsk())
+            .field("usbrstmsk", &self.usbrstmsk())
+            .field("enumdonemsk", &self.enumdonemsk())
+            .field("isooutdropmsk", &self.isooutdropmsk())
+            .field("eopfmsk", &self.eopfmsk())
+            .field("ieptintmsk", &self.ieptintmsk())
+            .field("oeptintmsk", &self.oeptintmsk())
+            .field("incomisoinmsk", &self.incomisoinmsk())
+            .field("incompip_incompisooutmsk", &self.incompip_incompisooutmsk())
+            .field("prtintmsk", &self.prtintmsk())
+            .field("hchintmsk", &self.hchintmsk())
+            .field("ptxfempmsk", &self.ptxfempmsk())
+            .field("conidschgmsk", &self.conidschgmsk())
+            .field("disconintmsk", &self.disconintmsk())
+            .field("wkupintmsk", &self.wkupintmsk())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GINTMSK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -398,7 +372,7 @@ impl W {
         WKUPINTMSK_W::new(self, 31)
     }
 }
-#[doc = "OTGHS interrupt mask register (OTGHS_GINTMSK)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gintmsk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gintmsk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGHS interrupt mask register (OTGHS_GINTMSK)\n\nYou can [`read`](crate::Reg::read) this register and get [`gintmsk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gintmsk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GINTMSK_SPEC;
 impl crate::RegisterSpec for GINTMSK_SPEC {
     type Ux = u32;

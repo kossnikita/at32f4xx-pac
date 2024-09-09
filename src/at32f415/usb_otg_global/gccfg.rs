@@ -52,17 +52,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GCCFG")
-            .field("pwrdown", &format_args!("{}", self.pwrdown().bit()))
-            .field("avalidsesen", &format_args!("{}", self.avalidsesen().bit()))
-            .field("bvalidsesen", &format_args!("{}", self.bvalidsesen().bit()))
-            .field("sofouten", &format_args!("{}", self.sofouten().bit()))
-            .field("vbusig", &format_args!("{}", self.vbusig().bit()))
+            .field("pwrdown", &self.pwrdown())
+            .field("avalidsesen", &self.avalidsesen())
+            .field("bvalidsesen", &self.bvalidsesen())
+            .field("sofouten", &self.sofouten())
+            .field("vbusig", &self.vbusig())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<GCCFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -97,7 +92,7 @@ impl W {
         VBUSIG_W::new(self, 21)
     }
 }
-#[doc = "OTGFS general core configuration register (OTGFS_GCCFG)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gccfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gccfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS general core configuration register (OTGFS_GCCFG)\n\nYou can [`read`](crate::Reg::read) this register and get [`gccfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gccfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GCCFG_SPEC;
 impl crate::RegisterSpec for GCCFG_SPEC {
     type Ux = u32;

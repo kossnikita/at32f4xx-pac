@@ -142,27 +142,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAIE")
-            .field("tie", &format_args!("{}", self.tie().bit()))
-            .field("tse", &format_args!("{}", self.tse().bit()))
-            .field("tue", &format_args!("{}", self.tue().bit()))
-            .field("tje", &format_args!("{}", self.tje().bit()))
-            .field("ove", &format_args!("{}", self.ove().bit()))
-            .field("une", &format_args!("{}", self.une().bit()))
-            .field("rie", &format_args!("{}", self.rie().bit()))
-            .field("rbue", &format_args!("{}", self.rbue().bit()))
-            .field("rse", &format_args!("{}", self.rse().bit()))
-            .field("rwte", &format_args!("{}", self.rwte().bit()))
-            .field("eie", &format_args!("{}", self.eie().bit()))
-            .field("fbee", &format_args!("{}", self.fbee().bit()))
-            .field("ere", &format_args!("{}", self.ere().bit()))
-            .field("aie", &format_args!("{}", self.aie().bit()))
-            .field("nie", &format_args!("{}", self.nie().bit()))
+            .field("tie", &self.tie())
+            .field("tse", &self.tse())
+            .field("tue", &self.tue())
+            .field("tje", &self.tje())
+            .field("ove", &self.ove())
+            .field("une", &self.une())
+            .field("rie", &self.rie())
+            .field("rbue", &self.rbue())
+            .field("rse", &self.rse())
+            .field("rwte", &self.rwte())
+            .field("eie", &self.eie())
+            .field("fbee", &self.fbee())
+            .field("ere", &self.ere())
+            .field("aie", &self.aie())
+            .field("nie", &self.nie())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DMAIE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -257,7 +252,7 @@ impl W {
         NIE_W::new(self, 16)
     }
 }
-#[doc = "Ethernet DMA interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmaie::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmaie::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet DMA interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`dmaie::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmaie::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMAIE_SPEC;
 impl crate::RegisterSpec for DMAIE_SPEC {
     type Ux = u32;

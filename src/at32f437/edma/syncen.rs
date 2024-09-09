@@ -79,20 +79,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYNCEN")
-            .field("s1sync", &format_args!("{}", self.s1sync().bit()))
-            .field("s2sync", &format_args!("{}", self.s2sync().bit()))
-            .field("s3sync", &format_args!("{}", self.s3sync().bit()))
-            .field("s4sync", &format_args!("{}", self.s4sync().bit()))
-            .field("s5sync", &format_args!("{}", self.s5sync().bit()))
-            .field("s6sync", &format_args!("{}", self.s6sync().bit()))
-            .field("s7sync", &format_args!("{}", self.s7sync().bit()))
-            .field("s8sync", &format_args!("{}", self.s8sync().bit()))
+            .field("s1sync", &self.s1sync())
+            .field("s2sync", &self.s2sync())
+            .field("s3sync", &self.s3sync())
+            .field("s4sync", &self.s4sync())
+            .field("s5sync", &self.s5sync())
+            .field("s6sync", &self.s6sync())
+            .field("s7sync", &self.s7sync())
+            .field("s8sync", &self.s8sync())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<SYNCEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +140,7 @@ impl W {
         S8SYNC_W::new(self, 7)
     }
 }
-#[doc = "Sync Enable\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`syncen::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`syncen::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Sync Enable\n\nYou can [`read`](crate::Reg::read) this register and get [`syncen::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`syncen::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SYNCEN_SPEC;
 impl crate::RegisterSpec for SYNCEN_SPEC {
     type Ux = u32;

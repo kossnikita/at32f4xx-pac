@@ -513,23 +513,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("hicken", &format_args!("{}", self.hicken().bit()))
-            .field("hickstbl", &format_args!("{}", self.hickstbl().bit()))
-            .field("hicktrim", &format_args!("{}", self.hicktrim().bits()))
-            .field("hickcal", &format_args!("{}", self.hickcal().bits()))
-            .field("hexten", &format_args!("{}", self.hexten().bit()))
-            .field("hextstbl", &format_args!("{}", self.hextstbl().bit()))
-            .field("hextbyps", &format_args!("{}", self.hextbyps().bit()))
-            .field("cfden", &format_args!("{}", self.cfden().bit()))
-            .field("pllen", &format_args!("{}", self.pllen().bit()))
-            .field("pllstbl", &format_args!("{}", self.pllstbl().bit()))
-            .field("pllustbl", &format_args!("{}", self.pllustbl().bit()))
+            .field("hicken", &self.hicken())
+            .field("hickstbl", &self.hickstbl())
+            .field("hicktrim", &self.hicktrim())
+            .field("hickcal", &self.hickcal())
+            .field("hexten", &self.hexten())
+            .field("hextstbl", &self.hextstbl())
+            .field("hextbyps", &self.hextbyps())
+            .field("cfden", &self.cfden())
+            .field("pllen", &self.pllen())
+            .field("pllstbl", &self.pllstbl())
+            .field("pllustbl", &self.pllustbl())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -570,7 +565,7 @@ impl W {
         PLLEN_W::new(self, 24)
     }
 }
-#[doc = "Clock control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Clock control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

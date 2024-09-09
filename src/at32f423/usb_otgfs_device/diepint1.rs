@@ -59,18 +59,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPINT1")
-            .field("xferc", &format_args!("{}", self.xferc().bit()))
-            .field("eptdisd", &format_args!("{}", self.eptdisd().bit()))
-            .field("timeout", &format_args!("{}", self.timeout().bit()))
-            .field("intkntxfemp", &format_args!("{}", self.intkntxfemp().bit()))
-            .field("ineptnak", &format_args!("{}", self.ineptnak().bit()))
-            .field("txfemp", &format_args!("{}", self.txfemp().bit()))
+            .field("xferc", &self.xferc())
+            .field("eptdisd", &self.eptdisd())
+            .field("timeout", &self.timeout())
+            .field("intkntxfemp", &self.intkntxfemp())
+            .field("ineptnak", &self.ineptnak())
+            .field("txfemp", &self.txfemp())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<DIEPINT1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -105,7 +100,7 @@ impl W {
         INEPTNAK_W::new(self, 6)
     }
 }
-#[doc = "OTGFS device IN endpoint-1 interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepint1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepint1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OTGFS device IN endpoint-1 interrupt register\n\nYou can [`read`](crate::Reg::read) this register and get [`diepint1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepint1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIEPINT1_SPEC;
 impl crate::RegisterSpec for DIEPINT1_SPEC {
     type Ux = u32;

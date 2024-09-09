@@ -52,17 +52,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MACISTS")
-            .field("pis", &format_args!("{}", self.pis().bit()))
-            .field("mis", &format_args!("{}", self.mis().bit()))
-            .field("mris", &format_args!("{}", self.mris().bit()))
-            .field("mtis", &format_args!("{}", self.mtis().bit()))
-            .field("tis", &format_args!("{}", self.tis().bit()))
+            .field("pis", &self.pis())
+            .field("mis", &self.mis())
+            .field("mris", &self.mris())
+            .field("mtis", &self.mtis())
+            .field("tis", &self.tis())
             .finish()
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<MACISTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -97,7 +92,7 @@ impl W {
         TIS_W::new(self, 9)
     }
 }
-#[doc = "Ethernet MAC interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`macists::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`macists::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ethernet MAC interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`macists::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`macists::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MACISTS_SPEC;
 impl crate::RegisterSpec for MACISTS_SPEC {
     type Ux = u32;
