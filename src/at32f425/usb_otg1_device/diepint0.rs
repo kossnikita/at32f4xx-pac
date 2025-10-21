@@ -71,32 +71,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn xferc(&mut self) -> XFERC_W<DIEPINT0_SPEC> {
+    pub fn xferc(&mut self) -> XFERC_W<'_, DIEPINT0_SPEC> {
         XFERC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdisd(&mut self) -> EPTDISD_W<DIEPINT0_SPEC> {
+    pub fn eptdisd(&mut self) -> EPTDISD_W<'_, DIEPINT0_SPEC> {
         EPTDISD_W::new(self, 1)
     }
     #[doc = "Bit 3 - Timeout condition"]
     #[inline(always)]
-    #[must_use]
-    pub fn timeout(&mut self) -> TIMEOUT_W<DIEPINT0_SPEC> {
+    pub fn timeout(&mut self) -> TIMEOUT_W<'_, DIEPINT0_SPEC> {
         TIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - IN token received when TxFIFO is empty"]
     #[inline(always)]
-    #[must_use]
-    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<DIEPINT0_SPEC> {
+    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<'_, DIEPINT0_SPEC> {
         INTKNTXFEMP_W::new(self, 4)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective"]
     #[inline(always)]
-    #[must_use]
-    pub fn ineptnak(&mut self) -> INEPTNAK_W<DIEPINT0_SPEC> {
+    pub fn ineptnak(&mut self) -> INEPTNAK_W<'_, DIEPINT0_SPEC> {
         INEPTNAK_W::new(self, 6)
     }
 }
@@ -110,8 +105,6 @@ impl crate::Readable for DIEPINT0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepint0::W`](W) writer structure"]
 impl crate::Writable for DIEPINT0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPINT0 to value 0x80"]
 impl crate::Resettable for DIEPINT0_SPEC {

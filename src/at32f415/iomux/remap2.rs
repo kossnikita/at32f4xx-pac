@@ -52,8 +52,7 @@ impl core::fmt::Debug for crate::generic::Reg<REMAP2_SPEC> {
 impl W {
     #[doc = "Bits 26:27 - CMP internal muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp_mux(&mut self) -> CMP_MUX_W<REMAP2_SPEC> {
+    pub fn cmp_mux(&mut self) -> CMP_MUX_W<'_, REMAP2_SPEC> {
         CMP_MUX_W::new(self, 26)
     }
 }
@@ -65,10 +64,6 @@ impl crate::RegisterSpec for REMAP2_SPEC {
 #[doc = "`write(|w| ..)` method takes [`remap2::W`](W) writer structure"]
 impl crate::Writable for REMAP2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP2 to value 0"]
-impl crate::Resettable for REMAP2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP2_SPEC {}

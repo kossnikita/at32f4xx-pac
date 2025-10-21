@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - QSPI1 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn qspi1lp(&mut self) -> QSPI1LP_W<AHBLPEN3_SPEC> {
+    pub fn qspi1lp(&mut self) -> QSPI1LP_W<'_, AHBLPEN3_SPEC> {
         QSPI1LP_W::new(self, 1)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for AHBLPEN3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahblpen3::W`](W) writer structure"]
 impl crate::Writable for AHBLPEN3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBLPEN3 to value 0xc003"]
 impl crate::Resettable for AHBLPEN3_SPEC {

@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - Sub-seconds value"]
     #[inline(always)]
-    #[must_use]
-    pub fn sbs(&mut self) -> SBS_W<ALASBS_SPEC> {
+    pub fn sbs(&mut self) -> SBS_W<'_, ALASBS_SPEC> {
         SBS_W::new(self, 0)
     }
     #[doc = "Bits 24:27 - Sub-second mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn sbsmsk(&mut self) -> SBSMSK_W<ALASBS_SPEC> {
+    pub fn sbsmsk(&mut self) -> SBSMSK_W<'_, ALASBS_SPEC> {
         SBSMSK_W::new(self, 24)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for ALASBS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`alasbs::W`](W) writer structure"]
 impl crate::Writable for ALASBS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ALASBS to value 0"]
-impl crate::Resettable for ALASBS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ALASBS_SPEC {}

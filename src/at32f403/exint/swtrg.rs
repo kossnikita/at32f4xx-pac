@@ -203,116 +203,97 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Software triggle on line 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt0(&mut self) -> SWT0_W<SWTRG_SPEC> {
+    pub fn swt0(&mut self) -> SWT0_W<'_, SWTRG_SPEC> {
         SWT0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Software triggle on line 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt1(&mut self) -> SWT1_W<SWTRG_SPEC> {
+    pub fn swt1(&mut self) -> SWT1_W<'_, SWTRG_SPEC> {
         SWT1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Software triggle on line 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt2(&mut self) -> SWT2_W<SWTRG_SPEC> {
+    pub fn swt2(&mut self) -> SWT2_W<'_, SWTRG_SPEC> {
         SWT2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Software triggle on line 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt3(&mut self) -> SWT3_W<SWTRG_SPEC> {
+    pub fn swt3(&mut self) -> SWT3_W<'_, SWTRG_SPEC> {
         SWT3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Software triggle on line 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt4(&mut self) -> SWT4_W<SWTRG_SPEC> {
+    pub fn swt4(&mut self) -> SWT4_W<'_, SWTRG_SPEC> {
         SWT4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Software triggle on line 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt5(&mut self) -> SWT5_W<SWTRG_SPEC> {
+    pub fn swt5(&mut self) -> SWT5_W<'_, SWTRG_SPEC> {
         SWT5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Software triggle on line 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt6(&mut self) -> SWT6_W<SWTRG_SPEC> {
+    pub fn swt6(&mut self) -> SWT6_W<'_, SWTRG_SPEC> {
         SWT6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Software triggle on line 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt7(&mut self) -> SWT7_W<SWTRG_SPEC> {
+    pub fn swt7(&mut self) -> SWT7_W<'_, SWTRG_SPEC> {
         SWT7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Software triggle on line 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt8(&mut self) -> SWT8_W<SWTRG_SPEC> {
+    pub fn swt8(&mut self) -> SWT8_W<'_, SWTRG_SPEC> {
         SWT8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Software triggle on line 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt9(&mut self) -> SWT9_W<SWTRG_SPEC> {
+    pub fn swt9(&mut self) -> SWT9_W<'_, SWTRG_SPEC> {
         SWT9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Software triggle on line 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt10(&mut self) -> SWT10_W<SWTRG_SPEC> {
+    pub fn swt10(&mut self) -> SWT10_W<'_, SWTRG_SPEC> {
         SWT10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Software triggle on line 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt11(&mut self) -> SWT11_W<SWTRG_SPEC> {
+    pub fn swt11(&mut self) -> SWT11_W<'_, SWTRG_SPEC> {
         SWT11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Software triggle on line 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt12(&mut self) -> SWT12_W<SWTRG_SPEC> {
+    pub fn swt12(&mut self) -> SWT12_W<'_, SWTRG_SPEC> {
         SWT12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Software triggle on line 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt13(&mut self) -> SWT13_W<SWTRG_SPEC> {
+    pub fn swt13(&mut self) -> SWT13_W<'_, SWTRG_SPEC> {
         SWT13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Software triggle on line 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt14(&mut self) -> SWT14_W<SWTRG_SPEC> {
+    pub fn swt14(&mut self) -> SWT14_W<'_, SWTRG_SPEC> {
         SWT14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Software triggle on line 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt15(&mut self) -> SWT15_W<SWTRG_SPEC> {
+    pub fn swt15(&mut self) -> SWT15_W<'_, SWTRG_SPEC> {
         SWT15_W::new(self, 15)
     }
     #[doc = "Bit 16 - Software triggle on line 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt16(&mut self) -> SWT16_W<SWTRG_SPEC> {
+    pub fn swt16(&mut self) -> SWT16_W<'_, SWTRG_SPEC> {
         SWT16_W::new(self, 16)
     }
     #[doc = "Bit 17 - Software triggle on line 17"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt17(&mut self) -> SWT17_W<SWTRG_SPEC> {
+    pub fn swt17(&mut self) -> SWT17_W<'_, SWTRG_SPEC> {
         SWT17_W::new(self, 17)
     }
     #[doc = "Bit 18 - Software triggle on line 18"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt18(&mut self) -> SWT18_W<SWTRG_SPEC> {
+    pub fn swt18(&mut self) -> SWT18_W<'_, SWTRG_SPEC> {
         SWT18_W::new(self, 18)
     }
 }
@@ -326,10 +307,6 @@ impl crate::Readable for SWTRG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swtrg::W`](W) writer structure"]
 impl crate::Writable for SWTRG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SWTRG to value 0"]
-impl crate::Resettable for SWTRG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SWTRG_SPEC {}

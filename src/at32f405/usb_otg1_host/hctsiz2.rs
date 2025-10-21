@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:18 - Transfer size"]
     #[inline(always)]
-    #[must_use]
-    pub fn xfersize(&mut self) -> XFERSIZE_W<HCTSIZ2_SPEC> {
+    pub fn xfersize(&mut self) -> XFERSIZE_W<'_, HCTSIZ2_SPEC> {
         XFERSIZE_W::new(self, 0)
     }
     #[doc = "Bits 19:28 - Packet count"]
     #[inline(always)]
-    #[must_use]
-    pub fn pktcnt(&mut self) -> PKTCNT_W<HCTSIZ2_SPEC> {
+    pub fn pktcnt(&mut self) -> PKTCNT_W<'_, HCTSIZ2_SPEC> {
         PKTCNT_W::new(self, 19)
     }
     #[doc = "Bits 29:30 - PID"]
     #[inline(always)]
-    #[must_use]
-    pub fn pid(&mut self) -> PID_W<HCTSIZ2_SPEC> {
+    pub fn pid(&mut self) -> PID_W<'_, HCTSIZ2_SPEC> {
         PID_W::new(self, 29)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for HCTSIZ2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hctsiz2::W`](W) writer structure"]
 impl crate::Writable for HCTSIZ2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HCTSIZ2 to value 0"]
-impl crate::Resettable for HCTSIZ2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HCTSIZ2_SPEC {}

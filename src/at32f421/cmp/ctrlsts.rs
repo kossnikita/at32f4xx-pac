@@ -141,74 +141,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Comparator enable bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpen(&mut self) -> CMPEN_W<CTRLSTS_SPEC> {
+    pub fn cmpen(&mut self) -> CMPEN_W<'_, CTRLSTS_SPEC> {
         CMPEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Comparator input shift"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpis(&mut self) -> CMPIS_W<CTRLSTS_SPEC> {
+    pub fn cmpis(&mut self) -> CMPIS_W<'_, CTRLSTS_SPEC> {
         CMPIS_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Comparator speed selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpssel(&mut self) -> CMPSSEL_W<CTRLSTS_SPEC> {
+    pub fn cmpssel(&mut self) -> CMPSSEL_W<'_, CTRLSTS_SPEC> {
         CMPSSEL_W::new(self, 2)
     }
     #[doc = "Bits 4:6 - Comparator inverting selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpinvsel(&mut self) -> CMPINVSEL_W<CTRLSTS_SPEC> {
+    pub fn cmpinvsel(&mut self) -> CMPINVSEL_W<'_, CTRLSTS_SPEC> {
         CMPINVSEL_W::new(self, 4)
     }
     #[doc = "Bits 7:8 - Comparator non-inverting input selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpninvsel(&mut self) -> CMPNINVSEL_W<CTRLSTS_SPEC> {
+    pub fn cmpninvsel(&mut self) -> CMPNINVSEL_W<'_, CTRLSTS_SPEC> {
         CMPNINVSEL_W::new(self, 7)
     }
     #[doc = "Bits 10:12 - Comparator output target"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmptag(&mut self) -> CMPTAG_W<CTRLSTS_SPEC> {
+    pub fn cmptag(&mut self) -> CMPTAG_W<'_, CTRLSTS_SPEC> {
         CMPTAG_W::new(self, 10)
     }
     #[doc = "Bit 15 - Comparator polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpp(&mut self) -> CMPP_W<CTRLSTS_SPEC> {
+    pub fn cmpp(&mut self) -> CMPP_W<'_, CTRLSTS_SPEC> {
         CMPP_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - Comparator hysteresis"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmphyst(&mut self) -> CMPHYST_W<CTRLSTS_SPEC> {
+    pub fn cmphyst(&mut self) -> CMPHYST_W<'_, CTRLSTS_SPEC> {
         CMPHYST_W::new(self, 16)
     }
     #[doc = "Bits 18:20 - Comparator blanking"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpblanking(&mut self) -> CMPBLANKING_W<CTRLSTS_SPEC> {
+    pub fn cmpblanking(&mut self) -> CMPBLANKING_W<'_, CTRLSTS_SPEC> {
         CMPBLANKING_W::new(self, 18)
     }
     #[doc = "Bit 22 - Comparator brgen"]
     #[inline(always)]
-    #[must_use]
-    pub fn brgen(&mut self) -> BRGEN_W<CTRLSTS_SPEC> {
+    pub fn brgen(&mut self) -> BRGEN_W<'_, CTRLSTS_SPEC> {
         BRGEN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Comparator scalen"]
     #[inline(always)]
-    #[must_use]
-    pub fn scalen(&mut self) -> SCALEN_W<CTRLSTS_SPEC> {
+    pub fn scalen(&mut self) -> SCALEN_W<'_, CTRLSTS_SPEC> {
         SCALEN_W::new(self, 23)
     }
     #[doc = "Bit 31 - Comparator write protect"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmpwp(&mut self) -> CMPWP_W<CTRLSTS_SPEC> {
+    pub fn cmpwp(&mut self) -> CMPWP_W<'_, CTRLSTS_SPEC> {
         CMPWP_W::new(self, 31)
     }
 }
@@ -222,10 +210,6 @@ impl crate::Readable for CTRLSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlsts::W`](W) writer structure"]
 impl crate::Writable for CTRLSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRLSTS to value 0"]
-impl crate::Resettable for CTRLSTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRLSTS_SPEC {}

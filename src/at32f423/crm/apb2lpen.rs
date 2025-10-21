@@ -113,62 +113,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Timer1 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1lpen(&mut self) -> TMR1LPEN_W<APB2LPEN_SPEC> {
+    pub fn tmr1lpen(&mut self) -> TMR1LPEN_W<'_, APB2LPEN_SPEC> {
         TMR1LPEN_W::new(self, 0)
     }
     #[doc = "Bit 4 - USART1 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart1lpen(&mut self) -> USART1LPEN_W<APB2LPEN_SPEC> {
+    pub fn usart1lpen(&mut self) -> USART1LPEN_W<'_, APB2LPEN_SPEC> {
         USART1LPEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - USART6 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart6lpen(&mut self) -> USART6LPEN_W<APB2LPEN_SPEC> {
+    pub fn usart6lpen(&mut self) -> USART6LPEN_W<'_, APB2LPEN_SPEC> {
         USART6LPEN_W::new(self, 5)
     }
     #[doc = "Bit 8 - ADC clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn adclpen(&mut self) -> ADCLPEN_W<APB2LPEN_SPEC> {
+    pub fn adclpen(&mut self) -> ADCLPEN_W<'_, APB2LPEN_SPEC> {
         ADCLPEN_W::new(self, 8)
     }
     #[doc = "Bit 12 - SPI1 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi1lpen(&mut self) -> SPI1LPEN_W<APB2LPEN_SPEC> {
+    pub fn spi1lpen(&mut self) -> SPI1LPEN_W<'_, APB2LPEN_SPEC> {
         SPI1LPEN_W::new(self, 12)
     }
     #[doc = "Bit 14 - SCFG clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn scfglpen(&mut self) -> SCFGLPEN_W<APB2LPEN_SPEC> {
+    pub fn scfglpen(&mut self) -> SCFGLPEN_W<'_, APB2LPEN_SPEC> {
         SCFGLPEN_W::new(self, 14)
     }
     #[doc = "Bit 16 - Timer9 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr9lpen(&mut self) -> TMR9LPEN_W<APB2LPEN_SPEC> {
+    pub fn tmr9lpen(&mut self) -> TMR9LPEN_W<'_, APB2LPEN_SPEC> {
         TMR9LPEN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Timer10 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr10lpen(&mut self) -> TMR10LPEN_W<APB2LPEN_SPEC> {
+    pub fn tmr10lpen(&mut self) -> TMR10LPEN_W<'_, APB2LPEN_SPEC> {
         TMR10LPEN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Timer11 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr11lpen(&mut self) -> TMR11LPEN_W<APB2LPEN_SPEC> {
+    pub fn tmr11lpen(&mut self) -> TMR11LPEN_W<'_, APB2LPEN_SPEC> {
         TMR11LPEN_W::new(self, 18)
     }
     #[doc = "Bit 29 - ACC clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn acclpen(&mut self) -> ACCLPEN_W<APB2LPEN_SPEC> {
+    pub fn acclpen(&mut self) -> ACCLPEN_W<'_, APB2LPEN_SPEC> {
         ACCLPEN_W::new(self, 29)
     }
 }
@@ -182,8 +172,6 @@ impl crate::Readable for APB2LPEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb2lpen::W`](W) writer structure"]
 impl crate::Writable for APB2LPEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB2LPEN to value 0x2017_7733"]
 impl crate::Resettable for APB2LPEN_SPEC {

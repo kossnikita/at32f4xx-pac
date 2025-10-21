@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Transmit data register"]
     #[inline(always)]
-    #[must_use]
-    pub fn dt(&mut self) -> DT_W<TXDT_SPEC> {
+    pub fn dt(&mut self) -> DT_W<'_, TXDT_SPEC> {
         DT_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for TXDT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`txdt::W`](W) writer structure"]
 impl crate::Writable for TXDT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TXDT to value 0"]
-impl crate::Resettable for TXDT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TXDT_SPEC {}

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - MAC address0 low"]
     #[inline(always)]
-    #[must_use]
-    pub fn ma0l(&mut self) -> MA0L_W<MACA0L_SPEC> {
+    pub fn ma0l(&mut self) -> MA0L_W<'_, MACA0L_SPEC> {
         MA0L_W::new(self, 0)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for MACA0L_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`maca0l::W`](W) writer structure"]
 impl crate::Writable for MACA0L_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACA0L to value 0xffff_ffff"]
 impl crate::Resettable for MACA0L_SPEC {

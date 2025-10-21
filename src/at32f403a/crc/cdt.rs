@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Common Data"]
     #[inline(always)]
-    #[must_use]
-    pub fn cdt(&mut self) -> CDT_W<CDT_SPEC> {
+    pub fn cdt(&mut self) -> CDT_W<'_, CDT_SPEC> {
         CDT_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for CDT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cdt::W`](W) writer structure"]
 impl crate::Writable for CDT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CDT to value 0"]
-impl crate::Resettable for CDT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CDT_SPEC {}

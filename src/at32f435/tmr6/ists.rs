@@ -79,8 +79,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Overflow interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfif(&mut self) -> OVFIF_W<ISTS_SPEC> {
+    pub fn ovfif(&mut self) -> OVFIF_W<'_, ISTS_SPEC> {
         OVFIF_W::new(self, 0)
     }
 }
@@ -95,9 +94,6 @@ impl crate::Readable for ISTS_SPEC {}
 impl crate::Writable for ISTS_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ISTS to value 0"]
-impl crate::Resettable for ISTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ISTS_SPEC {}

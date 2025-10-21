@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Command argument"]
     #[inline(always)]
-    #[must_use]
-    pub fn argu(&mut self) -> ARGU_W<ARGU_SPEC> {
+    pub fn argu(&mut self) -> ARGU_W<'_, ARGU_SPEC> {
         ARGU_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for ARGU_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`argu::W`](W) writer structure"]
 impl crate::Writable for ARGU_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ARGU to value 0"]
-impl crate::Resettable for ARGU_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ARGU_SPEC {}

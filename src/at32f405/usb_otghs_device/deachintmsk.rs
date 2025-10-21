@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Each IN Endpoint Interrupt Mask bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn echinepintmsk(&mut self) -> ECHINEPINTMSK_W<DEACHINTMSK_SPEC> {
+    pub fn echinepintmsk(&mut self) -> ECHINEPINTMSK_W<'_, DEACHINTMSK_SPEC> {
         ECHINEPINTMSK_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Each OUT Endpoint Interrupt Mask bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn echoutepintmsk(&mut self) -> ECHOUTEPINTMSK_W<DEACHINTMSK_SPEC> {
+    pub fn echoutepintmsk(&mut self) -> ECHOUTEPINTMSK_W<'_, DEACHINTMSK_SPEC> {
         ECHOUTEPINTMSK_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for DEACHINTMSK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`deachintmsk::W`](W) writer structure"]
 impl crate::Writable for DEACHINTMSK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DEACHINTMSK to value 0"]
-impl crate::Resettable for DEACHINTMSK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DEACHINTMSK_SPEC {}

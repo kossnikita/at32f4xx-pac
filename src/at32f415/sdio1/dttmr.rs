@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Data timeout period"]
     #[inline(always)]
-    #[must_use]
-    pub fn timeout(&mut self) -> TIMEOUT_W<DTTMR_SPEC> {
+    pub fn timeout(&mut self) -> TIMEOUT_W<'_, DTTMR_SPEC> {
         TIMEOUT_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for DTTMR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dttmr::W`](W) writer structure"]
 impl crate::Writable for DTTMR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DTTMR to value 0"]
-impl crate::Resettable for DTTMR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DTTMR_SPEC {}

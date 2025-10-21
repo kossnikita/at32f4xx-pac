@@ -7,11 +7,6 @@ ACC:
   CTRL2:
     _strip:
       - "ACC_"
-    _modify:
-      HSICAL:
-        name: HICKCAL
-      HSITRIM:
-        name: HICKTRIM
 
 _copy:
   TMR13:

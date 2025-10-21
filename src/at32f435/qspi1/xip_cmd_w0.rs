@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - XIP read second dummy cycle"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipr_dum2(&mut self) -> XIPR_DUM2_W<XIP_CMD_W0_SPEC> {
+    pub fn xipr_dum2(&mut self) -> XIPR_DUM2_W<'_, XIP_CMD_W0_SPEC> {
         XIPR_DUM2_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - XIP read operate mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipr_opmode(&mut self) -> XIPR_OPMODE_W<XIP_CMD_W0_SPEC> {
+    pub fn xipr_opmode(&mut self) -> XIPR_OPMODE_W<'_, XIP_CMD_W0_SPEC> {
         XIPR_OPMODE_W::new(self, 8)
     }
     #[doc = "Bit 11 - XIP read address length"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipr_adrlen(&mut self) -> XIPR_ADRLEN_W<XIP_CMD_W0_SPEC> {
+    pub fn xipr_adrlen(&mut self) -> XIPR_ADRLEN_W<'_, XIP_CMD_W0_SPEC> {
         XIPR_ADRLEN_W::new(self, 11)
     }
     #[doc = "Bits 12:19 - XIP read instruction code"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipr_insc(&mut self) -> XIPR_INSC_W<XIP_CMD_W0_SPEC> {
+    pub fn xipr_insc(&mut self) -> XIPR_INSC_W<'_, XIP_CMD_W0_SPEC> {
         XIPR_INSC_W::new(self, 12)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for XIP_CMD_W0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`xip_cmd_w0::W`](W) writer structure"]
 impl crate::Writable for XIP_CMD_W0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets XIP_CMD_W0 to value 0"]
-impl crate::Resettable for XIP_CMD_W0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for XIP_CMD_W0_SPEC {}

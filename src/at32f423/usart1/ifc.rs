@@ -14,20 +14,17 @@ impl core::fmt::Debug for crate::generic::Reg<IFC_SPEC> {
 impl W {
     #[doc = "Bit 11 - Receiver time out detection flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn rtodfc(&mut self) -> RTODFC_W<IFC_SPEC> {
+    pub fn rtodfc(&mut self) -> RTODFC_W<'_, IFC_SPEC> {
         RTODFC_W::new(self, 11)
     }
     #[doc = "Bit 17 - Character match flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdfc(&mut self) -> CMDFC_W<IFC_SPEC> {
+    pub fn cmdfc(&mut self) -> CMDFC_W<'_, IFC_SPEC> {
         CMDFC_W::new(self, 17)
     }
     #[doc = "Bit 20 - Low power wake up flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn lpwufc(&mut self) -> LPWUFC_W<IFC_SPEC> {
+    pub fn lpwufc(&mut self) -> LPWUFC_W<'_, IFC_SPEC> {
         LPWUFC_W::new(self, 20)
     }
 }
@@ -39,10 +36,6 @@ impl crate::RegisterSpec for IFC_SPEC {
 #[doc = "`write(|w| ..)` method takes [`ifc::W`](W) writer structure"]
 impl crate::Writable for IFC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IFC to value 0"]
-impl crate::Resettable for IFC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IFC_SPEC {}

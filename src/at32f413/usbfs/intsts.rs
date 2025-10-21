@@ -113,62 +113,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Endpoint number"]
     #[inline(always)]
-    #[must_use]
-    pub fn ept_num(&mut self) -> EPT_NUM_W<INTSTS_SPEC> {
+    pub fn ept_num(&mut self) -> EPT_NUM_W<'_, INTSTS_SPEC> {
         EPT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 4 - In/Out transaction"]
     #[inline(always)]
-    #[must_use]
-    pub fn inout(&mut self) -> INOUT_W<INTSTS_SPEC> {
+    pub fn inout(&mut self) -> INOUT_W<'_, INTSTS_SPEC> {
         INOUT_W::new(self, 4)
     }
     #[doc = "Bit 8 - Lost start of frame"]
     #[inline(always)]
-    #[must_use]
-    pub fn lsof(&mut self) -> LSOF_W<INTSTS_SPEC> {
+    pub fn lsof(&mut self) -> LSOF_W<'_, INTSTS_SPEC> {
         LSOF_W::new(self, 8)
     }
     #[doc = "Bit 9 - start of frame"]
     #[inline(always)]
-    #[must_use]
-    pub fn sof(&mut self) -> SOF_W<INTSTS_SPEC> {
+    pub fn sof(&mut self) -> SOF_W<'_, INTSTS_SPEC> {
         SOF_W::new(self, 9)
     }
     #[doc = "Bit 10 - Bus reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst(&mut self) -> RST_W<INTSTS_SPEC> {
+    pub fn rst(&mut self) -> RST_W<'_, INTSTS_SPEC> {
         RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Bus suspend"]
     #[inline(always)]
-    #[must_use]
-    pub fn sp(&mut self) -> SP_W<INTSTS_SPEC> {
+    pub fn sp(&mut self) -> SP_W<'_, INTSTS_SPEC> {
         SP_W::new(self, 11)
     }
     #[doc = "Bit 12 - Wakeup"]
     #[inline(always)]
-    #[must_use]
-    pub fn wk(&mut self) -> WK_W<INTSTS_SPEC> {
+    pub fn wk(&mut self) -> WK_W<'_, INTSTS_SPEC> {
         WK_W::new(self, 12)
     }
     #[doc = "Bit 13 - Bus error"]
     #[inline(always)]
-    #[must_use]
-    pub fn be(&mut self) -> BE_W<INTSTS_SPEC> {
+    pub fn be(&mut self) -> BE_W<'_, INTSTS_SPEC> {
         BE_W::new(self, 13)
     }
     #[doc = "Bit 14 - USB core fifo overrun memory"]
     #[inline(always)]
-    #[must_use]
-    pub fn ucfor(&mut self) -> UCFOR_W<INTSTS_SPEC> {
+    pub fn ucfor(&mut self) -> UCFOR_W<'_, INTSTS_SPEC> {
         UCFOR_W::new(self, 14)
     }
     #[doc = "Bit 15 - transaction completed"]
     #[inline(always)]
-    #[must_use]
-    pub fn tc(&mut self) -> TC_W<INTSTS_SPEC> {
+    pub fn tc(&mut self) -> TC_W<'_, INTSTS_SPEC> {
         TC_W::new(self, 15)
     }
 }
@@ -182,10 +172,6 @@ impl crate::Readable for INTSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intsts::W`](W) writer structure"]
 impl crate::Writable for INTSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTSTS to value 0"]
-impl crate::Resettable for INTSTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTSTS_SPEC {}

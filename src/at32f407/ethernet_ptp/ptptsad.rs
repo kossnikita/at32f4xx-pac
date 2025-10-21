@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Timestamp addend register"]
     #[inline(always)]
-    #[must_use]
-    pub fn tar(&mut self) -> TAR_W<PTPTSAD_SPEC> {
+    pub fn tar(&mut self) -> TAR_W<'_, PTPTSAD_SPEC> {
         TAR_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for PTPTSAD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ptptsad::W`](W) writer structure"]
 impl crate::Writable for PTPTSAD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PTPTSAD to value 0"]
-impl crate::Resettable for PTPTSAD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PTPTSAD_SPEC {}

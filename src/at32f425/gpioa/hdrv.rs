@@ -173,98 +173,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv0(&mut self) -> HDRV0_W<HDRV_SPEC> {
+    pub fn hdrv0(&mut self) -> HDRV0_W<'_, HDRV_SPEC> {
         HDRV0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv1(&mut self) -> HDRV1_W<HDRV_SPEC> {
+    pub fn hdrv1(&mut self) -> HDRV1_W<'_, HDRV_SPEC> {
         HDRV1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv2(&mut self) -> HDRV2_W<HDRV_SPEC> {
+    pub fn hdrv2(&mut self) -> HDRV2_W<'_, HDRV_SPEC> {
         HDRV2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv3(&mut self) -> HDRV3_W<HDRV_SPEC> {
+    pub fn hdrv3(&mut self) -> HDRV3_W<'_, HDRV_SPEC> {
         HDRV3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv4(&mut self) -> HDRV4_W<HDRV_SPEC> {
+    pub fn hdrv4(&mut self) -> HDRV4_W<'_, HDRV_SPEC> {
         HDRV4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv5(&mut self) -> HDRV5_W<HDRV_SPEC> {
+    pub fn hdrv5(&mut self) -> HDRV5_W<'_, HDRV_SPEC> {
         HDRV5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv6(&mut self) -> HDRV6_W<HDRV_SPEC> {
+    pub fn hdrv6(&mut self) -> HDRV6_W<'_, HDRV_SPEC> {
         HDRV6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv7(&mut self) -> HDRV7_W<HDRV_SPEC> {
+    pub fn hdrv7(&mut self) -> HDRV7_W<'_, HDRV_SPEC> {
         HDRV7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv8(&mut self) -> HDRV8_W<HDRV_SPEC> {
+    pub fn hdrv8(&mut self) -> HDRV8_W<'_, HDRV_SPEC> {
         HDRV8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv9(&mut self) -> HDRV9_W<HDRV_SPEC> {
+    pub fn hdrv9(&mut self) -> HDRV9_W<'_, HDRV_SPEC> {
         HDRV9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv10(&mut self) -> HDRV10_W<HDRV_SPEC> {
+    pub fn hdrv10(&mut self) -> HDRV10_W<'_, HDRV_SPEC> {
         HDRV10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv11(&mut self) -> HDRV11_W<HDRV_SPEC> {
+    pub fn hdrv11(&mut self) -> HDRV11_W<'_, HDRV_SPEC> {
         HDRV11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv12(&mut self) -> HDRV12_W<HDRV_SPEC> {
+    pub fn hdrv12(&mut self) -> HDRV12_W<'_, HDRV_SPEC> {
         HDRV12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv13(&mut self) -> HDRV13_W<HDRV_SPEC> {
+    pub fn hdrv13(&mut self) -> HDRV13_W<'_, HDRV_SPEC> {
         HDRV13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv14(&mut self) -> HDRV14_W<HDRV_SPEC> {
+    pub fn hdrv14(&mut self) -> HDRV14_W<'_, HDRV_SPEC> {
         HDRV14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Port x driver bit y"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdrv15(&mut self) -> HDRV15_W<HDRV_SPEC> {
+    pub fn hdrv15(&mut self) -> HDRV15_W<'_, HDRV_SPEC> {
         HDRV15_W::new(self, 15)
     }
 }
@@ -278,10 +262,6 @@ impl crate::Readable for HDRV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hdrv::W`](W) writer structure"]
 impl crate::Writable for HDRV_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HDRV to value 0"]
-impl crate::Resettable for HDRV_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HDRV_SPEC {}

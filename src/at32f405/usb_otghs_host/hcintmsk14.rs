@@ -123,68 +123,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transfer completed mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn xfercmsk(&mut self) -> XFERCMSK_W<HCINTMSK14_SPEC> {
+    pub fn xfercmsk(&mut self) -> XFERCMSK_W<'_, HCINTMSK14_SPEC> {
         XFERCMSK_W::new(self, 0)
     }
     #[doc = "Bit 1 - Channel halted mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn chhltdmsk(&mut self) -> CHHLTDMSK_W<HCINTMSK14_SPEC> {
+    pub fn chhltdmsk(&mut self) -> CHHLTDMSK_W<'_, HCINTMSK14_SPEC> {
         CHHLTDMSK_W::new(self, 1)
     }
     #[doc = "Bit 2 - AHB Error Mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn ahberrmsk(&mut self) -> AHBERRMSK_W<HCINTMSK14_SPEC> {
+    pub fn ahberrmsk(&mut self) -> AHBERRMSK_W<'_, HCINTMSK14_SPEC> {
         AHBERRMSK_W::new(self, 2)
     }
     #[doc = "Bit 3 - STALL response received interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn stallmsk(&mut self) -> STALLMSK_W<HCINTMSK14_SPEC> {
+    pub fn stallmsk(&mut self) -> STALLMSK_W<'_, HCINTMSK14_SPEC> {
         STALLMSK_W::new(self, 3)
     }
     #[doc = "Bit 4 - NAK response received interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn nakmsk(&mut self) -> NAKMSK_W<HCINTMSK14_SPEC> {
+    pub fn nakmsk(&mut self) -> NAKMSK_W<'_, HCINTMSK14_SPEC> {
         NAKMSK_W::new(self, 4)
     }
     #[doc = "Bit 5 - ACK response received/transmitted interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn ackmsk(&mut self) -> ACKMSK_W<HCINTMSK14_SPEC> {
+    pub fn ackmsk(&mut self) -> ACKMSK_W<'_, HCINTMSK14_SPEC> {
         ACKMSK_W::new(self, 5)
     }
     #[doc = "Bit 6 - NYET Response Received interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn nyetmsk(&mut self) -> NYETMSK_W<HCINTMSK14_SPEC> {
+    pub fn nyetmsk(&mut self) -> NYETMSK_W<'_, HCINTMSK14_SPEC> {
         NYETMSK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Transaction error mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn xacterrmsk(&mut self) -> XACTERRMSK_W<HCINTMSK14_SPEC> {
+    pub fn xacterrmsk(&mut self) -> XACTERRMSK_W<'_, HCINTMSK14_SPEC> {
         XACTERRMSK_W::new(self, 7)
     }
     #[doc = "Bit 8 - Babble error mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn bblerrmsk(&mut self) -> BBLERRMSK_W<HCINTMSK14_SPEC> {
+    pub fn bblerrmsk(&mut self) -> BBLERRMSK_W<'_, HCINTMSK14_SPEC> {
         BBLERRMSK_W::new(self, 8)
     }
     #[doc = "Bit 9 - Frame overrun mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn frmovrunmsk(&mut self) -> FRMOVRUNMSK_W<HCINTMSK14_SPEC> {
+    pub fn frmovrunmsk(&mut self) -> FRMOVRUNMSK_W<'_, HCINTMSK14_SPEC> {
         FRMOVRUNMSK_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data toggle error mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtglerrmsk(&mut self) -> DTGLERRMSK_W<HCINTMSK14_SPEC> {
+    pub fn dtglerrmsk(&mut self) -> DTGLERRMSK_W<'_, HCINTMSK14_SPEC> {
         DTGLERRMSK_W::new(self, 10)
     }
 }
@@ -198,10 +187,6 @@ impl crate::Readable for HCINTMSK14_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcintmsk14::W`](W) writer structure"]
 impl crate::Writable for HCINTMSK14_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HCINTMSK14 to value 0"]
-impl crate::Resettable for HCINTMSK14_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HCINTMSK14_SPEC {}

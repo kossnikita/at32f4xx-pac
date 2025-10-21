@@ -594,62 +594,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - USART identification"]
     #[inline(always)]
-    #[must_use]
-    pub fn id(&mut self) -> ID_W<CTRL2_SPEC> {
+    pub fn id(&mut self) -> ID_W<'_, CTRL2_SPEC> {
         ID_W::new(self, 0)
     }
     #[doc = "Bit 5 - Break frame bit num"]
     #[inline(always)]
-    #[must_use]
-    pub fn bfbn(&mut self) -> BFBN_W<CTRL2_SPEC> {
+    pub fn bfbn(&mut self) -> BFBN_W<'_, CTRL2_SPEC> {
         BFBN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Break frame interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn bfien(&mut self) -> BFIEN_W<CTRL2_SPEC> {
+    pub fn bfien(&mut self) -> BFIEN_W<'_, CTRL2_SPEC> {
         BFIEN_W::new(self, 6)
     }
     #[doc = "Bit 8 - Last bit clock pulse"]
     #[inline(always)]
-    #[must_use]
-    pub fn lbcp(&mut self) -> LBCP_W<CTRL2_SPEC> {
+    pub fn lbcp(&mut self) -> LBCP_W<'_, CTRL2_SPEC> {
         LBCP_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clock phase"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkpha(&mut self) -> CLKPHA_W<CTRL2_SPEC> {
+    pub fn clkpha(&mut self) -> CLKPHA_W<'_, CTRL2_SPEC> {
         CLKPHA_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clock polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkpol(&mut self) -> CLKPOL_W<CTRL2_SPEC> {
+    pub fn clkpol(&mut self) -> CLKPOL_W<'_, CTRL2_SPEC> {
         CLKPOL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn clken(&mut self) -> CLKEN_W<CTRL2_SPEC> {
+    pub fn clken(&mut self) -> CLKEN_W<'_, CTRL2_SPEC> {
         CLKEN_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - STOP bit num"]
     #[inline(always)]
-    #[must_use]
-    pub fn stopbn(&mut self) -> STOPBN_W<CTRL2_SPEC> {
+    pub fn stopbn(&mut self) -> STOPBN_W<'_, CTRL2_SPEC> {
         STOPBN_W::new(self, 12)
     }
     #[doc = "Bit 14 - LIN mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn linen(&mut self) -> LINEN_W<CTRL2_SPEC> {
+    pub fn linen(&mut self) -> LINEN_W<'_, CTRL2_SPEC> {
         LINEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Transmit receive pin swap"]
     #[inline(always)]
-    #[must_use]
-    pub fn trpswap(&mut self) -> TRPSWAP_W<CTRL2_SPEC> {
+    pub fn trpswap(&mut self) -> TRPSWAP_W<'_, CTRL2_SPEC> {
         TRPSWAP_W::new(self, 15)
     }
 }
@@ -663,10 +653,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
-impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL2_SPEC {}

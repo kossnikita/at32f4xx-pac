@@ -273,64 +273,55 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Overflow interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfif(&mut self) -> OVFIF_W<ISTS_SPEC> {
+    pub fn ovfif(&mut self) -> OVFIF_W<'_, ISTS_SPEC> {
         OVFIF_W::new(self, 0)
     }
     #[doc = "Channel (1-2) interrupt flag"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IF` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cif(&mut self, n: u8) -> CIF_W<ISTS_SPEC> {
+    pub fn cif(&mut self, n: u8) -> CIF_W<'_, ISTS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CIF_W::new(self, n + 1)
     }
     #[doc = "Bit 1 - Channel 1 interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1if(&mut self) -> CIF_W<ISTS_SPEC> {
+    pub fn c1if(&mut self) -> CIF_W<'_, ISTS_SPEC> {
         CIF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 2 interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2if(&mut self) -> CIF_W<ISTS_SPEC> {
+    pub fn c2if(&mut self) -> CIF_W<'_, ISTS_SPEC> {
         CIF_W::new(self, 2)
     }
     #[doc = "Bit 6 - Trigger interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn trgif(&mut self) -> TRGIF_W<ISTS_SPEC> {
+    pub fn trgif(&mut self) -> TRGIF_W<'_, ISTS_SPEC> {
         TRGIF_W::new(self, 6)
     }
     #[doc = "Bit 7 - Brake interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn brkif(&mut self) -> BRKIF_W<ISTS_SPEC> {
+    pub fn brkif(&mut self) -> BRKIF_W<'_, ISTS_SPEC> {
         BRKIF_W::new(self, 7)
     }
     #[doc = "Channel (1-2) recapture flag"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1RF` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn crf(&mut self, n: u8) -> CRF_W<ISTS_SPEC> {
+    pub fn crf(&mut self, n: u8) -> CRF_W<'_, ISTS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CRF_W::new(self, n + 9)
     }
     #[doc = "Bit 9 - Channel 1 recapture flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1rf(&mut self) -> CRF_W<ISTS_SPEC> {
+    pub fn c1rf(&mut self) -> CRF_W<'_, ISTS_SPEC> {
         CRF_W::new(self, 9)
     }
     #[doc = "Bit 10 - Channel 2 recapture flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2rf(&mut self) -> CRF_W<ISTS_SPEC> {
+    pub fn c2rf(&mut self) -> CRF_W<'_, ISTS_SPEC> {
         CRF_W::new(self, 10)
     }
 }
@@ -344,10 +335,7 @@ impl crate::Readable for ISTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ists::W`](W) writer structure"]
 impl crate::Writable for ISTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0203;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0607;
 }
 #[doc = "`reset()` method sets ISTS to value 0"]
-impl crate::Resettable for ISTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ISTS_SPEC {}

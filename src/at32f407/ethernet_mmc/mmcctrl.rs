@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reset counter"]
     #[inline(always)]
-    #[must_use]
-    pub fn rc(&mut self) -> RC_W<MMCCTRL_SPEC> {
+    pub fn rc(&mut self) -> RC_W<'_, MMCCTRL_SPEC> {
         RC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Stop counter rollover"]
     #[inline(always)]
-    #[must_use]
-    pub fn scr(&mut self) -> SCR_W<MMCCTRL_SPEC> {
+    pub fn scr(&mut self) -> SCR_W<'_, MMCCTRL_SPEC> {
         SCR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reset on read"]
     #[inline(always)]
-    #[must_use]
-    pub fn rr(&mut self) -> RR_W<MMCCTRL_SPEC> {
+    pub fn rr(&mut self) -> RR_W<'_, MMCCTRL_SPEC> {
         RR_W::new(self, 2)
     }
     #[doc = "Bit 31 - Freeze MMC counter"]
     #[inline(always)]
-    #[must_use]
-    pub fn fmc(&mut self) -> FMC_W<MMCCTRL_SPEC> {
+    pub fn fmc(&mut self) -> FMC_W<'_, MMCCTRL_SPEC> {
         FMC_W::new(self, 31)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for MMCCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mmcctrl::W`](W) writer structure"]
 impl crate::Writable for MMCCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MMCCTRL to value 0"]
-impl crate::Resettable for MMCCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MMCCTRL_SPEC {}

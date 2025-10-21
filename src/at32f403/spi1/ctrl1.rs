@@ -153,86 +153,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Clock phase"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkpha(&mut self) -> CLKPHA_W<CTRL1_SPEC> {
+    pub fn clkpha(&mut self) -> CLKPHA_W<'_, CTRL1_SPEC> {
         CLKPHA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clock polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkpol(&mut self) -> CLKPOL_W<CTRL1_SPEC> {
+    pub fn clkpol(&mut self) -> CLKPOL_W<'_, CTRL1_SPEC> {
         CLKPOL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Master enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn msten(&mut self) -> MSTEN_W<CTRL1_SPEC> {
+    pub fn msten(&mut self) -> MSTEN_W<'_, CTRL1_SPEC> {
         MSTEN_W::new(self, 2)
     }
     #[doc = "Bits 3:5 - Master clock frequency division bit2-0"]
     #[inline(always)]
-    #[must_use]
-    pub fn mdiv2_0(&mut self) -> MDIV2_0_W<CTRL1_SPEC> {
+    pub fn mdiv2_0(&mut self) -> MDIV2_0_W<'_, CTRL1_SPEC> {
         MDIV2_0_W::new(self, 3)
     }
     #[doc = "Bit 6 - SPI enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn spien(&mut self) -> SPIEN_W<CTRL1_SPEC> {
+    pub fn spien(&mut self) -> SPIEN_W<'_, CTRL1_SPEC> {
         SPIEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - LSB transmit first"]
     #[inline(always)]
-    #[must_use]
-    pub fn ltf(&mut self) -> LTF_W<CTRL1_SPEC> {
+    pub fn ltf(&mut self) -> LTF_W<'_, CTRL1_SPEC> {
         LTF_W::new(self, 7)
     }
     #[doc = "Bit 8 - Software CS internal level"]
     #[inline(always)]
-    #[must_use]
-    pub fn swcsil(&mut self) -> SWCSIL_W<CTRL1_SPEC> {
+    pub fn swcsil(&mut self) -> SWCSIL_W<'_, CTRL1_SPEC> {
         SWCSIL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Software CS enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn swcsen(&mut self) -> SWCSEN_W<CTRL1_SPEC> {
+    pub fn swcsen(&mut self) -> SWCSEN_W<'_, CTRL1_SPEC> {
         SWCSEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Only receive active"]
     #[inline(always)]
-    #[must_use]
-    pub fn ora(&mut self) -> ORA_W<CTRL1_SPEC> {
+    pub fn ora(&mut self) -> ORA_W<'_, CTRL1_SPEC> {
         ORA_W::new(self, 10)
     }
     #[doc = "Bit 11 - frame bit num"]
     #[inline(always)]
-    #[must_use]
-    pub fn fbn(&mut self) -> FBN_W<CTRL1_SPEC> {
+    pub fn fbn(&mut self) -> FBN_W<'_, CTRL1_SPEC> {
         FBN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Next transmission CRC"]
     #[inline(always)]
-    #[must_use]
-    pub fn ntc(&mut self) -> NTC_W<CTRL1_SPEC> {
+    pub fn ntc(&mut self) -> NTC_W<'_, CTRL1_SPEC> {
         NTC_W::new(self, 12)
     }
     #[doc = "Bit 13 - CRC calculation enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ccen(&mut self) -> CCEN_W<CTRL1_SPEC> {
+    pub fn ccen(&mut self) -> CCEN_W<'_, CTRL1_SPEC> {
         CCEN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Single line bidirectional half-duplex transmission direction"]
     #[inline(always)]
-    #[must_use]
-    pub fn slbtd(&mut self) -> SLBTD_W<CTRL1_SPEC> {
+    pub fn slbtd(&mut self) -> SLBTD_W<'_, CTRL1_SPEC> {
         SLBTD_W::new(self, 14)
     }
     #[doc = "Bit 15 - Single line bidirectional half-duplex enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn slben(&mut self) -> SLBEN_W<CTRL1_SPEC> {
+    pub fn slben(&mut self) -> SLBEN_W<'_, CTRL1_SPEC> {
         SLBEN_W::new(self, 15)
     }
 }
@@ -246,10 +232,6 @@ impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0"]
-impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL1_SPEC {}

@@ -70,8 +70,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Filters configure switch"]
     #[inline(always)]
-    #[must_use]
-    pub fn fcs(&mut self) -> FCS_W<FCTRL_SPEC> {
+    pub fn fcs(&mut self) -> FCS_W<'_, FCTRL_SPEC> {
         FCS_W::new(self, 0)
     }
 }
@@ -85,10 +84,6 @@ impl crate::Readable for FCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fctrl::W`](W) writer structure"]
 impl crate::Writable for FCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FCTRL to value 0"]
-impl crate::Resettable for FCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FCTRL_SPEC {}

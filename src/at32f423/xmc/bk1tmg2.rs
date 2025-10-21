@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Address setup time"]
     #[inline(always)]
-    #[must_use]
-    pub fn addrst(&mut self) -> ADDRST_W<BK1TMG2_SPEC> {
+    pub fn addrst(&mut self) -> ADDRST_W<'_, BK1TMG2_SPEC> {
         ADDRST_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Address-hold time"]
     #[inline(always)]
-    #[must_use]
-    pub fn addrht(&mut self) -> ADDRHT_W<BK1TMG2_SPEC> {
+    pub fn addrht(&mut self) -> ADDRHT_W<'_, BK1TMG2_SPEC> {
         ADDRHT_W::new(self, 4)
     }
     #[doc = "Bits 8:15 - Asynchronous data setup time"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtst(&mut self) -> DTST_W<BK1TMG2_SPEC> {
+    pub fn dtst(&mut self) -> DTST_W<'_, BK1TMG2_SPEC> {
         DTST_W::new(self, 8)
     }
     #[doc = "Bits 16:19 - Bus latency"]
     #[inline(always)]
-    #[must_use]
-    pub fn buslat(&mut self) -> BUSLAT_W<BK1TMG2_SPEC> {
+    pub fn buslat(&mut self) -> BUSLAT_W<'_, BK1TMG2_SPEC> {
         BUSLAT_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - Clock prescale"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkpsc(&mut self) -> CLKPSC_W<BK1TMG2_SPEC> {
+    pub fn clkpsc(&mut self) -> CLKPSC_W<'_, BK1TMG2_SPEC> {
         CLKPSC_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - Data latency"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtlat(&mut self) -> DTLAT_W<BK1TMG2_SPEC> {
+    pub fn dtlat(&mut self) -> DTLAT_W<'_, BK1TMG2_SPEC> {
         DTLAT_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - Asynchronous mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn asyncm(&mut self) -> ASYNCM_W<BK1TMG2_SPEC> {
+    pub fn asyncm(&mut self) -> ASYNCM_W<'_, BK1TMG2_SPEC> {
         ASYNCM_W::new(self, 28)
     }
 }
@@ -134,8 +127,6 @@ impl crate::Readable for BK1TMG2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk1tmg2::W`](W) writer structure"]
 impl crate::Writable for BK1TMG2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK1TMG2 to value 0x0fff_ffff"]
 impl crate::Resettable for BK1TMG2_SPEC {

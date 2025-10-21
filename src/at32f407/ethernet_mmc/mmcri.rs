@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - Received frames CRC error"]
     #[inline(always)]
-    #[must_use]
-    pub fn rfce(&mut self) -> RFCE_W<MMCRI_SPEC> {
+    pub fn rfce(&mut self) -> RFCE_W<'_, MMCRI_SPEC> {
         RFCE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Received frames alignment error"]
     #[inline(always)]
-    #[must_use]
-    pub fn rfae(&mut self) -> RFAE_W<MMCRI_SPEC> {
+    pub fn rfae(&mut self) -> RFAE_W<'_, MMCRI_SPEC> {
         RFAE_W::new(self, 6)
     }
     #[doc = "Bit 17 - Received good unicast frames"]
     #[inline(always)]
-    #[must_use]
-    pub fn rguf(&mut self) -> RGUF_W<MMCRI_SPEC> {
+    pub fn rguf(&mut self) -> RGUF_W<'_, MMCRI_SPEC> {
         RGUF_W::new(self, 17)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for MMCRI_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mmcri::W`](W) writer structure"]
 impl crate::Writable for MMCRI_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MMCRI to value 0"]
-impl crate::Resettable for MMCRI_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MMCRI_SPEC {}

@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Clock timeout detection time"]
     #[inline(always)]
-    #[must_use]
-    pub fn totime(&mut self) -> TOTIME_W<TIMEOUT_SPEC> {
+    pub fn totime(&mut self) -> TOTIME_W<'_, TIMEOUT_SPEC> {
         TOTIME_W::new(self, 0)
     }
     #[doc = "Bit 12 - Clock timeout detection mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn tomoed(&mut self) -> TOMOED_W<TIMEOUT_SPEC> {
+    pub fn tomoed(&mut self) -> TOMOED_W<'_, TIMEOUT_SPEC> {
         TOMOED_W::new(self, 12)
     }
     #[doc = "Bit 15 - Detect clock low/high timeout enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn toen(&mut self) -> TOEN_W<TIMEOUT_SPEC> {
+    pub fn toen(&mut self) -> TOEN_W<'_, TIMEOUT_SPEC> {
         TOEN_W::new(self, 15)
     }
     #[doc = "Bits 16:27 - Cumulative clock low extend timeout value"]
     #[inline(always)]
-    #[must_use]
-    pub fn exttime(&mut self) -> EXTTIME_W<TIMEOUT_SPEC> {
+    pub fn exttime(&mut self) -> EXTTIME_W<'_, TIMEOUT_SPEC> {
         EXTTIME_W::new(self, 16)
     }
     #[doc = "Bit 31 - Cumulative clock low extend timeout enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn exten(&mut self) -> EXTEN_W<TIMEOUT_SPEC> {
+    pub fn exten(&mut self) -> EXTEN_W<'_, TIMEOUT_SPEC> {
         EXTEN_W::new(self, 31)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for TIMEOUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`timeout::W`](W) writer structure"]
 impl crate::Writable for TIMEOUT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIMEOUT to value 0"]
-impl crate::Resettable for TIMEOUT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TIMEOUT_SPEC {}

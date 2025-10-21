@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - Cropping window horizontal start pixel"]
     #[inline(always)]
-    #[must_use]
-    pub fn chstr(&mut self) -> CHSTR_W<CWST_SPEC> {
+    pub fn chstr(&mut self) -> CHSTR_W<'_, CWST_SPEC> {
         CHSTR_W::new(self, 0)
     }
     #[doc = "Bits 16:28 - Cropping window vertical start line"]
     #[inline(always)]
-    #[must_use]
-    pub fn cvstr(&mut self) -> CVSTR_W<CWST_SPEC> {
+    pub fn cvstr(&mut self) -> CVSTR_W<'_, CWST_SPEC> {
         CVSTR_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for CWST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cwst::W`](W) writer structure"]
 impl crate::Writable for CWST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CWST to value 0"]
-impl crate::Resettable for CWST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CWST_SPEC {}

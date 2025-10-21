@@ -89,38 +89,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - Snoop mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn snp(&mut self) -> SNP_W<DOEPCTL0_SPEC> {
+    pub fn snp(&mut self) -> SNP_W<'_, DOEPCTL0_SPEC> {
         SNP_W::new(self, 20)
     }
     #[doc = "Bit 21 - STALL handshake"]
     #[inline(always)]
-    #[must_use]
-    pub fn stall(&mut self) -> STALL_W<DOEPCTL0_SPEC> {
+    pub fn stall(&mut self) -> STALL_W<'_, DOEPCTL0_SPEC> {
         STALL_W::new(self, 21)
     }
     #[doc = "Bit 26 - Clear NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn cnak(&mut self) -> CNAK_W<DOEPCTL0_SPEC> {
+    pub fn cnak(&mut self) -> CNAK_W<'_, DOEPCTL0_SPEC> {
         CNAK_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn snak(&mut self) -> SNAK_W<DOEPCTL0_SPEC> {
+    pub fn snak(&mut self) -> SNAK_W<'_, DOEPCTL0_SPEC> {
         SNAK_W::new(self, 27)
     }
     #[doc = "Bit 30 - Endpoint disable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdis(&mut self) -> EPTDIS_W<DOEPCTL0_SPEC> {
+    pub fn eptdis(&mut self) -> EPTDIS_W<'_, DOEPCTL0_SPEC> {
         EPTDIS_W::new(self, 30)
     }
     #[doc = "Bit 31 - Endpoint enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptena(&mut self) -> EPTENA_W<DOEPCTL0_SPEC> {
+    pub fn eptena(&mut self) -> EPTENA_W<'_, DOEPCTL0_SPEC> {
         EPTENA_W::new(self, 31)
     }
 }
@@ -134,8 +128,6 @@ impl crate::Readable for DOEPCTL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doepctl0::W`](W) writer structure"]
 impl crate::Writable for DOEPCTL0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DOEPCTL0 to value 0x8000"]
 impl crate::Resettable for DOEPCTL0_SPEC {

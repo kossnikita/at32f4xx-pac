@@ -68,40 +68,34 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `PSN1` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn psn(&mut self, n: u8) -> PSN_W<PSQ_SPEC> {
+    pub fn psn(&mut self, n: u8) -> PSN_W<'_, PSQ_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         PSN_W::new(self, n * 5)
     }
     #[doc = "Bits 0:4 - Number of 1 conversion in preempted sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn psn1(&mut self) -> PSN_W<PSQ_SPEC> {
+    pub fn psn1(&mut self) -> PSN_W<'_, PSQ_SPEC> {
         PSN_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Number of 2 conversion in preempted sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn psn2(&mut self) -> PSN_W<PSQ_SPEC> {
+    pub fn psn2(&mut self) -> PSN_W<'_, PSQ_SPEC> {
         PSN_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - Number of 3 conversion in preempted sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn psn3(&mut self) -> PSN_W<PSQ_SPEC> {
+    pub fn psn3(&mut self) -> PSN_W<'_, PSQ_SPEC> {
         PSN_W::new(self, 10)
     }
     #[doc = "Bits 15:19 - Number of 4 conversion in preempted sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn psn4(&mut self) -> PSN_W<PSQ_SPEC> {
+    pub fn psn4(&mut self) -> PSN_W<'_, PSQ_SPEC> {
         PSN_W::new(self, 15)
     }
     #[doc = "Bits 20:21 - Preempted conversion sequence length"]
     #[inline(always)]
-    #[must_use]
-    pub fn pclen(&mut self) -> PCLEN_W<PSQ_SPEC> {
+    pub fn pclen(&mut self) -> PCLEN_W<'_, PSQ_SPEC> {
         PCLEN_W::new(self, 20)
     }
 }
@@ -115,10 +109,6 @@ impl crate::Readable for PSQ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`psq::W`](W) writer structure"]
 impl crate::Writable for PSQ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PSQ to value 0"]
-impl crate::Resettable for PSQ_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PSQ_SPEC {}

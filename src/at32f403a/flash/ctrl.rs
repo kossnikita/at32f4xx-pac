@@ -113,62 +113,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]
-    #[must_use]
-    pub fn fprgm(&mut self) -> FPRGM_W<CTRL_SPEC> {
+    pub fn fprgm(&mut self) -> FPRGM_W<'_, CTRL_SPEC> {
         FPRGM_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sector erase"]
     #[inline(always)]
-    #[must_use]
-    pub fn secers(&mut self) -> SECERS_W<CTRL_SPEC> {
+    pub fn secers(&mut self) -> SECERS_W<'_, CTRL_SPEC> {
         SECERS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Bank erase"]
     #[inline(always)]
-    #[must_use]
-    pub fn bankers(&mut self) -> BANKERS_W<CTRL_SPEC> {
+    pub fn bankers(&mut self) -> BANKERS_W<'_, CTRL_SPEC> {
         BANKERS_W::new(self, 2)
     }
     #[doc = "Bit 4 - User system data program"]
     #[inline(always)]
-    #[must_use]
-    pub fn usdprgm(&mut self) -> USDPRGM_W<CTRL_SPEC> {
+    pub fn usdprgm(&mut self) -> USDPRGM_W<'_, CTRL_SPEC> {
         USDPRGM_W::new(self, 4)
     }
     #[doc = "Bit 5 - User system data erase"]
     #[inline(always)]
-    #[must_use]
-    pub fn usders(&mut self) -> USDERS_W<CTRL_SPEC> {
+    pub fn usders(&mut self) -> USDERS_W<'_, CTRL_SPEC> {
         USDERS_W::new(self, 5)
     }
     #[doc = "Bit 6 - Erasing start"]
     #[inline(always)]
-    #[must_use]
-    pub fn erstr(&mut self) -> ERSTR_W<CTRL_SPEC> {
+    pub fn erstr(&mut self) -> ERSTR_W<'_, CTRL_SPEC> {
         ERSTR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Operation lock"]
     #[inline(always)]
-    #[must_use]
-    pub fn oplk(&mut self) -> OPLK_W<CTRL_SPEC> {
+    pub fn oplk(&mut self) -> OPLK_W<'_, CTRL_SPEC> {
         OPLK_W::new(self, 7)
     }
     #[doc = "Bit 9 - User system data unlock success"]
     #[inline(always)]
-    #[must_use]
-    pub fn usdulks(&mut self) -> USDULKS_W<CTRL_SPEC> {
+    pub fn usdulks(&mut self) -> USDULKS_W<'_, CTRL_SPEC> {
         USDULKS_W::new(self, 9)
     }
     #[doc = "Bit 10 - Error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTRL_SPEC> {
+    pub fn errie(&mut self) -> ERRIE_W<'_, CTRL_SPEC> {
         ERRIE_W::new(self, 10)
     }
     #[doc = "Bit 12 - Operation done flag interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn odfie(&mut self) -> ODFIE_W<CTRL_SPEC> {
+    pub fn odfie(&mut self) -> ODFIE_W<'_, CTRL_SPEC> {
         ODFIE_W::new(self, 12)
     }
 }
@@ -182,8 +172,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x80"]
 impl crate::Resettable for CTRL_SPEC {

@@ -35,20 +35,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - error flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn errc(&mut self) -> ERRC_W<RCNT_SPEC> {
+    pub fn errc(&mut self) -> ERRC_W<'_, RCNT_SPEC> {
         ERRC_W::new(self, 0)
     }
     #[doc = "Bits 1:13 - Refresh Count"]
     #[inline(always)]
-    #[must_use]
-    pub fn rc(&mut self) -> RC_W<RCNT_SPEC> {
+    pub fn rc(&mut self) -> RC_W<'_, RCNT_SPEC> {
         RC_W::new(self, 1)
     }
     #[doc = "Bit 14 - error Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn erien(&mut self) -> ERIEN_W<RCNT_SPEC> {
+    pub fn erien(&mut self) -> ERIEN_W<'_, RCNT_SPEC> {
         ERIEN_W::new(self, 14)
     }
 }
@@ -62,10 +59,6 @@ impl crate::Readable for RCNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rcnt::W`](W) writer structure"]
 impl crate::Writable for RCNT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RCNT to value 0"]
-impl crate::Resettable for RCNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RCNT_SPEC {}

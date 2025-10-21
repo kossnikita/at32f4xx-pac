@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - EXINT 0 configuration bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint0(&mut self) -> EXINT0_W<EXINTC1_SPEC> {
+    pub fn exint0(&mut self) -> EXINT0_W<'_, EXINTC1_SPEC> {
         EXINT0_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - EXINT 1 configuration bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint1(&mut self) -> EXINT1_W<EXINTC1_SPEC> {
+    pub fn exint1(&mut self) -> EXINT1_W<'_, EXINTC1_SPEC> {
         EXINT1_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - EXINT 2 configuration bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint2(&mut self) -> EXINT2_W<EXINTC1_SPEC> {
+    pub fn exint2(&mut self) -> EXINT2_W<'_, EXINTC1_SPEC> {
         EXINT2_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - EXINT 3 configuration bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint3(&mut self) -> EXINT3_W<EXINTC1_SPEC> {
+    pub fn exint3(&mut self) -> EXINT3_W<'_, EXINTC1_SPEC> {
         EXINT3_W::new(self, 12)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for EXINTC1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`exintc1::W`](W) writer structure"]
 impl crate::Writable for EXINTC1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXINTC1 to value 0"]
-impl crate::Resettable for EXINTC1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EXINTC1_SPEC {}

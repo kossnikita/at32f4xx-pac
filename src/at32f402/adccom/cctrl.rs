@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:19 - ADC division"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcdiv(&mut self) -> ADCDIV_W<CCTRL_SPEC> {
+    pub fn adcdiv(&mut self) -> ADCDIV_W<'_, CCTRL_SPEC> {
         ADCDIV_W::new(self, 16)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for CCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cctrl::W`](W) writer structure"]
 impl crate::Writable for CCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CCTRL to value 0"]
-impl crate::Resettable for CCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CCTRL_SPEC {}

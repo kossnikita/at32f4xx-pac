@@ -82,58 +82,49 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `MUX8` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn mux(&mut self, n: u8) -> MUX_W<MUXH_SPEC> {
+    pub fn mux(&mut self, n: u8) -> MUX_W<'_, MUXH_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         MUX_W::new(self, n * 4)
     }
     #[doc = "Bits 0:3 - GPIOx pin 8 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn mux8(&mut self) -> MUX_W<MUXH_SPEC> {
+    pub fn mux8(&mut self) -> MUX_W<'_, MUXH_SPEC> {
         MUX_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - GPIOx pin 9 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn mux9(&mut self) -> MUX_W<MUXH_SPEC> {
+    pub fn mux9(&mut self) -> MUX_W<'_, MUXH_SPEC> {
         MUX_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - GPIOx pin 10 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn mux10(&mut self) -> MUX_W<MUXH_SPEC> {
+    pub fn mux10(&mut self) -> MUX_W<'_, MUXH_SPEC> {
         MUX_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - GPIOx pin 11 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn mux11(&mut self) -> MUX_W<MUXH_SPEC> {
+    pub fn mux11(&mut self) -> MUX_W<'_, MUXH_SPEC> {
         MUX_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - GPIOx pin 12 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn mux12(&mut self) -> MUX_W<MUXH_SPEC> {
+    pub fn mux12(&mut self) -> MUX_W<'_, MUXH_SPEC> {
         MUX_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - GPIOx pin 13 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn mux13(&mut self) -> MUX_W<MUXH_SPEC> {
+    pub fn mux13(&mut self) -> MUX_W<'_, MUXH_SPEC> {
         MUX_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - GPIOx pin 14 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn mux14(&mut self) -> MUX_W<MUXH_SPEC> {
+    pub fn mux14(&mut self) -> MUX_W<'_, MUXH_SPEC> {
         MUX_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - GPIOx pin 15 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn mux15(&mut self) -> MUX_W<MUXH_SPEC> {
+    pub fn mux15(&mut self) -> MUX_W<'_, MUXH_SPEC> {
         MUX_W::new(self, 28)
     }
 }
@@ -147,10 +138,6 @@ impl crate::Readable for MUXH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxh::W`](W) writer structure"]
 impl crate::Writable for MUXH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MUXH to value 0"]
-impl crate::Resettable for MUXH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MUXH_SPEC {}

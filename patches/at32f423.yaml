@@ -3,11 +3,6 @@ _svd: "../svd/AT32F423.svd"
 _modify:
   name: AT32F423
 
-SPI*:
-  _modify:
-    I2SCLKP:
-      name: I2SCLK
-
 _derive:
   TMR14: TMR13
 
@@ -38,6 +33,5 @@ _include:
   - common/tmr/tmr10.yaml
   - common/wwdt/common.yaml
   - common/wdt/with_win.yaml
-  - common/acc/twk.yaml
   - common/acc/common.yaml
   - common/debug/common.yaml

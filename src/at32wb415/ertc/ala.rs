@@ -447,86 +447,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Second units"]
     #[inline(always)]
-    #[must_use]
-    pub fn su(&mut self) -> SU_W<ALA_SPEC> {
+    pub fn su(&mut self) -> SU_W<'_, ALA_SPEC> {
         SU_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Second tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn st(&mut self) -> ST_W<ALA_SPEC> {
+    pub fn st(&mut self) -> ST_W<'_, ALA_SPEC> {
         ST_W::new(self, 4)
     }
     #[doc = "Bit 7 - Seconds mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn mask1(&mut self) -> MASK1_W<ALA_SPEC> {
+    pub fn mask1(&mut self) -> MASK1_W<'_, ALA_SPEC> {
         MASK1_W::new(self, 7)
     }
     #[doc = "Bits 8:11 - Minute units"]
     #[inline(always)]
-    #[must_use]
-    pub fn mu(&mut self) -> MU_W<ALA_SPEC> {
+    pub fn mu(&mut self) -> MU_W<'_, ALA_SPEC> {
         MU_W::new(self, 8)
     }
     #[doc = "Bits 12:14 - Minute tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn mt(&mut self) -> MT_W<ALA_SPEC> {
+    pub fn mt(&mut self) -> MT_W<'_, ALA_SPEC> {
         MT_W::new(self, 12)
     }
     #[doc = "Bit 15 - Minutes mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn mask2(&mut self) -> MASK2_W<ALA_SPEC> {
+    pub fn mask2(&mut self) -> MASK2_W<'_, ALA_SPEC> {
         MASK2_W::new(self, 15)
     }
     #[doc = "Bits 16:19 - Hour units"]
     #[inline(always)]
-    #[must_use]
-    pub fn hu(&mut self) -> HU_W<ALA_SPEC> {
+    pub fn hu(&mut self) -> HU_W<'_, ALA_SPEC> {
         HU_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Hour tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn ht(&mut self) -> HT_W<ALA_SPEC> {
+    pub fn ht(&mut self) -> HT_W<'_, ALA_SPEC> {
         HT_W::new(self, 20)
     }
     #[doc = "Bit 22 - AM/PM"]
     #[inline(always)]
-    #[must_use]
-    pub fn ampm(&mut self) -> AMPM_W<ALA_SPEC> {
+    pub fn ampm(&mut self) -> AMPM_W<'_, ALA_SPEC> {
         AMPM_W::new(self, 22)
     }
     #[doc = "Bit 23 - Hours mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn mask3(&mut self) -> MASK3_W<ALA_SPEC> {
+    pub fn mask3(&mut self) -> MASK3_W<'_, ALA_SPEC> {
         MASK3_W::new(self, 23)
     }
     #[doc = "Bits 24:27 - Date units"]
     #[inline(always)]
-    #[must_use]
-    pub fn du(&mut self) -> DU_W<ALA_SPEC> {
+    pub fn du(&mut self) -> DU_W<'_, ALA_SPEC> {
         DU_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - Date tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn dt(&mut self) -> DT_W<ALA_SPEC> {
+    pub fn dt(&mut self) -> DT_W<'_, ALA_SPEC> {
         DT_W::new(self, 28)
     }
     #[doc = "Bit 30 - Date/week mode select"]
     #[inline(always)]
-    #[must_use]
-    pub fn wksel(&mut self) -> WKSEL_W<ALA_SPEC> {
+    pub fn wksel(&mut self) -> WKSEL_W<'_, ALA_SPEC> {
         WKSEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - Date/week mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn mask4(&mut self) -> MASK4_W<ALA_SPEC> {
+    pub fn mask4(&mut self) -> MASK4_W<'_, ALA_SPEC> {
         MASK4_W::new(self, 31)
     }
 }
@@ -540,10 +526,6 @@ impl crate::Readable for ALA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ala::W`](W) writer structure"]
 impl crate::Writable for ALA_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ALA to value 0"]
-impl crate::Resettable for ALA_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ALA_SPEC {}

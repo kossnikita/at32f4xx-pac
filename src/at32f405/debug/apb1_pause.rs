@@ -163,92 +163,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - TMR2_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr2_pause(&mut self) -> TMR2_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn tmr2_pause(&mut self) -> TMR2_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         TMR2_PAUSE_W::new(self, 0)
     }
     #[doc = "Bit 1 - TMR3_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr3_pause(&mut self) -> TMR3_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn tmr3_pause(&mut self) -> TMR3_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         TMR3_PAUSE_W::new(self, 1)
     }
     #[doc = "Bit 2 - TMR4_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr4_pause(&mut self) -> TMR4_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn tmr4_pause(&mut self) -> TMR4_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         TMR4_PAUSE_W::new(self, 2)
     }
     #[doc = "Bit 4 - TMR6_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr6_pause(&mut self) -> TMR6_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn tmr6_pause(&mut self) -> TMR6_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         TMR6_PAUSE_W::new(self, 4)
     }
     #[doc = "Bit 5 - TMR7_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr7_pause(&mut self) -> TMR7_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn tmr7_pause(&mut self) -> TMR7_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         TMR7_PAUSE_W::new(self, 5)
     }
     #[doc = "Bit 7 - TMR13_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr13_pause(&mut self) -> TMR13_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn tmr13_pause(&mut self) -> TMR13_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         TMR13_PAUSE_W::new(self, 7)
     }
     #[doc = "Bit 8 - TMR14_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr14_pause(&mut self) -> TMR14_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn tmr14_pause(&mut self) -> TMR14_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         TMR14_PAUSE_W::new(self, 8)
     }
     #[doc = "Bit 10 - ERTC_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ertc_pause(&mut self) -> ERTC_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn ertc_pause(&mut self) -> ERTC_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         ERTC_PAUSE_W::new(self, 10)
     }
     #[doc = "Bit 11 - WWDT_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn wwdt_pause(&mut self) -> WWDT_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn wwdt_pause(&mut self) -> WWDT_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         WWDT_PAUSE_W::new(self, 11)
     }
     #[doc = "Bit 12 - WDT_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdt_pause(&mut self) -> WDT_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn wdt_pause(&mut self) -> WDT_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         WDT_PAUSE_W::new(self, 12)
     }
     #[doc = "Bit 15 - ERTC512_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn ertc512_pause(&mut self) -> ERTC512_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn ertc512_pause(&mut self) -> ERTC512_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         ERTC512_PAUSE_W::new(self, 15)
     }
     #[doc = "Bit 24 - I2C1_SMBUS_TIMEOUT"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c1_smbus_timeout(&mut self) -> I2C1_SMBUS_TIMEOUT_W<APB1_PAUSE_SPEC> {
+    pub fn i2c1_smbus_timeout(&mut self) -> I2C1_SMBUS_TIMEOUT_W<'_, APB1_PAUSE_SPEC> {
         I2C1_SMBUS_TIMEOUT_W::new(self, 24)
     }
     #[doc = "Bit 25 - CAN1_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn can1_pause(&mut self) -> CAN1_PAUSE_W<APB1_PAUSE_SPEC> {
+    pub fn can1_pause(&mut self) -> CAN1_PAUSE_W<'_, APB1_PAUSE_SPEC> {
         CAN1_PAUSE_W::new(self, 25)
     }
     #[doc = "Bit 27 - I2C2_SMBUS_TIMEOUT"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c2_smbus_timeout(&mut self) -> I2C2_SMBUS_TIMEOUT_W<APB1_PAUSE_SPEC> {
+    pub fn i2c2_smbus_timeout(&mut self) -> I2C2_SMBUS_TIMEOUT_W<'_, APB1_PAUSE_SPEC> {
         I2C2_SMBUS_TIMEOUT_W::new(self, 27)
     }
     #[doc = "Bit 28 - I2C3_SMBUS_TIMEOUT"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c3_smbus_timeout(&mut self) -> I2C3_SMBUS_TIMEOUT_W<APB1_PAUSE_SPEC> {
+    pub fn i2c3_smbus_timeout(&mut self) -> I2C3_SMBUS_TIMEOUT_W<'_, APB1_PAUSE_SPEC> {
         I2C3_SMBUS_TIMEOUT_W::new(self, 28)
     }
 }
@@ -262,10 +247,6 @@ impl crate::Readable for APB1_PAUSE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb1_pause::W`](W) writer structure"]
 impl crate::Writable for APB1_PAUSE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB1_PAUSE to value 0"]
-impl crate::Resettable for APB1_PAUSE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB1_PAUSE_SPEC {}

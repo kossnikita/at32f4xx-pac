@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Host assign device address"]
     #[inline(always)]
-    #[must_use]
-    pub fn addr(&mut self) -> ADDR_W<DEVADDR_SPEC> {
+    pub fn addr(&mut self) -> ADDR_W<'_, DEVADDR_SPEC> {
         ADDR_W::new(self, 0)
     }
     #[doc = "Bit 7 - USB core enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cen(&mut self) -> CEN_W<DEVADDR_SPEC> {
+    pub fn cen(&mut self) -> CEN_W<'_, DEVADDR_SPEC> {
         CEN_W::new(self, 7)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for DEVADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`devaddr::W`](W) writer structure"]
 impl crate::Writable for DEVADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DEVADDR to value 0"]
-impl crate::Resettable for DEVADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DEVADDR_SPEC {}

@@ -186,106 +186,89 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `ODRV0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv(&mut self, n: u8) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv(&mut self, n: u8) -> ODRV_W<'_, ODRVR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 16][n as usize];
         ODRV_W::new(self, n * 2)
     }
     #[doc = "Bits 0:1 - GPIOx pin 0 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv0(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv0(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - GPIOx pin 1 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv1(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv1(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - GPIOx pin 2 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv2(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv2(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - GPIOx pin 3 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv3(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv3(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - GPIOx pin 4 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv4(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv4(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - GPIOx pin 5 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv5(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv5(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - GPIOx pin 6 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv6(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv6(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - GPIOx pin 7 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv7(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv7(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - GPIOx pin 8 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv8(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv8(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - GPIOx pin 9 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv9(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv9(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - GPIOx pin 10 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv10(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv10(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - GPIOx pin 11 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv11(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv11(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - GPIOx pin 12 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv12(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv12(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - GPIOx pin 13 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv13(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv13(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - GPIOx pin 14 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv14(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv14(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - GPIOx pin 15 output drive capability"]
     #[inline(always)]
-    #[must_use]
-    pub fn odrv15(&mut self) -> ODRV_W<ODRVR_SPEC> {
+    pub fn odrv15(&mut self) -> ODRV_W<'_, ODRVR_SPEC> {
         ODRV_W::new(self, 30)
     }
 }
@@ -299,10 +282,6 @@ impl crate::Readable for ODRVR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`odrvr::W`](W) writer structure"]
 impl crate::Writable for ODRVR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ODRVR to value 0"]
-impl crate::Resettable for ODRVR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ODRVR_SPEC {}

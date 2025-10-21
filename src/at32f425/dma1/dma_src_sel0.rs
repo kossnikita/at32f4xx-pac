@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - CH1 SRC select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch1_src(&mut self) -> CH1_SRC_W<DMA_SRC_SEL0_SPEC> {
+    pub fn ch1_src(&mut self) -> CH1_SRC_W<'_, DMA_SRC_SEL0_SPEC> {
         CH1_SRC_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - CH2 SRC select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch2_src(&mut self) -> CH2_SRC_W<DMA_SRC_SEL0_SPEC> {
+    pub fn ch2_src(&mut self) -> CH2_SRC_W<'_, DMA_SRC_SEL0_SPEC> {
         CH2_SRC_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - CH3 SRC select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch3_src(&mut self) -> CH3_SRC_W<DMA_SRC_SEL0_SPEC> {
+    pub fn ch3_src(&mut self) -> CH3_SRC_W<'_, DMA_SRC_SEL0_SPEC> {
         CH3_SRC_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - CH4 SRC select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch4_src(&mut self) -> CH4_SRC_W<DMA_SRC_SEL0_SPEC> {
+    pub fn ch4_src(&mut self) -> CH4_SRC_W<'_, DMA_SRC_SEL0_SPEC> {
         CH4_SRC_W::new(self, 24)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for DMA_SRC_SEL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_src_sel0::W`](W) writer structure"]
 impl crate::Writable for DMA_SRC_SEL0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMA_SRC_SEL0 to value 0"]
-impl crate::Resettable for DMA_SRC_SEL0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMA_SRC_SEL0_SPEC {}

@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Global interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn glbintmsk(&mut self) -> GLBINTMSK_W<GAHBCFG_SPEC> {
+    pub fn glbintmsk(&mut self) -> GLBINTMSK_W<'_, GAHBCFG_SPEC> {
         GLBINTMSK_W::new(self, 0)
     }
     #[doc = "Bit 7 - Non-Periodic TxFIFO empty level"]
     #[inline(always)]
-    #[must_use]
-    pub fn nptxfemplvl(&mut self) -> NPTXFEMPLVL_W<GAHBCFG_SPEC> {
+    pub fn nptxfemplvl(&mut self) -> NPTXFEMPLVL_W<'_, GAHBCFG_SPEC> {
         NPTXFEMPLVL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Periodic TxFIFO empty level"]
     #[inline(always)]
-    #[must_use]
-    pub fn ptxfemplvl(&mut self) -> PTXFEMPLVL_W<GAHBCFG_SPEC> {
+    pub fn ptxfemplvl(&mut self) -> PTXFEMPLVL_W<'_, GAHBCFG_SPEC> {
         PTXFEMPLVL_W::new(self, 8)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for GAHBCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gahbcfg::W`](W) writer structure"]
 impl crate::Writable for GAHBCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GAHBCFG to value 0"]
-impl crate::Resettable for GAHBCFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GAHBCFG_SPEC {}

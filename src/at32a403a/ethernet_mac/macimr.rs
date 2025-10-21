@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - PMT interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn pim(&mut self) -> PIM_W<MACIMR_SPEC> {
+    pub fn pim(&mut self) -> PIM_W<'_, MACIMR_SPEC> {
         PIM_W::new(self, 3)
     }
     #[doc = "Bit 9 - Timestamp interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn tim(&mut self) -> TIM_W<MACIMR_SPEC> {
+    pub fn tim(&mut self) -> TIM_W<'_, MACIMR_SPEC> {
         TIM_W::new(self, 9)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for MACIMR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macimr::W`](W) writer structure"]
 impl crate::Writable for MACIMR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACIMR to value 0"]
-impl crate::Resettable for MACIMR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MACIMR_SPEC {}

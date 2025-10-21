@@ -195,48 +195,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Overflow event triggered by software"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfswtr(&mut self) -> OVFSWTR_W<SWEVT_SPEC> {
+    pub fn ovfswtr(&mut self) -> OVFSWTR_W<'_, SWEVT_SPEC> {
         OVFSWTR_W::new(self, 0)
     }
     #[doc = "Channel (1-2) event triggered by software"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1SWTR` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cswtr(&mut self, n: u8) -> CSWTR_W<SWEVT_SPEC> {
+    pub fn cswtr(&mut self, n: u8) -> CSWTR_W<'_, SWEVT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CSWTR_W::new(self, n + 1)
     }
     #[doc = "Bit 1 - Channel 1 event triggered by software"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1swtr(&mut self) -> CSWTR_W<SWEVT_SPEC> {
+    pub fn c1swtr(&mut self) -> CSWTR_W<'_, SWEVT_SPEC> {
         CSWTR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 2 event triggered by software"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2swtr(&mut self) -> CSWTR_W<SWEVT_SPEC> {
+    pub fn c2swtr(&mut self) -> CSWTR_W<'_, SWEVT_SPEC> {
         CSWTR_W::new(self, 2)
     }
     #[doc = "Bit 5 - HALL event triggered by software"]
     #[inline(always)]
-    #[must_use]
-    pub fn hallswtr(&mut self) -> HALLSWTR_W<SWEVT_SPEC> {
+    pub fn hallswtr(&mut self) -> HALLSWTR_W<'_, SWEVT_SPEC> {
         HALLSWTR_W::new(self, 5)
     }
     #[doc = "Bit 6 - Trigger event triggered by software"]
     #[inline(always)]
-    #[must_use]
-    pub fn trgswtr(&mut self) -> TRGSWTR_W<SWEVT_SPEC> {
+    pub fn trgswtr(&mut self) -> TRGSWTR_W<'_, SWEVT_SPEC> {
         TRGSWTR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Brake event triggered by software"]
     #[inline(always)]
-    #[must_use]
-    pub fn brkswtr(&mut self) -> BRKSWTR_W<SWEVT_SPEC> {
+    pub fn brkswtr(&mut self) -> BRKSWTR_W<'_, SWEVT_SPEC> {
         BRKSWTR_W::new(self, 7)
     }
 }
@@ -250,10 +243,7 @@ impl crate::Readable for SWEVT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swevt::W`](W) writer structure"]
 impl crate::Writable for SWEVT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x43;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x47;
 }
 #[doc = "`reset()` method sets SWEVT to value 0"]
-impl crate::Resettable for SWEVT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SWEVT_SPEC {}

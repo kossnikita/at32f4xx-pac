@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - TMR9 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr9_gmux(&mut self) -> TMR9_GMUX_W<REMAP3_SPEC> {
+    pub fn tmr9_gmux(&mut self) -> TMR9_GMUX_W<'_, REMAP3_SPEC> {
         TMR9_GMUX_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for REMAP3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap3::W`](W) writer structure"]
 impl crate::Writable for REMAP3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP3 to value 0"]
-impl crate::Resettable for REMAP3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP3_SPEC {}

@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfien(&mut self) -> OVFIEN_W<CTRLH_SPEC> {
+    pub fn ovfien(&mut self) -> OVFIEN_W<'_, CTRLH_SPEC> {
         OVFIEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Time alarm interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn taien(&mut self) -> TAIEN_W<CTRLH_SPEC> {
+    pub fn taien(&mut self) -> TAIEN_W<'_, CTRLH_SPEC> {
         TAIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Time second interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsien(&mut self) -> TSIEN_W<CTRLH_SPEC> {
+    pub fn tsien(&mut self) -> TSIEN_W<'_, CTRLH_SPEC> {
         TSIEN_W::new(self, 2)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for CTRLH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlh::W`](W) writer structure"]
 impl crate::Writable for CTRLH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRLH to value 0"]
-impl crate::Resettable for CTRLH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRLH_SPEC {}

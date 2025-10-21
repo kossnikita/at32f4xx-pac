@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Interface address"]
     #[inline(always)]
-    #[must_use]
-    pub fn addr1(&mut self) -> ADDR1_W<OADDR1_SPEC> {
+    pub fn addr1(&mut self) -> ADDR1_W<'_, OADDR1_SPEC> {
         ADDR1_W::new(self, 0)
     }
     #[doc = "Bit 10 - Own Address mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn addr1mode(&mut self) -> ADDR1MODE_W<OADDR1_SPEC> {
+    pub fn addr1mode(&mut self) -> ADDR1MODE_W<'_, OADDR1_SPEC> {
         ADDR1MODE_W::new(self, 10)
     }
     #[doc = "Bit 15 - Own address 1 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn addr1en(&mut self) -> ADDR1EN_W<OADDR1_SPEC> {
+    pub fn addr1en(&mut self) -> ADDR1EN_W<'_, OADDR1_SPEC> {
         ADDR1EN_W::new(self, 15)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for OADDR1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`oaddr1::W`](W) writer structure"]
 impl crate::Writable for OADDR1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OADDR1 to value 0"]
-impl crate::Resettable for OADDR1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OADDR1_SPEC {}

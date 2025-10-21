@@ -44,7 +44,7 @@ Foreach-Object -Parallel {
     }
     Copy-Item -Path src -Destination $path -Recurse
     Pop-Location
-    Remove-Item ./$dirName -Recurse -Force
+    # Remove-Item ./$dirName -Recurse -Force
 }
 svdtools html ./html (Get-ChildItem ./svd/ -Filter *.patched) | Out-Null
 svdtools html ./html/original (Get-ChildItem ./svd/ -Filter *.svd) | Out-Null

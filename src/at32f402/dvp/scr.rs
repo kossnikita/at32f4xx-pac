@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Frame start code"]
     #[inline(always)]
-    #[must_use]
-    pub fn fmsc(&mut self) -> FMSC_W<SCR_SPEC> {
+    pub fn fmsc(&mut self) -> FMSC_W<'_, SCR_SPEC> {
         FMSC_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Line start code"]
     #[inline(always)]
-    #[must_use]
-    pub fn lnsc(&mut self) -> LNSC_W<SCR_SPEC> {
+    pub fn lnsc(&mut self) -> LNSC_W<'_, SCR_SPEC> {
         LNSC_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Line end code"]
     #[inline(always)]
-    #[must_use]
-    pub fn lnec(&mut self) -> LNEC_W<SCR_SPEC> {
+    pub fn lnec(&mut self) -> LNEC_W<'_, SCR_SPEC> {
         LNEC_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Frame end code"]
     #[inline(always)]
-    #[must_use]
-    pub fn fmec(&mut self) -> FMEC_W<SCR_SPEC> {
+    pub fn fmec(&mut self) -> FMEC_W<'_, SCR_SPEC> {
         FMEC_W::new(self, 24)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for SCR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`scr::W`](W) writer structure"]
 impl crate::Writable for SCR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SCR to value 0"]
-impl crate::Resettable for SCR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SCR_SPEC {}

@@ -163,6 +163,4 @@ impl crate::RegisterSpec for IDT_SPEC {
 #[doc = "`read()` method returns [`idt::R`](R) reader structure"]
 impl crate::Readable for IDT_SPEC {}
 #[doc = "`reset()` method sets IDT to value 0"]
-impl crate::Resettable for IDT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IDT_SPEC {}

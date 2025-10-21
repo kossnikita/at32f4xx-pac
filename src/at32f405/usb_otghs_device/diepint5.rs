@@ -121,62 +121,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn xferc(&mut self) -> XFERC_W<DIEPINT5_SPEC> {
+    pub fn xferc(&mut self) -> XFERC_W<'_, DIEPINT5_SPEC> {
         XFERC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdisd(&mut self) -> EPTDISD_W<DIEPINT5_SPEC> {
+    pub fn eptdisd(&mut self) -> EPTDISD_W<'_, DIEPINT5_SPEC> {
         EPTDISD_W::new(self, 1)
     }
     #[doc = "Bit 2 - AHB Error interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn ahberr(&mut self) -> AHBERR_W<DIEPINT5_SPEC> {
+    pub fn ahberr(&mut self) -> AHBERR_W<'_, DIEPINT5_SPEC> {
         AHBERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timeout condition"]
     #[inline(always)]
-    #[must_use]
-    pub fn timeout(&mut self) -> TIMEOUT_W<DIEPINT5_SPEC> {
+    pub fn timeout(&mut self) -> TIMEOUT_W<'_, DIEPINT5_SPEC> {
         TIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - IN token received when TxFIFO is empty"]
     #[inline(always)]
-    #[must_use]
-    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<DIEPINT5_SPEC> {
+    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<'_, DIEPINT5_SPEC> {
         INTKNTXFEMP_W::new(self, 4)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective"]
     #[inline(always)]
-    #[must_use]
-    pub fn ineptnak(&mut self) -> INEPTNAK_W<DIEPINT5_SPEC> {
+    pub fn ineptnak(&mut self) -> INEPTNAK_W<'_, DIEPINT5_SPEC> {
         INEPTNAK_W::new(self, 6)
     }
     #[doc = "Bit 8 - Fifo Underrun"]
     #[inline(always)]
-    #[must_use]
-    pub fn txfifoundrn(&mut self) -> TXFIFOUNDRN_W<DIEPINT5_SPEC> {
+    pub fn txfifoundrn(&mut self) -> TXFIFOUNDRN_W<'_, DIEPINT5_SPEC> {
         TXFIFOUNDRN_W::new(self, 8)
     }
     #[doc = "Bit 11 - Packet Drop Status"]
     #[inline(always)]
-    #[must_use]
-    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<DIEPINT5_SPEC> {
+    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<'_, DIEPINT5_SPEC> {
         PKTDRPSTS_W::new(self, 11)
     }
     #[doc = "Bit 13 - NAK interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn nakintpt(&mut self) -> NAKINTPT_W<DIEPINT5_SPEC> {
+    pub fn nakintpt(&mut self) -> NAKINTPT_W<'_, DIEPINT5_SPEC> {
         NAKINTPT_W::new(self, 13)
     }
     #[doc = "Bit 14 - NYET interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn nyetintpt(&mut self) -> NYETINTPT_W<DIEPINT5_SPEC> {
+    pub fn nyetintpt(&mut self) -> NYETINTPT_W<'_, DIEPINT5_SPEC> {
         NYETINTPT_W::new(self, 14)
     }
 }
@@ -190,8 +180,6 @@ impl crate::Readable for DIEPINT5_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepint5::W`](W) writer structure"]
 impl crate::Writable for DIEPINT5_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPINT5 to value 0x80"]
 impl crate::Resettable for DIEPINT5_SPEC {

@@ -960,104 +960,87 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Send break frame"]
     #[inline(always)]
-    #[must_use]
-    pub fn sbf(&mut self) -> SBF_W<CTRL1_SPEC> {
+    pub fn sbf(&mut self) -> SBF_W<'_, CTRL1_SPEC> {
         SBF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Receiver mute"]
     #[inline(always)]
-    #[must_use]
-    pub fn rm(&mut self) -> RM_W<CTRL1_SPEC> {
+    pub fn rm(&mut self) -> RM_W<'_, CTRL1_SPEC> {
         RM_W::new(self, 1)
     }
     #[doc = "Bit 2 - Receiver enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ren(&mut self) -> REN_W<CTRL1_SPEC> {
+    pub fn ren(&mut self) -> REN_W<'_, CTRL1_SPEC> {
         REN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transmitter enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ten(&mut self) -> TEN_W<CTRL1_SPEC> {
+    pub fn ten(&mut self) -> TEN_W<'_, CTRL1_SPEC> {
         TEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - IDLE interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn idleien(&mut self) -> IDLEIEN_W<CTRL1_SPEC> {
+    pub fn idleien(&mut self) -> IDLEIEN_W<'_, CTRL1_SPEC> {
         IDLEIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - RDBF interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdbfien(&mut self) -> RDBFIEN_W<CTRL1_SPEC> {
+    pub fn rdbfien(&mut self) -> RDBFIEN_W<'_, CTRL1_SPEC> {
         RDBFIEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - TDC interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tdcien(&mut self) -> TDCIEN_W<CTRL1_SPEC> {
+    pub fn tdcien(&mut self) -> TDCIEN_W<'_, CTRL1_SPEC> {
         TDCIEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - TDBE interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tdbeien(&mut self) -> TDBEIEN_W<CTRL1_SPEC> {
+    pub fn tdbeien(&mut self) -> TDBEIEN_W<'_, CTRL1_SPEC> {
         TDBEIEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - PERR interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn perrien(&mut self) -> PERRIEN_W<CTRL1_SPEC> {
+    pub fn perrien(&mut self) -> PERRIEN_W<'_, CTRL1_SPEC> {
         PERRIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Parity selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn psel(&mut self) -> PSEL_W<CTRL1_SPEC> {
+    pub fn psel(&mut self) -> PSEL_W<'_, CTRL1_SPEC> {
         PSEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Parity enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pen(&mut self) -> PEN_W<CTRL1_SPEC> {
+    pub fn pen(&mut self) -> PEN_W<'_, CTRL1_SPEC> {
         PEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Wake up mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn wum(&mut self) -> WUM_W<CTRL1_SPEC> {
+    pub fn wum(&mut self) -> WUM_W<'_, CTRL1_SPEC> {
         WUM_W::new(self, 11)
     }
     #[doc = "Bit 12 - low bit for data bit num"]
     #[inline(always)]
-    #[must_use]
-    pub fn dbn0(&mut self) -> DBN0_W<CTRL1_SPEC> {
+    pub fn dbn0(&mut self) -> DBN0_W<'_, CTRL1_SPEC> {
         DBN0_W::new(self, 12)
     }
     #[doc = "Bit 13 - USART enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn uen(&mut self) -> UEN_W<CTRL1_SPEC> {
+    pub fn uen(&mut self) -> UEN_W<'_, CTRL1_SPEC> {
         UEN_W::new(self, 13)
     }
     #[doc = "Bits 16:20 - transmit complete delay time"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcdt(&mut self) -> TCDT_W<CTRL1_SPEC> {
+    pub fn tcdt(&mut self) -> TCDT_W<'_, CTRL1_SPEC> {
         TCDT_W::new(self, 16)
     }
     #[doc = "Bits 21:25 - transmit start delay time"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsdt(&mut self) -> TSDT_W<CTRL1_SPEC> {
+    pub fn tsdt(&mut self) -> TSDT_W<'_, CTRL1_SPEC> {
         TSDT_W::new(self, 21)
     }
     #[doc = "Bit 28 - high bit for data bit num"]
     #[inline(always)]
-    #[must_use]
-    pub fn dbn1(&mut self) -> DBN1_W<CTRL1_SPEC> {
+    pub fn dbn1(&mut self) -> DBN1_W<'_, CTRL1_SPEC> {
         DBN1_W::new(self, 28)
     }
 }
@@ -1071,10 +1054,6 @@ impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0"]
-impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL1_SPEC {}

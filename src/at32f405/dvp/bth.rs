@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Monochrome image binarization threshold"]
     #[inline(always)]
-    #[must_use]
-    pub fn mibthd(&mut self) -> MIBTHD_W<BTH_SPEC> {
+    pub fn mibthd(&mut self) -> MIBTHD_W<'_, BTH_SPEC> {
         MIBTHD_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for BTH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bth::W`](W) writer structure"]
 impl crate::Writable for BTH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BTH to value 0"]
-impl crate::Resettable for BTH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BTH_SPEC {}

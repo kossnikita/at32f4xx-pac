@@ -243,140 +243,117 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Command crc fail interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdfailien(&mut self) -> CMDFAILIEN_W<INTEN_SPEC> {
+    pub fn cmdfailien(&mut self) -> CMDFAILIEN_W<'_, INTEN_SPEC> {
         CMDFAILIEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Data crc fail interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtfailien(&mut self) -> DTFAILIEN_W<INTEN_SPEC> {
+    pub fn dtfailien(&mut self) -> DTFAILIEN_W<'_, INTEN_SPEC> {
         DTFAILIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Command timeout interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdtimeoutien(&mut self) -> CMDTIMEOUTIEN_W<INTEN_SPEC> {
+    pub fn cmdtimeoutien(&mut self) -> CMDTIMEOUTIEN_W<'_, INTEN_SPEC> {
         CMDTIMEOUTIEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Data timeout interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dttimeoutien(&mut self) -> DTTIMEOUTIEN_W<INTEN_SPEC> {
+    pub fn dttimeoutien(&mut self) -> DTTIMEOUTIEN_W<'_, INTEN_SPEC> {
         DTTIMEOUTIEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Tx under run interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn txerruien(&mut self) -> TXERRUIEN_W<INTEN_SPEC> {
+    pub fn txerruien(&mut self) -> TXERRUIEN_W<'_, INTEN_SPEC> {
         TXERRUIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Rx over run interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxerruien(&mut self) -> RXERRUIEN_W<INTEN_SPEC> {
+    pub fn rxerruien(&mut self) -> RXERRUIEN_W<'_, INTEN_SPEC> {
         RXERRUIEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Command response complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdrspcmplien(&mut self) -> CMDRSPCMPLIEN_W<INTEN_SPEC> {
+    pub fn cmdrspcmplien(&mut self) -> CMDRSPCMPLIEN_W<'_, INTEN_SPEC> {
         CMDRSPCMPLIEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Command sent complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdcmplien(&mut self) -> CMDCMPLIEN_W<INTEN_SPEC> {
+    pub fn cmdcmplien(&mut self) -> CMDCMPLIEN_W<'_, INTEN_SPEC> {
         CMDCMPLIEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Data sent complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtcmplien(&mut self) -> DTCMPLIEN_W<INTEN_SPEC> {
+    pub fn dtcmplien(&mut self) -> DTCMPLIEN_W<'_, INTEN_SPEC> {
         DTCMPLIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Start bit error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sbiterrien(&mut self) -> SBITERRIEN_W<INTEN_SPEC> {
+    pub fn sbiterrien(&mut self) -> SBITERRIEN_W<'_, INTEN_SPEC> {
         SBITERRIEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data block sent complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtblkcmplien(&mut self) -> DTBLKCMPLIEN_W<INTEN_SPEC> {
+    pub fn dtblkcmplien(&mut self) -> DTBLKCMPLIEN_W<'_, INTEN_SPEC> {
         DTBLKCMPLIEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Command acting interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn docmdien(&mut self) -> DOCMDIEN_W<INTEN_SPEC> {
+    pub fn docmdien(&mut self) -> DOCMDIEN_W<'_, INTEN_SPEC> {
         DOCMDIEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Data transmit acting interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dotxien(&mut self) -> DOTXIEN_W<INTEN_SPEC> {
+    pub fn dotxien(&mut self) -> DOTXIEN_W<'_, INTEN_SPEC> {
         DOTXIEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Data receive acting interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dorxien(&mut self) -> DORXIEN_W<INTEN_SPEC> {
+    pub fn dorxien(&mut self) -> DORXIEN_W<'_, INTEN_SPEC> {
         DORXIEN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Tx buffer half empty interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbufhien(&mut self) -> TXBUFHIEN_W<INTEN_SPEC> {
+    pub fn txbufhien(&mut self) -> TXBUFHIEN_W<'_, INTEN_SPEC> {
         TXBUFHIEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Rx buffer half empty interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbufhien(&mut self) -> RXBUFHIEN_W<INTEN_SPEC> {
+    pub fn rxbufhien(&mut self) -> RXBUFHIEN_W<'_, INTEN_SPEC> {
         RXBUFHIEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Tx buffer full interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbuffien(&mut self) -> TXBUFFIEN_W<INTEN_SPEC> {
+    pub fn txbuffien(&mut self) -> TXBUFFIEN_W<'_, INTEN_SPEC> {
         TXBUFFIEN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Rx buffer full interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbuffien(&mut self) -> RXBUFFIEN_W<INTEN_SPEC> {
+    pub fn rxbuffien(&mut self) -> RXBUFFIEN_W<'_, INTEN_SPEC> {
         RXBUFFIEN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Tx buffer empty interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbufeien(&mut self) -> TXBUFEIEN_W<INTEN_SPEC> {
+    pub fn txbufeien(&mut self) -> TXBUFEIEN_W<'_, INTEN_SPEC> {
         TXBUFEIEN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Rx buffer empty interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbufeien(&mut self) -> RXBUFEIEN_W<INTEN_SPEC> {
+    pub fn rxbufeien(&mut self) -> RXBUFEIEN_W<'_, INTEN_SPEC> {
         RXBUFEIEN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Tx buffer data vaild interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbufien(&mut self) -> TXBUFIEN_W<INTEN_SPEC> {
+    pub fn txbufien(&mut self) -> TXBUFIEN_W<'_, INTEN_SPEC> {
         TXBUFIEN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Rx buffer data vaild interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbufien(&mut self) -> RXBUFIEN_W<INTEN_SPEC> {
+    pub fn rxbufien(&mut self) -> RXBUFIEN_W<'_, INTEN_SPEC> {
         RXBUFIEN_W::new(self, 21)
     }
     #[doc = "Bit 22 - SD I/O interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ioifien(&mut self) -> IOIFIEN_W<INTEN_SPEC> {
+    pub fn ioifien(&mut self) -> IOIFIEN_W<'_, INTEN_SPEC> {
         IOIFIEN_W::new(self, 22)
     }
 }
@@ -390,10 +367,6 @@ impl crate::Readable for INTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`inten::W`](W) writer structure"]
 impl crate::Writable for INTEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTEN to value 0"]
-impl crate::Resettable for INTEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTEN_SPEC {}

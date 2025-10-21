@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - SPIM muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn ext_spim_gmux(&mut self) -> EXT_SPIM_GMUX_W<REMAP7_SPEC> {
+    pub fn ext_spim_gmux(&mut self) -> EXT_SPIM_GMUX_W<'_, REMAP7_SPEC> {
         EXT_SPIM_GMUX_W::new(self, 0)
     }
     #[doc = "Bit 3 - SPIM enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ext_spim_gen(&mut self) -> EXT_SPIM_GEN_W<REMAP7_SPEC> {
+    pub fn ext_spim_gen(&mut self) -> EXT_SPIM_GEN_W<'_, REMAP7_SPEC> {
         EXT_SPIM_GEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - ADC1 external trigger preempted conversion muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc1_etp_gmux(&mut self) -> ADC1_ETP_GMUX_W<REMAP7_SPEC> {
+    pub fn adc1_etp_gmux(&mut self) -> ADC1_ETP_GMUX_W<'_, REMAP7_SPEC> {
         ADC1_ETP_GMUX_W::new(self, 4)
     }
     #[doc = "Bit 5 - ADC1 external trigger ordinary conversion muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc1_eto_gmux(&mut self) -> ADC1_ETO_GMUX_W<REMAP7_SPEC> {
+    pub fn adc1_eto_gmux(&mut self) -> ADC1_ETO_GMUX_W<'_, REMAP7_SPEC> {
         ADC1_ETO_GMUX_W::new(self, 5)
     }
     #[doc = "Bit 8 - ADC2 external trigger preempted conversion muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc2_etp_gmux(&mut self) -> ADC2_ETP_GMUX_W<REMAP7_SPEC> {
+    pub fn adc2_etp_gmux(&mut self) -> ADC2_ETP_GMUX_W<'_, REMAP7_SPEC> {
         ADC2_ETP_GMUX_W::new(self, 8)
     }
     #[doc = "Bit 9 - ADC2 external trigger ordinary conversion muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc2_eto_gmux(&mut self) -> ADC2_ETO_GMUX_W<REMAP7_SPEC> {
+    pub fn adc2_eto_gmux(&mut self) -> ADC2_ETO_GMUX_W<'_, REMAP7_SPEC> {
         ADC2_ETO_GMUX_W::new(self, 9)
     }
     #[doc = "Bits 16:18 - Serial wire JTAG muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn swjtag_gmux(&mut self) -> SWJTAG_GMUX_W<REMAP7_SPEC> {
+    pub fn swjtag_gmux(&mut self) -> SWJTAG_GMUX_W<'_, REMAP7_SPEC> {
         SWJTAG_GMUX_W::new(self, 16)
     }
     #[doc = "Bit 20 - PortD0/PortD1 mappingon OSC_IN/OSC_OUT"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd01_gmux(&mut self) -> PD01_GMUX_W<REMAP7_SPEC> {
+    pub fn pd01_gmux(&mut self) -> PD01_GMUX_W<'_, REMAP7_SPEC> {
         PD01_GMUX_W::new(self, 20)
     }
 }
@@ -150,10 +142,6 @@ impl crate::Readable for REMAP7_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap7::W`](W) writer structure"]
 impl crate::Writable for REMAP7_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP7 to value 0"]
-impl crate::Resettable for REMAP7_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP7_SPEC {}

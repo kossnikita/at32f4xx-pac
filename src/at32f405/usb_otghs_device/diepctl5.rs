@@ -107,68 +107,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
-    #[must_use]
-    pub fn mps(&mut self) -> MPS_W<DIEPCTL5_SPEC> {
+    pub fn mps(&mut self) -> MPS_W<'_, DIEPCTL5_SPEC> {
         MPS_W::new(self, 0)
     }
     #[doc = "Bit 15 - USB active endpoint"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbacept(&mut self) -> USBACEPT_W<DIEPCTL5_SPEC> {
+    pub fn usbacept(&mut self) -> USBACEPT_W<'_, DIEPCTL5_SPEC> {
         USBACEPT_W::new(self, 15)
     }
     #[doc = "Bits 18:19 - Endpoint type"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptype(&mut self) -> EPTYPE_W<DIEPCTL5_SPEC> {
+    pub fn eptype(&mut self) -> EPTYPE_W<'_, DIEPCTL5_SPEC> {
         EPTYPE_W::new(self, 18)
     }
     #[doc = "Bit 21 - STALL handshake"]
     #[inline(always)]
-    #[must_use]
-    pub fn stall(&mut self) -> STALL_W<DIEPCTL5_SPEC> {
+    pub fn stall(&mut self) -> STALL_W<'_, DIEPCTL5_SPEC> {
         STALL_W::new(self, 21)
     }
     #[doc = "Bits 22:25 - TxFIFO number"]
     #[inline(always)]
-    #[must_use]
-    pub fn txfnum(&mut self) -> TXFNUM_W<DIEPCTL5_SPEC> {
+    pub fn txfnum(&mut self) -> TXFNUM_W<'_, DIEPCTL5_SPEC> {
         TXFNUM_W::new(self, 22)
     }
     #[doc = "Bit 26 - Clear NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn cnak(&mut self) -> CNAK_W<DIEPCTL5_SPEC> {
+    pub fn cnak(&mut self) -> CNAK_W<'_, DIEPCTL5_SPEC> {
         CNAK_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn snak(&mut self) -> SNAK_W<DIEPCTL5_SPEC> {
+    pub fn snak(&mut self) -> SNAK_W<'_, DIEPCTL5_SPEC> {
         SNAK_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set DATA0 PID"]
     #[inline(always)]
-    #[must_use]
-    pub fn setd0pid(&mut self) -> SETD0PID_W<DIEPCTL5_SPEC> {
+    pub fn setd0pid(&mut self) -> SETD0PID_W<'_, DIEPCTL5_SPEC> {
         SETD0PID_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set DATA1 PID"]
     #[inline(always)]
-    #[must_use]
-    pub fn setd1pid(&mut self) -> SETD1PID_W<DIEPCTL5_SPEC> {
+    pub fn setd1pid(&mut self) -> SETD1PID_W<'_, DIEPCTL5_SPEC> {
         SETD1PID_W::new(self, 29)
     }
     #[doc = "Bit 30 - Endpoint disable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdis(&mut self) -> EPTDIS_W<DIEPCTL5_SPEC> {
+    pub fn eptdis(&mut self) -> EPTDIS_W<'_, DIEPCTL5_SPEC> {
         EPTDIS_W::new(self, 30)
     }
     #[doc = "Bit 31 - Endpoint enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptena(&mut self) -> EPTENA_W<DIEPCTL5_SPEC> {
+    pub fn eptena(&mut self) -> EPTENA_W<'_, DIEPCTL5_SPEC> {
         EPTENA_W::new(self, 31)
     }
 }
@@ -182,10 +171,6 @@ impl crate::Readable for DIEPCTL5_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepctl5::W`](W) writer structure"]
 impl crate::Writable for DIEPCTL5_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPCTL5 to value 0"]
-impl crate::Resettable for DIEPCTL5_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DIEPCTL5_SPEC {}

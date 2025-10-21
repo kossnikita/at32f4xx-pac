@@ -179,106 +179,89 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OM0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn om(&mut self, n: u8) -> OM_W<OMODE_SPEC> {
+    pub fn om(&mut self, n: u8) -> OM_W<'_, OMODE_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 16][n as usize];
         OM_W::new(self, n)
     }
     #[doc = "Bit 0 - GPIOx pin 0 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om0(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om0(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 0)
     }
     #[doc = "Bit 1 - GPIOx pin 1 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om1(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om1(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 1)
     }
     #[doc = "Bit 2 - GPIOx pin 2 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om2(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om2(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 2)
     }
     #[doc = "Bit 3 - GPIOx pin 3 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om3(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om3(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 3)
     }
     #[doc = "Bit 4 - GPIOx pin 4 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om4(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om4(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 4)
     }
     #[doc = "Bit 5 - GPIOx pin 5 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om5(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om5(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 5)
     }
     #[doc = "Bit 6 - GPIOx pin 6 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om6(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om6(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 6)
     }
     #[doc = "Bit 7 - GPIOx pin 7 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om7(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om7(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 7)
     }
     #[doc = "Bit 8 - GPIOx pin 8 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om8(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om8(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 8)
     }
     #[doc = "Bit 9 - GPIOx pin 9 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om9(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om9(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 9)
     }
     #[doc = "Bit 10 - GPIOx pin 10 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om10(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om10(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 10)
     }
     #[doc = "Bit 11 - GPIOx pin 11 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om11(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om11(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 11)
     }
     #[doc = "Bit 12 - GPIOx pin 12 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om12(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om12(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 12)
     }
     #[doc = "Bit 13 - GPIOx pin 13 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om13(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om13(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 13)
     }
     #[doc = "Bit 14 - GPIOx pin 14 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om14(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om14(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 14)
     }
     #[doc = "Bit 15 - GPIOx pin 15 outpu mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn om15(&mut self) -> OM_W<OMODE_SPEC> {
+    pub fn om15(&mut self) -> OM_W<'_, OMODE_SPEC> {
         OM_W::new(self, 15)
     }
 }
@@ -292,10 +275,6 @@ impl crate::Readable for OMODE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`omode::W`](W) writer structure"]
 impl crate::Writable for OMODE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OMODE to value 0"]
-impl crate::Resettable for OMODE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OMODE_SPEC {}

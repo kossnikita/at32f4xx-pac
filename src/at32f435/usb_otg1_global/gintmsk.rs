@@ -243,140 +243,117 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Mode mismatch interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn modemismsk(&mut self) -> MODEMISMSK_W<GINTMSK_SPEC> {
+    pub fn modemismsk(&mut self) -> MODEMISMSK_W<'_, GINTMSK_SPEC> {
         MODEMISMSK_W::new(self, 1)
     }
     #[doc = "Bit 2 - OTG interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn otgintmsk(&mut self) -> OTGINTMSK_W<GINTMSK_SPEC> {
+    pub fn otgintmsk(&mut self) -> OTGINTMSK_W<'_, GINTMSK_SPEC> {
         OTGINTMSK_W::new(self, 2)
     }
     #[doc = "Bit 3 - Start of frame mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn sofmsk(&mut self) -> SOFMSK_W<GINTMSK_SPEC> {
+    pub fn sofmsk(&mut self) -> SOFMSK_W<'_, GINTMSK_SPEC> {
         SOFMSK_W::new(self, 3)
     }
     #[doc = "Bit 4 - Receive FIFO non-empty mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxflvlmsk(&mut self) -> RXFLVLMSK_W<GINTMSK_SPEC> {
+    pub fn rxflvlmsk(&mut self) -> RXFLVLMSK_W<'_, GINTMSK_SPEC> {
         RXFLVLMSK_W::new(self, 4)
     }
     #[doc = "Bit 5 - Non-periodic TxFIFO empty mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn nptxfempmsk(&mut self) -> NPTXFEMPMSK_W<GINTMSK_SPEC> {
+    pub fn nptxfempmsk(&mut self) -> NPTXFEMPMSK_W<'_, GINTMSK_SPEC> {
         NPTXFEMPMSK_W::new(self, 5)
     }
     #[doc = "Bit 6 - Global non-periodic IN NAK effective mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn ginnakeffmsk(&mut self) -> GINNAKEFFMSK_W<GINTMSK_SPEC> {
+    pub fn ginnakeffmsk(&mut self) -> GINNAKEFFMSK_W<'_, GINTMSK_SPEC> {
         GINNAKEFFMSK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Global OUT NAK effective mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn goutnakeffmsk(&mut self) -> GOUTNAKEFFMSK_W<GINTMSK_SPEC> {
+    pub fn goutnakeffmsk(&mut self) -> GOUTNAKEFFMSK_W<'_, GINTMSK_SPEC> {
         GOUTNAKEFFMSK_W::new(self, 7)
     }
     #[doc = "Bit 10 - Early suspend mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn erlysuspmsk(&mut self) -> ERLYSUSPMSK_W<GINTMSK_SPEC> {
+    pub fn erlysuspmsk(&mut self) -> ERLYSUSPMSK_W<'_, GINTMSK_SPEC> {
         ERLYSUSPMSK_W::new(self, 10)
     }
     #[doc = "Bit 11 - USB suspend mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbsuspmsk(&mut self) -> USBSUSPMSK_W<GINTMSK_SPEC> {
+    pub fn usbsuspmsk(&mut self) -> USBSUSPMSK_W<'_, GINTMSK_SPEC> {
         USBSUSPMSK_W::new(self, 11)
     }
     #[doc = "Bit 12 - USB reset mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbrstmsk(&mut self) -> USBRSTMSK_W<GINTMSK_SPEC> {
+    pub fn usbrstmsk(&mut self) -> USBRSTMSK_W<'_, GINTMSK_SPEC> {
         USBRSTMSK_W::new(self, 12)
     }
     #[doc = "Bit 13 - Enumeration done mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn enumdonemsk(&mut self) -> ENUMDONEMSK_W<GINTMSK_SPEC> {
+    pub fn enumdonemsk(&mut self) -> ENUMDONEMSK_W<'_, GINTMSK_SPEC> {
         ENUMDONEMSK_W::new(self, 13)
     }
     #[doc = "Bit 14 - Isochronous OUT packet dropped interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn isooutdropmsk(&mut self) -> ISOOUTDROPMSK_W<GINTMSK_SPEC> {
+    pub fn isooutdropmsk(&mut self) -> ISOOUTDROPMSK_W<'_, GINTMSK_SPEC> {
         ISOOUTDROPMSK_W::new(self, 14)
     }
     #[doc = "Bit 15 - End of periodic frame interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn eopfmsk(&mut self) -> EOPFMSK_W<GINTMSK_SPEC> {
+    pub fn eopfmsk(&mut self) -> EOPFMSK_W<'_, GINTMSK_SPEC> {
         EOPFMSK_W::new(self, 15)
     }
     #[doc = "Bit 18 - IN endpoints interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn ieptintmsk(&mut self) -> IEPTINTMSK_W<GINTMSK_SPEC> {
+    pub fn ieptintmsk(&mut self) -> IEPTINTMSK_W<'_, GINTMSK_SPEC> {
         IEPTINTMSK_W::new(self, 18)
     }
     #[doc = "Bit 19 - OUT endpoints interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn oeptintmsk(&mut self) -> OEPTINTMSK_W<GINTMSK_SPEC> {
+    pub fn oeptintmsk(&mut self) -> OEPTINTMSK_W<'_, GINTMSK_SPEC> {
         OEPTINTMSK_W::new(self, 19)
     }
     #[doc = "Bit 20 - Incomplete isochronous IN transfer mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn incomisoinmsk(&mut self) -> INCOMISOINMSK_W<GINTMSK_SPEC> {
+    pub fn incomisoinmsk(&mut self) -> INCOMISOINMSK_W<'_, GINTMSK_SPEC> {
         INCOMISOINMSK_W::new(self, 20)
     }
     #[doc = "Bit 21 - Incomplete periodic transfer mask(Host mode)/Incomplete isochronous OUT transfer mask(Device mode)"]
     #[inline(always)]
-    #[must_use]
-    pub fn incompip_incompisooutmsk(&mut self) -> INCOMPIP_INCOMPISOOUTMSK_W<GINTMSK_SPEC> {
+    pub fn incompip_incompisooutmsk(&mut self) -> INCOMPIP_INCOMPISOOUTMSK_W<'_, GINTMSK_SPEC> {
         INCOMPIP_INCOMPISOOUTMSK_W::new(self, 21)
     }
     #[doc = "Bit 24 - Host port interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn prtintmsk(&mut self) -> PRTINTMSK_W<GINTMSK_SPEC> {
+    pub fn prtintmsk(&mut self) -> PRTINTMSK_W<'_, GINTMSK_SPEC> {
         PRTINTMSK_W::new(self, 24)
     }
     #[doc = "Bit 25 - Host channels interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn hchintmsk(&mut self) -> HCHINTMSK_W<GINTMSK_SPEC> {
+    pub fn hchintmsk(&mut self) -> HCHINTMSK_W<'_, GINTMSK_SPEC> {
         HCHINTMSK_W::new(self, 25)
     }
     #[doc = "Bit 26 - Periodic TxFIFO empty mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn ptxfempmsk(&mut self) -> PTXFEMPMSK_W<GINTMSK_SPEC> {
+    pub fn ptxfempmsk(&mut self) -> PTXFEMPMSK_W<'_, GINTMSK_SPEC> {
         PTXFEMPMSK_W::new(self, 26)
     }
     #[doc = "Bit 28 - Connector ID status change mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn conidschgmsk(&mut self) -> CONIDSCHGMSK_W<GINTMSK_SPEC> {
+    pub fn conidschgmsk(&mut self) -> CONIDSCHGMSK_W<'_, GINTMSK_SPEC> {
         CONIDSCHGMSK_W::new(self, 28)
     }
     #[doc = "Bit 29 - Disconnect detected interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn disconintmsk(&mut self) -> DISCONINTMSK_W<GINTMSK_SPEC> {
+    pub fn disconintmsk(&mut self) -> DISCONINTMSK_W<'_, GINTMSK_SPEC> {
         DISCONINTMSK_W::new(self, 29)
     }
     #[doc = "Bit 31 - Resume/remote wakeup detected interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn wkupintmsk(&mut self) -> WKUPINTMSK_W<GINTMSK_SPEC> {
+    pub fn wkupintmsk(&mut self) -> WKUPINTMSK_W<'_, GINTMSK_SPEC> {
         WKUPINTMSK_W::new(self, 31)
     }
 }
@@ -390,10 +367,6 @@ impl crate::Readable for GINTMSK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gintmsk::W`](W) writer structure"]
 impl crate::Writable for GINTMSK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GINTMSK to value 0"]
-impl crate::Resettable for GINTMSK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GINTMSK_SPEC {}

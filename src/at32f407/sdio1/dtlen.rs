@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:24 - Data length value"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtlen(&mut self) -> DTLEN_W<DTLEN_SPEC> {
+    pub fn dtlen(&mut self) -> DTLEN_W<'_, DTLEN_SPEC> {
         DTLEN_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for DTLEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dtlen::W`](W) writer structure"]
 impl crate::Writable for DTLEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DTLEN to value 0"]
-impl crate::Resettable for DTLEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DTLEN_SPEC {}

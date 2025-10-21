@@ -22,6 +22,4 @@ impl crate::RegisterSpec for RXDT_SPEC {
 #[doc = "`read()` method returns [`rxdt::R`](R) reader structure"]
 impl crate::Readable for RXDT_SPEC {}
 #[doc = "`reset()` method sets RXDT to value 0"]
-impl crate::Resettable for RXDT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RXDT_SPEC {}

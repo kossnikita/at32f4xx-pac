@@ -549,38 +549,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - Receive data buffer full"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdbf(&mut self) -> RDBF_W<STS_SPEC> {
+    pub fn rdbf(&mut self) -> RDBF_W<'_, STS_SPEC> {
         RDBF_W::new(self, 5)
     }
     #[doc = "Bit 6 - Transmit data complete"]
     #[inline(always)]
-    #[must_use]
-    pub fn tdc(&mut self) -> TDC_W<STS_SPEC> {
+    pub fn tdc(&mut self) -> TDC_W<'_, STS_SPEC> {
         TDC_W::new(self, 6)
     }
     #[doc = "Bit 8 - Break frame flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn bff(&mut self) -> BFF_W<STS_SPEC> {
+    pub fn bff(&mut self) -> BFF_W<'_, STS_SPEC> {
         BFF_W::new(self, 8)
     }
     #[doc = "Bit 9 - CTS change flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ctscf(&mut self) -> CTSCF_W<STS_SPEC> {
+    pub fn ctscf(&mut self) -> CTSCF_W<'_, STS_SPEC> {
         CTSCF_W::new(self, 9)
     }
     #[doc = "Bit 11 - Reiceiver time out detection flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn rtodf(&mut self) -> RTODF_W<STS_SPEC> {
+    pub fn rtodf(&mut self) -> RTODF_W<'_, STS_SPEC> {
         RTODF_W::new(self, 11)
     }
     #[doc = "Bit 17 - Character match detection flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdf(&mut self) -> CMDF_W<STS_SPEC> {
+    pub fn cmdf(&mut self) -> CMDF_W<'_, STS_SPEC> {
         CMDF_W::new(self, 17)
     }
 }
@@ -595,7 +589,6 @@ impl crate::Readable for STS_SPEC {}
 impl crate::Writable for STS_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0360;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0xc0"]
 impl crate::Resettable for STS_SPEC {

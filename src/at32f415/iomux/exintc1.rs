@@ -153,34 +153,29 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `EXINT0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint(&mut self, n: u8) -> EXINT_W<EXINTC1_SPEC> {
+    pub fn exint(&mut self, n: u8) -> EXINT_W<'_, EXINTC1_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         EXINT_W::new(self, n * 4)
     }
     #[doc = "Bits 0:3 - Select the input source for EXINT0 external interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint0(&mut self) -> EXINT_W<EXINTC1_SPEC> {
+    pub fn exint0(&mut self) -> EXINT_W<'_, EXINTC1_SPEC> {
         EXINT_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Select the input source for EXINT1 external interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint1(&mut self) -> EXINT_W<EXINTC1_SPEC> {
+    pub fn exint1(&mut self) -> EXINT_W<'_, EXINTC1_SPEC> {
         EXINT_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Select the input source for EXINT2 external interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint2(&mut self) -> EXINT_W<EXINTC1_SPEC> {
+    pub fn exint2(&mut self) -> EXINT_W<'_, EXINTC1_SPEC> {
         EXINT_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - Select the input source for EXINT3 external interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint3(&mut self) -> EXINT_W<EXINTC1_SPEC> {
+    pub fn exint3(&mut self) -> EXINT_W<'_, EXINTC1_SPEC> {
         EXINT_W::new(self, 12)
     }
 }
@@ -194,10 +189,6 @@ impl crate::Readable for EXINTC1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`exintc1::W`](W) writer structure"]
 impl crate::Writable for EXINTC1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXINTC1 to value 0"]
-impl crate::Resettable for EXINTC1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EXINTC1_SPEC {}

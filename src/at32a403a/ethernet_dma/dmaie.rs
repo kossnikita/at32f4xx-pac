@@ -163,92 +163,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transmit interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tie(&mut self) -> TIE_W<DMAIE_SPEC> {
+    pub fn tie(&mut self) -> TIE_W<'_, DMAIE_SPEC> {
         TIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit stopped enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tse(&mut self) -> TSE_W<DMAIE_SPEC> {
+    pub fn tse(&mut self) -> TSE_W<'_, DMAIE_SPEC> {
         TSE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transmit buffer unavailable enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tue(&mut self) -> TUE_W<DMAIE_SPEC> {
+    pub fn tue(&mut self) -> TUE_W<'_, DMAIE_SPEC> {
         TUE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transmit jabber timeout enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tje(&mut self) -> TJE_W<DMAIE_SPEC> {
+    pub fn tje(&mut self) -> TJE_W<'_, DMAIE_SPEC> {
         TJE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Overflow interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ove(&mut self) -> OVE_W<DMAIE_SPEC> {
+    pub fn ove(&mut self) -> OVE_W<'_, DMAIE_SPEC> {
         OVE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Underflow interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn une(&mut self) -> UNE_W<DMAIE_SPEC> {
+    pub fn une(&mut self) -> UNE_W<'_, DMAIE_SPEC> {
         UNE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Receive interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rie(&mut self) -> RIE_W<DMAIE_SPEC> {
+    pub fn rie(&mut self) -> RIE_W<'_, DMAIE_SPEC> {
         RIE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Receive buffer unavailable enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbue(&mut self) -> RBUE_W<DMAIE_SPEC> {
+    pub fn rbue(&mut self) -> RBUE_W<'_, DMAIE_SPEC> {
         RBUE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Receive stopped enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rse(&mut self) -> RSE_W<DMAIE_SPEC> {
+    pub fn rse(&mut self) -> RSE_W<'_, DMAIE_SPEC> {
         RSE_W::new(self, 8)
     }
     #[doc = "Bit 9 - receive watchdog timeout enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rwte(&mut self) -> RWTE_W<DMAIE_SPEC> {
+    pub fn rwte(&mut self) -> RWTE_W<'_, DMAIE_SPEC> {
         RWTE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Early transmit interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eie(&mut self) -> EIE_W<DMAIE_SPEC> {
+    pub fn eie(&mut self) -> EIE_W<'_, DMAIE_SPEC> {
         EIE_W::new(self, 10)
     }
     #[doc = "Bit 13 - Fatal bus error enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn fbee(&mut self) -> FBEE_W<DMAIE_SPEC> {
+    pub fn fbee(&mut self) -> FBEE_W<'_, DMAIE_SPEC> {
         FBEE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Early receive interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ere(&mut self) -> ERE_W<DMAIE_SPEC> {
+    pub fn ere(&mut self) -> ERE_W<'_, DMAIE_SPEC> {
         ERE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Abnormal interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn aie(&mut self) -> AIE_W<DMAIE_SPEC> {
+    pub fn aie(&mut self) -> AIE_W<'_, DMAIE_SPEC> {
         AIE_W::new(self, 15)
     }
     #[doc = "Bit 16 - Normal interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn nie(&mut self) -> NIE_W<DMAIE_SPEC> {
+    pub fn nie(&mut self) -> NIE_W<'_, DMAIE_SPEC> {
         NIE_W::new(self, 16)
     }
 }
@@ -262,10 +247,6 @@ impl crate::Readable for DMAIE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmaie::W`](W) writer structure"]
 impl crate::Writable for DMAIE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMAIE to value 0"]
-impl crate::Resettable for DMAIE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMAIE_SPEC {}

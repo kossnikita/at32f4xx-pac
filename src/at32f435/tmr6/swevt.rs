@@ -60,8 +60,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Overflow event triggered by software"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfswtr(&mut self) -> OVFSWTR_W<SWEVT_SPEC> {
+    pub fn ovfswtr(&mut self) -> OVFSWTR_W<'_, SWEVT_SPEC> {
         OVFSWTR_W::new(self, 0)
     }
 }
@@ -75,10 +74,7 @@ impl crate::Readable for SWEVT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swevt::W`](W) writer structure"]
 impl crate::Writable for SWEVT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
 }
 #[doc = "`reset()` method sets SWEVT to value 0"]
-impl crate::Resettable for SWEVT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SWEVT_SPEC {}

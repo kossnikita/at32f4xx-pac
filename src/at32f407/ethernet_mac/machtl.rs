@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Hash table low"]
     #[inline(always)]
-    #[must_use]
-    pub fn htl(&mut self) -> HTL_W<MACHTL_SPEC> {
+    pub fn htl(&mut self) -> HTL_W<'_, MACHTL_SPEC> {
         HTL_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for MACHTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`machtl::W`](W) writer structure"]
 impl crate::Writable for MACHTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACHTL to value 0"]
-impl crate::Resettable for MACHTL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MACHTL_SPEC {}

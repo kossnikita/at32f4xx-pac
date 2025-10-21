@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:7 - I2C1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c1_gmux(&mut self) -> I2C1_GMUX_W<REMAP5_SPEC> {
+    pub fn i2c1_gmux(&mut self) -> I2C1_GMUX_W<'_, REMAP5_SPEC> {
         I2C1_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - I2C2 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c2_gmux(&mut self) -> I2C2_GMUX_W<REMAP5_SPEC> {
+    pub fn i2c2_gmux(&mut self) -> I2C2_GMUX_W<'_, REMAP5_SPEC> {
         I2C2_GMUX_W::new(self, 8)
     }
     #[doc = "Bits 16:19 - SPI1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi1_gmux(&mut self) -> SPI1_GMUX_W<REMAP5_SPEC> {
+    pub fn spi1_gmux(&mut self) -> SPI1_GMUX_W<'_, REMAP5_SPEC> {
         SPI1_GMUX_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - SPI2 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi2_gmux(&mut self) -> SPI2_GMUX_W<REMAP5_SPEC> {
+    pub fn spi2_gmux(&mut self) -> SPI2_GMUX_W<'_, REMAP5_SPEC> {
         SPI2_GMUX_W::new(self, 20)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for REMAP5_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap5::W`](W) writer structure"]
 impl crate::Writable for REMAP5_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP5 to value 0"]
-impl crate::Resettable for REMAP5_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP5_SPEC {}

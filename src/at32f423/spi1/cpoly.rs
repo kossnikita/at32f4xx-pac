@@ -18,8 +18,6 @@ impl crate::Readable for CPOLY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cpoly::W`](W) writer structure"]
 impl crate::Writable for CPOLY_SPEC {
     type Safety = crate::Safe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets CPOLY to value 0x07"]
 impl crate::Resettable for CPOLY_SPEC {

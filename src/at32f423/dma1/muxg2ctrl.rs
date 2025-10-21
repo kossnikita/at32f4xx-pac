@@ -35,7 +35,7 @@ impl R {
     }
     #[doc = "Bit 16 - DMA request generator enable"]
     #[inline(always)]
-    pub fn gen(&self) -> GEN_R {
+    pub fn gen_(&self) -> GEN_R {
         GEN_R::new(((self.bits >> 16) & 1) != 0)
     }
     #[doc = "Bits 17:18 - DMA request generator trigger polarity"]
@@ -54,7 +54,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("MUXG2CTRL")
             .field("sigsel", &self.sigsel())
             .field("trgovien", &self.trgovien())
-            .field("gen", &self.gen())
+            .field("gen_", &self.gen_())
             .field("gpol", &self.gpol())
             .field("greqcnt", &self.greqcnt())
             .finish()
@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Signal select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sigsel(&mut self) -> SIGSEL_W<MUXG2CTRL_SPEC> {
+    pub fn sigsel(&mut self) -> SIGSEL_W<'_, MUXG2CTRL_SPEC> {
         SIGSEL_W::new(self, 0)
     }
     #[doc = "Bit 8 - Trigger overrun interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn trgovien(&mut self) -> TRGOVIEN_W<MUXG2CTRL_SPEC> {
+    pub fn trgovien(&mut self) -> TRGOVIEN_W<'_, MUXG2CTRL_SPEC> {
         TRGOVIEN_W::new(self, 8)
     }
     #[doc = "Bit 16 - DMA request generator enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gen(&mut self) -> GEN_W<MUXG2CTRL_SPEC> {
+    pub fn gen_(&mut self) -> GEN_W<'_, MUXG2CTRL_SPEC> {
         GEN_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - DMA request generator trigger polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpol(&mut self) -> GPOL_W<MUXG2CTRL_SPEC> {
+    pub fn gpol(&mut self) -> GPOL_W<'_, MUXG2CTRL_SPEC> {
         GPOL_W::new(self, 17)
     }
     #[doc = "Bits 19:23 - Number of DMA requests to be generated"]
     #[inline(always)]
-    #[must_use]
-    pub fn greqcnt(&mut self) -> GREQCNT_W<MUXG2CTRL_SPEC> {
+    pub fn greqcnt(&mut self) -> GREQCNT_W<'_, MUXG2CTRL_SPEC> {
         GREQCNT_W::new(self, 19)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for MUXG2CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxg2ctrl::W`](W) writer structure"]
 impl crate::Writable for MUXG2CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MUXG2CTRL to value 0"]
-impl crate::Resettable for MUXG2CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MUXG2CTRL_SPEC {}

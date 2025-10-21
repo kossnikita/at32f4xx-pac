@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - PMT interrupt status"]
     #[inline(always)]
-    #[must_use]
-    pub fn pis(&mut self) -> PIS_W<MACISTS_SPEC> {
+    pub fn pis(&mut self) -> PIS_W<'_, MACISTS_SPEC> {
         PIS_W::new(self, 3)
     }
     #[doc = "Bit 4 - MMC interrupt status"]
     #[inline(always)]
-    #[must_use]
-    pub fn mis(&mut self) -> MIS_W<MACISTS_SPEC> {
+    pub fn mis(&mut self) -> MIS_W<'_, MACISTS_SPEC> {
         MIS_W::new(self, 4)
     }
     #[doc = "Bit 5 - MMC receive interrupt status"]
     #[inline(always)]
-    #[must_use]
-    pub fn mris(&mut self) -> MRIS_W<MACISTS_SPEC> {
+    pub fn mris(&mut self) -> MRIS_W<'_, MACISTS_SPEC> {
         MRIS_W::new(self, 5)
     }
     #[doc = "Bit 6 - MMC transmit interrupt status"]
     #[inline(always)]
-    #[must_use]
-    pub fn mtis(&mut self) -> MTIS_W<MACISTS_SPEC> {
+    pub fn mtis(&mut self) -> MTIS_W<'_, MACISTS_SPEC> {
         MTIS_W::new(self, 6)
     }
     #[doc = "Bit 9 - Timestamp interrupt status"]
     #[inline(always)]
-    #[must_use]
-    pub fn tis(&mut self) -> TIS_W<MACISTS_SPEC> {
+    pub fn tis(&mut self) -> TIS_W<'_, MACISTS_SPEC> {
         TIS_W::new(self, 9)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for MACISTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macists::W`](W) writer structure"]
 impl crate::Writable for MACISTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACISTS to value 0"]
-impl crate::Resettable for MACISTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MACISTS_SPEC {}

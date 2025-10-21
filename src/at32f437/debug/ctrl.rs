@@ -232,20 +232,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Debug Sleep mode control bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn sleep_debug(&mut self) -> SLEEP_DEBUG_W<CTRL_SPEC> {
+    pub fn sleep_debug(&mut self) -> SLEEP_DEBUG_W<'_, CTRL_SPEC> {
         SLEEP_DEBUG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Debug Deepsleep mode control bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn deepsleep_debug(&mut self) -> DEEPSLEEP_DEBUG_W<CTRL_SPEC> {
+    pub fn deepsleep_debug(&mut self) -> DEEPSLEEP_DEBUG_W<'_, CTRL_SPEC> {
         DEEPSLEEP_DEBUG_W::new(self, 1)
     }
     #[doc = "Bit 2 - Debug Standby mode control bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn standby_debug(&mut self) -> STANDBY_DEBUG_W<CTRL_SPEC> {
+    pub fn standby_debug(&mut self) -> STANDBY_DEBUG_W<'_, CTRL_SPEC> {
         STANDBY_DEBUG_W::new(self, 2)
     }
 }
@@ -259,10 +256,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
-impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL_SPEC {}

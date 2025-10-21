@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - Power down"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwrdown(&mut self) -> PWRDOWN_W<GCCFG_SPEC> {
+    pub fn pwrdown(&mut self) -> PWRDOWN_W<'_, GCCFG_SPEC> {
         PWRDOWN_W::new(self, 16)
     }
     #[doc = "Bit 18 - sense Avalid enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn avalidsesen(&mut self) -> AVALIDSESEN_W<GCCFG_SPEC> {
+    pub fn avalidsesen(&mut self) -> AVALIDSESEN_W<'_, GCCFG_SPEC> {
         AVALIDSESEN_W::new(self, 18)
     }
     #[doc = "Bit 19 - sense Bvalid enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn bvalidsesen(&mut self) -> BVALIDSESEN_W<GCCFG_SPEC> {
+    pub fn bvalidsesen(&mut self) -> BVALIDSESEN_W<'_, GCCFG_SPEC> {
         BVALIDSESEN_W::new(self, 19)
     }
     #[doc = "Bit 20 - SOF output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sofouten(&mut self) -> SOFOUTEN_W<GCCFG_SPEC> {
+    pub fn sofouten(&mut self) -> SOFOUTEN_W<'_, GCCFG_SPEC> {
         SOFOUTEN_W::new(self, 20)
     }
     #[doc = "Bit 21 - VBUS Ignored"]
     #[inline(always)]
-    #[must_use]
-    pub fn vbusig(&mut self) -> VBUSIG_W<GCCFG_SPEC> {
+    pub fn vbusig(&mut self) -> VBUSIG_W<'_, GCCFG_SPEC> {
         VBUSIG_W::new(self, 21)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for GCCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gccfg::W`](W) writer structure"]
 impl crate::Writable for GCCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GCCFG to value 0"]
-impl crate::Resettable for GCCFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GCCFG_SPEC {}

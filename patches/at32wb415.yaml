@@ -3,15 +3,6 @@ _svd: "../svd/AT32WB415.svd"
 _modify:
   name: AT32WB415
 
-ACC:
-  CTRL2:
-    _strip:
-      - "ACC_"
-    _modify:
-      HSICAL:
-        name: HICKCAL
-      HSITRIM:
-        name: HICKTRIM
 DEBUG:
   _strip:
     - "DEBUG_"
@@ -41,6 +32,5 @@ _include:
   - common/iomux/iomux_gpiof.yaml
   - common/wwdt/common.yaml
   - common/wdt/common.yaml
-  - common/acc/common.yaml
   - common/debug/common.yaml
   - common/debug/timers.yaml

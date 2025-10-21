@@ -299,8 +299,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:6 - Error type record"]
     #[inline(always)]
-    #[must_use]
-    pub fn etr(&mut self) -> ETR_W<ESTS_SPEC> {
+    pub fn etr(&mut self) -> ETR_W<'_, ESTS_SPEC> {
         ETR_W::new(self, 4)
     }
 }
@@ -314,10 +313,6 @@ impl crate::Readable for ESTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ests::W`](W) writer structure"]
 impl crate::Writable for ESTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ESTS to value 0"]
-impl crate::Resettable for ESTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ESTS_SPEC {}

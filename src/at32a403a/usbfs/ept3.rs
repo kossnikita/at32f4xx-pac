@@ -113,62 +113,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Endpoint address"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptaddr(&mut self) -> EPTADDR_W<EPT3_SPEC> {
+    pub fn eptaddr(&mut self) -> EPTADDR_W<'_, EPT3_SPEC> {
         EPTADDR_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Tx status"]
     #[inline(always)]
-    #[must_use]
-    pub fn txsts(&mut self) -> TXSTS_W<EPT3_SPEC> {
+    pub fn txsts(&mut self) -> TXSTS_W<'_, EPT3_SPEC> {
         TXSTS_W::new(self, 4)
     }
     #[doc = "Bit 6 - Tx data toggle synchronization"]
     #[inline(always)]
-    #[must_use]
-    pub fn txdts(&mut self) -> TXDTS_W<EPT3_SPEC> {
+    pub fn txdts(&mut self) -> TXDTS_W<'_, EPT3_SPEC> {
         TXDTS_W::new(self, 6)
     }
     #[doc = "Bit 7 - Tx transaction completed"]
     #[inline(always)]
-    #[must_use]
-    pub fn txtc(&mut self) -> TXTC_W<EPT3_SPEC> {
+    pub fn txtc(&mut self) -> TXTC_W<'_, EPT3_SPEC> {
         TXTC_W::new(self, 7)
     }
     #[doc = "Bit 8 - Endpoint extend function"]
     #[inline(always)]
-    #[must_use]
-    pub fn exf(&mut self) -> EXF_W<EPT3_SPEC> {
+    pub fn exf(&mut self) -> EXF_W<'_, EPT3_SPEC> {
         EXF_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - Transfer type"]
     #[inline(always)]
-    #[must_use]
-    pub fn trans_type(&mut self) -> TRANS_TYPE_W<EPT3_SPEC> {
+    pub fn trans_type(&mut self) -> TRANS_TYPE_W<'_, EPT3_SPEC> {
         TRANS_TYPE_W::new(self, 9)
     }
     #[doc = "Bit 11 - Setup transaction completed"]
     #[inline(always)]
-    #[must_use]
-    pub fn setuptc(&mut self) -> SETUPTC_W<EPT3_SPEC> {
+    pub fn setuptc(&mut self) -> SETUPTC_W<'_, EPT3_SPEC> {
         SETUPTC_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Rx Status"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxsts(&mut self) -> RXSTS_W<EPT3_SPEC> {
+    pub fn rxsts(&mut self) -> RXSTS_W<'_, EPT3_SPEC> {
         RXSTS_W::new(self, 12)
     }
     #[doc = "Bit 14 - Rx data toggle synchronization"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxdts(&mut self) -> RXDTS_W<EPT3_SPEC> {
+    pub fn rxdts(&mut self) -> RXDTS_W<'_, EPT3_SPEC> {
         RXDTS_W::new(self, 14)
     }
     #[doc = "Bit 15 - Rx transaction completed"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxtc(&mut self) -> RXTC_W<EPT3_SPEC> {
+    pub fn rxtc(&mut self) -> RXTC_W<'_, EPT3_SPEC> {
         RXTC_W::new(self, 15)
     }
 }
@@ -182,10 +172,6 @@ impl crate::Readable for EPT3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ept3::W`](W) writer structure"]
 impl crate::Writable for EPT3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EPT3 to value 0"]
-impl crate::Resettable for EPT3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EPT3_SPEC {}

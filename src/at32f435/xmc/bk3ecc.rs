@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - ECC result"]
     #[inline(always)]
-    #[must_use]
-    pub fn ecc(&mut self) -> ECC_W<BK3ECC_SPEC> {
+    pub fn ecc(&mut self) -> ECC_W<'_, BK3ECC_SPEC> {
         ECC_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for BK3ECC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk3ecc::W`](W) writer structure"]
 impl crate::Writable for BK3ECC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK3ECC to value 0"]
-impl crate::Resettable for BK3ECC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BK3ECC_SPEC {}

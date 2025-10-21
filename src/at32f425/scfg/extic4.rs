@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - EXTINT 12 configuration bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn extint12(&mut self) -> EXTINT12_W<EXTIC4_SPEC> {
+    pub fn extint12(&mut self) -> EXTINT12_W<'_, EXTIC4_SPEC> {
         EXTINT12_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - EXTINT 13 configuration bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn extint13(&mut self) -> EXTINT13_W<EXTIC4_SPEC> {
+    pub fn extint13(&mut self) -> EXTINT13_W<'_, EXTIC4_SPEC> {
         EXTINT13_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - EXTINT 14 configuration bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn extint14(&mut self) -> EXTINT14_W<EXTIC4_SPEC> {
+    pub fn extint14(&mut self) -> EXTINT14_W<'_, EXTIC4_SPEC> {
         EXTINT14_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - EXTINT 15 configuration bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn extint15(&mut self) -> EXTINT15_W<EXTIC4_SPEC> {
+    pub fn extint15(&mut self) -> EXTINT15_W<'_, EXTIC4_SPEC> {
         EXTINT15_W::new(self, 12)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for EXTIC4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`extic4::W`](W) writer structure"]
 impl crate::Writable for EXTIC4_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXTIC4 to value 0"]
-impl crate::Resettable for EXTIC4_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EXTIC4_SPEC {}

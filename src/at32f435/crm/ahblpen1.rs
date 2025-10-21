@@ -213,122 +213,102 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - IO A clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioalp(&mut self) -> GPIOALP_W<AHBLPEN1_SPEC> {
+    pub fn gpioalp(&mut self) -> GPIOALP_W<'_, AHBLPEN1_SPEC> {
         GPIOALP_W::new(self, 0)
     }
     #[doc = "Bit 1 - IO B clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioblp(&mut self) -> GPIOBLP_W<AHBLPEN1_SPEC> {
+    pub fn gpioblp(&mut self) -> GPIOBLP_W<'_, AHBLPEN1_SPEC> {
         GPIOBLP_W::new(self, 1)
     }
     #[doc = "Bit 2 - IO C clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioclp(&mut self) -> GPIOCLP_W<AHBLPEN1_SPEC> {
+    pub fn gpioclp(&mut self) -> GPIOCLP_W<'_, AHBLPEN1_SPEC> {
         GPIOCLP_W::new(self, 2)
     }
     #[doc = "Bit 3 - IO D clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiodlp(&mut self) -> GPIODLP_W<AHBLPEN1_SPEC> {
+    pub fn gpiodlp(&mut self) -> GPIODLP_W<'_, AHBLPEN1_SPEC> {
         GPIODLP_W::new(self, 3)
     }
     #[doc = "Bit 4 - IO E clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioelp(&mut self) -> GPIOELP_W<AHBLPEN1_SPEC> {
+    pub fn gpioelp(&mut self) -> GPIOELP_W<'_, AHBLPEN1_SPEC> {
         GPIOELP_W::new(self, 4)
     }
     #[doc = "Bit 5 - IO F clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioflp(&mut self) -> GPIOFLP_W<AHBLPEN1_SPEC> {
+    pub fn gpioflp(&mut self) -> GPIOFLP_W<'_, AHBLPEN1_SPEC> {
         GPIOFLP_W::new(self, 5)
     }
     #[doc = "Bit 6 - IO G clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioglp(&mut self) -> GPIOGLP_W<AHBLPEN1_SPEC> {
+    pub fn gpioglp(&mut self) -> GPIOGLP_W<'_, AHBLPEN1_SPEC> {
         GPIOGLP_W::new(self, 6)
     }
     #[doc = "Bit 7 - IO H clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiohlp(&mut self) -> GPIOHLP_W<AHBLPEN1_SPEC> {
+    pub fn gpiohlp(&mut self) -> GPIOHLP_W<'_, AHBLPEN1_SPEC> {
         GPIOHLP_W::new(self, 7)
     }
     #[doc = "Bit 12 - CRC clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn crclp(&mut self) -> CRCLP_W<AHBLPEN1_SPEC> {
+    pub fn crclp(&mut self) -> CRCLP_W<'_, AHBLPEN1_SPEC> {
         CRCLP_W::new(self, 12)
     }
     #[doc = "Bit 15 - Flash clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn flashlp(&mut self) -> FLASHLP_W<AHBLPEN1_SPEC> {
+    pub fn flashlp(&mut self) -> FLASHLP_W<'_, AHBLPEN1_SPEC> {
         FLASHLP_W::new(self, 15)
     }
     #[doc = "Bit 16 - SRAM1 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn sram1lp(&mut self) -> SRAM1LP_W<AHBLPEN1_SPEC> {
+    pub fn sram1lp(&mut self) -> SRAM1LP_W<'_, AHBLPEN1_SPEC> {
         SRAM1LP_W::new(self, 16)
     }
     #[doc = "Bit 17 - SRAM2 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn sram2lp(&mut self) -> SRAM2LP_W<AHBLPEN1_SPEC> {
+    pub fn sram2lp(&mut self) -> SRAM2LP_W<'_, AHBLPEN1_SPEC> {
         SRAM2LP_W::new(self, 17)
     }
     #[doc = "Bit 21 - EDMA clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn edmalp(&mut self) -> EDMALP_W<AHBLPEN1_SPEC> {
+    pub fn edmalp(&mut self) -> EDMALP_W<'_, AHBLPEN1_SPEC> {
         EDMALP_W::new(self, 21)
     }
     #[doc = "Bit 22 - DMA1 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn dma1lp(&mut self) -> DMA1LP_W<AHBLPEN1_SPEC> {
+    pub fn dma1lp(&mut self) -> DMA1LP_W<'_, AHBLPEN1_SPEC> {
         DMA1LP_W::new(self, 22)
     }
     #[doc = "Bit 24 - DMA2 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn dma2lp(&mut self) -> DMA2LP_W<AHBLPEN1_SPEC> {
+    pub fn dma2lp(&mut self) -> DMA2LP_W<'_, AHBLPEN1_SPEC> {
         DMA2LP_W::new(self, 24)
     }
     #[doc = "Bit 25 - EMAC clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn emaclp(&mut self) -> EMACLP_W<AHBLPEN1_SPEC> {
+    pub fn emaclp(&mut self) -> EMACLP_W<'_, AHBLPEN1_SPEC> {
         EMACLP_W::new(self, 25)
     }
     #[doc = "Bit 26 - EMAC Tx clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn emactxlp(&mut self) -> EMACTXLP_W<AHBLPEN1_SPEC> {
+    pub fn emactxlp(&mut self) -> EMACTXLP_W<'_, AHBLPEN1_SPEC> {
         EMACTXLP_W::new(self, 26)
     }
     #[doc = "Bit 27 - EMAC Rx clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn emacrxlp(&mut self) -> EMACRXLP_W<AHBLPEN1_SPEC> {
+    pub fn emacrxlp(&mut self) -> EMACRXLP_W<'_, AHBLPEN1_SPEC> {
         EMACRXLP_W::new(self, 27)
     }
     #[doc = "Bit 28 - EMAC PTP clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn emacptplp(&mut self) -> EMACPTPLP_W<AHBLPEN1_SPEC> {
+    pub fn emacptplp(&mut self) -> EMACPTPLP_W<'_, AHBLPEN1_SPEC> {
         EMACPTPLP_W::new(self, 28)
     }
     #[doc = "Bit 29 - OTGFS2 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn otgfs2lp(&mut self) -> OTGFS2LP_W<AHBLPEN1_SPEC> {
+    pub fn otgfs2lp(&mut self) -> OTGFS2LP_W<'_, AHBLPEN1_SPEC> {
         OTGFS2LP_W::new(self, 29)
     }
 }
@@ -342,8 +322,6 @@ impl crate::Readable for AHBLPEN1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahblpen1::W`](W) writer structure"]
 impl crate::Writable for AHBLPEN1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBLPEN1 to value 0x3e63_90ff"]
 impl crate::Resettable for AHBLPEN1_SPEC {

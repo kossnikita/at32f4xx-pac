@@ -31,8 +31,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - Flash non-zero wait area boost"]
     #[inline(always)]
-    #[must_use]
-    pub fn nzw_bst(&mut self) -> NZW_BST_W<PSR_SPEC> {
+    pub fn nzw_bst(&mut self) -> NZW_BST_W<'_, PSR_SPEC> {
         NZW_BST_W::new(self, 12)
     }
 }
@@ -46,8 +45,6 @@ impl crate::Readable for PSR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`psr::W`](W) writer structure"]
 impl crate::Writable for PSR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PSR to value 0x0330"]
 impl crate::Resettable for PSR_SPEC {

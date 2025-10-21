@@ -71,32 +71,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Low speed external crystal enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn lexten(&mut self) -> LEXTEN_W<BPDC_SPEC> {
+    pub fn lexten(&mut self) -> LEXTEN_W<'_, BPDC_SPEC> {
         LEXTEN_W::new(self, 0)
     }
     #[doc = "Bit 2 - Low speed external crystal bypass"]
     #[inline(always)]
-    #[must_use]
-    pub fn lextbyps(&mut self) -> LEXTBYPS_W<BPDC_SPEC> {
+    pub fn lextbyps(&mut self) -> LEXTBYPS_W<'_, BPDC_SPEC> {
         LEXTBYPS_W::new(self, 2)
     }
     #[doc = "Bits 8:9 - ERTC clock source selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn ertcsel(&mut self) -> ERTCSEL_W<BPDC_SPEC> {
+    pub fn ertcsel(&mut self) -> ERTCSEL_W<'_, BPDC_SPEC> {
         ERTCSEL_W::new(self, 8)
     }
     #[doc = "Bit 15 - ERTC clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ertcen(&mut self) -> ERTCEN_W<BPDC_SPEC> {
+    pub fn ertcen(&mut self) -> ERTCEN_W<'_, BPDC_SPEC> {
         ERTCEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Battery powered domain software reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn bpdrst(&mut self) -> BPDRST_W<BPDC_SPEC> {
+    pub fn bpdrst(&mut self) -> BPDRST_W<'_, BPDC_SPEC> {
         BPDRST_W::new(self, 16)
     }
 }
@@ -110,10 +105,6 @@ impl crate::Readable for BPDC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bpdc::W`](W) writer structure"]
 impl crate::Writable for BPDC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BPDC to value 0"]
-impl crate::Resettable for BPDC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BPDC_SPEC {}

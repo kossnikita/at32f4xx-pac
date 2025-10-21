@@ -846,44 +846,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Subordinate TMR mode selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn smsel(&mut self) -> SMSEL_W<STCTRL_SPEC> {
+    pub fn smsel(&mut self) -> SMSEL_W<'_, STCTRL_SPEC> {
         SMSEL_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Subordinate TMR input selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn stis(&mut self) -> STIS_W<STCTRL_SPEC> {
+    pub fn stis(&mut self) -> STIS_W<'_, STCTRL_SPEC> {
         STIS_W::new(self, 4)
     }
     #[doc = "Bit 7 - Subordinate TMR synchronization"]
     #[inline(always)]
-    #[must_use]
-    pub fn sts(&mut self) -> STS_W<STCTRL_SPEC> {
+    pub fn sts(&mut self) -> STS_W<'_, STCTRL_SPEC> {
         STS_W::new(self, 7)
     }
     #[doc = "Bits 8:11 - External signal filter"]
     #[inline(always)]
-    #[must_use]
-    pub fn esf(&mut self) -> ESF_W<STCTRL_SPEC> {
+    pub fn esf(&mut self) -> ESF_W<'_, STCTRL_SPEC> {
         ESF_W::new(self, 8)
     }
     #[doc = "Bits 12:13 - External signal divider"]
     #[inline(always)]
-    #[must_use]
-    pub fn esdiv(&mut self) -> ESDIV_W<STCTRL_SPEC> {
+    pub fn esdiv(&mut self) -> ESDIV_W<'_, STCTRL_SPEC> {
         ESDIV_W::new(self, 12)
     }
     #[doc = "Bit 14 - External clock mode B enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ecmben(&mut self) -> ECMBEN_W<STCTRL_SPEC> {
+    pub fn ecmben(&mut self) -> ECMBEN_W<'_, STCTRL_SPEC> {
         ECMBEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - External signal polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn esp(&mut self) -> ESP_W<STCTRL_SPEC> {
+    pub fn esp(&mut self) -> ESP_W<'_, STCTRL_SPEC> {
         ESP_W::new(self, 15)
     }
 }
@@ -897,10 +890,6 @@ impl crate::Readable for STCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`stctrl::W`](W) writer structure"]
 impl crate::Writable for STCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STCTRL to value 0"]
-impl crate::Resettable for STCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for STCTRL_SPEC {}

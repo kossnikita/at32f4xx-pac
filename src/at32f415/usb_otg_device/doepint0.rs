@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn xferc(&mut self) -> XFERC_W<DOEPINT0_SPEC> {
+    pub fn xferc(&mut self) -> XFERC_W<'_, DOEPINT0_SPEC> {
         XFERC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdisd(&mut self) -> EPTDISD_W<DOEPINT0_SPEC> {
+    pub fn eptdisd(&mut self) -> EPTDISD_W<'_, DOEPINT0_SPEC> {
         EPTDISD_W::new(self, 1)
     }
     #[doc = "Bit 3 - SETUP phase done"]
     #[inline(always)]
-    #[must_use]
-    pub fn setup(&mut self) -> SETUP_W<DOEPINT0_SPEC> {
+    pub fn setup(&mut self) -> SETUP_W<'_, DOEPINT0_SPEC> {
         SETUP_W::new(self, 3)
     }
     #[doc = "Bit 4 - OUT token received when endpoint disabled"]
     #[inline(always)]
-    #[must_use]
-    pub fn outtepd(&mut self) -> OUTTEPD_W<DOEPINT0_SPEC> {
+    pub fn outtepd(&mut self) -> OUTTEPD_W<'_, DOEPINT0_SPEC> {
         OUTTEPD_W::new(self, 4)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets received"]
     #[inline(always)]
-    #[must_use]
-    pub fn b2bstup(&mut self) -> B2BSTUP_W<DOEPINT0_SPEC> {
+    pub fn b2bstup(&mut self) -> B2BSTUP_W<'_, DOEPINT0_SPEC> {
         B2BSTUP_W::new(self, 6)
     }
 }
@@ -102,8 +97,6 @@ impl crate::Readable for DOEPINT0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doepint0::W`](W) writer structure"]
 impl crate::Writable for DOEPINT0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DOEPINT0 to value 0x80"]
 impl crate::Resettable for DOEPINT0_SPEC {

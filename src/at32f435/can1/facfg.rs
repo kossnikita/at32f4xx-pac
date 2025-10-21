@@ -265,178 +265,149 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `EN0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn en(&mut self, n: u8) -> EN_W<FACFG_SPEC> {
+    pub fn en(&mut self, n: u8) -> EN_W<'_, FACFG_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 28][n as usize];
         EN_W::new(self, n)
     }
     #[doc = "Bit 0 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en0(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en0(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en1(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en1(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en2(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en2(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en3(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en3(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en4(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en4(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en5(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en5(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en6(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en6(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en7(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en7(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en8(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en8(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en9(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en9(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en10(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en10(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en11(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en11(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en12(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en12(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en13(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en13(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en14(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en14(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en15(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en15(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en16(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en16(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en17(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en17(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en18(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en18(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en19(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en19(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en20(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en20(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en21(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en21(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en22(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en22(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en23(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en23(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en24(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en24(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en25(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en25(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en26(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en26(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Filter activate enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en27(&mut self) -> EN_W<FACFG_SPEC> {
+    pub fn en27(&mut self) -> EN_W<'_, FACFG_SPEC> {
         EN_W::new(self, 27)
     }
 }
@@ -450,10 +421,6 @@ impl crate::Readable for FACFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`facfg::W`](W) writer structure"]
 impl crate::Writable for FACFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FACFG to value 0"]
-impl crate::Resettable for FACFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FACFG_SPEC {}

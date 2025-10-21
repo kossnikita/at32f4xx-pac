@@ -183,104 +183,87 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Timestamp enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn te(&mut self) -> TE_W<PTPTSCTRL_SPEC> {
+    pub fn te(&mut self) -> TE_W<'_, PTPTSCTRL_SPEC> {
         TE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Timestamp fine or coarse update"]
     #[inline(always)]
-    #[must_use]
-    pub fn tfcu(&mut self) -> TFCU_W<PTPTSCTRL_SPEC> {
+    pub fn tfcu(&mut self) -> TFCU_W<'_, PTPTSCTRL_SPEC> {
         TFCU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Timestamp initialize"]
     #[inline(always)]
-    #[must_use]
-    pub fn ti(&mut self) -> TI_W<PTPTSCTRL_SPEC> {
+    pub fn ti(&mut self) -> TI_W<'_, PTPTSCTRL_SPEC> {
         TI_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timestamp update"]
     #[inline(always)]
-    #[must_use]
-    pub fn tu(&mut self) -> TU_W<PTPTSCTRL_SPEC> {
+    pub fn tu(&mut self) -> TU_W<'_, PTPTSCTRL_SPEC> {
         TU_W::new(self, 3)
     }
     #[doc = "Bit 4 - Timestamp interrupt trigger enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tite(&mut self) -> TITE_W<PTPTSCTRL_SPEC> {
+    pub fn tite(&mut self) -> TITE_W<'_, PTPTSCTRL_SPEC> {
         TITE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Addend register update"]
     #[inline(always)]
-    #[must_use]
-    pub fn aru(&mut self) -> ARU_W<PTPTSCTRL_SPEC> {
+    pub fn aru(&mut self) -> ARU_W<'_, PTPTSCTRL_SPEC> {
         ARU_W::new(self, 5)
     }
     #[doc = "Bit 7 - Alternate dma descriptor size"]
     #[inline(always)]
-    #[must_use]
-    pub fn atds(&mut self) -> ATDS_W<PTPTSCTRL_SPEC> {
+    pub fn atds(&mut self) -> ATDS_W<'_, PTPTSCTRL_SPEC> {
         ATDS_W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable timestamp for all frames"]
     #[inline(always)]
-    #[must_use]
-    pub fn etaf(&mut self) -> ETAF_W<PTPTSCTRL_SPEC> {
+    pub fn etaf(&mut self) -> ETAF_W<'_, PTPTSCTRL_SPEC> {
         ETAF_W::new(self, 8)
     }
     #[doc = "Bit 9 - Timestamp digital or binary rollover control"]
     #[inline(always)]
-    #[must_use]
-    pub fn tdbrc(&mut self) -> TDBRC_W<PTPTSCTRL_SPEC> {
+    pub fn tdbrc(&mut self) -> TDBRC_W<'_, PTPTSCTRL_SPEC> {
         TDBRC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Enable PTP packet processing for version2 format"]
     #[inline(always)]
-    #[must_use]
-    pub fn eppv2f(&mut self) -> EPPV2F_W<PTPTSCTRL_SPEC> {
+    pub fn eppv2f(&mut self) -> EPPV2F_W<'_, PTPTSCTRL_SPEC> {
         EPPV2F_W::new(self, 10)
     }
     #[doc = "Bit 11 - Enable processing of PTP over EMAC frames"]
     #[inline(always)]
-    #[must_use]
-    pub fn eppef(&mut self) -> EPPEF_W<PTPTSCTRL_SPEC> {
+    pub fn eppef(&mut self) -> EPPEF_W<'_, PTPTSCTRL_SPEC> {
         EPPEF_W::new(self, 11)
     }
     #[doc = "Bit 12 - Enable processing of PTP frames sent over IPv6-UDP"]
     #[inline(always)]
-    #[must_use]
-    pub fn eppfsip6u(&mut self) -> EPPFSIP6U_W<PTPTSCTRL_SPEC> {
+    pub fn eppfsip6u(&mut self) -> EPPFSIP6U_W<'_, PTPTSCTRL_SPEC> {
         EPPFSIP6U_W::new(self, 12)
     }
     #[doc = "Bit 13 - Enable processing of PTP frames sent over IPv4-UDP"]
     #[inline(always)]
-    #[must_use]
-    pub fn eppfsip4u(&mut self) -> EPPFSIP4U_W<PTPTSCTRL_SPEC> {
+    pub fn eppfsip4u(&mut self) -> EPPFSIP4U_W<'_, PTPTSCTRL_SPEC> {
         EPPFSIP4U_W::new(self, 13)
     }
     #[doc = "Bit 14 - Enable timestamp snapshot for event message"]
     #[inline(always)]
-    #[must_use]
-    pub fn etsfem(&mut self) -> ETSFEM_W<PTPTSCTRL_SPEC> {
+    pub fn etsfem(&mut self) -> ETSFEM_W<'_, PTPTSCTRL_SPEC> {
         ETSFEM_W::new(self, 14)
     }
     #[doc = "Bit 15 - Enable snapshot for message relevant to master"]
     #[inline(always)]
-    #[must_use]
-    pub fn esfmrtm(&mut self) -> ESFMRTM_W<PTPTSCTRL_SPEC> {
+    pub fn esfmrtm(&mut self) -> ESFMRTM_W<'_, PTPTSCTRL_SPEC> {
         ESFMRTM_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - Select PTP packet for taking snapshot"]
     #[inline(always)]
-    #[must_use]
-    pub fn sppfts(&mut self) -> SPPFTS_W<PTPTSCTRL_SPEC> {
+    pub fn sppfts(&mut self) -> SPPFTS_W<'_, PTPTSCTRL_SPEC> {
         SPPFTS_W::new(self, 16)
     }
     #[doc = "Bit 18 - Enable MAC address for PTP frame filtering"]
     #[inline(always)]
-    #[must_use]
-    pub fn emafpff(&mut self) -> EMAFPFF_W<PTPTSCTRL_SPEC> {
+    pub fn emafpff(&mut self) -> EMAFPFF_W<'_, PTPTSCTRL_SPEC> {
         EMAFPFF_W::new(self, 18)
     }
 }
@@ -294,8 +277,6 @@ impl crate::Readable for PTPTSCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ptptsctrl::W`](W) writer structure"]
 impl crate::Writable for PTPTSCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PTPTSCTRL to value 0x2000"]
 impl crate::Resettable for PTPTSCTRL_SPEC {

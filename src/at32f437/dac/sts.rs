@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 13 - DAC1 DMA underrun flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaudr1(&mut self) -> DMAUDR1_W<STS_SPEC> {
+    pub fn dmaudr1(&mut self) -> DMAUDR1_W<'_, STS_SPEC> {
         DMAUDR1_W::new(self, 13)
     }
     #[doc = "Bit 29 - DAC2 DMA underrun flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaudr2(&mut self) -> DMAUDR2_W<STS_SPEC> {
+    pub fn dmaudr2(&mut self) -> DMAUDR2_W<'_, STS_SPEC> {
         DMAUDR2_W::new(self, 29)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for STS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts::W`](W) writer structure"]
 impl crate::Writable for STS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0"]
-impl crate::Resettable for STS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for STS_SPEC {}

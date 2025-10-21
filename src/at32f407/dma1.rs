@@ -21,6 +21,8 @@ impl RegisterBlock {
         &self.clr
     }
     #[doc = "0x08..0x94 - DMA Channel %s"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of cluster in the array. `n == 0` corresponds to `Channel1` cluster.</div>"]
     #[inline(always)]
     pub const fn channel(&self, n: usize) -> &Channel {
         &self.channel[n]
@@ -77,13 +79,11 @@ impl RegisterBlock {
         &self.dma_src_sel1
     }
 }
-#[doc = "STS (r) register accessor: DMA interrupt status register (DMA_STS)\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sts`]
-module"]
+#[doc = "STS (r) register accessor: DMA interrupt status register (DMA_STS)\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sts`] module"]
 pub type STS = crate::Reg<sts::STS_SPEC>;
 #[doc = "DMA interrupt status register (DMA_STS)"]
 pub mod sts;
-#[doc = "CLR (rw) register accessor: DMA interrupt flag clear register (DMA_CLR)\n\nYou can [`read`](crate::Reg::read) this register and get [`clr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clr`]
-module"]
+#[doc = "CLR (rw) register accessor: DMA interrupt flag clear register (DMA_CLR)\n\nYou can [`read`](crate::Reg::read) this register and get [`clr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clr`] module"]
 pub type CLR = crate::Reg<clr::CLR_SPEC>;
 #[doc = "DMA interrupt flag clear register (DMA_CLR)"]
 pub mod clr;
@@ -92,13 +92,11 @@ pub use self::channel::Channel;
 #[doc = r"Cluster"]
 #[doc = "DMA Channel %s"]
 pub mod channel;
-#[doc = "DMA_SRC_SEL0 (rw) register accessor: DMA channel source assignment register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_src_sel0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_src_sel0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_src_sel0`]
-module"]
+#[doc = "DMA_SRC_SEL0 (rw) register accessor: DMA channel source assignment register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_src_sel0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_src_sel0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_src_sel0`] module"]
 pub type DMA_SRC_SEL0 = crate::Reg<dma_src_sel0::DMA_SRC_SEL0_SPEC>;
 #[doc = "DMA channel source assignment register"]
 pub mod dma_src_sel0;
-#[doc = "DMA_SRC_SEL1 (rw) register accessor: DMA channel source assignment register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_src_sel1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_src_sel1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_src_sel1`]
-module"]
+#[doc = "DMA_SRC_SEL1 (rw) register accessor: DMA channel source assignment register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_src_sel1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_src_sel1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_src_sel1`] module"]
 pub type DMA_SRC_SEL1 = crate::Reg<dma_src_sel1::DMA_SRC_SEL1_SPEC>;
 #[doc = "DMA channel source assignment register"]
 pub mod dma_src_sel1;

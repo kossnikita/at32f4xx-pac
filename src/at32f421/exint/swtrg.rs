@@ -218,130 +218,109 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SWT0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt(&mut self, n: u8) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt(&mut self, n: u8) -> SWT_W<'_, SWTRG_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 18][n as usize];
         SWT_W::new(self, n)
     }
     #[doc = "Bit 0 - Software trigger on line 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt0(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt0(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Software trigger on line 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt1(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt1(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Software trigger on line 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt2(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt2(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Software trigger on line 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt3(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt3(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Software trigger on line 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt4(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt4(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 4)
     }
     #[doc = "Bit 5 - Software trigger on line 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt5(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt5(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 5)
     }
     #[doc = "Bit 6 - Software trigger on line 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt6(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt6(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Software trigger on line 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt7(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt7(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Software trigger on line 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt8(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt8(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Software trigger on line 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt9(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt9(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Software trigger on line 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt10(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt10(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 10)
     }
     #[doc = "Bit 11 - Software trigger on line 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt11(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt11(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 11)
     }
     #[doc = "Bit 12 - Software trigger on line 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt12(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt12(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 12)
     }
     #[doc = "Bit 13 - Software trigger on line 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt13(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt13(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 13)
     }
     #[doc = "Bit 14 - Software trigger on line 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt14(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt14(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 14)
     }
     #[doc = "Bit 15 - Software trigger on line 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt15(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt15(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 15)
     }
     #[doc = "Bit 16 - Software trigger on line 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt16(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt16(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 16)
     }
     #[doc = "Bit 17 - Software trigger on line 17"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt17(&mut self) -> SWT_W<SWTRG_SPEC> {
+    pub fn swt17(&mut self) -> SWT_W<'_, SWTRG_SPEC> {
         SWT_W::new(self, 17)
     }
     #[doc = "Bit 19 - Software triggle on line 19"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt19(&mut self) -> SWT19_W<SWTRG_SPEC> {
+    pub fn swt19(&mut self) -> SWT19_W<'_, SWTRG_SPEC> {
         SWT19_W::new(self, 19)
     }
     #[doc = "Bit 21 - Software triggle on line 21"]
     #[inline(always)]
-    #[must_use]
-    pub fn swt21(&mut self) -> SWT21_W<SWTRG_SPEC> {
+    pub fn swt21(&mut self) -> SWT21_W<'_, SWTRG_SPEC> {
         SWT21_W::new(self, 21)
     }
 }
@@ -355,10 +334,7 @@ impl crate::Readable for SWTRG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swtrg::W`](W) writer structure"]
 impl crate::Writable for SWTRG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0028_0001;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x002b_ffff;
 }
 #[doc = "`reset()` method sets SWTRG to value 0"]
-impl crate::Resettable for SWTRG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SWTRG_SPEC {}

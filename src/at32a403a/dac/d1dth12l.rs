@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:15 - DAC1 12-bit left-aligned data"]
     #[inline(always)]
-    #[must_use]
-    pub fn d1dt12l(&mut self) -> D1DT12L_W<D1DTH12L_SPEC> {
+    pub fn d1dt12l(&mut self) -> D1DT12L_W<'_, D1DTH12L_SPEC> {
         D1DT12L_W::new(self, 4)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for D1DTH12L_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`d1dth12l::W`](W) writer structure"]
 impl crate::Writable for D1DTH12L_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets D1DTH12L to value 0"]
-impl crate::Resettable for D1DTH12L_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for D1DTH12L_SPEC {}

@@ -103,56 +103,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - DTEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn tfren(&mut self) -> TFREN_W<DTCTRL_SPEC> {
+    pub fn tfren(&mut self) -> TFREN_W<'_, DTCTRL_SPEC> {
         TFREN_W::new(self, 0)
     }
     #[doc = "Bit 1 - DTDIR"]
     #[inline(always)]
-    #[must_use]
-    pub fn tfrdir(&mut self) -> TFRDIR_W<DTCTRL_SPEC> {
+    pub fn tfrdir(&mut self) -> TFRDIR_W<'_, DTCTRL_SPEC> {
         TFRDIR_W::new(self, 1)
     }
     #[doc = "Bit 2 - DTMODE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tfrmode(&mut self) -> TFRMODE_W<DTCTRL_SPEC> {
+    pub fn tfrmode(&mut self) -> TFRMODE_W<'_, DTCTRL_SPEC> {
         TFRMODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - DMAEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaen(&mut self) -> DMAEN_W<DTCTRL_SPEC> {
+    pub fn dmaen(&mut self) -> DMAEN_W<'_, DTCTRL_SPEC> {
         DMAEN_W::new(self, 3)
     }
     #[doc = "Bits 4:7 - DBLOCKSIZE"]
     #[inline(always)]
-    #[must_use]
-    pub fn blksize(&mut self) -> BLKSIZE_W<DTCTRL_SPEC> {
+    pub fn blksize(&mut self) -> BLKSIZE_W<'_, DTCTRL_SPEC> {
         BLKSIZE_W::new(self, 4)
     }
     #[doc = "Bit 8 - PWSTART"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdwtstart(&mut self) -> RDWTSTART_W<DTCTRL_SPEC> {
+    pub fn rdwtstart(&mut self) -> RDWTSTART_W<'_, DTCTRL_SPEC> {
         RDWTSTART_W::new(self, 8)
     }
     #[doc = "Bit 9 - PWSTOP"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdwtstop(&mut self) -> RDWTSTOP_W<DTCTRL_SPEC> {
+    pub fn rdwtstop(&mut self) -> RDWTSTOP_W<'_, DTCTRL_SPEC> {
         RDWTSTOP_W::new(self, 9)
     }
     #[doc = "Bit 10 - RWMOD"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdwtmode(&mut self) -> RDWTMODE_W<DTCTRL_SPEC> {
+    pub fn rdwtmode(&mut self) -> RDWTMODE_W<'_, DTCTRL_SPEC> {
         RDWTMODE_W::new(self, 10)
     }
     #[doc = "Bit 11 - SDIOEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdioen(&mut self) -> SDIOEN_W<DTCTRL_SPEC> {
+    pub fn sdioen(&mut self) -> SDIOEN_W<'_, DTCTRL_SPEC> {
         SDIOEN_W::new(self, 11)
     }
 }
@@ -166,10 +157,6 @@ impl crate::Readable for DTCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dtctrl::W`](W) writer structure"]
 impl crate::Writable for DTCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DTCTRL to value 0"]
-impl crate::Resettable for DTCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DTCTRL_SPEC {}

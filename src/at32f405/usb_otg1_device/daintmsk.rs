@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - IN EP interrupt mask bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn ineptmsk(&mut self) -> INEPTMSK_W<DAINTMSK_SPEC> {
+    pub fn ineptmsk(&mut self) -> INEPTMSK_W<'_, DAINTMSK_SPEC> {
         INEPTMSK_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - OUT endpoint interrupt bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn outeptmsk(&mut self) -> OUTEPTMSK_W<DAINTMSK_SPEC> {
+    pub fn outeptmsk(&mut self) -> OUTEPTMSK_W<'_, DAINTMSK_SPEC> {
         OUTEPTMSK_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for DAINTMSK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`daintmsk::W`](W) writer structure"]
 impl crate::Writable for DAINTMSK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DAINTMSK to value 0"]
-impl crate::Resettable for DAINTMSK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DAINTMSK_SPEC {}

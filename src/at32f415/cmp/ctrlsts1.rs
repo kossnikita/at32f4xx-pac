@@ -189,98 +189,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Comparator1 enable bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp1en(&mut self) -> CMP1EN_W<CTRLSTS1_SPEC> {
+    pub fn cmp1en(&mut self) -> CMP1EN_W<'_, CTRLSTS1_SPEC> {
         CMP1EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Comparator1 input shift"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp1is(&mut self) -> CMP1IS_W<CTRLSTS1_SPEC> {
+    pub fn cmp1is(&mut self) -> CMP1IS_W<'_, CTRLSTS1_SPEC> {
         CMP1IS_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Comparator1 speed selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp1ssel(&mut self) -> CMP1SSEL_W<CTRLSTS1_SPEC> {
+    pub fn cmp1ssel(&mut self) -> CMP1SSEL_W<'_, CTRLSTS1_SPEC> {
         CMP1SSEL_W::new(self, 2)
     }
     #[doc = "Bits 4:6 - Comparator1 inverting selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp1invsel(&mut self) -> CMP1INVSEL_W<CTRLSTS1_SPEC> {
+    pub fn cmp1invsel(&mut self) -> CMP1INVSEL_W<'_, CTRLSTS1_SPEC> {
         CMP1INVSEL_W::new(self, 4)
     }
     #[doc = "Bits 8:10 - Comparator1 output target"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp1tag(&mut self) -> CMP1TAG_W<CTRLSTS1_SPEC> {
+    pub fn cmp1tag(&mut self) -> CMP1TAG_W<'_, CTRLSTS1_SPEC> {
         CMP1TAG_W::new(self, 8)
     }
     #[doc = "Bit 11 - Comparator1 polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp1p(&mut self) -> CMP1P_W<CTRLSTS1_SPEC> {
+    pub fn cmp1p(&mut self) -> CMP1P_W<'_, CTRLSTS1_SPEC> {
         CMP1P_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Comparator1 hysteresis"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp1hyst(&mut self) -> CMP1HYST_W<CTRLSTS1_SPEC> {
+    pub fn cmp1hyst(&mut self) -> CMP1HYST_W<'_, CTRLSTS1_SPEC> {
         CMP1HYST_W::new(self, 12)
     }
     #[doc = "Bit 15 - Comparator1 write protect"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp1wp(&mut self) -> CMP1WP_W<CTRLSTS1_SPEC> {
+    pub fn cmp1wp(&mut self) -> CMP1WP_W<'_, CTRLSTS1_SPEC> {
         CMP1WP_W::new(self, 15)
     }
     #[doc = "Bit 16 - Comparator2 enable bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp2en(&mut self) -> CMP2EN_W<CTRLSTS1_SPEC> {
+    pub fn cmp2en(&mut self) -> CMP2EN_W<'_, CTRLSTS1_SPEC> {
         CMP2EN_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - Comparator2 speed selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp2ssel(&mut self) -> CMP2SSEL_W<CTRLSTS1_SPEC> {
+    pub fn cmp2ssel(&mut self) -> CMP2SSEL_W<'_, CTRLSTS1_SPEC> {
         CMP2SSEL_W::new(self, 18)
     }
     #[doc = "Bits 20:22 - Comparator2 inverting selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp2invsel(&mut self) -> CMP2INVSEL_W<CTRLSTS1_SPEC> {
+    pub fn cmp2invsel(&mut self) -> CMP2INVSEL_W<'_, CTRLSTS1_SPEC> {
         CMP2INVSEL_W::new(self, 20)
     }
     #[doc = "Bit 23 - Double comparator mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dcmpen(&mut self) -> DCMPEN_W<CTRLSTS1_SPEC> {
+    pub fn dcmpen(&mut self) -> DCMPEN_W<'_, CTRLSTS1_SPEC> {
         DCMPEN_W::new(self, 23)
     }
     #[doc = "Bits 24:26 - Comparator2 output target"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp2tag(&mut self) -> CMP2TAG_W<CTRLSTS1_SPEC> {
+    pub fn cmp2tag(&mut self) -> CMP2TAG_W<'_, CTRLSTS1_SPEC> {
         CMP2TAG_W::new(self, 24)
     }
     #[doc = "Bit 27 - Comparator2 polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp2p(&mut self) -> CMP2P_W<CTRLSTS1_SPEC> {
+    pub fn cmp2p(&mut self) -> CMP2P_W<'_, CTRLSTS1_SPEC> {
         CMP2P_W::new(self, 27)
     }
     #[doc = "Bits 28:29 - Comparator2 hysteresis"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp2hyst(&mut self) -> CMP2HYST_W<CTRLSTS1_SPEC> {
+    pub fn cmp2hyst(&mut self) -> CMP2HYST_W<'_, CTRLSTS1_SPEC> {
         CMP2HYST_W::new(self, 28)
     }
     #[doc = "Bit 31 - Comparator2 write protect"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmp2wp(&mut self) -> CMP2WP_W<CTRLSTS1_SPEC> {
+    pub fn cmp2wp(&mut self) -> CMP2WP_W<'_, CTRLSTS1_SPEC> {
         CMP2WP_W::new(self, 31)
     }
 }
@@ -294,10 +278,6 @@ impl crate::Readable for CTRLSTS1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlsts1::W`](W) writer structure"]
 impl crate::Writable for CTRLSTS1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRLSTS1 to value 0"]
-impl crate::Resettable for CTRLSTS1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRLSTS1_SPEC {}

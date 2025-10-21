@@ -26,56 +26,47 @@ impl core::fmt::Debug for crate::generic::Reg<CLR_SPEC> {
 impl W {
     #[doc = "Bit 3 - Clear 0~7 bit address match flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn addrc(&mut self) -> ADDRC_W<CLR_SPEC> {
+    pub fn addrc(&mut self) -> ADDRC_W<'_, CLR_SPEC> {
         ADDRC_W::new(self, 3)
     }
     #[doc = "Bit 4 - Clear acknowledge failure flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ackfailc(&mut self) -> ACKFAILC_W<CLR_SPEC> {
+    pub fn ackfailc(&mut self) -> ACKFAILC_W<'_, CLR_SPEC> {
         ACKFAILC_W::new(self, 4)
     }
     #[doc = "Bit 5 - Clear stop condition generation complete flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn stopc(&mut self) -> STOPC_W<CLR_SPEC> {
+    pub fn stopc(&mut self) -> STOPC_W<'_, CLR_SPEC> {
         STOPC_W::new(self, 5)
     }
     #[doc = "Bit 8 - Clear bus error flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn buserrc(&mut self) -> BUSERRC_W<CLR_SPEC> {
+    pub fn buserrc(&mut self) -> BUSERRC_W<'_, CLR_SPEC> {
         BUSERRC_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clear arbitration lost flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn arlostc(&mut self) -> ARLOSTC_W<CLR_SPEC> {
+    pub fn arlostc(&mut self) -> ARLOSTC_W<'_, CLR_SPEC> {
         ARLOSTC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear overload / underload flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn oufc(&mut self) -> OUFC_W<CLR_SPEC> {
+    pub fn oufc(&mut self) -> OUFC_W<'_, CLR_SPEC> {
         OUFC_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clear PEC receive error flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn pecerrc(&mut self) -> PECERRC_W<CLR_SPEC> {
+    pub fn pecerrc(&mut self) -> PECERRC_W<'_, CLR_SPEC> {
         PECERRC_W::new(self, 11)
     }
     #[doc = "Bit 12 - Clear SMBus timeout flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmoutc(&mut self) -> TMOUTC_W<CLR_SPEC> {
+    pub fn tmoutc(&mut self) -> TMOUTC_W<'_, CLR_SPEC> {
         TMOUTC_W::new(self, 12)
     }
     #[doc = "Bit 13 - Clear SMBus alert flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn alertc(&mut self) -> ALERTC_W<CLR_SPEC> {
+    pub fn alertc(&mut self) -> ALERTC_W<'_, CLR_SPEC> {
         ALERTC_W::new(self, 13)
     }
 }
@@ -87,10 +78,6 @@ impl crate::RegisterSpec for CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`clr::W`](W) writer structure"]
 impl crate::Writable for CLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLR to value 0"]
-impl crate::Resettable for CLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLR_SPEC {}

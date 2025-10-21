@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - XMC clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn xmc(&mut self) -> XMC_W<AHBEN3_SPEC> {
+    pub fn xmc(&mut self) -> XMC_W<'_, AHBEN3_SPEC> {
         XMC_W::new(self, 0)
     }
     #[doc = "Bit 1 - QSPI1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn qspi1(&mut self) -> QSPI1_W<AHBEN3_SPEC> {
+    pub fn qspi1(&mut self) -> QSPI1_W<'_, AHBEN3_SPEC> {
         QSPI1_W::new(self, 1)
     }
     #[doc = "Bit 14 - QSPI2 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn qspi2(&mut self) -> QSPI2_W<AHBEN3_SPEC> {
+    pub fn qspi2(&mut self) -> QSPI2_W<'_, AHBEN3_SPEC> {
         QSPI2_W::new(self, 14)
     }
     #[doc = "Bit 15 - SDIO 2 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdio2(&mut self) -> SDIO2_W<AHBEN3_SPEC> {
+    pub fn sdio2(&mut self) -> SDIO2_W<'_, AHBEN3_SPEC> {
         SDIO2_W::new(self, 15)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for AHBEN3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahben3::W`](W) writer structure"]
 impl crate::Writable for AHBEN3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBEN3 to value 0"]
-impl crate::Resettable for AHBEN3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AHBEN3_SPEC {}

@@ -585,94 +585,80 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Channel buffer control"]
     #[inline(always)]
-    #[must_use]
-    pub fn cbctrl(&mut self) -> CBCTRL_W<CTRL2_SPEC> {
+    pub fn cbctrl(&mut self) -> CBCTRL_W<'_, CTRL2_SPEC> {
         CBCTRL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Channel control bit refresh select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ccfs(&mut self) -> CCFS_W<CTRL2_SPEC> {
+    pub fn ccfs(&mut self) -> CCFS_W<'_, CTRL2_SPEC> {
         CCFS_W::new(self, 2)
     }
     #[doc = "Bit 3 - DMA request source"]
     #[inline(always)]
-    #[must_use]
-    pub fn drs(&mut self) -> DRS_W<CTRL2_SPEC> {
+    pub fn drs(&mut self) -> DRS_W<'_, CTRL2_SPEC> {
         DRS_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - Primary TMR output selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn ptos(&mut self) -> PTOS_W<CTRL2_SPEC> {
+    pub fn ptos(&mut self) -> PTOS_W<'_, CTRL2_SPEC> {
         PTOS_W::new(self, 4)
     }
     #[doc = "Bit 7 - C1IN selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1insel(&mut self) -> C1INSEL_W<CTRL2_SPEC> {
+    pub fn c1insel(&mut self) -> C1INSEL_W<'_, CTRL2_SPEC> {
         C1INSEL_W::new(self, 7)
     }
     #[doc = "Channel (1-4) idle output state"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IOS` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cios(&mut self, n: u8) -> CIOS_W<CTRL2_SPEC> {
+    pub fn cios(&mut self, n: u8) -> CIOS_W<'_, CTRL2_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CIOS_W::new(self, n * 2 + 8)
     }
     #[doc = "Bit 8 - Channel 1 idle output state"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1ios(&mut self) -> CIOS_W<CTRL2_SPEC> {
+    pub fn c1ios(&mut self) -> CIOS_W<'_, CTRL2_SPEC> {
         CIOS_W::new(self, 8)
     }
     #[doc = "Bit 10 - Channel 2 idle output state"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2ios(&mut self) -> CIOS_W<CTRL2_SPEC> {
+    pub fn c2ios(&mut self) -> CIOS_W<'_, CTRL2_SPEC> {
         CIOS_W::new(self, 10)
     }
     #[doc = "Bit 12 - Channel 3 idle output state"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3ios(&mut self) -> CIOS_W<CTRL2_SPEC> {
+    pub fn c3ios(&mut self) -> CIOS_W<'_, CTRL2_SPEC> {
         CIOS_W::new(self, 12)
     }
     #[doc = "Bit 14 - Channel 4 idle output state"]
     #[inline(always)]
-    #[must_use]
-    pub fn c4ios(&mut self) -> CIOS_W<CTRL2_SPEC> {
+    pub fn c4ios(&mut self) -> CIOS_W<'_, CTRL2_SPEC> {
         CIOS_W::new(self, 14)
     }
     #[doc = "Channel (1-3) complementary idle output state"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1CIOS` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn ccios(&mut self, n: u8) -> CCIOS_W<CTRL2_SPEC> {
+    pub fn ccios(&mut self, n: u8) -> CCIOS_W<'_, CTRL2_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         CCIOS_W::new(self, n * 2 + 9)
     }
     #[doc = "Bit 9 - Channel 1 complementary idle output state"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1cios(&mut self) -> CCIOS_W<CTRL2_SPEC> {
+    pub fn c1cios(&mut self) -> CCIOS_W<'_, CTRL2_SPEC> {
         CCIOS_W::new(self, 9)
     }
     #[doc = "Bit 11 - Channel 2 complementary idle output state"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2cios(&mut self) -> CCIOS_W<CTRL2_SPEC> {
+    pub fn c2cios(&mut self) -> CCIOS_W<'_, CTRL2_SPEC> {
         CCIOS_W::new(self, 11)
     }
     #[doc = "Bit 13 - Channel 3 complementary idle output state"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3cios(&mut self) -> CCIOS_W<CTRL2_SPEC> {
+    pub fn c3cios(&mut self) -> CCIOS_W<'_, CTRL2_SPEC> {
         CCIOS_W::new(self, 13)
     }
 }
@@ -686,10 +672,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
-impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL2_SPEC {}

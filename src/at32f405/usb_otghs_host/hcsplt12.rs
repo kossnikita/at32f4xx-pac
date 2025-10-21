@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Port Address"]
     #[inline(always)]
-    #[must_use]
-    pub fn prtaddr(&mut self) -> PRTADDR_W<HCSPLT12_SPEC> {
+    pub fn prtaddr(&mut self) -> PRTADDR_W<'_, HCSPLT12_SPEC> {
         PRTADDR_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - Hub Address"]
     #[inline(always)]
-    #[must_use]
-    pub fn hubaddr(&mut self) -> HUBADDR_W<HCSPLT12_SPEC> {
+    pub fn hubaddr(&mut self) -> HUBADDR_W<'_, HCSPLT12_SPEC> {
         HUBADDR_W::new(self, 7)
     }
     #[doc = "Bits 14:15 - Transaction Position"]
     #[inline(always)]
-    #[must_use]
-    pub fn xactpos(&mut self) -> XACTPOS_W<HCSPLT12_SPEC> {
+    pub fn xactpos(&mut self) -> XACTPOS_W<'_, HCSPLT12_SPEC> {
         XACTPOS_W::new(self, 14)
     }
     #[doc = "Bit 16 - Do Complete Split"]
     #[inline(always)]
-    #[must_use]
-    pub fn compsplt(&mut self) -> COMPSPLT_W<HCSPLT12_SPEC> {
+    pub fn compsplt(&mut self) -> COMPSPLT_W<'_, HCSPLT12_SPEC> {
         COMPSPLT_W::new(self, 16)
     }
     #[doc = "Bit 31 - Split Enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn spltena(&mut self) -> SPLTENA_W<HCSPLT12_SPEC> {
+    pub fn spltena(&mut self) -> SPLTENA_W<'_, HCSPLT12_SPEC> {
         SPLTENA_W::new(self, 31)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for HCSPLT12_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcsplt12::W`](W) writer structure"]
 impl crate::Writable for HCSPLT12_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HCSPLT12 to value 0"]
-impl crate::Resettable for HCSPLT12_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HCSPLT12_SPEC {}

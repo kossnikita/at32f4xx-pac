@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - DAC1 8-bit right-aligned data"]
     #[inline(always)]
-    #[must_use]
-    pub fn dd1dt8r(&mut self) -> DD1DT8R_W<DDTH8R_SPEC> {
+    pub fn dd1dt8r(&mut self) -> DD1DT8R_W<'_, DDTH8R_SPEC> {
         DD1DT8R_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - DAC2 8-bit right-aligned data"]
     #[inline(always)]
-    #[must_use]
-    pub fn dd2dt8r(&mut self) -> DD2DT8R_W<DDTH8R_SPEC> {
+    pub fn dd2dt8r(&mut self) -> DD2DT8R_W<'_, DDTH8R_SPEC> {
         DD2DT8R_W::new(self, 8)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for DDTH8R_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ddth8r::W`](W) writer structure"]
 impl crate::Writable for DDTH8R_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DDTH8R to value 0"]
-impl crate::Resettable for DDTH8R_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DDTH8R_SPEC {}

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - A/D Calibration value"]
     #[inline(always)]
-    #[must_use]
-    pub fn calval(&mut self) -> CALVAL_W<CALVAL_SPEC> {
+    pub fn calval(&mut self) -> CALVAL_W<'_, CALVAL_SPEC> {
         CALVAL_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for CALVAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`calval::W`](W) writer structure"]
 impl crate::Writable for CALVAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CALVAL to value 0"]
-impl crate::Resettable for CALVAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CALVAL_SPEC {}

@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Stream 1 sync enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s1sync(&mut self) -> S1SYNC_W<SYNCEN_SPEC> {
+    pub fn s1sync(&mut self) -> S1SYNC_W<'_, SYNCEN_SPEC> {
         S1SYNC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Stream 2 sync enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s2sync(&mut self) -> S2SYNC_W<SYNCEN_SPEC> {
+    pub fn s2sync(&mut self) -> S2SYNC_W<'_, SYNCEN_SPEC> {
         S2SYNC_W::new(self, 1)
     }
     #[doc = "Bit 2 - Stream 3 sync enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s3sync(&mut self) -> S3SYNC_W<SYNCEN_SPEC> {
+    pub fn s3sync(&mut self) -> S3SYNC_W<'_, SYNCEN_SPEC> {
         S3SYNC_W::new(self, 2)
     }
     #[doc = "Bit 3 - Stream 4 sync enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s4sync(&mut self) -> S4SYNC_W<SYNCEN_SPEC> {
+    pub fn s4sync(&mut self) -> S4SYNC_W<'_, SYNCEN_SPEC> {
         S4SYNC_W::new(self, 3)
     }
     #[doc = "Bit 4 - Stream 5 sync enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s5sync(&mut self) -> S5SYNC_W<SYNCEN_SPEC> {
+    pub fn s5sync(&mut self) -> S5SYNC_W<'_, SYNCEN_SPEC> {
         S5SYNC_W::new(self, 4)
     }
     #[doc = "Bit 5 - Stream 6 sync enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s6sync(&mut self) -> S6SYNC_W<SYNCEN_SPEC> {
+    pub fn s6sync(&mut self) -> S6SYNC_W<'_, SYNCEN_SPEC> {
         S6SYNC_W::new(self, 5)
     }
     #[doc = "Bit 6 - Stream 7 sync enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s7sync(&mut self) -> S7SYNC_W<SYNCEN_SPEC> {
+    pub fn s7sync(&mut self) -> S7SYNC_W<'_, SYNCEN_SPEC> {
         S7SYNC_W::new(self, 6)
     }
     #[doc = "Bit 7 - Stream 8 sync enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s8sync(&mut self) -> S8SYNC_W<SYNCEN_SPEC> {
+    pub fn s8sync(&mut self) -> S8SYNC_W<'_, SYNCEN_SPEC> {
         S8SYNC_W::new(self, 7)
     }
 }
@@ -150,10 +142,6 @@ impl crate::Readable for SYNCEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`syncen::W`](W) writer structure"]
 impl crate::Writable for SYNCEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SYNCEN to value 0"]
-impl crate::Resettable for SYNCEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SYNCEN_SPEC {}

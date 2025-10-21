@@ -123,68 +123,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Slave address"]
     #[inline(always)]
-    #[must_use]
-    pub fn saddr(&mut self) -> SADDR_W<CTRL2_SPEC> {
+    pub fn saddr(&mut self) -> SADDR_W<'_, CTRL2_SPEC> {
         SADDR_W::new(self, 0)
     }
     #[doc = "Bit 10 - Master data transmission direction"]
     #[inline(always)]
-    #[must_use]
-    pub fn dir(&mut self) -> DIR_W<CTRL2_SPEC> {
+    pub fn dir(&mut self) -> DIR_W<'_, CTRL2_SPEC> {
         DIR_W::new(self, 10)
     }
     #[doc = "Bit 11 - Host send 10-bit address mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn addr10(&mut self) -> ADDR10_W<CTRL2_SPEC> {
+    pub fn addr10(&mut self) -> ADDR10_W<'_, CTRL2_SPEC> {
         ADDR10_W::new(self, 11)
     }
     #[doc = "Bit 12 - 10-bit address header read enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn readh10(&mut self) -> READH10_W<CTRL2_SPEC> {
+    pub fn readh10(&mut self) -> READH10_W<'_, CTRL2_SPEC> {
         READH10_W::new(self, 12)
     }
     #[doc = "Bit 13 - Generate start condition"]
     #[inline(always)]
-    #[must_use]
-    pub fn genstart(&mut self) -> GENSTART_W<CTRL2_SPEC> {
+    pub fn genstart(&mut self) -> GENSTART_W<'_, CTRL2_SPEC> {
         GENSTART_W::new(self, 13)
     }
     #[doc = "Bit 14 - Generate stop condition"]
     #[inline(always)]
-    #[must_use]
-    pub fn genstop(&mut self) -> GENSTOP_W<CTRL2_SPEC> {
+    pub fn genstop(&mut self) -> GENSTOP_W<'_, CTRL2_SPEC> {
         GENSTOP_W::new(self, 14)
     }
     #[doc = "Bit 15 - Not acknowledge enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn nacken(&mut self) -> NACKEN_W<CTRL2_SPEC> {
+    pub fn nacken(&mut self) -> NACKEN_W<'_, CTRL2_SPEC> {
         NACKEN_W::new(self, 15)
     }
     #[doc = "Bits 16:23 - Transmit data counter"]
     #[inline(always)]
-    #[must_use]
-    pub fn cnt(&mut self) -> CNT_W<CTRL2_SPEC> {
+    pub fn cnt(&mut self) -> CNT_W<'_, CTRL2_SPEC> {
         CNT_W::new(self, 16)
     }
     #[doc = "Bit 24 - Send data reload mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rlden(&mut self) -> RLDEN_W<CTRL2_SPEC> {
+    pub fn rlden(&mut self) -> RLDEN_W<'_, CTRL2_SPEC> {
         RLDEN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Automatically send stop condition enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn astopen(&mut self) -> ASTOPEN_W<CTRL2_SPEC> {
+    pub fn astopen(&mut self) -> ASTOPEN_W<'_, CTRL2_SPEC> {
         ASTOPEN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Request PEC transmission enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pecten(&mut self) -> PECTEN_W<CTRL2_SPEC> {
+    pub fn pecten(&mut self) -> PECTEN_W<'_, CTRL2_SPEC> {
         PECTEN_W::new(self, 26)
     }
 }
@@ -198,10 +187,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
-impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL2_SPEC {}

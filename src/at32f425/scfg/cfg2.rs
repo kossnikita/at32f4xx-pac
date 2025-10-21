@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - PVM lock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pvm_lk(&mut self) -> PVM_LK_W<CFG2_SPEC> {
+    pub fn pvm_lk(&mut self) -> PVM_LK_W<'_, CFG2_SPEC> {
         PVM_LK_W::new(self, 2)
     }
     #[doc = "Bits 30:31 - I2S full duplex"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2s_fd(&mut self) -> I2S_FD_W<CFG2_SPEC> {
+    pub fn i2s_fd(&mut self) -> I2S_FD_W<'_, CFG2_SPEC> {
         I2S_FD_W::new(self, 30)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for CFG2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg2::W`](W) writer structure"]
 impl crate::Writable for CFG2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG2 to value 0"]
-impl crate::Resettable for CFG2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CFG2_SPEC {}

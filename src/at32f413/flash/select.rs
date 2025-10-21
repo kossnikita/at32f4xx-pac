@@ -10,8 +10,7 @@ impl core::fmt::Debug for crate::generic::Reg<SELECT_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - spim type selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn select(&mut self) -> SELECT_W<SELECT_SPEC> {
+    pub fn select(&mut self) -> SELECT_W<'_, SELECT_SPEC> {
         SELECT_W::new(self, 0)
     }
 }
@@ -23,10 +22,6 @@ impl crate::RegisterSpec for SELECT_SPEC {
 #[doc = "`write(|w| ..)` method takes [`select::W`](W) writer structure"]
 impl crate::Writable for SELECT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SELECT to value 0"]
-impl crate::Resettable for SELECT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SELECT_SPEC {}

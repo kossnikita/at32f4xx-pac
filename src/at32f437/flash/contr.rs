@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Flash continue read enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn fcontr_en(&mut self) -> FCONTR_EN_W<CONTR_SPEC> {
+    pub fn fcontr_en(&mut self) -> FCONTR_EN_W<'_, CONTR_SPEC> {
         FCONTR_EN_W::new(self, 31)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for CONTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`contr::W`](W) writer structure"]
 impl crate::Writable for CONTR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CONTR to value 0x80"]
 impl crate::Resettable for CONTR_SPEC {

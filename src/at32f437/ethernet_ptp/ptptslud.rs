@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30 - Timestamp subseconds"]
     #[inline(always)]
-    #[must_use]
-    pub fn tss(&mut self) -> TSS_W<PTPTSLUD_SPEC> {
+    pub fn tss(&mut self) -> TSS_W<'_, PTPTSLUD_SPEC> {
         TSS_W::new(self, 0)
     }
     #[doc = "Bit 31 - Add or subtract time"]
     #[inline(always)]
-    #[must_use]
-    pub fn ast(&mut self) -> AST_W<PTPTSLUD_SPEC> {
+    pub fn ast(&mut self) -> AST_W<'_, PTPTSLUD_SPEC> {
         AST_W::new(self, 31)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for PTPTSLUD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ptptslud::W`](W) writer structure"]
 impl crate::Writable for PTPTSLUD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PTPTSLUD to value 0"]
-impl crate::Resettable for PTPTSLUD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PTPTSLUD_SPEC {}

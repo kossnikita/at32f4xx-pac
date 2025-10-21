@@ -125,38 +125,31 @@ impl RegisterBlock {
         self.filter_bank.iter()
     }
 }
-#[doc = "MCTRL (rw) register accessor: Main control register\n\nYou can [`read`](crate::Reg::read) this register and get [`mctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mctrl`]
-module"]
+#[doc = "MCTRL (rw) register accessor: Main control register\n\nYou can [`read`](crate::Reg::read) this register and get [`mctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mctrl`] module"]
 pub type MCTRL = crate::Reg<mctrl::MCTRL_SPEC>;
 #[doc = "Main control register"]
 pub mod mctrl;
-#[doc = "MSTS (rw) register accessor: Main status register\n\nYou can [`read`](crate::Reg::read) this register and get [`msts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`msts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@msts`]
-module"]
+#[doc = "MSTS (rw) register accessor: Main status register\n\nYou can [`read`](crate::Reg::read) this register and get [`msts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`msts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@msts`] module"]
 pub type MSTS = crate::Reg<msts::MSTS_SPEC>;
 #[doc = "Main status register"]
 pub mod msts;
-#[doc = "TSTS (rw) register accessor: Transmit status register\n\nYou can [`read`](crate::Reg::read) this register and get [`tsts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tsts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tsts`]
-module"]
+#[doc = "TSTS (rw) register accessor: Transmit status register\n\nYou can [`read`](crate::Reg::read) this register and get [`tsts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tsts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tsts`] module"]
 pub type TSTS = crate::Reg<tsts::TSTS_SPEC>;
 #[doc = "Transmit status register"]
 pub mod tsts;
-#[doc = "RF (rw) register accessor: Receive FIFO %s register\n\nYou can [`read`](crate::Reg::read) this register and get [`rf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rf`]
-module"]
+#[doc = "RF (rw) register accessor: Receive FIFO %s register\n\nYou can [`read`](crate::Reg::read) this register and get [`rf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rf`] module"]
 pub type RF = crate::Reg<rf::RF_SPEC>;
 #[doc = "Receive FIFO %s register"]
 pub mod rf;
-#[doc = "INTEN (rw) register accessor: Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`inten::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inten::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inten`]
-module"]
+#[doc = "INTEN (rw) register accessor: Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`inten::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inten::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inten`] module"]
 pub type INTEN = crate::Reg<inten::INTEN_SPEC>;
 #[doc = "Interrupt enable register"]
 pub mod inten;
-#[doc = "ESTS (rw) register accessor: Error status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ests::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ests::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ests`]
-module"]
+#[doc = "ESTS (rw) register accessor: Error status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ests::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ests::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ests`] module"]
 pub type ESTS = crate::Reg<ests::ESTS_SPEC>;
 #[doc = "Error status register"]
 pub mod ests;
-#[doc = "BTMG (rw) register accessor: Bit timing register\n\nYou can [`read`](crate::Reg::read) this register and get [`btmg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`btmg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@btmg`]
-module"]
+#[doc = "BTMG (rw) register accessor: Bit timing register\n\nYou can [`read`](crate::Reg::read) this register and get [`btmg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`btmg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@btmg`] module"]
 pub type BTMG = crate::Reg<btmg::BTMG_SPEC>;
 #[doc = "Bit timing register"]
 pub mod btmg;
@@ -170,28 +163,23 @@ pub use self::fifo::Fifo;
 #[doc = r"Cluster"]
 #[doc = "FIFO %s"]
 pub mod fifo;
-#[doc = "FCTRL (rw) register accessor: Filter control register\n\nYou can [`read`](crate::Reg::read) this register and get [`fctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fctrl`]
-module"]
+#[doc = "FCTRL (rw) register accessor: Filter control register\n\nYou can [`read`](crate::Reg::read) this register and get [`fctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fctrl`] module"]
 pub type FCTRL = crate::Reg<fctrl::FCTRL_SPEC>;
 #[doc = "Filter control register"]
 pub mod fctrl;
-#[doc = "FMCFG (rw) register accessor: Filter mode config register\n\nYou can [`read`](crate::Reg::read) this register and get [`fmcfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fmcfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fmcfg`]
-module"]
+#[doc = "FMCFG (rw) register accessor: Filter mode config register\n\nYou can [`read`](crate::Reg::read) this register and get [`fmcfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fmcfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fmcfg`] module"]
 pub type FMCFG = crate::Reg<fmcfg::FMCFG_SPEC>;
 #[doc = "Filter mode config register"]
 pub mod fmcfg;
-#[doc = "FBWCFG (rw) register accessor: Filter bit width config register\n\nYou can [`read`](crate::Reg::read) this register and get [`fbwcfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fbwcfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fbwcfg`]
-module"]
+#[doc = "FBWCFG (rw) register accessor: Filter bit width config register\n\nYou can [`read`](crate::Reg::read) this register and get [`fbwcfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fbwcfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fbwcfg`] module"]
 pub type FBWCFG = crate::Reg<fbwcfg::FBWCFG_SPEC>;
 #[doc = "Filter bit width config register"]
 pub mod fbwcfg;
-#[doc = "FRF (rw) register accessor: Filter related FIFO register\n\nYou can [`read`](crate::Reg::read) this register and get [`frf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`frf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@frf`]
-module"]
+#[doc = "FRF (rw) register accessor: Filter related FIFO register\n\nYou can [`read`](crate::Reg::read) this register and get [`frf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`frf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@frf`] module"]
 pub type FRF = crate::Reg<frf::FRF_SPEC>;
 #[doc = "Filter related FIFO register"]
 pub mod frf;
-#[doc = "FACFG (rw) register accessor: Filter activate configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`facfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`facfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@facfg`]
-module"]
+#[doc = "FACFG (rw) register accessor: Filter activate configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`facfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`facfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@facfg`] module"]
 pub type FACFG = crate::Reg<facfg::FACFG_SPEC>;
 #[doc = "Filter activate configuration register"]
 pub mod facfg;

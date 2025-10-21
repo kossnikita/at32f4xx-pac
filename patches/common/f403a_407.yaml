@@ -23,7 +23,6 @@ _include:
   - iomux/common.yaml
   - wwdt/common.yaml
   - wdt/common.yaml
-  - acc/twk.yaml
   - acc/common.yaml
   - debug/common.yaml
   - debug/timers.yaml

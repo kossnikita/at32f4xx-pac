@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Target time seconds register"]
     #[inline(always)]
-    #[must_use]
-    pub fn ttsr(&mut self) -> TTSR_W<PTPTTH_SPEC> {
+    pub fn ttsr(&mut self) -> TTSR_W<'_, PTPTTH_SPEC> {
         TTSR_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for PTPTTH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ptptth::W`](W) writer structure"]
 impl crate::Writable for PTPTTH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PTPTTH to value 0"]
-impl crate::Resettable for PTPTTH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PTPTTH_SPEC {}

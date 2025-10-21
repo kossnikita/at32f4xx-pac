@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<MISC2_SPEC> {
+    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<'_, MISC2_SPEC> {
         AUTO_STEP_EN_W::new(self, 4)
     }
     #[doc = "Bits 12:15 - USB division"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbdiv(&mut self) -> USBDIV_W<MISC2_SPEC> {
+    pub fn usbdiv(&mut self) -> USBDIV_W<'_, MISC2_SPEC> {
         USBDIV_W::new(self, 12)
     }
     #[doc = "Bits 16:18 - HICK as system clock frequency division"]
     #[inline(always)]
-    #[must_use]
-    pub fn hick_to_sclk_div(&mut self) -> HICK_TO_SCLK_DIV_W<MISC2_SPEC> {
+    pub fn hick_to_sclk_div(&mut self) -> HICK_TO_SCLK_DIV_W<'_, MISC2_SPEC> {
         HICK_TO_SCLK_DIV_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - HEXT as system clock frequency division"]
     #[inline(always)]
-    #[must_use]
-    pub fn hext_to_sclk_div(&mut self) -> HEXT_TO_SCLK_DIV_W<MISC2_SPEC> {
+    pub fn hext_to_sclk_div(&mut self) -> HEXT_TO_SCLK_DIV_W<'_, MISC2_SPEC> {
         HEXT_TO_SCLK_DIV_W::new(self, 19)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for MISC2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`misc2::W`](W) writer structure"]
 impl crate::Writable for MISC2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MISC2 to value 0x0d"]
 impl crate::Resettable for MISC2_SPEC {

@@ -58,34 +58,29 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TMDT0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmdt(&mut self, n: u8) -> TMDT_W<TMDTL_SPEC> {
+    pub fn tmdt(&mut self, n: u8) -> TMDT_W<'_, TMDTL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         TMDT_W::new(self, n * 8)
     }
     #[doc = "Bits 0:7 - Transmit mailbox data byte 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmdt0(&mut self) -> TMDT_W<TMDTL_SPEC> {
+    pub fn tmdt0(&mut self) -> TMDT_W<'_, TMDTL_SPEC> {
         TMDT_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Transmit mailbox data byte 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmdt1(&mut self) -> TMDT_W<TMDTL_SPEC> {
+    pub fn tmdt1(&mut self) -> TMDT_W<'_, TMDTL_SPEC> {
         TMDT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Transmit mailbox data byte 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmdt2(&mut self) -> TMDT_W<TMDTL_SPEC> {
+    pub fn tmdt2(&mut self) -> TMDT_W<'_, TMDTL_SPEC> {
         TMDT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Transmit mailbox data byte 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmdt3(&mut self) -> TMDT_W<TMDTL_SPEC> {
+    pub fn tmdt3(&mut self) -> TMDT_W<'_, TMDTL_SPEC> {
         TMDT_W::new(self, 24)
     }
 }
@@ -99,10 +94,6 @@ impl crate::Readable for TMDTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmdtl::W`](W) writer structure"]
 impl crate::Writable for TMDTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TMDTL to value 0"]
-impl crate::Resettable for TMDTL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TMDTL_SPEC {}

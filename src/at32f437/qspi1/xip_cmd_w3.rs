@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Bypass cache function"]
     #[inline(always)]
-    #[must_use]
-    pub fn bypassc(&mut self) -> BYPASSC_W<XIP_CMD_W3_SPEC> {
+    pub fn bypassc(&mut self) -> BYPASSC_W<'_, XIP_CMD_W3_SPEC> {
         BYPASSC_W::new(self, 0)
     }
     #[doc = "Bit 3 - Cache status"]
     #[inline(always)]
-    #[must_use]
-    pub fn csts(&mut self) -> CSTS_W<XIP_CMD_W3_SPEC> {
+    pub fn csts(&mut self) -> CSTS_W<'_, XIP_CMD_W3_SPEC> {
         CSTS_W::new(self, 3)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for XIP_CMD_W3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`xip_cmd_w3::W`](W) writer structure"]
 impl crate::Writable for XIP_CMD_W3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets XIP_CMD_W3 to value 0"]
-impl crate::Resettable for XIP_CMD_W3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for XIP_CMD_W3_SPEC {}

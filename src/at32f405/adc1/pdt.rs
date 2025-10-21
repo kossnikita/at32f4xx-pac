@@ -22,6 +22,4 @@ impl crate::RegisterSpec for PDT_SPEC {
 #[doc = "`read()` method returns [`pdt::R`](R) reader structure"]
 impl crate::Readable for PDT_SPEC {}
 #[doc = "`reset()` method sets PDT%s to value 0"]
-impl crate::Resettable for PDT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PDT_SPEC {}

@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - MAC address 2 high"]
     #[inline(always)]
-    #[must_use]
-    pub fn ma2h(&mut self) -> MA2H_W<MACA2H_SPEC> {
+    pub fn ma2h(&mut self) -> MA2H_W<'_, MACA2H_SPEC> {
         MA2H_W::new(self, 0)
     }
     #[doc = "Bits 24:29 - Mask byte control"]
     #[inline(always)]
-    #[must_use]
-    pub fn mbc(&mut self) -> MBC_W<MACA2H_SPEC> {
+    pub fn mbc(&mut self) -> MBC_W<'_, MACA2H_SPEC> {
         MBC_W::new(self, 24)
     }
     #[doc = "Bit 30 - Source address"]
     #[inline(always)]
-    #[must_use]
-    pub fn sa(&mut self) -> SA_W<MACA2H_SPEC> {
+    pub fn sa(&mut self) -> SA_W<'_, MACA2H_SPEC> {
         SA_W::new(self, 30)
     }
     #[doc = "Bit 31 - Address enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ae(&mut self) -> AE_W<MACA2H_SPEC> {
+    pub fn ae(&mut self) -> AE_W<'_, MACA2H_SPEC> {
         AE_W::new(self, 31)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for MACA2H_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`maca2h::W`](W) writer structure"]
 impl crate::Writable for MACA2H_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACA2H to value 0x50"]
 impl crate::Resettable for MACA2H_SPEC {

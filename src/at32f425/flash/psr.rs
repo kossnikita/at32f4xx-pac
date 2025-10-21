@@ -69,26 +69,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Wait cycle"]
     #[inline(always)]
-    #[must_use]
-    pub fn wtcyc(&mut self) -> WTCYC_W<PSR_SPEC> {
+    pub fn wtcyc(&mut self) -> WTCYC_W<'_, PSR_SPEC> {
         WTCYC_W::new(self, 0)
     }
     #[doc = "Bit 4 - Prefetch enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pft_en(&mut self) -> PFT_EN_W<PSR_SPEC> {
+    pub fn pft_en(&mut self) -> PFT_EN_W<'_, PSR_SPEC> {
         PFT_EN_W::new(self, 4)
     }
     #[doc = "Bit 6 - Prefetch enable 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn pft_en2(&mut self) -> PFT_EN2_W<PSR_SPEC> {
+    pub fn pft_en2(&mut self) -> PFT_EN2_W<'_, PSR_SPEC> {
         PFT_EN2_W::new(self, 6)
     }
     #[doc = "Bit 8 - Prefetch latency disable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pft_lat_dis(&mut self) -> PFT_LAT_DIS_W<PSR_SPEC> {
+    pub fn pft_lat_dis(&mut self) -> PFT_LAT_DIS_W<'_, PSR_SPEC> {
         PFT_LAT_DIS_W::new(self, 8)
     }
 }
@@ -102,8 +98,6 @@ impl crate::Readable for PSR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`psr::W`](W) writer structure"]
 impl crate::Writable for PSR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PSR to value 0x30"]
 impl crate::Resettable for PSR_SPEC {

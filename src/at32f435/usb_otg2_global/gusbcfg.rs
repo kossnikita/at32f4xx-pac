@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - FS timeout calibration"]
     #[inline(always)]
-    #[must_use]
-    pub fn toutcal(&mut self) -> TOUTCAL_W<GUSBCFG_SPEC> {
+    pub fn toutcal(&mut self) -> TOUTCAL_W<'_, GUSBCFG_SPEC> {
         TOUTCAL_W::new(self, 0)
     }
     #[doc = "Bits 10:13 - USB turnaround time"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<GUSBCFG_SPEC> {
+    pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<'_, GUSBCFG_SPEC> {
         USBTRDTIM_W::new(self, 10)
     }
     #[doc = "Bit 29 - Force host mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn fhstmode(&mut self) -> FHSTMODE_W<GUSBCFG_SPEC> {
+    pub fn fhstmode(&mut self) -> FHSTMODE_W<'_, GUSBCFG_SPEC> {
         FHSTMODE_W::new(self, 29)
     }
     #[doc = "Bit 30 - Force device mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn fdevmode(&mut self) -> FDEVMODE_W<GUSBCFG_SPEC> {
+    pub fn fdevmode(&mut self) -> FDEVMODE_W<'_, GUSBCFG_SPEC> {
         FDEVMODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Corrupt Tx packet"]
     #[inline(always)]
-    #[must_use]
-    pub fn cotxpkt(&mut self) -> COTXPKT_W<GUSBCFG_SPEC> {
+    pub fn cotxpkt(&mut self) -> COTXPKT_W<'_, GUSBCFG_SPEC> {
         COTXPKT_W::new(self, 31)
     }
 }
@@ -102,8 +97,6 @@ impl crate::Readable for GUSBCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gusbcfg::W`](W) writer structure"]
 impl crate::Writable for GUSBCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GUSBCFG to value 0x0a00"]
 impl crate::Resettable for GUSBCFG_SPEC {

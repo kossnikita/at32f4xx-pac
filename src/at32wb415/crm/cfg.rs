@@ -510,80 +510,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - System clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sclksel(&mut self) -> SCLKSEL_W<CFG_SPEC> {
+    pub fn sclksel(&mut self) -> SCLKSEL_W<'_, CFG_SPEC> {
         SCLKSEL_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - AHB division"]
     #[inline(always)]
-    #[must_use]
-    pub fn ahbdiv(&mut self) -> AHBDIV_W<CFG_SPEC> {
+    pub fn ahbdiv(&mut self) -> AHBDIV_W<'_, CFG_SPEC> {
         AHBDIV_W::new(self, 4)
     }
     #[doc = "Bits 8:10 - APB1 division"]
     #[inline(always)]
-    #[must_use]
-    pub fn apb1div(&mut self) -> APB1DIV_W<CFG_SPEC> {
+    pub fn apb1div(&mut self) -> APB1DIV_W<'_, CFG_SPEC> {
         APB1DIV_W::new(self, 8)
     }
     #[doc = "Bits 11:13 - APB2 division"]
     #[inline(always)]
-    #[must_use]
-    pub fn apb2div(&mut self) -> APB2DIV_W<CFG_SPEC> {
+    pub fn apb2div(&mut self) -> APB2DIV_W<'_, CFG_SPEC> {
         APB2DIV_W::new(self, 11)
     }
     #[doc = "Bits 14:15 - ADC division bit1 and bit0"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcdiv1_0(&mut self) -> ADCDIV1_0_W<CFG_SPEC> {
+    pub fn adcdiv1_0(&mut self) -> ADCDIV1_0_W<'_, CFG_SPEC> {
         ADCDIV1_0_W::new(self, 14)
     }
     #[doc = "Bit 16 - PLL reference clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllrcs(&mut self) -> PLLRCS_W<CFG_SPEC> {
+    pub fn pllrcs(&mut self) -> PLLRCS_W<'_, CFG_SPEC> {
         PLLRCS_W::new(self, 16)
     }
     #[doc = "Bit 17 - HEXT division selection for PLL entry clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllhextdiv(&mut self) -> PLLHEXTDIV_W<CFG_SPEC> {
+    pub fn pllhextdiv(&mut self) -> PLLHEXTDIV_W<'_, CFG_SPEC> {
         PLLHEXTDIV_W::new(self, 17)
     }
     #[doc = "Bits 18:21 - PLL Multiplication Factor bit3 to bit0"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllmult3_0(&mut self) -> PLLMULT3_0_W<CFG_SPEC> {
+    pub fn pllmult3_0(&mut self) -> PLLMULT3_0_W<'_, CFG_SPEC> {
         PLLMULT3_0_W::new(self, 18)
     }
     #[doc = "Bits 22:23 - USB division bit1 and bit0"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbdiv1_0(&mut self) -> USBDIV1_0_W<CFG_SPEC> {
+    pub fn usbdiv1_0(&mut self) -> USBDIV1_0_W<'_, CFG_SPEC> {
         USBDIV1_0_W::new(self, 22)
     }
     #[doc = "Bits 24:26 - Clock output selection bit2 to bit0"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkout_sel(&mut self) -> CLKOUT_SEL_W<CFG_SPEC> {
+    pub fn clkout_sel(&mut self) -> CLKOUT_SEL_W<'_, CFG_SPEC> {
         CLKOUT_SEL_W::new(self, 24)
     }
     #[doc = "Bit 27 - USB division bit2"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbdiv2(&mut self) -> USBDIV2_W<CFG_SPEC> {
+    pub fn usbdiv2(&mut self) -> USBDIV2_W<'_, CFG_SPEC> {
         USBDIV2_W::new(self, 27)
     }
     #[doc = "Bit 28 - ADC division bit2"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcdiv2(&mut self) -> ADCDIV2_W<CFG_SPEC> {
+    pub fn adcdiv2(&mut self) -> ADCDIV2_W<'_, CFG_SPEC> {
         ADCDIV2_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - PLL Multiplication Factor bit5 and bit4"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllmult5_4(&mut self) -> PLLMULT5_4_W<CFG_SPEC> {
+    pub fn pllmult5_4(&mut self) -> PLLMULT5_4_W<'_, CFG_SPEC> {
         PLLMULT5_4_W::new(self, 29)
     }
 }
@@ -597,10 +584,6 @@ impl crate::Readable for CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg::W`](W) writer structure"]
 impl crate::Writable for CFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG to value 0"]
-impl crate::Resettable for CFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CFG_SPEC {}

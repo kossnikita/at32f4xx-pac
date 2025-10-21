@@ -22,6 +22,4 @@ impl crate::RegisterSpec for DT_SPEC {
 #[doc = "`read()` method returns [`dt::R`](R) reader structure"]
 impl crate::Readable for DT_SPEC {}
 #[doc = "`reset()` method sets DT to value 0"]
-impl crate::Resettable for DT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DT_SPEC {}

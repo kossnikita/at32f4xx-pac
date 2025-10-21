@@ -82,58 +82,49 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CSPT20` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt(&mut self, n: u8) -> CSPT_W<SPT3_SPEC> {
+    pub fn cspt(&mut self, n: u8) -> CSPT_W<'_, SPT3_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         CSPT_W::new(self, n * 3)
     }
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN20"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt20(&mut self) -> CSPT_W<SPT3_SPEC> {
+    pub fn cspt20(&mut self) -> CSPT_W<'_, SPT3_SPEC> {
         CSPT_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Selection sample time of channel ADC_IN21"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt21(&mut self) -> CSPT_W<SPT3_SPEC> {
+    pub fn cspt21(&mut self) -> CSPT_W<'_, SPT3_SPEC> {
         CSPT_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - Selection sample time of channel ADC_IN22"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt22(&mut self) -> CSPT_W<SPT3_SPEC> {
+    pub fn cspt22(&mut self) -> CSPT_W<'_, SPT3_SPEC> {
         CSPT_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - Selection sample time of channel ADC_IN23"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt23(&mut self) -> CSPT_W<SPT3_SPEC> {
+    pub fn cspt23(&mut self) -> CSPT_W<'_, SPT3_SPEC> {
         CSPT_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - Selection sample time of channel ADC_IN24"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt24(&mut self) -> CSPT_W<SPT3_SPEC> {
+    pub fn cspt24(&mut self) -> CSPT_W<'_, SPT3_SPEC> {
         CSPT_W::new(self, 12)
     }
     #[doc = "Bits 15:17 - Selection sample time of channel ADC_IN25"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt25(&mut self) -> CSPT_W<SPT3_SPEC> {
+    pub fn cspt25(&mut self) -> CSPT_W<'_, SPT3_SPEC> {
         CSPT_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - Selection sample time of channel ADC_IN26"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt26(&mut self) -> CSPT_W<SPT3_SPEC> {
+    pub fn cspt26(&mut self) -> CSPT_W<'_, SPT3_SPEC> {
         CSPT_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - Selection sample time of channel ADC_IN27"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt27(&mut self) -> CSPT_W<SPT3_SPEC> {
+    pub fn cspt27(&mut self) -> CSPT_W<'_, SPT3_SPEC> {
         CSPT_W::new(self, 21)
     }
 }
@@ -147,10 +138,6 @@ impl crate::Readable for SPT3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spt3::W`](W) writer structure"]
 impl crate::Writable for SPT3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPT3 to value 0"]
-impl crate::Resettable for SPT3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SPT3_SPEC {}

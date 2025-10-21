@@ -249,38 +249,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Voltage monitoring out of range flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn vmor(&mut self) -> VMOR_W<STS_SPEC> {
+    pub fn vmor(&mut self) -> VMOR_W<'_, STS_SPEC> {
         VMOR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Ordinary channels conversion end flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn occe(&mut self) -> OCCE_W<STS_SPEC> {
+    pub fn occe(&mut self) -> OCCE_W<'_, STS_SPEC> {
         OCCE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Preempted channels conversion end flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcce(&mut self) -> PCCE_W<STS_SPEC> {
+    pub fn pcce(&mut self) -> PCCE_W<'_, STS_SPEC> {
         PCCE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Preempted channel conversion start flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn pccs(&mut self) -> PCCS_W<STS_SPEC> {
+    pub fn pccs(&mut self) -> PCCS_W<'_, STS_SPEC> {
         PCCS_W::new(self, 3)
     }
     #[doc = "Bit 4 - Ordinary channel conversion start flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn occs(&mut self) -> OCCS_W<STS_SPEC> {
+    pub fn occs(&mut self) -> OCCS_W<'_, STS_SPEC> {
         OCCS_W::new(self, 4)
     }
     #[doc = "Bit 5 - Ordinary channel conversion overflow flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn occo(&mut self) -> OCCO_W<STS_SPEC> {
+    pub fn occo(&mut self) -> OCCO_W<'_, STS_SPEC> {
         OCCO_W::new(self, 5)
     }
 }
@@ -295,9 +289,6 @@ impl crate::Readable for STS_SPEC {}
 impl crate::Writable for STS_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x1f;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0"]
-impl crate::Resettable for STS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for STS_SPEC {}

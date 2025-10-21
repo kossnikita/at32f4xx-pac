@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - SPI address length"]
     #[inline(always)]
-    #[must_use]
-    pub fn adrlen(&mut self) -> ADRLEN_W<CMD_W1_SPEC> {
+    pub fn adrlen(&mut self) -> ADRLEN_W<'_, CMD_W1_SPEC> {
         ADRLEN_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Second dummy state cycle"]
     #[inline(always)]
-    #[must_use]
-    pub fn dum2(&mut self) -> DUM2_W<CMD_W1_SPEC> {
+    pub fn dum2(&mut self) -> DUM2_W<'_, CMD_W1_SPEC> {
         DUM2_W::new(self, 16)
     }
     #[doc = "Bits 24:25 - Instruction code length"]
     #[inline(always)]
-    #[must_use]
-    pub fn inslen(&mut self) -> INSLEN_W<CMD_W1_SPEC> {
+    pub fn inslen(&mut self) -> INSLEN_W<'_, CMD_W1_SPEC> {
         INSLEN_W::new(self, 24)
     }
     #[doc = "Bit 28 - Perfrmance enhance mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pemen(&mut self) -> PEMEN_W<CMD_W1_SPEC> {
+    pub fn pemen(&mut self) -> PEMEN_W<'_, CMD_W1_SPEC> {
         PEMEN_W::new(self, 28)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for CMD_W1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cmd_w1::W`](W) writer structure"]
 impl crate::Writable for CMD_W1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CMD_W1 to value 0x0100_0003"]
 impl crate::Resettable for CMD_W1_SPEC {

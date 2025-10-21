@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - CAN1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn can1_gmux(&mut self) -> CAN1_GMUX_W<REMAP6_SPEC> {
+    pub fn can1_gmux(&mut self) -> CAN1_GMUX_W<'_, REMAP6_SPEC> {
         CAN1_GMUX_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - CAN2 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn can2_gmux(&mut self) -> CAN2_GMUX_W<REMAP6_SPEC> {
+    pub fn can2_gmux(&mut self) -> CAN2_GMUX_W<'_, REMAP6_SPEC> {
         CAN2_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - SDIO1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdio1_gmux(&mut self) -> SDIO1_GMUX_W<REMAP6_SPEC> {
+    pub fn sdio1_gmux(&mut self) -> SDIO1_GMUX_W<'_, REMAP6_SPEC> {
         SDIO1_GMUX_W::new(self, 8)
     }
     #[doc = "Bits 16:19 - USART1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart1_gmux(&mut self) -> USART1_GMUX_W<REMAP6_SPEC> {
+    pub fn usart1_gmux(&mut self) -> USART1_GMUX_W<'_, REMAP6_SPEC> {
         USART1_GMUX_W::new(self, 16)
     }
     #[doc = "Bits 24:27 - USART3 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart3_gmux(&mut self) -> USART3_GMUX_W<REMAP6_SPEC> {
+    pub fn usart3_gmux(&mut self) -> USART3_GMUX_W<'_, REMAP6_SPEC> {
         USART3_GMUX_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - UART4 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn uart4_gmux(&mut self) -> UART4_GMUX_W<REMAP6_SPEC> {
+    pub fn uart4_gmux(&mut self) -> UART4_GMUX_W<'_, REMAP6_SPEC> {
         UART4_GMUX_W::new(self, 28)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for REMAP6_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap6::W`](W) writer structure"]
 impl crate::Writable for REMAP6_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP6 to value 0"]
-impl crate::Resettable for REMAP6_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP6_SPEC {}

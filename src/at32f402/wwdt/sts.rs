@@ -77,8 +77,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reload counter interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn rldf(&mut self) -> RLDF_W<STS_SPEC> {
+    pub fn rldf(&mut self) -> RLDF_W<'_, STS_SPEC> {
         RLDF_W::new(self, 0)
     }
 }
@@ -93,9 +92,6 @@ impl crate::Readable for STS_SPEC {}
 impl crate::Writable for STS_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0"]
-impl crate::Resettable for STS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for STS_SPEC {}

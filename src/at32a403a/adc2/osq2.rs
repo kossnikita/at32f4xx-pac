@@ -70,46 +70,39 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OSN7` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn(&mut self, n: u8) -> OSN_W<OSQ2_SPEC> {
+    pub fn osn(&mut self, n: u8) -> OSN_W<'_, OSQ2_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 6][n as usize];
         OSN_W::new(self, n * 5)
     }
     #[doc = "Bits 0:4 - Number of 7th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn7(&mut self) -> OSN_W<OSQ2_SPEC> {
+    pub fn osn7(&mut self) -> OSN_W<'_, OSQ2_SPEC> {
         OSN_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Number of 8th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn8(&mut self) -> OSN_W<OSQ2_SPEC> {
+    pub fn osn8(&mut self) -> OSN_W<'_, OSQ2_SPEC> {
         OSN_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - Number of 9th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn9(&mut self) -> OSN_W<OSQ2_SPEC> {
+    pub fn osn9(&mut self) -> OSN_W<'_, OSQ2_SPEC> {
         OSN_W::new(self, 10)
     }
     #[doc = "Bits 15:19 - Number of 10th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn10(&mut self) -> OSN_W<OSQ2_SPEC> {
+    pub fn osn10(&mut self) -> OSN_W<'_, OSQ2_SPEC> {
         OSN_W::new(self, 15)
     }
     #[doc = "Bits 20:24 - Number of 11th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn11(&mut self) -> OSN_W<OSQ2_SPEC> {
+    pub fn osn11(&mut self) -> OSN_W<'_, OSQ2_SPEC> {
         OSN_W::new(self, 20)
     }
     #[doc = "Bits 25:29 - Number of 12th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn12(&mut self) -> OSN_W<OSQ2_SPEC> {
+    pub fn osn12(&mut self) -> OSN_W<'_, OSQ2_SPEC> {
         OSN_W::new(self, 25)
     }
 }
@@ -123,10 +116,6 @@ impl crate::Readable for OSQ2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`osq2::W`](W) writer structure"]
 impl crate::Writable for OSQ2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OSQ2 to value 0"]
-impl crate::Resettable for OSQ2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OSQ2_SPEC {}

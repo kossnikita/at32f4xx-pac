@@ -116,6 +116,4 @@ impl crate::RegisterSpec for RFI_SPEC {
 #[doc = "`read()` method returns [`rfi::R`](R) reader structure"]
 impl crate::Readable for RFI_SPEC {}
 #[doc = "`reset()` method sets RFI to value 0"]
-impl crate::Resettable for RFI_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RFI_SPEC {}

@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Regular memory setup time"]
     #[inline(always)]
-    #[must_use]
-    pub fn rgst(&mut self) -> RGST_W<BK3TMGMEM_SPEC> {
+    pub fn rgst(&mut self) -> RGST_W<'_, BK3TMGMEM_SPEC> {
         RGST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Regular memory wait time"]
     #[inline(always)]
-    #[must_use]
-    pub fn rgwt(&mut self) -> RGWT_W<BK3TMGMEM_SPEC> {
+    pub fn rgwt(&mut self) -> RGWT_W<'_, BK3TMGMEM_SPEC> {
         RGWT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Regular memory hold time"]
     #[inline(always)]
-    #[must_use]
-    pub fn rght(&mut self) -> RGHT_W<BK3TMGMEM_SPEC> {
+    pub fn rght(&mut self) -> RGHT_W<'_, BK3TMGMEM_SPEC> {
         RGHT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Regular memory databus High resistance time"]
     #[inline(always)]
-    #[must_use]
-    pub fn rgdhizt(&mut self) -> RGDHIZT_W<BK3TMGMEM_SPEC> {
+    pub fn rgdhizt(&mut self) -> RGDHIZT_W<'_, BK3TMGMEM_SPEC> {
         RGDHIZT_W::new(self, 24)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for BK3TMGMEM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk3tmgmem::W`](W) writer structure"]
 impl crate::Writable for BK3TMGMEM_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK3TMGMEM to value 0xfcfc_fcfc"]
 impl crate::Resettable for BK3TMGMEM_SPEC {

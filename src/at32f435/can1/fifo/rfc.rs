@@ -40,6 +40,4 @@ impl crate::RegisterSpec for RFC_SPEC {
 #[doc = "`read()` method returns [`rfc::R`](R) reader structure"]
 impl crate::Readable for RFC_SPEC {}
 #[doc = "`reset()` method sets RFC to value 0"]
-impl crate::Resettable for RFC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RFC_SPEC {}

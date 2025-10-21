@@ -24,6 +24,4 @@ impl crate::RegisterSpec for RSP4_SPEC {
 #[doc = "`read()` method returns [`rsp4::R`](R) reader structure"]
 impl crate::Readable for RSP4_SPEC {}
 #[doc = "`reset()` method sets RSP4 to value 0"]
-impl crate::Resettable for RSP4_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RSP4_SPEC {}

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - CS delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn csdly(&mut self) -> CSDLY_W<ACTR_SPEC> {
+    pub fn csdly(&mut self) -> CSDLY_W<'_, ACTR_SPEC> {
         CSDLY_W::new(self, 0)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for ACTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`actr::W`](W) writer structure"]
 impl crate::Writable for ACTR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ACTR to value 0x0f"]
 impl crate::Resettable for ACTR_SPEC {

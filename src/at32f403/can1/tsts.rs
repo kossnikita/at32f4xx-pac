@@ -626,140 +626,120 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0TCF` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmtcf(&mut self, n: u8) -> TMTCF_W<TSTS_SPEC> {
+    pub fn tmtcf(&mut self, n: u8) -> TMTCF_W<'_, TSTS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         TMTCF_W::new(self, n * 8)
     }
     #[doc = "Bit 0 - Transmit mailbox 0 transmission complete flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm0tcf(&mut self) -> TMTCF_W<TSTS_SPEC> {
+    pub fn tm0tcf(&mut self) -> TMTCF_W<'_, TSTS_SPEC> {
         TMTCF_W::new(self, 0)
     }
     #[doc = "Bit 8 - Transmit mailbox 1 transmission complete flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm1tcf(&mut self) -> TMTCF_W<TSTS_SPEC> {
+    pub fn tm1tcf(&mut self) -> TMTCF_W<'_, TSTS_SPEC> {
         TMTCF_W::new(self, 8)
     }
     #[doc = "Bit 16 - Transmit mailbox 2 transmission complete flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm2tcf(&mut self) -> TMTCF_W<TSTS_SPEC> {
+    pub fn tm2tcf(&mut self) -> TMTCF_W<'_, TSTS_SPEC> {
         TMTCF_W::new(self, 16)
     }
     #[doc = "Transmit mailbox (0-2) transmission success flag"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0TSF` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmtsf(&mut self, n: u8) -> TMTSF_W<TSTS_SPEC> {
+    pub fn tmtsf(&mut self, n: u8) -> TMTSF_W<'_, TSTS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         TMTSF_W::new(self, n * 8 + 1)
     }
     #[doc = "Bit 1 - Transmit mailbox 0 transmission success flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm0tsf(&mut self) -> TMTSF_W<TSTS_SPEC> {
+    pub fn tm0tsf(&mut self) -> TMTSF_W<'_, TSTS_SPEC> {
         TMTSF_W::new(self, 1)
     }
     #[doc = "Bit 9 - Transmit mailbox 1 transmission success flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm1tsf(&mut self) -> TMTSF_W<TSTS_SPEC> {
+    pub fn tm1tsf(&mut self) -> TMTSF_W<'_, TSTS_SPEC> {
         TMTSF_W::new(self, 9)
     }
     #[doc = "Bit 17 - Transmit mailbox 2 transmission success flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm2tsf(&mut self) -> TMTSF_W<TSTS_SPEC> {
+    pub fn tm2tsf(&mut self) -> TMTSF_W<'_, TSTS_SPEC> {
         TMTSF_W::new(self, 17)
     }
     #[doc = "Transmit mailbox (0-2) arbitration lost flag"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0ALF` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmalf(&mut self, n: u8) -> TMALF_W<TSTS_SPEC> {
+    pub fn tmalf(&mut self, n: u8) -> TMALF_W<'_, TSTS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         TMALF_W::new(self, n * 8 + 2)
     }
     #[doc = "Bit 2 - Transmit mailbox 0 arbitration lost flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm0alf(&mut self) -> TMALF_W<TSTS_SPEC> {
+    pub fn tm0alf(&mut self) -> TMALF_W<'_, TSTS_SPEC> {
         TMALF_W::new(self, 2)
     }
     #[doc = "Bit 10 - Transmit mailbox 1 arbitration lost flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm1alf(&mut self) -> TMALF_W<TSTS_SPEC> {
+    pub fn tm1alf(&mut self) -> TMALF_W<'_, TSTS_SPEC> {
         TMALF_W::new(self, 10)
     }
     #[doc = "Bit 18 - Transmit mailbox 2 arbitration lost flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm2alf(&mut self) -> TMALF_W<TSTS_SPEC> {
+    pub fn tm2alf(&mut self) -> TMALF_W<'_, TSTS_SPEC> {
         TMALF_W::new(self, 18)
     }
     #[doc = "Transmit mailbox (0-2) transmission error flag"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0TEF` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmtef(&mut self, n: u8) -> TMTEF_W<TSTS_SPEC> {
+    pub fn tmtef(&mut self, n: u8) -> TMTEF_W<'_, TSTS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         TMTEF_W::new(self, n * 8 + 3)
     }
     #[doc = "Bit 3 - Transmit mailbox 0 transmission error flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm0tef(&mut self) -> TMTEF_W<TSTS_SPEC> {
+    pub fn tm0tef(&mut self) -> TMTEF_W<'_, TSTS_SPEC> {
         TMTEF_W::new(self, 3)
     }
     #[doc = "Bit 11 - Transmit mailbox 1 transmission error flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm1tef(&mut self) -> TMTEF_W<TSTS_SPEC> {
+    pub fn tm1tef(&mut self) -> TMTEF_W<'_, TSTS_SPEC> {
         TMTEF_W::new(self, 11)
     }
     #[doc = "Bit 19 - Transmit mailbox 2 transmission error flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm2tef(&mut self) -> TMTEF_W<TSTS_SPEC> {
+    pub fn tm2tef(&mut self) -> TMTEF_W<'_, TSTS_SPEC> {
         TMTEF_W::new(self, 19)
     }
     #[doc = "Transmit mailbox (0-2) cancel transmission"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TM0CT` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmct(&mut self, n: u8) -> TMCT_W<TSTS_SPEC> {
+    pub fn tmct(&mut self, n: u8) -> TMCT_W<'_, TSTS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         TMCT_W::new(self, n * 8 + 7)
     }
     #[doc = "Bit 7 - Transmit mailbox 0 cancel transmission"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm0ct(&mut self) -> TMCT_W<TSTS_SPEC> {
+    pub fn tm0ct(&mut self) -> TMCT_W<'_, TSTS_SPEC> {
         TMCT_W::new(self, 7)
     }
     #[doc = "Bit 15 - Transmit mailbox 1 cancel transmission"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm1ct(&mut self) -> TMCT_W<TSTS_SPEC> {
+    pub fn tm1ct(&mut self) -> TMCT_W<'_, TSTS_SPEC> {
         TMCT_W::new(self, 15)
     }
     #[doc = "Bit 23 - Transmit mailbox 2 cancel transmission"]
     #[inline(always)]
-    #[must_use]
-    pub fn tm2ct(&mut self) -> TMCT_W<TSTS_SPEC> {
+    pub fn tm2ct(&mut self) -> TMCT_W<'_, TSTS_SPEC> {
         TMCT_W::new(self, 23)
     }
 }
@@ -773,8 +753,7 @@ impl crate::Readable for TSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tsts::W`](W) writer structure"]
 impl crate::Writable for TSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x8f;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x008f_8f8f;
 }
 #[doc = "`reset()` method sets TSTS to value 0x1c00_0000"]
 impl crate::Resettable for TSTS_SPEC {

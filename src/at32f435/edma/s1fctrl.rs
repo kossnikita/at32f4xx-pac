@@ -51,20 +51,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - FIFO threshold selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn fthsel(&mut self) -> FTHSEL_W<S1FCTRL_SPEC> {
+    pub fn fthsel(&mut self) -> FTHSEL_W<'_, S1FCTRL_SPEC> {
         FTHSEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - FIFO mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn fen(&mut self) -> FEN_W<S1FCTRL_SPEC> {
+    pub fn fen(&mut self) -> FEN_W<'_, S1FCTRL_SPEC> {
         FEN_W::new(self, 2)
     }
     #[doc = "Bit 7 - FIFO error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ferrien(&mut self) -> FERRIEN_W<S1FCTRL_SPEC> {
+    pub fn ferrien(&mut self) -> FERRIEN_W<'_, S1FCTRL_SPEC> {
         FERRIEN_W::new(self, 7)
     }
 }
@@ -78,8 +75,6 @@ impl crate::Readable for S1FCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s1fctrl::W`](W) writer structure"]
 impl crate::Writable for S1FCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S1FCTRL to value 0x21"]
 impl crate::Resettable for S1FCTRL_SPEC {

@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Data offset for Preempted channel 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn dto(&mut self) -> DTO_W<PCDTO_SPEC> {
+    pub fn dto(&mut self) -> DTO_W<'_, PCDTO_SPEC> {
         DTO_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for PCDTO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pcdto::W`](W) writer structure"]
 impl crate::Writable for PCDTO_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PCDTO%s to value 0"]
-impl crate::Resettable for PCDTO_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PCDTO_SPEC {}

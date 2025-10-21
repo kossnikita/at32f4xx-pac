@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Mode register program to active delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmrd(&mut self) -> TMRD_W<TM2_SPEC> {
+    pub fn tmrd(&mut self) -> TMRD_W<'_, TM2_SPEC> {
         TMRD_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Exit Self-refresh to active delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn txsr(&mut self) -> TXSR_W<TM2_SPEC> {
+    pub fn txsr(&mut self) -> TXSR_W<'_, TM2_SPEC> {
         TXSR_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Self refresh time"]
     #[inline(always)]
-    #[must_use]
-    pub fn tras(&mut self) -> TRAS_W<TM2_SPEC> {
+    pub fn tras(&mut self) -> TRAS_W<'_, TM2_SPEC> {
         TRAS_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - Refresh to active delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn trc(&mut self) -> TRC_W<TM2_SPEC> {
+    pub fn trc(&mut self) -> TRC_W<'_, TM2_SPEC> {
         TRC_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - Write Recovery delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn twr(&mut self) -> TWR_W<TM2_SPEC> {
+    pub fn twr(&mut self) -> TWR_W<'_, TM2_SPEC> {
         TWR_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - Precharge to active delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn trp(&mut self) -> TRP_W<TM2_SPEC> {
+    pub fn trp(&mut self) -> TRP_W<'_, TM2_SPEC> {
         TRP_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - Row active to Read/Write delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn trcd(&mut self) -> TRCD_W<TM2_SPEC> {
+    pub fn trcd(&mut self) -> TRCD_W<'_, TM2_SPEC> {
         TRCD_W::new(self, 24)
     }
 }
@@ -134,8 +127,6 @@ impl crate::Readable for TM2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tm2::W`](W) writer structure"]
 impl crate::Writable for TM2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TM2 to value 0x0fff_ffff"]
 impl crate::Resettable for TM2_SPEC {

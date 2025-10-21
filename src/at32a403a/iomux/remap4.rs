@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - TMR1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1_gmux(&mut self) -> TMR1_GMUX_W<REMAP4_SPEC> {
+    pub fn tmr1_gmux(&mut self) -> TMR1_GMUX_W<'_, REMAP4_SPEC> {
         TMR1_GMUX_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - TMR2 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr2_gmux(&mut self) -> TMR2_GMUX_W<REMAP4_SPEC> {
+    pub fn tmr2_gmux(&mut self) -> TMR2_GMUX_W<'_, REMAP4_SPEC> {
         TMR2_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - TMR2 internal trigger 1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr2itr1_gmux(&mut self) -> TMR2ITR1_GMUX_W<REMAP4_SPEC> {
+    pub fn tmr2itr1_gmux(&mut self) -> TMR2ITR1_GMUX_W<'_, REMAP4_SPEC> {
         TMR2ITR1_GMUX_W::new(self, 6)
     }
     #[doc = "Bits 8:11 - TMR3 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr3_gmux(&mut self) -> TMR3_GMUX_W<REMAP4_SPEC> {
+    pub fn tmr3_gmux(&mut self) -> TMR3_GMUX_W<'_, REMAP4_SPEC> {
         TMR3_GMUX_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - TMR4 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr4_gmux(&mut self) -> TMR4_GMUX_W<REMAP4_SPEC> {
+    pub fn tmr4_gmux(&mut self) -> TMR4_GMUX_W<'_, REMAP4_SPEC> {
         TMR4_GMUX_W::new(self, 12)
     }
     #[doc = "Bit 19 - TMR5 channel4 internal muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr5ch4_gmux(&mut self) -> TMR5CH4_GMUX_W<REMAP4_SPEC> {
+    pub fn tmr5ch4_gmux(&mut self) -> TMR5CH4_GMUX_W<'_, REMAP4_SPEC> {
         TMR5CH4_GMUX_W::new(self, 19)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for REMAP4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap4::W`](W) writer structure"]
 impl crate::Writable for REMAP4_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP4 to value 0"]
-impl crate::Resettable for REMAP4_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP4_SPEC {}

@@ -211,40 +211,35 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Channel 1 configure"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1c(&mut self) -> C1C_W<CM1_INPUT_SPEC> {
+    pub fn c1c(&mut self) -> C1C_W<'_, CM1_INPUT_SPEC> {
         C1C_W::new(self, 0)
     }
     #[doc = "Channel (1-1) input divider"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IDIV` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cidiv(&mut self, n: u8) -> CIDIV_W<CM1_INPUT_SPEC> {
+    pub fn cidiv(&mut self, n: u8) -> CIDIV_W<'_, CM1_INPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         CIDIV_W::new(self, n * 0 + 2)
     }
     #[doc = "Bits 2:3 - Channel 1 input divider"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1idiv(&mut self) -> CIDIV_W<CM1_INPUT_SPEC> {
+    pub fn c1idiv(&mut self) -> CIDIV_W<'_, CM1_INPUT_SPEC> {
         CIDIV_W::new(self, 2)
     }
     #[doc = "Channel (1-1) digital filter"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1DF` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cdf(&mut self, n: u8) -> CDF_W<CM1_INPUT_SPEC> {
+    pub fn cdf(&mut self, n: u8) -> CDF_W<'_, CM1_INPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         CDF_W::new(self, n * 0 + 4)
     }
     #[doc = "Bits 4:7 - Channel 1 digital filter"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1df(&mut self) -> CDF_W<CM1_INPUT_SPEC> {
+    pub fn c1df(&mut self) -> CDF_W<'_, CM1_INPUT_SPEC> {
         CDF_W::new(self, 4)
     }
 }
@@ -258,10 +253,6 @@ impl crate::Readable for CM1_INPUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cm1_input::W`](W) writer structure"]
 impl crate::Writable for CM1_INPUT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CM1_INPUT to value 0"]
-impl crate::Resettable for CM1_INPUT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CM1_INPUT_SPEC {}

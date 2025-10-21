@@ -123,68 +123,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - TMR15 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr15_mux(&mut self) -> TMR15_MUX_W<REMAP2_SPEC> {
+    pub fn tmr15_mux(&mut self) -> TMR15_MUX_W<'_, REMAP2_SPEC> {
         TMR15_MUX_W::new(self, 0)
     }
     #[doc = "Bit 5 - TMR9 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr9_mux(&mut self) -> TMR9_MUX_W<REMAP2_SPEC> {
+    pub fn tmr9_mux(&mut self) -> TMR9_MUX_W<'_, REMAP2_SPEC> {
         TMR9_MUX_W::new(self, 5)
     }
     #[doc = "Bit 6 - TMR10 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr10_mux(&mut self) -> TMR10_MUX_W<REMAP2_SPEC> {
+    pub fn tmr10_mux(&mut self) -> TMR10_MUX_W<'_, REMAP2_SPEC> {
         TMR10_MUX_W::new(self, 6)
     }
     #[doc = "Bit 7 - TMR11 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr11_mux(&mut self) -> TMR11_MUX_W<REMAP2_SPEC> {
+    pub fn tmr11_mux(&mut self) -> TMR11_MUX_W<'_, REMAP2_SPEC> {
         TMR11_MUX_W::new(self, 7)
     }
     #[doc = "Bit 8 - TMR13 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr13_mux(&mut self) -> TMR13_MUX_W<REMAP2_SPEC> {
+    pub fn tmr13_mux(&mut self) -> TMR13_MUX_W<'_, REMAP2_SPEC> {
         TMR13_MUX_W::new(self, 8)
     }
     #[doc = "Bit 9 - TMR14 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr14_mux(&mut self) -> TMR14_MUX_W<REMAP2_SPEC> {
+    pub fn tmr14_mux(&mut self) -> TMR14_MUX_W<'_, REMAP2_SPEC> {
         TMR14_MUX_W::new(self, 9)
     }
     #[doc = "Bit 10 - NADV connect/disconnect"]
     #[inline(always)]
-    #[must_use]
-    pub fn xmc_nadv_mux(&mut self) -> XMC_NADV_MUX_W<REMAP2_SPEC> {
+    pub fn xmc_nadv_mux(&mut self) -> XMC_NADV_MUX_W<'_, REMAP2_SPEC> {
         XMC_NADV_MUX_W::new(self, 10)
     }
     #[doc = "Bit 17 - SPI4 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi4_mux(&mut self) -> SPI4_MUX_W<REMAP2_SPEC> {
+    pub fn spi4_mux(&mut self) -> SPI4_MUX_W<'_, REMAP2_SPEC> {
         SPI4_MUX_W::new(self, 17)
     }
     #[doc = "Bit 18 - I2C3 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c3_mux(&mut self) -> I2C3_MUX_W<REMAP2_SPEC> {
+    pub fn i2c3_mux(&mut self) -> I2C3_MUX_W<'_, REMAP2_SPEC> {
         I2C3_MUX_W::new(self, 18)
     }
     #[doc = "Bits 19:20 - SDIO2 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdio2_mux(&mut self) -> SDIO2_MUX_W<REMAP2_SPEC> {
+    pub fn sdio2_mux(&mut self) -> SDIO2_MUX_W<'_, REMAP2_SPEC> {
         SDIO2_MUX_W::new(self, 19)
     }
     #[doc = "Bit 21 - SPIM enable muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn ext_spim_en_mux(&mut self) -> EXT_SPIM_EN_MUX_W<REMAP2_SPEC> {
+    pub fn ext_spim_en_mux(&mut self) -> EXT_SPIM_EN_MUX_W<'_, REMAP2_SPEC> {
         EXT_SPIM_EN_MUX_W::new(self, 21)
     }
 }
@@ -198,10 +187,6 @@ impl crate::Readable for REMAP2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap2::W`](W) writer structure"]
 impl crate::Writable for REMAP2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP2 to value 0"]
-impl crate::Resettable for REMAP2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP2_SPEC {}

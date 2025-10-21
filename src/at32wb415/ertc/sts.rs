@@ -151,56 +151,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Time adjustment flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tadjf(&mut self) -> TADJF_W<STS_SPEC> {
+    pub fn tadjf(&mut self) -> TADJF_W<'_, STS_SPEC> {
         TADJF_W::new(self, 3)
     }
     #[doc = "Bit 5 - Calendar update flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn updf(&mut self) -> UPDF_W<STS_SPEC> {
+    pub fn updf(&mut self) -> UPDF_W<'_, STS_SPEC> {
         UPDF_W::new(self, 5)
     }
     #[doc = "Bit 7 - Initialization mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn imen(&mut self) -> IMEN_W<STS_SPEC> {
+    pub fn imen(&mut self) -> IMEN_W<'_, STS_SPEC> {
         IMEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Alarm A flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn alaf(&mut self) -> ALAF_W<STS_SPEC> {
+    pub fn alaf(&mut self) -> ALAF_W<'_, STS_SPEC> {
         ALAF_W::new(self, 8)
     }
     #[doc = "Bit 9 - Alarm B flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn albf(&mut self) -> ALBF_W<STS_SPEC> {
+    pub fn albf(&mut self) -> ALBF_W<'_, STS_SPEC> {
         ALBF_W::new(self, 9)
     }
     #[doc = "Bit 10 - Wakeup timer flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn watf(&mut self) -> WATF_W<STS_SPEC> {
+    pub fn watf(&mut self) -> WATF_W<'_, STS_SPEC> {
         WATF_W::new(self, 10)
     }
     #[doc = "Bit 11 - Timestamp flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsf(&mut self) -> TSF_W<STS_SPEC> {
+    pub fn tsf(&mut self) -> TSF_W<'_, STS_SPEC> {
         TSF_W::new(self, 11)
     }
     #[doc = "Bit 12 - Timestamp overflow flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsof(&mut self) -> TSOF_W<STS_SPEC> {
+    pub fn tsof(&mut self) -> TSOF_W<'_, STS_SPEC> {
         TSOF_W::new(self, 12)
     }
     #[doc = "Bit 13 - Tamper detection 1 flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tp1f(&mut self) -> TP1F_W<STS_SPEC> {
+    pub fn tp1f(&mut self) -> TP1F_W<'_, STS_SPEC> {
         TP1F_W::new(self, 13)
     }
 }
@@ -214,8 +205,6 @@ impl crate::Readable for STS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts::W`](W) writer structure"]
 impl crate::Writable for STS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0x07"]
 impl crate::Resettable for STS_SPEC {

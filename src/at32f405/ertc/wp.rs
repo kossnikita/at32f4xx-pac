@@ -14,10 +14,6 @@ impl crate::RegisterSpec for WP_SPEC {
 #[doc = "`write(|w| ..)` method takes [`wp::W`](W) writer structure"]
 impl crate::Writable for WP_SPEC {
     type Safety = crate::Safe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets WP to value 0"]
-impl crate::Resettable for WP_SPEC {
-    const RESET_VALUE: u8 = 0;
-}
+impl crate::Resettable for WP_SPEC {}

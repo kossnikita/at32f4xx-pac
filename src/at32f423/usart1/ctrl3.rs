@@ -866,98 +866,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn errien(&mut self) -> ERRIEN_W<CTRL3_SPEC> {
+    pub fn errien(&mut self) -> ERRIEN_W<'_, CTRL3_SPEC> {
         ERRIEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - IrDA enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn irdaen(&mut self) -> IRDAEN_W<CTRL3_SPEC> {
+    pub fn irdaen(&mut self) -> IRDAEN_W<'_, CTRL3_SPEC> {
         IRDAEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - IrDA low-power mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn irdalp(&mut self) -> IRDALP_W<CTRL3_SPEC> {
+    pub fn irdalp(&mut self) -> IRDALP_W<'_, CTRL3_SPEC> {
         IRDALP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Single line bidirectional half-duplex enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn slben(&mut self) -> SLBEN_W<CTRL3_SPEC> {
+    pub fn slben(&mut self) -> SLBEN_W<'_, CTRL3_SPEC> {
         SLBEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Smartcard NACK enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn scnacken(&mut self) -> SCNACKEN_W<CTRL3_SPEC> {
+    pub fn scnacken(&mut self) -> SCNACKEN_W<'_, CTRL3_SPEC> {
         SCNACKEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Smartcard mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn scmen(&mut self) -> SCMEN_W<CTRL3_SPEC> {
+    pub fn scmen(&mut self) -> SCMEN_W<'_, CTRL3_SPEC> {
         SCMEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - DMA receiver enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaren(&mut self) -> DMAREN_W<CTRL3_SPEC> {
+    pub fn dmaren(&mut self) -> DMAREN_W<'_, CTRL3_SPEC> {
         DMAREN_W::new(self, 6)
     }
     #[doc = "Bit 7 - DMA transmitter enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaten(&mut self) -> DMATEN_W<CTRL3_SPEC> {
+    pub fn dmaten(&mut self) -> DMATEN_W<'_, CTRL3_SPEC> {
         DMATEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - RTS enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rtsen(&mut self) -> RTSEN_W<CTRL3_SPEC> {
+    pub fn rtsen(&mut self) -> RTSEN_W<'_, CTRL3_SPEC> {
         RTSEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - CTS enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ctsen(&mut self) -> CTSEN_W<CTRL3_SPEC> {
+    pub fn ctsen(&mut self) -> CTSEN_W<'_, CTRL3_SPEC> {
         CTSEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - CTSCF interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ctscfien(&mut self) -> CTSCFIEN_W<CTRL3_SPEC> {
+    pub fn ctscfien(&mut self) -> CTSCFIEN_W<'_, CTRL3_SPEC> {
         CTSCFIEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Deepsleep mode usart enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn smusen(&mut self) -> SMUSEN_W<CTRL3_SPEC> {
+    pub fn smusen(&mut self) -> SMUSEN_W<'_, CTRL3_SPEC> {
         SMUSEN_W::new(self, 11)
     }
     #[doc = "Bit 13 - Low power wakeup flag interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn lpwufie(&mut self) -> LPWUFIE_W<CTRL3_SPEC> {
+    pub fn lpwufie(&mut self) -> LPWUFIE_W<'_, CTRL3_SPEC> {
         LPWUFIE_W::new(self, 13)
     }
     #[doc = "Bit 14 - RS485 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rs485en(&mut self) -> RS485EN_W<CTRL3_SPEC> {
+    pub fn rs485en(&mut self) -> RS485EN_W<'_, CTRL3_SPEC> {
         RS485EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - DE polarity selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn dep(&mut self) -> DEP_W<CTRL3_SPEC> {
+    pub fn dep(&mut self) -> DEP_W<'_, CTRL3_SPEC> {
         DEP_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - Low power wakeup method"]
     #[inline(always)]
-    #[must_use]
-    pub fn lpwum(&mut self) -> LPWUM_W<CTRL3_SPEC> {
+    pub fn lpwum(&mut self) -> LPWUM_W<'_, CTRL3_SPEC> {
         LPWUM_W::new(self, 16)
     }
 }
@@ -971,10 +955,6 @@ impl crate::Readable for CTRL3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl3::W`](W) writer structure"]
 impl crate::Writable for CTRL3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL3 to value 0"]
-impl crate::Resettable for CTRL3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL3_SPEC {}

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - PWRCTRL"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwrctrl(&mut self) -> PWRCTRL_W<POWER_SPEC> {
+    pub fn pwrctrl(&mut self) -> PWRCTRL_W<'_, POWER_SPEC> {
         PWRCTRL_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for POWER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`power::W`](W) writer structure"]
 impl crate::Writable for POWER_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets POWER to value 0"]
-impl crate::Resettable for POWER_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for POWER_SPEC {}

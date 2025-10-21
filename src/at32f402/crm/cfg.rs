@@ -460,50 +460,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - System clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sclksel(&mut self) -> SCLKSEL_W<CFG_SPEC> {
+    pub fn sclksel(&mut self) -> SCLKSEL_W<'_, CFG_SPEC> {
         SCLKSEL_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - AHB division"]
     #[inline(always)]
-    #[must_use]
-    pub fn ahbdiv(&mut self) -> AHBDIV_W<CFG_SPEC> {
+    pub fn ahbdiv(&mut self) -> AHBDIV_W<'_, CFG_SPEC> {
         AHBDIV_W::new(self, 4)
     }
     #[doc = "Bits 10:12 - APB1 division"]
     #[inline(always)]
-    #[must_use]
-    pub fn apb1div(&mut self) -> APB1DIV_W<CFG_SPEC> {
+    pub fn apb1div(&mut self) -> APB1DIV_W<'_, CFG_SPEC> {
         APB1DIV_W::new(self, 10)
     }
     #[doc = "Bits 13:15 - APB2 division"]
     #[inline(always)]
-    #[must_use]
-    pub fn apb2div(&mut self) -> APB2DIV_W<CFG_SPEC> {
+    pub fn apb2div(&mut self) -> APB2DIV_W<'_, CFG_SPEC> {
         APB2DIV_W::new(self, 13)
     }
     #[doc = "Bits 16:20 - HEXT division for ERTC clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn ertcdiv(&mut self) -> ERTCDIV_W<CFG_SPEC> {
+    pub fn ertcdiv(&mut self) -> ERTCDIV_W<'_, CFG_SPEC> {
         ERTCDIV_W::new(self, 16)
     }
     #[doc = "Bits 22:23 - I2S clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2s5clksel(&mut self) -> I2S5CLKSEL_W<CFG_SPEC> {
+    pub fn i2s5clksel(&mut self) -> I2S5CLKSEL_W<'_, CFG_SPEC> {
         I2S5CLKSEL_W::new(self, 22)
     }
     #[doc = "Bits 27:29 - Clock output division1"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkoutdiv1(&mut self) -> CLKOUTDIV1_W<CFG_SPEC> {
+    pub fn clkoutdiv1(&mut self) -> CLKOUTDIV1_W<'_, CFG_SPEC> {
         CLKOUTDIV1_W::new(self, 27)
     }
     #[doc = "Bits 30:31 - Clock output selection1"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkout_sel1(&mut self) -> CLKOUT_SEL1_W<CFG_SPEC> {
+    pub fn clkout_sel1(&mut self) -> CLKOUT_SEL1_W<'_, CFG_SPEC> {
         CLKOUT_SEL1_W::new(self, 30)
     }
 }
@@ -517,10 +509,6 @@ impl crate::Readable for CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg::W`](W) writer structure"]
 impl crate::Writable for CFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG to value 0"]
-impl crate::Resettable for CFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CFG_SPEC {}

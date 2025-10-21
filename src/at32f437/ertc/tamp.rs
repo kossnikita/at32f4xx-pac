@@ -143,80 +143,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Tamper detection 1 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tp1en(&mut self) -> TP1EN_W<TAMP_SPEC> {
+    pub fn tp1en(&mut self) -> TP1EN_W<'_, TAMP_SPEC> {
         TP1EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Tamper detection 1 valid edge"]
     #[inline(always)]
-    #[must_use]
-    pub fn tp1edg(&mut self) -> TP1EDG_W<TAMP_SPEC> {
+    pub fn tp1edg(&mut self) -> TP1EDG_W<'_, TAMP_SPEC> {
         TP1EDG_W::new(self, 1)
     }
     #[doc = "Bit 2 - Tamper detection interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpien(&mut self) -> TPIEN_W<TAMP_SPEC> {
+    pub fn tpien(&mut self) -> TPIEN_W<'_, TAMP_SPEC> {
         TPIEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Tamper detection 2 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tp2en(&mut self) -> TP2EN_W<TAMP_SPEC> {
+    pub fn tp2en(&mut self) -> TP2EN_W<'_, TAMP_SPEC> {
         TP2EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Tamper detection 2 valid edge"]
     #[inline(always)]
-    #[must_use]
-    pub fn tp2edg(&mut self) -> TP2EDG_W<TAMP_SPEC> {
+    pub fn tp2edg(&mut self) -> TP2EDG_W<'_, TAMP_SPEC> {
         TP2EDG_W::new(self, 4)
     }
     #[doc = "Bit 7 - Tamper detection timestamp enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tptsen(&mut self) -> TPTSEN_W<TAMP_SPEC> {
+    pub fn tptsen(&mut self) -> TPTSEN_W<'_, TAMP_SPEC> {
         TPTSEN_W::new(self, 7)
     }
     #[doc = "Bits 8:10 - Tamper detection frequency"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpfreq(&mut self) -> TPFREQ_W<TAMP_SPEC> {
+    pub fn tpfreq(&mut self) -> TPFREQ_W<'_, TAMP_SPEC> {
         TPFREQ_W::new(self, 8)
     }
     #[doc = "Bits 11:12 - Tamper detection filter time"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpflt(&mut self) -> TPFLT_W<TAMP_SPEC> {
+    pub fn tpflt(&mut self) -> TPFLT_W<'_, TAMP_SPEC> {
         TPFLT_W::new(self, 11)
     }
     #[doc = "Bits 13:14 - Tamper detection pre-charge time"]
     #[inline(always)]
-    #[must_use]
-    pub fn tppr(&mut self) -> TPPR_W<TAMP_SPEC> {
+    pub fn tppr(&mut self) -> TPPR_W<'_, TAMP_SPEC> {
         TPPR_W::new(self, 13)
     }
     #[doc = "Bit 15 - Tamper detection pull-up"]
     #[inline(always)]
-    #[must_use]
-    pub fn tppu(&mut self) -> TPPU_W<TAMP_SPEC> {
+    pub fn tppu(&mut self) -> TPPU_W<'_, TAMP_SPEC> {
         TPPU_W::new(self, 15)
     }
     #[doc = "Bit 16 - Tamper detection pin selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn tp1pin(&mut self) -> TP1PIN_W<TAMP_SPEC> {
+    pub fn tp1pin(&mut self) -> TP1PIN_W<'_, TAMP_SPEC> {
         TP1PIN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Time stamp detection pin selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn tspin(&mut self) -> TSPIN_W<TAMP_SPEC> {
+    pub fn tspin(&mut self) -> TSPIN_W<'_, TAMP_SPEC> {
         TSPIN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Output type"]
     #[inline(always)]
-    #[must_use]
-    pub fn outtype(&mut self) -> OUTTYPE_W<TAMP_SPEC> {
+    pub fn outtype(&mut self) -> OUTTYPE_W<'_, TAMP_SPEC> {
         OUTTYPE_W::new(self, 18)
     }
 }
@@ -230,10 +217,6 @@ impl crate::Readable for TAMP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tamp::W`](W) writer structure"]
 impl crate::Writable for TAMP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TAMP to value 0"]
-impl crate::Resettable for TAMP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TAMP_SPEC {}

@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Boot memory store application code enabled flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn btm_ap_enf(&mut self) -> BTM_AP_ENF_W<SLIB_STS0_SPEC> {
+    pub fn btm_ap_enf(&mut self) -> BTM_AP_ENF_W<'_, SLIB_STS0_SPEC> {
         BTM_AP_ENF_W::new(self, 0)
     }
     #[doc = "Bit 2 - Extension memory sLib enabled flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn em_slib_enf(&mut self) -> EM_SLIB_ENF_W<SLIB_STS0_SPEC> {
+    pub fn em_slib_enf(&mut self) -> EM_SLIB_ENF_W<'_, SLIB_STS0_SPEC> {
         EM_SLIB_ENF_W::new(self, 2)
     }
     #[doc = "Bit 3 - sLib enabled flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn slib_enf(&mut self) -> SLIB_ENF_W<SLIB_STS0_SPEC> {
+    pub fn slib_enf(&mut self) -> SLIB_ENF_W<'_, SLIB_STS0_SPEC> {
         SLIB_ENF_W::new(self, 3)
     }
     #[doc = "Bits 16:23 - Extension memory sLib instruction start sector"]
     #[inline(always)]
-    #[must_use]
-    pub fn em_slib_inst_ss(&mut self) -> EM_SLIB_INST_SS_W<SLIB_STS0_SPEC> {
+    pub fn em_slib_inst_ss(&mut self) -> EM_SLIB_INST_SS_W<'_, SLIB_STS0_SPEC> {
         EM_SLIB_INST_SS_W::new(self, 16)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for SLIB_STS0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slib_sts0::W`](W) writer structure"]
 impl crate::Writable for SLIB_STS0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLIB_STS0 to value 0"]
-impl crate::Resettable for SLIB_STS0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLIB_STS0_SPEC {}

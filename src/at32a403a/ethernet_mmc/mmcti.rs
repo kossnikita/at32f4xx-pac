@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 14 - Transmit single collision good frame counter interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn tscgfci(&mut self) -> TSCGFCI_W<MMCTI_SPEC> {
+    pub fn tscgfci(&mut self) -> TSCGFCI_W<'_, MMCTI_SPEC> {
         TSCGFCI_W::new(self, 14)
     }
     #[doc = "Bit 15 - Transmit good frames more single collision"]
     #[inline(always)]
-    #[must_use]
-    pub fn tgfmsc(&mut self) -> TGFMSC_W<MMCTI_SPEC> {
+    pub fn tgfmsc(&mut self) -> TGFMSC_W<'_, MMCTI_SPEC> {
         TGFMSC_W::new(self, 15)
     }
     #[doc = "Bit 21 - Transmitted good frames"]
     #[inline(always)]
-    #[must_use]
-    pub fn tgf(&mut self) -> TGF_W<MMCTI_SPEC> {
+    pub fn tgf(&mut self) -> TGF_W<'_, MMCTI_SPEC> {
         TGF_W::new(self, 21)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for MMCTI_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mmcti::W`](W) writer structure"]
 impl crate::Writable for MMCTI_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MMCTI to value 0"]
-impl crate::Resettable for MMCTI_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MMCTI_SPEC {}

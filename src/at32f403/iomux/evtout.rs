@@ -213,20 +213,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Select pin"]
     #[inline(always)]
-    #[must_use]
-    pub fn selpin(&mut self) -> SELPIN_W<EVTOUT_SPEC> {
+    pub fn selpin(&mut self) -> SELPIN_W<'_, EVTOUT_SPEC> {
         SELPIN_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Select port"]
     #[inline(always)]
-    #[must_use]
-    pub fn selport(&mut self) -> SELPORT_W<EVTOUT_SPEC> {
+    pub fn selport(&mut self) -> SELPORT_W<'_, EVTOUT_SPEC> {
         SELPORT_W::new(self, 4)
     }
     #[doc = "Bit 7 - Event output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn evoen(&mut self) -> EVOEN_W<EVTOUT_SPEC> {
+    pub fn evoen(&mut self) -> EVOEN_W<'_, EVTOUT_SPEC> {
         EVOEN_W::new(self, 7)
     }
 }
@@ -240,10 +237,6 @@ impl crate::Readable for EVTOUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`evtout::W`](W) writer structure"]
 impl crate::Writable for EVTOUT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EVTOUT to value 0"]
-impl crate::Resettable for EVTOUT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EVTOUT_SPEC {}

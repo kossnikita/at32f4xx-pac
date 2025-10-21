@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PB3 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb3_uh(&mut self) -> PB3_UH_W<UHDRV_SPEC> {
+    pub fn pb3_uh(&mut self) -> PB3_UH_W<'_, UHDRV_SPEC> {
         PB3_UH_W::new(self, 0)
     }
     #[doc = "Bit 1 - PB9 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb9_uh(&mut self) -> PB9_UH_W<UHDRV_SPEC> {
+    pub fn pb9_uh(&mut self) -> PB9_UH_W<'_, UHDRV_SPEC> {
         PB9_UH_W::new(self, 1)
     }
     #[doc = "Bit 2 - PB10 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb10_uh(&mut self) -> PB10_UH_W<UHDRV_SPEC> {
+    pub fn pb10_uh(&mut self) -> PB10_UH_W<'_, UHDRV_SPEC> {
         PB10_UH_W::new(self, 2)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for UHDRV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`uhdrv::W`](W) writer structure"]
 impl crate::Writable for UHDRV_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets UHDRV to value 0"]
-impl crate::Resettable for UHDRV_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UHDRV_SPEC {}

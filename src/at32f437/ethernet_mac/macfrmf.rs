@@ -123,68 +123,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Promiscuous mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn pr(&mut self) -> PR_W<MACFRMF_SPEC> {
+    pub fn pr(&mut self) -> PR_W<'_, MACFRMF_SPEC> {
         PR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Hash unicast"]
     #[inline(always)]
-    #[must_use]
-    pub fn huc(&mut self) -> HUC_W<MACFRMF_SPEC> {
+    pub fn huc(&mut self) -> HUC_W<'_, MACFRMF_SPEC> {
         HUC_W::new(self, 1)
     }
     #[doc = "Bit 2 - Hash multicast"]
     #[inline(always)]
-    #[must_use]
-    pub fn hmc(&mut self) -> HMC_W<MACFRMF_SPEC> {
+    pub fn hmc(&mut self) -> HMC_W<'_, MACFRMF_SPEC> {
         HMC_W::new(self, 2)
     }
     #[doc = "Bit 3 - Destination address inverse filtering"]
     #[inline(always)]
-    #[must_use]
-    pub fn daif(&mut self) -> DAIF_W<MACFRMF_SPEC> {
+    pub fn daif(&mut self) -> DAIF_W<'_, MACFRMF_SPEC> {
         DAIF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Pass multicast"]
     #[inline(always)]
-    #[must_use]
-    pub fn pmc(&mut self) -> PMC_W<MACFRMF_SPEC> {
+    pub fn pmc(&mut self) -> PMC_W<'_, MACFRMF_SPEC> {
         PMC_W::new(self, 4)
     }
     #[doc = "Bit 5 - Disable broadcast frames"]
     #[inline(always)]
-    #[must_use]
-    pub fn dbf(&mut self) -> DBF_W<MACFRMF_SPEC> {
+    pub fn dbf(&mut self) -> DBF_W<'_, MACFRMF_SPEC> {
         DBF_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - Pass control frames"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcf(&mut self) -> PCF_W<MACFRMF_SPEC> {
+    pub fn pcf(&mut self) -> PCF_W<'_, MACFRMF_SPEC> {
         PCF_W::new(self, 6)
     }
     #[doc = "Bit 8 - Source address inverse filtering"]
     #[inline(always)]
-    #[must_use]
-    pub fn saif(&mut self) -> SAIF_W<MACFRMF_SPEC> {
+    pub fn saif(&mut self) -> SAIF_W<'_, MACFRMF_SPEC> {
         SAIF_W::new(self, 8)
     }
     #[doc = "Bit 9 - Source address filter"]
     #[inline(always)]
-    #[must_use]
-    pub fn saf(&mut self) -> SAF_W<MACFRMF_SPEC> {
+    pub fn saf(&mut self) -> SAF_W<'_, MACFRMF_SPEC> {
         SAF_W::new(self, 9)
     }
     #[doc = "Bit 10 - Hash or perfect filter"]
     #[inline(always)]
-    #[must_use]
-    pub fn hpf(&mut self) -> HPF_W<MACFRMF_SPEC> {
+    pub fn hpf(&mut self) -> HPF_W<'_, MACFRMF_SPEC> {
         HPF_W::new(self, 10)
     }
     #[doc = "Bit 31 - Receive all"]
     #[inline(always)]
-    #[must_use]
-    pub fn ra(&mut self) -> RA_W<MACFRMF_SPEC> {
+    pub fn ra(&mut self) -> RA_W<'_, MACFRMF_SPEC> {
         RA_W::new(self, 31)
     }
 }
@@ -198,10 +187,6 @@ impl crate::Readable for MACFRMF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macfrmf::W`](W) writer structure"]
 impl crate::Writable for MACFRMF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACFRMF to value 0"]
-impl crate::Resettable for MACFRMF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MACFRMF_SPEC {}

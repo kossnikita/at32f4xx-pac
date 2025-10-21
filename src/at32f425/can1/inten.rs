@@ -879,116 +879,99 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transmission complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcien(&mut self) -> TCIEN_W<INTEN_SPEC> {
+    pub fn tcien(&mut self) -> TCIEN_W<'_, INTEN_SPEC> {
         TCIEN_W::new(self, 0)
     }
     #[doc = "FIFO (0-1) receive message interrupt enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RF0MIEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn rfmien(&mut self, n: u8) -> RFMIEN_W<INTEN_SPEC> {
+    pub fn rfmien(&mut self, n: u8) -> RFMIEN_W<'_, INTEN_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         RFMIEN_W::new(self, n * 3 + 1)
     }
     #[doc = "Bit 1 - FIFO 0 receive message interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rf0mien(&mut self) -> RFMIEN_W<INTEN_SPEC> {
+    pub fn rf0mien(&mut self) -> RFMIEN_W<'_, INTEN_SPEC> {
         RFMIEN_W::new(self, 1)
     }
     #[doc = "Bit 4 - FIFO 1 receive message interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rf1mien(&mut self) -> RFMIEN_W<INTEN_SPEC> {
+    pub fn rf1mien(&mut self) -> RFMIEN_W<'_, INTEN_SPEC> {
         RFMIEN_W::new(self, 4)
     }
     #[doc = "Receive FIFO (0-1) full interrupt enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RF0FIEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn rffien(&mut self, n: u8) -> RFFIEN_W<INTEN_SPEC> {
+    pub fn rffien(&mut self, n: u8) -> RFFIEN_W<'_, INTEN_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         RFFIEN_W::new(self, n * 3 + 2)
     }
     #[doc = "Bit 2 - Receive FIFO 0 full interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rf0fien(&mut self) -> RFFIEN_W<INTEN_SPEC> {
+    pub fn rf0fien(&mut self) -> RFFIEN_W<'_, INTEN_SPEC> {
         RFFIEN_W::new(self, 2)
     }
     #[doc = "Bit 5 - Receive FIFO 1 full interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rf1fien(&mut self) -> RFFIEN_W<INTEN_SPEC> {
+    pub fn rf1fien(&mut self) -> RFFIEN_W<'_, INTEN_SPEC> {
         RFFIEN_W::new(self, 5)
     }
     #[doc = "Receive FIFO (0-1) overflow interrupt enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `RF0OIEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn rfoien(&mut self, n: u8) -> RFOIEN_W<INTEN_SPEC> {
+    pub fn rfoien(&mut self, n: u8) -> RFOIEN_W<'_, INTEN_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         RFOIEN_W::new(self, n * 3 + 3)
     }
     #[doc = "Bit 3 - Receive FIFO 0 overflow interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rf0oien(&mut self) -> RFOIEN_W<INTEN_SPEC> {
+    pub fn rf0oien(&mut self) -> RFOIEN_W<'_, INTEN_SPEC> {
         RFOIEN_W::new(self, 3)
     }
     #[doc = "Bit 6 - Receive FIFO 1 overflow interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rf1oien(&mut self) -> RFOIEN_W<INTEN_SPEC> {
+    pub fn rf1oien(&mut self) -> RFOIEN_W<'_, INTEN_SPEC> {
         RFOIEN_W::new(self, 6)
     }
     #[doc = "Bit 8 - Error active interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eaien(&mut self) -> EAIEN_W<INTEN_SPEC> {
+    pub fn eaien(&mut self) -> EAIEN_W<'_, INTEN_SPEC> {
         EAIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Error passive interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn epien(&mut self) -> EPIEN_W<INTEN_SPEC> {
+    pub fn epien(&mut self) -> EPIEN_W<'_, INTEN_SPEC> {
         EPIEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Bus-off interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn boien(&mut self) -> BOIEN_W<INTEN_SPEC> {
+    pub fn boien(&mut self) -> BOIEN_W<'_, INTEN_SPEC> {
         BOIEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Error type record interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn etrien(&mut self) -> ETRIEN_W<INTEN_SPEC> {
+    pub fn etrien(&mut self) -> ETRIEN_W<'_, INTEN_SPEC> {
         ETRIEN_W::new(self, 11)
     }
     #[doc = "Bit 15 - Error occur interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eoien(&mut self) -> EOIEN_W<INTEN_SPEC> {
+    pub fn eoien(&mut self) -> EOIEN_W<'_, INTEN_SPEC> {
         EOIEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Quit doze mode interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn qdzien(&mut self) -> QDZIEN_W<INTEN_SPEC> {
+    pub fn qdzien(&mut self) -> QDZIEN_W<'_, INTEN_SPEC> {
         QDZIEN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Enter doze mode interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn edzien(&mut self) -> EDZIEN_W<INTEN_SPEC> {
+    pub fn edzien(&mut self) -> EDZIEN_W<'_, INTEN_SPEC> {
         EDZIEN_W::new(self, 17)
     }
 }
@@ -1002,10 +985,6 @@ impl crate::Readable for INTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`inten::W`](W) writer structure"]
 impl crate::Writable for INTEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTEN to value 0"]
-impl crate::Resettable for INTEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTEN_SPEC {}

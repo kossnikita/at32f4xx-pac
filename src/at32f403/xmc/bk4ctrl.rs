@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Wait feature enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn nwen(&mut self) -> NWEN_W<BK4CTRL_SPEC> {
+    pub fn nwen(&mut self) -> NWEN_W<'_, BK4CTRL_SPEC> {
         NWEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Memory bank enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en(&mut self) -> EN_W<BK4CTRL_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, BK4CTRL_SPEC> {
         EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Memory device type"]
     #[inline(always)]
-    #[must_use]
-    pub fn dev(&mut self) -> DEV_W<BK4CTRL_SPEC> {
+    pub fn dev(&mut self) -> DEV_W<'_, BK4CTRL_SPEC> {
         DEV_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - External memory data bus width"]
     #[inline(always)]
-    #[must_use]
-    pub fn extmdbw(&mut self) -> EXTMDBW_W<BK4CTRL_SPEC> {
+    pub fn extmdbw(&mut self) -> EXTMDBW_W<'_, BK4CTRL_SPEC> {
         EXTMDBW_W::new(self, 4)
     }
     #[doc = "Bit 6 - ECC enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eccen(&mut self) -> ECCEN_W<BK4CTRL_SPEC> {
+    pub fn eccen(&mut self) -> ECCEN_W<'_, BK4CTRL_SPEC> {
         ECCEN_W::new(self, 6)
     }
     #[doc = "Bits 9:12 - CLE to RE delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcr(&mut self) -> TCR_W<BK4CTRL_SPEC> {
+    pub fn tcr(&mut self) -> TCR_W<'_, BK4CTRL_SPEC> {
         TCR_W::new(self, 9)
     }
     #[doc = "Bits 13:16 - ALE to RE delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn tar(&mut self) -> TAR_W<BK4CTRL_SPEC> {
+    pub fn tar(&mut self) -> TAR_W<'_, BK4CTRL_SPEC> {
         TAR_W::new(self, 13)
     }
     #[doc = "Bits 17:19 - ECC page size"]
     #[inline(always)]
-    #[must_use]
-    pub fn eccpgs(&mut self) -> ECCPGS_W<BK4CTRL_SPEC> {
+    pub fn eccpgs(&mut self) -> ECCPGS_W<'_, BK4CTRL_SPEC> {
         ECCPGS_W::new(self, 17)
     }
 }
@@ -150,8 +142,6 @@ impl crate::Readable for BK4CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk4ctrl::W`](W) writer structure"]
 impl crate::Writable for BK4CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK4CTRL to value 0x18"]
 impl crate::Resettable for BK4CTRL_SPEC {

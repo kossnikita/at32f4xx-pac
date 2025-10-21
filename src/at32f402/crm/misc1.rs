@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - HICKCAL write key value"]
     #[inline(always)]
-    #[must_use]
-    pub fn hickcal_key(&mut self) -> HICKCAL_KEY_W<MISC1_SPEC> {
+    pub fn hickcal_key(&mut self) -> HICKCAL_KEY_W<'_, MISC1_SPEC> {
         HICKCAL_KEY_W::new(self, 0)
     }
     #[doc = "Bit 12 - HICK 6 divider selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn hickdiv(&mut self) -> HICKDIV_W<MISC1_SPEC> {
+    pub fn hickdiv(&mut self) -> HICKDIV_W<'_, MISC1_SPEC> {
         HICKDIV_W::new(self, 12)
     }
     #[doc = "Bit 14 - HICK to system clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<MISC1_SPEC> {
+    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<'_, MISC1_SPEC> {
         HICK_TO_SCLK_W::new(self, 14)
     }
     #[doc = "Bits 16:19 - Clock output select2"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkout_sel2(&mut self) -> CLKOUT_SEL2_W<MISC1_SPEC> {
+    pub fn clkout_sel2(&mut self) -> CLKOUT_SEL2_W<'_, MISC1_SPEC> {
         CLKOUT_SEL2_W::new(self, 16)
     }
     #[doc = "Bits 28:31 - Clock output division2"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkoutdiv2(&mut self) -> CLKOUTDIV2_W<MISC1_SPEC> {
+    pub fn clkoutdiv2(&mut self) -> CLKOUTDIV2_W<'_, MISC1_SPEC> {
         CLKOUTDIV2_W::new(self, 28)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for MISC1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`misc1::W`](W) writer structure"]
 impl crate::Writable for MISC1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MISC1 to value 0"]
-impl crate::Resettable for MISC1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MISC1_SPEC {}

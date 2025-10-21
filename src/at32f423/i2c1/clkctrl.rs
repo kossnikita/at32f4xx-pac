@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - SCL low level"]
     #[inline(always)]
-    #[must_use]
-    pub fn scll(&mut self) -> SCLL_W<CLKCTRL_SPEC> {
+    pub fn scll(&mut self) -> SCLL_W<'_, CLKCTRL_SPEC> {
         SCLL_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - SCL high level"]
     #[inline(always)]
-    #[must_use]
-    pub fn sclh(&mut self) -> SCLH_W<CLKCTRL_SPEC> {
+    pub fn sclh(&mut self) -> SCLH_W<'_, CLKCTRL_SPEC> {
         SCLH_W::new(self, 8)
     }
     #[doc = "Bits 16:19 - SDA output delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdad(&mut self) -> SDAD_W<CLKCTRL_SPEC> {
+    pub fn sdad(&mut self) -> SDAD_W<'_, CLKCTRL_SPEC> {
         SDAD_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - SCL output delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn scld(&mut self) -> SCLD_W<CLKCTRL_SPEC> {
+    pub fn scld(&mut self) -> SCLD_W<'_, CLKCTRL_SPEC> {
         SCLD_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - High 4 bits of clock divider value"]
     #[inline(always)]
-    #[must_use]
-    pub fn divh(&mut self) -> DIVH_W<CLKCTRL_SPEC> {
+    pub fn divh(&mut self) -> DIVH_W<'_, CLKCTRL_SPEC> {
         DIVH_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - Low 4 bits of clock divider value"]
     #[inline(always)]
-    #[must_use]
-    pub fn divl(&mut self) -> DIVL_W<CLKCTRL_SPEC> {
+    pub fn divl(&mut self) -> DIVL_W<'_, CLKCTRL_SPEC> {
         DIVL_W::new(self, 28)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for CLKCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clkctrl::W`](W) writer structure"]
 impl crate::Writable for CLKCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLKCTRL to value 0"]
-impl crate::Resettable for CLKCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLKCTRL_SPEC {}

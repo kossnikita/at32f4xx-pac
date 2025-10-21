@@ -19193,7 +19193,7 @@
         </register>
         <register>
           <name>I2SCLK</name>
-          <displayName>I2SCLKP</displayName>
+          <displayName>I2SCLK</displayName>
           <description>I2S clock register</description>
           <addressOffset>0x20</addressOffset>
           <size>0x20</size>

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Memory 1 address (used in case of Double buffer mode)"]
     #[inline(always)]
-    #[must_use]
-    pub fn m1addr(&mut self) -> M1ADDR_W<S3M1ADDR_SPEC> {
+    pub fn m1addr(&mut self) -> M1ADDR_W<'_, S3M1ADDR_SPEC> {
         M1ADDR_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for S3M1ADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s3m1addr::W`](W) writer structure"]
 impl crate::Writable for S3M1ADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S3M1ADDR to value 0"]
-impl crate::Resettable for S3M1ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for S3M1ADDR_SPEC {}

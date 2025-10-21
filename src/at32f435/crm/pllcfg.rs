@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - PLL pre-division"]
     #[inline(always)]
-    #[must_use]
-    pub fn pll_ms(&mut self) -> PLL_MS_W<PLLCFG_SPEC> {
+    pub fn pll_ms(&mut self) -> PLL_MS_W<'_, PLLCFG_SPEC> {
         PLL_MS_W::new(self, 0)
     }
     #[doc = "Bits 6:14 - PLL frequency multiplication factor"]
     #[inline(always)]
-    #[must_use]
-    pub fn pll_ns(&mut self) -> PLL_NS_W<PLLCFG_SPEC> {
+    pub fn pll_ns(&mut self) -> PLL_NS_W<'_, PLLCFG_SPEC> {
         PLL_NS_W::new(self, 6)
     }
     #[doc = "Bits 16:18 - PLL post-division"]
     #[inline(always)]
-    #[must_use]
-    pub fn pll_fr(&mut self) -> PLL_FR_W<PLLCFG_SPEC> {
+    pub fn pll_fr(&mut self) -> PLL_FR_W<'_, PLLCFG_SPEC> {
         PLL_FR_W::new(self, 16)
     }
     #[doc = "Bit 22 - PLL reference clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllrcs(&mut self) -> PLLRCS_W<PLLCFG_SPEC> {
+    pub fn pllrcs(&mut self) -> PLLRCS_W<'_, PLLCFG_SPEC> {
         PLLRCS_W::new(self, 22)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for PLLCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pllcfg::W`](W) writer structure"]
 impl crate::Writable for PLLCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PLLCFG to value 0x0003_3002"]
 impl crate::Resettable for PLLCFG_SPEC {

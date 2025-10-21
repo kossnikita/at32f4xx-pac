@@ -10,8 +10,7 @@ impl core::fmt::Debug for crate::generic::Reg<TAH_SPEC> {
 impl W {
     #[doc = "Bits 0:15 - Time alarm register high"]
     #[inline(always)]
-    #[must_use]
-    pub fn ta(&mut self) -> TA_W<TAH_SPEC> {
+    pub fn ta(&mut self) -> TA_W<'_, TAH_SPEC> {
         TA_W::new(self, 0)
     }
 }
@@ -23,8 +22,6 @@ impl crate::RegisterSpec for TAH_SPEC {
 #[doc = "`write(|w| ..)` method takes [`tah::W`](W) writer structure"]
 impl crate::Writable for TAH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TAH to value 0xffff"]
 impl crate::Resettable for TAH_SPEC {

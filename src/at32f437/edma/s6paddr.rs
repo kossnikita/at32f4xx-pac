@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Peripheral address"]
     #[inline(always)]
-    #[must_use]
-    pub fn paddr(&mut self) -> PADDR_W<S6PADDR_SPEC> {
+    pub fn paddr(&mut self) -> PADDR_W<'_, S6PADDR_SPEC> {
         PADDR_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for S6PADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s6paddr::W`](W) writer structure"]
 impl crate::Writable for S6PADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S6PADDR to value 0"]
-impl crate::Resettable for S6PADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for S6PADDR_SPEC {}

@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Memory mapping selection bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn mem_map_sel(&mut self) -> MEM_MAP_SEL_W<CFG1_SPEC> {
+    pub fn mem_map_sel(&mut self) -> MEM_MAP_SEL_W<'_, CFG1_SPEC> {
         MEM_MAP_SEL_W::new(self, 0)
     }
     #[doc = "Bit 4 - PA11/PA12 pins remapping bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn pa11_12_rmp(&mut self) -> PA11_12_RMP_W<CFG1_SPEC> {
+    pub fn pa11_12_rmp(&mut self) -> PA11_12_RMP_W<'_, CFG1_SPEC> {
         PA11_12_RMP_W::new(self, 4)
     }
     #[doc = "Bit 5 - Infrared output polarity selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn ir_pol(&mut self) -> IR_POL_W<CFG1_SPEC> {
+    pub fn ir_pol(&mut self) -> IR_POL_W<'_, CFG1_SPEC> {
         IR_POL_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - Infrared modulation envelope signal source selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn ir_src_sel(&mut self) -> IR_SRC_SEL_W<CFG1_SPEC> {
+    pub fn ir_src_sel(&mut self) -> IR_SRC_SEL_W<'_, CFG1_SPEC> {
         IR_SRC_SEL_W::new(self, 6)
     }
     #[doc = "Bit 16 - PB14 Ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb14_uh(&mut self) -> PB14_UH_W<CFG1_SPEC> {
+    pub fn pb14_uh(&mut self) -> PB14_UH_W<'_, CFG1_SPEC> {
         PB14_UH_W::new(self, 16)
     }
     #[doc = "Bit 17 - PB13 Ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb13_uh(&mut self) -> PB13_UH_W<CFG1_SPEC> {
+    pub fn pb13_uh(&mut self) -> PB13_UH_W<'_, CFG1_SPEC> {
         PB13_UH_W::new(self, 17)
     }
     #[doc = "Bit 18 - PB9 Ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb9_uh(&mut self) -> PB9_UH_W<CFG1_SPEC> {
+    pub fn pb9_uh(&mut self) -> PB9_UH_W<'_, CFG1_SPEC> {
         PB9_UH_W::new(self, 18)
     }
     #[doc = "Bit 19 - PB8 Ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb8_uh(&mut self) -> PB8_UH_W<CFG1_SPEC> {
+    pub fn pb8_uh(&mut self) -> PB8_UH_W<'_, CFG1_SPEC> {
         PB8_UH_W::new(self, 19)
     }
 }
@@ -150,10 +142,6 @@ impl crate::Readable for CFG1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg1::W`](W) writer structure"]
 impl crate::Writable for CFG1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG1 to value 0"]
-impl crate::Resettable for CFG1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CFG1_SPEC {}

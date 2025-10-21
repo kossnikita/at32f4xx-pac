@@ -58,34 +58,29 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OSN29` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn(&mut self, n: u8) -> OSN_W<OSQ6_SPEC> {
+    pub fn osn(&mut self, n: u8) -> OSN_W<'_, OSQ6_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         OSN_W::new(self, n * 5)
     }
     #[doc = "Bits 0:4 - Number of 29th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn29(&mut self) -> OSN_W<OSQ6_SPEC> {
+    pub fn osn29(&mut self) -> OSN_W<'_, OSQ6_SPEC> {
         OSN_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Number of 30th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn30(&mut self) -> OSN_W<OSQ6_SPEC> {
+    pub fn osn30(&mut self) -> OSN_W<'_, OSQ6_SPEC> {
         OSN_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - Number of 31th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn31(&mut self) -> OSN_W<OSQ6_SPEC> {
+    pub fn osn31(&mut self) -> OSN_W<'_, OSQ6_SPEC> {
         OSN_W::new(self, 10)
     }
     #[doc = "Bits 15:19 - Number of 32th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn32(&mut self) -> OSN_W<OSQ6_SPEC> {
+    pub fn osn32(&mut self) -> OSN_W<'_, OSQ6_SPEC> {
         OSN_W::new(self, 15)
     }
 }
@@ -99,10 +94,6 @@ impl crate::Readable for OSQ6_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`osq6::W`](W) writer structure"]
 impl crate::Writable for OSQ6_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OSQ6 to value 0"]
-impl crate::Resettable for OSQ6_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OSQ6_SPEC {}

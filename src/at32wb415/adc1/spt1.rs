@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Selection sample time of channel ADC_IN10"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt10(&mut self) -> CSPT10_W<SPT1_SPEC> {
+    pub fn cspt10(&mut self) -> CSPT10_W<'_, SPT1_SPEC> {
         CSPT10_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Selection sample time of channel ADC_IN11"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt11(&mut self) -> CSPT11_W<SPT1_SPEC> {
+    pub fn cspt11(&mut self) -> CSPT11_W<'_, SPT1_SPEC> {
         CSPT11_W::new(self, 3)
     }
     #[doc = "Bits 18:20 - Selection sample time of channel ADC_IN16"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt16(&mut self) -> CSPT16_W<SPT1_SPEC> {
+    pub fn cspt16(&mut self) -> CSPT16_W<'_, SPT1_SPEC> {
         CSPT16_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - Selection sample time of channel ADC_IN17"]
     #[inline(always)]
-    #[must_use]
-    pub fn cspt17(&mut self) -> CSPT17_W<SPT1_SPEC> {
+    pub fn cspt17(&mut self) -> CSPT17_W<'_, SPT1_SPEC> {
         CSPT17_W::new(self, 21)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for SPT1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spt1::W`](W) writer structure"]
 impl crate::Writable for SPT1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPT1 to value 0"]
-impl crate::Resettable for SPT1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SPT1_SPEC {}

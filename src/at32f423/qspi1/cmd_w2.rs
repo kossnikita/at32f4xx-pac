@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Read write data counter"]
     #[inline(always)]
-    #[must_use]
-    pub fn dcnt(&mut self) -> DCNT_W<CMD_W2_SPEC> {
+    pub fn dcnt(&mut self) -> DCNT_W<'_, CMD_W2_SPEC> {
         DCNT_W::new(self, 0)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for CMD_W2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cmd_w2::W`](W) writer structure"]
 impl crate::Writable for CMD_W2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CMD_W2 to value 0x0100_0003"]
 impl crate::Resettable for CMD_W2_SPEC {

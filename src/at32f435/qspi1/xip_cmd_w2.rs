@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - XIP read data counter"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipr_dcnt(&mut self) -> XIPR_DCNT_W<XIP_CMD_W2_SPEC> {
+    pub fn xipr_dcnt(&mut self) -> XIPR_DCNT_W<'_, XIP_CMD_W2_SPEC> {
         XIPR_DCNT_W::new(self, 0)
     }
     #[doc = "Bits 8:14 - XIP continue read cycle counter"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipr_tcnt(&mut self) -> XIPR_TCNT_W<XIP_CMD_W2_SPEC> {
+    pub fn xipr_tcnt(&mut self) -> XIPR_TCNT_W<'_, XIP_CMD_W2_SPEC> {
         XIPR_TCNT_W::new(self, 8)
     }
     #[doc = "Bit 15 - XIP read continue mode select"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipr_sel(&mut self) -> XIPR_SEL_W<XIP_CMD_W2_SPEC> {
+    pub fn xipr_sel(&mut self) -> XIPR_SEL_W<'_, XIP_CMD_W2_SPEC> {
         XIPR_SEL_W::new(self, 15)
     }
     #[doc = "Bits 16:20 - XIP write data counter"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipw_dcnt(&mut self) -> XIPW_DCNT_W<XIP_CMD_W2_SPEC> {
+    pub fn xipw_dcnt(&mut self) -> XIPW_DCNT_W<'_, XIP_CMD_W2_SPEC> {
         XIPW_DCNT_W::new(self, 16)
     }
     #[doc = "Bits 24:30 - XIP continue write cycle counter"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipw_tcnt(&mut self) -> XIPW_TCNT_W<XIP_CMD_W2_SPEC> {
+    pub fn xipw_tcnt(&mut self) -> XIPW_TCNT_W<'_, XIP_CMD_W2_SPEC> {
         XIPW_TCNT_W::new(self, 24)
     }
     #[doc = "Bit 31 - XIP write continue mode select"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipw_sel(&mut self) -> XIPW_SEL_W<XIP_CMD_W2_SPEC> {
+    pub fn xipw_sel(&mut self) -> XIPW_SEL_W<'_, XIP_CMD_W2_SPEC> {
         XIPW_SEL_W::new(self, 31)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for XIP_CMD_W2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`xip_cmd_w2::W`](W) writer structure"]
 impl crate::Writable for XIP_CMD_W2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets XIP_CMD_W2 to value 0"]
-impl crate::Resettable for XIP_CMD_W2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for XIP_CMD_W2_SPEC {}

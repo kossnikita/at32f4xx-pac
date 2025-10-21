@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Bus turnaround phase for consecutive write duration"]
     #[inline(always)]
-    #[must_use]
-    pub fn buslatw2w(&mut self) -> BUSLATW2W_W<EXT4_SPEC> {
+    pub fn buslatw2w(&mut self) -> BUSLATW2W_W<'_, EXT4_SPEC> {
         BUSLATW2W_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Bus turnaround phase for consecutive read duration"]
     #[inline(always)]
-    #[must_use]
-    pub fn buslatr2r(&mut self) -> BUSLATR2R_W<EXT4_SPEC> {
+    pub fn buslatr2r(&mut self) -> BUSLATR2R_W<'_, EXT4_SPEC> {
         BUSLATR2R_W::new(self, 8)
     }
 }
@@ -54,8 +52,6 @@ impl crate::Readable for EXT4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ext4::W`](W) writer structure"]
 impl crate::Writable for EXT4_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXT4 to value 0x0808"]
 impl crate::Resettable for EXT4_SPEC {

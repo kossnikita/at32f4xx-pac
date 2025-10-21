@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Repetition of period value"]
     #[inline(always)]
-    #[must_use]
-    pub fn rpr(&mut self) -> RPR_W<RPR_SPEC> {
+    pub fn rpr(&mut self) -> RPR_W<'_, RPR_SPEC> {
         RPR_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for RPR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rpr::W`](W) writer structure"]
 impl crate::Writable for RPR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RPR to value 0"]
-impl crate::Resettable for RPR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RPR_SPEC {}

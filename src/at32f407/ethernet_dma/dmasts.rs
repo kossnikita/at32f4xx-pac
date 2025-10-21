@@ -211,92 +211,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transmit interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn ti(&mut self) -> TI_W<DMASTS_SPEC> {
+    pub fn ti(&mut self) -> TI_W<'_, DMASTS_SPEC> {
         TI_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit process stopped"]
     #[inline(always)]
-    #[must_use]
-    pub fn tps(&mut self) -> TPS_W<DMASTS_SPEC> {
+    pub fn tps(&mut self) -> TPS_W<'_, DMASTS_SPEC> {
         TPS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transmit buffer unavailable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tbu(&mut self) -> TBU_W<DMASTS_SPEC> {
+    pub fn tbu(&mut self) -> TBU_W<'_, DMASTS_SPEC> {
         TBU_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transmit jabber timeout"]
     #[inline(always)]
-    #[must_use]
-    pub fn tjt(&mut self) -> TJT_W<DMASTS_SPEC> {
+    pub fn tjt(&mut self) -> TJT_W<'_, DMASTS_SPEC> {
         TJT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Receive overflow"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovf(&mut self) -> OVF_W<DMASTS_SPEC> {
+    pub fn ovf(&mut self) -> OVF_W<'_, DMASTS_SPEC> {
         OVF_W::new(self, 4)
     }
     #[doc = "Bit 5 - Transmit underflow"]
     #[inline(always)]
-    #[must_use]
-    pub fn unf(&mut self) -> UNF_W<DMASTS_SPEC> {
+    pub fn unf(&mut self) -> UNF_W<'_, DMASTS_SPEC> {
         UNF_W::new(self, 5)
     }
     #[doc = "Bit 6 - Receive interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn ri(&mut self) -> RI_W<DMASTS_SPEC> {
+    pub fn ri(&mut self) -> RI_W<'_, DMASTS_SPEC> {
         RI_W::new(self, 6)
     }
     #[doc = "Bit 7 - Receive buffer unavailable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rbu(&mut self) -> RBU_W<DMASTS_SPEC> {
+    pub fn rbu(&mut self) -> RBU_W<'_, DMASTS_SPEC> {
         RBU_W::new(self, 7)
     }
     #[doc = "Bit 8 - Receive process stopped"]
     #[inline(always)]
-    #[must_use]
-    pub fn rps(&mut self) -> RPS_W<DMASTS_SPEC> {
+    pub fn rps(&mut self) -> RPS_W<'_, DMASTS_SPEC> {
         RPS_W::new(self, 8)
     }
     #[doc = "Bit 9 - Receive watchdog timeout"]
     #[inline(always)]
-    #[must_use]
-    pub fn rwt(&mut self) -> RWT_W<DMASTS_SPEC> {
+    pub fn rwt(&mut self) -> RWT_W<'_, DMASTS_SPEC> {
         RWT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Early transmit interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn eti(&mut self) -> ETI_W<DMASTS_SPEC> {
+    pub fn eti(&mut self) -> ETI_W<'_, DMASTS_SPEC> {
         ETI_W::new(self, 10)
     }
     #[doc = "Bit 13 - Fatal bus error interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn fbei(&mut self) -> FBEI_W<DMASTS_SPEC> {
+    pub fn fbei(&mut self) -> FBEI_W<'_, DMASTS_SPEC> {
         FBEI_W::new(self, 13)
     }
     #[doc = "Bit 14 - Early receive interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn eri(&mut self) -> ERI_W<DMASTS_SPEC> {
+    pub fn eri(&mut self) -> ERI_W<'_, DMASTS_SPEC> {
         ERI_W::new(self, 14)
     }
     #[doc = "Bit 15 - Abnormal interrupt summary"]
     #[inline(always)]
-    #[must_use]
-    pub fn ais(&mut self) -> AIS_W<DMASTS_SPEC> {
+    pub fn ais(&mut self) -> AIS_W<'_, DMASTS_SPEC> {
         AIS_W::new(self, 15)
     }
     #[doc = "Bit 16 - Normal interrupt summary"]
     #[inline(always)]
-    #[must_use]
-    pub fn nis(&mut self) -> NIS_W<DMASTS_SPEC> {
+    pub fn nis(&mut self) -> NIS_W<'_, DMASTS_SPEC> {
         NIS_W::new(self, 16)
     }
 }
@@ -310,10 +295,6 @@ impl crate::Readable for DMASTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmasts::W`](W) writer structure"]
 impl crate::Writable for DMASTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMASTS to value 0"]
-impl crate::Resettable for DMASTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMASTS_SPEC {}

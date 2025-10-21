@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Number of data items to transfer"]
     #[inline(always)]
-    #[must_use]
-    pub fn cnt(&mut self) -> CNT_W<S4DTCNT_SPEC> {
+    pub fn cnt(&mut self) -> CNT_W<'_, S4DTCNT_SPEC> {
         CNT_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for S4DTCNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s4dtcnt::W`](W) writer structure"]
 impl crate::Writable for S4DTCNT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S4DTCNT to value 0"]
-impl crate::Resettable for S4DTCNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for S4DTCNT_SPEC {}

@@ -57,14 +57,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - Standby wake-up pin 1 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn swpen1(&mut self) -> SWPEN1_W<CTRLSTS_SPEC> {
+    pub fn swpen1(&mut self) -> SWPEN1_W<'_, CTRLSTS_SPEC> {
         SWPEN1_W::new(self, 8)
     }
     #[doc = "Bit 9 - Standby wake-up pin 2 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn swpen2(&mut self) -> SWPEN2_W<CTRLSTS_SPEC> {
+    pub fn swpen2(&mut self) -> SWPEN2_W<'_, CTRLSTS_SPEC> {
         SWPEN2_W::new(self, 9)
     }
 }
@@ -78,10 +76,6 @@ impl crate::Readable for CTRLSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlsts::W`](W) writer structure"]
 impl crate::Writable for CTRLSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRLSTS to value 0"]
-impl crate::Resettable for CTRLSTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRLSTS_SPEC {}

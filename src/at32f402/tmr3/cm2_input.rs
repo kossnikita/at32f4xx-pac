@@ -341,58 +341,50 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Channel 3 configure"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3c(&mut self) -> C3C_W<CM2_INPUT_SPEC> {
+    pub fn c3c(&mut self) -> C3C_W<'_, CM2_INPUT_SPEC> {
         C3C_W::new(self, 0)
     }
     #[doc = "Channel (3-4) input divider"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C3IDIV` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cidiv(&mut self, n: u8) -> CIDIV_W<CM2_INPUT_SPEC> {
+    pub fn cidiv(&mut self, n: u8) -> CIDIV_W<'_, CM2_INPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CIDIV_W::new(self, n * 8 + 2)
     }
     #[doc = "Bits 2:3 - Channel 3 input divider"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3idiv(&mut self) -> CIDIV_W<CM2_INPUT_SPEC> {
+    pub fn c3idiv(&mut self) -> CIDIV_W<'_, CM2_INPUT_SPEC> {
         CIDIV_W::new(self, 2)
     }
     #[doc = "Bits 10:11 - Channel 4 input divider"]
     #[inline(always)]
-    #[must_use]
-    pub fn c4idiv(&mut self) -> CIDIV_W<CM2_INPUT_SPEC> {
+    pub fn c4idiv(&mut self) -> CIDIV_W<'_, CM2_INPUT_SPEC> {
         CIDIV_W::new(self, 10)
     }
     #[doc = "Channel (3-4) digital filter"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C3DF` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cdf(&mut self, n: u8) -> CDF_W<CM2_INPUT_SPEC> {
+    pub fn cdf(&mut self, n: u8) -> CDF_W<'_, CM2_INPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CDF_W::new(self, n * 8 + 4)
     }
     #[doc = "Bits 4:7 - Channel 3 digital filter"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3df(&mut self) -> CDF_W<CM2_INPUT_SPEC> {
+    pub fn c3df(&mut self) -> CDF_W<'_, CM2_INPUT_SPEC> {
         CDF_W::new(self, 4)
     }
     #[doc = "Bits 12:15 - Channel 4 digital filter"]
     #[inline(always)]
-    #[must_use]
-    pub fn c4df(&mut self) -> CDF_W<CM2_INPUT_SPEC> {
+    pub fn c4df(&mut self) -> CDF_W<'_, CM2_INPUT_SPEC> {
         CDF_W::new(self, 12)
     }
     #[doc = "Bits 8:9 - Channel 4 configure"]
     #[inline(always)]
-    #[must_use]
-    pub fn c4c(&mut self) -> C4C_W<CM2_INPUT_SPEC> {
+    pub fn c4c(&mut self) -> C4C_W<'_, CM2_INPUT_SPEC> {
         C4C_W::new(self, 8)
     }
 }
@@ -406,10 +398,6 @@ impl crate::Readable for CM2_INPUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cm2_input::W`](W) writer structure"]
 impl crate::Writable for CM2_INPUT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CM2_INPUT to value 0"]
-impl crate::Resettable for CM2_INPUT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CM2_INPUT_SPEC {}

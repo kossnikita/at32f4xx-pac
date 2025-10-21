@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Clock divide factor"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkpsc(&mut self) -> CLKPSC_W<CLKCTRL_SPEC> {
+    pub fn clkpsc(&mut self) -> CLKPSC_W<'_, CLKCTRL_SPEC> {
         CLKPSC_W::new(self, 0)
     }
     #[doc = "Bit 8 - Clock enable bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn clken(&mut self) -> CLKEN_W<CLKCTRL_SPEC> {
+    pub fn clken(&mut self) -> CLKEN_W<'_, CLKCTRL_SPEC> {
         CLKEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Power saving configuration bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwrsvg(&mut self) -> PWRSVG_W<CLKCTRL_SPEC> {
+    pub fn pwrsvg(&mut self) -> PWRSVG_W<'_, CLKCTRL_SPEC> {
         PWRSVG_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clock divider bypass enable bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn byps(&mut self) -> BYPS_W<CLKCTRL_SPEC> {
+    pub fn byps(&mut self) -> BYPS_W<'_, CLKCTRL_SPEC> {
         BYPS_W::new(self, 10)
     }
     #[doc = "Bits 11:12 - Wide bus mode enable bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn buswidth(&mut self) -> BUSWIDTH_W<CLKCTRL_SPEC> {
+    pub fn buswidth(&mut self) -> BUSWIDTH_W<'_, CLKCTRL_SPEC> {
         BUSWIDTH_W::new(self, 11)
     }
     #[doc = "Bit 13 - SDIO_CK dephasing selection bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkedg(&mut self) -> CLKEDG_W<CLKCTRL_SPEC> {
+    pub fn clkedg(&mut self) -> CLKEDG_W<'_, CLKCTRL_SPEC> {
         CLKEDG_W::new(self, 13)
     }
     #[doc = "Bit 14 - HW Flow Control enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn flwctrlen(&mut self) -> FLWCTRLEN_W<CLKCTRL_SPEC> {
+    pub fn flwctrlen(&mut self) -> FLWCTRLEN_W<'_, CLKCTRL_SPEC> {
         FLWCTRLEN_W::new(self, 14)
     }
     #[doc = "Bits 15:16 - Clock divide factor bit9 and bit8"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkpsc98(&mut self) -> CLKPSC98_W<CLKCTRL_SPEC> {
+    pub fn clkpsc98(&mut self) -> CLKPSC98_W<'_, CLKCTRL_SPEC> {
         CLKPSC98_W::new(self, 15)
     }
 }
@@ -150,10 +142,6 @@ impl crate::Readable for CLKCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clkctrl::W`](W) writer structure"]
 impl crate::Writable for CLKCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLKCTRL to value 0"]
-impl crate::Resettable for CLKCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLKCTRL_SPEC {}

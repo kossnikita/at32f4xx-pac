@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SOF output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sofouten(&mut self) -> SOFOUTEN_W<CFG_SPEC> {
+    pub fn sofouten(&mut self) -> SOFOUTEN_W<'_, CFG_SPEC> {
         SOFOUTEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - DP pullup off"]
     #[inline(always)]
-    #[must_use]
-    pub fn puo(&mut self) -> PUO_W<CFG_SPEC> {
+    pub fn puo(&mut self) -> PUO_W<'_, CFG_SPEC> {
         PUO_W::new(self, 1)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg::W`](W) writer structure"]
 impl crate::Writable for CFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG to value 0"]
-impl crate::Resettable for CFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CFG_SPEC {}

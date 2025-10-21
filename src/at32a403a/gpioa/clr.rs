@@ -34,106 +34,89 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOCB0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb(&mut self, n: u8) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb(&mut self, n: u8) -> IOCB_W<'_, CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 16][n as usize];
         IOCB_W::new(self, n)
     }
     #[doc = "Bit 0 - Clear bit 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb0(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb0(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear bit 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb1(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb1(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clear bit 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb2(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb2(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clear bit 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb3(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb3(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 3)
     }
     #[doc = "Bit 4 - Clear bit 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb4(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb4(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 4)
     }
     #[doc = "Bit 5 - Clear bit 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb5(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb5(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 5)
     }
     #[doc = "Bit 6 - Clear bit 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb6(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb6(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 6)
     }
     #[doc = "Bit 7 - Clear bit 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb7(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb7(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clear bit 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb8(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb8(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clear bit 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb9(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb9(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear bit 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb10(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb10(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clear bit 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb11(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb11(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 11)
     }
     #[doc = "Bit 12 - Clear bit 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb12(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb12(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 12)
     }
     #[doc = "Bit 13 - Clear bit 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb13(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb13(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 13)
     }
     #[doc = "Bit 14 - Clear bit 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb14(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb14(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 14)
     }
     #[doc = "Bit 15 - Clear bit 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn iocb15(&mut self) -> IOCB_W<CLR_SPEC> {
+    pub fn iocb15(&mut self) -> IOCB_W<'_, CLR_SPEC> {
         IOCB_W::new(self, 15)
     }
 }
@@ -145,10 +128,7 @@ impl crate::RegisterSpec for CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`clr::W`](W) writer structure"]
 impl crate::Writable for CLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xffff;
 }
 #[doc = "`reset()` method sets CLR to value 0"]
-impl crate::Resettable for CLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLR_SPEC {}

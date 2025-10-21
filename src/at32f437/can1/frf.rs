@@ -251,178 +251,149 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SEL0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel(&mut self, n: u8) -> SEL_W<FRF_SPEC> {
+    pub fn sel(&mut self, n: u8) -> SEL_W<'_, FRF_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 28][n as usize];
         SEL_W::new(self, n)
     }
     #[doc = "Bit 0 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel0(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel0(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel1(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel1(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel2(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel2(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel3(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel3(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel4(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel4(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 4)
     }
     #[doc = "Bit 5 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel5(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel5(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 5)
     }
     #[doc = "Bit 6 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel6(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel6(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel7(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel7(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel8(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel8(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel9(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel9(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel10(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel10(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel11(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel11(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 11)
     }
     #[doc = "Bit 12 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel12(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel12(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 12)
     }
     #[doc = "Bit 13 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel13(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel13(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 13)
     }
     #[doc = "Bit 14 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel14(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel14(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 14)
     }
     #[doc = "Bit 15 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel15(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel15(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 15)
     }
     #[doc = "Bit 16 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel16(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel16(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 16)
     }
     #[doc = "Bit 17 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel17(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel17(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 17)
     }
     #[doc = "Bit 18 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel18(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel18(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 18)
     }
     #[doc = "Bit 19 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel19(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel19(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 19)
     }
     #[doc = "Bit 20 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel20(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel20(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 20)
     }
     #[doc = "Bit 21 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel21(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel21(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 21)
     }
     #[doc = "Bit 22 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel22(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel22(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 22)
     }
     #[doc = "Bit 23 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel23(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel23(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 23)
     }
     #[doc = "Bit 24 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel24(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel24(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel25(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel25(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 25)
     }
     #[doc = "Bit 26 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel26(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel26(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 26)
     }
     #[doc = "Bit 27 - Filter relation FIFO select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel27(&mut self) -> SEL_W<FRF_SPEC> {
+    pub fn sel27(&mut self) -> SEL_W<'_, FRF_SPEC> {
         SEL_W::new(self, 27)
     }
 }
@@ -436,10 +407,6 @@ impl crate::Readable for FRF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`frf::W`](W) writer structure"]
 impl crate::Writable for FRF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FRF to value 0"]
-impl crate::Resettable for FRF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FRF_SPEC {}

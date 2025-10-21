@@ -243,140 +243,117 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - CCRCFAILIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdfail(&mut self) -> CMDFAIL_W<INTEN_SPEC> {
+    pub fn cmdfail(&mut self) -> CMDFAIL_W<'_, INTEN_SPEC> {
         CMDFAIL_W::new(self, 0)
     }
     #[doc = "Bit 1 - DCRCFAILIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtfail(&mut self) -> DTFAIL_W<INTEN_SPEC> {
+    pub fn dtfail(&mut self) -> DTFAIL_W<'_, INTEN_SPEC> {
         DTFAIL_W::new(self, 1)
     }
     #[doc = "Bit 2 - CTIMEOUTIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdtimeout(&mut self) -> CMDTIMEOUT_W<INTEN_SPEC> {
+    pub fn cmdtimeout(&mut self) -> CMDTIMEOUT_W<'_, INTEN_SPEC> {
         CMDTIMEOUT_W::new(self, 2)
     }
     #[doc = "Bit 3 - DTIMEOUTIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn dttimeout(&mut self) -> DTTIMEOUT_W<INTEN_SPEC> {
+    pub fn dttimeout(&mut self) -> DTTIMEOUT_W<'_, INTEN_SPEC> {
         DTTIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - TXUNDERRIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txerru(&mut self) -> TXERRU_W<INTEN_SPEC> {
+    pub fn txerru(&mut self) -> TXERRU_W<'_, INTEN_SPEC> {
         TXERRU_W::new(self, 4)
     }
     #[doc = "Bit 5 - RXOVERRIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxerru(&mut self) -> RXERRU_W<INTEN_SPEC> {
+    pub fn rxerru(&mut self) -> RXERRU_W<'_, INTEN_SPEC> {
         RXERRU_W::new(self, 5)
     }
     #[doc = "Bit 6 - CMDRENDIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdrspcmpl(&mut self) -> CMDRSPCMPL_W<INTEN_SPEC> {
+    pub fn cmdrspcmpl(&mut self) -> CMDRSPCMPL_W<'_, INTEN_SPEC> {
         CMDRSPCMPL_W::new(self, 6)
     }
     #[doc = "Bit 7 - CMDSENTIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdcmpl(&mut self) -> CMDCMPL_W<INTEN_SPEC> {
+    pub fn cmdcmpl(&mut self) -> CMDCMPL_W<'_, INTEN_SPEC> {
         CMDCMPL_W::new(self, 7)
     }
     #[doc = "Bit 8 - DATAENDIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtcmpl(&mut self) -> DTCMPL_W<INTEN_SPEC> {
+    pub fn dtcmpl(&mut self) -> DTCMPL_W<'_, INTEN_SPEC> {
         DTCMPL_W::new(self, 8)
     }
     #[doc = "Bit 9 - STBITERRIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn sbiterr(&mut self) -> SBITERR_W<INTEN_SPEC> {
+    pub fn sbiterr(&mut self) -> SBITERR_W<'_, INTEN_SPEC> {
         SBITERR_W::new(self, 9)
     }
     #[doc = "Bit 10 - DBACKENDIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtblkcmpl(&mut self) -> DTBLKCMPL_W<INTEN_SPEC> {
+    pub fn dtblkcmpl(&mut self) -> DTBLKCMPL_W<'_, INTEN_SPEC> {
         DTBLKCMPL_W::new(self, 10)
     }
     #[doc = "Bit 11 - CMDACTIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn docmd(&mut self) -> DOCMD_W<INTEN_SPEC> {
+    pub fn docmd(&mut self) -> DOCMD_W<'_, INTEN_SPEC> {
         DOCMD_W::new(self, 11)
     }
     #[doc = "Bit 12 - TXACTIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn dotx(&mut self) -> DOTX_W<INTEN_SPEC> {
+    pub fn dotx(&mut self) -> DOTX_W<'_, INTEN_SPEC> {
         DOTX_W::new(self, 12)
     }
     #[doc = "Bit 13 - RXACTIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn dorx(&mut self) -> DORX_W<INTEN_SPEC> {
+    pub fn dorx(&mut self) -> DORX_W<'_, INTEN_SPEC> {
         DORX_W::new(self, 13)
     }
     #[doc = "Bit 14 - TXFIFOHEIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbuf_h(&mut self) -> TXBUF_H_W<INTEN_SPEC> {
+    pub fn txbuf_h(&mut self) -> TXBUF_H_W<'_, INTEN_SPEC> {
         TXBUF_H_W::new(self, 14)
     }
     #[doc = "Bit 15 - RXFIFOHFIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbuf_h(&mut self) -> RXBUF_H_W<INTEN_SPEC> {
+    pub fn rxbuf_h(&mut self) -> RXBUF_H_W<'_, INTEN_SPEC> {
         RXBUF_H_W::new(self, 15)
     }
     #[doc = "Bit 16 - TXFIFOFIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbuf_f(&mut self) -> TXBUF_F_W<INTEN_SPEC> {
+    pub fn txbuf_f(&mut self) -> TXBUF_F_W<'_, INTEN_SPEC> {
         TXBUF_F_W::new(self, 16)
     }
     #[doc = "Bit 17 - RXFIFOFIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbuf_f(&mut self) -> RXBUF_F_W<INTEN_SPEC> {
+    pub fn rxbuf_f(&mut self) -> RXBUF_F_W<'_, INTEN_SPEC> {
         RXBUF_F_W::new(self, 17)
     }
     #[doc = "Bit 18 - TXFIFOEIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbuf_e(&mut self) -> TXBUF_E_W<INTEN_SPEC> {
+    pub fn txbuf_e(&mut self) -> TXBUF_E_W<'_, INTEN_SPEC> {
         TXBUF_E_W::new(self, 18)
     }
     #[doc = "Bit 19 - RXFIFOEIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbuf_e(&mut self) -> RXBUF_E_W<INTEN_SPEC> {
+    pub fn rxbuf_e(&mut self) -> RXBUF_E_W<'_, INTEN_SPEC> {
         RXBUF_E_W::new(self, 19)
     }
     #[doc = "Bit 20 - TXDAVLIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn txbuf(&mut self) -> TXBUF_W<INTEN_SPEC> {
+    pub fn txbuf(&mut self) -> TXBUF_W<'_, INTEN_SPEC> {
         TXBUF_W::new(self, 20)
     }
     #[doc = "Bit 21 - RXDAVLIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxbuf(&mut self) -> RXBUF_W<INTEN_SPEC> {
+    pub fn rxbuf(&mut self) -> RXBUF_W<'_, INTEN_SPEC> {
         RXBUF_W::new(self, 21)
     }
     #[doc = "Bit 22 - SDIOITIE"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdioif(&mut self) -> SDIOIF_W<INTEN_SPEC> {
+    pub fn sdioif(&mut self) -> SDIOIF_W<'_, INTEN_SPEC> {
         SDIOIF_W::new(self, 22)
     }
 }
@@ -390,10 +367,6 @@ impl crate::Readable for INTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`inten::W`](W) writer structure"]
 impl crate::Writable for INTEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTEN to value 0"]
-impl crate::Resettable for INTEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTEN_SPEC {}

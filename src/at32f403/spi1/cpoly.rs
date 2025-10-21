@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - CRC polynomial"]
     #[inline(always)]
-    #[must_use]
-    pub fn cpoly(&mut self) -> CPOLY_W<CPOLY_SPEC> {
+    pub fn cpoly(&mut self) -> CPOLY_W<'_, CPOLY_SPEC> {
         CPOLY_W::new(self, 0)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for CPOLY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cpoly::W`](W) writer structure"]
 impl crate::Writable for CPOLY_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CPOLY to value 0x07"]
 impl crate::Resettable for CPOLY_SPEC {

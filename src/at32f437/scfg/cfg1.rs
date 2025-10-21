@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Memory address mapping selection bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn mem_map_sel(&mut self) -> MEM_MAP_SEL_W<CFG1_SPEC> {
+    pub fn mem_map_sel(&mut self) -> MEM_MAP_SEL_W<'_, CFG1_SPEC> {
         MEM_MAP_SEL_W::new(self, 0)
     }
     #[doc = "Bit 5 - IR output polarity selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn ir_pol(&mut self) -> IR_POL_W<CFG1_SPEC> {
+    pub fn ir_pol(&mut self) -> IR_POL_W<'_, CFG1_SPEC> {
         IR_POL_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - IR signal source selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn ir_src_sel(&mut self) -> IR_SRC_SEL_W<CFG1_SPEC> {
+    pub fn ir_src_sel(&mut self) -> IR_SRC_SEL_W<'_, CFG1_SPEC> {
         IR_SRC_SEL_W::new(self, 6)
     }
     #[doc = "Bits 10:11 - XMC address mapping swap"]
     #[inline(always)]
-    #[must_use]
-    pub fn swap_xmc(&mut self) -> SWAP_XMC_W<CFG1_SPEC> {
+    pub fn swap_xmc(&mut self) -> SWAP_XMC_W<'_, CFG1_SPEC> {
         SWAP_XMC_W::new(self, 10)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for CFG1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg1::W`](W) writer structure"]
 impl crate::Writable for CFG1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG1 to value 0"]
-impl crate::Resettable for CFG1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CFG1_SPEC {}

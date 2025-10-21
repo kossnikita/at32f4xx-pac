@@ -263,152 +263,127 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Rising polarity configuration bit of line 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp0(&mut self) -> RP0_W<POLCFG1_SPEC> {
+    pub fn rp0(&mut self) -> RP0_W<'_, POLCFG1_SPEC> {
         RP0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Rising polarity configuration bit of line 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp1(&mut self) -> RP1_W<POLCFG1_SPEC> {
+    pub fn rp1(&mut self) -> RP1_W<'_, POLCFG1_SPEC> {
         RP1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Rising polarity configuration bit of line 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp2(&mut self) -> RP2_W<POLCFG1_SPEC> {
+    pub fn rp2(&mut self) -> RP2_W<'_, POLCFG1_SPEC> {
         RP2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Rising polarity configuration bit of line 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp3(&mut self) -> RP3_W<POLCFG1_SPEC> {
+    pub fn rp3(&mut self) -> RP3_W<'_, POLCFG1_SPEC> {
         RP3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Rising polarity configuration bit of line 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp4(&mut self) -> RP4_W<POLCFG1_SPEC> {
+    pub fn rp4(&mut self) -> RP4_W<'_, POLCFG1_SPEC> {
         RP4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Rising polarity configuration bit of line 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp5(&mut self) -> RP5_W<POLCFG1_SPEC> {
+    pub fn rp5(&mut self) -> RP5_W<'_, POLCFG1_SPEC> {
         RP5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Rising polarity configuration bit of linee 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp6(&mut self) -> RP6_W<POLCFG1_SPEC> {
+    pub fn rp6(&mut self) -> RP6_W<'_, POLCFG1_SPEC> {
         RP6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Rising polarity configuration bit of line 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp7(&mut self) -> RP7_W<POLCFG1_SPEC> {
+    pub fn rp7(&mut self) -> RP7_W<'_, POLCFG1_SPEC> {
         RP7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Rising polarity configuration bit of line 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp8(&mut self) -> RP8_W<POLCFG1_SPEC> {
+    pub fn rp8(&mut self) -> RP8_W<'_, POLCFG1_SPEC> {
         RP8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Rising polarity configuration bit of line 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp9(&mut self) -> RP9_W<POLCFG1_SPEC> {
+    pub fn rp9(&mut self) -> RP9_W<'_, POLCFG1_SPEC> {
         RP9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Rising polarity configuration bit of line 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp10(&mut self) -> RP10_W<POLCFG1_SPEC> {
+    pub fn rp10(&mut self) -> RP10_W<'_, POLCFG1_SPEC> {
         RP10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Rising polarity configuration bit of line 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp11(&mut self) -> RP11_W<POLCFG1_SPEC> {
+    pub fn rp11(&mut self) -> RP11_W<'_, POLCFG1_SPEC> {
         RP11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Rising polarity configuration bit of line 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp12(&mut self) -> RP12_W<POLCFG1_SPEC> {
+    pub fn rp12(&mut self) -> RP12_W<'_, POLCFG1_SPEC> {
         RP12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Rising polarity configuration bit of line 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp13(&mut self) -> RP13_W<POLCFG1_SPEC> {
+    pub fn rp13(&mut self) -> RP13_W<'_, POLCFG1_SPEC> {
         RP13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Rising polarity configuration bit of line 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp14(&mut self) -> RP14_W<POLCFG1_SPEC> {
+    pub fn rp14(&mut self) -> RP14_W<'_, POLCFG1_SPEC> {
         RP14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Rising polarity configuration bit of line 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp15(&mut self) -> RP15_W<POLCFG1_SPEC> {
+    pub fn rp15(&mut self) -> RP15_W<'_, POLCFG1_SPEC> {
         RP15_W::new(self, 15)
     }
     #[doc = "Bit 16 - Rising polarity configuration bit of line 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp16(&mut self) -> RP16_W<POLCFG1_SPEC> {
+    pub fn rp16(&mut self) -> RP16_W<'_, POLCFG1_SPEC> {
         RP16_W::new(self, 16)
     }
     #[doc = "Bit 17 - Rising polarity configuration bit of line 17"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp17(&mut self) -> RP17_W<POLCFG1_SPEC> {
+    pub fn rp17(&mut self) -> RP17_W<'_, POLCFG1_SPEC> {
         RP17_W::new(self, 17)
     }
     #[doc = "Bit 18 - Rising polarity configuration bit of line 18"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp18(&mut self) -> RP18_W<POLCFG1_SPEC> {
+    pub fn rp18(&mut self) -> RP18_W<'_, POLCFG1_SPEC> {
         RP18_W::new(self, 18)
     }
     #[doc = "Bit 21 - Rising polarity configuration bit of line 21"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp21(&mut self) -> RP21_W<POLCFG1_SPEC> {
+    pub fn rp21(&mut self) -> RP21_W<'_, POLCFG1_SPEC> {
         RP21_W::new(self, 21)
     }
     #[doc = "Bit 22 - Rising polarity configuration bit of line 22"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp22(&mut self) -> RP22_W<POLCFG1_SPEC> {
+    pub fn rp22(&mut self) -> RP22_W<'_, POLCFG1_SPEC> {
         RP22_W::new(self, 22)
     }
     #[doc = "Bit 23 - Rising polarity configuration bit of line 23"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp23(&mut self) -> RP23_W<POLCFG1_SPEC> {
+    pub fn rp23(&mut self) -> RP23_W<'_, POLCFG1_SPEC> {
         RP23_W::new(self, 23)
     }
     #[doc = "Bit 25 - Rising polarity configuration bit of line 25"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp25(&mut self) -> RP25_W<POLCFG1_SPEC> {
+    pub fn rp25(&mut self) -> RP25_W<'_, POLCFG1_SPEC> {
         RP25_W::new(self, 25)
     }
     #[doc = "Bit 26 - Rising polarity configuration bit of line 26"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp26(&mut self) -> RP26_W<POLCFG1_SPEC> {
+    pub fn rp26(&mut self) -> RP26_W<'_, POLCFG1_SPEC> {
         RP26_W::new(self, 26)
     }
     #[doc = "Bit 28 - Rising polarity configuration bit of line 28"]
     #[inline(always)]
-    #[must_use]
-    pub fn rp28(&mut self) -> RP28_W<POLCFG1_SPEC> {
+    pub fn rp28(&mut self) -> RP28_W<'_, POLCFG1_SPEC> {
         RP28_W::new(self, 28)
     }
 }
@@ -422,10 +397,6 @@ impl crate::Readable for POLCFG1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`polcfg1::W`](W) writer structure"]
 impl crate::Writable for POLCFG1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets POLCFG1 to value 0"]
-impl crate::Resettable for POLCFG1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for POLCFG1_SPEC {}

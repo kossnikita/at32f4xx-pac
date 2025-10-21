@@ -57,6 +57,4 @@ impl crate::RegisterSpec for RFDTH_SPEC {
 #[doc = "`read()` method returns [`rfdth::R`](R) reader structure"]
 impl crate::Readable for RFDTH_SPEC {}
 #[doc = "`reset()` method sets RFDTH to value 0"]
-impl crate::Resettable for RFDTH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RFDTH_SPEC {}

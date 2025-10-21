@@ -12,14 +12,12 @@ impl core::fmt::Debug for crate::generic::Reg<SLIB_SET_RANGE0_SPEC> {
 impl W {
     #[doc = "Bits 0:15 - sLib start sector setting"]
     #[inline(always)]
-    #[must_use]
-    pub fn slib_ss_set(&mut self) -> SLIB_SS_SET_W<SLIB_SET_RANGE0_SPEC> {
+    pub fn slib_ss_set(&mut self) -> SLIB_SS_SET_W<'_, SLIB_SET_RANGE0_SPEC> {
         SLIB_SS_SET_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - sLib end sector setting"]
     #[inline(always)]
-    #[must_use]
-    pub fn slib_es_set(&mut self) -> SLIB_ES_SET_W<SLIB_SET_RANGE0_SPEC> {
+    pub fn slib_es_set(&mut self) -> SLIB_ES_SET_W<'_, SLIB_SET_RANGE0_SPEC> {
         SLIB_ES_SET_W::new(self, 16)
     }
 }
@@ -31,10 +29,6 @@ impl crate::RegisterSpec for SLIB_SET_RANGE0_SPEC {
 #[doc = "`write(|w| ..)` method takes [`slib_set_range0::W`](W) writer structure"]
 impl crate::Writable for SLIB_SET_RANGE0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLIB_SET_RANGE0 to value 0"]
-impl crate::Resettable for SLIB_SET_RANGE0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLIB_SET_RANGE0_SPEC {}

@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - Vertical scaling resize source factor"]
     #[inline(always)]
-    #[must_use]
-    pub fn vsrsf(&mut self) -> VSRSF_W<VSCF_SPEC> {
+    pub fn vsrsf(&mut self) -> VSRSF_W<'_, VSCF_SPEC> {
         VSRSF_W::new(self, 0)
     }
     #[doc = "Bits 16:28 - Vertical scaling resize target factor"]
     #[inline(always)]
-    #[must_use]
-    pub fn vsrtf(&mut self) -> VSRTF_W<VSCF_SPEC> {
+    pub fn vsrtf(&mut self) -> VSRTF_W<'_, VSCF_SPEC> {
         VSRTF_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for VSCF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vscf::W`](W) writer structure"]
 impl crate::Writable for VSCF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VSCF to value 0"]
-impl crate::Resettable for VSCF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for VSCF_SPEC {}

@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Clear trigger overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn trgovfc1(&mut self) -> TRGOVFC1_W<MUXGCLR_SPEC> {
+    pub fn trgovfc1(&mut self) -> TRGOVFC1_W<'_, MUXGCLR_SPEC> {
         TRGOVFC1_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear trigger overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn trgovfc2(&mut self) -> TRGOVFC2_W<MUXGCLR_SPEC> {
+    pub fn trgovfc2(&mut self) -> TRGOVFC2_W<'_, MUXGCLR_SPEC> {
         TRGOVFC2_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clear trigger overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn trgovfc3(&mut self) -> TRGOVFC3_W<MUXGCLR_SPEC> {
+    pub fn trgovfc3(&mut self) -> TRGOVFC3_W<'_, MUXGCLR_SPEC> {
         TRGOVFC3_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clear trigger overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn trgovfc4(&mut self) -> TRGOVFC4_W<MUXGCLR_SPEC> {
+    pub fn trgovfc4(&mut self) -> TRGOVFC4_W<'_, MUXGCLR_SPEC> {
         TRGOVFC4_W::new(self, 3)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for MUXGCLR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxgclr::W`](W) writer structure"]
 impl crate::Writable for MUXGCLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MUXGCLR to value 0"]
-impl crate::Resettable for MUXGCLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MUXGCLR_SPEC {}

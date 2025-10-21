@@ -18,6 +18,8 @@ impl RegisterBlock {
         &self.clr
     }
     #[doc = "0x08..0x94 - DMA Channel %s"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of cluster in the array. `n == 0` corresponds to `Channel1` cluster.</div>"]
     #[inline(always)]
     pub const fn channel(&self, n: usize) -> &Channel {
         &self.channel[n]
@@ -64,13 +66,11 @@ impl RegisterBlock {
         self.channel(6)
     }
 }
-#[doc = "STS (r) register accessor: DMA interrupt status register (DMA_STS)\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sts`]
-module"]
+#[doc = "STS (r) register accessor: DMA interrupt status register (DMA_STS)\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sts`] module"]
 pub type STS = crate::Reg<sts::STS_SPEC>;
 #[doc = "DMA interrupt status register (DMA_STS)"]
 pub mod sts;
-#[doc = "CLR (rw) register accessor: DMA interrupt flag clear register (DMA_CLR)\n\nYou can [`read`](crate::Reg::read) this register and get [`clr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clr`]
-module"]
+#[doc = "CLR (rw) register accessor: DMA interrupt flag clear register (DMA_CLR)\n\nYou can [`read`](crate::Reg::read) this register and get [`clr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clr`] module"]
 pub type CLR = crate::Reg<clr::CLR_SPEC>;
 #[doc = "DMA interrupt flag clear register (DMA_CLR)"]
 pub mod clr;

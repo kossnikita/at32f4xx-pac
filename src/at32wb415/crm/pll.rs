@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - PLL_FR"]
     #[inline(always)]
-    #[must_use]
-    pub fn pll_fr(&mut self) -> PLL_FR_W<PLL_SPEC> {
+    pub fn pll_fr(&mut self) -> PLL_FR_W<'_, PLL_SPEC> {
         PLL_FR_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - PLL_MS"]
     #[inline(always)]
-    #[must_use]
-    pub fn pll_ms(&mut self) -> PLL_MS_W<PLL_SPEC> {
+    pub fn pll_ms(&mut self) -> PLL_MS_W<'_, PLL_SPEC> {
         PLL_MS_W::new(self, 4)
     }
     #[doc = "Bits 8:16 - PLL_NS"]
     #[inline(always)]
-    #[must_use]
-    pub fn pll_ns(&mut self) -> PLL_NS_W<PLL_SPEC> {
+    pub fn pll_ns(&mut self) -> PLL_NS_W<'_, PLL_SPEC> {
         PLL_NS_W::new(self, 8)
     }
     #[doc = "Bits 24:26 - PLL entry clock reference frequency"]
     #[inline(always)]
-    #[must_use]
-    pub fn pll_fref(&mut self) -> PLL_FREF_W<PLL_SPEC> {
+    pub fn pll_fref(&mut self) -> PLL_FREF_W<'_, PLL_SPEC> {
         PLL_FREF_W::new(self, 24)
     }
     #[doc = "Bit 31 - PLL config enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllcfgen(&mut self) -> PLLCFGEN_W<PLL_SPEC> {
+    pub fn pllcfgen(&mut self) -> PLLCFGEN_W<'_, PLL_SPEC> {
         PLLCFGEN_W::new(self, 31)
     }
 }
@@ -102,8 +97,6 @@ impl crate::Readable for PLL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pll::W`](W) writer structure"]
 impl crate::Writable for PLL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PLL to value 0x1f10"]
 impl crate::Resettable for PLL_SPEC {

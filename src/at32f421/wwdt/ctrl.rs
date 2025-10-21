@@ -89,14 +89,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Decrement counter"]
     #[inline(always)]
-    #[must_use]
-    pub fn cnt(&mut self) -> CNT_W<CTRL_SPEC> {
+    pub fn cnt(&mut self) -> CNT_W<'_, CTRL_SPEC> {
         CNT_W::new(self, 0)
     }
     #[doc = "Bit 7 - Window watchdog enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn wwdten(&mut self) -> WWDTEN_W<CTRL_SPEC> {
+    pub fn wwdten(&mut self) -> WWDTEN_W<'_, CTRL_SPEC> {
         WWDTEN_W::new(self, 7)
     }
 }
@@ -110,7 +108,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x80;
 }
 #[doc = "`reset()` method sets CTRL to value 0x7f"]

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - Clock output internal connect to timer10"]
     #[inline(always)]
-    #[must_use]
-    pub fn clk_to_tmr(&mut self) -> CLK_TO_TMR_W<MISC2_SPEC> {
+    pub fn clk_to_tmr(&mut self) -> CLK_TO_TMR_W<'_, MISC2_SPEC> {
         CLK_TO_TMR_W::new(self, 16)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for MISC2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`misc2::W`](W) writer structure"]
 impl crate::Writable for MISC2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MISC2 to value 0"]
-impl crate::Resettable for MISC2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MISC2_SPEC {}

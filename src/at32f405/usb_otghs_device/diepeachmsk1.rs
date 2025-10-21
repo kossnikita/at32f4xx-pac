@@ -113,62 +113,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn xfercmsk(&mut self) -> XFERCMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn xfercmsk(&mut self) -> XFERCMSK_W<'_, DIEPEACHMSK1_SPEC> {
         XFERCMSK_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdismsk(&mut self) -> EPTDISMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn eptdismsk(&mut self) -> EPTDISMSK_W<'_, DIEPEACHMSK1_SPEC> {
         EPTDISMSK_W::new(self, 1)
     }
     #[doc = "Bit 2 - AHB Error mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn ahberrmsk(&mut self) -> AHBERRMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn ahberrmsk(&mut self) -> AHBERRMSK_W<'_, DIEPEACHMSK1_SPEC> {
         AHBERRMSK_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timeout condition mask (Non-isochronous endpoints)"]
     #[inline(always)]
-    #[must_use]
-    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<'_, DIEPEACHMSK1_SPEC> {
         TIMEOUTMSK_W::new(self, 3)
     }
     #[doc = "Bit 4 - IN token received when TxFIFO empty mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<'_, DIEPEACHMSK1_SPEC> {
         INTKNTXFEMPMSK_W::new(self, 4)
     }
     #[doc = "Bit 5 - IN token received with EP mismatch mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn intkneptmismsk(&mut self) -> INTKNEPTMISMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn intkneptmismsk(&mut self) -> INTKNEPTMISMSK_W<'_, DIEPEACHMSK1_SPEC> {
         INTKNEPTMISMSK_W::new(self, 5)
     }
     #[doc = "Bit 6 - IN endpoint NAK effective mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn ineptnakmsk(&mut self) -> INEPTNAKMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn ineptnakmsk(&mut self) -> INEPTNAKMSK_W<'_, DIEPEACHMSK1_SPEC> {
         INEPTNAKMSK_W::new(self, 6)
     }
     #[doc = "Bit 8 - FIFO underrun mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn txfifoudrmsk(&mut self) -> TXFIFOUDRMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn txfifoudrmsk(&mut self) -> TXFIFOUDRMSK_W<'_, DIEPEACHMSK1_SPEC> {
         TXFIFOUDRMSK_W::new(self, 8)
     }
     #[doc = "Bit 9 - BNA interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn bnainmsk(&mut self) -> BNAINMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn bnainmsk(&mut self) -> BNAINMSK_W<'_, DIEPEACHMSK1_SPEC> {
         BNAINMSK_W::new(self, 9)
     }
     #[doc = "Bit 13 - NAK interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn nakmsk(&mut self) -> NAKMSK_W<DIEPEACHMSK1_SPEC> {
+    pub fn nakmsk(&mut self) -> NAKMSK_W<'_, DIEPEACHMSK1_SPEC> {
         NAKMSK_W::new(self, 13)
     }
 }
@@ -182,10 +172,6 @@ impl crate::Readable for DIEPEACHMSK1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepeachmsk1::W`](W) writer structure"]
 impl crate::Writable for DIEPEACHMSK1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPEACHMSK1 to value 0"]
-impl crate::Resettable for DIEPEACHMSK1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DIEPEACHMSK1_SPEC {}

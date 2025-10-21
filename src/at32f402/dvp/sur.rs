@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Frame start unmask"]
     #[inline(always)]
-    #[must_use]
-    pub fn fmsu(&mut self) -> FMSU_W<SUR_SPEC> {
+    pub fn fmsu(&mut self) -> FMSU_W<'_, SUR_SPEC> {
         FMSU_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Line start unmask"]
     #[inline(always)]
-    #[must_use]
-    pub fn lnsu(&mut self) -> LNSU_W<SUR_SPEC> {
+    pub fn lnsu(&mut self) -> LNSU_W<'_, SUR_SPEC> {
         LNSU_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Line end unmask"]
     #[inline(always)]
-    #[must_use]
-    pub fn lneu(&mut self) -> LNEU_W<SUR_SPEC> {
+    pub fn lneu(&mut self) -> LNEU_W<'_, SUR_SPEC> {
         LNEU_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Frame end unmask"]
     #[inline(always)]
-    #[must_use]
-    pub fn fmeu(&mut self) -> FMEU_W<SUR_SPEC> {
+    pub fn fmeu(&mut self) -> FMEU_W<'_, SUR_SPEC> {
         FMEU_W::new(self, 24)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for SUR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sur::W`](W) writer structure"]
 impl crate::Writable for SUR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SUR to value 0"]
-impl crate::Resettable for SUR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SUR_SPEC {}

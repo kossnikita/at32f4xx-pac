@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:15 - Endpoint buffer table start address"]
     #[inline(always)]
-    #[must_use]
-    pub fn btaddr(&mut self) -> BTADDR_W<BUFTBL_SPEC> {
+    pub fn btaddr(&mut self) -> BTADDR_W<'_, BUFTBL_SPEC> {
         BTADDR_W::new(self, 3)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for BUFTBL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`buftbl::W`](W) writer structure"]
 impl crate::Writable for BUFTBL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BUFTBL to value 0"]
-impl crate::Resettable for BUFTBL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BUFTBL_SPEC {}

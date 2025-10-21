@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Glitch filter enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gfe(&mut self) -> GFE_W<G_FILTER_EN_SPEC> {
+    pub fn gfe(&mut self) -> GFE_W<'_, G_FILTER_EN_SPEC> {
         GFE_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for G_FILTER_EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`g_filter_en::W`](W) writer structure"]
 impl crate::Writable for G_FILTER_EN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets G_FILTER_EN to value 0"]
-impl crate::Resettable for G_FILTER_EN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for G_FILTER_EN_SPEC {}

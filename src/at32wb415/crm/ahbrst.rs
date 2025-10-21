@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - OTGFS1 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn otgfs1(&mut self) -> OTGFS1_W<AHBRST_SPEC> {
+    pub fn otgfs1(&mut self) -> OTGFS1_W<'_, AHBRST_SPEC> {
         OTGFS1_W::new(self, 12)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for AHBRST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahbrst::W`](W) writer structure"]
 impl crate::Writable for AHBRST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBRST to value 0"]
-impl crate::Resettable for AHBRST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AHBRST_SPEC {}

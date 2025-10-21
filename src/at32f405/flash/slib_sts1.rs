@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - sLib start sector"]
     #[inline(always)]
-    #[must_use]
-    pub fn slib_ss(&mut self) -> SLIB_SS_W<SLIB_STS1_SPEC> {
+    pub fn slib_ss(&mut self) -> SLIB_SS_W<'_, SLIB_STS1_SPEC> {
         SLIB_SS_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - sLib instruction start sector"]
     #[inline(always)]
-    #[must_use]
-    pub fn slib_inst_ss(&mut self) -> SLIB_INST_SS_W<SLIB_STS1_SPEC> {
+    pub fn slib_inst_ss(&mut self) -> SLIB_INST_SS_W<'_, SLIB_STS1_SPEC> {
         SLIB_INST_SS_W::new(self, 11)
     }
     #[doc = "Bits 22:31 - sLib end sector"]
     #[inline(always)]
-    #[must_use]
-    pub fn slib_es(&mut self) -> SLIB_ES_W<SLIB_STS1_SPEC> {
+    pub fn slib_es(&mut self) -> SLIB_ES_W<'_, SLIB_STS1_SPEC> {
         SLIB_ES_W::new(self, 22)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for SLIB_STS1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slib_sts1::W`](W) writer structure"]
 impl crate::Writable for SLIB_STS1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLIB_STS1 to value 0"]
-impl crate::Resettable for SLIB_STS1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLIB_STS1_SPEC {}

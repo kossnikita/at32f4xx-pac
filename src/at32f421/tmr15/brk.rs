@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Dead-time configuration"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtc(&mut self) -> DTC_W<BRK_SPEC> {
+    pub fn dtc(&mut self) -> DTC_W<'_, BRK_SPEC> {
         DTC_W::new(self, 0)
     }
     #[doc = "Bits 8:9 - Write protected configuration"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpc(&mut self) -> WPC_W<BRK_SPEC> {
+    pub fn wpc(&mut self) -> WPC_W<'_, BRK_SPEC> {
         WPC_W::new(self, 8)
     }
     #[doc = "Bit 10 - Frozen channel status when holistic output disable"]
     #[inline(always)]
-    #[must_use]
-    pub fn fcsodis(&mut self) -> FCSODIS_W<BRK_SPEC> {
+    pub fn fcsodis(&mut self) -> FCSODIS_W<'_, BRK_SPEC> {
         FCSODIS_W::new(self, 10)
     }
     #[doc = "Bit 11 - Frozen channel status when holistic output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn fcsoen(&mut self) -> FCSOEN_W<BRK_SPEC> {
+    pub fn fcsoen(&mut self) -> FCSOEN_W<'_, BRK_SPEC> {
         FCSOEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Brake enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn brken(&mut self) -> BRKEN_W<BRK_SPEC> {
+    pub fn brken(&mut self) -> BRKEN_W<'_, BRK_SPEC> {
         BRKEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Brake input validity"]
     #[inline(always)]
-    #[must_use]
-    pub fn brkv(&mut self) -> BRKV_W<BRK_SPEC> {
+    pub fn brkv(&mut self) -> BRKV_W<'_, BRK_SPEC> {
         BRKV_W::new(self, 13)
     }
     #[doc = "Bit 14 - Automatic output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn aoen(&mut self) -> AOEN_W<BRK_SPEC> {
+    pub fn aoen(&mut self) -> AOEN_W<'_, BRK_SPEC> {
         AOEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn oen(&mut self) -> OEN_W<BRK_SPEC> {
+    pub fn oen(&mut self) -> OEN_W<'_, BRK_SPEC> {
         OEN_W::new(self, 15)
     }
 }
@@ -150,10 +142,6 @@ impl crate::Readable for BRK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`brk::W`](W) writer structure"]
 impl crate::Writable for BRK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BRK to value 0"]
-impl crate::Resettable for BRK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BRK_SPEC {}

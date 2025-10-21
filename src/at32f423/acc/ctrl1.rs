@@ -301,32 +301,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Calibration on"]
     #[inline(always)]
-    #[must_use]
-    pub fn calon(&mut self) -> CALON_W<CTRL1_SPEC> {
+    pub fn calon(&mut self) -> CALON_W<'_, CTRL1_SPEC> {
         CALON_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable trim"]
     #[inline(always)]
-    #[must_use]
-    pub fn entrim(&mut self) -> ENTRIM_W<CTRL1_SPEC> {
+    pub fn entrim(&mut self) -> ENTRIM_W<'_, CTRL1_SPEC> {
         ENTRIM_W::new(self, 1)
     }
     #[doc = "Bit 4 - RSLOST error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eien(&mut self) -> EIEN_W<CTRL1_SPEC> {
+    pub fn eien(&mut self) -> EIEN_W<'_, CTRL1_SPEC> {
         EIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - CALRDY interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn calrdyien(&mut self) -> CALRDYIEN_W<CTRL1_SPEC> {
+    pub fn calrdyien(&mut self) -> CALRDYIEN_W<'_, CTRL1_SPEC> {
         CALRDYIEN_W::new(self, 5)
     }
     #[doc = "Bits 8:11 - Calibrated step"]
     #[inline(always)]
-    #[must_use]
-    pub fn step(&mut self) -> STEP_W<CTRL1_SPEC> {
+    pub fn step(&mut self) -> STEP_W<'_, CTRL1_SPEC> {
         STEP_W::new(self, 8)
     }
 }
@@ -340,8 +335,6 @@ impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0x0100"]
 impl crate::Resettable for CTRL1_SPEC {

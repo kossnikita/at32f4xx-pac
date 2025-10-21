@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - Received CRC error frame counter interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn rcefcim(&mut self) -> RCEFCIM_W<MMCRIM_SPEC> {
+    pub fn rcefcim(&mut self) -> RCEFCIM_W<'_, MMCRIM_SPEC> {
         RCEFCIM_W::new(self, 5)
     }
     #[doc = "Bit 6 - Received alignment error frame alignment counter interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn raefacim(&mut self) -> RAEFACIM_W<MMCRIM_SPEC> {
+    pub fn raefacim(&mut self) -> RAEFACIM_W<'_, MMCRIM_SPEC> {
         RAEFACIM_W::new(self, 6)
     }
     #[doc = "Bit 17 - Received unicast good frame counter interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn rugfcim(&mut self) -> RUGFCIM_W<MMCRIM_SPEC> {
+    pub fn rugfcim(&mut self) -> RUGFCIM_W<'_, MMCRIM_SPEC> {
         RUGFCIM_W::new(self, 17)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for MMCRIM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mmcrim::W`](W) writer structure"]
 impl crate::Writable for MMCRIM_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MMCRIM to value 0"]
-impl crate::Resettable for MMCRIM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MMCRIM_SPEC {}

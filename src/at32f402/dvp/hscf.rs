@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - Horizontal scaling resize source factor"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsrsf(&mut self) -> HSRSF_W<HSCF_SPEC> {
+    pub fn hsrsf(&mut self) -> HSRSF_W<'_, HSCF_SPEC> {
         HSRSF_W::new(self, 0)
     }
     #[doc = "Bits 16:28 - Horizontal scaling resize target factor"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsrtf(&mut self) -> HSRTF_W<HSCF_SPEC> {
+    pub fn hsrtf(&mut self) -> HSRTF_W<'_, HSCF_SPEC> {
         HSRTF_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for HSCF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hscf::W`](W) writer structure"]
 impl crate::Writable for HSCF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HSCF to value 0"]
-impl crate::Resettable for HSCF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HSCF_SPEC {}

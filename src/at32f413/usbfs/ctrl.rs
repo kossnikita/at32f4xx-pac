@@ -143,80 +143,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Core soft reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn csrst(&mut self) -> CSRST_W<CTRL_SPEC> {
+    pub fn csrst(&mut self) -> CSRST_W<'_, CTRL_SPEC> {
         CSRST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Disable usb phy"]
     #[inline(always)]
-    #[must_use]
-    pub fn disusb(&mut self) -> DISUSB_W<CTRL_SPEC> {
+    pub fn disusb(&mut self) -> DISUSB_W<'_, CTRL_SPEC> {
         DISUSB_W::new(self, 1)
     }
     #[doc = "Bit 2 - Low power mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn lpm(&mut self) -> LPM_W<CTRL_SPEC> {
+    pub fn lpm(&mut self) -> LPM_W<'_, CTRL_SPEC> {
         LPM_W::new(self, 2)
     }
     #[doc = "Bit 3 - Soft suspend config"]
     #[inline(always)]
-    #[must_use]
-    pub fn ssp(&mut self) -> SSP_W<CTRL_SPEC> {
+    pub fn ssp(&mut self) -> SSP_W<'_, CTRL_SPEC> {
         SSP_W::new(self, 3)
     }
     #[doc = "Bit 4 - Generate resume request"]
     #[inline(always)]
-    #[must_use]
-    pub fn gresume(&mut self) -> GRESUME_W<CTRL_SPEC> {
+    pub fn gresume(&mut self) -> GRESUME_W<'_, CTRL_SPEC> {
         GRESUME_W::new(self, 4)
     }
     #[doc = "Bit 8 - Lost start of frame interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn lsofien(&mut self) -> LSOFIEN_W<CTRL_SPEC> {
+    pub fn lsofien(&mut self) -> LSOFIEN_W<'_, CTRL_SPEC> {
         LSOFIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Start of frame interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sofien(&mut self) -> SOFIEN_W<CTRL_SPEC> {
+    pub fn sofien(&mut self) -> SOFIEN_W<'_, CTRL_SPEC> {
         SOFIEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Bus reset interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rstien(&mut self) -> RSTIEN_W<CTRL_SPEC> {
+    pub fn rstien(&mut self) -> RSTIEN_W<'_, CTRL_SPEC> {
         RSTIEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Bus suspend mode interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn spien(&mut self) -> SPIEN_W<CTRL_SPEC> {
+    pub fn spien(&mut self) -> SPIEN_W<'_, CTRL_SPEC> {
         SPIEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Wakeup/Remote wakeup interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn wkien(&mut self) -> WKIEN_W<CTRL_SPEC> {
+    pub fn wkien(&mut self) -> WKIEN_W<'_, CTRL_SPEC> {
         WKIEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Bus error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn beien(&mut self) -> BEIEN_W<CTRL_SPEC> {
+    pub fn beien(&mut self) -> BEIEN_W<'_, CTRL_SPEC> {
         BEIEN_W::new(self, 13)
     }
     #[doc = "Bit 14 - USB Core fifo overrun interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ucforien(&mut self) -> UCFORIEN_W<CTRL_SPEC> {
+    pub fn ucforien(&mut self) -> UCFORIEN_W<'_, CTRL_SPEC> {
         UCFORIEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - transmission completed interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tcien(&mut self) -> TCIEN_W<CTRL_SPEC> {
+    pub fn tcien(&mut self) -> TCIEN_W<'_, CTRL_SPEC> {
         TCIEN_W::new(self, 15)
     }
 }
@@ -230,8 +217,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x03"]
 impl crate::Resettable for CTRL_SPEC {

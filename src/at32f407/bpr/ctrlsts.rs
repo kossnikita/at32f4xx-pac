@@ -252,32 +252,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Tamper event flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpefclr(&mut self) -> TPEFCLR_W<CTRLSTS_SPEC> {
+    pub fn tpefclr(&mut self) -> TPEFCLR_W<'_, CTRLSTS_SPEC> {
         TPEFCLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Tamper interrupt flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpifclr(&mut self) -> TPIFCLR_W<CTRLSTS_SPEC> {
+    pub fn tpifclr(&mut self) -> TPIFCLR_W<'_, CTRLSTS_SPEC> {
         TPIFCLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Tamper pin interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpien(&mut self) -> TPIEN_W<CTRLSTS_SPEC> {
+    pub fn tpien(&mut self) -> TPIEN_W<'_, CTRLSTS_SPEC> {
         TPIEN_W::new(self, 2)
     }
     #[doc = "Bit 8 - Tamper event flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpef(&mut self) -> TPEF_W<CTRLSTS_SPEC> {
+    pub fn tpef(&mut self) -> TPEF_W<'_, CTRLSTS_SPEC> {
         TPEF_W::new(self, 8)
     }
     #[doc = "Bit 9 - Tamper interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpif(&mut self) -> TPIF_W<CTRLSTS_SPEC> {
+    pub fn tpif(&mut self) -> TPIF_W<'_, CTRLSTS_SPEC> {
         TPIF_W::new(self, 9)
     }
 }
@@ -291,10 +286,7 @@ impl crate::Readable for CTRLSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlsts::W`](W) writer structure"]
 impl crate::Writable for CTRLSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x03;
 }
 #[doc = "`reset()` method sets CTRLSTS to value 0"]
-impl crate::Resettable for CTRLSTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRLSTS_SPEC {}

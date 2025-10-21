@@ -163,92 +163,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Memory bank enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en(&mut self) -> EN_W<BK1CTRL4_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, BK1CTRL4_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Address and data multiplexing enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn admuxen(&mut self) -> ADMUXEN_W<BK1CTRL4_SPEC> {
+    pub fn admuxen(&mut self) -> ADMUXEN_W<'_, BK1CTRL4_SPEC> {
         ADMUXEN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Memory device type"]
     #[inline(always)]
-    #[must_use]
-    pub fn dev(&mut self) -> DEV_W<BK1CTRL4_SPEC> {
+    pub fn dev(&mut self) -> DEV_W<'_, BK1CTRL4_SPEC> {
         DEV_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - External memory data bus width"]
     #[inline(always)]
-    #[must_use]
-    pub fn extmdbw(&mut self) -> EXTMDBW_W<BK1CTRL4_SPEC> {
+    pub fn extmdbw(&mut self) -> EXTMDBW_W<'_, BK1CTRL4_SPEC> {
         EXTMDBW_W::new(self, 4)
     }
     #[doc = "Bit 6 - Nor flash access enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn noren(&mut self) -> NOREN_W<BK1CTRL4_SPEC> {
+    pub fn noren(&mut self) -> NOREN_W<'_, BK1CTRL4_SPEC> {
         NOREN_W::new(self, 6)
     }
     #[doc = "Bit 8 - Synchronous burst enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncben(&mut self) -> SYNCBEN_W<BK1CTRL4_SPEC> {
+    pub fn syncben(&mut self) -> SYNCBEN_W<'_, BK1CTRL4_SPEC> {
         SYNCBEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - NWAIT polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn nwpol(&mut self) -> NWPOL_W<BK1CTRL4_SPEC> {
+    pub fn nwpol(&mut self) -> NWPOL_W<'_, BK1CTRL4_SPEC> {
         NWPOL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Wrapped enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn wrapen(&mut self) -> WRAPEN_W<BK1CTRL4_SPEC> {
+    pub fn wrapen(&mut self) -> WRAPEN_W<'_, BK1CTRL4_SPEC> {
         WRAPEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Wait timing configuration"]
     #[inline(always)]
-    #[must_use]
-    pub fn nwtcfg(&mut self) -> NWTCFG_W<BK1CTRL4_SPEC> {
+    pub fn nwtcfg(&mut self) -> NWTCFG_W<'_, BK1CTRL4_SPEC> {
         NWTCFG_W::new(self, 11)
     }
     #[doc = "Bit 12 - Write enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn wen(&mut self) -> WEN_W<BK1CTRL4_SPEC> {
+    pub fn wen(&mut self) -> WEN_W<'_, BK1CTRL4_SPEC> {
         WEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - NWAIT in synchronous transfer enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn nwsen(&mut self) -> NWSEN_W<BK1CTRL4_SPEC> {
+    pub fn nwsen(&mut self) -> NWSEN_W<'_, BK1CTRL4_SPEC> {
         NWSEN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Read-write timing different"]
     #[inline(always)]
-    #[must_use]
-    pub fn rwtd(&mut self) -> RWTD_W<BK1CTRL4_SPEC> {
+    pub fn rwtd(&mut self) -> RWTD_W<'_, BK1CTRL4_SPEC> {
         RWTD_W::new(self, 14)
     }
     #[doc = "Bit 15 - NWAIT in asynchronous transfer enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn nwasen(&mut self) -> NWASEN_W<BK1CTRL4_SPEC> {
+    pub fn nwasen(&mut self) -> NWASEN_W<'_, BK1CTRL4_SPEC> {
         NWASEN_W::new(self, 15)
     }
     #[doc = "Bits 16:18 - CRAM page size"]
     #[inline(always)]
-    #[must_use]
-    pub fn crpgs(&mut self) -> CRPGS_W<BK1CTRL4_SPEC> {
+    pub fn crpgs(&mut self) -> CRPGS_W<'_, BK1CTRL4_SPEC> {
         CRPGS_W::new(self, 16)
     }
     #[doc = "Bit 19 - Memory write mode control"]
     #[inline(always)]
-    #[must_use]
-    pub fn mwmc(&mut self) -> MWMC_W<BK1CTRL4_SPEC> {
+    pub fn mwmc(&mut self) -> MWMC_W<'_, BK1CTRL4_SPEC> {
         MWMC_W::new(self, 19)
     }
 }
@@ -262,8 +247,6 @@ impl crate::Readable for BK1CTRL4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk1ctrl4::W`](W) writer structure"]
 impl crate::Writable for BK1CTRL4_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK1CTRL4 to value 0x30d2"]
 impl crate::Resettable for BK1CTRL4_SPEC {

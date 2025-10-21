@@ -145,14 +145,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Tamper pin enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpen(&mut self) -> TPEN_W<CTRL_SPEC> {
+    pub fn tpen(&mut self) -> TPEN_W<'_, CTRL_SPEC> {
         TPEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - TAMPER pin polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn tpp(&mut self) -> TPP_W<CTRL_SPEC> {
+    pub fn tpp(&mut self) -> TPP_W<'_, CTRL_SPEC> {
         TPP_W::new(self, 1)
     }
 }
@@ -166,10 +164,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
-impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL_SPEC {}

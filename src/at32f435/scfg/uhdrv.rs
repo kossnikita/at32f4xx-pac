@@ -103,56 +103,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PB3 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb3_uh(&mut self) -> PB3_UH_W<UHDRV_SPEC> {
+    pub fn pb3_uh(&mut self) -> PB3_UH_W<'_, UHDRV_SPEC> {
         PB3_UH_W::new(self, 0)
     }
     #[doc = "Bit 1 - PB9 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb9_uh(&mut self) -> PB9_UH_W<UHDRV_SPEC> {
+    pub fn pb9_uh(&mut self) -> PB9_UH_W<'_, UHDRV_SPEC> {
         PB9_UH_W::new(self, 1)
     }
     #[doc = "Bit 2 - PB10 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pb10_uh(&mut self) -> PB10_UH_W<UHDRV_SPEC> {
+    pub fn pb10_uh(&mut self) -> PB10_UH_W<'_, UHDRV_SPEC> {
         PB10_UH_W::new(self, 2)
     }
     #[doc = "Bit 5 - PD12 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd12_uh(&mut self) -> PD12_UH_W<UHDRV_SPEC> {
+    pub fn pd12_uh(&mut self) -> PD12_UH_W<'_, UHDRV_SPEC> {
         PD12_UH_W::new(self, 5)
     }
     #[doc = "Bit 6 - PD13 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd13_uh(&mut self) -> PD13_UH_W<UHDRV_SPEC> {
+    pub fn pd13_uh(&mut self) -> PD13_UH_W<'_, UHDRV_SPEC> {
         PD13_UH_W::new(self, 6)
     }
     #[doc = "Bit 7 - PD14 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd14_uh(&mut self) -> PD14_UH_W<UHDRV_SPEC> {
+    pub fn pd14_uh(&mut self) -> PD14_UH_W<'_, UHDRV_SPEC> {
         PD14_UH_W::new(self, 7)
     }
     #[doc = "Bit 8 - PD15 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd15_uh(&mut self) -> PD15_UH_W<UHDRV_SPEC> {
+    pub fn pd15_uh(&mut self) -> PD15_UH_W<'_, UHDRV_SPEC> {
         PD15_UH_W::new(self, 8)
     }
     #[doc = "Bit 9 - PF14 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pf14_uh(&mut self) -> PF14_UH_W<UHDRV_SPEC> {
+    pub fn pf14_uh(&mut self) -> PF14_UH_W<'_, UHDRV_SPEC> {
         PF14_UH_W::new(self, 9)
     }
     #[doc = "Bit 10 - PF15 ultra high sourcing/sinking strength"]
     #[inline(always)]
-    #[must_use]
-    pub fn pf15_uh(&mut self) -> PF15_UH_W<UHDRV_SPEC> {
+    pub fn pf15_uh(&mut self) -> PF15_UH_W<'_, UHDRV_SPEC> {
         PF15_UH_W::new(self, 10)
     }
 }
@@ -166,10 +157,6 @@ impl crate::Readable for UHDRV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`uhdrv::W`](W) writer structure"]
 impl crate::Writable for UHDRV_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets UHDRV to value 0"]
-impl crate::Resettable for UHDRV_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UHDRV_SPEC {}

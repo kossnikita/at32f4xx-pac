@@ -461,44 +461,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - DMA receive enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaren(&mut self) -> DMAREN_W<CTRL2_SPEC> {
+    pub fn dmaren(&mut self) -> DMAREN_W<'_, CTRL2_SPEC> {
         DMAREN_W::new(self, 0)
     }
     #[doc = "Bit 1 - DMA transmit enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaten(&mut self) -> DMATEN_W<CTRL2_SPEC> {
+    pub fn dmaten(&mut self) -> DMATEN_W<'_, CTRL2_SPEC> {
         DMATEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Hardware CS output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hwcsoe(&mut self) -> HWCSOE_W<CTRL2_SPEC> {
+    pub fn hwcsoe(&mut self) -> HWCSOE_W<'_, CTRL2_SPEC> {
         HWCSOE_W::new(self, 2)
     }
     #[doc = "Bit 5 - Error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTRL2_SPEC> {
+    pub fn errie(&mut self) -> ERRIE_W<'_, CTRL2_SPEC> {
         ERRIE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Receive data buffer full interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdbfie(&mut self) -> RDBFIE_W<CTRL2_SPEC> {
+    pub fn rdbfie(&mut self) -> RDBFIE_W<'_, CTRL2_SPEC> {
         RDBFIE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Transmit data buffer empty interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tdbeie(&mut self) -> TDBEIE_W<CTRL2_SPEC> {
+    pub fn tdbeie(&mut self) -> TDBEIE_W<'_, CTRL2_SPEC> {
         TDBEIE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Master clock frequency division bit3"]
     #[inline(always)]
-    #[must_use]
-    pub fn mdiv3(&mut self) -> MDIV3_W<CTRL2_SPEC> {
+    pub fn mdiv3(&mut self) -> MDIV3_W<'_, CTRL2_SPEC> {
         MDIV3_W::new(self, 8)
     }
 }
@@ -512,10 +505,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
-impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL2_SPEC {}

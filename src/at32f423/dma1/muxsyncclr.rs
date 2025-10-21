@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncovfc1(&mut self) -> SYNCOVFC1_W<MUXSYNCCLR_SPEC> {
+    pub fn syncovfc1(&mut self) -> SYNCOVFC1_W<'_, MUXSYNCCLR_SPEC> {
         SYNCOVFC1_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncovfc2(&mut self) -> SYNCOVFC2_W<MUXSYNCCLR_SPEC> {
+    pub fn syncovfc2(&mut self) -> SYNCOVFC2_W<'_, MUXSYNCCLR_SPEC> {
         SYNCOVFC2_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncovfc3(&mut self) -> SYNCOVFC3_W<MUXSYNCCLR_SPEC> {
+    pub fn syncovfc3(&mut self) -> SYNCOVFC3_W<'_, MUXSYNCCLR_SPEC> {
         SYNCOVFC3_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncovfc4(&mut self) -> SYNCOVFC4_W<MUXSYNCCLR_SPEC> {
+    pub fn syncovfc4(&mut self) -> SYNCOVFC4_W<'_, MUXSYNCCLR_SPEC> {
         SYNCOVFC4_W::new(self, 3)
     }
     #[doc = "Bit 4 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncovfc5(&mut self) -> SYNCOVFC5_W<MUXSYNCCLR_SPEC> {
+    pub fn syncovfc5(&mut self) -> SYNCOVFC5_W<'_, MUXSYNCCLR_SPEC> {
         SYNCOVFC5_W::new(self, 4)
     }
     #[doc = "Bit 5 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncovfc6(&mut self) -> SYNCOVFC6_W<MUXSYNCCLR_SPEC> {
+    pub fn syncovfc6(&mut self) -> SYNCOVFC6_W<'_, MUXSYNCCLR_SPEC> {
         SYNCOVFC6_W::new(self, 5)
     }
     #[doc = "Bit 6 - Clear synchronizaton overrun interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncovfc7(&mut self) -> SYNCOVFC7_W<MUXSYNCCLR_SPEC> {
+    pub fn syncovfc7(&mut self) -> SYNCOVFC7_W<'_, MUXSYNCCLR_SPEC> {
         SYNCOVFC7_W::new(self, 6)
     }
 }
@@ -134,10 +127,6 @@ impl crate::Readable for MUXSYNCCLR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxsyncclr::W`](W) writer structure"]
 impl crate::Writable for MUXSYNCCLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MUXSYNCCLR to value 0"]
-impl crate::Resettable for MUXSYNCCLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MUXSYNCCLR_SPEC {}

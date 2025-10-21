@@ -24,6 +24,4 @@ impl crate::RegisterSpec for D2ODT_SPEC {
 #[doc = "`read()` method returns [`d2odt::R`](R) reader structure"]
 impl crate::Readable for D2ODT_SPEC {}
 #[doc = "`reset()` method sets D2ODT to value 0"]
-impl crate::Resettable for D2ODT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for D2ODT_SPEC {}

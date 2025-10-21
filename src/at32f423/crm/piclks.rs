@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - USART1 clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart1sel(&mut self) -> USART1SEL_W<PICLKS_SPEC> {
+    pub fn usart1sel(&mut self) -> USART1SEL_W<'_, PICLKS_SPEC> {
         USART1SEL_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - USART2 clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart2sel(&mut self) -> USART2SEL_W<PICLKS_SPEC> {
+    pub fn usart2sel(&mut self) -> USART2SEL_W<'_, PICLKS_SPEC> {
         USART2SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - USART3 clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart3sel(&mut self) -> USART3SEL_W<PICLKS_SPEC> {
+    pub fn usart3sel(&mut self) -> USART3SEL_W<'_, PICLKS_SPEC> {
         USART3SEL_W::new(self, 4)
     }
     #[doc = "Bits 12:13 - I2C1 clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c1sel(&mut self) -> I2C1SEL_W<PICLKS_SPEC> {
+    pub fn i2c1sel(&mut self) -> I2C1SEL_W<'_, PICLKS_SPEC> {
         I2C1SEL_W::new(self, 12)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for PICLKS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`piclks::W`](W) writer structure"]
 impl crate::Writable for PICLKS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PICLKS to value 0"]
-impl crate::Resettable for PICLKS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PICLKS_SPEC {}

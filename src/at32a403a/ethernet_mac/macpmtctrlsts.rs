@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Power down"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd(&mut self) -> PD_W<MACPMTCTRLSTS_SPEC> {
+    pub fn pd(&mut self) -> PD_W<'_, MACPMTCTRLSTS_SPEC> {
         PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable magic packet"]
     #[inline(always)]
-    #[must_use]
-    pub fn emp(&mut self) -> EMP_W<MACPMTCTRLSTS_SPEC> {
+    pub fn emp(&mut self) -> EMP_W<'_, MACPMTCTRLSTS_SPEC> {
         EMP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable remote wakeup frame"]
     #[inline(always)]
-    #[must_use]
-    pub fn erwf(&mut self) -> ERWF_W<MACPMTCTRLSTS_SPEC> {
+    pub fn erwf(&mut self) -> ERWF_W<'_, MACPMTCTRLSTS_SPEC> {
         ERWF_W::new(self, 2)
     }
     #[doc = "Bit 5 - Received magic packet"]
     #[inline(always)]
-    #[must_use]
-    pub fn rmp(&mut self) -> RMP_W<MACPMTCTRLSTS_SPEC> {
+    pub fn rmp(&mut self) -> RMP_W<'_, MACPMTCTRLSTS_SPEC> {
         RMP_W::new(self, 5)
     }
     #[doc = "Bit 6 - Recevied remote wakeup frame"]
     #[inline(always)]
-    #[must_use]
-    pub fn rrwf(&mut self) -> RRWF_W<MACPMTCTRLSTS_SPEC> {
+    pub fn rrwf(&mut self) -> RRWF_W<'_, MACPMTCTRLSTS_SPEC> {
         RRWF_W::new(self, 6)
     }
     #[doc = "Bit 9 - Global unicast"]
     #[inline(always)]
-    #[must_use]
-    pub fn guc(&mut self) -> GUC_W<MACPMTCTRLSTS_SPEC> {
+    pub fn guc(&mut self) -> GUC_W<'_, MACPMTCTRLSTS_SPEC> {
         GUC_W::new(self, 9)
     }
     #[doc = "Bit 31 - Remote wakeup frame filter register pointer reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn rwffpr(&mut self) -> RWFFPR_W<MACPMTCTRLSTS_SPEC> {
+    pub fn rwffpr(&mut self) -> RWFFPR_W<'_, MACPMTCTRLSTS_SPEC> {
         RWFFPR_W::new(self, 31)
     }
 }
@@ -134,10 +127,6 @@ impl crate::Readable for MACPMTCTRLSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macpmtctrlsts::W`](W) writer structure"]
 impl crate::Writable for MACPMTCTRLSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACPMTCTRLSTS to value 0"]
-impl crate::Resettable for MACPMTCTRLSTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MACPMTCTRLSTS_SPEC {}

@@ -24,6 +24,4 @@ impl crate::RegisterSpec for MMCTFCNT_SPEC {
 #[doc = "`read()` method returns [`mmctfcnt::R`](R) reader structure"]
 impl crate::Readable for MMCTFCNT_SPEC {}
 #[doc = "`reset()` method sets MMCTFCNT to value 0"]
-impl crate::Resettable for MMCTFCNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MMCTFCNT_SPEC {}

@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - DAC1 software trigger"]
     #[inline(always)]
-    #[must_use]
-    pub fn d1swtrg(&mut self) -> D1SWTRG_W<SWTRG_SPEC> {
+    pub fn d1swtrg(&mut self) -> D1SWTRG_W<'_, SWTRG_SPEC> {
         D1SWTRG_W::new(self, 0)
     }
     #[doc = "Bit 1 - DAC2 software trigger"]
     #[inline(always)]
-    #[must_use]
-    pub fn d2swtrg(&mut self) -> D2SWTRG_W<SWTRG_SPEC> {
+    pub fn d2swtrg(&mut self) -> D2SWTRG_W<'_, SWTRG_SPEC> {
         D2SWTRG_W::new(self, 1)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for SWTRG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swtrg::W`](W) writer structure"]
 impl crate::Writable for SWTRG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SWTRG to value 0"]
-impl crate::Resettable for SWTRG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SWTRG_SPEC {}

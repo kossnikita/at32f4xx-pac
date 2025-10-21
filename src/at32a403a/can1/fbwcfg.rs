@@ -167,94 +167,79 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SEL0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel(&mut self, n: u8) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel(&mut self, n: u8) -> SEL_W<'_, FBWCFG_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 14][n as usize];
         SEL_W::new(self, n)
     }
     #[doc = "Bit 0 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel0(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel0(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel1(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel1(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel2(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel2(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel3(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel3(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel4(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel4(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 4)
     }
     #[doc = "Bit 5 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel5(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel5(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 5)
     }
     #[doc = "Bit 6 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel6(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel6(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel7(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel7(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel8(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel8(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel9(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel9(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel10(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel10(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel11(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel11(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 11)
     }
     #[doc = "Bit 12 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel12(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel12(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 12)
     }
     #[doc = "Bit 13 - Filter bit width select"]
     #[inline(always)]
-    #[must_use]
-    pub fn sel13(&mut self) -> SEL_W<FBWCFG_SPEC> {
+    pub fn sel13(&mut self) -> SEL_W<'_, FBWCFG_SPEC> {
         SEL_W::new(self, 13)
     }
 }
@@ -268,10 +253,6 @@ impl crate::Readable for FBWCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fbwcfg::W`](W) writer structure"]
 impl crate::Writable for FBWCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FBWCFG to value 0"]
-impl crate::Resettable for FBWCFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FBWCFG_SPEC {}

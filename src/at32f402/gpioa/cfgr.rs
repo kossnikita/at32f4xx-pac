@@ -212,106 +212,89 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOMC0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc(&mut self, n: u8) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc(&mut self, n: u8) -> IOMC_W<'_, CFGR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 16][n as usize];
         IOMC_W::new(self, n * 2)
     }
     #[doc = "Bits 0:1 - GPIOx pin 0 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc0(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc0(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - GPIOx pin 1 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc1(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc1(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - GPIOx pin 2 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc2(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc2(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - GPIOx pin 3 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc3(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc3(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - GPIOx pin 4 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc4(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc4(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - GPIOx pin 5 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc5(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc5(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - GPIOx pin 6 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc6(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc6(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - GPIOx pin 7 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc7(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc7(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - GPIOx pin 8 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc8(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc8(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - GPIOx pin 9 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc9(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc9(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - GPIOx pin 10 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc10(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc10(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - GPIOx pin 11 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc11(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc11(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - GPIOx pin 12 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc12(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc12(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - GPIOx pin 13 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc13(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc13(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - GPIOx pin 14 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc14(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc14(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - GPIOx pin 15 mode configurate"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc15(&mut self) -> IOMC_W<CFGR_SPEC> {
+    pub fn iomc15(&mut self) -> IOMC_W<'_, CFGR_SPEC> {
         IOMC_W::new(self, 30)
     }
 }
@@ -325,10 +308,6 @@ impl crate::Readable for CFGR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfgr::W`](W) writer structure"]
 impl crate::Writable for CFGR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFGR to value 0"]
-impl crate::Resettable for CFGR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CFGR_SPEC {}

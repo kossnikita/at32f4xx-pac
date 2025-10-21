@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - Start of frame number"]
     #[inline(always)]
-    #[must_use]
-    pub fn sofnum(&mut self) -> SOFNUM_W<SOFRNUM_SPEC> {
+    pub fn sofnum(&mut self) -> SOFNUM_W<'_, SOFRNUM_SPEC> {
         SOFNUM_W::new(self, 0)
     }
     #[doc = "Bits 11:12 - Lost start of frame number"]
     #[inline(always)]
-    #[must_use]
-    pub fn lsofnum(&mut self) -> LSOFNUM_W<SOFRNUM_SPEC> {
+    pub fn lsofnum(&mut self) -> LSOFNUM_W<'_, SOFRNUM_SPEC> {
         LSOFNUM_W::new(self, 11)
     }
     #[doc = "Bit 13 - Connect locked"]
     #[inline(always)]
-    #[must_use]
-    pub fn clck(&mut self) -> CLCK_W<SOFRNUM_SPEC> {
+    pub fn clck(&mut self) -> CLCK_W<'_, SOFRNUM_SPEC> {
         CLCK_W::new(self, 13)
     }
     #[doc = "Bit 14 - DM status"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmsts(&mut self) -> DMSTS_W<SOFRNUM_SPEC> {
+    pub fn dmsts(&mut self) -> DMSTS_W<'_, SOFRNUM_SPEC> {
         DMSTS_W::new(self, 14)
     }
     #[doc = "Bit 15 - DP status"]
     #[inline(always)]
-    #[must_use]
-    pub fn dpsts(&mut self) -> DPSTS_W<SOFRNUM_SPEC> {
+    pub fn dpsts(&mut self) -> DPSTS_W<'_, SOFRNUM_SPEC> {
         DPSTS_W::new(self, 15)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for SOFRNUM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sofrnum::W`](W) writer structure"]
 impl crate::Writable for SOFRNUM_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SOFRNUM to value 0"]
-impl crate::Resettable for SOFRNUM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SOFRNUM_SPEC {}

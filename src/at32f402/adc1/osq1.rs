@@ -68,40 +68,34 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OSN13` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn(&mut self, n: u8) -> OSN_W<OSQ1_SPEC> {
+    pub fn osn(&mut self, n: u8) -> OSN_W<'_, OSQ1_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         OSN_W::new(self, n * 5)
     }
     #[doc = "Bits 0:4 - Number of 13th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn13(&mut self) -> OSN_W<OSQ1_SPEC> {
+    pub fn osn13(&mut self) -> OSN_W<'_, OSQ1_SPEC> {
         OSN_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Number of 14th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn14(&mut self) -> OSN_W<OSQ1_SPEC> {
+    pub fn osn14(&mut self) -> OSN_W<'_, OSQ1_SPEC> {
         OSN_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - Number of 15th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn15(&mut self) -> OSN_W<OSQ1_SPEC> {
+    pub fn osn15(&mut self) -> OSN_W<'_, OSQ1_SPEC> {
         OSN_W::new(self, 10)
     }
     #[doc = "Bits 15:19 - Number of 16th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn16(&mut self) -> OSN_W<OSQ1_SPEC> {
+    pub fn osn16(&mut self) -> OSN_W<'_, OSQ1_SPEC> {
         OSN_W::new(self, 15)
     }
     #[doc = "Bits 20:23 - Ordinary conversion sequence length"]
     #[inline(always)]
-    #[must_use]
-    pub fn oclen(&mut self) -> OCLEN_W<OSQ1_SPEC> {
+    pub fn oclen(&mut self) -> OCLEN_W<'_, OSQ1_SPEC> {
         OCLEN_W::new(self, 20)
     }
 }
@@ -115,10 +109,6 @@ impl crate::Readable for OSQ1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`osq1::W`](W) writer structure"]
 impl crate::Writable for OSQ1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OSQ1 to value 0"]
-impl crate::Resettable for OSQ1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OSQ1_SPEC {}

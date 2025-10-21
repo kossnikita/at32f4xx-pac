@@ -937,86 +937,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Peripheral enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2cen(&mut self) -> I2CEN_W<CTRL1_SPEC> {
+    pub fn i2cen(&mut self) -> I2CEN_W<'_, CTRL1_SPEC> {
         I2CEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - I2C peripheral mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn permode(&mut self) -> PERMODE_W<CTRL1_SPEC> {
+    pub fn permode(&mut self) -> PERMODE_W<'_, CTRL1_SPEC> {
         PERMODE_W::new(self, 1)
     }
     #[doc = "Bit 3 - SMBus device mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn smbmode(&mut self) -> SMBMODE_W<CTRL1_SPEC> {
+    pub fn smbmode(&mut self) -> SMBMODE_W<'_, CTRL1_SPEC> {
         SMBMODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - SMBus address resolution protocol enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn arpen(&mut self) -> ARPEN_W<CTRL1_SPEC> {
+    pub fn arpen(&mut self) -> ARPEN_W<'_, CTRL1_SPEC> {
         ARPEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - PEC calculation enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pecen(&mut self) -> PECEN_W<CTRL1_SPEC> {
+    pub fn pecen(&mut self) -> PECEN_W<'_, CTRL1_SPEC> {
         PECEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - General call address enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gcaen(&mut self) -> GCAEN_W<CTRL1_SPEC> {
+    pub fn gcaen(&mut self) -> GCAEN_W<'_, CTRL1_SPEC> {
         GCAEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Clock stretching mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn stretch(&mut self) -> STRETCH_W<CTRL1_SPEC> {
+    pub fn stretch(&mut self) -> STRETCH_W<'_, CTRL1_SPEC> {
         STRETCH_W::new(self, 7)
     }
     #[doc = "Bit 8 - Start generation"]
     #[inline(always)]
-    #[must_use]
-    pub fn genstart(&mut self) -> GENSTART_W<CTRL1_SPEC> {
+    pub fn genstart(&mut self) -> GENSTART_W<'_, CTRL1_SPEC> {
         GENSTART_W::new(self, 8)
     }
     #[doc = "Bit 9 - Stop generation"]
     #[inline(always)]
-    #[must_use]
-    pub fn genstop(&mut self) -> GENSTOP_W<CTRL1_SPEC> {
+    pub fn genstop(&mut self) -> GENSTOP_W<'_, CTRL1_SPEC> {
         GENSTOP_W::new(self, 9)
     }
     #[doc = "Bit 10 - Acknowledge enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn acken(&mut self) -> ACKEN_W<CTRL1_SPEC> {
+    pub fn acken(&mut self) -> ACKEN_W<'_, CTRL1_SPEC> {
         ACKEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Master receiving mode acknowledge control"]
     #[inline(always)]
-    #[must_use]
-    pub fn mackctrl(&mut self) -> MACKCTRL_W<CTRL1_SPEC> {
+    pub fn mackctrl(&mut self) -> MACKCTRL_W<'_, CTRL1_SPEC> {
         MACKCTRL_W::new(self, 11)
     }
     #[doc = "Bit 12 - Request PEC transmission enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pecten(&mut self) -> PECTEN_W<CTRL1_SPEC> {
+    pub fn pecten(&mut self) -> PECTEN_W<'_, CTRL1_SPEC> {
         PECTEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - SMBus alert pin set"]
     #[inline(always)]
-    #[must_use]
-    pub fn smbalert(&mut self) -> SMBALERT_W<CTRL1_SPEC> {
+    pub fn smbalert(&mut self) -> SMBALERT_W<'_, CTRL1_SPEC> {
         SMBALERT_W::new(self, 13)
     }
     #[doc = "Bit 15 - I2C peripheral reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn reset(&mut self) -> RESET_W<CTRL1_SPEC> {
+    pub fn reset(&mut self) -> RESET_W<'_, CTRL1_SPEC> {
         RESET_W::new(self, 15)
     }
 }
@@ -1030,10 +1016,6 @@ impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0"]
-impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL1_SPEC {}

@@ -220,62 +220,54 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Channel 1 configure"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1c(&mut self) -> C1C_W<CM1_OUTPUT_SPEC> {
+    pub fn c1c(&mut self) -> C1C_W<'_, CM1_OUTPUT_SPEC> {
         C1C_W::new(self, 0)
     }
     #[doc = "Channel (1-1) output immediately enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OIEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn coien(&mut self, n: u8) -> COIEN_W<CM1_OUTPUT_SPEC> {
+    pub fn coien(&mut self, n: u8) -> COIEN_W<'_, CM1_OUTPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         COIEN_W::new(self, n * 0 + 2)
     }
     #[doc = "Bit 2 - Channel 1 output immediately enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1oien(&mut self) -> COIEN_W<CM1_OUTPUT_SPEC> {
+    pub fn c1oien(&mut self) -> COIEN_W<'_, CM1_OUTPUT_SPEC> {
         COIEN_W::new(self, 2)
     }
     #[doc = "Channel (1-1) output buffer enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OBEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn coben(&mut self, n: u8) -> COBEN_W<CM1_OUTPUT_SPEC> {
+    pub fn coben(&mut self, n: u8) -> COBEN_W<'_, CM1_OUTPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         COBEN_W::new(self, n * 0 + 3)
     }
     #[doc = "Bit 3 - Channel 1 output buffer enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1oben(&mut self) -> COBEN_W<CM1_OUTPUT_SPEC> {
+    pub fn c1oben(&mut self) -> COBEN_W<'_, CM1_OUTPUT_SPEC> {
         COBEN_W::new(self, 3)
     }
     #[doc = "Channel (1-1) output control"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1OCTRL` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn coctrl(&mut self, n: u8) -> COCTRL_W<CM1_OUTPUT_SPEC> {
+    pub fn coctrl(&mut self, n: u8) -> COCTRL_W<'_, CM1_OUTPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         COCTRL_W::new(self, n * 0 + 4)
     }
     #[doc = "Bits 4:6 - Channel 1 output control"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1octrl(&mut self) -> COCTRL_W<CM1_OUTPUT_SPEC> {
+    pub fn c1octrl(&mut self) -> COCTRL_W<'_, CM1_OUTPUT_SPEC> {
         COCTRL_W::new(self, 4)
     }
     #[doc = "Bit 7 - Channel 1 output switch enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1osen(&mut self) -> C1OSEN_W<CM1_OUTPUT_SPEC> {
+    pub fn c1osen(&mut self) -> C1OSEN_W<'_, CM1_OUTPUT_SPEC> {
         C1OSEN_W::new(self, 7)
     }
 }
@@ -289,10 +281,6 @@ impl crate::Readable for CM1_OUTPUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cm1_output::W`](W) writer structure"]
 impl crate::Writable for CM1_OUTPUT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CM1_OUTPUT to value 0"]
-impl crate::Resettable for CM1_OUTPUT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CM1_OUTPUT_SPEC {}

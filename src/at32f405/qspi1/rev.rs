@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30 - Revision number"]
     #[inline(always)]
-    #[must_use]
-    pub fn revision(&mut self) -> REVISION_W<REV_SPEC> {
+    pub fn revision(&mut self) -> REVISION_W<'_, REV_SPEC> {
         REVISION_W::new(self, 0)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for REV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rev::W`](W) writer structure"]
 impl crate::Writable for REV_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REV to value 0x0001_0500"]
 impl crate::Resettable for REV_SPEC {

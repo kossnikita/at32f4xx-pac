@@ -153,34 +153,29 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `EXINT8` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint(&mut self, n: u8) -> EXINT_W<EXINTC3_SPEC> {
+    pub fn exint(&mut self, n: u8) -> EXINT_W<'_, EXINTC3_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         EXINT_W::new(self, n * 4)
     }
     #[doc = "Bits 0:3 - Select the input source for EXINT8 external interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint8(&mut self) -> EXINT_W<EXINTC3_SPEC> {
+    pub fn exint8(&mut self) -> EXINT_W<'_, EXINTC3_SPEC> {
         EXINT_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Select the input source for EXINT9 external interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint9(&mut self) -> EXINT_W<EXINTC3_SPEC> {
+    pub fn exint9(&mut self) -> EXINT_W<'_, EXINTC3_SPEC> {
         EXINT_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Select the input source for EXINT10 external interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint10(&mut self) -> EXINT_W<EXINTC3_SPEC> {
+    pub fn exint10(&mut self) -> EXINT_W<'_, EXINTC3_SPEC> {
         EXINT_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - Select the input source for EXINT11 external interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint11(&mut self) -> EXINT_W<EXINTC3_SPEC> {
+    pub fn exint11(&mut self) -> EXINT_W<'_, EXINTC3_SPEC> {
         EXINT_W::new(self, 12)
     }
 }
@@ -194,10 +189,6 @@ impl crate::Readable for EXINTC3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`exintc3::W`](W) writer structure"]
 impl crate::Writable for EXINTC3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXINTC3 to value 0"]
-impl crate::Resettable for EXINTC3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EXINTC3_SPEC {}

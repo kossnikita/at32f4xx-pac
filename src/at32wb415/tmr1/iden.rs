@@ -736,112 +736,95 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC> {
+    pub fn ovfien(&mut self) -> OVFIEN_W<'_, IDEN_SPEC> {
         OVFIEN_W::new(self, 0)
     }
     #[doc = "Channel (1-4) interrupt enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cien(&mut self, n: u8) -> CIEN_W<IDEN_SPEC> {
+    pub fn cien(&mut self, n: u8) -> CIEN_W<'_, IDEN_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CIEN_W::new(self, n + 1)
     }
     #[doc = "Bit 1 - Channel 1 interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1ien(&mut self) -> CIEN_W<IDEN_SPEC> {
+    pub fn c1ien(&mut self) -> CIEN_W<'_, IDEN_SPEC> {
         CIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Channel 2 interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2ien(&mut self) -> CIEN_W<IDEN_SPEC> {
+    pub fn c2ien(&mut self) -> CIEN_W<'_, IDEN_SPEC> {
         CIEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Channel 3 interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3ien(&mut self) -> CIEN_W<IDEN_SPEC> {
+    pub fn c3ien(&mut self) -> CIEN_W<'_, IDEN_SPEC> {
         CIEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Channel 4 interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c4ien(&mut self) -> CIEN_W<IDEN_SPEC> {
+    pub fn c4ien(&mut self) -> CIEN_W<'_, IDEN_SPEC> {
         CIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - HALL interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hallien(&mut self) -> HALLIEN_W<IDEN_SPEC> {
+    pub fn hallien(&mut self) -> HALLIEN_W<'_, IDEN_SPEC> {
         HALLIEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Trigger interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tien(&mut self) -> TIEN_W<IDEN_SPEC> {
+    pub fn tien(&mut self) -> TIEN_W<'_, IDEN_SPEC> {
         TIEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Brake interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn brkie(&mut self) -> BRKIE_W<IDEN_SPEC> {
+    pub fn brkie(&mut self) -> BRKIE_W<'_, IDEN_SPEC> {
         BRKIE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Overflow DMA request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfden(&mut self) -> OVFDEN_W<IDEN_SPEC> {
+    pub fn ovfden(&mut self) -> OVFDEN_W<'_, IDEN_SPEC> {
         OVFDEN_W::new(self, 8)
     }
     #[doc = "Channel (1-4) DMA request enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1DEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cden(&mut self, n: u8) -> CDEN_W<IDEN_SPEC> {
+    pub fn cden(&mut self, n: u8) -> CDEN_W<'_, IDEN_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CDEN_W::new(self, n + 9)
     }
     #[doc = "Bit 9 - Channel 1 DMA request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1den(&mut self) -> CDEN_W<IDEN_SPEC> {
+    pub fn c1den(&mut self) -> CDEN_W<'_, IDEN_SPEC> {
         CDEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Channel 2 DMA request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2den(&mut self) -> CDEN_W<IDEN_SPEC> {
+    pub fn c2den(&mut self) -> CDEN_W<'_, IDEN_SPEC> {
         CDEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Channel 3 DMA request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3den(&mut self) -> CDEN_W<IDEN_SPEC> {
+    pub fn c3den(&mut self) -> CDEN_W<'_, IDEN_SPEC> {
         CDEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Channel 4 DMA request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c4den(&mut self) -> CDEN_W<IDEN_SPEC> {
+    pub fn c4den(&mut self) -> CDEN_W<'_, IDEN_SPEC> {
         CDEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - HALL DMA request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hallde(&mut self) -> HALLDE_W<IDEN_SPEC> {
+    pub fn hallde(&mut self) -> HALLDE_W<'_, IDEN_SPEC> {
         HALLDE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Trigger DMA request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tden(&mut self) -> TDEN_W<IDEN_SPEC> {
+    pub fn tden(&mut self) -> TDEN_W<'_, IDEN_SPEC> {
         TDEN_W::new(self, 14)
     }
 }
@@ -855,10 +838,6 @@ impl crate::Readable for IDEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`iden::W`](W) writer structure"]
 impl crate::Writable for IDEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IDEN to value 0"]
-impl crate::Resettable for IDEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IDEN_SPEC {}

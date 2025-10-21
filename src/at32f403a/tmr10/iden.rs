@@ -174,24 +174,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC> {
+    pub fn ovfien(&mut self) -> OVFIEN_W<'_, IDEN_SPEC> {
         OVFIEN_W::new(self, 0)
     }
     #[doc = "Channel (1-1) interrupt enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1IEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cien(&mut self, n: u8) -> CIEN_W<IDEN_SPEC> {
+    pub fn cien(&mut self, n: u8) -> CIEN_W<'_, IDEN_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         CIEN_W::new(self, n * 0 + 1)
     }
     #[doc = "Bit 1 - Channel 1 interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1ien(&mut self) -> CIEN_W<IDEN_SPEC> {
+    pub fn c1ien(&mut self) -> CIEN_W<'_, IDEN_SPEC> {
         CIEN_W::new(self, 1)
     }
 }
@@ -205,10 +202,6 @@ impl crate::Readable for IDEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`iden::W`](W) writer structure"]
 impl crate::Writable for IDEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IDEN to value 0"]
-impl crate::Resettable for IDEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IDEN_SPEC {}

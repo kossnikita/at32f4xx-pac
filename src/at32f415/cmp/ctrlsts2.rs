@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Comparator1 non-inverting input selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn comp1ninvsel(&mut self) -> COMP1NINVSEL_W<CTRLSTS2_SPEC> {
+    pub fn comp1ninvsel(&mut self) -> COMP1NINVSEL_W<'_, CTRLSTS2_SPEC> {
         COMP1NINVSEL_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - Comparator2 non-inverting input selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn comp2ninvsel(&mut self) -> COMP2NINVSEL_W<CTRLSTS2_SPEC> {
+    pub fn comp2ninvsel(&mut self) -> COMP2NINVSEL_W<'_, CTRLSTS2_SPEC> {
         COMP2NINVSEL_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for CTRLSTS2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlsts2::W`](W) writer structure"]
 impl crate::Writable for CTRLSTS2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRLSTS2 to value 0"]
-impl crate::Resettable for CTRLSTS2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRLSTS2_SPEC {}

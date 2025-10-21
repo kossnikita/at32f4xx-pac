@@ -12,14 +12,12 @@ impl core::fmt::Debug for crate::generic::Reg<EM_SLIB_SET_SPEC> {
 impl W {
     #[doc = "Bits 0:15 - Extension memory sLib setting"]
     #[inline(always)]
-    #[must_use]
-    pub fn em_slib_set(&mut self) -> EM_SLIB_SET_W<EM_SLIB_SET_SPEC> {
+    pub fn em_slib_set(&mut self) -> EM_SLIB_SET_W<'_, EM_SLIB_SET_SPEC> {
         EM_SLIB_SET_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Extension memory sLib instruction start sector setting"]
     #[inline(always)]
-    #[must_use]
-    pub fn em_slib_iss_set(&mut self) -> EM_SLIB_ISS_SET_W<EM_SLIB_SET_SPEC> {
+    pub fn em_slib_iss_set(&mut self) -> EM_SLIB_ISS_SET_W<'_, EM_SLIB_SET_SPEC> {
         EM_SLIB_ISS_SET_W::new(self, 16)
     }
 }
@@ -31,10 +29,6 @@ impl crate::RegisterSpec for EM_SLIB_SET_SPEC {
 #[doc = "`write(|w| ..)` method takes [`em_slib_set::W`](W) writer structure"]
 impl crate::Writable for EM_SLIB_SET_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EM_SLIB_SET to value 0"]
-impl crate::Resettable for EM_SLIB_SET_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EM_SLIB_SET_SPEC {}

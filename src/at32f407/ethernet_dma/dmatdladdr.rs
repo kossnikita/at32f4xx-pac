@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Start of transmit list"]
     #[inline(always)]
-    #[must_use]
-    pub fn stl(&mut self) -> STL_W<DMATDLADDR_SPEC> {
+    pub fn stl(&mut self) -> STL_W<'_, DMATDLADDR_SPEC> {
         STL_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for DMATDLADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmatdladdr::W`](W) writer structure"]
 impl crate::Writable for DMATDLADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMATDLADDR to value 0"]
-impl crate::Resettable for DMATDLADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMATDLADDR_SPEC {}

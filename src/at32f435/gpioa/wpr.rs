@@ -252,112 +252,94 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `WPEN0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen(&mut self, n: u8) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen(&mut self, n: u8) -> WPEN_W<'_, WPR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 16][n as usize];
         WPEN_W::new(self, n)
     }
     #[doc = "Bit 0 - Write protect enable 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen0(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen0(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write protect enable 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen1(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen1(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write protect enable 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen2(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen2(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write protect enable 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen3(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen3(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write protect enable 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen4(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen4(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write protect enable 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen5(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen5(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write protect enable 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen6(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen6(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Write protect enable 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen7(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen7(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Write protect enable 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen8(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen8(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Write protect enable 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen9(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen9(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Write protect enable 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen10(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen10(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Write protect enable 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen11(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen11(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Write protect enable 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen12(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen12(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Write protect enable 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen13(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen13(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Write protect enable 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen14(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen14(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Write protect enable 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpen15(&mut self) -> WPEN_W<WPR_SPEC> {
+    pub fn wpen15(&mut self) -> WPEN_W<'_, WPR_SPEC> {
         WPEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Write protect sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn wpseq(&mut self) -> WPSEQ_W<WPR_SPEC> {
+    pub fn wpseq(&mut self) -> WPSEQ_W<'_, WPR_SPEC> {
         WPSEQ_W::new(self, 16)
     }
 }
@@ -371,10 +353,6 @@ impl crate::Readable for WPR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wpr::W`](W) writer structure"]
 impl crate::Writable for WPR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WPR to value 0"]
-impl crate::Resettable for WPR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for WPR_SPEC {}

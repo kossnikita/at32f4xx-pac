@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Data value"]
     #[inline(always)]
-    #[must_use]
-    pub fn dt(&mut self) -> DT_W<DT_SPEC> {
+    pub fn dt(&mut self) -> DT_W<'_, DT_SPEC> {
         DT_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for DT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dt::W`](W) writer structure"]
 impl crate::Writable for DT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DT to value 0"]
-impl crate::Resettable for DT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DT_SPEC {}

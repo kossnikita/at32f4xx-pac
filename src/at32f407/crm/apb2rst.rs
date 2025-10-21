@@ -233,134 +233,112 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - MUX function I/O reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomux(&mut self) -> IOMUX_W<APB2RST_SPEC> {
+    pub fn iomux(&mut self) -> IOMUX_W<'_, APB2RST_SPEC> {
         IOMUX_W::new(self, 0)
     }
     #[doc = "Bit 1 - External interrupt reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint(&mut self) -> EXINT_W<APB2RST_SPEC> {
+    pub fn exint(&mut self) -> EXINT_W<'_, APB2RST_SPEC> {
         EXINT_W::new(self, 1)
     }
     #[doc = "Bit 2 - IO port A reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioa(&mut self) -> GPIOA_W<APB2RST_SPEC> {
+    pub fn gpioa(&mut self) -> GPIOA_W<'_, APB2RST_SPEC> {
         GPIOA_W::new(self, 2)
     }
     #[doc = "Bit 3 - IO port B reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiob(&mut self) -> GPIOB_W<APB2RST_SPEC> {
+    pub fn gpiob(&mut self) -> GPIOB_W<'_, APB2RST_SPEC> {
         GPIOB_W::new(self, 3)
     }
     #[doc = "Bit 4 - IO port C reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioc(&mut self) -> GPIOC_W<APB2RST_SPEC> {
+    pub fn gpioc(&mut self) -> GPIOC_W<'_, APB2RST_SPEC> {
         GPIOC_W::new(self, 4)
     }
     #[doc = "Bit 5 - IO port D reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiod(&mut self) -> GPIOD_W<APB2RST_SPEC> {
+    pub fn gpiod(&mut self) -> GPIOD_W<'_, APB2RST_SPEC> {
         GPIOD_W::new(self, 5)
     }
     #[doc = "Bit 6 - IO port E reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioe(&mut self) -> GPIOE_W<APB2RST_SPEC> {
+    pub fn gpioe(&mut self) -> GPIOE_W<'_, APB2RST_SPEC> {
         GPIOE_W::new(self, 6)
     }
     #[doc = "Bit 9 - ADC1 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc1(&mut self) -> ADC1_W<APB2RST_SPEC> {
+    pub fn adc1(&mut self) -> ADC1_W<'_, APB2RST_SPEC> {
         ADC1_W::new(self, 9)
     }
     #[doc = "Bit 10 - ADC2 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc2(&mut self) -> ADC2_W<APB2RST_SPEC> {
+    pub fn adc2(&mut self) -> ADC2_W<'_, APB2RST_SPEC> {
         ADC2_W::new(self, 10)
     }
     #[doc = "Bit 11 - Timer1 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1(&mut self) -> TMR1_W<APB2RST_SPEC> {
+    pub fn tmr1(&mut self) -> TMR1_W<'_, APB2RST_SPEC> {
         TMR1_W::new(self, 11)
     }
     #[doc = "Bit 12 - SPI1 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi1(&mut self) -> SPI1_W<APB2RST_SPEC> {
+    pub fn spi1(&mut self) -> SPI1_W<'_, APB2RST_SPEC> {
         SPI1_W::new(self, 12)
     }
     #[doc = "Bit 13 - Timer8 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr8(&mut self) -> TMR8_W<APB2RST_SPEC> {
+    pub fn tmr8(&mut self) -> TMR8_W<'_, APB2RST_SPEC> {
         TMR8_W::new(self, 13)
     }
     #[doc = "Bit 14 - USART1 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart1(&mut self) -> USART1_W<APB2RST_SPEC> {
+    pub fn usart1(&mut self) -> USART1_W<'_, APB2RST_SPEC> {
         USART1_W::new(self, 14)
     }
     #[doc = "Bit 15 - ADC3 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc3(&mut self) -> ADC3_W<APB2RST_SPEC> {
+    pub fn adc3(&mut self) -> ADC3_W<'_, APB2RST_SPEC> {
         ADC3_W::new(self, 15)
     }
     #[doc = "Bit 19 - Timer9 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr9(&mut self) -> TMR9_W<APB2RST_SPEC> {
+    pub fn tmr9(&mut self) -> TMR9_W<'_, APB2RST_SPEC> {
         TMR9_W::new(self, 19)
     }
     #[doc = "Bit 20 - Timer10 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr10(&mut self) -> TMR10_W<APB2RST_SPEC> {
+    pub fn tmr10(&mut self) -> TMR10_W<'_, APB2RST_SPEC> {
         TMR10_W::new(self, 20)
     }
     #[doc = "Bit 21 - Timer11 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr11(&mut self) -> TMR11_W<APB2RST_SPEC> {
+    pub fn tmr11(&mut self) -> TMR11_W<'_, APB2RST_SPEC> {
         TMR11_W::new(self, 21)
     }
     #[doc = "Bit 22 - ACC reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn acc(&mut self) -> ACC_W<APB2RST_SPEC> {
+    pub fn acc(&mut self) -> ACC_W<'_, APB2RST_SPEC> {
         ACC_W::new(self, 22)
     }
     #[doc = "Bit 23 - I2C3 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c3(&mut self) -> I2C3_W<APB2RST_SPEC> {
+    pub fn i2c3(&mut self) -> I2C3_W<'_, APB2RST_SPEC> {
         I2C3_W::new(self, 23)
     }
     #[doc = "Bit 24 - USART6 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart6(&mut self) -> USART6_W<APB2RST_SPEC> {
+    pub fn usart6(&mut self) -> USART6_W<'_, APB2RST_SPEC> {
         USART6_W::new(self, 24)
     }
     #[doc = "Bit 25 - UART7 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn uart7(&mut self) -> UART7_W<APB2RST_SPEC> {
+    pub fn uart7(&mut self) -> UART7_W<'_, APB2RST_SPEC> {
         UART7_W::new(self, 25)
     }
     #[doc = "Bit 26 - UART8 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn uart8(&mut self) -> UART8_W<APB2RST_SPEC> {
+    pub fn uart8(&mut self) -> UART8_W<'_, APB2RST_SPEC> {
         UART8_W::new(self, 26)
     }
 }
@@ -374,10 +352,6 @@ impl crate::Readable for APB2RST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb2rst::W`](W) writer structure"]
 impl crate::Writable for APB2RST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB2RST to value 0"]
-impl crate::Resettable for APB2RST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB2RST_SPEC {}

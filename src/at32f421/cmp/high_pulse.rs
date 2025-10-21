@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - High pulse Count"]
     #[inline(always)]
-    #[must_use]
-    pub fn h_pulse_cnt(&mut self) -> H_PULSE_CNT_W<HIGH_PULSE_SPEC> {
+    pub fn h_pulse_cnt(&mut self) -> H_PULSE_CNT_W<'_, HIGH_PULSE_SPEC> {
         H_PULSE_CNT_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for HIGH_PULSE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`high_pulse::W`](W) writer structure"]
 impl crate::Writable for HIGH_PULSE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HIGH_PULSE to value 0"]
-impl crate::Resettable for HIGH_PULSE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HIGH_PULSE_SPEC {}

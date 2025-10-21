@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - SPI clock divider"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkdiv(&mut self) -> CLKDIV_W<CTRL_SPEC> {
+    pub fn clkdiv(&mut self) -> CLKDIV_W<'_, CTRL_SPEC> {
         CLKDIV_W::new(self, 0)
     }
     #[doc = "Bit 4 - Sckout mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn sckmode(&mut self) -> SCKMODE_W<CTRL_SPEC> {
+    pub fn sckmode(&mut self) -> SCKMODE_W<'_, CTRL_SPEC> {
         SCKMODE_W::new(self, 4)
     }
     #[doc = "Bit 7 - XIP port idle status"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipidle(&mut self) -> XIPIDLE_W<CTRL_SPEC> {
+    pub fn xipidle(&mut self) -> XIPIDLE_W<'_, CTRL_SPEC> {
         XIPIDLE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Abort instruction"]
     #[inline(always)]
-    #[must_use]
-    pub fn abort(&mut self) -> ABORT_W<CTRL_SPEC> {
+    pub fn abort(&mut self) -> ABORT_W<'_, CTRL_SPEC> {
         ABORT_W::new(self, 8)
     }
     #[doc = "Bits 16:18 - Busy bit of spi status"]
     #[inline(always)]
-    #[must_use]
-    pub fn busy(&mut self) -> BUSY_W<CTRL_SPEC> {
+    pub fn busy(&mut self) -> BUSY_W<'_, CTRL_SPEC> {
         BUSY_W::new(self, 16)
     }
     #[doc = "Bit 19 - XIP read command flush"]
     #[inline(always)]
-    #[must_use]
-    pub fn xiprcmdf(&mut self) -> XIPRCMDF_W<CTRL_SPEC> {
+    pub fn xiprcmdf(&mut self) -> XIPRCMDF_W<'_, CTRL_SPEC> {
         XIPRCMDF_W::new(self, 19)
     }
     #[doc = "Bit 20 - XIP port selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn xipsel(&mut self) -> XIPSEL_W<CTRL_SPEC> {
+    pub fn xipsel(&mut self) -> XIPSEL_W<'_, CTRL_SPEC> {
         XIPSEL_W::new(self, 20)
     }
     #[doc = "Bit 21 - encryption key enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn keyen(&mut self) -> KEYEN_W<CTRL_SPEC> {
+    pub fn keyen(&mut self) -> KEYEN_W<'_, CTRL_SPEC> {
         KEYEN_W::new(self, 21)
     }
 }
@@ -150,10 +142,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
-impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL_SPEC {}

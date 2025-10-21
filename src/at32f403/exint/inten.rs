@@ -203,116 +203,97 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Interrupt enable or disable on line 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten0(&mut self) -> INTEN0_W<INTEN_SPEC> {
+    pub fn inten0(&mut self) -> INTEN0_W<'_, INTEN_SPEC> {
         INTEN0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Interrupt enable or disable on line 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten1(&mut self) -> INTEN1_W<INTEN_SPEC> {
+    pub fn inten1(&mut self) -> INTEN1_W<'_, INTEN_SPEC> {
         INTEN1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Interrupt enable or disable on line 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten2(&mut self) -> INTEN2_W<INTEN_SPEC> {
+    pub fn inten2(&mut self) -> INTEN2_W<'_, INTEN_SPEC> {
         INTEN2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Interrupt enable or disable on line 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten3(&mut self) -> INTEN3_W<INTEN_SPEC> {
+    pub fn inten3(&mut self) -> INTEN3_W<'_, INTEN_SPEC> {
         INTEN3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Interrupt enable or disable on line 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten4(&mut self) -> INTEN4_W<INTEN_SPEC> {
+    pub fn inten4(&mut self) -> INTEN4_W<'_, INTEN_SPEC> {
         INTEN4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Interrupt enable or disable on line 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten5(&mut self) -> INTEN5_W<INTEN_SPEC> {
+    pub fn inten5(&mut self) -> INTEN5_W<'_, INTEN_SPEC> {
         INTEN5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Interrupt enable or disable on line 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten6(&mut self) -> INTEN6_W<INTEN_SPEC> {
+    pub fn inten6(&mut self) -> INTEN6_W<'_, INTEN_SPEC> {
         INTEN6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Interrupt enable or disable on line 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten7(&mut self) -> INTEN7_W<INTEN_SPEC> {
+    pub fn inten7(&mut self) -> INTEN7_W<'_, INTEN_SPEC> {
         INTEN7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Interrupt enable or disable on line 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten8(&mut self) -> INTEN8_W<INTEN_SPEC> {
+    pub fn inten8(&mut self) -> INTEN8_W<'_, INTEN_SPEC> {
         INTEN8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Interrupt enable or disable on line 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten9(&mut self) -> INTEN9_W<INTEN_SPEC> {
+    pub fn inten9(&mut self) -> INTEN9_W<'_, INTEN_SPEC> {
         INTEN9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Interrupt enable or disable on line 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten10(&mut self) -> INTEN10_W<INTEN_SPEC> {
+    pub fn inten10(&mut self) -> INTEN10_W<'_, INTEN_SPEC> {
         INTEN10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Interrupt enable or disable on line 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten11(&mut self) -> INTEN11_W<INTEN_SPEC> {
+    pub fn inten11(&mut self) -> INTEN11_W<'_, INTEN_SPEC> {
         INTEN11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Interrupt enable or disable on line 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten12(&mut self) -> INTEN12_W<INTEN_SPEC> {
+    pub fn inten12(&mut self) -> INTEN12_W<'_, INTEN_SPEC> {
         INTEN12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Interrupt enable or disable on line 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten13(&mut self) -> INTEN13_W<INTEN_SPEC> {
+    pub fn inten13(&mut self) -> INTEN13_W<'_, INTEN_SPEC> {
         INTEN13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Interrupt enable or disable on line 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten14(&mut self) -> INTEN14_W<INTEN_SPEC> {
+    pub fn inten14(&mut self) -> INTEN14_W<'_, INTEN_SPEC> {
         INTEN14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Interrupt enable or disable on line 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten15(&mut self) -> INTEN15_W<INTEN_SPEC> {
+    pub fn inten15(&mut self) -> INTEN15_W<'_, INTEN_SPEC> {
         INTEN15_W::new(self, 15)
     }
     #[doc = "Bit 16 - Interrupt enable or disable on line 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten16(&mut self) -> INTEN16_W<INTEN_SPEC> {
+    pub fn inten16(&mut self) -> INTEN16_W<'_, INTEN_SPEC> {
         INTEN16_W::new(self, 16)
     }
     #[doc = "Bit 17 - Interrupt enable or disable on line 17"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten17(&mut self) -> INTEN17_W<INTEN_SPEC> {
+    pub fn inten17(&mut self) -> INTEN17_W<'_, INTEN_SPEC> {
         INTEN17_W::new(self, 17)
     }
     #[doc = "Bit 18 - Interrupt enable or disable on line 18"]
     #[inline(always)]
-    #[must_use]
-    pub fn inten18(&mut self) -> INTEN18_W<INTEN_SPEC> {
+    pub fn inten18(&mut self) -> INTEN18_W<'_, INTEN_SPEC> {
         INTEN18_W::new(self, 18)
     }
 }
@@ -326,10 +307,6 @@ impl crate::Readable for INTEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`inten::W`](W) writer structure"]
 impl crate::Writable for INTEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTEN to value 0"]
-impl crate::Resettable for INTEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTEN_SPEC {}

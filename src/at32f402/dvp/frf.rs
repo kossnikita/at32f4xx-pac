@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Enhanced frame rate contorl source factor"]
     #[inline(always)]
-    #[must_use]
-    pub fn efrcsf(&mut self) -> EFRCSF_W<FRF_SPEC> {
+    pub fn efrcsf(&mut self) -> EFRCSF_W<'_, FRF_SPEC> {
         EFRCSF_W::new(self, 0)
     }
     #[doc = "Bits 8:12 - Enhanced frame rate control target factor"]
     #[inline(always)]
-    #[must_use]
-    pub fn efrctf(&mut self) -> EFRCTF_W<FRF_SPEC> {
+    pub fn efrctf(&mut self) -> EFRCTF_W<'_, FRF_SPEC> {
         EFRCTF_W::new(self, 8)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for FRF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`frf::W`](W) writer structure"]
 impl crate::Writable for FRF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FRF to value 0"]
-impl crate::Resettable for FRF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FRF_SPEC {}

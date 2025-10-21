@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 14 - Transmit single collision good frame counter interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn tscgfcim(&mut self) -> TSCGFCIM_W<MMCTIM_SPEC> {
+    pub fn tscgfcim(&mut self) -> TSCGFCIM_W<'_, MMCTIM_SPEC> {
         TSCGFCIM_W::new(self, 14)
     }
     #[doc = "Bit 15 - Transmit multiple collision good frame counter interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmcgfcim(&mut self) -> TMCGFCIM_W<MMCTIM_SPEC> {
+    pub fn tmcgfcim(&mut self) -> TMCGFCIM_W<'_, MMCTIM_SPEC> {
         TMCGFCIM_W::new(self, 15)
     }
     #[doc = "Bit 21 - Transmitted good frame counter interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn tgfcim(&mut self) -> TGFCIM_W<MMCTIM_SPEC> {
+    pub fn tgfcim(&mut self) -> TGFCIM_W<'_, MMCTIM_SPEC> {
         TGFCIM_W::new(self, 21)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for MMCTIM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mmctim::W`](W) writer structure"]
 impl crate::Writable for MMCTIM_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MMCTIM to value 0"]
-impl crate::Resettable for MMCTIM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MMCTIM_SPEC {}

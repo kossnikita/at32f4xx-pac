@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Link list pointer"]
     #[inline(always)]
-    #[must_use]
-    pub fn llp(&mut self) -> LLP_W<S2LLP_SPEC> {
+    pub fn llp(&mut self) -> LLP_W<'_, S2LLP_SPEC> {
         LLP_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for S2LLP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s2llp::W`](W) writer structure"]
 impl crate::Writable for S2LLP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S2LLP to value 0"]
-impl crate::Resettable for S2LLP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for S2LLP_SPEC {}

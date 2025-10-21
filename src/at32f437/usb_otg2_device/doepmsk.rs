@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn xfercmsk(&mut self) -> XFERCMSK_W<DOEPMSK_SPEC> {
+    pub fn xfercmsk(&mut self) -> XFERCMSK_W<'_, DOEPMSK_SPEC> {
         XFERCMSK_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdismsk(&mut self) -> EPTDISMSK_W<DOEPMSK_SPEC> {
+    pub fn eptdismsk(&mut self) -> EPTDISMSK_W<'_, DOEPMSK_SPEC> {
         EPTDISMSK_W::new(self, 1)
     }
     #[doc = "Bit 3 - SETUP phase done mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn setupmsk(&mut self) -> SETUPMSK_W<DOEPMSK_SPEC> {
+    pub fn setupmsk(&mut self) -> SETUPMSK_W<'_, DOEPMSK_SPEC> {
         SETUPMSK_W::new(self, 3)
     }
     #[doc = "Bit 4 - OUT token received when endpoint disabled mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn outtepdmsk(&mut self) -> OUTTEPDMSK_W<DOEPMSK_SPEC> {
+    pub fn outtepdmsk(&mut self) -> OUTTEPDMSK_W<'_, DOEPMSK_SPEC> {
         OUTTEPDMSK_W::new(self, 4)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets received mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn b2bsetupmsk(&mut self) -> B2BSETUPMSK_W<DOEPMSK_SPEC> {
+    pub fn b2bsetupmsk(&mut self) -> B2BSETUPMSK_W<'_, DOEPMSK_SPEC> {
         B2BSETUPMSK_W::new(self, 6)
     }
     #[doc = "Bit 8 - OUT packet error mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn outperrmsk(&mut self) -> OUTPERRMSK_W<DOEPMSK_SPEC> {
+    pub fn outperrmsk(&mut self) -> OUTPERRMSK_W<'_, DOEPMSK_SPEC> {
         OUTPERRMSK_W::new(self, 8)
     }
     #[doc = "Bit 9 - BNA interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn bnaoutmsk(&mut self) -> BNAOUTMSK_W<DOEPMSK_SPEC> {
+    pub fn bnaoutmsk(&mut self) -> BNAOUTMSK_W<'_, DOEPMSK_SPEC> {
         BNAOUTMSK_W::new(self, 9)
     }
 }
@@ -134,10 +127,6 @@ impl crate::Readable for DOEPMSK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doepmsk::W`](W) writer structure"]
 impl crate::Writable for DOEPMSK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DOEPMSK to value 0"]
-impl crate::Resettable for DOEPMSK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DOEPMSK_SPEC {}

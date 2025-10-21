@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]
-    #[must_use]
-    pub fn fprgm(&mut self) -> FPRGM_W<CTRL3_SPEC> {
+    pub fn fprgm(&mut self) -> FPRGM_W<'_, CTRL3_SPEC> {
         FPRGM_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sector erase"]
     #[inline(always)]
-    #[must_use]
-    pub fn secers(&mut self) -> SECERS_W<CTRL3_SPEC> {
+    pub fn secers(&mut self) -> SECERS_W<'_, CTRL3_SPEC> {
         SECERS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Chip erase"]
     #[inline(always)]
-    #[must_use]
-    pub fn chpers(&mut self) -> CHPERS_W<CTRL3_SPEC> {
+    pub fn chpers(&mut self) -> CHPERS_W<'_, CTRL3_SPEC> {
         CHPERS_W::new(self, 2)
     }
     #[doc = "Bit 6 - Erasing start"]
     #[inline(always)]
-    #[must_use]
-    pub fn erstr(&mut self) -> ERSTR_W<CTRL3_SPEC> {
+    pub fn erstr(&mut self) -> ERSTR_W<'_, CTRL3_SPEC> {
         ERSTR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Operation lock"]
     #[inline(always)]
-    #[must_use]
-    pub fn oplk(&mut self) -> OPLK_W<CTRL3_SPEC> {
+    pub fn oplk(&mut self) -> OPLK_W<'_, CTRL3_SPEC> {
         OPLK_W::new(self, 7)
     }
     #[doc = "Bit 10 - Error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTRL3_SPEC> {
+    pub fn errie(&mut self) -> ERRIE_W<'_, CTRL3_SPEC> {
         ERRIE_W::new(self, 10)
     }
     #[doc = "Bit 12 - Operation done flag interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn odfie(&mut self) -> ODFIE_W<CTRL3_SPEC> {
+    pub fn odfie(&mut self) -> ODFIE_W<'_, CTRL3_SPEC> {
         ODFIE_W::new(self, 12)
     }
 }
@@ -134,8 +127,6 @@ impl crate::Readable for CTRL3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl3::W`](W) writer structure"]
 impl crate::Writable for CTRL3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL3 to value 0x80"]
 impl crate::Resettable for CTRL3_SPEC {

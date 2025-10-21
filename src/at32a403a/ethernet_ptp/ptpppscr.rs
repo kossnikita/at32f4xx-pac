@@ -24,6 +24,4 @@ impl crate::RegisterSpec for PTPPPSCR_SPEC {
 #[doc = "`read()` method returns [`ptpppscr::R`](R) reader structure"]
 impl crate::Readable for PTPPPSCR_SPEC {}
 #[doc = "`reset()` method sets PTPPPSCR to value 0"]
-impl crate::Resettable for PTPPPSCR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PTPPPSCR_SPEC {}

@@ -18,10 +18,6 @@ impl crate::Readable for BAUDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`baudr::W`](W) writer structure"]
 impl crate::Writable for BAUDR_SPEC {
     type Safety = crate::Safe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets BAUDR to value 0"]
-impl crate::Resettable for BAUDR_SPEC {
-    const RESET_VALUE: u16 = 0;
-}
+impl crate::Resettable for BAUDR_SPEC {}

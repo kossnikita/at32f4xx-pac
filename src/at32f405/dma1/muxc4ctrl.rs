@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - DMA request select"]
     #[inline(always)]
-    #[must_use]
-    pub fn reqsel(&mut self) -> REQSEL_W<MUXC4CTRL_SPEC> {
+    pub fn reqsel(&mut self) -> REQSEL_W<'_, MUXC4CTRL_SPEC> {
         REQSEL_W::new(self, 0)
     }
     #[doc = "Bit 8 - Synchronization overrun interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncovien(&mut self) -> SYNCOVIEN_W<MUXC4CTRL_SPEC> {
+    pub fn syncovien(&mut self) -> SYNCOVIEN_W<'_, MUXC4CTRL_SPEC> {
         SYNCOVIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Event generation enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn evtgen(&mut self) -> EVTGEN_W<MUXC4CTRL_SPEC> {
+    pub fn evtgen(&mut self) -> EVTGEN_W<'_, MUXC4CTRL_SPEC> {
         EVTGEN_W::new(self, 9)
     }
     #[doc = "Bit 16 - Synchroniztion enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncen(&mut self) -> SYNCEN_W<MUXC4CTRL_SPEC> {
+    pub fn syncen(&mut self) -> SYNCEN_W<'_, MUXC4CTRL_SPEC> {
         SYNCEN_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - Synchronization polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncpol(&mut self) -> SYNCPOL_W<MUXC4CTRL_SPEC> {
+    pub fn syncpol(&mut self) -> SYNCPOL_W<'_, MUXC4CTRL_SPEC> {
         SYNCPOL_W::new(self, 17)
     }
     #[doc = "Bits 19:23 - Number of DMA requests"]
     #[inline(always)]
-    #[must_use]
-    pub fn reqcnt(&mut self) -> REQCNT_W<MUXC4CTRL_SPEC> {
+    pub fn reqcnt(&mut self) -> REQCNT_W<'_, MUXC4CTRL_SPEC> {
         REQCNT_W::new(self, 19)
     }
     #[doc = "Bits 24:28 - Synchronization Identification"]
     #[inline(always)]
-    #[must_use]
-    pub fn syncsel(&mut self) -> SYNCSEL_W<MUXC4CTRL_SPEC> {
+    pub fn syncsel(&mut self) -> SYNCSEL_W<'_, MUXC4CTRL_SPEC> {
         SYNCSEL_W::new(self, 24)
     }
 }
@@ -134,10 +127,6 @@ impl crate::Readable for MUXC4CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`muxc4ctrl::W`](W) writer structure"]
 impl crate::Writable for MUXC4CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MUXC4CTRL to value 0"]
-impl crate::Resettable for MUXC4CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MUXC4CTRL_SPEC {}

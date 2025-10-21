@@ -103,56 +103,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - System config and comparator reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn scfgcmp(&mut self) -> SCFGCMP_W<APB2RST_SPEC> {
+    pub fn scfgcmp(&mut self) -> SCFGCMP_W<'_, APB2RST_SPEC> {
         SCFGCMP_W::new(self, 0)
     }
     #[doc = "Bit 1 - External interrupt reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn exint(&mut self) -> EXINT_W<APB2RST_SPEC> {
+    pub fn exint(&mut self) -> EXINT_W<'_, APB2RST_SPEC> {
         EXINT_W::new(self, 1)
     }
     #[doc = "Bit 9 - ADC reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc(&mut self) -> ADC_W<APB2RST_SPEC> {
+    pub fn adc(&mut self) -> ADC_W<'_, APB2RST_SPEC> {
         ADC_W::new(self, 9)
     }
     #[doc = "Bit 11 - TMR1 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1(&mut self) -> TMR1_W<APB2RST_SPEC> {
+    pub fn tmr1(&mut self) -> TMR1_W<'_, APB2RST_SPEC> {
         TMR1_W::new(self, 11)
     }
     #[doc = "Bit 12 - SPI1 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi1(&mut self) -> SPI1_W<APB2RST_SPEC> {
+    pub fn spi1(&mut self) -> SPI1_W<'_, APB2RST_SPEC> {
         SPI1_W::new(self, 12)
     }
     #[doc = "Bit 14 - USART1 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart1(&mut self) -> USART1_W<APB2RST_SPEC> {
+    pub fn usart1(&mut self) -> USART1_W<'_, APB2RST_SPEC> {
         USART1_W::new(self, 14)
     }
     #[doc = "Bit 16 - Timer15 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr15(&mut self) -> TMR15_W<APB2RST_SPEC> {
+    pub fn tmr15(&mut self) -> TMR15_W<'_, APB2RST_SPEC> {
         TMR15_W::new(self, 16)
     }
     #[doc = "Bit 17 - Timer16 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr16(&mut self) -> TMR16_W<APB2RST_SPEC> {
+    pub fn tmr16(&mut self) -> TMR16_W<'_, APB2RST_SPEC> {
         TMR16_W::new(self, 17)
     }
     #[doc = "Bit 18 - Timer17 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr17(&mut self) -> TMR17_W<APB2RST_SPEC> {
+    pub fn tmr17(&mut self) -> TMR17_W<'_, APB2RST_SPEC> {
         TMR17_W::new(self, 18)
     }
 }
@@ -166,10 +157,6 @@ impl crate::Readable for APB2RST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb2rst::W`](W) writer structure"]
 impl crate::Writable for APB2RST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB2RST to value 0"]
-impl crate::Resettable for APB2RST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB2RST_SPEC {}

@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Counter value"]
     #[inline(always)]
-    #[must_use]
-    pub fn cval(&mut self) -> CVAL_W<CVAL_SPEC> {
+    pub fn cval(&mut self) -> CVAL_W<'_, CVAL_SPEC> {
         CVAL_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for CVAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cval::W`](W) writer structure"]
 impl crate::Writable for CVAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CVAL to value 0"]
-impl crate::Resettable for CVAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CVAL_SPEC {}

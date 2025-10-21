@@ -463,20 +463,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Error occur Interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn eoif(&mut self) -> EOIF_W<MSTS_SPEC> {
+    pub fn eoif(&mut self) -> EOIF_W<'_, MSTS_SPEC> {
         EOIF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Quit doze mode interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn qdzif(&mut self) -> QDZIF_W<MSTS_SPEC> {
+    pub fn qdzif(&mut self) -> QDZIF_W<'_, MSTS_SPEC> {
         QDZIF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Enter doze mode interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn edzif(&mut self) -> EDZIF_W<MSTS_SPEC> {
+    pub fn edzif(&mut self) -> EDZIF_W<'_, MSTS_SPEC> {
         EDZIF_W::new(self, 4)
     }
 }
@@ -490,7 +487,6 @@ impl crate::Readable for MSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`msts::W`](W) writer structure"]
 impl crate::Writable for MSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x1c;
 }
 #[doc = "`reset()` method sets MSTS to value 0x0c02"]

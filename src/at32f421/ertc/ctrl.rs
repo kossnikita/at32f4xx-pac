@@ -943,92 +943,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Timestamp trigger edge"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsedg(&mut self) -> TSEDG_W<CTRL_SPEC> {
+    pub fn tsedg(&mut self) -> TSEDG_W<'_, CTRL_SPEC> {
         TSEDG_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reference clock detection enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rcden(&mut self) -> RCDEN_W<CTRL_SPEC> {
+    pub fn rcden(&mut self) -> RCDEN_W<'_, CTRL_SPEC> {
         RCDEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Date/time register direct read enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dren(&mut self) -> DREN_W<CTRL_SPEC> {
+    pub fn dren(&mut self) -> DREN_W<'_, CTRL_SPEC> {
         DREN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Hour mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn hm(&mut self) -> HM_W<CTRL_SPEC> {
+    pub fn hm(&mut self) -> HM_W<'_, CTRL_SPEC> {
         HM_W::new(self, 6)
     }
     #[doc = "Bit 8 - Alarm A enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn alaen(&mut self) -> ALAEN_W<CTRL_SPEC> {
+    pub fn alaen(&mut self) -> ALAEN_W<'_, CTRL_SPEC> {
         ALAEN_W::new(self, 8)
     }
     #[doc = "Bit 11 - Timestamp enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsen(&mut self) -> TSEN_W<CTRL_SPEC> {
+    pub fn tsen(&mut self) -> TSEN_W<'_, CTRL_SPEC> {
         TSEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Alarm A interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn alaien(&mut self) -> ALAIEN_W<CTRL_SPEC> {
+    pub fn alaien(&mut self) -> ALAIEN_W<'_, CTRL_SPEC> {
         ALAIEN_W::new(self, 12)
     }
     #[doc = "Bit 15 - Timestamp interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsien(&mut self) -> TSIEN_W<CTRL_SPEC> {
+    pub fn tsien(&mut self) -> TSIEN_W<'_, CTRL_SPEC> {
         TSIEN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Add 1 hour"]
     #[inline(always)]
-    #[must_use]
-    pub fn add1h(&mut self) -> ADD1H_W<CTRL_SPEC> {
+    pub fn add1h(&mut self) -> ADD1H_W<'_, CTRL_SPEC> {
         ADD1H_W::new(self, 16)
     }
     #[doc = "Bit 17 - Decrease 1 hour"]
     #[inline(always)]
-    #[must_use]
-    pub fn dec1h(&mut self) -> DEC1H_W<CTRL_SPEC> {
+    pub fn dec1h(&mut self) -> DEC1H_W<'_, CTRL_SPEC> {
         DEC1H_W::new(self, 17)
     }
     #[doc = "Bit 18 - Battery power domain data register"]
     #[inline(always)]
-    #[must_use]
-    pub fn bpr(&mut self) -> BPR_W<CTRL_SPEC> {
+    pub fn bpr(&mut self) -> BPR_W<'_, CTRL_SPEC> {
         BPR_W::new(self, 18)
     }
     #[doc = "Bit 19 - Calibration output selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn calosel(&mut self) -> CALOSEL_W<CTRL_SPEC> {
+    pub fn calosel(&mut self) -> CALOSEL_W<'_, CTRL_SPEC> {
         CALOSEL_W::new(self, 19)
     }
     #[doc = "Bit 20 - Output polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn outp(&mut self) -> OUTP_W<CTRL_SPEC> {
+    pub fn outp(&mut self) -> OUTP_W<'_, CTRL_SPEC> {
         OUTP_W::new(self, 20)
     }
     #[doc = "Bits 21:22 - Output source selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn outsel(&mut self) -> OUTSEL_W<CTRL_SPEC> {
+    pub fn outsel(&mut self) -> OUTSEL_W<'_, CTRL_SPEC> {
         OUTSEL_W::new(self, 21)
     }
     #[doc = "Bit 23 - Calibration output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn caloen(&mut self) -> CALOEN_W<CTRL_SPEC> {
+    pub fn caloen(&mut self) -> CALOEN_W<'_, CTRL_SPEC> {
         CALOEN_W::new(self, 23)
     }
 }
@@ -1042,10 +1027,7 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0003_0000;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
-impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL_SPEC {}

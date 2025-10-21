@@ -18824,7 +18824,7 @@
     </peripheral>
     <peripheral>
       <name>ACC</name>
-      <description>HSI Auto Clock Calibration</description>
+      <description>HICK Auto Clock Calibration</description>
       <groupName>ACC</groupName>
       <baseAddress>0x40006C00</baseAddress>
       <addressBlock>

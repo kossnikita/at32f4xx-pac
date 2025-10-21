@@ -29,10 +29,6 @@ impl crate::Readable for SLIB_STS0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slib_sts0::W`](W) writer structure"]
 impl crate::Writable for SLIB_STS0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLIB_STS0 to value 0"]
-impl crate::Resettable for SLIB_STS0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLIB_STS0_SPEC {}

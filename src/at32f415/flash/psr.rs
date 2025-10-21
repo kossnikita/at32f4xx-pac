@@ -51,20 +51,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Wait cycle"]
     #[inline(always)]
-    #[must_use]
-    pub fn wtcyc(&mut self) -> WTCYC_W<PSR_SPEC> {
+    pub fn wtcyc(&mut self) -> WTCYC_W<'_, PSR_SPEC> {
         WTCYC_W::new(self, 0)
     }
     #[doc = "Bit 3 - Half cycle acceleration access enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hfcyc_en(&mut self) -> HFCYC_EN_W<PSR_SPEC> {
+    pub fn hfcyc_en(&mut self) -> HFCYC_EN_W<'_, PSR_SPEC> {
         HFCYC_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Prefetch enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pft_en(&mut self) -> PFT_EN_W<PSR_SPEC> {
+    pub fn pft_en(&mut self) -> PFT_EN_W<'_, PSR_SPEC> {
         PFT_EN_W::new(self, 4)
     }
 }
@@ -78,8 +75,6 @@ impl crate::Readable for PSR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`psr::W`](W) writer structure"]
 impl crate::Writable for PSR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PSR to value 0x30"]
 impl crate::Resettable for PSR_SPEC {

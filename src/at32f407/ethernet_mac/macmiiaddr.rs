@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - MII busy"]
     #[inline(always)]
-    #[must_use]
-    pub fn mb(&mut self) -> MB_W<MACMIIADDR_SPEC> {
+    pub fn mb(&mut self) -> MB_W<'_, MACMIIADDR_SPEC> {
         MB_W::new(self, 0)
     }
     #[doc = "Bit 1 - MII write"]
     #[inline(always)]
-    #[must_use]
-    pub fn mw(&mut self) -> MW_W<MACMIIADDR_SPEC> {
+    pub fn mw(&mut self) -> MW_W<'_, MACMIIADDR_SPEC> {
         MW_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - Clock range"]
     #[inline(always)]
-    #[must_use]
-    pub fn cr(&mut self) -> CR_W<MACMIIADDR_SPEC> {
+    pub fn cr(&mut self) -> CR_W<'_, MACMIIADDR_SPEC> {
         CR_W::new(self, 2)
     }
     #[doc = "Bits 6:10 - MII register"]
     #[inline(always)]
-    #[must_use]
-    pub fn mii(&mut self) -> MII_W<MACMIIADDR_SPEC> {
+    pub fn mii(&mut self) -> MII_W<'_, MACMIIADDR_SPEC> {
         MII_W::new(self, 6)
     }
     #[doc = "Bits 11:15 - PHY address"]
     #[inline(always)]
-    #[must_use]
-    pub fn pa(&mut self) -> PA_W<MACMIIADDR_SPEC> {
+    pub fn pa(&mut self) -> PA_W<'_, MACMIIADDR_SPEC> {
         PA_W::new(self, 11)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for MACMIIADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macmiiaddr::W`](W) writer structure"]
 impl crate::Writable for MACMIIADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACMIIADDR to value 0"]
-impl crate::Resettable for MACMIIADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MACMIIADDR_SPEC {}

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - SPI flash size"]
     #[inline(always)]
-    #[must_use]
-    pub fn spifsize(&mut self) -> SPIFSIZE_W<FSIZE_SPEC> {
+    pub fn spifsize(&mut self) -> SPIFSIZE_W<'_, FSIZE_SPEC> {
         SPIFSIZE_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for FSIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fsize::W`](W) writer structure"]
 impl crate::Writable for FSIZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FSIZE to value 0"]
-impl crate::Resettable for FSIZE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FSIZE_SPEC {}

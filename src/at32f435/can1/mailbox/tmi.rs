@@ -217,32 +217,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transmit mailbox send request"]
     #[inline(always)]
-    #[must_use]
-    pub fn sr(&mut self) -> SR_W<TMI_SPEC> {
+    pub fn sr(&mut self) -> SR_W<'_, TMI_SPEC> {
         SR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit mailbox frame type select"]
     #[inline(always)]
-    #[must_use]
-    pub fn frsel(&mut self) -> FRSEL_W<TMI_SPEC> {
+    pub fn frsel(&mut self) -> FRSEL_W<'_, TMI_SPEC> {
         FRSEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transmit mailbox identifier type select"]
     #[inline(always)]
-    #[must_use]
-    pub fn idsel(&mut self) -> IDSEL_W<TMI_SPEC> {
+    pub fn idsel(&mut self) -> IDSEL_W<'_, TMI_SPEC> {
         IDSEL_W::new(self, 2)
     }
     #[doc = "Bits 3:20 - Ttransmit mailbox extended identifier"]
     #[inline(always)]
-    #[must_use]
-    pub fn eid(&mut self) -> EID_W<TMI_SPEC> {
+    pub fn eid(&mut self) -> EID_W<'_, TMI_SPEC> {
         EID_W::new(self, 3)
     }
     #[doc = "Bits 21:31 - Transmit mailbox standard identifier or extended identifier high bytes"]
     #[inline(always)]
-    #[must_use]
-    pub fn sid(&mut self) -> SID_W<TMI_SPEC> {
+    pub fn sid(&mut self) -> SID_W<'_, TMI_SPEC> {
         SID_W::new(self, 21)
     }
 }
@@ -256,10 +251,7 @@ impl crate::Readable for TMI_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmi::W`](W) writer structure"]
 impl crate::Writable for TMI_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
 }
 #[doc = "`reset()` method sets TMI to value 0"]
-impl crate::Resettable for TMI_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TMI_SPEC {}

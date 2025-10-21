@@ -10,8 +10,7 @@ impl core::fmt::Debug for crate::generic::Reg<DIVL_SPEC> {
 impl W {
     #[doc = "Bits 0:15 - RTC divider low"]
     #[inline(always)]
-    #[must_use]
-    pub fn div(&mut self) -> DIV_W<DIVL_SPEC> {
+    pub fn div(&mut self) -> DIV_W<'_, DIVL_SPEC> {
         DIV_W::new(self, 0)
     }
 }
@@ -23,8 +22,6 @@ impl crate::RegisterSpec for DIVL_SPEC {
 #[doc = "`write(|w| ..)` method takes [`divl::W`](W) writer structure"]
 impl crate::Writable for DIVL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIVL to value 0x8000"]
 impl crate::Resettable for DIVL_SPEC {

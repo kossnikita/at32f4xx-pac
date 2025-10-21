@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Write data enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn wen(&mut self) -> WEN_W<CMD_W3_SPEC> {
+    pub fn wen(&mut self) -> WEN_W<'_, CMD_W3_SPEC> {
         WEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Read spi status enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rstsen(&mut self) -> RSTSEN_W<CMD_W3_SPEC> {
+    pub fn rstsen(&mut self) -> RSTSEN_W<'_, CMD_W3_SPEC> {
         RSTSEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Read spi status configure"]
     #[inline(always)]
-    #[must_use]
-    pub fn rstsc(&mut self) -> RSTSC_W<CMD_W3_SPEC> {
+    pub fn rstsc(&mut self) -> RSTSC_W<'_, CMD_W3_SPEC> {
         RSTSC_W::new(self, 3)
     }
     #[doc = "Bits 5:7 - SPI operate mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn opmode(&mut self) -> OPMODE_W<CMD_W3_SPEC> {
+    pub fn opmode(&mut self) -> OPMODE_W<'_, CMD_W3_SPEC> {
         OPMODE_W::new(self, 5)
     }
     #[doc = "Bits 16:23 - Performance enhance mode operate code"]
     #[inline(always)]
-    #[must_use]
-    pub fn pemopc(&mut self) -> PEMOPC_W<CMD_W3_SPEC> {
+    pub fn pemopc(&mut self) -> PEMOPC_W<'_, CMD_W3_SPEC> {
         PEMOPC_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Instruction code"]
     #[inline(always)]
-    #[must_use]
-    pub fn insc(&mut self) -> INSC_W<CMD_W3_SPEC> {
+    pub fn insc(&mut self) -> INSC_W<'_, CMD_W3_SPEC> {
         INSC_W::new(self, 24)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for CMD_W3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cmd_w3::W`](W) writer structure"]
 impl crate::Writable for CMD_W3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CMD_W3 to value 0"]
-impl crate::Resettable for CMD_W3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CMD_W3_SPEC {}

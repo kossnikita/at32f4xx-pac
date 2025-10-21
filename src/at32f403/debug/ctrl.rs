@@ -462,158 +462,132 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Debug Sleep mode control bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn sleep_debug(&mut self) -> SLEEP_DEBUG_W<CTRL_SPEC> {
+    pub fn sleep_debug(&mut self) -> SLEEP_DEBUG_W<'_, CTRL_SPEC> {
         SLEEP_DEBUG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Debug Deepsleep mode control bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn deepsleep_debug(&mut self) -> DEEPSLEEP_DEBUG_W<CTRL_SPEC> {
+    pub fn deepsleep_debug(&mut self) -> DEEPSLEEP_DEBUG_W<'_, CTRL_SPEC> {
         DEEPSLEEP_DEBUG_W::new(self, 1)
     }
     #[doc = "Bit 2 - Debug Standby mode control bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn standby_debug(&mut self) -> STANDBY_DEBUG_W<CTRL_SPEC> {
+    pub fn standby_debug(&mut self) -> STANDBY_DEBUG_W<'_, CTRL_SPEC> {
         STANDBY_DEBUG_W::new(self, 2)
     }
     #[doc = "Bit 5 - TRACE_IOEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn trace_ioen(&mut self) -> TRACE_IOEN_W<CTRL_SPEC> {
+    pub fn trace_ioen(&mut self) -> TRACE_IOEN_W<'_, CTRL_SPEC> {
         TRACE_IOEN_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - TRACE_MODE"]
     #[inline(always)]
-    #[must_use]
-    pub fn trace_mode(&mut self) -> TRACE_MODE_W<CTRL_SPEC> {
+    pub fn trace_mode(&mut self) -> TRACE_MODE_W<'_, CTRL_SPEC> {
         TRACE_MODE_W::new(self, 6)
     }
     #[doc = "Bit 8 - WDT_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdt_pause(&mut self) -> WDT_PAUSE_W<CTRL_SPEC> {
+    pub fn wdt_pause(&mut self) -> WDT_PAUSE_W<'_, CTRL_SPEC> {
         WDT_PAUSE_W::new(self, 8)
     }
     #[doc = "Bit 9 - WWDT_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn wwdt_pause(&mut self) -> WWDT_PAUSE_W<CTRL_SPEC> {
+    pub fn wwdt_pause(&mut self) -> WWDT_PAUSE_W<'_, CTRL_SPEC> {
         WWDT_PAUSE_W::new(self, 9)
     }
     #[doc = "Bit 10 - TMR1_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1_pause(&mut self) -> TMR1_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr1_pause(&mut self) -> TMR1_PAUSE_W<'_, CTRL_SPEC> {
         TMR1_PAUSE_W::new(self, 10)
     }
     #[doc = "Bit 11 - TMR2_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr2_pause(&mut self) -> TMR2_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr2_pause(&mut self) -> TMR2_PAUSE_W<'_, CTRL_SPEC> {
         TMR2_PAUSE_W::new(self, 11)
     }
     #[doc = "Bit 12 - TMR3_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr3_pause(&mut self) -> TMR3_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr3_pause(&mut self) -> TMR3_PAUSE_W<'_, CTRL_SPEC> {
         TMR3_PAUSE_W::new(self, 12)
     }
     #[doc = "Bit 13 - TMR4_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr4_pause(&mut self) -> TMR4_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr4_pause(&mut self) -> TMR4_PAUSE_W<'_, CTRL_SPEC> {
         TMR4_PAUSE_W::new(self, 13)
     }
     #[doc = "Bit 14 - CAN1_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn can1_pause(&mut self) -> CAN1_PAUSE_W<CTRL_SPEC> {
+    pub fn can1_pause(&mut self) -> CAN1_PAUSE_W<'_, CTRL_SPEC> {
         CAN1_PAUSE_W::new(self, 14)
     }
     #[doc = "Bit 15 - I2C1_SMBUS_TIMEOUT"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c1_smbus_timeout(&mut self) -> I2C1_SMBUS_TIMEOUT_W<CTRL_SPEC> {
+    pub fn i2c1_smbus_timeout(&mut self) -> I2C1_SMBUS_TIMEOUT_W<'_, CTRL_SPEC> {
         I2C1_SMBUS_TIMEOUT_W::new(self, 15)
     }
     #[doc = "Bit 16 - I2C2_SMBUS_TIMEOUT"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c2_smbus_timeout(&mut self) -> I2C2_SMBUS_TIMEOUT_W<CTRL_SPEC> {
+    pub fn i2c2_smbus_timeout(&mut self) -> I2C2_SMBUS_TIMEOUT_W<'_, CTRL_SPEC> {
         I2C2_SMBUS_TIMEOUT_W::new(self, 16)
     }
     #[doc = "Bit 17 - TMR8_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr8_pause(&mut self) -> TMR8_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr8_pause(&mut self) -> TMR8_PAUSE_W<'_, CTRL_SPEC> {
         TMR8_PAUSE_W::new(self, 17)
     }
     #[doc = "Bit 18 - TMR5_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr5_pause(&mut self) -> TMR5_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr5_pause(&mut self) -> TMR5_PAUSE_W<'_, CTRL_SPEC> {
         TMR5_PAUSE_W::new(self, 18)
     }
     #[doc = "Bit 19 - TMR6_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr6_pause(&mut self) -> TMR6_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr6_pause(&mut self) -> TMR6_PAUSE_W<'_, CTRL_SPEC> {
         TMR6_PAUSE_W::new(self, 19)
     }
     #[doc = "Bit 20 - TMR7_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr7_pause(&mut self) -> TMR7_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr7_pause(&mut self) -> TMR7_PAUSE_W<'_, CTRL_SPEC> {
         TMR7_PAUSE_W::new(self, 20)
     }
     #[doc = "Bit 22 - TMR15_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr15_pause(&mut self) -> TMR15_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr15_pause(&mut self) -> TMR15_PAUSE_W<'_, CTRL_SPEC> {
         TMR15_PAUSE_W::new(self, 22)
     }
     #[doc = "Bit 25 - TMR12_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr12_pause(&mut self) -> TMR12_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr12_pause(&mut self) -> TMR12_PAUSE_W<'_, CTRL_SPEC> {
         TMR12_PAUSE_W::new(self, 25)
     }
     #[doc = "Bit 26 - TMR13_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr13_pause(&mut self) -> TMR13_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr13_pause(&mut self) -> TMR13_PAUSE_W<'_, CTRL_SPEC> {
         TMR13_PAUSE_W::new(self, 26)
     }
     #[doc = "Bit 27 - TMR14_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr14_pause(&mut self) -> TMR14_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr14_pause(&mut self) -> TMR14_PAUSE_W<'_, CTRL_SPEC> {
         TMR14_PAUSE_W::new(self, 27)
     }
     #[doc = "Bit 28 - TMR9_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr9_pause(&mut self) -> TMR9_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr9_pause(&mut self) -> TMR9_PAUSE_W<'_, CTRL_SPEC> {
         TMR9_PAUSE_W::new(self, 28)
     }
     #[doc = "Bit 29 - TMR10_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr10_pause(&mut self) -> TMR10_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr10_pause(&mut self) -> TMR10_PAUSE_W<'_, CTRL_SPEC> {
         TMR10_PAUSE_W::new(self, 29)
     }
     #[doc = "Bit 30 - TMR11_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr11_pause(&mut self) -> TMR11_PAUSE_W<CTRL_SPEC> {
+    pub fn tmr11_pause(&mut self) -> TMR11_PAUSE_W<'_, CTRL_SPEC> {
         TMR11_PAUSE_W::new(self, 30)
     }
     #[doc = "Bit 31 - I2C3_SMBUS_TIMEOUT"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c3_smbus_timeout(&mut self) -> I2C3_SMBUS_TIMEOUT_W<CTRL_SPEC> {
+    pub fn i2c3_smbus_timeout(&mut self) -> I2C3_SMBUS_TIMEOUT_W<'_, CTRL_SPEC> {
         I2C3_SMBUS_TIMEOUT_W::new(self, 31)
     }
 }
@@ -627,10 +601,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
-impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL_SPEC {}

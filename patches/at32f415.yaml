@@ -178,15 +178,7 @@ IOMUX:
 #     COSSEL:
 #       EXT: [0, "Select EXT as CxORAW switch"]
 #       CxORAW_OFF: [1, "Select CxORAW_OFF as CxORAW switch"]
-ACC:
-  CTRL2:
-    _strip:
-      - "ACC_"
-    _modify:
-      HSICAL:
-        name: HICKCAL
-      HSITRIM:
-        name: HICKTRIM
+
 DEBUG:
   _strip:
     - "DEBUG_"
@@ -218,6 +210,5 @@ _include:
   - common/iomux/iomux_gpiof.yaml
   - common/wwdt/common.yaml
   - common/wdt/common.yaml
-  - common/acc/common.yaml
   - common/debug/common.yaml
   - common/debug/timers.yaml

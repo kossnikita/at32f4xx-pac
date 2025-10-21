@@ -48,6 +48,4 @@ impl crate::RegisterSpec for DMAMFBOCNT_SPEC {
 #[doc = "`read()` method returns [`dmamfbocnt::R`](R) reader structure"]
 impl crate::Readable for DMAMFBOCNT_SPEC {}
 #[doc = "`reset()` method sets DMAMFBOCNT to value 0"]
-impl crate::Resettable for DMAMFBOCNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMAMFBOCNT_SPEC {}

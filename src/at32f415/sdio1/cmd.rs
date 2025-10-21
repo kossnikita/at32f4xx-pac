@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - CMDIDX"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdidx(&mut self) -> CMDIDX_W<CMD_SPEC> {
+    pub fn cmdidx(&mut self) -> CMDIDX_W<'_, CMD_SPEC> {
         CMDIDX_W::new(self, 0)
     }
     #[doc = "Bits 6:7 - WAITRESP"]
     #[inline(always)]
-    #[must_use]
-    pub fn rspwt(&mut self) -> RSPWT_W<CMD_SPEC> {
+    pub fn rspwt(&mut self) -> RSPWT_W<'_, CMD_SPEC> {
         RSPWT_W::new(self, 6)
     }
     #[doc = "Bit 8 - WAITINT"]
     #[inline(always)]
-    #[must_use]
-    pub fn intwt(&mut self) -> INTWT_W<CMD_SPEC> {
+    pub fn intwt(&mut self) -> INTWT_W<'_, CMD_SPEC> {
         INTWT_W::new(self, 8)
     }
     #[doc = "Bit 9 - WAITPEND"]
     #[inline(always)]
-    #[must_use]
-    pub fn pndwt(&mut self) -> PNDWT_W<CMD_SPEC> {
+    pub fn pndwt(&mut self) -> PNDWT_W<'_, CMD_SPEC> {
         PNDWT_W::new(self, 9)
     }
     #[doc = "Bit 10 - CPSMEN"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdmen(&mut self) -> CMDMEN_W<CMD_SPEC> {
+    pub fn cmdmen(&mut self) -> CMDMEN_W<'_, CMD_SPEC> {
         CMDMEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - SDIOSuspend"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdiosusp(&mut self) -> SDIOSUSP_W<CMD_SPEC> {
+    pub fn sdiosusp(&mut self) -> SDIOSUSP_W<'_, CMD_SPEC> {
         SDIOSUSP_W::new(self, 11)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for CMD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cmd::W`](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CMD to value 0"]
-impl crate::Resettable for CMD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CMD_SPEC {}

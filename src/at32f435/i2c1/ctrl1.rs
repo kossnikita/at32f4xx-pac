@@ -319,110 +319,92 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - I2C peripheral enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2cen(&mut self) -> I2CEN_W<CTRL1_SPEC> {
+    pub fn i2cen(&mut self) -> I2CEN_W<'_, CTRL1_SPEC> {
         I2CEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit data interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tdien(&mut self) -> TDIEN_W<CTRL1_SPEC> {
+    pub fn tdien(&mut self) -> TDIEN_W<'_, CTRL1_SPEC> {
         TDIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Receive data interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdien(&mut self) -> RDIEN_W<CTRL1_SPEC> {
+    pub fn rdien(&mut self) -> RDIEN_W<'_, CTRL1_SPEC> {
         RDIEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Address match interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn addrien(&mut self) -> ADDRIEN_W<CTRL1_SPEC> {
+    pub fn addrien(&mut self) -> ADDRIEN_W<'_, CTRL1_SPEC> {
         ADDRIEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Acknowledge fail interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ackfailien(&mut self) -> ACKFAILIEN_W<CTRL1_SPEC> {
+    pub fn ackfailien(&mut self) -> ACKFAILIEN_W<'_, CTRL1_SPEC> {
         ACKFAILIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Stop generation complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn stopien(&mut self) -> STOPIEN_W<CTRL1_SPEC> {
+    pub fn stopien(&mut self) -> STOPIEN_W<'_, CTRL1_SPEC> {
         STOPIEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Transfer data complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tdcien(&mut self) -> TDCIEN_W<CTRL1_SPEC> {
+    pub fn tdcien(&mut self) -> TDCIEN_W<'_, CTRL1_SPEC> {
         TDCIEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Error interrupts enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn errien(&mut self) -> ERRIEN_W<CTRL1_SPEC> {
+    pub fn errien(&mut self) -> ERRIEN_W<'_, CTRL1_SPEC> {
         ERRIEN_W::new(self, 7)
     }
     #[doc = "Bits 8:11 - Digital filter value"]
     #[inline(always)]
-    #[must_use]
-    pub fn dflt(&mut self) -> DFLT_W<CTRL1_SPEC> {
+    pub fn dflt(&mut self) -> DFLT_W<'_, CTRL1_SPEC> {
         DFLT_W::new(self, 8)
     }
     #[doc = "Bit 14 - DMA Transmit data request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaten(&mut self) -> DMATEN_W<CTRL1_SPEC> {
+    pub fn dmaten(&mut self) -> DMATEN_W<'_, CTRL1_SPEC> {
         DMATEN_W::new(self, 14)
     }
     #[doc = "Bit 15 - DMA receive data request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaren(&mut self) -> DMAREN_W<CTRL1_SPEC> {
+    pub fn dmaren(&mut self) -> DMAREN_W<'_, CTRL1_SPEC> {
         DMAREN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Slave receiving data control"]
     #[inline(always)]
-    #[must_use]
-    pub fn sctrl(&mut self) -> SCTRL_W<CTRL1_SPEC> {
+    pub fn sctrl(&mut self) -> SCTRL_W<'_, CTRL1_SPEC> {
         SCTRL_W::new(self, 16)
     }
     #[doc = "Bit 17 - Clock stretching mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn stretch(&mut self) -> STRETCH_W<CTRL1_SPEC> {
+    pub fn stretch(&mut self) -> STRETCH_W<'_, CTRL1_SPEC> {
         STRETCH_W::new(self, 17)
     }
     #[doc = "Bit 19 - General call address enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gcaen(&mut self) -> GCAEN_W<CTRL1_SPEC> {
+    pub fn gcaen(&mut self) -> GCAEN_W<'_, CTRL1_SPEC> {
         GCAEN_W::new(self, 19)
     }
     #[doc = "Bit 20 - SMBus host address enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn haddren(&mut self) -> HADDREN_W<CTRL1_SPEC> {
+    pub fn haddren(&mut self) -> HADDREN_W<'_, CTRL1_SPEC> {
         HADDREN_W::new(self, 20)
     }
     #[doc = "Bit 21 - SMBus device default address enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn devaddren(&mut self) -> DEVADDREN_W<CTRL1_SPEC> {
+    pub fn devaddren(&mut self) -> DEVADDREN_W<'_, CTRL1_SPEC> {
         DEVADDREN_W::new(self, 21)
     }
     #[doc = "Bit 22 - SMBus alert enable / pin set"]
     #[inline(always)]
-    #[must_use]
-    pub fn smbalert(&mut self) -> SMBALERT_W<CTRL1_SPEC> {
+    pub fn smbalert(&mut self) -> SMBALERT_W<'_, CTRL1_SPEC> {
         SMBALERT_W::new(self, 22)
     }
     #[doc = "Bit 23 - PEC calculation enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pecen(&mut self) -> PECEN_W<CTRL1_SPEC> {
+    pub fn pecen(&mut self) -> PECEN_W<'_, CTRL1_SPEC> {
         PECEN_W::new(self, 23)
     }
 }
@@ -436,10 +418,6 @@ impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0"]
-impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL1_SPEC {}

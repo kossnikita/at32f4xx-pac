@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<MISC2_SPEC> {
+    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<'_, MISC2_SPEC> {
         AUTO_STEP_EN_W::new(self, 4)
     }
     #[doc = "Bit 8 - HICK to usb clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<MISC2_SPEC> {
+    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<'_, MISC2_SPEC> {
         HICK_TO_USB_W::new(self, 8)
     }
     #[doc = "Bit 9 - HICK to system clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<MISC2_SPEC> {
+    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<'_, MISC2_SPEC> {
         HICK_TO_SCLK_W::new(self, 9)
     }
 }
@@ -70,8 +67,6 @@ impl crate::Readable for MISC2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`misc2::W`](W) writer structure"]
 impl crate::Writable for MISC2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MISC2 to value 0x0d"]
 impl crate::Resettable for MISC2_SPEC {

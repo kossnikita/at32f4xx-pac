@@ -499,92 +499,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - A/D converter enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcen(&mut self) -> ADCEN_W<CTRL2_SPEC> {
+    pub fn adcen(&mut self) -> ADCEN_W<'_, CTRL2_SPEC> {
         ADCEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Repeat mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rpen(&mut self) -> RPEN_W<CTRL2_SPEC> {
+    pub fn rpen(&mut self) -> RPEN_W<'_, CTRL2_SPEC> {
         RPEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - A/D Calibration"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcal(&mut self) -> ADCAL_W<CTRL2_SPEC> {
+    pub fn adcal(&mut self) -> ADCAL_W<'_, CTRL2_SPEC> {
         ADCAL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Initialize A/D calibration"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcalinit(&mut self) -> ADCALINIT_W<CTRL2_SPEC> {
+    pub fn adcalinit(&mut self) -> ADCALINIT_W<'_, CTRL2_SPEC> {
         ADCALINIT_W::new(self, 3)
     }
     #[doc = "Bit 4 - ADC conversion abort"]
     #[inline(always)]
-    #[must_use]
-    pub fn adabrt(&mut self) -> ADABRT_W<CTRL2_SPEC> {
+    pub fn adabrt(&mut self) -> ADABRT_W<'_, CTRL2_SPEC> {
         ADABRT_W::new(self, 4)
     }
     #[doc = "Bit 8 - Ordinary channel DMA transfer enable for independent mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocdmaen(&mut self) -> OCDMAEN_W<CTRL2_SPEC> {
+    pub fn ocdmaen(&mut self) -> OCDMAEN_W<'_, CTRL2_SPEC> {
         OCDMAEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Ordinary channel DMA request continuation enable for independent mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocdrcen(&mut self) -> OCDRCEN_W<CTRL2_SPEC> {
+    pub fn ocdrcen(&mut self) -> OCDRCEN_W<'_, CTRL2_SPEC> {
         OCDRCEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Each ordinary channel conversion set OCCE flag enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eocsfen(&mut self) -> EOCSFEN_W<CTRL2_SPEC> {
+    pub fn eocsfen(&mut self) -> EOCSFEN_W<'_, CTRL2_SPEC> {
         EOCSFEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Data alignment"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtalign(&mut self) -> DTALIGN_W<CTRL2_SPEC> {
+    pub fn dtalign(&mut self) -> DTALIGN_W<'_, CTRL2_SPEC> {
         DTALIGN_W::new(self, 11)
     }
     #[doc = "Bits 16:19 - trigger event select for preempted channels conversion"]
     #[inline(always)]
-    #[must_use]
-    pub fn pctesel(&mut self) -> PCTESEL_W<CTRL2_SPEC> {
+    pub fn pctesel(&mut self) -> PCTESEL_W<'_, CTRL2_SPEC> {
         PCTESEL_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Preempted channel external trigger edge select"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcete(&mut self) -> PCETE_W<CTRL2_SPEC> {
+    pub fn pcete(&mut self) -> PCETE_W<'_, CTRL2_SPEC> {
         PCETE_W::new(self, 20)
     }
     #[doc = "Bit 22 - Preempted channel software conversion trigger"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcswtrg(&mut self) -> PCSWTRG_W<CTRL2_SPEC> {
+    pub fn pcswtrg(&mut self) -> PCSWTRG_W<'_, CTRL2_SPEC> {
         PCSWTRG_W::new(self, 22)
     }
     #[doc = "Bits 24:27 - trigger event select for ordinary channels conversion"]
     #[inline(always)]
-    #[must_use]
-    pub fn octesel(&mut self) -> OCTESEL_W<CTRL2_SPEC> {
+    pub fn octesel(&mut self) -> OCTESEL_W<'_, CTRL2_SPEC> {
         OCTESEL_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - Ordinary channel external trigger edge select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocete(&mut self) -> OCETE_W<CTRL2_SPEC> {
+    pub fn ocete(&mut self) -> OCETE_W<'_, CTRL2_SPEC> {
         OCETE_W::new(self, 28)
     }
     #[doc = "Bit 30 - Ordinary channel software conversion trigger"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocswtrg(&mut self) -> OCSWTRG_W<CTRL2_SPEC> {
+    pub fn ocswtrg(&mut self) -> OCSWTRG_W<'_, CTRL2_SPEC> {
         OCSWTRG_W::new(self, 30)
     }
 }
@@ -598,10 +583,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
-impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL2_SPEC {}

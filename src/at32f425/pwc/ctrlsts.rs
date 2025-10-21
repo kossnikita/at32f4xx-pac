@@ -97,38 +97,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - Standby wake-up pin1 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn swpen1(&mut self) -> SWPEN1_W<CTRLSTS_SPEC> {
+    pub fn swpen1(&mut self) -> SWPEN1_W<'_, CTRLSTS_SPEC> {
         SWPEN1_W::new(self, 8)
     }
     #[doc = "Bit 9 - Standby wake-up pin2 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn swpen2(&mut self) -> SWPEN2_W<CTRLSTS_SPEC> {
+    pub fn swpen2(&mut self) -> SWPEN2_W<'_, CTRLSTS_SPEC> {
         SWPEN2_W::new(self, 9)
     }
     #[doc = "Bit 11 - Standby wake-up pin4 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn swpen4(&mut self) -> SWPEN4_W<CTRLSTS_SPEC> {
+    pub fn swpen4(&mut self) -> SWPEN4_W<'_, CTRLSTS_SPEC> {
         SWPEN4_W::new(self, 11)
     }
     #[doc = "Bit 12 - Standby wake-up pin5 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn swpen5(&mut self) -> SWPEN5_W<CTRLSTS_SPEC> {
+    pub fn swpen5(&mut self) -> SWPEN5_W<'_, CTRLSTS_SPEC> {
         SWPEN5_W::new(self, 12)
     }
     #[doc = "Bit 13 - Standby wake-up pin6 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn swpen6(&mut self) -> SWPEN6_W<CTRLSTS_SPEC> {
+    pub fn swpen6(&mut self) -> SWPEN6_W<'_, CTRLSTS_SPEC> {
         SWPEN6_W::new(self, 13)
     }
     #[doc = "Bit 14 - Standby wake-up pin7 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn swpen7(&mut self) -> SWPEN7_W<CTRLSTS_SPEC> {
+    pub fn swpen7(&mut self) -> SWPEN7_W<'_, CTRLSTS_SPEC> {
         SWPEN7_W::new(self, 14)
     }
 }
@@ -142,10 +136,6 @@ impl crate::Readable for CTRLSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlsts::W`](W) writer structure"]
 impl crate::Writable for CTRLSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRLSTS to value 0"]
-impl crate::Resettable for CTRLSTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRLSTS_SPEC {}

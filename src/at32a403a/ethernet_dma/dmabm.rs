@@ -113,62 +113,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Software reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn swr(&mut self) -> SWR_W<DMABM_SPEC> {
+    pub fn swr(&mut self) -> SWR_W<'_, DMABM_SPEC> {
         SWR_W::new(self, 0)
     }
     #[doc = "Bit 1 - DMA Arbitration"]
     #[inline(always)]
-    #[must_use]
-    pub fn da(&mut self) -> DA_W<DMABM_SPEC> {
+    pub fn da(&mut self) -> DA_W<'_, DMABM_SPEC> {
         DA_W::new(self, 1)
     }
     #[doc = "Bits 2:6 - Descriptor skip length"]
     #[inline(always)]
-    #[must_use]
-    pub fn dsl(&mut self) -> DSL_W<DMABM_SPEC> {
+    pub fn dsl(&mut self) -> DSL_W<'_, DMABM_SPEC> {
         DSL_W::new(self, 2)
     }
     #[doc = "Bits 8:13 - Programmable burst length"]
     #[inline(always)]
-    #[must_use]
-    pub fn pbl(&mut self) -> PBL_W<DMABM_SPEC> {
+    pub fn pbl(&mut self) -> PBL_W<'_, DMABM_SPEC> {
         PBL_W::new(self, 8)
     }
     #[doc = "Bits 14:15 - Priority ratio"]
     #[inline(always)]
-    #[must_use]
-    pub fn pr(&mut self) -> PR_W<DMABM_SPEC> {
+    pub fn pr(&mut self) -> PR_W<'_, DMABM_SPEC> {
         PR_W::new(self, 14)
     }
     #[doc = "Bit 16 - Fixed burst"]
     #[inline(always)]
-    #[must_use]
-    pub fn fb(&mut self) -> FB_W<DMABM_SPEC> {
+    pub fn fb(&mut self) -> FB_W<'_, DMABM_SPEC> {
         FB_W::new(self, 16)
     }
     #[doc = "Bits 17:22 - Rx DMA PBL"]
     #[inline(always)]
-    #[must_use]
-    pub fn rdp(&mut self) -> RDP_W<DMABM_SPEC> {
+    pub fn rdp(&mut self) -> RDP_W<'_, DMABM_SPEC> {
         RDP_W::new(self, 17)
     }
     #[doc = "Bit 23 - Use separate PBL"]
     #[inline(always)]
-    #[must_use]
-    pub fn usp(&mut self) -> USP_W<DMABM_SPEC> {
+    pub fn usp(&mut self) -> USP_W<'_, DMABM_SPEC> {
         USP_W::new(self, 23)
     }
     #[doc = "Bit 24 - PNLx8 mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn pblx8(&mut self) -> PBLX8_W<DMABM_SPEC> {
+    pub fn pblx8(&mut self) -> PBLX8_W<'_, DMABM_SPEC> {
         PBLX8_W::new(self, 24)
     }
     #[doc = "Bit 25 - Address-aligned beats"]
     #[inline(always)]
-    #[must_use]
-    pub fn aab(&mut self) -> AAB_W<DMABM_SPEC> {
+    pub fn aab(&mut self) -> AAB_W<'_, DMABM_SPEC> {
         AAB_W::new(self, 25)
     }
 }
@@ -182,8 +172,6 @@ impl crate::Readable for DMABM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmabm::W`](W) writer structure"]
 impl crate::Writable for DMABM_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMABM to value 0x0002_0101"]
 impl crate::Resettable for DMABM_SPEC {

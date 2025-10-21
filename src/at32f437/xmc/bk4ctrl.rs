@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Wait feature enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn nwen(&mut self) -> NWEN_W<BK4CTRL_SPEC> {
+    pub fn nwen(&mut self) -> NWEN_W<'_, BK4CTRL_SPEC> {
         NWEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Memory bank enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn en(&mut self) -> EN_W<BK4CTRL_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, BK4CTRL_SPEC> {
         EN_W::new(self, 2)
     }
 }
@@ -54,8 +52,6 @@ impl crate::Readable for BK4CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk4ctrl::W`](W) writer structure"]
 impl crate::Writable for BK4CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK4CTRL to value 0x18"]
 impl crate::Resettable for BK4CTRL_SPEC {

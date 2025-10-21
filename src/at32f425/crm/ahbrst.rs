@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - OTGFS1 reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn otgfs1(&mut self) -> OTGFS1_W<AHBRST_SPEC> {
+    pub fn otgfs1(&mut self) -> OTGFS1_W<'_, AHBRST_SPEC> {
         OTGFS1_W::new(self, 12)
     }
     #[doc = "Bit 17 - IO port A reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioa(&mut self) -> GPIOA_W<AHBRST_SPEC> {
+    pub fn gpioa(&mut self) -> GPIOA_W<'_, AHBRST_SPEC> {
         GPIOA_W::new(self, 17)
     }
     #[doc = "Bit 18 - IO port B reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiob(&mut self) -> GPIOB_W<AHBRST_SPEC> {
+    pub fn gpiob(&mut self) -> GPIOB_W<'_, AHBRST_SPEC> {
         GPIOB_W::new(self, 18)
     }
     #[doc = "Bit 19 - IO port C reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioc(&mut self) -> GPIOC_W<AHBRST_SPEC> {
+    pub fn gpioc(&mut self) -> GPIOC_W<'_, AHBRST_SPEC> {
         GPIOC_W::new(self, 19)
     }
     #[doc = "Bit 20 - IO port D reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiod(&mut self) -> GPIOD_W<AHBRST_SPEC> {
+    pub fn gpiod(&mut self) -> GPIOD_W<'_, AHBRST_SPEC> {
         GPIOD_W::new(self, 20)
     }
     #[doc = "Bit 22 - IO port F reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiof(&mut self) -> GPIOF_W<AHBRST_SPEC> {
+    pub fn gpiof(&mut self) -> GPIOF_W<'_, AHBRST_SPEC> {
         GPIOF_W::new(self, 22)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for AHBRST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahbrst::W`](W) writer structure"]
 impl crate::Writable for AHBRST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBRST to value 0"]
-impl crate::Resettable for AHBRST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AHBRST_SPEC {}

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - DMA data register"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmadt(&mut self) -> DMADT_W<DMADT_SPEC> {
+    pub fn dmadt(&mut self) -> DMADT_W<'_, DMADT_SPEC> {
         DMADT_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for DMADT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmadt::W`](W) writer structure"]
 impl crate::Writable for DMADT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMADT to value 0"]
-impl crate::Resettable for DMADT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMADT_SPEC {}

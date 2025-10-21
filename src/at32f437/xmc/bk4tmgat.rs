@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - special memory setup time"]
     #[inline(always)]
-    #[must_use]
-    pub fn atst(&mut self) -> ATST_W<BK4TMGAT_SPEC> {
+    pub fn atst(&mut self) -> ATST_W<'_, BK4TMGAT_SPEC> {
         ATST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - special memory wait time"]
     #[inline(always)]
-    #[must_use]
-    pub fn atwt(&mut self) -> ATWT_W<BK4TMGAT_SPEC> {
+    pub fn atwt(&mut self) -> ATWT_W<'_, BK4TMGAT_SPEC> {
         ATWT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - special memory hold time"]
     #[inline(always)]
-    #[must_use]
-    pub fn atht(&mut self) -> ATHT_W<BK4TMGAT_SPEC> {
+    pub fn atht(&mut self) -> ATHT_W<'_, BK4TMGAT_SPEC> {
         ATHT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - special memory databus High resistance time"]
     #[inline(always)]
-    #[must_use]
-    pub fn atdhizt(&mut self) -> ATDHIZT_W<BK4TMGAT_SPEC> {
+    pub fn atdhizt(&mut self) -> ATDHIZT_W<'_, BK4TMGAT_SPEC> {
         ATDHIZT_W::new(self, 24)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for BK4TMGAT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk4tmgat::W`](W) writer structure"]
 impl crate::Writable for BK4TMGAT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK4TMGAT to value 0xfcfc_fcfc"]
 impl crate::Resettable for BK4TMGAT_SPEC {

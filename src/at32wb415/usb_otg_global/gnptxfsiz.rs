@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Non-periodic Transmit RAM Start address"]
     #[inline(always)]
-    #[must_use]
-    pub fn nptxfstaddr(&mut self) -> NPTXFSTADDR_W<GNPTXFSIZ_SPEC> {
+    pub fn nptxfstaddr(&mut self) -> NPTXFSTADDR_W<'_, GNPTXFSIZ_SPEC> {
         NPTXFSTADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Non-periodic TxFIFO depth"]
     #[inline(always)]
-    #[must_use]
-    pub fn nptxfdep(&mut self) -> NPTXFDEP_W<GNPTXFSIZ_SPEC> {
+    pub fn nptxfdep(&mut self) -> NPTXFDEP_W<'_, GNPTXFSIZ_SPEC> {
         NPTXFDEP_W::new(self, 16)
     }
 }
@@ -54,8 +52,6 @@ impl crate::Readable for GNPTXFSIZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gnptxfsiz::W`](W) writer structure"]
 impl crate::Writable for GNPTXFSIZ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GNPTXFSIZ to value 0x0200"]
 impl crate::Resettable for GNPTXFSIZ_SPEC {

@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:17 - Ethernet MAC muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn emac_gmux(&mut self) -> EMAC_GMUX_W<REMAP8_SPEC> {
+    pub fn emac_gmux(&mut self) -> EMAC_GMUX_W<'_, REMAP8_SPEC> {
         EMAC_GMUX_W::new(self, 16)
     }
     #[doc = "Bit 18 - MII_RMII select muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn mii_rmii_sel_gmux(&mut self) -> MII_RMII_SEL_GMUX_W<REMAP8_SPEC> {
+    pub fn mii_rmii_sel_gmux(&mut self) -> MII_RMII_SEL_GMUX_W<'_, REMAP8_SPEC> {
         MII_RMII_SEL_GMUX_W::new(self, 18)
     }
     #[doc = "Bit 19 - PTP_PPS muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn ptp_pps_gmux(&mut self) -> PTP_PPS_GMUX_W<REMAP8_SPEC> {
+    pub fn ptp_pps_gmux(&mut self) -> PTP_PPS_GMUX_W<'_, REMAP8_SPEC> {
         PTP_PPS_GMUX_W::new(self, 19)
     }
     #[doc = "Bits 20:23 - USART6 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart6_gmux(&mut self) -> USART6_GMUX_W<REMAP8_SPEC> {
+    pub fn usart6_gmux(&mut self) -> USART6_GMUX_W<'_, REMAP8_SPEC> {
         USART6_GMUX_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - UART7 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn uart7_gmux(&mut self) -> UART7_GMUX_W<REMAP8_SPEC> {
+    pub fn uart7_gmux(&mut self) -> UART7_GMUX_W<'_, REMAP8_SPEC> {
         UART7_GMUX_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - UART8 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn uart8_gmux(&mut self) -> UART8_GMUX_W<REMAP8_SPEC> {
+    pub fn uart8_gmux(&mut self) -> UART8_GMUX_W<'_, REMAP8_SPEC> {
         UART8_GMUX_W::new(self, 28)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for REMAP8_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap8::W`](W) writer structure"]
 impl crate::Writable for REMAP8_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP8 to value 0"]
-impl crate::Resettable for REMAP8_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP8_SPEC {}

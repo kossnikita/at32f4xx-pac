@@ -51,6 +51,8 @@ impl RegisterBlock {
         &self.spt2
     }
     #[doc = "0x14..0x24 - Data offset for Preempted channel %s"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `PCDTO1` register.</div>"]
     #[inline(always)]
     pub const fn pcdto(&self, n: usize) -> &PCDTO {
         &self.pcdto[n]
@@ -82,6 +84,8 @@ impl RegisterBlock {
         self.pcdto(3)
     }
     #[doc = "0x24..0x2c - Voltage monitoring %s boundary register"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `VMHB` register.</div>"]
     #[inline(always)]
     pub const fn vmb(&self, n: usize) -> &VMB {
         &self.vmb[n]
@@ -123,6 +127,8 @@ impl RegisterBlock {
         &self.psq
     }
     #[doc = "0x3c..0x4c - Preempted data register %s"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `PDT1` register.</div>"]
     #[inline(always)]
     pub const fn pdt(&self, n: usize) -> &PDT {
         &self.pdt[n]
@@ -189,98 +195,79 @@ impl RegisterBlock {
         &self.calval
     }
 }
-#[doc = "STS (rw) register accessor: status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sts`]
-module"]
+#[doc = "STS (rw) register accessor: status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sts`] module"]
 pub type STS = crate::Reg<sts::STS_SPEC>;
 #[doc = "status register"]
 pub mod sts;
-#[doc = "CTRL1 (rw) register accessor: control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl1`]
-module"]
+#[doc = "CTRL1 (rw) register accessor: control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl1`] module"]
 pub type CTRL1 = crate::Reg<ctrl1::CTRL1_SPEC>;
 #[doc = "control register 1"]
 pub mod ctrl1;
-#[doc = "CTRL2 (rw) register accessor: control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl2`]
-module"]
+#[doc = "CTRL2 (rw) register accessor: control register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl2`] module"]
 pub type CTRL2 = crate::Reg<ctrl2::CTRL2_SPEC>;
 #[doc = "control register 2"]
 pub mod ctrl2;
-#[doc = "SPT1 (rw) register accessor: sample time register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`spt1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spt1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spt1`]
-module"]
+#[doc = "SPT1 (rw) register accessor: sample time register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`spt1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spt1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spt1`] module"]
 pub type SPT1 = crate::Reg<spt1::SPT1_SPEC>;
 #[doc = "sample time register 1"]
 pub mod spt1;
-#[doc = "SPT2 (rw) register accessor: sample time register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`spt2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spt2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spt2`]
-module"]
+#[doc = "SPT2 (rw) register accessor: sample time register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`spt2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spt2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spt2`] module"]
 pub type SPT2 = crate::Reg<spt2::SPT2_SPEC>;
 #[doc = "sample time register 2"]
 pub mod spt2;
-#[doc = "SPT3 (rw) register accessor: sample time register 3\n\nYou can [`read`](crate::Reg::read) this register and get [`spt3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spt3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spt3`]
-module"]
+#[doc = "SPT3 (rw) register accessor: sample time register 3\n\nYou can [`read`](crate::Reg::read) this register and get [`spt3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spt3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spt3`] module"]
 pub type SPT3 = crate::Reg<spt3::SPT3_SPEC>;
 #[doc = "sample time register 3"]
 pub mod spt3;
-#[doc = "PCDTO (rw) register accessor: Data offset for Preempted channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`pcdto::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pcdto::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pcdto`]
-module"]
+#[doc = "PCDTO (rw) register accessor: Data offset for Preempted channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`pcdto::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pcdto::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pcdto`] module"]
 pub type PCDTO = crate::Reg<pcdto::PCDTO_SPEC>;
 #[doc = "Data offset for Preempted channel %s"]
 pub mod pcdto;
-#[doc = "VMB (rw) register accessor: Voltage monitoring %s boundary register\n\nYou can [`read`](crate::Reg::read) this register and get [`vmb::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vmb::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@vmb`]
-module"]
+#[doc = "VMB (rw) register accessor: Voltage monitoring %s boundary register\n\nYou can [`read`](crate::Reg::read) this register and get [`vmb::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`vmb::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@vmb`] module"]
 pub type VMB = crate::Reg<vmb::VMB_SPEC>;
 #[doc = "Voltage monitoring %s boundary register"]
 pub mod vmb;
-#[doc = "OSQ1 (rw) register accessor: Ordinary sequence register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`osq1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq1`]
-module"]
+#[doc = "OSQ1 (rw) register accessor: Ordinary sequence register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`osq1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq1`] module"]
 pub type OSQ1 = crate::Reg<osq1::OSQ1_SPEC>;
 #[doc = "Ordinary sequence register 1"]
 pub mod osq1;
-#[doc = "OSQ2 (rw) register accessor: Ordinary sequence register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`osq2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq2`]
-module"]
+#[doc = "OSQ2 (rw) register accessor: Ordinary sequence register 2\n\nYou can [`read`](crate::Reg::read) this register and get [`osq2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq2`] module"]
 pub type OSQ2 = crate::Reg<osq2::OSQ2_SPEC>;
 #[doc = "Ordinary sequence register 2"]
 pub mod osq2;
-#[doc = "OSQ3 (rw) register accessor: Ordinary sequence register 3\n\nYou can [`read`](crate::Reg::read) this register and get [`osq3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq3`]
-module"]
+#[doc = "OSQ3 (rw) register accessor: Ordinary sequence register 3\n\nYou can [`read`](crate::Reg::read) this register and get [`osq3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq3`] module"]
 pub type OSQ3 = crate::Reg<osq3::OSQ3_SPEC>;
 #[doc = "Ordinary sequence register 3"]
 pub mod osq3;
-#[doc = "OSQ4 (rw) register accessor: Ordinary sequence register 4\n\nYou can [`read`](crate::Reg::read) this register and get [`osq4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq4`]
-module"]
+#[doc = "OSQ4 (rw) register accessor: Ordinary sequence register 4\n\nYou can [`read`](crate::Reg::read) this register and get [`osq4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq4`] module"]
 pub type OSQ4 = crate::Reg<osq4::OSQ4_SPEC>;
 #[doc = "Ordinary sequence register 4"]
 pub mod osq4;
-#[doc = "OSQ5 (rw) register accessor: Ordinary sequence register 5\n\nYou can [`read`](crate::Reg::read) this register and get [`osq5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq5`]
-module"]
+#[doc = "OSQ5 (rw) register accessor: Ordinary sequence register 5\n\nYou can [`read`](crate::Reg::read) this register and get [`osq5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq5`] module"]
 pub type OSQ5 = crate::Reg<osq5::OSQ5_SPEC>;
 #[doc = "Ordinary sequence register 5"]
 pub mod osq5;
-#[doc = "OSQ6 (rw) register accessor: Ordinary sequence register 6\n\nYou can [`read`](crate::Reg::read) this register and get [`osq6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq6`]
-module"]
+#[doc = "OSQ6 (rw) register accessor: Ordinary sequence register 6\n\nYou can [`read`](crate::Reg::read) this register and get [`osq6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`osq6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@osq6`] module"]
 pub type OSQ6 = crate::Reg<osq6::OSQ6_SPEC>;
 #[doc = "Ordinary sequence register 6"]
 pub mod osq6;
-#[doc = "PSQ (rw) register accessor: Preempted sequence register\n\nYou can [`read`](crate::Reg::read) this register and get [`psq::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`psq::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@psq`]
-module"]
+#[doc = "PSQ (rw) register accessor: Preempted sequence register\n\nYou can [`read`](crate::Reg::read) this register and get [`psq::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`psq::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@psq`] module"]
 pub type PSQ = crate::Reg<psq::PSQ_SPEC>;
 #[doc = "Preempted sequence register"]
 pub mod psq;
-#[doc = "PDT (r) register accessor: Preempted data register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`pdt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pdt`]
-module"]
+#[doc = "PDT (r) register accessor: Preempted data register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`pdt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pdt`] module"]
 pub type PDT = crate::Reg<pdt::PDT_SPEC>;
 #[doc = "Preempted data register %s"]
 pub mod pdt;
-#[doc = "ODT (r) register accessor: Ordinary data register\n\nYou can [`read`](crate::Reg::read) this register and get [`odt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@odt`]
-module"]
+#[doc = "ODT (r) register accessor: Ordinary data register\n\nYou can [`read`](crate::Reg::read) this register and get [`odt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@odt`] module"]
 pub type ODT = crate::Reg<odt::ODT_SPEC>;
 #[doc = "Ordinary data register"]
 pub mod odt;
-#[doc = "OVSP (rw) register accessor: oversampling register\n\nYou can [`read`](crate::Reg::read) this register and get [`ovsp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ovsp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ovsp`]
-module"]
+#[doc = "OVSP (rw) register accessor: oversampling register\n\nYou can [`read`](crate::Reg::read) this register and get [`ovsp::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ovsp::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ovsp`] module"]
 pub type OVSP = crate::Reg<ovsp::OVSP_SPEC>;
 #[doc = "oversampling register"]
 pub mod ovsp;
-#[doc = "CALVAL (rw) register accessor: Calibration value register\n\nYou can [`read`](crate::Reg::read) this register and get [`calval::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`calval::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@calval`]
-module"]
+#[doc = "CALVAL (rw) register accessor: Calibration value register\n\nYou can [`read`](crate::Reg::read) this register and get [`calval::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`calval::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@calval`] module"]
 pub type CALVAL = crate::Reg<calval::CALVAL_SPEC>;
 #[doc = "Calibration value register"]
 pub mod calval;

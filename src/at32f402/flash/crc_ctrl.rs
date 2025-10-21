@@ -25,14 +25,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - CRC sector numbler"]
     #[inline(always)]
-    #[must_use]
-    pub fn crc_sn(&mut self) -> CRC_SN_W<CRC_CTRL_SPEC> {
+    pub fn crc_sn(&mut self) -> CRC_SN_W<'_, CRC_CTRL_SPEC> {
         CRC_SN_W::new(self, 0)
     }
     #[doc = "Bit 16 - CRC start"]
     #[inline(always)]
-    #[must_use]
-    pub fn crc_strt(&mut self) -> CRC_STRT_W<CRC_CTRL_SPEC> {
+    pub fn crc_strt(&mut self) -> CRC_STRT_W<'_, CRC_CTRL_SPEC> {
         CRC_STRT_W::new(self, 16)
     }
 }
@@ -46,10 +44,6 @@ impl crate::Readable for CRC_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`crc_ctrl::W`](W) writer structure"]
 impl crate::Writable for CRC_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CRC_CTRL to value 0"]
-impl crate::Resettable for CRC_CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CRC_CTRL_SPEC {}

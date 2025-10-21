@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 1:7 - Own address 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn addr2(&mut self) -> ADDR2_W<OADDR2_SPEC> {
+    pub fn addr2(&mut self) -> ADDR2_W<'_, OADDR2_SPEC> {
         ADDR2_W::new(self, 1)
     }
     #[doc = "Bits 8:10 - Own address 2-bit mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn addr2mask(&mut self) -> ADDR2MASK_W<OADDR2_SPEC> {
+    pub fn addr2mask(&mut self) -> ADDR2MASK_W<'_, OADDR2_SPEC> {
         ADDR2MASK_W::new(self, 8)
     }
     #[doc = "Bit 15 - Own address 2 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn addr2en(&mut self) -> ADDR2EN_W<OADDR2_SPEC> {
+    pub fn addr2en(&mut self) -> ADDR2EN_W<'_, OADDR2_SPEC> {
         ADDR2EN_W::new(self, 15)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for OADDR2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`oaddr2::W`](W) writer structure"]
 impl crate::Writable for OADDR2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OADDR2 to value 0"]
-impl crate::Resettable for OADDR2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OADDR2_SPEC {}

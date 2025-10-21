@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Flow control busy/back pressure activate"]
     #[inline(always)]
-    #[must_use]
-    pub fn fcb_bpa(&mut self) -> FCB_BPA_W<MACFCTRL_SPEC> {
+    pub fn fcb_bpa(&mut self) -> FCB_BPA_W<'_, MACFCTRL_SPEC> {
         FCB_BPA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable transmit flow control"]
     #[inline(always)]
-    #[must_use]
-    pub fn etf(&mut self) -> ETF_W<MACFCTRL_SPEC> {
+    pub fn etf(&mut self) -> ETF_W<'_, MACFCTRL_SPEC> {
         ETF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable receive flow control"]
     #[inline(always)]
-    #[must_use]
-    pub fn erf(&mut self) -> ERF_W<MACFCTRL_SPEC> {
+    pub fn erf(&mut self) -> ERF_W<'_, MACFCTRL_SPEC> {
         ERF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Detect unicast pause frame"]
     #[inline(always)]
-    #[must_use]
-    pub fn dup(&mut self) -> DUP_W<MACFCTRL_SPEC> {
+    pub fn dup(&mut self) -> DUP_W<'_, MACFCTRL_SPEC> {
         DUP_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - Pause low threshold"]
     #[inline(always)]
-    #[must_use]
-    pub fn plt(&mut self) -> PLT_W<MACFCTRL_SPEC> {
+    pub fn plt(&mut self) -> PLT_W<'_, MACFCTRL_SPEC> {
         PLT_W::new(self, 4)
     }
     #[doc = "Bit 7 - Disable zero-quanta pause"]
     #[inline(always)]
-    #[must_use]
-    pub fn dzqp(&mut self) -> DZQP_W<MACFCTRL_SPEC> {
+    pub fn dzqp(&mut self) -> DZQP_W<'_, MACFCTRL_SPEC> {
         DZQP_W::new(self, 7)
     }
     #[doc = "Bits 16:31 - Pass time"]
     #[inline(always)]
-    #[must_use]
-    pub fn pt(&mut self) -> PT_W<MACFCTRL_SPEC> {
+    pub fn pt(&mut self) -> PT_W<'_, MACFCTRL_SPEC> {
         PT_W::new(self, 16)
     }
 }
@@ -134,10 +127,6 @@ impl crate::Readable for MACFCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macfctrl::W`](W) writer structure"]
 impl crate::Writable for MACFCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACFCTRL to value 0"]
-impl crate::Resettable for MACFCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MACFCTRL_SPEC {}

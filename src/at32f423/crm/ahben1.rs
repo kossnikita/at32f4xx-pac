@@ -103,56 +103,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - IO A clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioa(&mut self) -> GPIOA_W<AHBEN1_SPEC> {
+    pub fn gpioa(&mut self) -> GPIOA_W<'_, AHBEN1_SPEC> {
         GPIOA_W::new(self, 0)
     }
     #[doc = "Bit 1 - IO B clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiob(&mut self) -> GPIOB_W<AHBEN1_SPEC> {
+    pub fn gpiob(&mut self) -> GPIOB_W<'_, AHBEN1_SPEC> {
         GPIOB_W::new(self, 1)
     }
     #[doc = "Bit 2 - IO C clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioc(&mut self) -> GPIOC_W<AHBEN1_SPEC> {
+    pub fn gpioc(&mut self) -> GPIOC_W<'_, AHBEN1_SPEC> {
         GPIOC_W::new(self, 2)
     }
     #[doc = "Bit 3 - IO D clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiod(&mut self) -> GPIOD_W<AHBEN1_SPEC> {
+    pub fn gpiod(&mut self) -> GPIOD_W<'_, AHBEN1_SPEC> {
         GPIOD_W::new(self, 3)
     }
     #[doc = "Bit 4 - IO E clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioe(&mut self) -> GPIOE_W<AHBEN1_SPEC> {
+    pub fn gpioe(&mut self) -> GPIOE_W<'_, AHBEN1_SPEC> {
         GPIOE_W::new(self, 4)
     }
     #[doc = "Bit 5 - IO F clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiof(&mut self) -> GPIOF_W<AHBEN1_SPEC> {
+    pub fn gpiof(&mut self) -> GPIOF_W<'_, AHBEN1_SPEC> {
         GPIOF_W::new(self, 5)
     }
     #[doc = "Bit 12 - CRC clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn crc(&mut self) -> CRC_W<AHBEN1_SPEC> {
+    pub fn crc(&mut self) -> CRC_W<'_, AHBEN1_SPEC> {
         CRC_W::new(self, 12)
     }
     #[doc = "Bit 22 - DMA1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dma1(&mut self) -> DMA1_W<AHBEN1_SPEC> {
+    pub fn dma1(&mut self) -> DMA1_W<'_, AHBEN1_SPEC> {
         DMA1_W::new(self, 22)
     }
     #[doc = "Bit 24 - DMA2 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dma2(&mut self) -> DMA2_W<AHBEN1_SPEC> {
+    pub fn dma2(&mut self) -> DMA2_W<'_, AHBEN1_SPEC> {
         DMA2_W::new(self, 24)
     }
 }
@@ -166,10 +157,6 @@ impl crate::Readable for AHBEN1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahben1::W`](W) writer structure"]
 impl crate::Writable for AHBEN1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBEN1 to value 0"]
-impl crate::Resettable for AHBEN1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AHBEN1_SPEC {}

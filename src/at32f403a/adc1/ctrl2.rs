@@ -499,92 +499,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - A/D converter enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcen(&mut self) -> ADCEN_W<CTRL2_SPEC> {
+    pub fn adcen(&mut self) -> ADCEN_W<'_, CTRL2_SPEC> {
         ADCEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Repeat mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn rpen(&mut self) -> RPEN_W<CTRL2_SPEC> {
+    pub fn rpen(&mut self) -> RPEN_W<'_, CTRL2_SPEC> {
         RPEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - A/D Calibration"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcal(&mut self) -> ADCAL_W<CTRL2_SPEC> {
+    pub fn adcal(&mut self) -> ADCAL_W<'_, CTRL2_SPEC> {
         ADCAL_W::new(self, 2)
     }
     #[doc = "Bit 3 - initialize A/D calibration"]
     #[inline(always)]
-    #[must_use]
-    pub fn adcalinit(&mut self) -> ADCALINIT_W<CTRL2_SPEC> {
+    pub fn adcalinit(&mut self) -> ADCALINIT_W<'_, CTRL2_SPEC> {
         ADCALINIT_W::new(self, 3)
     }
     #[doc = "Bit 8 - DMA transfer enable of ordinary channels"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocdmaen(&mut self) -> OCDMAEN_W<CTRL2_SPEC> {
+    pub fn ocdmaen(&mut self) -> OCDMAEN_W<'_, CTRL2_SPEC> {
         OCDMAEN_W::new(self, 8)
     }
     #[doc = "Bit 11 - Data alignment"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtalign(&mut self) -> DTALIGN_W<CTRL2_SPEC> {
+    pub fn dtalign(&mut self) -> DTALIGN_W<'_, CTRL2_SPEC> {
         DTALIGN_W::new(self, 11)
     }
     #[doc = "Bits 12:14 - Low bit of trigger event select for preempted channels conversion"]
     #[inline(always)]
-    #[must_use]
-    pub fn pctesel_l(&mut self) -> PCTESEL_L_W<CTRL2_SPEC> {
+    pub fn pctesel_l(&mut self) -> PCTESEL_L_W<'_, CTRL2_SPEC> {
         PCTESEL_L_W::new(self, 12)
     }
     #[doc = "Bit 15 - Trigger mode enable for preempted channels conversion"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcten(&mut self) -> PCTEN_W<CTRL2_SPEC> {
+    pub fn pcten(&mut self) -> PCTEN_W<'_, CTRL2_SPEC> {
         PCTEN_W::new(self, 15)
     }
     #[doc = "Bits 17:19 - Low bit of trigger event select for ordinary channels conversion"]
     #[inline(always)]
-    #[must_use]
-    pub fn octesel_l(&mut self) -> OCTESEL_L_W<CTRL2_SPEC> {
+    pub fn octesel_l(&mut self) -> OCTESEL_L_W<'_, CTRL2_SPEC> {
         OCTESEL_L_W::new(self, 17)
     }
     #[doc = "Bit 20 - Trigger mode enable for ordinary channels conversion"]
     #[inline(always)]
-    #[must_use]
-    pub fn octen(&mut self) -> OCTEN_W<CTRL2_SPEC> {
+    pub fn octen(&mut self) -> OCTEN_W<'_, CTRL2_SPEC> {
         OCTEN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Conversion trigger by software of preempted channels"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcswtrg(&mut self) -> PCSWTRG_W<CTRL2_SPEC> {
+    pub fn pcswtrg(&mut self) -> PCSWTRG_W<'_, CTRL2_SPEC> {
         PCSWTRG_W::new(self, 21)
     }
     #[doc = "Bit 22 - Conversion trigger by software of ordinary channels"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocswtrg(&mut self) -> OCSWTRG_W<CTRL2_SPEC> {
+    pub fn ocswtrg(&mut self) -> OCSWTRG_W<'_, CTRL2_SPEC> {
         OCSWTRG_W::new(self, 22)
     }
     #[doc = "Bit 23 - Internal temperature sensor and VINTRV enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn itsrven(&mut self) -> ITSRVEN_W<CTRL2_SPEC> {
+    pub fn itsrven(&mut self) -> ITSRVEN_W<'_, CTRL2_SPEC> {
         ITSRVEN_W::new(self, 23)
     }
     #[doc = "Bit 24 - High bit of trigger event select for preempted channels conversion"]
     #[inline(always)]
-    #[must_use]
-    pub fn pctesel_h(&mut self) -> PCTESEL_H_W<CTRL2_SPEC> {
+    pub fn pctesel_h(&mut self) -> PCTESEL_H_W<'_, CTRL2_SPEC> {
         PCTESEL_H_W::new(self, 24)
     }
     #[doc = "Bit 25 - High bit of trigger event select for ordinary channels conversion"]
     #[inline(always)]
-    #[must_use]
-    pub fn octesel_h(&mut self) -> OCTESEL_H_W<CTRL2_SPEC> {
+    pub fn octesel_h(&mut self) -> OCTESEL_H_W<'_, CTRL2_SPEC> {
         OCTESEL_H_W::new(self, 25)
     }
 }
@@ -598,10 +583,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
-impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL2_SPEC {}

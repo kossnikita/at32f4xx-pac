@@ -132,44 +132,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Second units"]
     #[inline(always)]
-    #[must_use]
-    pub fn su(&mut self) -> SU_W<TIME_SPEC> {
+    pub fn su(&mut self) -> SU_W<'_, TIME_SPEC> {
         SU_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Second tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn st(&mut self) -> ST_W<TIME_SPEC> {
+    pub fn st(&mut self) -> ST_W<'_, TIME_SPEC> {
         ST_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Minute units"]
     #[inline(always)]
-    #[must_use]
-    pub fn mu(&mut self) -> MU_W<TIME_SPEC> {
+    pub fn mu(&mut self) -> MU_W<'_, TIME_SPEC> {
         MU_W::new(self, 8)
     }
     #[doc = "Bits 12:14 - Minute tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn mt(&mut self) -> MT_W<TIME_SPEC> {
+    pub fn mt(&mut self) -> MT_W<'_, TIME_SPEC> {
         MT_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - Hour units"]
     #[inline(always)]
-    #[must_use]
-    pub fn hu(&mut self) -> HU_W<TIME_SPEC> {
+    pub fn hu(&mut self) -> HU_W<'_, TIME_SPEC> {
         HU_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Hour tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn ht(&mut self) -> HT_W<TIME_SPEC> {
+    pub fn ht(&mut self) -> HT_W<'_, TIME_SPEC> {
         HT_W::new(self, 20)
     }
     #[doc = "Bit 22 - AM/PM notation"]
     #[inline(always)]
-    #[must_use]
-    pub fn ampm(&mut self) -> AMPM_W<TIME_SPEC> {
+    pub fn ampm(&mut self) -> AMPM_W<'_, TIME_SPEC> {
         AMPM_W::new(self, 22)
     }
 }
@@ -183,10 +176,6 @@ impl crate::Readable for TIME_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`time::W`](W) writer structure"]
 impl crate::Writable for TIME_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIME to value 0"]
-impl crate::Resettable for TIME_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TIME_SPEC {}

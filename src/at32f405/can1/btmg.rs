@@ -199,38 +199,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Baud rate division"]
     #[inline(always)]
-    #[must_use]
-    pub fn brdiv(&mut self) -> BRDIV_W<BTMG_SPEC> {
+    pub fn brdiv(&mut self) -> BRDIV_W<'_, BTMG_SPEC> {
         BRDIV_W::new(self, 0)
     }
     #[doc = "Bits 16:19 - Bit time segment 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn bts1(&mut self) -> BTS1_W<BTMG_SPEC> {
+    pub fn bts1(&mut self) -> BTS1_W<'_, BTMG_SPEC> {
         BTS1_W::new(self, 16)
     }
     #[doc = "Bits 20:22 - Bit time segment 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn bts2(&mut self) -> BTS2_W<BTMG_SPEC> {
+    pub fn bts2(&mut self) -> BTS2_W<'_, BTMG_SPEC> {
         BTS2_W::new(self, 20)
     }
     #[doc = "Bits 24:25 - Resynchronization adjust width"]
     #[inline(always)]
-    #[must_use]
-    pub fn rsaw(&mut self) -> RSAW_W<BTMG_SPEC> {
+    pub fn rsaw(&mut self) -> RSAW_W<'_, BTMG_SPEC> {
         RSAW_W::new(self, 24)
     }
     #[doc = "Bit 30 - Loop back mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn lben(&mut self) -> LBEN_W<BTMG_SPEC> {
+    pub fn lben(&mut self) -> LBEN_W<'_, BTMG_SPEC> {
         LBEN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Listen-Only mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn loen(&mut self) -> LOEN_W<BTMG_SPEC> {
+    pub fn loen(&mut self) -> LOEN_W<'_, BTMG_SPEC> {
         LOEN_W::new(self, 31)
     }
 }
@@ -244,10 +238,6 @@ impl crate::Readable for BTMG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`btmg::W`](W) writer structure"]
 impl crate::Writable for BTMG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BTMG to value 0"]
-impl crate::Resettable for BTMG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BTMG_SPEC {}

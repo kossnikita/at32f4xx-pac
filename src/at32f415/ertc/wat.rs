@@ -18,8 +18,6 @@ impl crate::Readable for WAT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wat::W`](W) writer structure"]
 impl crate::Writable for WAT_SPEC {
     type Safety = crate::Safe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets WAT to value 0xffff"]
 impl crate::Resettable for WAT_SPEC {

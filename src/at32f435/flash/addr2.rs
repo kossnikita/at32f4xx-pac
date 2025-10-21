@@ -10,8 +10,7 @@ impl core::fmt::Debug for crate::generic::Reg<ADDR2_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - Flash Address"]
     #[inline(always)]
-    #[must_use]
-    pub fn fa(&mut self) -> FA_W<ADDR2_SPEC> {
+    pub fn fa(&mut self) -> FA_W<'_, ADDR2_SPEC> {
         FA_W::new(self, 0)
     }
 }
@@ -23,10 +22,6 @@ impl crate::RegisterSpec for ADDR2_SPEC {
 #[doc = "`write(|w| ..)` method takes [`addr2::W`](W) writer structure"]
 impl crate::Writable for ADDR2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ADDR2 to value 0"]
-impl crate::Resettable for ADDR2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ADDR2_SPEC {}

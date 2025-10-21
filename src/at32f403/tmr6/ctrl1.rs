@@ -350,32 +350,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - TMR enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmren(&mut self) -> TMREN_W<CTRL1_SPEC> {
+    pub fn tmren(&mut self) -> TMREN_W<'_, CTRL1_SPEC> {
         TMREN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Overflow event enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfen(&mut self) -> OVFEN_W<CTRL1_SPEC> {
+    pub fn ovfen(&mut self) -> OVFEN_W<'_, CTRL1_SPEC> {
         OVFEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Overflow event source"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfs(&mut self) -> OVFS_W<CTRL1_SPEC> {
+    pub fn ovfs(&mut self) -> OVFS_W<'_, CTRL1_SPEC> {
         OVFS_W::new(self, 2)
     }
     #[doc = "Bit 3 - One cycle mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocmen(&mut self) -> OCMEN_W<CTRL1_SPEC> {
+    pub fn ocmen(&mut self) -> OCMEN_W<'_, CTRL1_SPEC> {
         OCMEN_W::new(self, 3)
     }
     #[doc = "Bit 7 - Period buffer enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn prben(&mut self) -> PRBEN_W<CTRL1_SPEC> {
+    pub fn prben(&mut self) -> PRBEN_W<'_, CTRL1_SPEC> {
         PRBEN_W::new(self, 7)
     }
 }
@@ -389,10 +384,6 @@ impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0"]
-impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL1_SPEC {}

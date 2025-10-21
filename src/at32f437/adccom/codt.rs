@@ -32,6 +32,4 @@ impl crate::RegisterSpec for CODT_SPEC {
 #[doc = "`read()` method returns [`codt::R`](R) reader structure"]
 impl crate::Readable for CODT_SPEC {}
 #[doc = "`reset()` method sets CODT to value 0"]
-impl crate::Resettable for CODT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CODT_SPEC {}

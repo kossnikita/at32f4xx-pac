@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Ordinary oversampling enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn oosen(&mut self) -> OOSEN_W<OVSP_SPEC> {
+    pub fn oosen(&mut self) -> OOSEN_W<'_, OVSP_SPEC> {
         OOSEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Preempted oversampling enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn posen(&mut self) -> POSEN_W<OVSP_SPEC> {
+    pub fn posen(&mut self) -> POSEN_W<'_, OVSP_SPEC> {
         POSEN_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - Oversampling ratio select"]
     #[inline(always)]
-    #[must_use]
-    pub fn osrsel(&mut self) -> OSRSEL_W<OVSP_SPEC> {
+    pub fn osrsel(&mut self) -> OSRSEL_W<'_, OVSP_SPEC> {
         OSRSEL_W::new(self, 2)
     }
     #[doc = "Bits 5:8 - Oversampling shift select"]
     #[inline(always)]
-    #[must_use]
-    pub fn osssel(&mut self) -> OSSSEL_W<OVSP_SPEC> {
+    pub fn osssel(&mut self) -> OSSSEL_W<'_, OVSP_SPEC> {
         OSSSEL_W::new(self, 5)
     }
     #[doc = "Bit 9 - Ordinary oversampling trigger mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn oostren(&mut self) -> OOSTREN_W<OVSP_SPEC> {
+    pub fn oostren(&mut self) -> OOSTREN_W<'_, OVSP_SPEC> {
         OOSTREN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Ordinary oversampling recovery mode select"]
     #[inline(always)]
-    #[must_use]
-    pub fn oosrsel(&mut self) -> OOSRSEL_W<OVSP_SPEC> {
+    pub fn oosrsel(&mut self) -> OOSRSEL_W<'_, OVSP_SPEC> {
         OOSRSEL_W::new(self, 10)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for OVSP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ovsp::W`](W) writer structure"]
 impl crate::Writable for OVSP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OVSP to value 0"]
-impl crate::Resettable for OVSP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OVSP_SPEC {}

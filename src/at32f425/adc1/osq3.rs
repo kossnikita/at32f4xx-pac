@@ -70,46 +70,39 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OSN1` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn(&mut self, n: u8) -> OSN_W<OSQ3_SPEC> {
+    pub fn osn(&mut self, n: u8) -> OSN_W<'_, OSQ3_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 6][n as usize];
         OSN_W::new(self, n * 5)
     }
     #[doc = "Bits 0:4 - Number of 1th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn1(&mut self) -> OSN_W<OSQ3_SPEC> {
+    pub fn osn1(&mut self) -> OSN_W<'_, OSQ3_SPEC> {
         OSN_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Number of 2th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn2(&mut self) -> OSN_W<OSQ3_SPEC> {
+    pub fn osn2(&mut self) -> OSN_W<'_, OSQ3_SPEC> {
         OSN_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - Number of 3th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn3(&mut self) -> OSN_W<OSQ3_SPEC> {
+    pub fn osn3(&mut self) -> OSN_W<'_, OSQ3_SPEC> {
         OSN_W::new(self, 10)
     }
     #[doc = "Bits 15:19 - Number of 4th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn4(&mut self) -> OSN_W<OSQ3_SPEC> {
+    pub fn osn4(&mut self) -> OSN_W<'_, OSQ3_SPEC> {
         OSN_W::new(self, 15)
     }
     #[doc = "Bits 20:24 - Number of 5th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn5(&mut self) -> OSN_W<OSQ3_SPEC> {
+    pub fn osn5(&mut self) -> OSN_W<'_, OSQ3_SPEC> {
         OSN_W::new(self, 20)
     }
     #[doc = "Bits 25:29 - Number of 6th conversion in ordinary sequence"]
     #[inline(always)]
-    #[must_use]
-    pub fn osn6(&mut self) -> OSN_W<OSQ3_SPEC> {
+    pub fn osn6(&mut self) -> OSN_W<'_, OSQ3_SPEC> {
         OSN_W::new(self, 25)
     }
 }
@@ -123,10 +116,6 @@ impl crate::Readable for OSQ3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`osq3::W`](W) writer structure"]
 impl crate::Writable for OSQ3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OSQ3 to value 0"]
-impl crate::Resettable for OSQ3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OSQ3_SPEC {}

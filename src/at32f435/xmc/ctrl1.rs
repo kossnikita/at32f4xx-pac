@@ -103,56 +103,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Number of column address bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn ca(&mut self) -> CA_W<CTRL1_SPEC> {
+    pub fn ca(&mut self) -> CA_W<'_, CTRL1_SPEC> {
         CA_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Number of row address bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn ra(&mut self) -> RA_W<CTRL1_SPEC> {
+    pub fn ra(&mut self) -> RA_W<'_, CTRL1_SPEC> {
         RA_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Memory data bus width"]
     #[inline(always)]
-    #[must_use]
-    pub fn db(&mut self) -> DB_W<CTRL1_SPEC> {
+    pub fn db(&mut self) -> DB_W<'_, CTRL1_SPEC> {
         DB_W::new(self, 4)
     }
     #[doc = "Bit 6 - Number of internal banks"]
     #[inline(always)]
-    #[must_use]
-    pub fn inbk(&mut self) -> INBK_W<CTRL1_SPEC> {
+    pub fn inbk(&mut self) -> INBK_W<'_, CTRL1_SPEC> {
         INBK_W::new(self, 6)
     }
     #[doc = "Bits 7:8 - CAS latency"]
     #[inline(always)]
-    #[must_use]
-    pub fn cas(&mut self) -> CAS_W<CTRL1_SPEC> {
+    pub fn cas(&mut self) -> CAS_W<'_, CTRL1_SPEC> {
         CAS_W::new(self, 7)
     }
     #[doc = "Bit 9 - Write protection"]
     #[inline(always)]
-    #[must_use]
-    pub fn wrp(&mut self) -> WRP_W<CTRL1_SPEC> {
+    pub fn wrp(&mut self) -> WRP_W<'_, CTRL1_SPEC> {
         WRP_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - Clock division configuration"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkdiv(&mut self) -> CLKDIV_W<CTRL1_SPEC> {
+    pub fn clkdiv(&mut self) -> CLKDIV_W<'_, CTRL1_SPEC> {
         CLKDIV_W::new(self, 10)
     }
     #[doc = "Bit 12 - Burst read"]
     #[inline(always)]
-    #[must_use]
-    pub fn bstr(&mut self) -> BSTR_W<CTRL1_SPEC> {
+    pub fn bstr(&mut self) -> BSTR_W<'_, CTRL1_SPEC> {
         BSTR_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - Read delay"]
     #[inline(always)]
-    #[must_use]
-    pub fn rd(&mut self) -> RD_W<CTRL1_SPEC> {
+    pub fn rd(&mut self) -> RD_W<'_, CTRL1_SPEC> {
         RD_W::new(self, 13)
     }
 }
@@ -166,8 +157,6 @@ impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0x02d0"]
 impl crate::Resettable for CTRL1_SPEC {

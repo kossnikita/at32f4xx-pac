@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Capture frame done interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfdie(&mut self) -> CFDIE_W<IENA_SPEC> {
+    pub fn cfdie(&mut self) -> CFDIE_W<'_, IENA_SPEC> {
         CFDIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Data FIFO overrun interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovrie(&mut self) -> OVRIE_W<IENA_SPEC> {
+    pub fn ovrie(&mut self) -> OVRIE_W<'_, IENA_SPEC> {
         OVRIE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Embedded synchronization error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eseie(&mut self) -> ESEIE_W<IENA_SPEC> {
+    pub fn eseie(&mut self) -> ESEIE_W<'_, IENA_SPEC> {
         ESEIE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Vertical synchronization interrupt enablee"]
     #[inline(always)]
-    #[must_use]
-    pub fn vsie(&mut self) -> VSIE_W<IENA_SPEC> {
+    pub fn vsie(&mut self) -> VSIE_W<'_, IENA_SPEC> {
         VSIE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Horizontal synchronization interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsie(&mut self) -> HSIE_W<IENA_SPEC> {
+    pub fn hsie(&mut self) -> HSIE_W<'_, IENA_SPEC> {
         HSIE_W::new(self, 4)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for IENA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`iena::W`](W) writer structure"]
 impl crate::Writable for IENA_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IENA to value 0"]
-impl crate::Resettable for IENA_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IENA_SPEC {}

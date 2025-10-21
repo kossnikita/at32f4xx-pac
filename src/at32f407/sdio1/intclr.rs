@@ -133,74 +133,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Command crc fail flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdfail(&mut self) -> CMDFAIL_W<INTCLR_SPEC> {
+    pub fn cmdfail(&mut self) -> CMDFAIL_W<'_, INTCLR_SPEC> {
         CMDFAIL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Data crc fail flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtfail(&mut self) -> DTFAIL_W<INTCLR_SPEC> {
+    pub fn dtfail(&mut self) -> DTFAIL_W<'_, INTCLR_SPEC> {
         DTFAIL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Command timeout flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdtimeout(&mut self) -> CMDTIMEOUT_W<INTCLR_SPEC> {
+    pub fn cmdtimeout(&mut self) -> CMDTIMEOUT_W<'_, INTCLR_SPEC> {
         CMDTIMEOUT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Data timeout flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn dttimeout(&mut self) -> DTTIMEOUT_W<INTCLR_SPEC> {
+    pub fn dttimeout(&mut self) -> DTTIMEOUT_W<'_, INTCLR_SPEC> {
         DTTIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Tx under run error flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn txerru(&mut self) -> TXERRU_W<INTCLR_SPEC> {
+    pub fn txerru(&mut self) -> TXERRU_W<'_, INTCLR_SPEC> {
         TXERRU_W::new(self, 4)
     }
     #[doc = "Bit 5 - Rx over run error flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxerru(&mut self) -> RXERRU_W<INTCLR_SPEC> {
+    pub fn rxerru(&mut self) -> RXERRU_W<'_, INTCLR_SPEC> {
         RXERRU_W::new(self, 5)
     }
     #[doc = "Bit 6 - Command response complete flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdrspcmpl(&mut self) -> CMDRSPCMPL_W<INTCLR_SPEC> {
+    pub fn cmdrspcmpl(&mut self) -> CMDRSPCMPL_W<'_, INTCLR_SPEC> {
         CMDRSPCMPL_W::new(self, 6)
     }
     #[doc = "Bit 7 - Command sent flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdcmpl(&mut self) -> CMDCMPL_W<INTCLR_SPEC> {
+    pub fn cmdcmpl(&mut self) -> CMDCMPL_W<'_, INTCLR_SPEC> {
         CMDCMPL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Data sent flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtcmpl(&mut self) -> DTCMPL_W<INTCLR_SPEC> {
+    pub fn dtcmpl(&mut self) -> DTCMPL_W<'_, INTCLR_SPEC> {
         DTCMPL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Start bit error flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn sbiterr(&mut self) -> SBITERR_W<INTCLR_SPEC> {
+    pub fn sbiterr(&mut self) -> SBITERR_W<'_, INTCLR_SPEC> {
         SBITERR_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data block sent clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtblkcmpl(&mut self) -> DTBLKCMPL_W<INTCLR_SPEC> {
+    pub fn dtblkcmpl(&mut self) -> DTBLKCMPL_W<'_, INTCLR_SPEC> {
         DTBLKCMPL_W::new(self, 10)
     }
     #[doc = "Bit 22 - SD I/O interrupt flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn ioif(&mut self) -> IOIF_W<INTCLR_SPEC> {
+    pub fn ioif(&mut self) -> IOIF_W<'_, INTCLR_SPEC> {
         IOIF_W::new(self, 22)
     }
 }
@@ -214,10 +202,6 @@ impl crate::Readable for INTCLR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intclr::W`](W) writer structure"]
 impl crate::Writable for INTCLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTCLR to value 0"]
-impl crate::Resettable for INTCLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTCLR_SPEC {}

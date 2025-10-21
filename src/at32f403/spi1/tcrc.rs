@@ -22,6 +22,4 @@ impl crate::RegisterSpec for TCRC_SPEC {
 #[doc = "`read()` method returns [`tcrc::R`](R) reader structure"]
 impl crate::Readable for TCRC_SPEC {}
 #[doc = "`reset()` method sets TCRC to value 0"]
-impl crate::Resettable for TCRC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TCRC_SPEC {}

@@ -10,8 +10,7 @@ impl core::fmt::Debug for crate::generic::Reg<SLIB_PWD_CLR_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - sLib password clear value"]
     #[inline(always)]
-    #[must_use]
-    pub fn slib_pclr_val(&mut self) -> SLIB_PCLR_VAL_W<SLIB_PWD_CLR_SPEC> {
+    pub fn slib_pclr_val(&mut self) -> SLIB_PCLR_VAL_W<'_, SLIB_PWD_CLR_SPEC> {
         SLIB_PCLR_VAL_W::new(self, 0)
     }
 }
@@ -23,10 +22,6 @@ impl crate::RegisterSpec for SLIB_PWD_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`slib_pwd_clr::W`](W) writer structure"]
 impl crate::Writable for SLIB_PWD_CLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLIB_PWD_CLR to value 0"]
-impl crate::Resettable for SLIB_PWD_CLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLIB_PWD_CLR_SPEC {}

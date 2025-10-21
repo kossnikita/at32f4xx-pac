@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 6:7 - TMR14 channel 1 input remap"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr14_ch1_irmp(&mut self) -> TMR14_CH1_IRMP_W<RMP_SPEC> {
+    pub fn tmr14_ch1_irmp(&mut self) -> TMR14_CH1_IRMP_W<'_, RMP_SPEC> {
         TMR14_CH1_IRMP_W::new(self, 6)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for RMP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rmp::W`](W) writer structure"]
 impl crate::Writable for RMP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RMP to value 0"]
-impl crate::Resettable for RMP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RMP_SPEC {}

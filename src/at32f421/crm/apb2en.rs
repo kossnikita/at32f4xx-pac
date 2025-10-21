@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Syscfg and comparator clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn scfg(&mut self) -> SCFG_W<APB2EN_SPEC> {
+    pub fn scfg(&mut self) -> SCFG_W<'_, APB2EN_SPEC> {
         SCFG_W::new(self, 0)
     }
     #[doc = "Bit 9 - ADC clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc1(&mut self) -> ADC1_W<APB2EN_SPEC> {
+    pub fn adc1(&mut self) -> ADC1_W<'_, APB2EN_SPEC> {
         ADC1_W::new(self, 9)
     }
     #[doc = "Bit 11 - Timer1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1(&mut self) -> TMR1_W<APB2EN_SPEC> {
+    pub fn tmr1(&mut self) -> TMR1_W<'_, APB2EN_SPEC> {
         TMR1_W::new(self, 11)
     }
     #[doc = "Bit 12 - SPI1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi1(&mut self) -> SPI1_W<APB2EN_SPEC> {
+    pub fn spi1(&mut self) -> SPI1_W<'_, APB2EN_SPEC> {
         SPI1_W::new(self, 12)
     }
     #[doc = "Bit 14 - USART1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart1(&mut self) -> USART1_W<APB2EN_SPEC> {
+    pub fn usart1(&mut self) -> USART1_W<'_, APB2EN_SPEC> {
         USART1_W::new(self, 14)
     }
     #[doc = "Bit 16 - Timer15 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr15(&mut self) -> TMR15_W<APB2EN_SPEC> {
+    pub fn tmr15(&mut self) -> TMR15_W<'_, APB2EN_SPEC> {
         TMR15_W::new(self, 16)
     }
     #[doc = "Bit 17 - Timer16 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr16(&mut self) -> TMR16_W<APB2EN_SPEC> {
+    pub fn tmr16(&mut self) -> TMR16_W<'_, APB2EN_SPEC> {
         TMR16_W::new(self, 17)
     }
     #[doc = "Bit 18 - Timer17 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr17(&mut self) -> TMR17_W<APB2EN_SPEC> {
+    pub fn tmr17(&mut self) -> TMR17_W<'_, APB2EN_SPEC> {
         TMR17_W::new(self, 18)
     }
 }
@@ -150,10 +142,6 @@ impl crate::Readable for APB2EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb2en::W`](W) writer structure"]
 impl crate::Writable for APB2EN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB2EN to value 0"]
-impl crate::Resettable for APB2EN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB2EN_SPEC {}

@@ -39,32 +39,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - SDRAM Command"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmd(&mut self) -> CMD_W<CMD_SPEC> {
+    pub fn cmd(&mut self) -> CMD_W<'_, CMD_SPEC> {
         CMD_W::new(self, 0)
     }
     #[doc = "Bit 3 - SDRAM Bank 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn bk2(&mut self) -> BK2_W<CMD_SPEC> {
+    pub fn bk2(&mut self) -> BK2_W<'_, CMD_SPEC> {
         BK2_W::new(self, 3)
     }
     #[doc = "Bit 4 - SDRAM Bank 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn bk1(&mut self) -> BK1_W<CMD_SPEC> {
+    pub fn bk1(&mut self) -> BK1_W<'_, CMD_SPEC> {
         BK1_W::new(self, 4)
     }
     #[doc = "Bits 5:8 - Auto-refresh times"]
     #[inline(always)]
-    #[must_use]
-    pub fn art(&mut self) -> ART_W<CMD_SPEC> {
+    pub fn art(&mut self) -> ART_W<'_, CMD_SPEC> {
         ART_W::new(self, 5)
     }
     #[doc = "Bits 9:21 - Mode register data"]
     #[inline(always)]
-    #[must_use]
-    pub fn mrd(&mut self) -> MRD_W<CMD_SPEC> {
+    pub fn mrd(&mut self) -> MRD_W<'_, CMD_SPEC> {
         MRD_W::new(self, 9)
     }
 }
@@ -78,10 +73,6 @@ impl crate::Readable for CMD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cmd::W`](W) writer structure"]
 impl crate::Writable for CMD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CMD to value 0"]
-impl crate::Resettable for CMD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CMD_SPEC {}

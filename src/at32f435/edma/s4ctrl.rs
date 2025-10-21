@@ -193,110 +193,92 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Stream enable / flag stream ready when read low"]
     #[inline(always)]
-    #[must_use]
-    pub fn sen(&mut self) -> SEN_W<S4CTRL_SPEC> {
+    pub fn sen(&mut self) -> SEN_W<'_, S4CTRL_SPEC> {
         SEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Direct mode error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmerrien(&mut self) -> DMERRIEN_W<S4CTRL_SPEC> {
+    pub fn dmerrien(&mut self) -> DMERRIEN_W<'_, S4CTRL_SPEC> {
         DMERRIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transfer error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dterrien(&mut self) -> DTERRIEN_W<S4CTRL_SPEC> {
+    pub fn dterrien(&mut self) -> DTERRIEN_W<'_, S4CTRL_SPEC> {
         DTERRIEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Half data transfer interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdtien(&mut self) -> HDTIEN_W<S4CTRL_SPEC> {
+    pub fn hdtien(&mut self) -> HDTIEN_W<'_, S4CTRL_SPEC> {
         HDTIEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Full data transfer complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn fdtien(&mut self) -> FDTIEN_W<S4CTRL_SPEC> {
+    pub fn fdtien(&mut self) -> FDTIEN_W<'_, S4CTRL_SPEC> {
         FDTIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Peripheral flow controller"]
     #[inline(always)]
-    #[must_use]
-    pub fn pfctrl(&mut self) -> PFCTRL_W<S4CTRL_SPEC> {
+    pub fn pfctrl(&mut self) -> PFCTRL_W<'_, S4CTRL_SPEC> {
         PFCTRL_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - Data transfer direction"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtd(&mut self) -> DTD_W<S4CTRL_SPEC> {
+    pub fn dtd(&mut self) -> DTD_W<'_, S4CTRL_SPEC> {
         DTD_W::new(self, 6)
     }
     #[doc = "Bit 8 - Loop mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn lm(&mut self) -> LM_W<S4CTRL_SPEC> {
+    pub fn lm(&mut self) -> LM_W<'_, S4CTRL_SPEC> {
         LM_W::new(self, 8)
     }
     #[doc = "Bit 9 - Peripheral increment mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn pincm(&mut self) -> PINCM_W<S4CTRL_SPEC> {
+    pub fn pincm(&mut self) -> PINCM_W<'_, S4CTRL_SPEC> {
         PINCM_W::new(self, 9)
     }
     #[doc = "Bit 10 - Memory increment mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn mincm(&mut self) -> MINCM_W<S4CTRL_SPEC> {
+    pub fn mincm(&mut self) -> MINCM_W<'_, S4CTRL_SPEC> {
         MINCM_W::new(self, 10)
     }
     #[doc = "Bits 11:12 - Peripheral data width"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwidth(&mut self) -> PWIDTH_W<S4CTRL_SPEC> {
+    pub fn pwidth(&mut self) -> PWIDTH_W<'_, S4CTRL_SPEC> {
         PWIDTH_W::new(self, 11)
     }
     #[doc = "Bits 13:14 - Memory data width"]
     #[inline(always)]
-    #[must_use]
-    pub fn mwidth(&mut self) -> MWIDTH_W<S4CTRL_SPEC> {
+    pub fn mwidth(&mut self) -> MWIDTH_W<'_, S4CTRL_SPEC> {
         MWIDTH_W::new(self, 13)
     }
     #[doc = "Bit 15 - Peripheral increment offset size"]
     #[inline(always)]
-    #[must_use]
-    pub fn pincos(&mut self) -> PINCOS_W<S4CTRL_SPEC> {
+    pub fn pincos(&mut self) -> PINCOS_W<'_, S4CTRL_SPEC> {
         PINCOS_W::new(self, 15)
     }
     #[doc = "Bits 16:17 - Stream priority level"]
     #[inline(always)]
-    #[must_use]
-    pub fn spl(&mut self) -> SPL_W<S4CTRL_SPEC> {
+    pub fn spl(&mut self) -> SPL_W<'_, S4CTRL_SPEC> {
         SPL_W::new(self, 16)
     }
     #[doc = "Bit 18 - Double memory mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmm(&mut self) -> DMM_W<S4CTRL_SPEC> {
+    pub fn dmm(&mut self) -> DMM_W<'_, S4CTRL_SPEC> {
         DMM_W::new(self, 18)
     }
     #[doc = "Bit 19 - Current memory (only in double buffer mode)"]
     #[inline(always)]
-    #[must_use]
-    pub fn cm(&mut self) -> CM_W<S4CTRL_SPEC> {
+    pub fn cm(&mut self) -> CM_W<'_, S4CTRL_SPEC> {
         CM_W::new(self, 19)
     }
     #[doc = "Bits 21:22 - Peripheral burst transmission"]
     #[inline(always)]
-    #[must_use]
-    pub fn pburst(&mut self) -> PBURST_W<S4CTRL_SPEC> {
+    pub fn pburst(&mut self) -> PBURST_W<'_, S4CTRL_SPEC> {
         PBURST_W::new(self, 21)
     }
     #[doc = "Bits 23:24 - Memory burst transmission"]
     #[inline(always)]
-    #[must_use]
-    pub fn mburst(&mut self) -> MBURST_W<S4CTRL_SPEC> {
+    pub fn mburst(&mut self) -> MBURST_W<'_, S4CTRL_SPEC> {
         MBURST_W::new(self, 23)
     }
 }
@@ -310,10 +292,6 @@ impl crate::Readable for S4CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s4ctrl::W`](W) writer structure"]
 impl crate::Writable for S4CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S4CTRL to value 0"]
-impl crate::Resettable for S4CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for S4CTRL_SPEC {}

@@ -31,8 +31,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Flash divider"]
     #[inline(always)]
-    #[must_use]
-    pub fn fdiv(&mut self) -> FDIV_W<DIVR_SPEC> {
+    pub fn fdiv(&mut self) -> FDIV_W<'_, DIVR_SPEC> {
         FDIV_W::new(self, 0)
     }
 }
@@ -46,8 +45,6 @@ impl crate::Readable for DIVR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`divr::W`](W) writer structure"]
 impl crate::Writable for DIVR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIVR to value 0x22"]
 impl crate::Resettable for DIVR_SPEC {

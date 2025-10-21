@@ -106,20 +106,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Transmit mailbox data byte length"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtbl(&mut self) -> DTBL_W<TMC_SPEC> {
+    pub fn dtbl(&mut self) -> DTBL_W<'_, TMC_SPEC> {
         DTBL_W::new(self, 0)
     }
     #[doc = "Bit 8 - Transmit mailbox time stamp transmit enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsten(&mut self) -> TSTEN_W<TMC_SPEC> {
+    pub fn tsten(&mut self) -> TSTEN_W<'_, TMC_SPEC> {
         TSTEN_W::new(self, 8)
     }
     #[doc = "Bits 16:31 - Transmit mailbox time stamp"]
     #[inline(always)]
-    #[must_use]
-    pub fn ts(&mut self) -> TS_W<TMC_SPEC> {
+    pub fn ts(&mut self) -> TS_W<'_, TMC_SPEC> {
         TS_W::new(self, 16)
     }
 }
@@ -133,10 +130,6 @@ impl crate::Readable for TMC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmc::W`](W) writer structure"]
 impl crate::Writable for TMC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TMC to value 0"]
-impl crate::Resettable for TMC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TMC_SPEC {}

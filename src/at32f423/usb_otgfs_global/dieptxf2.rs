@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - IN endpoint FIFO2 transmit RAM start address"]
     #[inline(always)]
-    #[must_use]
-    pub fn ineptxfstaddr(&mut self) -> INEPTXFSTADDR_W<DIEPTXF2_SPEC> {
+    pub fn ineptxfstaddr(&mut self) -> INEPTXFSTADDR_W<'_, DIEPTXF2_SPEC> {
         INEPTXFSTADDR_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - IN endpoint TxFIFO depth"]
     #[inline(always)]
-    #[must_use]
-    pub fn ineptxfdep(&mut self) -> INEPTXFDEP_W<DIEPTXF2_SPEC> {
+    pub fn ineptxfdep(&mut self) -> INEPTXFDEP_W<'_, DIEPTXF2_SPEC> {
         INEPTXFDEP_W::new(self, 16)
     }
 }
@@ -54,8 +52,6 @@ impl crate::Readable for DIEPTXF2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dieptxf2::W`](W) writer structure"]
 impl crate::Writable for DIEPTXF2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPTXF2 to value 0x0200_0400"]
 impl crate::Resettable for DIEPTXF2_SPEC {

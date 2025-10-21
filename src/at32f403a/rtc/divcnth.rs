@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - RTC divider register high"]
     #[inline(always)]
-    #[must_use]
-    pub fn divcnt(&mut self) -> DIVCNT_W<DIVCNTH_SPEC> {
+    pub fn divcnt(&mut self) -> DIVCNT_W<'_, DIVCNTH_SPEC> {
         DIVCNT_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for DIVCNTH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`divcnth::W`](W) writer structure"]
 impl crate::Writable for DIVCNTH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIVCNTH to value 0"]
-impl crate::Resettable for DIVCNTH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DIVCNTH_SPEC {}

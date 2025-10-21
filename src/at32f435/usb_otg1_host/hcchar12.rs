@@ -113,62 +113,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - Maximum packet size"]
     #[inline(always)]
-    #[must_use]
-    pub fn mps(&mut self) -> MPS_W<HCCHAR12_SPEC> {
+    pub fn mps(&mut self) -> MPS_W<'_, HCCHAR12_SPEC> {
         MPS_W::new(self, 0)
     }
     #[doc = "Bits 11:14 - Endpoint number"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptnum(&mut self) -> EPTNUM_W<HCCHAR12_SPEC> {
+    pub fn eptnum(&mut self) -> EPTNUM_W<'_, HCCHAR12_SPEC> {
         EPTNUM_W::new(self, 11)
     }
     #[doc = "Bit 15 - Endpoint direction"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdir(&mut self) -> EPTDIR_W<HCCHAR12_SPEC> {
+    pub fn eptdir(&mut self) -> EPTDIR_W<'_, HCCHAR12_SPEC> {
         EPTDIR_W::new(self, 15)
     }
     #[doc = "Bit 17 - Low-speed device"]
     #[inline(always)]
-    #[must_use]
-    pub fn lspddev(&mut self) -> LSPDDEV_W<HCCHAR12_SPEC> {
+    pub fn lspddev(&mut self) -> LSPDDEV_W<'_, HCCHAR12_SPEC> {
         LSPDDEV_W::new(self, 17)
     }
     #[doc = "Bits 18:19 - Endpoint type"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptype(&mut self) -> EPTYPE_W<HCCHAR12_SPEC> {
+    pub fn eptype(&mut self) -> EPTYPE_W<'_, HCCHAR12_SPEC> {
         EPTYPE_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - Multicount"]
     #[inline(always)]
-    #[must_use]
-    pub fn mc(&mut self) -> MC_W<HCCHAR12_SPEC> {
+    pub fn mc(&mut self) -> MC_W<'_, HCCHAR12_SPEC> {
         MC_W::new(self, 20)
     }
     #[doc = "Bits 22:28 - Device address"]
     #[inline(always)]
-    #[must_use]
-    pub fn devaddr(&mut self) -> DEVADDR_W<HCCHAR12_SPEC> {
+    pub fn devaddr(&mut self) -> DEVADDR_W<'_, HCCHAR12_SPEC> {
         DEVADDR_W::new(self, 22)
     }
     #[doc = "Bit 29 - Odd frame"]
     #[inline(always)]
-    #[must_use]
-    pub fn oddfrm(&mut self) -> ODDFRM_W<HCCHAR12_SPEC> {
+    pub fn oddfrm(&mut self) -> ODDFRM_W<'_, HCCHAR12_SPEC> {
         ODDFRM_W::new(self, 29)
     }
     #[doc = "Bit 30 - Channel disable"]
     #[inline(always)]
-    #[must_use]
-    pub fn chdis(&mut self) -> CHDIS_W<HCCHAR12_SPEC> {
+    pub fn chdis(&mut self) -> CHDIS_W<'_, HCCHAR12_SPEC> {
         CHDIS_W::new(self, 30)
     }
     #[doc = "Bit 31 - Channel enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn chena(&mut self) -> CHENA_W<HCCHAR12_SPEC> {
+    pub fn chena(&mut self) -> CHENA_W<'_, HCCHAR12_SPEC> {
         CHENA_W::new(self, 31)
     }
 }
@@ -182,10 +172,6 @@ impl crate::Readable for HCCHAR12_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcchar12::W`](W) writer structure"]
 impl crate::Writable for HCCHAR12_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HCCHAR12 to value 0"]
-impl crate::Resettable for HCCHAR12_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HCCHAR12_SPEC {}

@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - Divider B"]
     #[inline(always)]
-    #[must_use]
-    pub fn divb(&mut self) -> DIVB_W<DIV_SPEC> {
+    pub fn divb(&mut self) -> DIVB_W<'_, DIV_SPEC> {
         DIVB_W::new(self, 0)
     }
     #[doc = "Bits 16:22 - Divider A"]
     #[inline(always)]
-    #[must_use]
-    pub fn diva(&mut self) -> DIVA_W<DIV_SPEC> {
+    pub fn diva(&mut self) -> DIVA_W<'_, DIV_SPEC> {
         DIVA_W::new(self, 16)
     }
 }
@@ -54,8 +52,6 @@ impl crate::Readable for DIV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`div::W`](W) writer structure"]
 impl crate::Writable for DIV_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIV to value 0x007f_00ff"]
 impl crate::Resettable for DIV_SPEC {

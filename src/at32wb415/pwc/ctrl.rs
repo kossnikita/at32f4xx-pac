@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Voltage regulator state select when deepsleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn vrsel(&mut self) -> VRSEL_W<CTRL_SPEC> {
+    pub fn vrsel(&mut self) -> VRSEL_W<'_, CTRL_SPEC> {
         VRSEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Low power mode select when Cortex-M4F sleepdeep"]
     #[inline(always)]
-    #[must_use]
-    pub fn lpsel(&mut self) -> LPSEL_W<CTRL_SPEC> {
+    pub fn lpsel(&mut self) -> LPSEL_W<'_, CTRL_SPEC> {
         LPSEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clear SWEF flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn clswef(&mut self) -> CLSWEF_W<CTRL_SPEC> {
+    pub fn clswef(&mut self) -> CLSWEF_W<'_, CTRL_SPEC> {
         CLSWEF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clear SEF flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn clsef(&mut self) -> CLSEF_W<CTRL_SPEC> {
+    pub fn clsef(&mut self) -> CLSEF_W<'_, CTRL_SPEC> {
         CLSEF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Power voltage monitoring enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pvmen(&mut self) -> PVMEN_W<CTRL_SPEC> {
+    pub fn pvmen(&mut self) -> PVMEN_W<'_, CTRL_SPEC> {
         PVMEN_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - Power voltage monitoring boundary select"]
     #[inline(always)]
-    #[must_use]
-    pub fn pvmsel(&mut self) -> PVMSEL_W<CTRL_SPEC> {
+    pub fn pvmsel(&mut self) -> PVMSEL_W<'_, CTRL_SPEC> {
         PVMSEL_W::new(self, 5)
     }
     #[doc = "Bit 8 - Battery powered domain write enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn bpwen(&mut self) -> BPWEN_W<CTRL_SPEC> {
+    pub fn bpwen(&mut self) -> BPWEN_W<'_, CTRL_SPEC> {
         BPWEN_W::new(self, 8)
     }
 }
@@ -134,10 +127,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
-impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL_SPEC {}

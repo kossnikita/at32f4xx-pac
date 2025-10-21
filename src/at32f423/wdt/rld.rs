@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Reload value"]
     #[inline(always)]
-    #[must_use]
-    pub fn rld(&mut self) -> RLD_W<RLD_SPEC> {
+    pub fn rld(&mut self) -> RLD_W<'_, RLD_SPEC> {
         RLD_W::new(self, 0)
     }
 }
@@ -36,8 +35,6 @@ impl crate::Readable for RLD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rld::W`](W) writer structure"]
 impl crate::Writable for RLD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RLD to value 0x0fff"]
 impl crate::Resettable for RLD_SPEC {

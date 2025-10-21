@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:4 - USBHS phy12 select value"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbhs_phy12_sel(&mut self) -> USBHS_PHY12_SEL_W<OTGHS_SPEC> {
+    pub fn usbhs_phy12_sel(&mut self) -> USBHS_PHY12_SEL_W<'_, OTGHS_SPEC> {
         USBHS_PHY12_SEL_W::new(self, 3)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for OTGHS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`otghs::W`](W) writer structure"]
 impl crate::Writable for OTGHS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OTGHS to value 0"]
-impl crate::Resettable for OTGHS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OTGHS_SPEC {}

@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Source stride"]
     #[inline(always)]
-    #[must_use]
-    pub fn srcstd(&mut self) -> SRCSTD_W<S3_STRIDE_SPEC> {
+    pub fn srcstd(&mut self) -> SRCSTD_W<'_, S3_STRIDE_SPEC> {
         SRCSTD_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Destination stride"]
     #[inline(always)]
-    #[must_use]
-    pub fn dststd(&mut self) -> DSTSTD_W<S3_STRIDE_SPEC> {
+    pub fn dststd(&mut self) -> DSTSTD_W<'_, S3_STRIDE_SPEC> {
         DSTSTD_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for S3_STRIDE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s3_stride::W`](W) writer structure"]
 impl crate::Writable for S3_STRIDE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S3_STRIDE to value 0"]
-impl crate::Resettable for S3_STRIDE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for S3_STRIDE_SPEC {}

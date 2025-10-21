@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - I2S PCM clock edge select"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2sfpcmcksel(&mut self) -> I2SFPCMCKSEL_W<MISC1_SPEC> {
+    pub fn i2sfpcmcksel(&mut self) -> I2SFPCMCKSEL_W<'_, MISC1_SPEC> {
         I2SFPCMCKSEL_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for MISC1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`misc1::W`](W) writer structure"]
 impl crate::Writable for MISC1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MISC1 to value 0"]
-impl crate::Resettable for MISC1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MISC1_SPEC {}

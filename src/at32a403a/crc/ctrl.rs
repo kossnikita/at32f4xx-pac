@@ -204,20 +204,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reset bit"]
     #[inline(always)]
-    #[must_use]
-    pub fn rst(&mut self) -> RST_W<CTRL_SPEC> {
+    pub fn rst(&mut self) -> RST_W<'_, CTRL_SPEC> {
         RST_W::new(self, 0)
     }
     #[doc = "Bits 3:4 - Polynomial size"]
     #[inline(always)]
-    #[must_use]
-    pub fn poly_size(&mut self) -> POLY_SIZE_W<CTRL_SPEC> {
+    pub fn poly_size(&mut self) -> POLY_SIZE_W<'_, CTRL_SPEC> {
         POLY_SIZE_W::new(self, 3)
     }
     #[doc = "Bits 5:6 - Reverse input data"]
     #[inline(always)]
-    #[must_use]
-    pub fn revid(&mut self) -> REVID_W<CTRL_SPEC> {
+    pub fn revid(&mut self) -> REVID_W<'_, CTRL_SPEC> {
         REVID_W::new(self, 5)
     }
 }
@@ -231,10 +228,7 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
-impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL_SPEC {}

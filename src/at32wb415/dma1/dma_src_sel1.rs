@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - CH5 SRC select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch5_src(&mut self) -> CH5_SRC_W<DMA_SRC_SEL1_SPEC> {
+    pub fn ch5_src(&mut self) -> CH5_SRC_W<'_, DMA_SRC_SEL1_SPEC> {
         CH5_SRC_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - CH6 SRC select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch6_src(&mut self) -> CH6_SRC_W<DMA_SRC_SEL1_SPEC> {
+    pub fn ch6_src(&mut self) -> CH6_SRC_W<'_, DMA_SRC_SEL1_SPEC> {
         CH6_SRC_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - CH7 SRC select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ch7_src(&mut self) -> CH7_SRC_W<DMA_SRC_SEL1_SPEC> {
+    pub fn ch7_src(&mut self) -> CH7_SRC_W<'_, DMA_SRC_SEL1_SPEC> {
         CH7_SRC_W::new(self, 16)
     }
     #[doc = "Bit 24 - DMA FLEX Enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dma_flex_en(&mut self) -> DMA_FLEX_EN_W<DMA_SRC_SEL1_SPEC> {
+    pub fn dma_flex_en(&mut self) -> DMA_FLEX_EN_W<'_, DMA_SRC_SEL1_SPEC> {
         DMA_FLEX_EN_W::new(self, 24)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for DMA_SRC_SEL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_src_sel1::W`](W) writer structure"]
 impl crate::Writable for DMA_SRC_SEL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMA_SRC_SEL1 to value 0"]
-impl crate::Resettable for DMA_SRC_SEL1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMA_SRC_SEL1_SPEC {}

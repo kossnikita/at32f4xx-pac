@@ -81,38 +81,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Rising edge capture status"]
     #[inline(always)]
-    #[must_use]
-    pub fn res(&mut self) -> RES_W<BK2IS_SPEC> {
+    pub fn res(&mut self) -> RES_W<'_, BK2IS_SPEC> {
         RES_W::new(self, 0)
     }
     #[doc = "Bit 1 - High-level status"]
     #[inline(always)]
-    #[must_use]
-    pub fn hls(&mut self) -> HLS_W<BK2IS_SPEC> {
+    pub fn hls(&mut self) -> HLS_W<'_, BK2IS_SPEC> {
         HLS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Falling edge status"]
     #[inline(always)]
-    #[must_use]
-    pub fn fes(&mut self) -> FES_W<BK2IS_SPEC> {
+    pub fn fes(&mut self) -> FES_W<'_, BK2IS_SPEC> {
         FES_W::new(self, 2)
     }
     #[doc = "Bit 3 - Rising edge interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn reien(&mut self) -> REIEN_W<BK2IS_SPEC> {
+    pub fn reien(&mut self) -> REIEN_W<'_, BK2IS_SPEC> {
         REIEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - High-level interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hlien(&mut self) -> HLIEN_W<BK2IS_SPEC> {
+    pub fn hlien(&mut self) -> HLIEN_W<'_, BK2IS_SPEC> {
         HLIEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Falling edge interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn feien(&mut self) -> FEIEN_W<BK2IS_SPEC> {
+    pub fn feien(&mut self) -> FEIEN_W<'_, BK2IS_SPEC> {
         FEIEN_W::new(self, 5)
     }
 }
@@ -126,8 +120,6 @@ impl crate::Readable for BK2IS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk2is::W`](W) writer structure"]
 impl crate::Writable for BK2IS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK2IS to value 0x40"]
 impl crate::Resettable for BK2IS_SPEC {

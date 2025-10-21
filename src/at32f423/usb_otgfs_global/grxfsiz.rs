@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - RxFIFO depth"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxfdep(&mut self) -> RXFDEP_W<GRXFSIZ_SPEC> {
+    pub fn rxfdep(&mut self) -> RXFDEP_W<'_, GRXFSIZ_SPEC> {
         RXFDEP_W::new(self, 0)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for GRXFSIZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`grxfsiz::W`](W) writer structure"]
 impl crate::Writable for GRXFSIZ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GRXFSIZ to value 0x0200"]
 impl crate::Resettable for GRXFSIZ_SPEC {

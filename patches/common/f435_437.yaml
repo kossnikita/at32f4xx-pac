@@ -50,6 +50,5 @@ _include:
   - tmr/tmr10.yaml
   - wwdt/common.yaml
   - wdt/with_win.yaml
-  - acc/twk.yaml
   - acc/common.yaml
   - debug/common.yaml

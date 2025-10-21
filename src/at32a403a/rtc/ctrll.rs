@@ -71,32 +71,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Time second flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tsf(&mut self) -> TSF_W<CTRLL_SPEC> {
+    pub fn tsf(&mut self) -> TSF_W<'_, CTRLL_SPEC> {
         TSF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Time alarm flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn taf(&mut self) -> TAF_W<CTRLL_SPEC> {
+    pub fn taf(&mut self) -> TAF_W<'_, CTRLL_SPEC> {
         TAF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Overflow Flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovff(&mut self) -> OVFF_W<CTRLL_SPEC> {
+    pub fn ovff(&mut self) -> OVFF_W<'_, CTRLL_SPEC> {
         OVFF_W::new(self, 2)
     }
     #[doc = "Bit 3 - RTC update finish"]
     #[inline(always)]
-    #[must_use]
-    pub fn updf(&mut self) -> UPDF_W<CTRLL_SPEC> {
+    pub fn updf(&mut self) -> UPDF_W<'_, CTRLL_SPEC> {
         UPDF_W::new(self, 3)
     }
     #[doc = "Bit 4 - RTC configuration enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfgen(&mut self) -> CFGEN_W<CTRLL_SPEC> {
+    pub fn cfgen(&mut self) -> CFGEN_W<'_, CTRLL_SPEC> {
         CFGEN_W::new(self, 4)
     }
 }
@@ -110,8 +105,6 @@ impl crate::Readable for CTRLL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrll::W`](W) writer structure"]
 impl crate::Writable for CTRLL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRLL to value 0x20"]
 impl crate::Resettable for CTRLL_SPEC {

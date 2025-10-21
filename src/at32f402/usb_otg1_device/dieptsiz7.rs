@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:18 - Transfer size"]
     #[inline(always)]
-    #[must_use]
-    pub fn xfersize(&mut self) -> XFERSIZE_W<DIEPTSIZ7_SPEC> {
+    pub fn xfersize(&mut self) -> XFERSIZE_W<'_, DIEPTSIZ7_SPEC> {
         XFERSIZE_W::new(self, 0)
     }
     #[doc = "Bits 19:28 - Packet count"]
     #[inline(always)]
-    #[must_use]
-    pub fn pktcnt(&mut self) -> PKTCNT_W<DIEPTSIZ7_SPEC> {
+    pub fn pktcnt(&mut self) -> PKTCNT_W<'_, DIEPTSIZ7_SPEC> {
         PKTCNT_W::new(self, 19)
     }
     #[doc = "Bits 29:30 - Multi count"]
     #[inline(always)]
-    #[must_use]
-    pub fn mc(&mut self) -> MC_W<DIEPTSIZ7_SPEC> {
+    pub fn mc(&mut self) -> MC_W<'_, DIEPTSIZ7_SPEC> {
         MC_W::new(self, 29)
     }
 }
@@ -70,10 +67,6 @@ impl crate::Readable for DIEPTSIZ7_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dieptsiz7::W`](W) writer structure"]
 impl crate::Writable for DIEPTSIZ7_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPTSIZ7 to value 0"]
-impl crate::Resettable for DIEPTSIZ7_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DIEPTSIZ7_SPEC {}

@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Transfer size"]
     #[inline(always)]
-    #[must_use]
-    pub fn xfersize(&mut self) -> XFERSIZE_W<DIEPTSIZ0_SPEC> {
+    pub fn xfersize(&mut self) -> XFERSIZE_W<'_, DIEPTSIZ0_SPEC> {
         XFERSIZE_W::new(self, 0)
     }
     #[doc = "Bits 19:20 - Packet count"]
     #[inline(always)]
-    #[must_use]
-    pub fn pktcnt(&mut self) -> PKTCNT_W<DIEPTSIZ0_SPEC> {
+    pub fn pktcnt(&mut self) -> PKTCNT_W<'_, DIEPTSIZ0_SPEC> {
         PKTCNT_W::new(self, 19)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for DIEPTSIZ0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dieptsiz0::W`](W) writer structure"]
 impl crate::Writable for DIEPTSIZ0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPTSIZ0 to value 0"]
-impl crate::Resettable for DIEPTSIZ0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DIEPTSIZ0_SPEC {}

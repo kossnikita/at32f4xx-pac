@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - XMC clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn xmclp(&mut self) -> XMCLP_W<AHBLPEN3_SPEC> {
+    pub fn xmclp(&mut self) -> XMCLP_W<'_, AHBLPEN3_SPEC> {
         XMCLP_W::new(self, 0)
     }
     #[doc = "Bit 1 - QSPI1 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn qspi1lp(&mut self) -> QSPI1LP_W<AHBLPEN3_SPEC> {
+    pub fn qspi1lp(&mut self) -> QSPI1LP_W<'_, AHBLPEN3_SPEC> {
         QSPI1LP_W::new(self, 1)
     }
     #[doc = "Bit 14 - QSPI2 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn qspi2lp(&mut self) -> QSPI2LP_W<AHBLPEN3_SPEC> {
+    pub fn qspi2lp(&mut self) -> QSPI2LP_W<'_, AHBLPEN3_SPEC> {
         QSPI2LP_W::new(self, 14)
     }
     #[doc = "Bit 15 - SDIO2 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdio2lp(&mut self) -> SDIO2LP_W<AHBLPEN3_SPEC> {
+    pub fn sdio2lp(&mut self) -> SDIO2LP_W<'_, AHBLPEN3_SPEC> {
         SDIO2LP_W::new(self, 15)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for AHBLPEN3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahblpen3::W`](W) writer structure"]
 impl crate::Writable for AHBLPEN3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBLPEN3 to value 0xc003"]
 impl crate::Resettable for AHBLPEN3_SPEC {

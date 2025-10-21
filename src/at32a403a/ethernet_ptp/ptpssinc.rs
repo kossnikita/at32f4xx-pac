@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Sub-second increment value"]
     #[inline(always)]
-    #[must_use]
-    pub fn ssiv(&mut self) -> SSIV_W<PTPSSINC_SPEC> {
+    pub fn ssiv(&mut self) -> SSIV_W<'_, PTPSSINC_SPEC> {
         SSIV_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for PTPSSINC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ptpssinc::W`](W) writer structure"]
 impl crate::Writable for PTPSSINC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PTPSSINC to value 0"]
-impl crate::Resettable for PTPSSINC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PTPSSINC_SPEC {}

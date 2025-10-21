@@ -83,44 +83,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - USART5 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart5_gmux(&mut self) -> USART5_GMUX_W<REMAP5_SPEC> {
+    pub fn usart5_gmux(&mut self) -> USART5_GMUX_W<'_, REMAP5_SPEC> {
         USART5_GMUX_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - I2C1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c1_gmux(&mut self) -> I2C1_GMUX_W<REMAP5_SPEC> {
+    pub fn i2c1_gmux(&mut self) -> I2C1_GMUX_W<'_, REMAP5_SPEC> {
         I2C1_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 12:15 - I2C3 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c3_gmux(&mut self) -> I2C3_GMUX_W<REMAP5_SPEC> {
+    pub fn i2c3_gmux(&mut self) -> I2C3_GMUX_W<'_, REMAP5_SPEC> {
         I2C3_GMUX_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - SPI1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi1_gmux(&mut self) -> SPI1_GMUX_W<REMAP5_SPEC> {
+    pub fn spi1_gmux(&mut self) -> SPI1_GMUX_W<'_, REMAP5_SPEC> {
         SPI1_GMUX_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - SPI2 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi2_gmux(&mut self) -> SPI2_GMUX_W<REMAP5_SPEC> {
+    pub fn spi2_gmux(&mut self) -> SPI2_GMUX_W<'_, REMAP5_SPEC> {
         SPI2_GMUX_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - SPI3 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi3_gmux(&mut self) -> SPI3_GMUX_W<REMAP5_SPEC> {
+    pub fn spi3_gmux(&mut self) -> SPI3_GMUX_W<'_, REMAP5_SPEC> {
         SPI3_GMUX_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - SPI4 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi4_gmux(&mut self) -> SPI4_GMUX_W<REMAP5_SPEC> {
+    pub fn spi4_gmux(&mut self) -> SPI4_GMUX_W<'_, REMAP5_SPEC> {
         SPI4_GMUX_W::new(self, 28)
     }
 }
@@ -134,10 +127,6 @@ impl crate::Readable for REMAP5_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap5::W`](W) writer structure"]
 impl crate::Writable for REMAP5_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP5 to value 0"]
-impl crate::Resettable for REMAP5_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP5_SPEC {}

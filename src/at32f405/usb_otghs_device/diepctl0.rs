@@ -91,44 +91,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Maximum packet size"]
     #[inline(always)]
-    #[must_use]
-    pub fn mps(&mut self) -> MPS_W<DIEPCTL0_SPEC> {
+    pub fn mps(&mut self) -> MPS_W<'_, DIEPCTL0_SPEC> {
         MPS_W::new(self, 0)
     }
     #[doc = "Bit 21 - STALL handshake"]
     #[inline(always)]
-    #[must_use]
-    pub fn stall(&mut self) -> STALL_W<DIEPCTL0_SPEC> {
+    pub fn stall(&mut self) -> STALL_W<'_, DIEPCTL0_SPEC> {
         STALL_W::new(self, 21)
     }
     #[doc = "Bits 22:25 - TxFIFO number"]
     #[inline(always)]
-    #[must_use]
-    pub fn txfnum(&mut self) -> TXFNUM_W<DIEPCTL0_SPEC> {
+    pub fn txfnum(&mut self) -> TXFNUM_W<'_, DIEPCTL0_SPEC> {
         TXFNUM_W::new(self, 22)
     }
     #[doc = "Bit 26 - Clear NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn cnak(&mut self) -> CNAK_W<DIEPCTL0_SPEC> {
+    pub fn cnak(&mut self) -> CNAK_W<'_, DIEPCTL0_SPEC> {
         CNAK_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn snak(&mut self) -> SNAK_W<DIEPCTL0_SPEC> {
+    pub fn snak(&mut self) -> SNAK_W<'_, DIEPCTL0_SPEC> {
         SNAK_W::new(self, 27)
     }
     #[doc = "Bit 30 - Endpoint disable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdis(&mut self) -> EPTDIS_W<DIEPCTL0_SPEC> {
+    pub fn eptdis(&mut self) -> EPTDIS_W<'_, DIEPCTL0_SPEC> {
         EPTDIS_W::new(self, 30)
     }
     #[doc = "Bit 31 - Endpoint enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptena(&mut self) -> EPTENA_W<DIEPCTL0_SPEC> {
+    pub fn eptena(&mut self) -> EPTENA_W<'_, DIEPCTL0_SPEC> {
         EPTENA_W::new(self, 31)
     }
 }
@@ -142,10 +135,6 @@ impl crate::Readable for DIEPCTL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepctl0::W`](W) writer structure"]
 impl crate::Writable for DIEPCTL0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPCTL0 to value 0"]
-impl crate::Resettable for DIEPCTL0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DIEPCTL0_SPEC {}

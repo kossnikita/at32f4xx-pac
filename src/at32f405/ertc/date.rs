@@ -204,44 +204,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Date units"]
     #[inline(always)]
-    #[must_use]
-    pub fn du(&mut self) -> DU_W<DATE_SPEC> {
+    pub fn du(&mut self) -> DU_W<'_, DATE_SPEC> {
         DU_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Date tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn dt(&mut self) -> DT_W<DATE_SPEC> {
+    pub fn dt(&mut self) -> DT_W<'_, DATE_SPEC> {
         DT_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Month units"]
     #[inline(always)]
-    #[must_use]
-    pub fn mu(&mut self) -> MU_W<DATE_SPEC> {
+    pub fn mu(&mut self) -> MU_W<'_, DATE_SPEC> {
         MU_W::new(self, 8)
     }
     #[doc = "Bit 12 - Month tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn mt(&mut self) -> MT_W<DATE_SPEC> {
+    pub fn mt(&mut self) -> MT_W<'_, DATE_SPEC> {
         MT_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - Week"]
     #[inline(always)]
-    #[must_use]
-    pub fn wk(&mut self) -> WK_W<DATE_SPEC> {
+    pub fn wk(&mut self) -> WK_W<'_, DATE_SPEC> {
         WK_W::new(self, 13)
     }
     #[doc = "Bits 16:19 - Year units"]
     #[inline(always)]
-    #[must_use]
-    pub fn yu(&mut self) -> YU_W<DATE_SPEC> {
+    pub fn yu(&mut self) -> YU_W<'_, DATE_SPEC> {
         YU_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - Year tens"]
     #[inline(always)]
-    #[must_use]
-    pub fn yt(&mut self) -> YT_W<DATE_SPEC> {
+    pub fn yt(&mut self) -> YT_W<'_, DATE_SPEC> {
         YT_W::new(self, 20)
     }
 }
@@ -255,8 +248,6 @@ impl crate::Readable for DATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`date::W`](W) writer structure"]
 impl crate::Writable for DATE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DATE to value 0x2101"]
 impl crate::Resettable for DATE_SPEC {

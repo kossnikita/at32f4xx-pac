@@ -580,86 +580,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Voltage monitoring channel select"]
     #[inline(always)]
-    #[must_use]
-    pub fn vmcsel(&mut self) -> VMCSEL_W<CTRL1_SPEC> {
+    pub fn vmcsel(&mut self) -> VMCSEL_W<'_, CTRL1_SPEC> {
         VMCSEL_W::new(self, 0)
     }
     #[doc = "Bit 5 - Ordinary channel conversion end interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn occeien(&mut self) -> OCCEIEN_W<CTRL1_SPEC> {
+    pub fn occeien(&mut self) -> OCCEIEN_W<'_, CTRL1_SPEC> {
         OCCEIEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Voltage monitoring out of range interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn vmorien(&mut self) -> VMORIEN_W<CTRL1_SPEC> {
+    pub fn vmorien(&mut self) -> VMORIEN_W<'_, CTRL1_SPEC> {
         VMORIEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Conversion end interrupt enable for preempted channels"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcceien(&mut self) -> PCCEIEN_W<CTRL1_SPEC> {
+    pub fn pcceien(&mut self) -> PCCEIEN_W<'_, CTRL1_SPEC> {
         PCCEIEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Sequence mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sqen(&mut self) -> SQEN_W<CTRL1_SPEC> {
+    pub fn sqen(&mut self) -> SQEN_W<'_, CTRL1_SPEC> {
         SQEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Voltage monitoring enable on a single channel"]
     #[inline(always)]
-    #[must_use]
-    pub fn vmsgen(&mut self) -> VMSGEN_W<CTRL1_SPEC> {
+    pub fn vmsgen(&mut self) -> VMSGEN_W<'_, CTRL1_SPEC> {
         VMSGEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Preempted group automatic conversion enable after ordinary group"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcautoen(&mut self) -> PCAUTOEN_W<CTRL1_SPEC> {
+    pub fn pcautoen(&mut self) -> PCAUTOEN_W<'_, CTRL1_SPEC> {
         PCAUTOEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Partitioned mode enable on ordinary channels"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocpen(&mut self) -> OCPEN_W<CTRL1_SPEC> {
+    pub fn ocpen(&mut self) -> OCPEN_W<'_, CTRL1_SPEC> {
         OCPEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Partitioned mode enable on preempted channels"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcpen(&mut self) -> PCPEN_W<CTRL1_SPEC> {
+    pub fn pcpen(&mut self) -> PCPEN_W<'_, CTRL1_SPEC> {
         PCPEN_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - Partitioned mode conversion count of ordinary channels"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocpcnt(&mut self) -> OCPCNT_W<CTRL1_SPEC> {
+    pub fn ocpcnt(&mut self) -> OCPCNT_W<'_, CTRL1_SPEC> {
         OCPCNT_W::new(self, 13)
     }
     #[doc = "Bit 22 - Voltage monitoring enable on preempted channels"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcvmen(&mut self) -> PCVMEN_W<CTRL1_SPEC> {
+    pub fn pcvmen(&mut self) -> PCVMEN_W<'_, CTRL1_SPEC> {
         PCVMEN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Voltage monitoring enable on ordinary channels"]
     #[inline(always)]
-    #[must_use]
-    pub fn ocvmen(&mut self) -> OCVMEN_W<CTRL1_SPEC> {
+    pub fn ocvmen(&mut self) -> OCVMEN_W<'_, CTRL1_SPEC> {
         OCVMEN_W::new(self, 23)
     }
     #[doc = "Bits 24:25 - Conversion resolution select"]
     #[inline(always)]
-    #[must_use]
-    pub fn crsel(&mut self) -> CRSEL_W<CTRL1_SPEC> {
+    pub fn crsel(&mut self) -> CRSEL_W<'_, CTRL1_SPEC> {
         CRSEL_W::new(self, 24)
     }
     #[doc = "Bit 26 - Ordinary channel conversion overflow interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn occoien(&mut self) -> OCCOIEN_W<CTRL1_SPEC> {
+    pub fn occoien(&mut self) -> OCCOIEN_W<'_, CTRL1_SPEC> {
         OCCOIEN_W::new(self, 26)
     }
 }
@@ -673,10 +659,6 @@ impl crate::Readable for CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl1::W`](W) writer structure"]
 impl crate::Writable for CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL1 to value 0"]
-impl crate::Resettable for CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL1_SPEC {}

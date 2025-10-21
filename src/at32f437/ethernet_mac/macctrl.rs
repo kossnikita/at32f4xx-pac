@@ -163,92 +163,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Receiver enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn re(&mut self) -> RE_W<MACCTRL_SPEC> {
+    pub fn re(&mut self) -> RE_W<'_, MACCTRL_SPEC> {
         RE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transmitter enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn te(&mut self) -> TE_W<MACCTRL_SPEC> {
+    pub fn te(&mut self) -> TE_W<'_, MACCTRL_SPEC> {
         TE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Deferral check"]
     #[inline(always)]
-    #[must_use]
-    pub fn dc(&mut self) -> DC_W<MACCTRL_SPEC> {
+    pub fn dc(&mut self) -> DC_W<'_, MACCTRL_SPEC> {
         DC_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Back-off limit"]
     #[inline(always)]
-    #[must_use]
-    pub fn bl(&mut self) -> BL_W<MACCTRL_SPEC> {
+    pub fn bl(&mut self) -> BL_W<'_, MACCTRL_SPEC> {
         BL_W::new(self, 5)
     }
     #[doc = "Bit 7 - Automatic pad/CRC stripping"]
     #[inline(always)]
-    #[must_use]
-    pub fn acs(&mut self) -> ACS_W<MACCTRL_SPEC> {
+    pub fn acs(&mut self) -> ACS_W<'_, MACCTRL_SPEC> {
         ACS_W::new(self, 7)
     }
     #[doc = "Bit 9 - Disable retry"]
     #[inline(always)]
-    #[must_use]
-    pub fn dr(&mut self) -> DR_W<MACCTRL_SPEC> {
+    pub fn dr(&mut self) -> DR_W<'_, MACCTRL_SPEC> {
         DR_W::new(self, 9)
     }
     #[doc = "Bit 10 - IPv4 checksum offload"]
     #[inline(always)]
-    #[must_use]
-    pub fn ipc(&mut self) -> IPC_W<MACCTRL_SPEC> {
+    pub fn ipc(&mut self) -> IPC_W<'_, MACCTRL_SPEC> {
         IPC_W::new(self, 10)
     }
     #[doc = "Bit 11 - Duplex mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn dm(&mut self) -> DM_W<MACCTRL_SPEC> {
+    pub fn dm(&mut self) -> DM_W<'_, MACCTRL_SPEC> {
         DM_W::new(self, 11)
     }
     #[doc = "Bit 12 - Loopback mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn lm(&mut self) -> LM_W<MACCTRL_SPEC> {
+    pub fn lm(&mut self) -> LM_W<'_, MACCTRL_SPEC> {
         LM_W::new(self, 12)
     }
     #[doc = "Bit 13 - Disable receive own"]
     #[inline(always)]
-    #[must_use]
-    pub fn dro(&mut self) -> DRO_W<MACCTRL_SPEC> {
+    pub fn dro(&mut self) -> DRO_W<'_, MACCTRL_SPEC> {
         DRO_W::new(self, 13)
     }
     #[doc = "Bit 14 - Fast EMAC speed"]
     #[inline(always)]
-    #[must_use]
-    pub fn fes(&mut self) -> FES_W<MACCTRL_SPEC> {
+    pub fn fes(&mut self) -> FES_W<'_, MACCTRL_SPEC> {
         FES_W::new(self, 14)
     }
     #[doc = "Bit 16 - Disable carrier sense"]
     #[inline(always)]
-    #[must_use]
-    pub fn dcs(&mut self) -> DCS_W<MACCTRL_SPEC> {
+    pub fn dcs(&mut self) -> DCS_W<'_, MACCTRL_SPEC> {
         DCS_W::new(self, 16)
     }
     #[doc = "Bits 17:19 - Interframe gap"]
     #[inline(always)]
-    #[must_use]
-    pub fn ifg(&mut self) -> IFG_W<MACCTRL_SPEC> {
+    pub fn ifg(&mut self) -> IFG_W<'_, MACCTRL_SPEC> {
         IFG_W::new(self, 17)
     }
     #[doc = "Bit 22 - Jabber disable"]
     #[inline(always)]
-    #[must_use]
-    pub fn jd(&mut self) -> JD_W<MACCTRL_SPEC> {
+    pub fn jd(&mut self) -> JD_W<'_, MACCTRL_SPEC> {
         JD_W::new(self, 22)
     }
     #[doc = "Bit 23 - Watchdog disable"]
     #[inline(always)]
-    #[must_use]
-    pub fn wd(&mut self) -> WD_W<MACCTRL_SPEC> {
+    pub fn wd(&mut self) -> WD_W<'_, MACCTRL_SPEC> {
         WD_W::new(self, 23)
     }
 }
@@ -262,8 +247,6 @@ impl crate::Readable for MACCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macctrl::W`](W) writer structure"]
 impl crate::Writable for MACCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACCTRL to value 0x8000"]
 impl crate::Resettable for MACCTRL_SPEC {

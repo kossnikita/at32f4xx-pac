@@ -24,6 +24,4 @@ impl crate::RegisterSpec for DMACTD_SPEC {
 #[doc = "`read()` method returns [`dmactd::R`](R) reader structure"]
 impl crate::Readable for DMACTD_SPEC {}
 #[doc = "`reset()` method sets DMACTD to value 0"]
-impl crate::Resettable for DMACTD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMACTD_SPEC {}

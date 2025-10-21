@@ -51,20 +51,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - program error"]
     #[inline(always)]
-    #[must_use]
-    pub fn prgmerr(&mut self) -> PRGMERR_W<STS2_SPEC> {
+    pub fn prgmerr(&mut self) -> PRGMERR_W<'_, STS2_SPEC> {
         PRGMERR_W::new(self, 2)
     }
     #[doc = "Bit 4 - Erase/program protection error"]
     #[inline(always)]
-    #[must_use]
-    pub fn epperr(&mut self) -> EPPERR_W<STS2_SPEC> {
+    pub fn epperr(&mut self) -> EPPERR_W<'_, STS2_SPEC> {
         EPPERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Operate done flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn odf(&mut self) -> ODF_W<STS2_SPEC> {
+    pub fn odf(&mut self) -> ODF_W<'_, STS2_SPEC> {
         ODF_W::new(self, 5)
     }
 }
@@ -78,10 +75,6 @@ impl crate::Readable for STS2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts2::W`](W) writer structure"]
 impl crate::Writable for STS2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS2 to value 0"]
-impl crate::Resettable for STS2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for STS2_SPEC {}

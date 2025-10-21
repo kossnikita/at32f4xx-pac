@@ -10,8 +10,7 @@ impl core::fmt::Debug for crate::generic::Reg<UNLOCK2_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - Unlock key value"]
     #[inline(always)]
-    #[must_use]
-    pub fn ukval(&mut self) -> UKVAL_W<UNLOCK2_SPEC> {
+    pub fn ukval(&mut self) -> UKVAL_W<'_, UNLOCK2_SPEC> {
         UKVAL_W::new(self, 0)
     }
 }
@@ -23,10 +22,6 @@ impl crate::RegisterSpec for UNLOCK2_SPEC {
 #[doc = "`write(|w| ..)` method takes [`unlock2::W`](W) writer structure"]
 impl crate::Writable for UNLOCK2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets UNLOCK2 to value 0"]
-impl crate::Resettable for UNLOCK2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UNLOCK2_SPEC {}

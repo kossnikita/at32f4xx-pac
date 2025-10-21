@@ -28,7 +28,6 @@ _include:
   - common/iomux/iomux_gpioe.yaml
   - common/wwdt/common.yaml
   - common/wdt/common.yaml
-  - common/acc/twk.yaml
   - common/acc/common.yaml
   - common/debug/common.yaml
   - common/debug/timers.yaml

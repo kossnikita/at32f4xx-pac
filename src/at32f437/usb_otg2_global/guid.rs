@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Product ID field"]
     #[inline(always)]
-    #[must_use]
-    pub fn userid(&mut self) -> USERID_W<GUID_SPEC> {
+    pub fn userid(&mut self) -> USERID_W<'_, GUID_SPEC> {
         USERID_W::new(self, 0)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for GUID_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`guid::W`](W) writer structure"]
 impl crate::Writable for GUID_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GUID to value 0x1000"]
 impl crate::Resettable for GUID_SPEC {

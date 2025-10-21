@@ -13,6 +13,4 @@ impl crate::RegisterSpec for SBS_SPEC {
 #[doc = "`read()` method returns [`sbs::R`](R) reader structure"]
 impl crate::Readable for SBS_SPEC {}
 #[doc = "`reset()` method sets SBS to value 0"]
-impl crate::Resettable for SBS_SPEC {
-    const RESET_VALUE: u16 = 0;
-}
+impl crate::Resettable for SBS_SPEC {}

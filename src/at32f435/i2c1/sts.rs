@@ -153,14 +153,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transmit data buffer empty flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn tdbe(&mut self) -> TDBE_W<STS_SPEC> {
+    pub fn tdbe(&mut self) -> TDBE_W<'_, STS_SPEC> {
         TDBE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Send interrupt status"]
     #[inline(always)]
-    #[must_use]
-    pub fn tdis(&mut self) -> TDIS_W<STS_SPEC> {
+    pub fn tdis(&mut self) -> TDIS_W<'_, STS_SPEC> {
         TDIS_W::new(self, 1)
     }
 }
@@ -174,8 +172,6 @@ impl crate::Readable for STS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sts::W`](W) writer structure"]
 impl crate::Writable for STS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0x01"]
 impl crate::Resettable for STS_SPEC {

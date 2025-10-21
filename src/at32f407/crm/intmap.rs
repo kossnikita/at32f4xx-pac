@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - USBDEV interrupt remap"]
     #[inline(always)]
-    #[must_use]
-    pub fn usb_int_map(&mut self) -> USB_INT_MAP_W<INTMAP_SPEC> {
+    pub fn usb_int_map(&mut self) -> USB_INT_MAP_W<'_, INTMAP_SPEC> {
         USB_INT_MAP_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for INTMAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intmap::W`](W) writer structure"]
 impl crate::Writable for INTMAP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTMAP to value 0"]
-impl crate::Resettable for INTMAP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTMAP_SPEC {}

@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - Input sampling phase correction enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ispc(&mut self) -> ISPC_W<CTRL3_SPEC> {
+    pub fn ispc(&mut self) -> ISPC_W<'_, CTRL3_SPEC> {
         ISPC_W::new(self, 8)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for CTRL3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl3::W`](W) writer structure"]
 impl crate::Writable for CTRL3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL3 to value 0"]
-impl crate::Resettable for CTRL3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL3_SPEC {}

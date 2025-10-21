@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - Power down"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwrdown(&mut self) -> PWRDOWN_W<GCCFG_SPEC> {
+    pub fn pwrdown(&mut self) -> PWRDOWN_W<'_, GCCFG_SPEC> {
         PWRDOWN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Low power mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn lp_mode(&mut self) -> LP_MODE_W<GCCFG_SPEC> {
+    pub fn lp_mode(&mut self) -> LP_MODE_W<'_, GCCFG_SPEC> {
         LP_MODE_W::new(self, 17)
     }
     #[doc = "Bit 20 - SOF output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sofouten(&mut self) -> SOFOUTEN_W<GCCFG_SPEC> {
+    pub fn sofouten(&mut self) -> SOFOUTEN_W<'_, GCCFG_SPEC> {
         SOFOUTEN_W::new(self, 20)
     }
     #[doc = "Bit 21 - VBUS Ignored"]
     #[inline(always)]
-    #[must_use]
-    pub fn vbusig(&mut self) -> VBUSIG_W<GCCFG_SPEC> {
+    pub fn vbusig(&mut self) -> VBUSIG_W<'_, GCCFG_SPEC> {
         VBUSIG_W::new(self, 21)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for GCCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gccfg::W`](W) writer structure"]
 impl crate::Writable for GCCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GCCFG to value 0"]
-impl crate::Resettable for GCCFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GCCFG_SPEC {}

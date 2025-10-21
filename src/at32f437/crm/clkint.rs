@@ -123,68 +123,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - LICK ready interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn lickstblien(&mut self) -> LICKSTBLIEN_W<CLKINT_SPEC> {
+    pub fn lickstblien(&mut self) -> LICKSTBLIEN_W<'_, CLKINT_SPEC> {
         LICKSTBLIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - LEXT ready interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn lextstblien(&mut self) -> LEXTSTBLIEN_W<CLKINT_SPEC> {
+    pub fn lextstblien(&mut self) -> LEXTSTBLIEN_W<'_, CLKINT_SPEC> {
         LEXTSTBLIEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - HICK ready interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hickstblien(&mut self) -> HICKSTBLIEN_W<CLKINT_SPEC> {
+    pub fn hickstblien(&mut self) -> HICKSTBLIEN_W<'_, CLKINT_SPEC> {
         HICKSTBLIEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - HEXT ready interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hextstblien(&mut self) -> HEXTSTBLIEN_W<CLKINT_SPEC> {
+    pub fn hextstblien(&mut self) -> HEXTSTBLIEN_W<'_, CLKINT_SPEC> {
         HEXTSTBLIEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - PLL ready interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllstblien(&mut self) -> PLLSTBLIEN_W<CLKINT_SPEC> {
+    pub fn pllstblien(&mut self) -> PLLSTBLIEN_W<'_, CLKINT_SPEC> {
         PLLSTBLIEN_W::new(self, 12)
     }
     #[doc = "Bit 16 - LICK ready interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn lickstblfc(&mut self) -> LICKSTBLFC_W<CLKINT_SPEC> {
+    pub fn lickstblfc(&mut self) -> LICKSTBLFC_W<'_, CLKINT_SPEC> {
         LICKSTBLFC_W::new(self, 16)
     }
     #[doc = "Bit 17 - LEXT ready interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn lextstblfc(&mut self) -> LEXTSTBLFC_W<CLKINT_SPEC> {
+    pub fn lextstblfc(&mut self) -> LEXTSTBLFC_W<'_, CLKINT_SPEC> {
         LEXTSTBLFC_W::new(self, 17)
     }
     #[doc = "Bit 18 - HICK ready interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn hickstblfc(&mut self) -> HICKSTBLFC_W<CLKINT_SPEC> {
+    pub fn hickstblfc(&mut self) -> HICKSTBLFC_W<'_, CLKINT_SPEC> {
         HICKSTBLFC_W::new(self, 18)
     }
     #[doc = "Bit 19 - HEXT ready interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn hextstblfc(&mut self) -> HEXTSTBLFC_W<CLKINT_SPEC> {
+    pub fn hextstblfc(&mut self) -> HEXTSTBLFC_W<'_, CLKINT_SPEC> {
         HEXTSTBLFC_W::new(self, 19)
     }
     #[doc = "Bit 20 - PLL ready interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllstblfc(&mut self) -> PLLSTBLFC_W<CLKINT_SPEC> {
+    pub fn pllstblfc(&mut self) -> PLLSTBLFC_W<'_, CLKINT_SPEC> {
         PLLSTBLFC_W::new(self, 20)
     }
     #[doc = "Bit 23 - Clock failure detection interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfdfc(&mut self) -> CFDFC_W<CLKINT_SPEC> {
+    pub fn cfdfc(&mut self) -> CFDFC_W<'_, CLKINT_SPEC> {
         CFDFC_W::new(self, 23)
     }
 }
@@ -198,10 +187,6 @@ impl crate::Readable for CLKINT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clkint::W`](W) writer structure"]
 impl crate::Writable for CLKINT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLKINT to value 0"]
-impl crate::Resettable for CLKINT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLKINT_SPEC {}

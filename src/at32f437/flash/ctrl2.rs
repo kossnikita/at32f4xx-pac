@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Flash program"]
     #[inline(always)]
-    #[must_use]
-    pub fn fprgm(&mut self) -> FPRGM_W<CTRL2_SPEC> {
+    pub fn fprgm(&mut self) -> FPRGM_W<'_, CTRL2_SPEC> {
         FPRGM_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sector erase"]
     #[inline(always)]
-    #[must_use]
-    pub fn secers(&mut self) -> SECERS_W<CTRL2_SPEC> {
+    pub fn secers(&mut self) -> SECERS_W<'_, CTRL2_SPEC> {
         SECERS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Bank erase"]
     #[inline(always)]
-    #[must_use]
-    pub fn bankers(&mut self) -> BANKERS_W<CTRL2_SPEC> {
+    pub fn bankers(&mut self) -> BANKERS_W<'_, CTRL2_SPEC> {
         BANKERS_W::new(self, 2)
     }
     #[doc = "Bit 3 - Block erase"]
     #[inline(always)]
-    #[must_use]
-    pub fn blkers(&mut self) -> BLKERS_W<CTRL2_SPEC> {
+    pub fn blkers(&mut self) -> BLKERS_W<'_, CTRL2_SPEC> {
         BLKERS_W::new(self, 3)
     }
     #[doc = "Bit 6 - Erasing start"]
     #[inline(always)]
-    #[must_use]
-    pub fn erstr(&mut self) -> ERSTR_W<CTRL2_SPEC> {
+    pub fn erstr(&mut self) -> ERSTR_W<'_, CTRL2_SPEC> {
         ERSTR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Operation lock"]
     #[inline(always)]
-    #[must_use]
-    pub fn oplk(&mut self) -> OPLK_W<CTRL2_SPEC> {
+    pub fn oplk(&mut self) -> OPLK_W<'_, CTRL2_SPEC> {
         OPLK_W::new(self, 7)
     }
     #[doc = "Bit 10 - Error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn errie(&mut self) -> ERRIE_W<CTRL2_SPEC> {
+    pub fn errie(&mut self) -> ERRIE_W<'_, CTRL2_SPEC> {
         ERRIE_W::new(self, 10)
     }
     #[doc = "Bit 12 - Operation done flag interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn odfie(&mut self) -> ODFIE_W<CTRL2_SPEC> {
+    pub fn odfie(&mut self) -> ODFIE_W<'_, CTRL2_SPEC> {
         ODFIE_W::new(self, 12)
     }
 }
@@ -150,8 +142,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0x80"]
 impl crate::Resettable for CTRL2_SPEC {

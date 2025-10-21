@@ -133,74 +133,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transfer completed interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn xferc(&mut self) -> XFERC_W<DOEPINT0_SPEC> {
+    pub fn xferc(&mut self) -> XFERC_W<'_, DOEPINT0_SPEC> {
         XFERC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Endpoint disabled interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn eptdisd(&mut self) -> EPTDISD_W<DOEPINT0_SPEC> {
+    pub fn eptdisd(&mut self) -> EPTDISD_W<'_, DOEPINT0_SPEC> {
         EPTDISD_W::new(self, 1)
     }
     #[doc = "Bit 3 - SETUP phase done"]
     #[inline(always)]
-    #[must_use]
-    pub fn setup(&mut self) -> SETUP_W<DOEPINT0_SPEC> {
+    pub fn setup(&mut self) -> SETUP_W<'_, DOEPINT0_SPEC> {
         SETUP_W::new(self, 3)
     }
     #[doc = "Bit 4 - OUT token received when endpoint disabled"]
     #[inline(always)]
-    #[must_use]
-    pub fn outtepd(&mut self) -> OUTTEPD_W<DOEPINT0_SPEC> {
+    pub fn outtepd(&mut self) -> OUTTEPD_W<'_, DOEPINT0_SPEC> {
         OUTTEPD_W::new(self, 4)
     }
     #[doc = "Bit 6 - Back-to-back SETUP packets received"]
     #[inline(always)]
-    #[must_use]
-    pub fn b2bstup(&mut self) -> B2BSTUP_W<DOEPINT0_SPEC> {
+    pub fn b2bstup(&mut self) -> B2BSTUP_W<'_, DOEPINT0_SPEC> {
         B2BSTUP_W::new(self, 6)
     }
     #[doc = "Bit 8 - OUT Packet Error"]
     #[inline(always)]
-    #[must_use]
-    pub fn outpkterr(&mut self) -> OUTPKTERR_W<DOEPINT0_SPEC> {
+    pub fn outpkterr(&mut self) -> OUTPKTERR_W<'_, DOEPINT0_SPEC> {
         OUTPKTERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Buffer Not Available Error"]
     #[inline(always)]
-    #[must_use]
-    pub fn bnaintr(&mut self) -> BNAINTR_W<DOEPINT0_SPEC> {
+    pub fn bnaintr(&mut self) -> BNAINTR_W<'_, DOEPINT0_SPEC> {
         BNAINTR_W::new(self, 9)
     }
     #[doc = "Bit 11 - Packet Drop Status"]
     #[inline(always)]
-    #[must_use]
-    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<DOEPINT0_SPEC> {
+    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<'_, DOEPINT0_SPEC> {
         PKTDRPSTS_W::new(self, 11)
     }
     #[doc = "Bit 12 - BBLE error"]
     #[inline(always)]
-    #[must_use]
-    pub fn bbleerr(&mut self) -> BBLEERR_W<DOEPINT0_SPEC> {
+    pub fn bbleerr(&mut self) -> BBLEERR_W<'_, DOEPINT0_SPEC> {
         BBLEERR_W::new(self, 12)
     }
     #[doc = "Bit 13 - NAK interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn nakintpt(&mut self) -> NAKINTPT_W<DOEPINT0_SPEC> {
+    pub fn nakintpt(&mut self) -> NAKINTPT_W<'_, DOEPINT0_SPEC> {
         NAKINTPT_W::new(self, 13)
     }
     #[doc = "Bit 14 - NYET interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn nyetintpt(&mut self) -> NYETINTPT_W<DOEPINT0_SPEC> {
+    pub fn nyetintpt(&mut self) -> NYETINTPT_W<'_, DOEPINT0_SPEC> {
         NYETINTPT_W::new(self, 14)
     }
     #[doc = "Bit 15 - Setup Packet Received"]
     #[inline(always)]
-    #[must_use]
-    pub fn stuppktrcvd(&mut self) -> STUPPKTRCVD_W<DOEPINT0_SPEC> {
+    pub fn stuppktrcvd(&mut self) -> STUPPKTRCVD_W<'_, DOEPINT0_SPEC> {
         STUPPKTRCVD_W::new(self, 15)
     }
 }
@@ -214,8 +202,6 @@ impl crate::Readable for DOEPINT0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doepint0::W`](W) writer structure"]
 impl crate::Writable for DOEPINT0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DOEPINT0 to value 0x80"]
 impl crate::Resettable for DOEPINT0_SPEC {

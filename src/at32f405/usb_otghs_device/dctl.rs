@@ -109,50 +109,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Remote wakeup signaling"]
     #[inline(always)]
-    #[must_use]
-    pub fn rwkupsig(&mut self) -> RWKUPSIG_W<DCTL_SPEC> {
+    pub fn rwkupsig(&mut self) -> RWKUPSIG_W<'_, DCTL_SPEC> {
         RWKUPSIG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Soft disconnect"]
     #[inline(always)]
-    #[must_use]
-    pub fn sftdiscon(&mut self) -> SFTDISCON_W<DCTL_SPEC> {
+    pub fn sftdiscon(&mut self) -> SFTDISCON_W<'_, DCTL_SPEC> {
         SFTDISCON_W::new(self, 1)
     }
     #[doc = "Bits 4:6 - Test control"]
     #[inline(always)]
-    #[must_use]
-    pub fn tstctl(&mut self) -> TSTCTL_W<DCTL_SPEC> {
+    pub fn tstctl(&mut self) -> TSTCTL_W<'_, DCTL_SPEC> {
         TSTCTL_W::new(self, 4)
     }
     #[doc = "Bit 7 - Set global IN NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn sgnpinnak(&mut self) -> SGNPINNAK_W<DCTL_SPEC> {
+    pub fn sgnpinnak(&mut self) -> SGNPINNAK_W<'_, DCTL_SPEC> {
         SGNPINNAK_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clear global IN NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn cgnpinnak(&mut self) -> CGNPINNAK_W<DCTL_SPEC> {
+    pub fn cgnpinnak(&mut self) -> CGNPINNAK_W<'_, DCTL_SPEC> {
         CGNPINNAK_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set global OUT NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn sgoutnak(&mut self) -> SGOUTNAK_W<DCTL_SPEC> {
+    pub fn sgoutnak(&mut self) -> SGOUTNAK_W<'_, DCTL_SPEC> {
         SGOUTNAK_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear global OUT NAK"]
     #[inline(always)]
-    #[must_use]
-    pub fn cgoutnak(&mut self) -> CGOUTNAK_W<DCTL_SPEC> {
+    pub fn cgoutnak(&mut self) -> CGOUTNAK_W<'_, DCTL_SPEC> {
         CGOUTNAK_W::new(self, 10)
     }
     #[doc = "Bit 11 - Power-on programming done"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwroprgdne(&mut self) -> PWROPRGDNE_W<DCTL_SPEC> {
+    pub fn pwroprgdne(&mut self) -> PWROPRGDNE_W<'_, DCTL_SPEC> {
         PWROPRGDNE_W::new(self, 11)
     }
 }
@@ -166,10 +158,6 @@ impl crate::Readable for DCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dctl::W`](W) writer structure"]
 impl crate::Writable for DCTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DCTL to value 0"]
-impl crate::Resettable for DCTL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DCTL_SPEC {}

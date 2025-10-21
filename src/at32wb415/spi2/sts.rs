@@ -289,8 +289,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - CRC calculation error"]
     #[inline(always)]
-    #[must_use]
-    pub fn ccerr(&mut self) -> CCERR_W<STS_SPEC> {
+    pub fn ccerr(&mut self) -> CCERR_W<'_, STS_SPEC> {
         CCERR_W::new(self, 4)
     }
 }
@@ -305,7 +304,6 @@ impl crate::Readable for STS_SPEC {}
 impl crate::Writable for STS_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x10;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS to value 0x02"]
 impl crate::Resettable for STS_SPEC {

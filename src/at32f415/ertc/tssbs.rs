@@ -13,6 +13,4 @@ impl crate::RegisterSpec for TSSBS_SPEC {
 #[doc = "`read()` method returns [`tssbs::R`](R) reader structure"]
 impl crate::Readable for TSSBS_SPEC {}
 #[doc = "`reset()` method sets TSSBS to value 0"]
-impl crate::Resettable for TSSBS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TSSBS_SPEC {}

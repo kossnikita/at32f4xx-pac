@@ -159,14 +159,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Overflow interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfien(&mut self) -> OVFIEN_W<IDEN_SPEC> {
+    pub fn ovfien(&mut self) -> OVFIEN_W<'_, IDEN_SPEC> {
         OVFIEN_W::new(self, 0)
     }
     #[doc = "Bit 8 - Overflow DMA request enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovfden(&mut self) -> OVFDEN_W<IDEN_SPEC> {
+    pub fn ovfden(&mut self) -> OVFDEN_W<'_, IDEN_SPEC> {
         OVFDEN_W::new(self, 8)
     }
 }
@@ -180,10 +178,6 @@ impl crate::Readable for IDEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`iden::W`](W) writer structure"]
 impl crate::Writable for IDEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IDEN to value 0"]
-impl crate::Resettable for IDEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IDEN_SPEC {}

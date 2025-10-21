@@ -263,152 +263,127 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Timer2 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr2(&mut self) -> TMR2_W<APB1EN_SPEC> {
+    pub fn tmr2(&mut self) -> TMR2_W<'_, APB1EN_SPEC> {
         TMR2_W::new(self, 0)
     }
     #[doc = "Bit 1 - Timer3 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr3(&mut self) -> TMR3_W<APB1EN_SPEC> {
+    pub fn tmr3(&mut self) -> TMR3_W<'_, APB1EN_SPEC> {
         TMR3_W::new(self, 1)
     }
     #[doc = "Bit 2 - Timer4 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr4(&mut self) -> TMR4_W<APB1EN_SPEC> {
+    pub fn tmr4(&mut self) -> TMR4_W<'_, APB1EN_SPEC> {
         TMR4_W::new(self, 2)
     }
     #[doc = "Bit 3 - Timer5 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr5(&mut self) -> TMR5_W<APB1EN_SPEC> {
+    pub fn tmr5(&mut self) -> TMR5_W<'_, APB1EN_SPEC> {
         TMR5_W::new(self, 3)
     }
     #[doc = "Bit 4 - Timer6 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr6(&mut self) -> TMR6_W<APB1EN_SPEC> {
+    pub fn tmr6(&mut self) -> TMR6_W<'_, APB1EN_SPEC> {
         TMR6_W::new(self, 4)
     }
     #[doc = "Bit 5 - Timer7 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr7(&mut self) -> TMR7_W<APB1EN_SPEC> {
+    pub fn tmr7(&mut self) -> TMR7_W<'_, APB1EN_SPEC> {
         TMR7_W::new(self, 5)
     }
     #[doc = "Bit 6 - Timer12 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr12(&mut self) -> TMR12_W<APB1EN_SPEC> {
+    pub fn tmr12(&mut self) -> TMR12_W<'_, APB1EN_SPEC> {
         TMR12_W::new(self, 6)
     }
     #[doc = "Bit 7 - Timer13 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr13(&mut self) -> TMR13_W<APB1EN_SPEC> {
+    pub fn tmr13(&mut self) -> TMR13_W<'_, APB1EN_SPEC> {
         TMR13_W::new(self, 7)
     }
     #[doc = "Bit 8 - Timer14 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr14(&mut self) -> TMR14_W<APB1EN_SPEC> {
+    pub fn tmr14(&mut self) -> TMR14_W<'_, APB1EN_SPEC> {
         TMR14_W::new(self, 8)
     }
     #[doc = "Bit 11 - Window watchdog timer clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn wwdt(&mut self) -> WWDT_W<APB1EN_SPEC> {
+    pub fn wwdt(&mut self) -> WWDT_W<'_, APB1EN_SPEC> {
         WWDT_W::new(self, 11)
     }
     #[doc = "Bit 14 - SPI2 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi2(&mut self) -> SPI2_W<APB1EN_SPEC> {
+    pub fn spi2(&mut self) -> SPI2_W<'_, APB1EN_SPEC> {
         SPI2_W::new(self, 14)
     }
     #[doc = "Bit 15 - SPI3 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi3(&mut self) -> SPI3_W<APB1EN_SPEC> {
+    pub fn spi3(&mut self) -> SPI3_W<'_, APB1EN_SPEC> {
         SPI3_W::new(self, 15)
     }
     #[doc = "Bit 16 - SPI4 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi4(&mut self) -> SPI4_W<APB1EN_SPEC> {
+    pub fn spi4(&mut self) -> SPI4_W<'_, APB1EN_SPEC> {
         SPI4_W::new(self, 16)
     }
     #[doc = "Bit 17 - USART2 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart2(&mut self) -> USART2_W<APB1EN_SPEC> {
+    pub fn usart2(&mut self) -> USART2_W<'_, APB1EN_SPEC> {
         USART2_W::new(self, 17)
     }
     #[doc = "Bit 18 - USART3 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart3(&mut self) -> USART3_W<APB1EN_SPEC> {
+    pub fn usart3(&mut self) -> USART3_W<'_, APB1EN_SPEC> {
         USART3_W::new(self, 18)
     }
     #[doc = "Bit 19 - UART4 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn uart4(&mut self) -> UART4_W<APB1EN_SPEC> {
+    pub fn uart4(&mut self) -> UART4_W<'_, APB1EN_SPEC> {
         UART4_W::new(self, 19)
     }
     #[doc = "Bit 20 - UART5 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn uart5(&mut self) -> UART5_W<APB1EN_SPEC> {
+    pub fn uart5(&mut self) -> UART5_W<'_, APB1EN_SPEC> {
         UART5_W::new(self, 20)
     }
     #[doc = "Bit 21 - I2C1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c1(&mut self) -> I2C1_W<APB1EN_SPEC> {
+    pub fn i2c1(&mut self) -> I2C1_W<'_, APB1EN_SPEC> {
         I2C1_W::new(self, 21)
     }
     #[doc = "Bit 22 - I2C2 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c2(&mut self) -> I2C2_W<APB1EN_SPEC> {
+    pub fn i2c2(&mut self) -> I2C2_W<'_, APB1EN_SPEC> {
         I2C2_W::new(self, 22)
     }
     #[doc = "Bit 23 - USB clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn usb(&mut self) -> USB_W<APB1EN_SPEC> {
+    pub fn usb(&mut self) -> USB_W<'_, APB1EN_SPEC> {
         USB_W::new(self, 23)
     }
     #[doc = "Bit 25 - CAN1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn can1(&mut self) -> CAN1_W<APB1EN_SPEC> {
+    pub fn can1(&mut self) -> CAN1_W<'_, APB1EN_SPEC> {
         CAN1_W::new(self, 25)
     }
     #[doc = "Bit 26 - I2C3 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c3(&mut self) -> I2C3_W<APB1EN_SPEC> {
+    pub fn i2c3(&mut self) -> I2C3_W<'_, APB1EN_SPEC> {
         I2C3_W::new(self, 26)
     }
     #[doc = "Bit 27 - Barrery powered domain register clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn bpr(&mut self) -> BPR_W<APB1EN_SPEC> {
+    pub fn bpr(&mut self) -> BPR_W<'_, APB1EN_SPEC> {
         BPR_W::new(self, 27)
     }
     #[doc = "Bit 28 - Power clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwc(&mut self) -> PWC_W<APB1EN_SPEC> {
+    pub fn pwc(&mut self) -> PWC_W<'_, APB1EN_SPEC> {
         PWC_W::new(self, 28)
     }
     #[doc = "Bit 29 - DAC clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dac(&mut self) -> DAC_W<APB1EN_SPEC> {
+    pub fn dac(&mut self) -> DAC_W<'_, APB1EN_SPEC> {
         DAC_W::new(self, 29)
     }
 }
@@ -422,10 +397,6 @@ impl crate::Readable for APB1EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb1en::W`](W) writer structure"]
 impl crate::Writable for APB1EN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB1EN to value 0"]
-impl crate::Resettable for APB1EN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB1EN_SPEC {}

@@ -213,122 +213,102 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Stream 1 clear FIFO error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ferrfc1(&mut self) -> FERRFC1_W<CLR1_SPEC> {
+    pub fn ferrfc1(&mut self) -> FERRFC1_W<'_, CLR1_SPEC> {
         FERRFC1_W::new(self, 0)
     }
     #[doc = "Bit 2 - Stream 1 clear direct mode error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmerrfc1(&mut self) -> DMERRFC1_W<CLR1_SPEC> {
+    pub fn dmerrfc1(&mut self) -> DMERRFC1_W<'_, CLR1_SPEC> {
         DMERRFC1_W::new(self, 2)
     }
     #[doc = "Bit 3 - Stream 1 clear transfer error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dterrfc1(&mut self) -> DTERRFC1_W<CLR1_SPEC> {
+    pub fn dterrfc1(&mut self) -> DTERRFC1_W<'_, CLR1_SPEC> {
         DTERRFC1_W::new(self, 3)
     }
     #[doc = "Bit 4 - Stream 1 clear half data transfer interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdtfc1(&mut self) -> HDTFC1_W<CLR1_SPEC> {
+    pub fn hdtfc1(&mut self) -> HDTFC1_W<'_, CLR1_SPEC> {
         HDTFC1_W::new(self, 4)
     }
     #[doc = "Bit 5 - Stream 1 clear full data transfer complete interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn fdtfc1(&mut self) -> FDTFC1_W<CLR1_SPEC> {
+    pub fn fdtfc1(&mut self) -> FDTFC1_W<'_, CLR1_SPEC> {
         FDTFC1_W::new(self, 5)
     }
     #[doc = "Bit 6 - Stream 2 clear FIFO error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ferrfc2(&mut self) -> FERRFC2_W<CLR1_SPEC> {
+    pub fn ferrfc2(&mut self) -> FERRFC2_W<'_, CLR1_SPEC> {
         FERRFC2_W::new(self, 6)
     }
     #[doc = "Bit 8 - Stream 2 clear direct mode error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmerrfc2(&mut self) -> DMERRFC2_W<CLR1_SPEC> {
+    pub fn dmerrfc2(&mut self) -> DMERRFC2_W<'_, CLR1_SPEC> {
         DMERRFC2_W::new(self, 8)
     }
     #[doc = "Bit 9 - Stream 2 clear transfer error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dterrfc2(&mut self) -> DTERRFC2_W<CLR1_SPEC> {
+    pub fn dterrfc2(&mut self) -> DTERRFC2_W<'_, CLR1_SPEC> {
         DTERRFC2_W::new(self, 9)
     }
     #[doc = "Bit 10 - Stream 2 clear half data transfer interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdtfc2(&mut self) -> HDTFC2_W<CLR1_SPEC> {
+    pub fn hdtfc2(&mut self) -> HDTFC2_W<'_, CLR1_SPEC> {
         HDTFC2_W::new(self, 10)
     }
     #[doc = "Bit 11 - Stream 2 clear full data transfer complete interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn fdtfc2(&mut self) -> FDTFC2_W<CLR1_SPEC> {
+    pub fn fdtfc2(&mut self) -> FDTFC2_W<'_, CLR1_SPEC> {
         FDTFC2_W::new(self, 11)
     }
     #[doc = "Bit 16 - Stream 3 clear FIFO error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ferrfc3(&mut self) -> FERRFC3_W<CLR1_SPEC> {
+    pub fn ferrfc3(&mut self) -> FERRFC3_W<'_, CLR1_SPEC> {
         FERRFC3_W::new(self, 16)
     }
     #[doc = "Bit 18 - Stream 3 clear direct mode error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmerrfc3(&mut self) -> DMERRFC3_W<CLR1_SPEC> {
+    pub fn dmerrfc3(&mut self) -> DMERRFC3_W<'_, CLR1_SPEC> {
         DMERRFC3_W::new(self, 18)
     }
     #[doc = "Bit 19 - Stream 3 clear transfer error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dterrfc3(&mut self) -> DTERRFC3_W<CLR1_SPEC> {
+    pub fn dterrfc3(&mut self) -> DTERRFC3_W<'_, CLR1_SPEC> {
         DTERRFC3_W::new(self, 19)
     }
     #[doc = "Bit 20 - Stream 3 clear half data transfer interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdtfc3(&mut self) -> HDTFC3_W<CLR1_SPEC> {
+    pub fn hdtfc3(&mut self) -> HDTFC3_W<'_, CLR1_SPEC> {
         HDTFC3_W::new(self, 20)
     }
     #[doc = "Bit 21 - Stream 3 clear full data transfer complete interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn fdtfc3(&mut self) -> FDTFC3_W<CLR1_SPEC> {
+    pub fn fdtfc3(&mut self) -> FDTFC3_W<'_, CLR1_SPEC> {
         FDTFC3_W::new(self, 21)
     }
     #[doc = "Bit 22 - Stream 4 clear FIFO error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ferrfc4(&mut self) -> FERRFC4_W<CLR1_SPEC> {
+    pub fn ferrfc4(&mut self) -> FERRFC4_W<'_, CLR1_SPEC> {
         FERRFC4_W::new(self, 22)
     }
     #[doc = "Bit 24 - Stream 4 clear direct mode error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmerrfc4(&mut self) -> DMERRFC4_W<CLR1_SPEC> {
+    pub fn dmerrfc4(&mut self) -> DMERRFC4_W<'_, CLR1_SPEC> {
         DMERRFC4_W::new(self, 24)
     }
     #[doc = "Bit 25 - Stream 4 clear transfer error interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn dterrfc4(&mut self) -> DTERRFC4_W<CLR1_SPEC> {
+    pub fn dterrfc4(&mut self) -> DTERRFC4_W<'_, CLR1_SPEC> {
         DTERRFC4_W::new(self, 25)
     }
     #[doc = "Bit 26 - Stream 4 clear half data transfer interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdtfc4(&mut self) -> HDTFC4_W<CLR1_SPEC> {
+    pub fn hdtfc4(&mut self) -> HDTFC4_W<'_, CLR1_SPEC> {
         HDTFC4_W::new(self, 26)
     }
     #[doc = "Bit 27 - Stream 4 clear full data transfer complete interrupt flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn fdtfc4(&mut self) -> FDTFC4_W<CLR1_SPEC> {
+    pub fn fdtfc4(&mut self) -> FDTFC4_W<'_, CLR1_SPEC> {
         FDTFC4_W::new(self, 27)
     }
 }
@@ -342,10 +322,6 @@ impl crate::Readable for CLR1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clr1::W`](W) writer structure"]
 impl crate::Writable for CLR1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLR1 to value 0"]
-impl crate::Resettable for CLR1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLR1_SPEC {}

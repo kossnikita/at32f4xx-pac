@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - USB divider reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn usbdiv_rst(&mut self) -> USBDIV_RST_W<OTG_EXTCTRL_SPEC> {
+    pub fn usbdiv_rst(&mut self) -> USBDIV_RST_W<'_, OTG_EXTCTRL_SPEC> {
         USBDIV_RST_W::new(self, 30)
     }
     #[doc = "Bit 31 - OTGFS end-point 3 remap enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ep3_rmpen(&mut self) -> EP3_RMPEN_W<OTG_EXTCTRL_SPEC> {
+    pub fn ep3_rmpen(&mut self) -> EP3_RMPEN_W<'_, OTG_EXTCTRL_SPEC> {
         EP3_RMPEN_W::new(self, 31)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for OTG_EXTCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`otg_extctrl::W`](W) writer structure"]
 impl crate::Writable for OTG_EXTCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OTG_EXTCTRL to value 0"]
-impl crate::Resettable for OTG_EXTCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OTG_EXTCTRL_SPEC {}

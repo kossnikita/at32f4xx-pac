@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - I2S division bit7 to bit0"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2sdiv7_0(&mut self) -> I2SDIV7_0_W<I2SCLK_SPEC> {
+    pub fn i2sdiv7_0(&mut self) -> I2SDIV7_0_W<'_, I2SCLK_SPEC> {
         I2SDIV7_0_W::new(self, 0)
     }
     #[doc = "Bit 8 - Odd result for I2S division"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2sodd(&mut self) -> I2SODD_W<I2SCLK_SPEC> {
+    pub fn i2sodd(&mut self) -> I2SODD_W<'_, I2SCLK_SPEC> {
         I2SODD_W::new(self, 8)
     }
     #[doc = "Bit 9 - I2S master clock output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2smclkoe(&mut self) -> I2SMCLKOE_W<I2SCLK_SPEC> {
+    pub fn i2smclkoe(&mut self) -> I2SMCLKOE_W<'_, I2SCLK_SPEC> {
         I2SMCLKOE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - I2S division bit9 and bit8"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2sdiv9_8(&mut self) -> I2SDIV9_8_W<I2SCLK_SPEC> {
+    pub fn i2sdiv9_8(&mut self) -> I2SDIV9_8_W<'_, I2SCLK_SPEC> {
         I2SDIV9_8_W::new(self, 10)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for I2SCLK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2sclk::W`](W) writer structure"]
 impl crate::Writable for I2SCLK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets I2SCLK to value 0x0a"]
 impl crate::Resettable for I2SCLK_SPEC {

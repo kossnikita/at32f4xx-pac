@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 23 - MII or RMII selection bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn mii_rmii_sel(&mut self) -> MII_RMII_SEL_W<CFG2_SPEC> {
+    pub fn mii_rmii_sel(&mut self) -> MII_RMII_SEL_W<'_, CFG2_SPEC> {
         MII_RMII_SEL_W::new(self, 23)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for CFG2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg2::W`](W) writer structure"]
 impl crate::Writable for CFG2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG2 to value 0"]
-impl crate::Resettable for CFG2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CFG2_SPEC {}

@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - VLAN tag identifier (for receive frames)"]
     #[inline(always)]
-    #[must_use]
-    pub fn vti(&mut self) -> VTI_W<MACVLT_SPEC> {
+    pub fn vti(&mut self) -> VTI_W<'_, MACVLT_SPEC> {
         VTI_W::new(self, 0)
     }
     #[doc = "Bit 16 - Enable 12-bit VLAN tag comparison"]
     #[inline(always)]
-    #[must_use]
-    pub fn etv(&mut self) -> ETV_W<MACVLT_SPEC> {
+    pub fn etv(&mut self) -> ETV_W<'_, MACVLT_SPEC> {
         ETV_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for MACVLT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`macvlt::W`](W) writer structure"]
 impl crate::Writable for MACVLT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MACVLT to value 0"]
-impl crate::Resettable for MACVLT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MACVLT_SPEC {}

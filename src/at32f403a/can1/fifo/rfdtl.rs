@@ -57,6 +57,4 @@ impl crate::RegisterSpec for RFDTL_SPEC {
 #[doc = "`read()` method returns [`rfdtl::R`](R) reader structure"]
 impl crate::Readable for RFDTL_SPEC {}
 #[doc = "`reset()` method sets RFDTL to value 0"]
-impl crate::Resettable for RFDTL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RFDTL_SPEC {}

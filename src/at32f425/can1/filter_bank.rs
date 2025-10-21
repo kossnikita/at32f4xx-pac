@@ -6,6 +6,8 @@ pub struct FilterBank {
 }
 impl FilterBank {
     #[doc = "0x00..0x08 - CAN filter bank filter bit register %s"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `FFB1` register.</div>"]
     #[inline(always)]
     pub const fn ffb(&self, n: usize) -> &FFB {
         &self.ffb[n]
@@ -27,8 +29,7 @@ impl FilterBank {
         self.ffb(1)
     }
 }
-#[doc = "FFB (rw) register accessor: CAN filter bank filter bit register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`ffb::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ffb::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ffb`]
-module"]
+#[doc = "FFB (rw) register accessor: CAN filter bank filter bit register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`ffb::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ffb::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ffb`] module"]
 pub type FFB = crate::Reg<ffb::FFB_SPEC>;
 #[doc = "CAN filter bank filter bit register %s"]
 pub mod ffb;

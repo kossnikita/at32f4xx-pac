@@ -101,50 +101,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Low speed internal clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn licken(&mut self) -> LICKEN_W<CTRLSTS_SPEC> {
+    pub fn licken(&mut self) -> LICKEN_W<'_, CTRLSTS_SPEC> {
         LICKEN_W::new(self, 0)
     }
     #[doc = "Bit 24 - Reset flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn rstfc(&mut self) -> RSTFC_W<CTRLSTS_SPEC> {
+    pub fn rstfc(&mut self) -> RSTFC_W<'_, CTRLSTS_SPEC> {
         RSTFC_W::new(self, 24)
     }
     #[doc = "Bit 26 - PIN reset flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn nrstf(&mut self) -> NRSTF_W<CTRLSTS_SPEC> {
+    pub fn nrstf(&mut self) -> NRSTF_W<'_, CTRLSTS_SPEC> {
         NRSTF_W::new(self, 26)
     }
     #[doc = "Bit 27 - POR/LVR reset flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn porrstf(&mut self) -> PORRSTF_W<CTRLSTS_SPEC> {
+    pub fn porrstf(&mut self) -> PORRSTF_W<'_, CTRLSTS_SPEC> {
         PORRSTF_W::new(self, 27)
     }
     #[doc = "Bit 28 - Software reset flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn swrstf(&mut self) -> SWRSTF_W<CTRLSTS_SPEC> {
+    pub fn swrstf(&mut self) -> SWRSTF_W<'_, CTRLSTS_SPEC> {
         SWRSTF_W::new(self, 28)
     }
     #[doc = "Bit 29 - Watchdog timer reset flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn wdtrstf(&mut self) -> WDTRSTF_W<CTRLSTS_SPEC> {
+    pub fn wdtrstf(&mut self) -> WDTRSTF_W<'_, CTRLSTS_SPEC> {
         WDTRSTF_W::new(self, 29)
     }
     #[doc = "Bit 30 - Window watchdog timer reset flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn wwdtrstf(&mut self) -> WWDTRSTF_W<CTRLSTS_SPEC> {
+    pub fn wwdtrstf(&mut self) -> WWDTRSTF_W<'_, CTRLSTS_SPEC> {
         WWDTRSTF_W::new(self, 30)
     }
     #[doc = "Bit 31 - Low-power reset flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn lprstf(&mut self) -> LPRSTF_W<CTRLSTS_SPEC> {
+    pub fn lprstf(&mut self) -> LPRSTF_W<'_, CTRLSTS_SPEC> {
         LPRSTF_W::new(self, 31)
     }
 }
@@ -158,8 +150,6 @@ impl crate::Readable for CTRLSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlsts::W`](W) writer structure"]
 impl crate::Writable for CTRLSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRLSTS to value 0x0c00_0000"]
 impl crate::Resettable for CTRLSTS_SPEC {

@@ -10,8 +10,7 @@ impl core::fmt::Debug for crate::generic::Reg<CRC_ADDR_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - CRC address"]
     #[inline(always)]
-    #[must_use]
-    pub fn crc_addr(&mut self) -> CRC_ADDR_W<CRC_ADDR_SPEC> {
+    pub fn crc_addr(&mut self) -> CRC_ADDR_W<'_, CRC_ADDR_SPEC> {
         CRC_ADDR_W::new(self, 0)
     }
 }
@@ -23,10 +22,6 @@ impl crate::RegisterSpec for CRC_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`crc_addr::W`](W) writer structure"]
 impl crate::Writable for CRC_ADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CRC_ADDR to value 0"]
-impl crate::Resettable for CRC_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CRC_ADDR_SPEC {}

@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - Cropping window horizontal pixel number"]
     #[inline(always)]
-    #[must_use]
-    pub fn chnum(&mut self) -> CHNUM_W<CWSZ_SPEC> {
+    pub fn chnum(&mut self) -> CHNUM_W<'_, CWSZ_SPEC> {
         CHNUM_W::new(self, 0)
     }
     #[doc = "Bits 16:29 - Cropping window vertical line number"]
     #[inline(always)]
-    #[must_use]
-    pub fn cvnum(&mut self) -> CVNUM_W<CWSZ_SPEC> {
+    pub fn cvnum(&mut self) -> CVNUM_W<'_, CWSZ_SPEC> {
         CVNUM_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for CWSZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cwsz::W`](W) writer structure"]
 impl crate::Writable for CWSZ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CWSZ to value 0"]
-impl crate::Resettable for CWSZ_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CWSZ_SPEC {}

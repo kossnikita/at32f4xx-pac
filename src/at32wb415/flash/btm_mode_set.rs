@@ -10,8 +10,7 @@ impl core::fmt::Debug for crate::generic::Reg<BTM_MODE_SET_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - Boot memory mode setting"]
     #[inline(always)]
-    #[must_use]
-    pub fn btm_mode_set(&mut self) -> BTM_MODE_SET_W<BTM_MODE_SET_SPEC> {
+    pub fn btm_mode_set(&mut self) -> BTM_MODE_SET_W<'_, BTM_MODE_SET_SPEC> {
         BTM_MODE_SET_W::new(self, 0)
     }
 }
@@ -23,10 +22,6 @@ impl crate::RegisterSpec for BTM_MODE_SET_SPEC {
 #[doc = "`write(|w| ..)` method takes [`btm_mode_set::W`](W) writer structure"]
 impl crate::Writable for BTM_MODE_SET_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BTM_MODE_SET to value 0"]
-impl crate::Resettable for BTM_MODE_SET_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BTM_MODE_SET_SPEC {}

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Low pulse Count"]
     #[inline(always)]
-    #[must_use]
-    pub fn l_pulse_cnt(&mut self) -> L_PULSE_CNT_W<LOW_PULSE_SPEC> {
+    pub fn l_pulse_cnt(&mut self) -> L_PULSE_CNT_W<'_, LOW_PULSE_SPEC> {
         L_PULSE_CNT_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for LOW_PULSE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`low_pulse::W`](W) writer structure"]
 impl crate::Writable for LOW_PULSE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LOW_PULSE to value 0"]
-impl crate::Resettable for LOW_PULSE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LOW_PULSE_SPEC {}

@@ -32,6 +32,4 @@ impl crate::RegisterSpec for SER_ID_SPEC {
 #[doc = "`read()` method returns [`ser_id::R`](R) reader structure"]
 impl crate::Readable for SER_ID_SPEC {}
 #[doc = "`reset()` method sets SER_ID to value 0"]
-impl crate::Resettable for SER_ID_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SER_ID_SPEC {}

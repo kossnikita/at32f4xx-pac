@@ -21,8 +21,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Timestamp second"]
     #[inline(always)]
-    #[must_use]
-    pub fn ts(&mut self) -> TS_W<PTPTSHUD_SPEC> {
+    pub fn ts(&mut self) -> TS_W<'_, PTPTSHUD_SPEC> {
         TS_W::new(self, 0)
     }
 }
@@ -36,10 +35,6 @@ impl crate::Readable for PTPTSHUD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ptptshud::W`](W) writer structure"]
 impl crate::Writable for PTPTSHUD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PTPTSHUD to value 0"]
-impl crate::Resettable for PTPTSHUD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PTPTSHUD_SPEC {}

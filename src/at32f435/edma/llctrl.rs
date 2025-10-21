@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Stream 1 link list enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s1llen(&mut self) -> S1LLEN_W<LLCTRL_SPEC> {
+    pub fn s1llen(&mut self) -> S1LLEN_W<'_, LLCTRL_SPEC> {
         S1LLEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Stream 2 link list enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s2llen(&mut self) -> S2LLEN_W<LLCTRL_SPEC> {
+    pub fn s2llen(&mut self) -> S2LLEN_W<'_, LLCTRL_SPEC> {
         S2LLEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Stream 3 link list enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s3llen(&mut self) -> S3LLEN_W<LLCTRL_SPEC> {
+    pub fn s3llen(&mut self) -> S3LLEN_W<'_, LLCTRL_SPEC> {
         S3LLEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Stream 4 link list enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s4llen(&mut self) -> S4LLEN_W<LLCTRL_SPEC> {
+    pub fn s4llen(&mut self) -> S4LLEN_W<'_, LLCTRL_SPEC> {
         S4LLEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Stream 5 link list enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s5llen(&mut self) -> S5LLEN_W<LLCTRL_SPEC> {
+    pub fn s5llen(&mut self) -> S5LLEN_W<'_, LLCTRL_SPEC> {
         S5LLEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Stream 6 link list enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s6llen(&mut self) -> S6LLEN_W<LLCTRL_SPEC> {
+    pub fn s6llen(&mut self) -> S6LLEN_W<'_, LLCTRL_SPEC> {
         S6LLEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Stream 7 link list enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s7llen(&mut self) -> S7LLEN_W<LLCTRL_SPEC> {
+    pub fn s7llen(&mut self) -> S7LLEN_W<'_, LLCTRL_SPEC> {
         S7LLEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Stream 8 link list enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn s8llen(&mut self) -> S8LLEN_W<LLCTRL_SPEC> {
+    pub fn s8llen(&mut self) -> S8LLEN_W<'_, LLCTRL_SPEC> {
         S8LLEN_W::new(self, 7)
     }
 }
@@ -150,10 +142,6 @@ impl crate::Readable for LLCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`llctrl::W`](W) writer structure"]
 impl crate::Writable for LLCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LLCTRL to value 0"]
-impl crate::Resettable for LLCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LLCTRL_SPEC {}

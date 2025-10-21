@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - I2C bus rise time"]
     #[inline(always)]
-    #[must_use]
-    pub fn risetime(&mut self) -> RISETIME_W<TMRISE_SPEC> {
+    pub fn risetime(&mut self) -> RISETIME_W<'_, TMRISE_SPEC> {
         RISETIME_W::new(self, 0)
     }
 }
@@ -38,8 +37,6 @@ impl crate::Readable for TMRISE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tmrise::W`](W) writer structure"]
 impl crate::Writable for TMRISE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TMRISE to value 0x02"]
 impl crate::Resettable for TMRISE_SPEC {

@@ -30,23 +30,19 @@ impl Fifo {
         &self.rfdth
     }
 }
-#[doc = "RFI (r) register accessor: Receive FIFO mailbox identifier register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rfi`]
-module"]
+#[doc = "RFI (r) register accessor: Receive FIFO mailbox identifier register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rfi`] module"]
 pub type RFI = crate::Reg<rfi::RFI_SPEC>;
 #[doc = "Receive FIFO mailbox identifier register"]
 pub mod rfi;
-#[doc = "RFC (r) register accessor: Receive FIFO mailbox data length and time stamp register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfc::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rfc`]
-module"]
+#[doc = "RFC (r) register accessor: Receive FIFO mailbox data length and time stamp register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfc::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rfc`] module"]
 pub type RFC = crate::Reg<rfc::RFC_SPEC>;
 #[doc = "Receive FIFO mailbox data length and time stamp register"]
 pub mod rfc;
-#[doc = "RFDTL (r) register accessor: Receive FIFO mailbox data low register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfdtl::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rfdtl`]
-module"]
+#[doc = "RFDTL (r) register accessor: Receive FIFO mailbox data low register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfdtl::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rfdtl`] module"]
 pub type RFDTL = crate::Reg<rfdtl::RFDTL_SPEC>;
 #[doc = "Receive FIFO mailbox data low register"]
 pub mod rfdtl;
-#[doc = "RFDTH (r) register accessor: Receive FIFO mailbox data high register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfdth::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rfdth`]
-module"]
+#[doc = "RFDTH (r) register accessor: Receive FIFO mailbox data high register\n\nYou can [`read`](crate::Reg::read) this register and get [`rfdth::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rfdth`] module"]
 pub type RFDTH = crate::Reg<rfdth::RFDTH_SPEC>;
 #[doc = "Receive FIFO mailbox data high register"]
 pub mod rfdth;

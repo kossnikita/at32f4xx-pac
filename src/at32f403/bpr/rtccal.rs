@@ -221,26 +221,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Calibration value"]
     #[inline(always)]
-    #[must_use]
-    pub fn calval(&mut self) -> CALVAL_W<RTCCAL_SPEC> {
+    pub fn calval(&mut self) -> CALVAL_W<'_, RTCCAL_SPEC> {
         CALVAL_W::new(self, 0)
     }
     #[doc = "Bit 7 - Calibration Clock Output"]
     #[inline(always)]
-    #[must_use]
-    pub fn calout(&mut self) -> CALOUT_W<RTCCAL_SPEC> {
+    pub fn calout(&mut self) -> CALOUT_W<'_, RTCCAL_SPEC> {
         CALOUT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Output enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn outen(&mut self) -> OUTEN_W<RTCCAL_SPEC> {
+    pub fn outen(&mut self) -> OUTEN_W<'_, RTCCAL_SPEC> {
         OUTEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Output selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn outsel(&mut self) -> OUTSEL_W<RTCCAL_SPEC> {
+    pub fn outsel(&mut self) -> OUTSEL_W<'_, RTCCAL_SPEC> {
         OUTSEL_W::new(self, 9)
     }
 }
@@ -254,10 +250,7 @@ impl crate::Readable for RTCCAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rtccal::W`](W) writer structure"]
 impl crate::Writable for RTCCAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0380;
 }
 #[doc = "`reset()` method sets RTCCAL to value 0"]
-impl crate::Resettable for RTCCAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RTCCAL_SPEC {}

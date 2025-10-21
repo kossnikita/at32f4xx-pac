@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - TMR1_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1_pause(&mut self) -> TMR1_PAUSE_W<APB2_PAUSE_SPEC> {
+    pub fn tmr1_pause(&mut self) -> TMR1_PAUSE_W<'_, APB2_PAUSE_SPEC> {
         TMR1_PAUSE_W::new(self, 0)
     }
     #[doc = "Bit 1 - TMR8_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr8_pause(&mut self) -> TMR8_PAUSE_W<APB2_PAUSE_SPEC> {
+    pub fn tmr8_pause(&mut self) -> TMR8_PAUSE_W<'_, APB2_PAUSE_SPEC> {
         TMR8_PAUSE_W::new(self, 1)
     }
     #[doc = "Bit 16 - TMR9_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr9_pause(&mut self) -> TMR9_PAUSE_W<APB2_PAUSE_SPEC> {
+    pub fn tmr9_pause(&mut self) -> TMR9_PAUSE_W<'_, APB2_PAUSE_SPEC> {
         TMR9_PAUSE_W::new(self, 16)
     }
     #[doc = "Bit 17 - TMR10_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr10_pause(&mut self) -> TMR10_PAUSE_W<APB2_PAUSE_SPEC> {
+    pub fn tmr10_pause(&mut self) -> TMR10_PAUSE_W<'_, APB2_PAUSE_SPEC> {
         TMR10_PAUSE_W::new(self, 17)
     }
     #[doc = "Bit 18 - TMR11_PAUSE"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr11_pause(&mut self) -> TMR11_PAUSE_W<APB2_PAUSE_SPEC> {
+    pub fn tmr11_pause(&mut self) -> TMR11_PAUSE_W<'_, APB2_PAUSE_SPEC> {
         TMR11_PAUSE_W::new(self, 18)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for APB2_PAUSE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb2_pause::W`](W) writer structure"]
 impl crate::Writable for APB2_PAUSE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB2_PAUSE to value 0"]
-impl crate::Resettable for APB2_PAUSE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB2_PAUSE_SPEC {}

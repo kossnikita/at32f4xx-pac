@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - X dimension transfer count"]
     #[inline(always)]
-    #[must_use]
-    pub fn xconut(&mut self) -> XCONUT_W<S2_2DCNT_SPEC> {
+    pub fn xconut(&mut self) -> XCONUT_W<'_, S2_2DCNT_SPEC> {
         XCONUT_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Y dimension transfer count"]
     #[inline(always)]
-    #[must_use]
-    pub fn yconut(&mut self) -> YCONUT_W<S2_2DCNT_SPEC> {
+    pub fn yconut(&mut self) -> YCONUT_W<'_, S2_2DCNT_SPEC> {
         YCONUT_W::new(self, 16)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for S2_2DCNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s2_2dcnt::W`](W) writer structure"]
 impl crate::Writable for S2_2DCNT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S2_2DCNT to value 0"]
-impl crate::Resettable for S2_2DCNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for S2_2DCNT_SPEC {}

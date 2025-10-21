@@ -24,6 +24,4 @@ impl crate::RegisterSpec for DMACTBADDR_SPEC {
 #[doc = "`read()` method returns [`dmactbaddr::R`](R) reader structure"]
 impl crate::Readable for DMACTBADDR_SPEC {}
 #[doc = "`reset()` method sets DMACTBADDR to value 0"]
-impl crate::Resettable for DMACTBADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMACTBADDR_SPEC {}

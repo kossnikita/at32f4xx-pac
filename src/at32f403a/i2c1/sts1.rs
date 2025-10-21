@@ -769,44 +769,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - Bus error"]
     #[inline(always)]
-    #[must_use]
-    pub fn buserr(&mut self) -> BUSERR_W<STS1_SPEC> {
+    pub fn buserr(&mut self) -> BUSERR_W<'_, STS1_SPEC> {
         BUSERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - Arbitration lost (master mode)"]
     #[inline(always)]
-    #[must_use]
-    pub fn arlost(&mut self) -> ARLOST_W<STS1_SPEC> {
+    pub fn arlost(&mut self) -> ARLOST_W<'_, STS1_SPEC> {
         ARLOST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Acknowledge failure"]
     #[inline(always)]
-    #[must_use]
-    pub fn ackfail(&mut self) -> ACKFAIL_W<STS1_SPEC> {
+    pub fn ackfail(&mut self) -> ACKFAIL_W<'_, STS1_SPEC> {
         ACKFAIL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Overflow or underflow"]
     #[inline(always)]
-    #[must_use]
-    pub fn ouf(&mut self) -> OUF_W<STS1_SPEC> {
+    pub fn ouf(&mut self) -> OUF_W<'_, STS1_SPEC> {
         OUF_W::new(self, 11)
     }
     #[doc = "Bit 12 - PEC receive error"]
     #[inline(always)]
-    #[must_use]
-    pub fn pecerr(&mut self) -> PECERR_W<STS1_SPEC> {
+    pub fn pecerr(&mut self) -> PECERR_W<'_, STS1_SPEC> {
         PECERR_W::new(self, 12)
     }
     #[doc = "Bit 14 - Timeout error"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmout(&mut self) -> TMOUT_W<STS1_SPEC> {
+    pub fn tmout(&mut self) -> TMOUT_W<'_, STS1_SPEC> {
         TMOUT_W::new(self, 14)
     }
     #[doc = "Bit 15 - SMBus alert"]
     #[inline(always)]
-    #[must_use]
-    pub fn alertf(&mut self) -> ALERTF_W<STS1_SPEC> {
+    pub fn alertf(&mut self) -> ALERTF_W<'_, STS1_SPEC> {
         ALERTF_W::new(self, 15)
     }
 }
@@ -821,9 +814,6 @@ impl crate::Readable for STS1_SPEC {}
 impl crate::Writable for STS1_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0xdf00;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STS1 to value 0"]
-impl crate::Resettable for STS1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for STS1_SPEC {}

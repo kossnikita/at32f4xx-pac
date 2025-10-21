@@ -906,74 +906,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Channel enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn chen(&mut self) -> CHEN_W<CTRL_SPEC> {
+    pub fn chen(&mut self) -> CHEN_W<'_, CTRL_SPEC> {
         CHEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Transfer complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn fdtien(&mut self) -> FDTIEN_W<CTRL_SPEC> {
+    pub fn fdtien(&mut self) -> FDTIEN_W<'_, CTRL_SPEC> {
         FDTIEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Half transfer interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hdtien(&mut self) -> HDTIEN_W<CTRL_SPEC> {
+    pub fn hdtien(&mut self) -> HDTIEN_W<'_, CTRL_SPEC> {
         HDTIEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Transfer error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dterrien(&mut self) -> DTERRIEN_W<CTRL_SPEC> {
+    pub fn dterrien(&mut self) -> DTERRIEN_W<'_, CTRL_SPEC> {
         DTERRIEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Data transfer direction"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtd(&mut self) -> DTD_W<CTRL_SPEC> {
+    pub fn dtd(&mut self) -> DTD_W<'_, CTRL_SPEC> {
         DTD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Loop mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn lm(&mut self) -> LM_W<CTRL_SPEC> {
+    pub fn lm(&mut self) -> LM_W<'_, CTRL_SPEC> {
         LM_W::new(self, 5)
     }
     #[doc = "Bit 6 - Peripheral increment mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn pincm(&mut self) -> PINCM_W<CTRL_SPEC> {
+    pub fn pincm(&mut self) -> PINCM_W<'_, CTRL_SPEC> {
         PINCM_W::new(self, 6)
     }
     #[doc = "Bit 7 - Memory increment mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn mincm(&mut self) -> MINCM_W<CTRL_SPEC> {
+    pub fn mincm(&mut self) -> MINCM_W<'_, CTRL_SPEC> {
         MINCM_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - Peripheral data bit width"]
     #[inline(always)]
-    #[must_use]
-    pub fn pwidth(&mut self) -> PWIDTH_W<CTRL_SPEC> {
+    pub fn pwidth(&mut self) -> PWIDTH_W<'_, CTRL_SPEC> {
         PWIDTH_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Memory data bit width"]
     #[inline(always)]
-    #[must_use]
-    pub fn mwidth(&mut self) -> MWIDTH_W<CTRL_SPEC> {
+    pub fn mwidth(&mut self) -> MWIDTH_W<'_, CTRL_SPEC> {
         MWIDTH_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Channel Priority level"]
     #[inline(always)]
-    #[must_use]
-    pub fn chpl(&mut self) -> CHPL_W<CTRL_SPEC> {
+    pub fn chpl(&mut self) -> CHPL_W<'_, CTRL_SPEC> {
         CHPL_W::new(self, 12)
     }
     #[doc = "Bit 14 - Memory to memory mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn m2m(&mut self) -> M2M_W<CTRL_SPEC> {
+    pub fn m2m(&mut self) -> M2M_W<'_, CTRL_SPEC> {
         M2M_W::new(self, 14)
     }
 }
@@ -987,10 +975,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
-impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL_SPEC {}

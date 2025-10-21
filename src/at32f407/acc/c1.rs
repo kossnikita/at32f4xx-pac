@@ -18,8 +18,6 @@ impl crate::Readable for C1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`c1::W`](W) writer structure"]
 impl crate::Writable for C1_SPEC {
     type Safety = crate::Safe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets C1 to value 0x1f2c"]
 impl crate::Resettable for C1_SPEC {

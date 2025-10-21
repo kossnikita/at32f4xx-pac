@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Calibration value"]
     #[inline(always)]
-    #[must_use]
-    pub fn calval(&mut self) -> CALVAL_W<CCAL_SPEC> {
+    pub fn calval(&mut self) -> CALVAL_W<'_, CCAL_SPEC> {
         CALVAL_W::new(self, 0)
     }
     #[doc = "Bit 7 - Calibration direction"]
     #[inline(always)]
-    #[must_use]
-    pub fn caldir(&mut self) -> CALDIR_W<CCAL_SPEC> {
+    pub fn caldir(&mut self) -> CALDIR_W<'_, CCAL_SPEC> {
         CALDIR_W::new(self, 7)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for CCAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ccal::W`](W) writer structure"]
 impl crate::Writable for CCAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CCAL to value 0"]
-impl crate::Resettable for CCAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CCAL_SPEC {}

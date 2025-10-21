@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - DMA transfer address offset"]
     #[inline(always)]
-    #[must_use]
-    pub fn addr(&mut self) -> ADDR_W<DMACTRL_SPEC> {
+    pub fn addr(&mut self) -> ADDR_W<'_, DMACTRL_SPEC> {
         ADDR_W::new(self, 0)
     }
     #[doc = "Bits 8:12 - DMA transfer bytes"]
     #[inline(always)]
-    #[must_use]
-    pub fn dtb(&mut self) -> DTB_W<DMACTRL_SPEC> {
+    pub fn dtb(&mut self) -> DTB_W<'_, DMACTRL_SPEC> {
         DTB_W::new(self, 8)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for DMACTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmactrl::W`](W) writer structure"]
 impl crate::Writable for DMACTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMACTRL to value 0"]
-impl crate::Resettable for DMACTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMACTRL_SPEC {}

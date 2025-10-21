@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - DMA Address"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaaddr(&mut self) -> DMAADDR_W<DOEPDMA4_SPEC> {
+    pub fn dmaaddr(&mut self) -> DMAADDR_W<'_, DOEPDMA4_SPEC> {
         DMAADDR_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for DOEPDMA4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`doepdma4::W`](W) writer structure"]
 impl crate::Writable for DOEPDMA4_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DOEPDMA4 to value 0"]
-impl crate::Resettable for DOEPDMA4_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DOEPDMA4_SPEC {}

@@ -24,6 +24,4 @@ impl crate::RegisterSpec for DTXFSTS5_SPEC {
 #[doc = "`read()` method returns [`dtxfsts5::R`](R) reader structure"]
 impl crate::Readable for DTXFSTS5_SPEC {}
 #[doc = "`reset()` method sets DTXFSTS5 to value 0"]
-impl crate::Resettable for DTXFSTS5_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DTXFSTS5_SPEC {}

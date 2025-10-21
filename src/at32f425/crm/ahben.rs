@@ -113,62 +113,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - DMA1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dma1(&mut self) -> DMA1_W<AHBEN_SPEC> {
+    pub fn dma1(&mut self) -> DMA1_W<'_, AHBEN_SPEC> {
         DMA1_W::new(self, 0)
     }
     #[doc = "Bit 2 - SRAM interface clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sram(&mut self) -> SRAM_W<AHBEN_SPEC> {
+    pub fn sram(&mut self) -> SRAM_W<'_, AHBEN_SPEC> {
         SRAM_W::new(self, 2)
     }
     #[doc = "Bit 4 - FLASH clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn flash(&mut self) -> FLASH_W<AHBEN_SPEC> {
+    pub fn flash(&mut self) -> FLASH_W<'_, AHBEN_SPEC> {
         FLASH_W::new(self, 4)
     }
     #[doc = "Bit 6 - CRC clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn crc(&mut self) -> CRC_W<AHBEN_SPEC> {
+    pub fn crc(&mut self) -> CRC_W<'_, AHBEN_SPEC> {
         CRC_W::new(self, 6)
     }
     #[doc = "Bit 12 - OTGFS1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn otgfs1(&mut self) -> OTGFS1_W<AHBEN_SPEC> {
+    pub fn otgfs1(&mut self) -> OTGFS1_W<'_, AHBEN_SPEC> {
         OTGFS1_W::new(self, 12)
     }
     #[doc = "Bit 17 - I/O port A clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioa(&mut self) -> GPIOA_W<AHBEN_SPEC> {
+    pub fn gpioa(&mut self) -> GPIOA_W<'_, AHBEN_SPEC> {
         GPIOA_W::new(self, 17)
     }
     #[doc = "Bit 18 - I/O port B clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiob(&mut self) -> GPIOB_W<AHBEN_SPEC> {
+    pub fn gpiob(&mut self) -> GPIOB_W<'_, AHBEN_SPEC> {
         GPIOB_W::new(self, 18)
     }
     #[doc = "Bit 19 - I/O port C clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpioc(&mut self) -> GPIOC_W<AHBEN_SPEC> {
+    pub fn gpioc(&mut self) -> GPIOC_W<'_, AHBEN_SPEC> {
         GPIOC_W::new(self, 19)
     }
     #[doc = "Bit 20 - I/O port D clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiod(&mut self) -> GPIOD_W<AHBEN_SPEC> {
+    pub fn gpiod(&mut self) -> GPIOD_W<'_, AHBEN_SPEC> {
         GPIOD_W::new(self, 20)
     }
     #[doc = "Bit 22 - I/O port F clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn gpiof(&mut self) -> GPIOF_W<AHBEN_SPEC> {
+    pub fn gpiof(&mut self) -> GPIOF_W<'_, AHBEN_SPEC> {
         GPIOF_W::new(self, 22)
     }
 }
@@ -182,8 +172,6 @@ impl crate::Readable for AHBEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahben::W`](W) writer structure"]
 impl crate::Writable for AHBEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBEN to value 0x14"]
 impl crate::Resettable for AHBEN_SPEC {

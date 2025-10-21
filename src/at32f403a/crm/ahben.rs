@@ -133,74 +133,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - DMA1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dma1(&mut self) -> DMA1_W<AHBEN_SPEC> {
+    pub fn dma1(&mut self) -> DMA1_W<'_, AHBEN_SPEC> {
         DMA1_W::new(self, 0)
     }
     #[doc = "Bit 1 - DMA2 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dma2(&mut self) -> DMA2_W<AHBEN_SPEC> {
+    pub fn dma2(&mut self) -> DMA2_W<'_, AHBEN_SPEC> {
         DMA2_W::new(self, 1)
     }
     #[doc = "Bit 2 - SRAM interface clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sram(&mut self) -> SRAM_W<AHBEN_SPEC> {
+    pub fn sram(&mut self) -> SRAM_W<'_, AHBEN_SPEC> {
         SRAM_W::new(self, 2)
     }
     #[doc = "Bit 4 - FLASH clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn flash(&mut self) -> FLASH_W<AHBEN_SPEC> {
+    pub fn flash(&mut self) -> FLASH_W<'_, AHBEN_SPEC> {
         FLASH_W::new(self, 4)
     }
     #[doc = "Bit 6 - CRC clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn crc(&mut self) -> CRC_W<AHBEN_SPEC> {
+    pub fn crc(&mut self) -> CRC_W<'_, AHBEN_SPEC> {
         CRC_W::new(self, 6)
     }
     #[doc = "Bit 8 - XMC clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn xmc(&mut self) -> XMC_W<AHBEN_SPEC> {
+    pub fn xmc(&mut self) -> XMC_W<'_, AHBEN_SPEC> {
         XMC_W::new(self, 8)
     }
     #[doc = "Bit 10 - SDIO1 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdio1(&mut self) -> SDIO1_W<AHBEN_SPEC> {
+    pub fn sdio1(&mut self) -> SDIO1_W<'_, AHBEN_SPEC> {
         SDIO1_W::new(self, 10)
     }
     #[doc = "Bit 11 - SDIO2 clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdio2(&mut self) -> SDIO2_W<AHBEN_SPEC> {
+    pub fn sdio2(&mut self) -> SDIO2_W<'_, AHBEN_SPEC> {
         SDIO2_W::new(self, 11)
     }
     #[doc = "Bit 14 - EMACEN clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn emac(&mut self) -> EMAC_W<AHBEN_SPEC> {
+    pub fn emac(&mut self) -> EMAC_W<'_, AHBEN_SPEC> {
         EMAC_W::new(self, 14)
     }
     #[doc = "Bit 15 - EMACEN Tx clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn emactx(&mut self) -> EMACTX_W<AHBEN_SPEC> {
+    pub fn emactx(&mut self) -> EMACTX_W<'_, AHBEN_SPEC> {
         EMACTX_W::new(self, 15)
     }
     #[doc = "Bit 16 - EMACEN Rx clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn emacrx(&mut self) -> EMACRX_W<AHBEN_SPEC> {
+    pub fn emacrx(&mut self) -> EMACRX_W<'_, AHBEN_SPEC> {
         EMACRX_W::new(self, 16)
     }
     #[doc = "Bit 28 - EMACPTP clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn emacptp(&mut self) -> EMACPTP_W<AHBEN_SPEC> {
+    pub fn emacptp(&mut self) -> EMACPTP_W<'_, AHBEN_SPEC> {
         EMACPTP_W::new(self, 28)
     }
 }
@@ -214,8 +202,6 @@ impl crate::Readable for AHBEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahben::W`](W) writer structure"]
 impl crate::Writable for AHBEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBEN to value 0x14"]
 impl crate::Resettable for AHBEN_SPEC {

@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Channel interrupt mask"]
     #[inline(always)]
-    #[must_use]
-    pub fn haintmsk(&mut self) -> HAINTMSK_W<HAINTMSK_SPEC> {
+    pub fn haintmsk(&mut self) -> HAINTMSK_W<'_, HAINTMSK_SPEC> {
         HAINTMSK_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for HAINTMSK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`haintmsk::W`](W) writer structure"]
 impl crate::Writable for HAINTMSK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HAINTMSK to value 0"]
-impl crate::Resettable for HAINTMSK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HAINTMSK_SPEC {}

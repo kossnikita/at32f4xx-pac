@@ -12,14 +12,12 @@ impl core::fmt::Debug for crate::generic::Reg<TADJ_SPEC> {
 impl W {
     #[doc = "Bits 0:14 - Decrease sub-second value"]
     #[inline(always)]
-    #[must_use]
-    pub fn decsbs(&mut self) -> DECSBS_W<TADJ_SPEC> {
+    pub fn decsbs(&mut self) -> DECSBS_W<'_, TADJ_SPEC> {
         DECSBS_W::new(self, 0)
     }
     #[doc = "Bit 31 - Add 1 second"]
     #[inline(always)]
-    #[must_use]
-    pub fn add1s(&mut self) -> ADD1S_W<TADJ_SPEC> {
+    pub fn add1s(&mut self) -> ADD1S_W<'_, TADJ_SPEC> {
         ADD1S_W::new(self, 31)
     }
 }
@@ -31,10 +29,6 @@ impl crate::RegisterSpec for TADJ_SPEC {
 #[doc = "`write(|w| ..)` method takes [`tadj::W`](W) writer structure"]
 impl crate::Writable for TADJ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TADJ to value 0"]
-impl crate::Resettable for TADJ_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TADJ_SPEC {}

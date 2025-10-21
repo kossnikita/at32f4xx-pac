@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - VBUS is deasserted"]
     #[inline(always)]
-    #[must_use]
-    pub fn sesenddet(&mut self) -> SESENDDET_W<GOTGINT_SPEC> {
+    pub fn sesenddet(&mut self) -> SESENDDET_W<'_, GOTGINT_SPEC> {
         SESENDDET_W::new(self, 2)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for GOTGINT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gotgint::W`](W) writer structure"]
 impl crate::Writable for GOTGINT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GOTGINT to value 0"]
-impl crate::Resettable for GOTGINT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GOTGINT_SPEC {}

@@ -10,8 +10,7 @@ impl core::fmt::Debug for crate::generic::Reg<DA_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - Flash decryption address"]
     #[inline(always)]
-    #[must_use]
-    pub fn fda(&mut self) -> FDA_W<DA_SPEC> {
+    pub fn fda(&mut self) -> FDA_W<'_, DA_SPEC> {
         FDA_W::new(self, 0)
     }
 }
@@ -23,10 +22,6 @@ impl crate::RegisterSpec for DA_SPEC {
 #[doc = "`write(|w| ..)` method takes [`da::W`](W) writer structure"]
 impl crate::Writable for DA_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DA to value 0"]
-impl crate::Resettable for DA_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DA_SPEC {}

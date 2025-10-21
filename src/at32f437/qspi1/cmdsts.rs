@@ -24,6 +24,4 @@ impl crate::RegisterSpec for CMDSTS_SPEC {
 #[doc = "`read()` method returns [`cmdsts::R`](R) reader structure"]
 impl crate::Readable for CMDSTS_SPEC {}
 #[doc = "`reset()` method sets CMDSTS to value 0"]
-impl crate::Resettable for CMDSTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CMDSTS_SPEC {}

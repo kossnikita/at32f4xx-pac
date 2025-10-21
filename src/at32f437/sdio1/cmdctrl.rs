@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - CMDIDX"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdidx(&mut self) -> CMDIDX_W<CMDCTRL_SPEC> {
+    pub fn cmdidx(&mut self) -> CMDIDX_W<'_, CMDCTRL_SPEC> {
         CMDIDX_W::new(self, 0)
     }
     #[doc = "Bits 6:7 - Wait for response"]
     #[inline(always)]
-    #[must_use]
-    pub fn rspwt(&mut self) -> RSPWT_W<CMDCTRL_SPEC> {
+    pub fn rspwt(&mut self) -> RSPWT_W<'_, CMDCTRL_SPEC> {
         RSPWT_W::new(self, 6)
     }
     #[doc = "Bit 8 - CCSM wait for interrupt"]
     #[inline(always)]
-    #[must_use]
-    pub fn intwt(&mut self) -> INTWT_W<CMDCTRL_SPEC> {
+    pub fn intwt(&mut self) -> INTWT_W<'_, CMDCTRL_SPEC> {
         INTWT_W::new(self, 8)
     }
     #[doc = "Bit 9 - CCSM wait for end of transfer"]
     #[inline(always)]
-    #[must_use]
-    pub fn pndwt(&mut self) -> PNDWT_W<CMDCTRL_SPEC> {
+    pub fn pndwt(&mut self) -> PNDWT_W<'_, CMDCTRL_SPEC> {
         PNDWT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Command channel state machine"]
     #[inline(always)]
-    #[must_use]
-    pub fn ccsmen(&mut self) -> CCSMEN_W<CMDCTRL_SPEC> {
+    pub fn ccsmen(&mut self) -> CCSMEN_W<'_, CMDCTRL_SPEC> {
         CCSMEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - SD I/O suspend command"]
     #[inline(always)]
-    #[must_use]
-    pub fn iosusp(&mut self) -> IOSUSP_W<CMDCTRL_SPEC> {
+    pub fn iosusp(&mut self) -> IOSUSP_W<'_, CMDCTRL_SPEC> {
         IOSUSP_W::new(self, 11)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for CMDCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cmdctrl::W`](W) writer structure"]
 impl crate::Writable for CMDCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CMDCTRL to value 0"]
-impl crate::Resettable for CMDCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CMDCTRL_SPEC {}

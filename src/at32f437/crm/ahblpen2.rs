@@ -43,20 +43,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - DVP clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn dvplp(&mut self) -> DVPLP_W<AHBLPEN2_SPEC> {
+    pub fn dvplp(&mut self) -> DVPLP_W<'_, AHBLPEN2_SPEC> {
         DVPLP_W::new(self, 0)
     }
     #[doc = "Bit 7 - OTGFS1 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn otgfs1lp(&mut self) -> OTGFS1LP_W<AHBLPEN2_SPEC> {
+    pub fn otgfs1lp(&mut self) -> OTGFS1LP_W<'_, AHBLPEN2_SPEC> {
         OTGFS1LP_W::new(self, 7)
     }
     #[doc = "Bit 15 - SDIO1 clock enable during sleep mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn sdio1lp(&mut self) -> SDIO1LP_W<AHBLPEN2_SPEC> {
+    pub fn sdio1lp(&mut self) -> SDIO1LP_W<'_, AHBLPEN2_SPEC> {
         SDIO1LP_W::new(self, 15)
     }
 }
@@ -70,8 +67,6 @@ impl crate::Readable for AHBLPEN2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahblpen2::W`](W) writer structure"]
 impl crate::Writable for AHBLPEN2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBLPEN2 to value 0x8081"]
 impl crate::Resettable for AHBLPEN2_SPEC {

@@ -18,32 +18,27 @@ impl core::fmt::Debug for crate::generic::Reg<ICLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Capture frame done interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfdic(&mut self) -> CFDIC_W<ICLR_SPEC> {
+    pub fn cfdic(&mut self) -> CFDIC_W<'_, ICLR_SPEC> {
         CFDIC_W::new(self, 0)
     }
     #[doc = "Bit 1 - Data FIFO overrun interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn ovric(&mut self) -> OVRIC_W<ICLR_SPEC> {
+    pub fn ovric(&mut self) -> OVRIC_W<'_, ICLR_SPEC> {
         OVRIC_W::new(self, 1)
     }
     #[doc = "Bit 2 - Embedded synchronization error interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn eseic(&mut self) -> ESEIC_W<ICLR_SPEC> {
+    pub fn eseic(&mut self) -> ESEIC_W<'_, ICLR_SPEC> {
         ESEIC_W::new(self, 2)
     }
     #[doc = "Bit 3 - Vertical synchronization interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn vsic(&mut self) -> VSIC_W<ICLR_SPEC> {
+    pub fn vsic(&mut self) -> VSIC_W<'_, ICLR_SPEC> {
         VSIC_W::new(self, 3)
     }
     #[doc = "Bit 4 - Horizontal synchronization interrupt clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsic(&mut self) -> HSIC_W<ICLR_SPEC> {
+    pub fn hsic(&mut self) -> HSIC_W<'_, ICLR_SPEC> {
         HSIC_W::new(self, 4)
     }
 }
@@ -55,10 +50,6 @@ impl crate::RegisterSpec for ICLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`iclr::W`](W) writer structure"]
 impl crate::Writable for ICLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ICLR to value 0"]
-impl crate::Resettable for ICLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ICLR_SPEC {}

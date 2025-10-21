@@ -163,92 +163,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Capture function enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cap(&mut self) -> CAP_W<CTRL_SPEC> {
+    pub fn cap(&mut self) -> CAP_W<'_, CTRL_SPEC> {
         CAP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Capture fire mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfm(&mut self) -> CFM_W<CTRL_SPEC> {
+    pub fn cfm(&mut self) -> CFM_W<'_, CTRL_SPEC> {
         CFM_W::new(self, 1)
     }
     #[doc = "Bit 2 - Cropping function enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn crp(&mut self) -> CRP_W<CTRL_SPEC> {
+    pub fn crp(&mut self) -> CRP_W<'_, CTRL_SPEC> {
         CRP_W::new(self, 2)
     }
     #[doc = "Bit 3 - JPEG format"]
     #[inline(always)]
-    #[must_use]
-    pub fn jpeg(&mut self) -> JPEG_W<CTRL_SPEC> {
+    pub fn jpeg(&mut self) -> JPEG_W<'_, CTRL_SPEC> {
         JPEG_W::new(self, 3)
     }
     #[doc = "Bit 4 - synchronization mode"]
     #[inline(always)]
-    #[must_use]
-    pub fn sm(&mut self) -> SM_W<CTRL_SPEC> {
+    pub fn sm(&mut self) -> SM_W<'_, CTRL_SPEC> {
         SM_W::new(self, 4)
     }
     #[doc = "Bit 5 - Pixel clock polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn ckp(&mut self) -> CKP_W<CTRL_SPEC> {
+    pub fn ckp(&mut self) -> CKP_W<'_, CTRL_SPEC> {
         CKP_W::new(self, 5)
     }
     #[doc = "Bit 6 - Horizontal synchronization polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn hsp(&mut self) -> HSP_W<CTRL_SPEC> {
+    pub fn hsp(&mut self) -> HSP_W<'_, CTRL_SPEC> {
         HSP_W::new(self, 6)
     }
     #[doc = "Bit 7 - Vertical synchronization polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn vsp(&mut self) -> VSP_W<CTRL_SPEC> {
+    pub fn vsp(&mut self) -> VSP_W<'_, CTRL_SPEC> {
         VSP_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - Basic frame rate control"]
     #[inline(always)]
-    #[must_use]
-    pub fn bfrc(&mut self) -> BFRC_W<CTRL_SPEC> {
+    pub fn bfrc(&mut self) -> BFRC_W<'_, CTRL_SPEC> {
         BFRC_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Pixel data length"]
     #[inline(always)]
-    #[must_use]
-    pub fn pdl(&mut self) -> PDL_W<CTRL_SPEC> {
+    pub fn pdl(&mut self) -> PDL_W<'_, CTRL_SPEC> {
         PDL_W::new(self, 10)
     }
     #[doc = "Bit 14 - DVP enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ena(&mut self) -> ENA_W<CTRL_SPEC> {
+    pub fn ena(&mut self) -> ENA_W<'_, CTRL_SPEC> {
         ENA_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Basic pixel capture/drop control"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcdc(&mut self) -> PCDC_W<CTRL_SPEC> {
+    pub fn pcdc(&mut self) -> PCDC_W<'_, CTRL_SPEC> {
         PCDC_W::new(self, 16)
     }
     #[doc = "Bit 18 - Pixel capture/drop selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcds(&mut self) -> PCDS_W<CTRL_SPEC> {
+    pub fn pcds(&mut self) -> PCDS_W<'_, CTRL_SPEC> {
         PCDS_W::new(self, 18)
     }
     #[doc = "Bit 19 - Line capture/drop control"]
     #[inline(always)]
-    #[must_use]
-    pub fn lcdc(&mut self) -> LCDC_W<CTRL_SPEC> {
+    pub fn lcdc(&mut self) -> LCDC_W<'_, CTRL_SPEC> {
         LCDC_W::new(self, 19)
     }
     #[doc = "Bit 20 - Line capture/drop selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn lcds(&mut self) -> LCDS_W<CTRL_SPEC> {
+    pub fn lcds(&mut self) -> LCDS_W<'_, CTRL_SPEC> {
         LCDS_W::new(self, 20)
     }
 }
@@ -262,10 +247,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
-impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL_SPEC {}

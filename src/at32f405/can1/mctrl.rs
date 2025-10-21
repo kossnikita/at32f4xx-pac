@@ -694,62 +694,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Freeze mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn fzen(&mut self) -> FZEN_W<MCTRL_SPEC> {
+    pub fn fzen(&mut self) -> FZEN_W<'_, MCTRL_SPEC> {
         FZEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Doze mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dzen(&mut self) -> DZEN_W<MCTRL_SPEC> {
+    pub fn dzen(&mut self) -> DZEN_W<'_, MCTRL_SPEC> {
         DZEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Multiple message sending sequence rule"]
     #[inline(always)]
-    #[must_use]
-    pub fn mmssr(&mut self) -> MMSSR_W<MCTRL_SPEC> {
+    pub fn mmssr(&mut self) -> MMSSR_W<'_, MCTRL_SPEC> {
         MMSSR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Message discarding rule select when overflow"]
     #[inline(always)]
-    #[must_use]
-    pub fn mdrsel(&mut self) -> MDRSEL_W<MCTRL_SPEC> {
+    pub fn mdrsel(&mut self) -> MDRSEL_W<'_, MCTRL_SPEC> {
         MDRSEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - Prohibit retransmission when sending fails enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn prsfen(&mut self) -> PRSFEN_W<MCTRL_SPEC> {
+    pub fn prsfen(&mut self) -> PRSFEN_W<'_, MCTRL_SPEC> {
         PRSFEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Automatic exit doze mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn aeden(&mut self) -> AEDEN_W<MCTRL_SPEC> {
+    pub fn aeden(&mut self) -> AEDEN_W<'_, MCTRL_SPEC> {
         AEDEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Automatic exit bus-off enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn aeboen(&mut self) -> AEBOEN_W<MCTRL_SPEC> {
+    pub fn aeboen(&mut self) -> AEBOEN_W<'_, MCTRL_SPEC> {
         AEBOEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Time triggered communication mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn ttcen(&mut self) -> TTCEN_W<MCTRL_SPEC> {
+    pub fn ttcen(&mut self) -> TTCEN_W<'_, MCTRL_SPEC> {
         TTCEN_W::new(self, 7)
     }
     #[doc = "Bit 15 - Software partial reset"]
     #[inline(always)]
-    #[must_use]
-    pub fn sprst(&mut self) -> SPRST_W<MCTRL_SPEC> {
+    pub fn sprst(&mut self) -> SPRST_W<'_, MCTRL_SPEC> {
         SPRST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Prohibit transmission when debug"]
     #[inline(always)]
-    #[must_use]
-    pub fn ptd(&mut self) -> PTD_W<MCTRL_SPEC> {
+    pub fn ptd(&mut self) -> PTD_W<'_, MCTRL_SPEC> {
         PTD_W::new(self, 16)
     }
 }
@@ -763,7 +753,6 @@ impl crate::Readable for MCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mctrl::W`](W) writer structure"]
 impl crate::Writable for MCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x8000;
 }
 #[doc = "`reset()` method sets MCTRL to value 0x0001_0002"]

@@ -24,6 +24,4 @@ impl crate::RegisterSpec for RSPCMD_SPEC {
 #[doc = "`read()` method returns [`rspcmd::R`](R) reader structure"]
 impl crate::Readable for RSPCMD_SPEC {}
 #[doc = "`reset()` method sets RSPCMD to value 0"]
-impl crate::Resettable for RSPCMD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RSPCMD_SPEC {}

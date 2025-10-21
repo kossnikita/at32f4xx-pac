@@ -93,50 +93,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - I2S channel bit num"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2scbn(&mut self) -> I2SCBN_W<I2SCTRL_SPEC> {
+    pub fn i2scbn(&mut self) -> I2SCBN_W<'_, I2SCTRL_SPEC> {
         I2SCBN_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - I2S data bit num"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2sdbn(&mut self) -> I2SDBN_W<I2SCTRL_SPEC> {
+    pub fn i2sdbn(&mut self) -> I2SDBN_W<'_, I2SCTRL_SPEC> {
         I2SDBN_W::new(self, 1)
     }
     #[doc = "Bit 3 - I2S clock polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2sclkpol(&mut self) -> I2SCLKPOL_W<I2SCTRL_SPEC> {
+    pub fn i2sclkpol(&mut self) -> I2SCLKPOL_W<'_, I2SCTRL_SPEC> {
         I2SCLKPOL_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - I2S standard select"]
     #[inline(always)]
-    #[must_use]
-    pub fn stdsel(&mut self) -> STDSEL_W<I2SCTRL_SPEC> {
+    pub fn stdsel(&mut self) -> STDSEL_W<'_, I2SCTRL_SPEC> {
         STDSEL_W::new(self, 4)
     }
     #[doc = "Bit 7 - PCM frame synchronization select"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcmfssel(&mut self) -> PCMFSSEL_W<I2SCTRL_SPEC> {
+    pub fn pcmfssel(&mut self) -> PCMFSSEL_W<'_, I2SCTRL_SPEC> {
         PCMFSSEL_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - I2S operation select"]
     #[inline(always)]
-    #[must_use]
-    pub fn opersel(&mut self) -> OPERSEL_W<I2SCTRL_SPEC> {
+    pub fn opersel(&mut self) -> OPERSEL_W<'_, I2SCTRL_SPEC> {
         OPERSEL_W::new(self, 8)
     }
     #[doc = "Bit 10 - I2S Enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2sen(&mut self) -> I2SEN_W<I2SCTRL_SPEC> {
+    pub fn i2sen(&mut self) -> I2SEN_W<'_, I2SCTRL_SPEC> {
         I2SEN_W::new(self, 10)
     }
     #[doc = "Bit 13 - I2S full duplex mode enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2sfdupen(&mut self) -> I2SFDUPEN_W<I2SCTRL_SPEC> {
+    pub fn i2sfdupen(&mut self) -> I2SFDUPEN_W<'_, I2SCTRL_SPEC> {
         I2SFDUPEN_W::new(self, 13)
     }
 }
@@ -150,10 +142,6 @@ impl crate::Readable for I2SCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2sctrl::W`](W) writer structure"]
 impl crate::Writable for I2SCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets I2SCTRL to value 0"]
-impl crate::Resettable for I2SCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for I2SCTRL_SPEC {}

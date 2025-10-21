@@ -910,86 +910,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SPI1 muxing bit0"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi1_mux0(&mut self) -> SPI1_MUX0_W<REMAP_SPEC> {
+    pub fn spi1_mux0(&mut self) -> SPI1_MUX0_W<'_, REMAP_SPEC> {
         SPI1_MUX0_W::new(self, 0)
     }
     #[doc = "Bit 1 - I2C1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn i2c1_mux(&mut self) -> I2C1_MUX_W<REMAP_SPEC> {
+    pub fn i2c1_mux(&mut self) -> I2C1_MUX_W<'_, REMAP_SPEC> {
         I2C1_MUX_W::new(self, 1)
     }
     #[doc = "Bit 2 - USART1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart1_mux(&mut self) -> USART1_MUX_W<REMAP_SPEC> {
+    pub fn usart1_mux(&mut self) -> USART1_MUX_W<'_, REMAP_SPEC> {
         USART1_MUX_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - USART3 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn usart3_mux(&mut self) -> USART3_MUX_W<REMAP_SPEC> {
+    pub fn usart3_mux(&mut self) -> USART3_MUX_W<'_, REMAP_SPEC> {
         USART3_MUX_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - TMR1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1_mux(&mut self) -> TMR1_MUX_W<REMAP_SPEC> {
+    pub fn tmr1_mux(&mut self) -> TMR1_MUX_W<'_, REMAP_SPEC> {
         TMR1_MUX_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - TMR2 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr2_mux(&mut self) -> TMR2_MUX_W<REMAP_SPEC> {
+    pub fn tmr2_mux(&mut self) -> TMR2_MUX_W<'_, REMAP_SPEC> {
         TMR2_MUX_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - TMR3 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr3_mux(&mut self) -> TMR3_MUX_W<REMAP_SPEC> {
+    pub fn tmr3_mux(&mut self) -> TMR3_MUX_W<'_, REMAP_SPEC> {
         TMR3_MUX_W::new(self, 10)
     }
     #[doc = "Bits 13:14 - CAN1 muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn can_mux(&mut self) -> CAN_MUX_W<REMAP_SPEC> {
+    pub fn can_mux(&mut self) -> CAN_MUX_W<'_, REMAP_SPEC> {
         CAN_MUX_W::new(self, 13)
     }
     #[doc = "Bit 15 - PD0/PD1 muxing on OSCIN/OSCOUT"]
     #[inline(always)]
-    #[must_use]
-    pub fn pd01_mux(&mut self) -> PD01_MUX_W<REMAP_SPEC> {
+    pub fn pd01_mux(&mut self) -> PD01_MUX_W<'_, REMAP_SPEC> {
         PD01_MUX_W::new(self, 15)
     }
     #[doc = "Bit 16 - TMR5 channel4 internal muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr5ch4_mux(&mut self) -> TMR5CH4_MUX_W<REMAP_SPEC> {
+    pub fn tmr5ch4_mux(&mut self) -> TMR5CH4_MUX_W<'_, REMAP_SPEC> {
         TMR5CH4_MUX_W::new(self, 16)
     }
     #[doc = "Bit 17 - ADC1 external trigger preempted conversion muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc1_etp_mux(&mut self) -> ADC1_ETP_MUX_W<REMAP_SPEC> {
+    pub fn adc1_etp_mux(&mut self) -> ADC1_ETP_MUX_W<'_, REMAP_SPEC> {
         ADC1_ETP_MUX_W::new(self, 17)
     }
     #[doc = "Bit 18 - ADC1 external trigger ordinary conversion muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn adc1_eto_mux(&mut self) -> ADC1_ETO_MUX_W<REMAP_SPEC> {
+    pub fn adc1_eto_mux(&mut self) -> ADC1_ETO_MUX_W<'_, REMAP_SPEC> {
         ADC1_ETO_MUX_W::new(self, 18)
     }
     #[doc = "Bits 24:26 - SWD JTAG muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn swjtag_mux(&mut self) -> SWJTAG_MUX_W<REMAP_SPEC> {
+    pub fn swjtag_mux(&mut self) -> SWJTAG_MUX_W<'_, REMAP_SPEC> {
         SWJTAG_MUX_W::new(self, 24)
     }
     #[doc = "Bit 31 - SPI1 muxing bit1"]
     #[inline(always)]
-    #[must_use]
-    pub fn spi1_mux1(&mut self) -> SPI1_MUX1_W<REMAP_SPEC> {
+    pub fn spi1_mux1(&mut self) -> SPI1_MUX1_W<'_, REMAP_SPEC> {
         SPI1_MUX1_W::new(self, 31)
     }
 }
@@ -1003,10 +989,6 @@ impl crate::Readable for REMAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap::W`](W) writer structure"]
 impl crate::Writable for REMAP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP to value 0"]
-impl crate::Resettable for REMAP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP_SPEC {}

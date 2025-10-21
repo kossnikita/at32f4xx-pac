@@ -313,116 +313,98 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOMC8` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc(&mut self, n: u8) -> IOMC_W<CFGHR_SPEC> {
+    pub fn iomc(&mut self, n: u8) -> IOMC_W<'_, CFGHR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         IOMC_W::new(self, n * 4)
     }
     #[doc = "Bits 0:1 - Port n.8 mode configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc8(&mut self) -> IOMC_W<CFGHR_SPEC> {
+    pub fn iomc8(&mut self) -> IOMC_W<'_, CFGHR_SPEC> {
         IOMC_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Port n.9 mode configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc9(&mut self) -> IOMC_W<CFGHR_SPEC> {
+    pub fn iomc9(&mut self) -> IOMC_W<'_, CFGHR_SPEC> {
         IOMC_W::new(self, 4)
     }
     #[doc = "Bits 8:9 - Port n.10 mode configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc10(&mut self) -> IOMC_W<CFGHR_SPEC> {
+    pub fn iomc10(&mut self) -> IOMC_W<'_, CFGHR_SPEC> {
         IOMC_W::new(self, 8)
     }
     #[doc = "Bits 12:13 - Port n.11 mode configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc11(&mut self) -> IOMC_W<CFGHR_SPEC> {
+    pub fn iomc11(&mut self) -> IOMC_W<'_, CFGHR_SPEC> {
         IOMC_W::new(self, 12)
     }
     #[doc = "Bits 16:17 - Port n.12 mode configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc12(&mut self) -> IOMC_W<CFGHR_SPEC> {
+    pub fn iomc12(&mut self) -> IOMC_W<'_, CFGHR_SPEC> {
         IOMC_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - Port n.13 mode configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc13(&mut self) -> IOMC_W<CFGHR_SPEC> {
+    pub fn iomc13(&mut self) -> IOMC_W<'_, CFGHR_SPEC> {
         IOMC_W::new(self, 20)
     }
     #[doc = "Bits 24:25 - Port n.14 mode configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc14(&mut self) -> IOMC_W<CFGHR_SPEC> {
+    pub fn iomc14(&mut self) -> IOMC_W<'_, CFGHR_SPEC> {
         IOMC_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - Port n.15 mode configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iomc15(&mut self) -> IOMC_W<CFGHR_SPEC> {
+    pub fn iomc15(&mut self) -> IOMC_W<'_, CFGHR_SPEC> {
         IOMC_W::new(self, 28)
     }
     #[doc = "Port n.(8-15) function configurate bits"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `IOFC8` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn iofc(&mut self, n: u8) -> IOFC_W<CFGHR_SPEC> {
+    pub fn iofc(&mut self, n: u8) -> IOFC_W<'_, CFGHR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         IOFC_W::new(self, n * 4 + 2)
     }
     #[doc = "Bits 2:3 - Port n.8 function configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iofc8(&mut self) -> IOFC_W<CFGHR_SPEC> {
+    pub fn iofc8(&mut self) -> IOFC_W<'_, CFGHR_SPEC> {
         IOFC_W::new(self, 2)
     }
     #[doc = "Bits 6:7 - Port n.9 function configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iofc9(&mut self) -> IOFC_W<CFGHR_SPEC> {
+    pub fn iofc9(&mut self) -> IOFC_W<'_, CFGHR_SPEC> {
         IOFC_W::new(self, 6)
     }
     #[doc = "Bits 10:11 - Port n.10 function configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iofc10(&mut self) -> IOFC_W<CFGHR_SPEC> {
+    pub fn iofc10(&mut self) -> IOFC_W<'_, CFGHR_SPEC> {
         IOFC_W::new(self, 10)
     }
     #[doc = "Bits 14:15 - Port n.11 function configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iofc11(&mut self) -> IOFC_W<CFGHR_SPEC> {
+    pub fn iofc11(&mut self) -> IOFC_W<'_, CFGHR_SPEC> {
         IOFC_W::new(self, 14)
     }
     #[doc = "Bits 18:19 - Port n.12 function configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iofc12(&mut self) -> IOFC_W<CFGHR_SPEC> {
+    pub fn iofc12(&mut self) -> IOFC_W<'_, CFGHR_SPEC> {
         IOFC_W::new(self, 18)
     }
     #[doc = "Bits 22:23 - Port n.13 function configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iofc13(&mut self) -> IOFC_W<CFGHR_SPEC> {
+    pub fn iofc13(&mut self) -> IOFC_W<'_, CFGHR_SPEC> {
         IOFC_W::new(self, 22)
     }
     #[doc = "Bits 26:27 - Port n.14 function configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iofc14(&mut self) -> IOFC_W<CFGHR_SPEC> {
+    pub fn iofc14(&mut self) -> IOFC_W<'_, CFGHR_SPEC> {
         IOFC_W::new(self, 26)
     }
     #[doc = "Bits 30:31 - Port n.15 function configurate bits"]
     #[inline(always)]
-    #[must_use]
-    pub fn iofc15(&mut self) -> IOFC_W<CFGHR_SPEC> {
+    pub fn iofc15(&mut self) -> IOFC_W<'_, CFGHR_SPEC> {
         IOFC_W::new(self, 30)
     }
 }
@@ -436,8 +418,6 @@ impl crate::Readable for CFGHR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfghr::W`](W) writer structure"]
 impl crate::Writable for CFGHR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFGHR to value 0x4444_4444"]
 impl crate::Resettable for CFGHR_SPEC {

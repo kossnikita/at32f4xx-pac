@@ -374,38 +374,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Input clock frequency"]
     #[inline(always)]
-    #[must_use]
-    pub fn clkfreq(&mut self) -> CLKFREQ_W<CTRL2_SPEC> {
+    pub fn clkfreq(&mut self) -> CLKFREQ_W<'_, CTRL2_SPEC> {
         CLKFREQ_W::new(self, 0)
     }
     #[doc = "Bit 8 - Error interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn errien(&mut self) -> ERRIEN_W<CTRL2_SPEC> {
+    pub fn errien(&mut self) -> ERRIEN_W<'_, CTRL2_SPEC> {
         ERRIEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Event interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn evtien(&mut self) -> EVTIEN_W<CTRL2_SPEC> {
+    pub fn evtien(&mut self) -> EVTIEN_W<'_, CTRL2_SPEC> {
         EVTIEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Data transmission interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dataien(&mut self) -> DATAIEN_W<CTRL2_SPEC> {
+    pub fn dataien(&mut self) -> DATAIEN_W<'_, CTRL2_SPEC> {
         DATAIEN_W::new(self, 10)
     }
     #[doc = "Bit 11 - DMA transfer enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaen(&mut self) -> DMAEN_W<CTRL2_SPEC> {
+    pub fn dmaen(&mut self) -> DMAEN_W<'_, CTRL2_SPEC> {
         DMAEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - DMA transfer end indication"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaend(&mut self) -> DMAEND_W<CTRL2_SPEC> {
+    pub fn dmaend(&mut self) -> DMAEND_W<'_, CTRL2_SPEC> {
         DMAEND_W::new(self, 12)
     }
 }
@@ -419,10 +413,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
-impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL2_SPEC {}

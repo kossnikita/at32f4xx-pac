@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - TMR1 BK1 CMP muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1_bk1_cmp_gmux(&mut self) -> TMR1_BK1_CMP_GMUX_W<REMAP8_SPEC> {
+    pub fn tmr1_bk1_cmp_gmux(&mut self) -> TMR1_BK1_CMP_GMUX_W<'_, REMAP8_SPEC> {
         TMR1_BK1_CMP_GMUX_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - TMR1 CH1 CMP muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr1_ch1_cmp_gmux(&mut self) -> TMR1_CH1_CMP_GMUX_W<REMAP8_SPEC> {
+    pub fn tmr1_ch1_cmp_gmux(&mut self) -> TMR1_CH1_CMP_GMUX_W<'_, REMAP8_SPEC> {
         TMR1_CH1_CMP_GMUX_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - TMR2 CH4 CMP muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr2_ch4_cmp_gmux(&mut self) -> TMR2_CH4_CMP_GMUX_W<REMAP8_SPEC> {
+    pub fn tmr2_ch4_cmp_gmux(&mut self) -> TMR2_CH4_CMP_GMUX_W<'_, REMAP8_SPEC> {
         TMR2_CH4_CMP_GMUX_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - TMR3 CH1 CMP muxing"]
     #[inline(always)]
-    #[must_use]
-    pub fn tmr3_ch1_cmp_gmux(&mut self) -> TMR3_CH1_CMP_GMUX_W<REMAP8_SPEC> {
+    pub fn tmr3_ch1_cmp_gmux(&mut self) -> TMR3_CH1_CMP_GMUX_W<'_, REMAP8_SPEC> {
         TMR3_CH1_CMP_GMUX_W::new(self, 6)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for REMAP8_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`remap8::W`](W) writer structure"]
 impl crate::Writable for REMAP8_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REMAP8 to value 0"]
-impl crate::Resettable for REMAP8_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REMAP8_SPEC {}

@@ -219,20 +219,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Receive FIFO full flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn ff(&mut self) -> FF_W<RF_SPEC> {
+    pub fn ff(&mut self) -> FF_W<'_, RF_SPEC> {
         FF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Receive FIFO overflow flag"]
     #[inline(always)]
-    #[must_use]
-    pub fn of(&mut self) -> OF_W<RF_SPEC> {
+    pub fn of(&mut self) -> OF_W<'_, RF_SPEC> {
         OF_W::new(self, 4)
     }
     #[doc = "Bit 5 - Receive FIFO release"]
     #[inline(always)]
-    #[must_use]
-    pub fn r(&mut self) -> R_W<RF_SPEC> {
+    pub fn r(&mut self) -> R_W<'_, RF_SPEC> {
         R_W::new(self, 5)
     }
 }
@@ -246,10 +243,7 @@ impl crate::Readable for RF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rf::W`](W) writer structure"]
 impl crate::Writable for RF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x38;
 }
 #[doc = "`reset()` method sets RF%s to value 0"]
-impl crate::Resettable for RF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RF_SPEC {}

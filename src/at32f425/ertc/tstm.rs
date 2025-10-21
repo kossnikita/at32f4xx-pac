@@ -72,6 +72,4 @@ impl crate::RegisterSpec for TSTM_SPEC {
 #[doc = "`read()` method returns [`tstm::R`](R) reader structure"]
 impl crate::Readable for TSTM_SPEC {}
 #[doc = "`reset()` method sets TSTM to value 0"]
-impl crate::Resettable for TSTM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TSTM_SPEC {}

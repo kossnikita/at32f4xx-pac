@@ -203,116 +203,97 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Falling polarity event configuration bit of line 0"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp0(&mut self) -> FP0_W<POLCFG2_SPEC> {
+    pub fn fp0(&mut self) -> FP0_W<'_, POLCFG2_SPEC> {
         FP0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Falling polarity event configuration bit of line 1"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp1(&mut self) -> FP1_W<POLCFG2_SPEC> {
+    pub fn fp1(&mut self) -> FP1_W<'_, POLCFG2_SPEC> {
         FP1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Falling polarity event configuration bit of line 2"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp2(&mut self) -> FP2_W<POLCFG2_SPEC> {
+    pub fn fp2(&mut self) -> FP2_W<'_, POLCFG2_SPEC> {
         FP2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Falling polarity event configuration bit of line 3"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp3(&mut self) -> FP3_W<POLCFG2_SPEC> {
+    pub fn fp3(&mut self) -> FP3_W<'_, POLCFG2_SPEC> {
         FP3_W::new(self, 3)
     }
     #[doc = "Bit 4 - Falling polarity event configuration bit of line 4"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp4(&mut self) -> FP4_W<POLCFG2_SPEC> {
+    pub fn fp4(&mut self) -> FP4_W<'_, POLCFG2_SPEC> {
         FP4_W::new(self, 4)
     }
     #[doc = "Bit 5 - Falling polarity event configuration bit of line 5"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp5(&mut self) -> FP5_W<POLCFG2_SPEC> {
+    pub fn fp5(&mut self) -> FP5_W<'_, POLCFG2_SPEC> {
         FP5_W::new(self, 5)
     }
     #[doc = "Bit 6 - Falling polarity event configuration bit of line 6"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp6(&mut self) -> FP6_W<POLCFG2_SPEC> {
+    pub fn fp6(&mut self) -> FP6_W<'_, POLCFG2_SPEC> {
         FP6_W::new(self, 6)
     }
     #[doc = "Bit 7 - Falling polarity event configuration bit of line 7"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp7(&mut self) -> FP7_W<POLCFG2_SPEC> {
+    pub fn fp7(&mut self) -> FP7_W<'_, POLCFG2_SPEC> {
         FP7_W::new(self, 7)
     }
     #[doc = "Bit 8 - Falling polarity event configuration bit of line 8"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp8(&mut self) -> FP8_W<POLCFG2_SPEC> {
+    pub fn fp8(&mut self) -> FP8_W<'_, POLCFG2_SPEC> {
         FP8_W::new(self, 8)
     }
     #[doc = "Bit 9 - Falling polarity event configuration bit of line 9"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp9(&mut self) -> FP9_W<POLCFG2_SPEC> {
+    pub fn fp9(&mut self) -> FP9_W<'_, POLCFG2_SPEC> {
         FP9_W::new(self, 9)
     }
     #[doc = "Bit 10 - Falling polarity event configuration bit of line 10"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp10(&mut self) -> FP10_W<POLCFG2_SPEC> {
+    pub fn fp10(&mut self) -> FP10_W<'_, POLCFG2_SPEC> {
         FP10_W::new(self, 10)
     }
     #[doc = "Bit 11 - Falling polarity event configuration bit of line 11"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp11(&mut self) -> FP11_W<POLCFG2_SPEC> {
+    pub fn fp11(&mut self) -> FP11_W<'_, POLCFG2_SPEC> {
         FP11_W::new(self, 11)
     }
     #[doc = "Bit 12 - Falling polarity event configuration bit of line 12"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp12(&mut self) -> FP12_W<POLCFG2_SPEC> {
+    pub fn fp12(&mut self) -> FP12_W<'_, POLCFG2_SPEC> {
         FP12_W::new(self, 12)
     }
     #[doc = "Bit 13 - Falling polarity event configuration bit of line 13"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp13(&mut self) -> FP13_W<POLCFG2_SPEC> {
+    pub fn fp13(&mut self) -> FP13_W<'_, POLCFG2_SPEC> {
         FP13_W::new(self, 13)
     }
     #[doc = "Bit 14 - Falling polarity event configuration bit of line 14"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp14(&mut self) -> FP14_W<POLCFG2_SPEC> {
+    pub fn fp14(&mut self) -> FP14_W<'_, POLCFG2_SPEC> {
         FP14_W::new(self, 14)
     }
     #[doc = "Bit 15 - Falling polarity event configuration bit of line 15"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp15(&mut self) -> FP15_W<POLCFG2_SPEC> {
+    pub fn fp15(&mut self) -> FP15_W<'_, POLCFG2_SPEC> {
         FP15_W::new(self, 15)
     }
     #[doc = "Bit 16 - Falling polarity event configuration bit of line 16"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp16(&mut self) -> FP16_W<POLCFG2_SPEC> {
+    pub fn fp16(&mut self) -> FP16_W<'_, POLCFG2_SPEC> {
         FP16_W::new(self, 16)
     }
     #[doc = "Bit 17 - Falling polarity event configuration bit of line 17"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp17(&mut self) -> FP17_W<POLCFG2_SPEC> {
+    pub fn fp17(&mut self) -> FP17_W<'_, POLCFG2_SPEC> {
         FP17_W::new(self, 17)
     }
     #[doc = "Bit 18 - Falling polarity event configuration bit of line 18"]
     #[inline(always)]
-    #[must_use]
-    pub fn fp18(&mut self) -> FP18_W<POLCFG2_SPEC> {
+    pub fn fp18(&mut self) -> FP18_W<'_, POLCFG2_SPEC> {
         FP18_W::new(self, 18)
     }
 }
@@ -326,10 +307,6 @@ impl crate::Readable for POLCFG2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`polcfg2::W`](W) writer structure"]
 impl crate::Writable for POLCFG2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets POLCFG2 to value 0"]
-impl crate::Resettable for POLCFG2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for POLCFG2_SPEC {}

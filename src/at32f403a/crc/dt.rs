@@ -18,8 +18,6 @@ impl crate::Readable for DT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dt::W`](W) writer structure"]
 impl crate::Writable for DT_SPEC {
     type Safety = crate::Safe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DT to value 0xffff_ffff"]
 impl crate::Resettable for DT_SPEC {

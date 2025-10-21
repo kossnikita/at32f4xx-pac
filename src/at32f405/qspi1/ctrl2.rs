@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - DMA handshake enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmaen(&mut self) -> DMAEN_W<CTRL2_SPEC> {
+    pub fn dmaen(&mut self) -> DMAEN_W<'_, CTRL2_SPEC> {
         DMAEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Command complete interrupt enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdie(&mut self) -> CMDIE_W<CTRL2_SPEC> {
+    pub fn cmdie(&mut self) -> CMDIE_W<'_, CTRL2_SPEC> {
         CMDIE_W::new(self, 1)
     }
     #[doc = "Bits 8:9 - TxFIFO thod"]
     #[inline(always)]
-    #[must_use]
-    pub fn txfifothod(&mut self) -> TXFIFOTHOD_W<CTRL2_SPEC> {
+    pub fn txfifothod(&mut self) -> TXFIFOTHOD_W<'_, CTRL2_SPEC> {
         TXFIFOTHOD_W::new(self, 8)
     }
     #[doc = "Bits 12:13 - RxFIFO thod"]
     #[inline(always)]
-    #[must_use]
-    pub fn rxfifothod(&mut self) -> RXFIFOTHOD_W<CTRL2_SPEC> {
+    pub fn rxfifothod(&mut self) -> RXFIFOTHOD_W<'_, CTRL2_SPEC> {
         RXFIFOTHOD_W::new(self, 12)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0x01"]
 impl crate::Resettable for CTRL2_SPEC {

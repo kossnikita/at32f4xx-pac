@@ -123,68 +123,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enhanced image scaling resize enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn eisre(&mut self) -> EISRE_W<ACTRL_SPEC> {
+    pub fn eisre(&mut self) -> EISRE_W<'_, ACTRL_SPEC> {
         EISRE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enhanced frame rate control enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn efrce(&mut self) -> EFRCE_W<ACTRL_SPEC> {
+    pub fn efrce(&mut self) -> EFRCE_W<'_, ACTRL_SPEC> {
         EFRCE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Monochrome image binarization enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn mibe(&mut self) -> MIBE_W<ACTRL_SPEC> {
+    pub fn mibe(&mut self) -> MIBE_W<'_, ACTRL_SPEC> {
         MIBE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Basic pixel capture/drop extended selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn pcdes(&mut self) -> PCDES_W<ACTRL_SPEC> {
+    pub fn pcdes(&mut self) -> PCDES_W<'_, ACTRL_SPEC> {
         PCDES_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - Enhanced function data format"]
     #[inline(always)]
-    #[must_use]
-    pub fn efdf(&mut self) -> EFDF_W<ACTRL_SPEC> {
+    pub fn efdf(&mut self) -> EFDF_W<'_, ACTRL_SPEC> {
         EFDF_W::new(self, 4)
     }
     #[doc = "Bit 6 - Enhanced function data format management"]
     #[inline(always)]
-    #[must_use]
-    pub fn efdm(&mut self) -> EFDM_W<ACTRL_SPEC> {
+    pub fn efdm(&mut self) -> EFDM_W<'_, ACTRL_SPEC> {
         EFDM_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Input data un-used number"]
     #[inline(always)]
-    #[must_use]
-    pub fn idun(&mut self) -> IDUN_W<ACTRL_SPEC> {
+    pub fn idun(&mut self) -> IDUN_W<'_, ACTRL_SPEC> {
         IDUN_W::new(self, 8)
     }
     #[doc = "Bit 10 - Input data un-used setting"]
     #[inline(always)]
-    #[must_use]
-    pub fn idus(&mut self) -> IDUS_W<ACTRL_SPEC> {
+    pub fn idus(&mut self) -> IDUS_W<'_, ACTRL_SPEC> {
         IDUS_W::new(self, 10)
     }
     #[doc = "Bit 12 - DMA burst transfer configuration"]
     #[inline(always)]
-    #[must_use]
-    pub fn dmabt(&mut self) -> DMABT_W<ACTRL_SPEC> {
+    pub fn dmabt(&mut self) -> DMABT_W<'_, ACTRL_SPEC> {
         DMABT_W::new(self, 12)
     }
     #[doc = "Bit 16 - Horizontal synchonization event and interrupt definition"]
     #[inline(always)]
-    #[must_use]
-    pub fn hseid(&mut self) -> HSEID_W<ACTRL_SPEC> {
+    pub fn hseid(&mut self) -> HSEID_W<'_, ACTRL_SPEC> {
         HSEID_W::new(self, 16)
     }
     #[doc = "Bit 17 - Vertical synchonization event and interrupt definition"]
     #[inline(always)]
-    #[must_use]
-    pub fn vseid(&mut self) -> VSEID_W<ACTRL_SPEC> {
+    pub fn vseid(&mut self) -> VSEID_W<'_, ACTRL_SPEC> {
         VSEID_W::new(self, 17)
     }
 }
@@ -198,10 +187,6 @@ impl crate::Readable for ACTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`actrl::W`](W) writer structure"]
 impl crate::Writable for ACTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ACTRL to value 0"]
-impl crate::Resettable for ACTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ACTRL_SPEC {}

@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Decrease ERTC clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn dec(&mut self) -> DEC_W<SCAL_SPEC> {
+    pub fn dec(&mut self) -> DEC_W<'_, SCAL_SPEC> {
         DEC_W::new(self, 0)
     }
     #[doc = "Bit 13 - 16 second calibration period"]
     #[inline(always)]
-    #[must_use]
-    pub fn cal16(&mut self) -> CAL16_W<SCAL_SPEC> {
+    pub fn cal16(&mut self) -> CAL16_W<'_, SCAL_SPEC> {
         CAL16_W::new(self, 13)
     }
     #[doc = "Bit 14 - 8-second calibration period"]
     #[inline(always)]
-    #[must_use]
-    pub fn cal8(&mut self) -> CAL8_W<SCAL_SPEC> {
+    pub fn cal8(&mut self) -> CAL8_W<'_, SCAL_SPEC> {
         CAL8_W::new(self, 14)
     }
     #[doc = "Bit 15 - Add ERTC clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn add(&mut self) -> ADD_W<SCAL_SPEC> {
+    pub fn add(&mut self) -> ADD_W<'_, SCAL_SPEC> {
         ADD_W::new(self, 15)
     }
 }
@@ -86,10 +82,6 @@ impl crate::Readable for SCAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`scal::W`](W) writer structure"]
 impl crate::Writable for SCAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SCAL to value 0"]
-impl crate::Resettable for SCAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SCAL_SPEC {}

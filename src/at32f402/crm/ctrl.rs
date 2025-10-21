@@ -530,38 +530,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - High speed internal clock enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hicken(&mut self) -> HICKEN_W<CTRL_SPEC> {
+    pub fn hicken(&mut self) -> HICKEN_W<'_, CTRL_SPEC> {
         HICKEN_W::new(self, 0)
     }
     #[doc = "Bits 2:7 - High speed internal clock trimming"]
     #[inline(always)]
-    #[must_use]
-    pub fn hicktrim(&mut self) -> HICKTRIM_W<CTRL_SPEC> {
+    pub fn hicktrim(&mut self) -> HICKTRIM_W<'_, CTRL_SPEC> {
         HICKTRIM_W::new(self, 2)
     }
     #[doc = "Bit 16 - High speed exernal crystal enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn hexten(&mut self) -> HEXTEN_W<CTRL_SPEC> {
+    pub fn hexten(&mut self) -> HEXTEN_W<'_, CTRL_SPEC> {
         HEXTEN_W::new(self, 16)
     }
     #[doc = "Bit 18 - High speed exernal crystal bypass"]
     #[inline(always)]
-    #[must_use]
-    pub fn hextbyps(&mut self) -> HEXTBYPS_W<CTRL_SPEC> {
+    pub fn hextbyps(&mut self) -> HEXTBYPS_W<'_, CTRL_SPEC> {
         HEXTBYPS_W::new(self, 18)
     }
     #[doc = "Bit 19 - Clock failure detection enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cfden(&mut self) -> CFDEN_W<CTRL_SPEC> {
+    pub fn cfden(&mut self) -> CFDEN_W<'_, CTRL_SPEC> {
         CFDEN_W::new(self, 19)
     }
     #[doc = "Bit 24 - PLL enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn pllen(&mut self) -> PLLEN_W<CTRL_SPEC> {
+    pub fn pllen(&mut self) -> PLLEN_W<'_, CTRL_SPEC> {
         PLLEN_W::new(self, 24)
     }
 }
@@ -575,8 +569,6 @@ impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x83"]
 impl crate::Resettable for CTRL_SPEC {

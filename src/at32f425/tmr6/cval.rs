@@ -18,10 +18,6 @@ impl crate::Readable for CVAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cval::W`](W) writer structure"]
 impl crate::Writable for CVAL_SPEC {
     type Safety = crate::Safe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
 #[doc = "`reset()` method sets CVAL to value 0"]
-impl crate::Resettable for CVAL_SPEC {
-    const RESET_VALUE: u16 = 0;
-}
+impl crate::Resettable for CVAL_SPEC {}

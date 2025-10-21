@@ -287,124 +287,106 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1EN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cen(&mut self, n: u8) -> CEN_W<CCTRL_SPEC> {
+    pub fn cen(&mut self, n: u8) -> CEN_W<'_, CCTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CEN_W::new(self, n * 4)
     }
     #[doc = "Bit 0 - Channel 1 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1en(&mut self) -> CEN_W<CCTRL_SPEC> {
+    pub fn c1en(&mut self) -> CEN_W<'_, CCTRL_SPEC> {
         CEN_W::new(self, 0)
     }
     #[doc = "Bit 4 - Channel 2 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2en(&mut self) -> CEN_W<CCTRL_SPEC> {
+    pub fn c2en(&mut self) -> CEN_W<'_, CCTRL_SPEC> {
         CEN_W::new(self, 4)
     }
     #[doc = "Bit 8 - Channel 3 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3en(&mut self) -> CEN_W<CCTRL_SPEC> {
+    pub fn c3en(&mut self) -> CEN_W<'_, CCTRL_SPEC> {
         CEN_W::new(self, 8)
     }
     #[doc = "Bit 12 - Channel 4 enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c4en(&mut self) -> CEN_W<CCTRL_SPEC> {
+    pub fn c4en(&mut self) -> CEN_W<'_, CCTRL_SPEC> {
         CEN_W::new(self, 12)
     }
     #[doc = "Channel (1-4) polarity"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1P` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cp(&mut self, n: u8) -> CP_W<CCTRL_SPEC> {
+    pub fn cp(&mut self, n: u8) -> CP_W<'_, CCTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CP_W::new(self, n * 4 + 1)
     }
     #[doc = "Bit 1 - Channel 1 polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1p(&mut self) -> CP_W<CCTRL_SPEC> {
+    pub fn c1p(&mut self) -> CP_W<'_, CCTRL_SPEC> {
         CP_W::new(self, 1)
     }
     #[doc = "Bit 5 - Channel 2 polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2p(&mut self) -> CP_W<CCTRL_SPEC> {
+    pub fn c2p(&mut self) -> CP_W<'_, CCTRL_SPEC> {
         CP_W::new(self, 5)
     }
     #[doc = "Bit 9 - Channel 3 polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3p(&mut self) -> CP_W<CCTRL_SPEC> {
+    pub fn c3p(&mut self) -> CP_W<'_, CCTRL_SPEC> {
         CP_W::new(self, 9)
     }
     #[doc = "Bit 13 - Channel 4 polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn c4p(&mut self) -> CP_W<CCTRL_SPEC> {
+    pub fn c4p(&mut self) -> CP_W<'_, CCTRL_SPEC> {
         CP_W::new(self, 13)
     }
     #[doc = "Channel (1-3) complementary enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1CEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn ccen(&mut self, n: u8) -> CCEN_W<CCTRL_SPEC> {
+    pub fn ccen(&mut self, n: u8) -> CCEN_W<'_, CCTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         CCEN_W::new(self, n * 4 + 2)
     }
     #[doc = "Bit 2 - Channel 1 complementary enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1cen(&mut self) -> CCEN_W<CCTRL_SPEC> {
+    pub fn c1cen(&mut self) -> CCEN_W<'_, CCTRL_SPEC> {
         CCEN_W::new(self, 2)
     }
     #[doc = "Bit 6 - Channel 2 complementary enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2cen(&mut self) -> CCEN_W<CCTRL_SPEC> {
+    pub fn c2cen(&mut self) -> CCEN_W<'_, CCTRL_SPEC> {
         CCEN_W::new(self, 6)
     }
     #[doc = "Bit 10 - Channel 3 complementary enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3cen(&mut self) -> CCEN_W<CCTRL_SPEC> {
+    pub fn c3cen(&mut self) -> CCEN_W<'_, CCTRL_SPEC> {
         CCEN_W::new(self, 10)
     }
     #[doc = "Channel (1-3) complementary polarity"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C1CP` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn ccp(&mut self, n: u8) -> CCP_W<CCTRL_SPEC> {
+    pub fn ccp(&mut self, n: u8) -> CCP_W<'_, CCTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         CCP_W::new(self, n * 4 + 3)
     }
     #[doc = "Bit 3 - Channel 1 complementary polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1cp(&mut self) -> CCP_W<CCTRL_SPEC> {
+    pub fn c1cp(&mut self) -> CCP_W<'_, CCTRL_SPEC> {
         CCP_W::new(self, 3)
     }
     #[doc = "Bit 7 - Channel 2 complementary polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn c2cp(&mut self) -> CCP_W<CCTRL_SPEC> {
+    pub fn c2cp(&mut self) -> CCP_W<'_, CCTRL_SPEC> {
         CCP_W::new(self, 7)
     }
     #[doc = "Bit 11 - Channel 3 complementary polarity"]
     #[inline(always)]
-    #[must_use]
-    pub fn c3cp(&mut self) -> CCP_W<CCTRL_SPEC> {
+    pub fn c3cp(&mut self) -> CCP_W<'_, CCTRL_SPEC> {
         CCP_W::new(self, 11)
     }
 }
@@ -418,10 +400,6 @@ impl crate::Readable for CCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cctrl::W`](W) writer structure"]
 impl crate::Writable for CCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CCTRL to value 0"]
-impl crate::Resettable for CCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CCTRL_SPEC {}

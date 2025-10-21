@@ -23,8 +23,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Memory 0 address"]
     #[inline(always)]
-    #[must_use]
-    pub fn m0addr(&mut self) -> M0ADDR_W<S8M0ADDR_SPEC> {
+    pub fn m0addr(&mut self) -> M0ADDR_W<'_, S8M0ADDR_SPEC> {
         M0ADDR_W::new(self, 0)
     }
 }
@@ -38,10 +37,6 @@ impl crate::Readable for S8M0ADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`s8m0addr::W`](W) writer structure"]
 impl crate::Writable for S8M0ADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets S8M0ADDR to value 0"]
-impl crate::Resettable for S8M0ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for S8M0ADDR_SPEC {}

@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Regular memory setup time"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmst(&mut self) -> CMST_W<BK4TMGCM_SPEC> {
+    pub fn cmst(&mut self) -> CMST_W<'_, BK4TMGCM_SPEC> {
         CMST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Regular memory wait time"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmwt(&mut self) -> CMWT_W<BK4TMGCM_SPEC> {
+    pub fn cmwt(&mut self) -> CMWT_W<'_, BK4TMGCM_SPEC> {
         CMWT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Regular memory hold time"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmht(&mut self) -> CMHT_W<BK4TMGCM_SPEC> {
+    pub fn cmht(&mut self) -> CMHT_W<'_, BK4TMGCM_SPEC> {
         CMHT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Regular memory databus High resistance time"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdhizt(&mut self) -> CMDHIZT_W<BK4TMGCM_SPEC> {
+    pub fn cmdhizt(&mut self) -> CMDHIZT_W<'_, BK4TMGCM_SPEC> {
         CMDHIZT_W::new(self, 24)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for BK4TMGCM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk4tmgcm::W`](W) writer structure"]
 impl crate::Writable for BK4TMGCM_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK4TMGCM to value 0xfcfc_fcfc"]
 impl crate::Resettable for BK4TMGCM_SPEC {

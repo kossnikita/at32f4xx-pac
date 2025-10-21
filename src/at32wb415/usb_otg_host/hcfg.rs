@@ -31,8 +31,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - FS/LS PHY clock select"]
     #[inline(always)]
-    #[must_use]
-    pub fn fslspclksel(&mut self) -> FSLSPCLKSEL_W<HCFG_SPEC> {
+    pub fn fslspclksel(&mut self) -> FSLSPCLKSEL_W<'_, HCFG_SPEC> {
         FSLSPCLKSEL_W::new(self, 0)
     }
 }
@@ -46,10 +45,6 @@ impl crate::Readable for HCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hcfg::W`](W) writer structure"]
 impl crate::Writable for HCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HCFG to value 0"]
-impl crate::Resettable for HCFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HCFG_SPEC {}

@@ -424,64 +424,56 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C5OIEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn coien(&mut self, n: u8) -> COIEN_W<CM3_OUTPUT_SPEC> {
+    pub fn coien(&mut self, n: u8) -> COIEN_W<'_, CM3_OUTPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         COIEN_W::new(self, n * 0 + 2)
     }
     #[doc = "Bit 2 - Channel 5 output immediately enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c5oien(&mut self) -> COIEN_W<CM3_OUTPUT_SPEC> {
+    pub fn c5oien(&mut self) -> COIEN_W<'_, CM3_OUTPUT_SPEC> {
         COIEN_W::new(self, 2)
     }
     #[doc = "Channel (5-5) output buffer enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C5OBEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn coben(&mut self, n: u8) -> COBEN_W<CM3_OUTPUT_SPEC> {
+    pub fn coben(&mut self, n: u8) -> COBEN_W<'_, CM3_OUTPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         COBEN_W::new(self, n * 0 + 3)
     }
     #[doc = "Bit 3 - Channel 5 output buffer enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c5oben(&mut self) -> COBEN_W<CM3_OUTPUT_SPEC> {
+    pub fn c5oben(&mut self) -> COBEN_W<'_, CM3_OUTPUT_SPEC> {
         COBEN_W::new(self, 3)
     }
     #[doc = "Channel (5-5) output control"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C5OCTRL` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn coctrl(&mut self, n: u8) -> COCTRL_W<CM3_OUTPUT_SPEC> {
+    pub fn coctrl(&mut self, n: u8) -> COCTRL_W<'_, CM3_OUTPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         COCTRL_W::new(self, n * 0 + 4)
     }
     #[doc = "Bits 4:6 - Channel 5 output control"]
     #[inline(always)]
-    #[must_use]
-    pub fn c5octrl(&mut self) -> COCTRL_W<CM3_OUTPUT_SPEC> {
+    pub fn c5octrl(&mut self) -> COCTRL_W<'_, CM3_OUTPUT_SPEC> {
         COCTRL_W::new(self, 4)
     }
     #[doc = "Channel (5-5) output switch enable"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `C5OSEN` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn cosen(&mut self, n: u8) -> COSEN_W<CM3_OUTPUT_SPEC> {
+    pub fn cosen(&mut self, n: u8) -> COSEN_W<'_, CM3_OUTPUT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         COSEN_W::new(self, n * 0 + 7)
     }
     #[doc = "Bit 7 - Channel 5 output switch enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn c5osen(&mut self) -> COSEN_W<CM3_OUTPUT_SPEC> {
+    pub fn c5osen(&mut self) -> COSEN_W<'_, CM3_OUTPUT_SPEC> {
         COSEN_W::new(self, 7)
     }
 }
@@ -495,10 +487,6 @@ impl crate::Readable for CM3_OUTPUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cm3_output::W`](W) writer structure"]
 impl crate::Writable for CM3_OUTPUT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CM3_OUTPUT to value 0"]
-impl crate::Resettable for CM3_OUTPUT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CM3_OUTPUT_SPEC {}

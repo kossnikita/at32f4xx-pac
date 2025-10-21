@@ -193,106 +193,89 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `ODT0` field.</div>"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt(&mut self, n: u8) -> ODT_W<ODT_SPEC> {
+    pub fn odt(&mut self, n: u8) -> ODT_W<'_, ODT_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 16][n as usize];
         ODT_W::new(self, n)
     }
     #[doc = "Bit 0 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt0(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt0(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt1(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt1(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt2(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt2(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt3(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt3(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt4(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt4(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 4)
     }
     #[doc = "Bit 5 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt5(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt5(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 5)
     }
     #[doc = "Bit 6 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt6(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt6(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt7(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt7(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt8(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt8(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt9(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt9(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt10(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt10(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 10)
     }
     #[doc = "Bit 11 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt11(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt11(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 11)
     }
     #[doc = "Bit 12 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt12(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt12(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 12)
     }
     #[doc = "Bit 13 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt13(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt13(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 13)
     }
     #[doc = "Bit 14 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt14(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt14(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 14)
     }
     #[doc = "Bit 15 - Port output data"]
     #[inline(always)]
-    #[must_use]
-    pub fn odt15(&mut self) -> ODT_W<ODT_SPEC> {
+    pub fn odt15(&mut self) -> ODT_W<'_, ODT_SPEC> {
         ODT_W::new(self, 15)
     }
 }
@@ -306,10 +289,6 @@ impl crate::Readable for ODT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`odt::W`](W) writer structure"]
 impl crate::Writable for ODT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ODT to value 0"]
-impl crate::Resettable for ODT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ODT_SPEC {}

@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Device speed"]
     #[inline(always)]
-    #[must_use]
-    pub fn devspd(&mut self) -> DEVSPD_W<DCFG_SPEC> {
+    pub fn devspd(&mut self) -> DEVSPD_W<'_, DCFG_SPEC> {
         DEVSPD_W::new(self, 0)
     }
     #[doc = "Bit 2 - Non-zero-length status OUT handshake"]
     #[inline(always)]
-    #[must_use]
-    pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<DCFG_SPEC> {
+    pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<'_, DCFG_SPEC> {
         NZSTSOUTHSHK_W::new(self, 2)
     }
     #[doc = "Bits 4:10 - Device address"]
     #[inline(always)]
-    #[must_use]
-    pub fn devaddr(&mut self) -> DEVADDR_W<DCFG_SPEC> {
+    pub fn devaddr(&mut self) -> DEVADDR_W<'_, DCFG_SPEC> {
         DEVADDR_W::new(self, 4)
     }
     #[doc = "Bits 11:12 - Periodic frame interval"]
     #[inline(always)]
-    #[must_use]
-    pub fn perfrint(&mut self) -> PERFRINT_W<DCFG_SPEC> {
+    pub fn perfrint(&mut self) -> PERFRINT_W<'_, DCFG_SPEC> {
         PERFRINT_W::new(self, 11)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for DCFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dcfg::W`](W) writer structure"]
 impl crate::Writable for DCFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DCFG to value 0x0220_0000"]
 impl crate::Resettable for DCFG_SPEC {

@@ -33,14 +33,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 11 - Receiver time out detection flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn rtodfc(&mut self) -> RTODFC_W<IFC_SPEC> {
+    pub fn rtodfc(&mut self) -> RTODFC_W<'_, IFC_SPEC> {
         RTODFC_W::new(self, 11)
     }
     #[doc = "Bit 17 - Character match detection flag clear"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdfc(&mut self) -> CMDFC_W<IFC_SPEC> {
+    pub fn cmdfc(&mut self) -> CMDFC_W<'_, IFC_SPEC> {
         CMDFC_W::new(self, 17)
     }
 }
@@ -54,10 +52,6 @@ impl crate::Readable for IFC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ifc::W`](W) writer structure"]
 impl crate::Writable for IFC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IFC to value 0"]
-impl crate::Resettable for IFC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IFC_SPEC {}

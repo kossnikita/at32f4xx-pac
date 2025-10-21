@@ -63,32 +63,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:5 - AUTO_STEP_EN"]
     #[inline(always)]
-    #[must_use]
-    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<MISC3_SPEC> {
+    pub fn auto_step_en(&mut self) -> AUTO_STEP_EN_W<'_, MISC3_SPEC> {
         AUTO_STEP_EN_W::new(self, 4)
     }
     #[doc = "Bit 8 - HICK to usb clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<MISC3_SPEC> {
+    pub fn hick_to_usb(&mut self) -> HICK_TO_USB_W<'_, MISC3_SPEC> {
         HICK_TO_USB_W::new(self, 8)
     }
     #[doc = "Bit 9 - HICK to system clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<MISC3_SPEC> {
+    pub fn hick_to_sclk(&mut self) -> HICK_TO_SCLK_W<'_, MISC3_SPEC> {
         HICK_TO_SCLK_W::new(self, 9)
     }
     #[doc = "Bits 12:13 - HEXT division"]
     #[inline(always)]
-    #[must_use]
-    pub fn hextdiv(&mut self) -> HEXTDIV_W<MISC3_SPEC> {
+    pub fn hextdiv(&mut self) -> HEXTDIV_W<'_, MISC3_SPEC> {
         HEXTDIV_W::new(self, 12)
     }
     #[doc = "Bit 15 - Ethernet pulse width Select"]
     #[inline(always)]
-    #[must_use]
-    pub fn emac_pps_sel(&mut self) -> EMAC_PPS_SEL_W<MISC3_SPEC> {
+    pub fn emac_pps_sel(&mut self) -> EMAC_PPS_SEL_W<'_, MISC3_SPEC> {
         EMAC_PPS_SEL_W::new(self, 15)
     }
 }
@@ -102,10 +97,6 @@ impl crate::Readable for MISC3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`misc3::W`](W) writer structure"]
 impl crate::Writable for MISC3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MISC3 to value 0"]
-impl crate::Resettable for MISC3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MISC3_SPEC {}

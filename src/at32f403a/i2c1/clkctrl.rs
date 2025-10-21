@@ -141,20 +141,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - I2C bus speed config"]
     #[inline(always)]
-    #[must_use]
-    pub fn speed(&mut self) -> SPEED_W<CLKCTRL_SPEC> {
+    pub fn speed(&mut self) -> SPEED_W<'_, CLKCTRL_SPEC> {
         SPEED_W::new(self, 0)
     }
     #[doc = "Bit 14 - Fast mode duty cycle"]
     #[inline(always)]
-    #[must_use]
-    pub fn dutymode(&mut self) -> DUTYMODE_W<CLKCTRL_SPEC> {
+    pub fn dutymode(&mut self) -> DUTYMODE_W<'_, CLKCTRL_SPEC> {
         DUTYMODE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Speed mode selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn speedmode(&mut self) -> SPEEDMODE_W<CLKCTRL_SPEC> {
+    pub fn speedmode(&mut self) -> SPEEDMODE_W<'_, CLKCTRL_SPEC> {
         SPEEDMODE_W::new(self, 15)
     }
 }
@@ -168,10 +165,6 @@ impl crate::Readable for CLKCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clkctrl::W`](W) writer structure"]
 impl crate::Writable for CLKCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLKCTRL to value 0"]
-impl crate::Resettable for CLKCTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLKCTRL_SPEC {}

@@ -73,38 +73,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Channel buffer control"]
     #[inline(always)]
-    #[must_use]
-    pub fn cbctrl(&mut self) -> CBCTRL_W<CTRL2_SPEC> {
+    pub fn cbctrl(&mut self) -> CBCTRL_W<'_, CTRL2_SPEC> {
         CBCTRL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Channel control bit refresh select"]
     #[inline(always)]
-    #[must_use]
-    pub fn ccfs(&mut self) -> CCFS_W<CTRL2_SPEC> {
+    pub fn ccfs(&mut self) -> CCFS_W<'_, CTRL2_SPEC> {
         CCFS_W::new(self, 2)
     }
     #[doc = "Bit 3 - DMA request source"]
     #[inline(always)]
-    #[must_use]
-    pub fn drs(&mut self) -> DRS_W<CTRL2_SPEC> {
+    pub fn drs(&mut self) -> DRS_W<'_, CTRL2_SPEC> {
         DRS_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - Primary TMR output selection"]
     #[inline(always)]
-    #[must_use]
-    pub fn ptos(&mut self) -> PTOS_W<CTRL2_SPEC> {
+    pub fn ptos(&mut self) -> PTOS_W<'_, CTRL2_SPEC> {
         PTOS_W::new(self, 4)
     }
     #[doc = "Bit 8 - Channel 1 idle output state"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1ios(&mut self) -> C1IOS_W<CTRL2_SPEC> {
+    pub fn c1ios(&mut self) -> C1IOS_W<'_, CTRL2_SPEC> {
         C1IOS_W::new(self, 8)
     }
     #[doc = "Bit 9 - Channel 1 complementary idle output state"]
     #[inline(always)]
-    #[must_use]
-    pub fn c1cios(&mut self) -> C1CIOS_W<CTRL2_SPEC> {
+    pub fn c1cios(&mut self) -> C1CIOS_W<'_, CTRL2_SPEC> {
         C1CIOS_W::new(self, 9)
     }
 }
@@ -118,10 +112,6 @@ impl crate::Readable for CTRL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl2::W`](W) writer structure"]
 impl crate::Writable for CTRL2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL2 to value 0"]
-impl crate::Resettable for CTRL2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTRL2_SPEC {}

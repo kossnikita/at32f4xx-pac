@@ -1,9 +1,54 @@
 use core::marker;
 
+/// Generic peripheral accessor
+pub struct Periph<RB, const A: usize> {
+    _marker: marker::PhantomData<RB>,
+}
+
+unsafe impl<RB, const A: usize> Send for Periph<RB, A> {}
+
+impl<RB, const A: usize> Periph<RB, A> {
+    ///Pointer to the register block
+    pub const PTR: *const RB = A as *const _;
+
+    ///Return the pointer to the register block
+    #[inline(always)]
+    pub const fn ptr() -> *const RB {
+        Self::PTR
+    }
+
+    /// Steal an instance of this peripheral
+    ///
+    /// # Safety
+    ///
+    /// Ensure that the new instance of the peripheral cannot be used in a way
+    /// that may race with any existing instances, for example by only
+    /// accessing read-only or write-only registers, or by consuming the
+    /// original peripheral and using critical sections to coordinate
+    /// access between multiple new instances.
+    ///
+    /// Additionally, other software such as HALs may rely on only one
+    /// peripheral instance existing to ensure memory safety; ensure
+    /// no stolen instances are passed to such software.
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: marker::PhantomData,
+        }
+    }
+}
+
+impl<RB, const A: usize> core::ops::Deref for Periph<RB, A> {
+    type Target = RB;
+
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+
 /// Raw register type (`u8`, `u16`, `u32`, ...)
 pub trait RawReg:
     Copy
-    + Default
     + From<bool>
     + core::ops::BitOr<Output = Self>
     + core::ops::BitAnd<Output = Self>
@@ -14,8 +59,10 @@ pub trait RawReg:
 {
     /// Mask for bits of width `WI`
     fn mask<const WI: u8>() -> Self;
-    /// Mask for bits of width 1
-    fn one() -> Self;
+    /// `0`
+    const ZERO: Self;
+    /// `1`
+    const ONE: Self;
 }
 
 macro_rules! raw_reg {
@@ -25,10 +72,8 @@ macro_rules! raw_reg {
             fn mask<const WI: u8>() -> Self {
                 $mask::<WI>()
             }
-            #[inline(always)]
-            fn one() -> Self {
-                1
-            }
+            const ZERO: Self = 0;
+            const ONE: Self = 1;
         }
         const fn $mask<const WI: u8>() -> $U {
             <$U>::MAX >> ($size - WI)
@@ -74,10 +119,10 @@ pub trait Writable: RegisterSpec {
     type Safety;
 
     /// Specifies the register bits that are not changed if you pass `1` and are changed if you pass `0`
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = Self::Ux::ZERO;
 
     /// Specifies the register bits that are not changed if you pass `0` and are changed if you pass `1`
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = Self::Ux::ZERO;
 }
 
 /// Reset value of the register.
@@ -86,7 +131,7 @@ pub trait Writable: RegisterSpec {
 /// register by using the `reset` method.
 pub trait Resettable: RegisterSpec {
     /// Reset value of the register.
-    const RESET_VALUE: Self::Ux;
+    const RESET_VALUE: Self::Ux = Self::Ux::ZERO;
 
     /// Reset value of the register.
     #[inline(always)]
@@ -147,6 +192,7 @@ pub mod raw {
         }
     }
 
+    #[must_use = "after creating `FieldWriter` you need to call field value setting method"]
     pub struct FieldWriter<'a, REG, const WI: u8, FI = u8, Safety = Unsafe>
     where
         REG: Writable + RegisterSpec,
@@ -174,6 +220,7 @@ pub mod raw {
         }
     }
 
+    #[must_use = "after creating `BitWriter` you need to call bit setting method"]
     pub struct BitWriter<'a, REG, FI = bool, M = BitM>
     where
         REG: Writable + RegisterSpec,
@@ -245,7 +292,10 @@ impl<REG: Writable> W<REG> {
         self
     }
 }
-impl<REG> W<REG> where REG: Writable<Safety = Safe> {
+impl<REG> W<REG>
+where
+    REG: Writable<Safety = Safe>,
+{
     /// Writes raw bits to the register.
     #[inline(always)]
     pub fn set(&mut self, bits: REG::Ux) -> &mut Self {
@@ -333,9 +383,10 @@ pub struct RangeFrom<const MIN: u64>;
 pub struct RangeTo<const MAX: u64>;
 
 /// Write field Proxy
-pub type FieldWriter<'a, REG, const WI: u8, FI = u8, Safety = Unsafe> = raw::FieldWriter<'a, REG, WI, FI, Safety>;
+pub type FieldWriter<'a, REG, const WI: u8, FI = u8, Safety = Unsafe> =
+    raw::FieldWriter<'a, REG, WI, FI, Safety>;
 
-impl<'a, REG, const WI: u8, FI, Safety> FieldWriter<'a, REG, WI, FI, Safety>
+impl<REG, const WI: u8, FI, Safety> FieldWriter<'_, REG, WI, FI, Safety>
 where
     REG: Writable + RegisterSpec,
     FI: FieldSpec,
@@ -388,7 +439,8 @@ where
     }
 }
 
-impl<'a, REG, const WI: u8, FI, const MIN: u64, const MAX: u64> FieldWriter<'a, REG, WI, FI, Range<MIN, MAX>>
+impl<'a, REG, const WI: u8, FI, const MIN: u64, const MAX: u64>
+    FieldWriter<'a, REG, WI, FI, Range<MIN, MAX>>
 where
     REG: Writable + RegisterSpec,
     FI: FieldSpec,
@@ -476,7 +528,7 @@ macro_rules! bit_proxy {
             pub const fn width(&self) -> u8 {
                 Self::WIDTH
             }
-        
+
             /// Field offset
             #[inline(always)]
             pub const fn offset(&self) -> u8 {
@@ -486,8 +538,8 @@ macro_rules! bit_proxy {
             /// Writes bit to the field
             #[inline(always)]
             pub fn bit(self, value: bool) -> &'a mut W<REG> {
-                self.w.bits &= !(REG::Ux::one() << self.o);
-                self.w.bits |= (REG::Ux::from(value) & REG::Ux::one()) << self.o;
+                self.w.bits &= !(REG::Ux::ONE << self.o);
+                self.w.bits |= (REG::Ux::from(value) & REG::Ux::ONE) << self.o;
                 self.w
             }
             /// Writes `variant` to the field
@@ -515,13 +567,13 @@ where
     /// Sets the field bit
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W<REG> {
-        self.w.bits |= REG::Ux::one() << self.o;
+        self.w.bits |= REG::Ux::ONE << self.o;
         self.w
     }
     /// Clears the field bit
     #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W<REG> {
-        self.w.bits &= !(REG::Ux::one() << self.o);
+        self.w.bits &= !(REG::Ux::ONE << self.o);
         self.w
     }
 }
@@ -534,7 +586,7 @@ where
     /// Sets the field bit
     #[inline(always)]
     pub fn set_bit(self) -> &'a mut W<REG> {
-        self.w.bits |= REG::Ux::one() << self.o;
+        self.w.bits |= REG::Ux::ONE << self.o;
         self.w
     }
 }
@@ -547,7 +599,7 @@ where
     /// Clears the field bit
     #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W<REG> {
-        self.w.bits &= !(REG::Ux::one() << self.o);
+        self.w.bits &= !(REG::Ux::ONE << self.o);
         self.w
     }
 }
@@ -560,7 +612,7 @@ where
     ///Clears the field bit by passing one
     #[inline(always)]
     pub fn clear_bit_by_one(self) -> &'a mut W<REG> {
-        self.w.bits |= REG::Ux::one() << self.o;
+        self.w.bits |= REG::Ux::ONE << self.o;
         self.w
     }
 }
@@ -573,7 +625,7 @@ where
     ///Sets the field bit by passing zero
     #[inline(always)]
     pub fn set_bit_by_zero(self) -> &'a mut W<REG> {
-        self.w.bits &= !(REG::Ux::one() << self.o);
+        self.w.bits &= !(REG::Ux::ONE << self.o);
         self.w
     }
 }
@@ -586,7 +638,7 @@ where
     ///Toggle the field bit by passing one
     #[inline(always)]
     pub fn toggle_bit(self) -> &'a mut W<REG> {
-        self.w.bits |= REG::Ux::one() << self.o;
+        self.w.bits |= REG::Ux::ONE << self.o;
         self.w
     }
 }
@@ -599,7 +651,7 @@ where
     ///Toggle the field bit by passing zero
     #[inline(always)]
     pub fn toggle_bit(self) -> &'a mut W<REG> {
-        self.w.bits &= !(REG::Ux::one() << self.o);
+        self.w.bits &= !(REG::Ux::ONE << self.o);
         self.w
     }
 }
@@ -680,18 +732,63 @@ impl<REG: Resettable + Writable> Reg<REG> {
     /// ```
     /// In the latter case, other fields will be set to their reset value.
     #[inline(always)]
-    pub fn write<F>(&self, f: F)
+    pub fn write<F>(&self, f: F) -> REG::Ux
     where
         F: FnOnce(&mut W<REG>) -> &mut W<REG>,
     {
-        self.register.set(
-            f(&mut W {
-                bits: REG::RESET_VALUE & !REG::ONE_TO_MODIFY_FIELDS_BITMAP
-                    | REG::ZERO_TO_MODIFY_FIELDS_BITMAP,
-                _reg: marker::PhantomData,
-            })
-            .bits,
-        );
+        let value = f(&mut W {
+            bits: REG::RESET_VALUE & !REG::ONE_TO_MODIFY_FIELDS_BITMAP
+                | REG::ZERO_TO_MODIFY_FIELDS_BITMAP,
+            _reg: marker::PhantomData,
+        })
+        .bits;
+        self.register.set(value);
+        value
+    }
+
+    /// Writes bits to a `Writable` register and produce a value.
+    ///
+    /// You can write raw bits into a register:
+    /// ```ignore
+    /// periph.reg.write_and(|w| unsafe { w.bits(rawbits); });
+    /// ```
+    /// or write only the fields you need:
+    /// ```ignore
+    /// periph.reg.write_and(|w| {
+    ///     w.field1().bits(newfield1bits)
+    ///         .field2().set_bit()
+    ///         .field3().variant(VARIANT);
+    /// });
+    /// ```
+    /// or an alternative way of saying the same:
+    /// ```ignore
+    /// periph.reg.write_and(|w| {
+    ///     w.field1().bits(newfield1bits);
+    ///     w.field2().set_bit();
+    ///     w.field3().variant(VARIANT);
+    /// });
+    /// ```
+    /// In the latter case, other fields will be set to their reset value.
+    ///
+    /// Values can be returned from the closure:
+    /// ```ignore
+    /// let state = periph.reg.write_and(|w| State::set(w.field1()));
+    /// ```
+    #[inline(always)]
+    pub fn from_write<F, T>(&self, f: F) -> T
+    where
+        F: FnOnce(&mut W<REG>) -> T,
+    {
+        let mut writer = W {
+            bits: REG::RESET_VALUE & !REG::ONE_TO_MODIFY_FIELDS_BITMAP
+                | REG::ZERO_TO_MODIFY_FIELDS_BITMAP,
+            _reg: marker::PhantomData,
+        };
+        let result = f(&mut writer);
+
+        self.register.set(writer.bits);
+
+        result
     }
 }
 
@@ -704,17 +801,41 @@ impl<REG: Writable> Reg<REG> {
     ///
     /// Unsafe to use with registers which don't allow to write 0.
     #[inline(always)]
-    pub unsafe fn write_with_zero<F>(&self, f: F)
+    pub unsafe fn write_with_zero<F>(&self, f: F) -> REG::Ux
     where
         F: FnOnce(&mut W<REG>) -> &mut W<REG>,
     {
-        self.register.set(
-            f(&mut W {
-                bits: REG::Ux::default(),
-                _reg: marker::PhantomData,
-            })
-            .bits,
-        );
+        let value = f(&mut W {
+            bits: REG::Ux::ZERO,
+            _reg: marker::PhantomData,
+        })
+        .bits;
+        self.register.set(value);
+        value
+    }
+
+    /// Writes 0 to a `Writable` register and produces a value.
+    ///
+    /// Similar to `write`, but unused bits will contain 0.
+    ///
+    /// # Safety
+    ///
+    /// Unsafe to use with registers which don't allow to write 0.
+    #[inline(always)]
+    pub unsafe fn from_write_with_zero<F, T>(&self, f: F) -> T
+    where
+        F: FnOnce(&mut W<REG>) -> T,
+    {
+        let mut writer = W {
+            bits: REG::Ux::ZERO,
+            _reg: marker::PhantomData,
+        };
+
+        let result = f(&mut writer);
+
+        self.register.set(writer.bits);
+
+        result
     }
 }
 
@@ -745,31 +866,86 @@ impl<REG: Readable + Writable> Reg<REG> {
     /// ```
     /// Other fields will have the value they had before the call to `modify`.
     #[inline(always)]
-    pub fn modify<F>(&self, f: F)
+    pub fn modify<F>(&self, f: F) -> REG::Ux
     where
         for<'w> F: FnOnce(&R<REG>, &'w mut W<REG>) -> &'w mut W<REG>,
     {
         let bits = self.register.get();
-        self.register.set(
-            f(
-                &R {
-                    bits,
-                    _reg: marker::PhantomData,
-                },
-                &mut W {
-                    bits: bits & !REG::ONE_TO_MODIFY_FIELDS_BITMAP
-                        | REG::ZERO_TO_MODIFY_FIELDS_BITMAP,
-                    _reg: marker::PhantomData,
-                },
-            )
-            .bits,
+        let value = f(
+            &R {
+                bits,
+                _reg: marker::PhantomData,
+            },
+            &mut W {
+                bits: bits & !REG::ONE_TO_MODIFY_FIELDS_BITMAP | REG::ZERO_TO_MODIFY_FIELDS_BITMAP,
+                _reg: marker::PhantomData,
+            },
+        )
+        .bits;
+        self.register.set(value);
+        value
+    }
+
+    /// Modifies the contents of the register by reading and then writing it
+    /// and produces a value.
+    ///
+    /// E.g. to do a read-modify-write sequence to change parts of a register:
+    /// ```ignore
+    /// let bits = periph.reg.modify(|r, w| {
+    ///     let new_bits = r.bits() | 3;
+    ///     unsafe {
+    ///         w.bits(new_bits);
+    ///     }
+    ///
+    ///     new_bits
+    /// });
+    /// ```
+    /// or
+    /// ```ignore
+    /// periph.reg.modify(|_, w| {
+    ///     w.field1().bits(newfield1bits)
+    ///         .field2().set_bit()
+    ///         .field3().variant(VARIANT);
+    /// });
+    /// ```
+    /// or an alternative way of saying the same:
+    /// ```ignore
+    /// periph.reg.modify(|_, w| {
+    ///     w.field1().bits(newfield1bits);
+    ///     w.field2().set_bit();
+    ///     w.field3().variant(VARIANT);
+    /// });
+    /// ```
+    /// Other fields will have the value they had before the call to `modify`.
+    #[inline(always)]
+    pub fn from_modify<F, T>(&self, f: F) -> T
+    where
+        for<'w> F: FnOnce(&R<REG>, &'w mut W<REG>) -> T,
+    {
+        let bits = self.register.get();
+
+        let mut writer = W {
+            bits: bits & !REG::ONE_TO_MODIFY_FIELDS_BITMAP | REG::ZERO_TO_MODIFY_FIELDS_BITMAP,
+            _reg: marker::PhantomData,
+        };
+
+        let result = f(
+            &R {
+                bits,
+                _reg: marker::PhantomData,
+            },
+            &mut writer,
         );
+
+        self.register.set(writer.bits);
+
+        result
     }
 }
 
 impl<REG: Readable> core::fmt::Debug for crate::generic::Reg<REG>
 where
-    R<REG>: core::fmt::Debug
+    R<REG>: core::fmt::Debug,
 {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         core::fmt::Debug::fmt(&self.read(), f)
@@ -819,7 +995,7 @@ mod atomic {
 
     impl<REG: Readable + Writable> Reg<REG>
     where
-        REG::Ux: AtomicOperations + Default + core::ops::Not<Output = REG::Ux>,
+        REG::Ux: AtomicOperations,
     {
         /// Set high every bit in the register that was set in the write proxy. Leave other bits
         /// untouched. The write is done in a single atomic instruction.
@@ -833,7 +1009,7 @@ mod atomic {
             F: FnOnce(&mut W<REG>) -> &mut W<REG>,
         {
             let bits = f(&mut W {
-                bits: Default::default(),
+                bits: REG::Ux::ZERO,
                 _reg: marker::PhantomData,
             })
             .bits;
@@ -852,7 +1028,7 @@ mod atomic {
             F: FnOnce(&mut W<REG>) -> &mut W<REG>,
         {
             let bits = f(&mut W {
-                bits: !REG::Ux::default(),
+                bits: !REG::Ux::ZERO,
                 _reg: marker::PhantomData,
             })
             .bits;
@@ -871,7 +1047,7 @@ mod atomic {
             F: FnOnce(&mut W<REG>) -> &mut W<REG>,
         {
             let bits = f(&mut W {
-                bits: Default::default(),
+                bits: REG::Ux::ZERO,
                 _reg: marker::PhantomData,
             })
             .bits;

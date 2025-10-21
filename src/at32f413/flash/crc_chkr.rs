@@ -24,6 +24,4 @@ impl crate::RegisterSpec for CRC_CHKR_SPEC {
 #[doc = "`read()` method returns [`crc_chkr::R`](R) reader structure"]
 impl crate::Readable for CRC_CHKR_SPEC {}
 #[doc = "`reset()` method sets CRC_CHKR to value 0"]
-impl crate::Resettable for CRC_CHKR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CRC_CHKR_SPEC {}

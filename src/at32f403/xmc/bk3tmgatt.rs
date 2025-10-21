@@ -53,26 +53,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - special memory setup time"]
     #[inline(always)]
-    #[must_use]
-    pub fn spst(&mut self) -> SPST_W<BK3TMGATT_SPEC> {
+    pub fn spst(&mut self) -> SPST_W<'_, BK3TMGATT_SPEC> {
         SPST_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - special memory wait time"]
     #[inline(always)]
-    #[must_use]
-    pub fn spwt(&mut self) -> SPWT_W<BK3TMGATT_SPEC> {
+    pub fn spwt(&mut self) -> SPWT_W<'_, BK3TMGATT_SPEC> {
         SPWT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - special memory hold time"]
     #[inline(always)]
-    #[must_use]
-    pub fn spht(&mut self) -> SPHT_W<BK3TMGATT_SPEC> {
+    pub fn spht(&mut self) -> SPHT_W<'_, BK3TMGATT_SPEC> {
         SPHT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - special memory databus High resistance time"]
     #[inline(always)]
-    #[must_use]
-    pub fn spdhizt(&mut self) -> SPDHIZT_W<BK3TMGATT_SPEC> {
+    pub fn spdhizt(&mut self) -> SPDHIZT_W<'_, BK3TMGATT_SPEC> {
         SPDHIZT_W::new(self, 24)
     }
 }
@@ -86,8 +82,6 @@ impl crate::Readable for BK3TMGATT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bk3tmgatt::W`](W) writer structure"]
 impl crate::Writable for BK3TMGATT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BK3TMGATT to value 0xfcfc_fcfc"]
 impl crate::Resettable for BK3TMGATT_SPEC {
